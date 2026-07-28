@@ -1,0 +1,1082 @@
+site_name: Mon Wiki Dev
+site_url: !ENV [MKDOCS_SITE_URL, '']
+site_description: >-
+  Fiches de cours structurées et explicites pour l'apprentissage
+  en autonomie de la programmation web
+copyright: "CC BY 4.0 - Thomas Crouzet"
+docs_dir: docs
+exclude_docs: |
+  includes/
+  ansible/01-ansible/index.md
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  language: fr
+  palette:
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Mode sombre
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Mode clair
+  font:
+    text: Lexend
+    code: Atkinson Hyperlegible Mono
+  icon:
+    logo: material/school-outline
+    tag:
+      docker: simple/docker
+      php: simple/php
+      symfony: simple/symfony
+      postgresql: simple/postgresql
+      javascript: simple/javascript
+      java: fontawesome/brands/java
+      rust: simple/rust
+      git: simple/git
+      linux: simple/linux
+      html: fontawesome/brands/html5
+      css: fontawesome/brands/css3
+      nodejs: simple/nodedotjs
+      ansible: simple/ansible
+      podman: simple/podman
+      redhat: simple/redhat
+      kubernetes: simple/kubernetes
+      redis: simple/redis
+      graphql: simple/graphql
+      typescript: simple/typescript
+      react: simple/react
+      testing: material/test-tube
+      architecture: material/floor-plan
+      cicd: material/pipe
+      api: material/api
+      monitoring: material/chart-line
+      cybersecurite: material/shield-lock
+      ia: material/brain
+      faust: material/music-note
+      crypto: material/currency-btc
+      python: simple/python
+      mongodb: simple/mongodb
+      csharp: material/language-csharp
+      c: material/language-c
+      reseaux: material/router-network
+      systemes: material/server
+      mobile: material/cellphone
+      virtualisation: material/desktop-classic
+      data: material/chart-bar
+      droit: material/gavel
+      ux: material/palette
+      concept: material/book-open-variant
+      pratique: material/hammer-wrench
+      reference: material/bookmark-outline
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.prune
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.path
+    - navigation.footer
+    - navigation.top
+    # Recherche
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Contenu
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    # TOC
+    - toc.follow
+
+plugins:
+  - search:
+      lang: fr
+      separator: '[\s\-\.]+'
+  - tags:
+      tags_sort_by: !!python/name:material.plugins.tags.tag_name_casefold
+      tags_allowed:
+        - Docker
+        - PHP
+        - Symfony
+        - EasyAdmin
+        - PostgreSQL
+        - JavaScript
+        - Java
+        - Rust
+        - Git
+        - HTML/CSS
+        - Unix/Bash
+        - Node.js
+        - Podman
+        - OpenShift
+        - Ansible
+        - TypeScript
+        - React
+        - Testing
+        - Architecture
+        - CI/CD
+        - API
+        - Redis
+        - Monitoring
+        - GraphQL
+        - Kubernetes
+        - Cloud
+        - Cybersécurité
+        - IA
+        - Faust
+        - Crypto-monnaies
+        - Outils IA
+        - Certification
+        - Python
+        - Data
+        - MongoDB
+        - C#
+        - C
+        - Réseaux
+        - Systèmes
+        - Mobile
+        - Virtualisation
+        - Droit
+        - UX
+        - Débutant
+        - Intermédiaire
+        - Avancé
+        - Expert
+        - Concept
+        - Pratique
+        - Référence
+        - Projet
+        - PHPUnit
+        - Doctrine
+        - Workflow
+        - Sécurité
+        - DDD
+        - Audit
+        - Qualité
+        - Méthodologie
+        - Stratégie
+        - Communication
+        - Code review
+
+  - minify:
+      # minify_html DESACTIVE : il collapse les retours a la ligne a
+      # l'interieur des <div class="mermaid-source">, ce qui aplatit les
+      # diagrammes Mermaid multi-lignes sur une seule ligne et casse leur
+      # parsing cote client ("Syntax error in text"). Un <div> n'est pas
+      # protege du collapse de whitespace comme l'est un <pre>.
+      # minify_js/minify_css restent desactives (KaTeX, Mermaid, recherche).
+      minify_html: false
+
+  - privacy:
+      assets_exclude:
+        - unpkg.com/mermaid*
+
+markdown_extensions:
+  # Python Markdown
+  - tables
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: Lien permanent
+      toc_depth: 3
+  # PyMdown Extensions
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-source
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - includes/glossary.md
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.mark
+  - pymdownx.keys
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/katex-loader.js
+  - javascripts/mermaid-v2.js
+  - javascripts/extra.js
+
+extra:
+  tags:
+    Docker: docker
+    PHP: php
+    Symfony: symfony
+    EasyAdmin: easyadmin
+    PostgreSQL: postgresql
+    JavaScript: javascript
+    Java: java
+    Rust: rust
+    Git: git
+    HTML/CSS: html
+    Unix/Bash: linux
+    Node.js: nodejs
+    Ansible: ansible
+    Podman: podman
+    OpenShift: redhat
+    TypeScript: typescript
+    React: react
+    Testing: testing
+    Architecture: architecture
+    CI/CD: cicd
+    API: api
+    Redis: redis
+    Monitoring: monitoring
+    GraphQL: graphql
+    Concept: concept
+    Cybersécurité: cybersecurite
+    IA: ia
+    Faust: faust
+    Crypto-monnaies: crypto
+    Python: python
+    Data: data
+    MongoDB: mongodb
+    C#: csharp
+    C: c
+    Réseaux: reseaux
+    Systèmes: systemes
+    Mobile: mobile
+    Virtualisation: virtualisation
+    Droit: droit
+    UX: ux
+    Pratique: pratique
+    Référence: reference
+
+nav:
+  - Accueil: index.md
+  - À propos: a-propos.md
+  - Politique de fraîcheur: politique-fraicheur.md
+  - Audit d'accessibilité: accessibility-audit.md
+  - Parcours: parcours.md
+
+  - Développement Web:
+      - stack-symfony/index.md
+      - Commencer:
+          - commencer/index.md
+          - Outils IA:
+              - 00-outils-ia/index.md
+              - Utiliser l'IA pour apprendre: 00-outils-ia/01-utiliser-ia-pour-apprendre.md
+              - Rechercher efficacement: 00-outils-ia/02-rechercher-efficacement.md
+      - Docker:
+          - 01-docker/index.md
+          - Docker Compose pour Symfony: 01-docker/01-docker-compose-symfony.md
+          - Lancement du projet et Git: 01-docker/02-lancement-projet-git.md
+      - EasyAdmin:
+          - 03-easyadmin/index.md
+          - Installer EasyAdmin: 03-easyadmin/01-easyadmin-installation.md
+          - Champs avancés EasyAdmin: 03-easyadmin/02-easyadmin-champs-avances.md
+          - Authentification EasyAdmin: 03-easyadmin/03-easyadmin-authentification.md
+          - Gestion des utilisateurs: 03-easyadmin/04-easyadmin-utilisateurs.md
+          - Images et filtres: 03-easyadmin/05-easyadmin-images-filtres.md
+          - Actions personnalisées: 03-easyadmin/06-easyadmin-actions-personnalisees.md
+          - Personnalisation visuelle: 03-easyadmin/07-easyadmin-personnalisation-visuelle.md
+      - PHP:
+          - 02-php/index.md
+          - Découvrir PHP: 02-php/01-introduction-php.md
+          - Variables et types de données: 02-php/02-variables-types.md
+          - Tableaux (arrays): 02-php/03-tableaux-arrays.md
+          - Conditions: 02-php/04-conditions.md
+          - Boucles: 02-php/05-boucles.md
+          - Fonctions: 02-php/06-fonctions.md
+          - Programmation orientée objet: 02-php/07-introduction-poo.md
+          - Classes en détail: 02-php/08-classes-en-detail.md
+          - Namespaces et use: 02-php/09-namespaces-use.md
+          - Attributs PHP: 02-php/10-attributs-php.md
+          - Interfaces et classes abstraites: 02-php/11-interfaces-classes-abstraites.md
+          - Traits: 02-php/12-traits.md
+          - Exceptions et gestion d'erreurs: 02-php/13-exceptions-gestion-erreurs.md
+          - Typage strict et énumérations: 02-php/14-typage-strict-enumerations.md
+      - Symfony:
+          - 03-symfony/index.md
+          - Architecture Symfony: 03-symfony/01-architecture-symfony.md
+          - Contrôleurs et routes: 03-symfony/02-controleurs-routes.md
+          - Templates Twig: 03-symfony/03-templates-twig.md
+          - Introduction à Doctrine: 03-symfony/04-introduction-doctrine.md
+          - Créer des entités: 03-symfony/05-creer-entites.md
+          - Migrations: 03-symfony/06-migrations.md
+          - Relations entre entités: 03-symfony/07-relations-entites.md
+          - Repository et CRUD: 03-symfony/08-repository-crud.md
+          - Formulaires: 03-symfony/09-formulaires.md
+          - Personnaliser EasyAdmin: 03-symfony/10-personnaliser-easyadmin.md
+          - Validation des données: 03-symfony/11-validation-donnees.md
+          - Sécurité et utilisateurs: 03-symfony/12-securite-utilisateurs.md
+          - Services et injection de dépendances: 03-symfony/13-services-injection-dependances.md
+          - Événements et listeners: 03-symfony/14-evenements-listeners.md
+          - Commandes console: 03-symfony/15-commandes-console.md
+          - API JSON: 03-symfony/16-api-json.md
+          - Tests fonctionnels: 03-symfony/17-tests-fonctionnels.md
+          - Workflow et state machine: 03-symfony/18-workflow-state-machine.md
+          - Symfony Messenger (messages asynchrones): 03-symfony/19-messenger.md
+          - Traductions et internationalisation (i18n): 03-symfony/20-traductions.md
+          - Pagination des résultats: 03-symfony/21-pagination.md
+      - PostgreSQL:
+          - 04-postgresql/index.md
+          - Introduction à PostgreSQL: 04-postgresql/01-introduction-postgresql.md
+          - Requêtes SELECT: 04-postgresql/02-requetes-select.md
+          - Jointures: 04-postgresql/03-jointures.md
+          - INSERT, UPDATE, DELETE: 04-postgresql/04-insert-update-delete.md
+          - Fonctions d'agrégation: 04-postgresql/05-fonctions-agregation.md
+          - Contraintes et index: 04-postgresql/06-contraintes-index.md
+          - Sous-requêtes et vues: 04-postgresql/07-sous-requetes-vues.md
+          - Transactions: 04-postgresql/08-transactions.md
+      - JavaScript:
+          - 05-javascript/index.md
+          - JavaScript dans Symfony: 05-javascript/01-javascript-dans-symfony.md
+          - Webpack Encore - Installation: 05-javascript/02-webpack-encore-installation.md
+          - Webpack Encore - Utilisation: 05-javascript/03-webpack-encore-utilisation.md
+          - Introduction à jQuery: 05-javascript/04-introduction-jquery.md
+          - jQuery et AJAX dans Symfony: 05-javascript/05-jquery-ajax-symfony.md
+          - Stimulus et Symfony UX: 05-javascript/06-stimulus-symfony.md
+          - Symfony AssetMapper: 05-javascript/07-assetmapper-symfony.md
+      - JavaScript Moderne (ES6+):
+          - 06-javascript-moderne/index.md
+          - let, const et portée: 06-javascript-moderne/01-let-const-portee.md
+          - Arrow functions et this: 06-javascript-moderne/02-arrow-functions-this.md
+          - Destructuring et spread: 06-javascript-moderne/03-destructuring-spread.md
+          - Template literals et méthodes: 06-javascript-moderne/04-template-literals-methodes.md
+          - Modules ES: 06-javascript-moderne/05-modules-es.md
+          - Classes ES6: 06-javascript-moderne/06-classes-es6.md
+          - Symboles, Map et Set: 06-javascript-moderne/07-symboles-map-set.md
+          - Itérateurs et générateurs: 06-javascript-moderne/08-iterateurs-generateurs.md
+          - Promises: 06-javascript-moderne/09-promises.md
+          - Async/await: 06-javascript-moderne/10-async-await.md
+          - Fetch API et HTTP: 06-javascript-moderne/11-fetch-api-http.md
+          - Projet intégrateur: 06-javascript-moderne/12-projet-integrateur.md
+          - Temporal API (la nouvelle gestion des dates): 06-javascript-moderne/13-temporal-api.md
+          - AbortController et annulation: 06-javascript-moderne/14-abortcontroller.md
+      - TypeScript:
+          - 07-typescript/index.md
+          - Introduction à TypeScript: 07-typescript/01-introduction-typescript.md
+          - Installation et configuration: 07-typescript/02-installation-configuration.md
+          - Types primitifs et annotations: 07-typescript/03-types-primitifs-annotations.md
+          - Tableaux et tuples: 07-typescript/04-tableaux-tuples.md
+          - Objets et interfaces: 07-typescript/05-objets-interfaces.md
+          - Types union et intersection: 07-typescript/06-types-union-intersection.md
+          - Fonctions typées: 07-typescript/07-fonctions-typees.md
+          - Classes et héritage: 07-typescript/08-classes-heritage.md
+          - Enums et littéraux: 07-typescript/09-enums-litteraux.md
+          - Generics: 07-typescript/10-generics.md
+          - Modules et namespaces: 07-typescript/11-modules-namespaces.md
+          - TypeScript avec Node.js: 07-typescript/12-typescript-nodejs.md
+          - Gestion d'erreurs typée: 07-typescript/13-gestion-erreurs-typee.md
+          - Projet intégrateur: 07-typescript/14-projet-integrateur.md
+          - Types avancés (mapped, conditional, template literal): 07-typescript/15-types-avances.md
+      - React:
+          - 08-react/index.md
+          - Introduction à React: 08-react/01-introduction-react.md
+          - Créer un projet React: 08-react/02-creer-projet-react.md
+          - JSX et composants: 08-react/03-jsx-composants.md
+          - Props et children: 08-react/04-props-children.md
+          - État avec useState: 08-react/05-etat-usestate.md
+          - Événements et formulaires: 08-react/06-evenements-formulaires.md
+          - useEffect et cycle de vie: 08-react/07-useeffect-cycle-vie.md
+          - Listes et clés: 08-react/08-listes-cles.md
+          - React Router: 08-react/09-react-router.md
+          - Context et état global: 08-react/10-context-etat-global.md
+          - Hooks personnalisés: 08-react/11-hooks-personnalises.md
+          - Appels API avec fetch: 08-react/12-appels-api-fetch.md
+          - React et Symfony: 08-react/13-react-symfony.md
+          - Formulaires avancés: 08-react/14-formulaires-avances.md
+          - Tests React: 08-react/15-tests-react.md
+          - Projet intégrateur: 08-react/16-projet-integrateur.md
+          - "React 19 : ce qui a changé": 08-react/17-react-19-nouveautes.md
+          - TanStack Query (gestion du cache serveur): 08-react/18-tanstack-query.md
+          - Zustand et Jotai (état global léger): 08-react/19-zustand-jotai.md
+      - Testing et Qualité:
+          - 09-testing/index.md
+          - Pourquoi tester: 09-testing/01-pourquoi-tester.md
+          - Tests unitaires PHP (PHPUnit): 09-testing/02-tests-unitaires-php.md
+          - Tests unitaires JS (Jest): 09-testing/03-tests-unitaires-js.md
+          - Tests d'intégration Symfony: 09-testing/04-tests-integration-symfony.md
+          - Tests fonctionnels Symfony: 09-testing/05-tests-fonctionnels-symfony.md
+          - Introduction au TDD: 09-testing/06-introduction-tdd.md
+          - Tests E2E avec Playwright: 09-testing/07-tests-e2e-playwright.md
+          - Playwright avancé: 09-testing/08-playwright-avance.md
+          - Couverture de code: 09-testing/09-couverture-code.md
+          - Tests d'API: 09-testing/10-tests-api.md
+          - Stratégie de test en équipe: 09-testing/11-strategie-test-equipe.md
+          - Test doubles avec PHPUnit: 09-testing/12-test-doubles-phpunit.md
+          - Réflection pour les tests: 09-testing/13-reflection-tests.md
+          - Auditer la couverture d'un projet existant: 09-testing/14-audit-couverture-legacy.md
+          - Projet intégrateur: 09-testing/15-projet-integrateur.md
+      - Architecture et Design Patterns:
+          - 10-architecture/index.md
+          - Introduction aux design patterns: 10-architecture/01-introduction-design-patterns.md
+          - SOLID -- Principes fondamentaux: 10-architecture/02-solid-principes.md
+          - SOLID -- Application dans Symfony: 10-architecture/03-solid-symfony.md
+          - Patterns de création: 10-architecture/04-patterns-creation.md
+          - Patterns de structure: 10-architecture/05-patterns-structure.md
+          - Patterns de comportement: 10-architecture/06-patterns-comportement.md
+          - MVC en profondeur: 10-architecture/07-mvc-profondeur.md
+          - Clean Architecture: 10-architecture/08-clean-architecture.md
+          - Introduction au DDD: 10-architecture/09-introduction-ddd.md
+          - Patterns JavaScript: 10-architecture/10-patterns-javascript.md
+          - Anti-patterns: 10-architecture/11-anti-patterns.md
+          - Multi-tenancy -- isoler les données par client: 10-architecture/12-multi-tenancy.md
+          - Soft delete -- supprimer sans effacer: 10-architecture/13-soft-delete.md
+          - Anti-énumération: 10-architecture/14-anti-enumeration.md
+          - URLs signées et tokens d'accès anonyme: 10-architecture/15-urls-signees-tokens.md
+          - Filtres Doctrine -- isolation transparente: 10-architecture/16-filtres-doctrine.md
+          - Projet intégrateur: 10-architecture/17-projet-integrateur.md
+      - API Design et Documentation:
+          - 12-api-design/index.md
+          - Principes REST avancés: 12-api-design/01-principes-rest-avances.md
+          - Pagination, filtrage et tri: 12-api-design/02-pagination-filtrage-tri.md
+          - Gestion des erreurs API: 12-api-design/03-gestion-erreurs-api.md
+          - OpenAPI et Swagger: 12-api-design/04-openapi-swagger.md
+          - API Platform -- Introduction: 12-api-design/05-api-platform-introduction.md
+          - API Platform -- Avancé: 12-api-design/06-api-platform-avance.md
+          - Versioning d'API: 12-api-design/07-versioning-api.md
+          - Authentification API: 12-api-design/08-authentification-api.md
+          - Introduction à GraphQL: 12-api-design/09-introduction-graphql.md
+          - Projet intégrateur: 12-api-design/10-projet-integrateur.md
+      - Python:
+          - 15-python/index.md
+          - Introduction à Python: 15-python/01-introduction-python.md
+          - Variables et types de données: 15-python/02-variables-types.md
+          - Listes, tuples et dictionnaires: 15-python/03-structures-donnees.md
+          - Conditions et boucles: 15-python/04-conditions-boucles.md
+          - Fonctions: 15-python/05-fonctions.md
+          - Modules et packages: 15-python/06-modules-packages.md
+          - Programmation orientée objet: 15-python/07-poo-python.md
+          - POO avancée: 15-python/08-poo-avancee.md
+          - Gestion des erreurs: 15-python/09-gestion-erreurs.md
+          - Fichiers et entrées/sorties: 15-python/10-fichiers-io.md
+          - Outils de qualité: 15-python/11-outils-qualite.md
+          - Projet intégrateur: 15-python/12-projet-integrateur.md
+      - Python Data:
+          - 16-python-data/index.md
+          - Introduction à l'analyse de données: 16-python-data/01-introduction-data.md
+          - NumPy - Calcul numérique: 16-python-data/02-numpy-fondamentaux.md
+          - Pandas - Series et DataFrames: 16-python-data/03-pandas-series-dataframes.md
+          - Pandas - Manipulation des données: 16-python-data/04-pandas-manipulation.md
+          - Pandas - Nettoyage de données: 16-python-data/05-pandas-nettoyage.md
+          - Visualisation Matplotlib et Seaborn: 16-python-data/06-matplotlib-seaborn.md
+          - Pipeline d'analyse complet: 16-python-data/07-pipeline-analyse.md
+          - Projet intégrateur: 16-python-data/08-projet-integrateur.md
+      - MongoDB:
+          - 17-mongodb/index.md
+          - Introduction à MongoDB: 17-mongodb/01-introduction-mongodb.md
+          - Installation et mongosh: 17-mongodb/02-installation-mongosh.md
+          - Opérations CRUD: 17-mongodb/03-crud-operations.md
+          - Requêtes avancées: 17-mongodb/04-requetes-avancees.md
+          - Pipeline d'agrégation: 17-mongodb/05-agregation.md
+          - Indexation et performances: 17-mongodb/06-indexation-performances.md
+          - Mongoose avec Node.js: 17-mongodb/07-mongoose-nodejs.md
+          - Projet intégrateur: 17-mongodb/08-projet-integrateur.md
+      - "C#":
+          - 18-csharp/index.md
+          - Introduction à C#: 18-csharp/01-introduction-csharp.md
+          - Variables et types: 18-csharp/02-variables-types.md
+          - Conditions et boucles: 18-csharp/03-conditions-boucles.md
+          - Fonctions et méthodes: 18-csharp/04-fonctions-methodes.md
+          - Classes et objets: 18-csharp/05-classes-objets.md
+          - Héritage et interfaces: 18-csharp/06-heritage-interfaces.md
+          - Collections et LINQ: 18-csharp/07-collections-linq.md
+          - Gestion des erreurs: 18-csharp/08-gestion-erreurs.md
+          - Fichiers et sérialisation: 18-csharp/09-fichiers-serialisation.md
+          - Projet intégrateur: 18-csharp/10-projet-integrateur.md
+      - Dev Mobile:
+          - 23-dev-mobile/index.md
+          - Introduction au dev mobile: 23-dev-mobile/01-introduction-mobile.md
+          - Environnement React Native: 23-dev-mobile/02-environnement-react-native.md
+          - Composants de base: 23-dev-mobile/03-composants-base.md
+          - Navigation: 23-dev-mobile/04-navigation.md
+          - Gestion de l'état et données: 23-dev-mobile/05-etat-donnees.md
+          - API et réseau: 23-dev-mobile/06-api-reseau.md
+          - Fonctionnalités natives: 23-dev-mobile/07-fonctionnalites-natives.md
+          - Formulaires et validation: 23-dev-mobile/08-formulaires-validation.md
+          - Build et déploiement: 23-dev-mobile/09-build-deploiement.md
+          - Projet intégrateur: 23-dev-mobile/10-projet-integrateur.md
+          - Tests en React Native: 23-dev-mobile/11-tests-react-native.md
+          - Listes performantes avec FlashList: 23-dev-mobile/12-listes-performantes.md
+          - Accessibilité mobile: 23-dev-mobile/13-accessibilite-mobile.md
+      - Redis et Cache:
+          - 13-redis/index.md
+          - Introduction à Redis: 13-redis/01-introduction-redis.md
+          - Installation et CLI Redis: 13-redis/02-installation-cli-redis.md
+          - Structures de données: 13-redis/03-structures-donnees.md
+          - Redis dans Symfony -- Cache: 13-redis/04-redis-symfony-cache.md
+          - Redis dans Symfony -- Sessions: 13-redis/05-redis-symfony-sessions.md
+          - Stratégies de cache: 13-redis/06-strategies-cache.md
+          - Redis comme transport Messenger: 13-redis/07-redis-transport-messenger.md
+          - Projet intégrateur: 13-redis/08-projet-integrateur.md
+
+  - Cursus Epitech:
+      - epitech/index.md
+      - Java:
+          - epitech/01-java/index.md
+          - Hello World: epitech/01-java/01-hello-world.md
+          - Compilation et exécution: epitech/01-java/02-compilation-execution.md
+          - Variables et types: epitech/01-java/03-variables-types.md
+          - Classes et objets: epitech/01-java/04-classes-objets.md
+          - Constructeurs: epitech/01-java/05-constructeurs.md
+          - Visibilité et encapsulation: epitech/01-java/06-visibilite-encapsulation.md
+          - Méthodes et surcharge: epitech/01-java/07-methodes-surcharge.md
+          - Héritage: epitech/01-java/08-heritage.md
+          - Interfaces et abstraction: epitech/01-java/09-interfaces-abstraction.md
+          - Collections: epitech/01-java/10-collections.md
+          - Exceptions: epitech/01-java/11-exceptions-java.md
+          - Fichiers et I/O: epitech/01-java/12-fichiers-io.md
+      - Unix/Bash:
+          - epitech/02-unix-bash/index.md
+          - Système de fichiers: epitech/02-unix-bash/01-systeme-fichiers.md
+          - Permissions: epitech/02-unix-bash/02-permissions.md
+          - Commandes de base: epitech/02-unix-bash/03-commandes-base.md
+          - Scripts Bash: epitech/02-unix-bash/04-scripts-bash.md
+          - Processus et signaux: epitech/02-unix-bash/05-processus-signaux.md
+          - Gestion des utilisateurs: epitech/02-unix-bash/06-gestion-utilisateurs.md
+          - systemd et services: epitech/02-unix-bash/07-systemd-services.md
+          - Stockage et systèmes de fichiers: epitech/02-unix-bash/08-stockage-montages.md
+          - Tâches planifiées: epitech/02-unix-bash/09-taches-planifiees.md
+          - Sécurité système: epitech/02-unix-bash/10-securite-systeme.md
+      - Git:
+          - epitech/03-git/index.md
+          - Concepts Git: epitech/03-git/01-concepts-git.md
+          - Workflow basique: epitech/03-git/02-workflow-basique.md
+          - Branches et merge: epitech/03-git/03-branches-merge.md
+          - Résolution de conflits: epitech/03-git/04-resolution-conflits.md
+          - Git avancé: epitech/03-git/05-git-avance.md
+      - HTML/CSS:
+          - epitech/04-html-css/index.md
+          - Structure HTML: epitech/04-html-css/01-structure-html.md
+          - HTML sémantique: epitech/04-html-css/02-html-semantique.md
+          - Formulaires: epitech/04-html-css/03-formulaires.md
+          - CSS de base: epitech/04-html-css/04-css-base.md
+          - Flexbox: epitech/04-html-css/05-flexbox.md
+          - CSS Grid: epitech/04-html-css/06-css-grid.md
+          - Animations CSS: epitech/04-html-css/07-animations-css.md
+      - JavaScript:
+          - epitech/05-javascript/index.md
+          - Introduction: epitech/05-javascript/01-introduction-js.md
+          - Variables et fonctions: epitech/05-javascript/02-variables-fonctions.md
+          - Manipulation du DOM: epitech/05-javascript/03-dom-manipulation.md
+          - Événements: epitech/05-javascript/04-evenements.md
+      - Node.js:
+          - epitech/07-nodejs/index.md
+          - Introduction: epitech/07-nodejs/01-introduction-nodejs.md
+          - npm et packages: epitech/07-nodejs/02-npm-packages.md
+          - Modules et imports: epitech/07-nodejs/03-modules-imports.md
+          - Programmation asynchrone: epitech/07-nodejs/04-programmation-asynchrone.md
+          - Système de fichiers: epitech/07-nodejs/05-systeme-fichiers.md
+          - Introduction Express: epitech/07-nodejs/06-introduction-express.md
+          - Middleware et routes: epitech/07-nodejs/07-middleware-routes.md
+          - API REST: epitech/07-nodejs/08-api-rest.md
+          - Variables d'environnement et configuration: epitech/07-nodejs/09-variables-environnement.md
+          - Validation des entrées: epitech/07-nodejs/10-validation-entrees.md
+      - Rust:
+          - epitech/08-rust/index.md
+          - Introduction et installation: epitech/08-rust/01-introduction-installation.md
+          - Variables et types: epitech/08-rust/02-variables-types.md
+          - Fonctions et contrôle de flux: epitech/08-rust/03-fonctions-controle-flux.md
+          - Ownership: epitech/08-rust/04-ownership.md
+          - Borrowing et références: epitech/08-rust/05-borrowing-references.md
+          - Structs: epitech/08-rust/06-structs.md
+          - Enums et pattern matching: epitech/08-rust/07-enums-pattern-matching.md
+          - Gestion des erreurs: epitech/08-rust/08-gestion-erreurs.md
+          - Collections: epitech/08-rust/09-collections.md
+          - Traits et génériques: epitech/08-rust/10-traits-generiques.md
+          - Modules et organisation: epitech/08-rust/11-modules-organisation.md
+          - Tests: epitech/08-rust/12-tests.md
+          - Programmation asynchrone: epitech/08-rust/13-programmation-asynchrone.md
+          - "Outils de qualité : clippy et rustfmt": epitech/08-rust/14-outils-qualite.md
+          - Workspaces Cargo (projets multi-crates): epitech/08-rust/15-workspaces-cargo.md
+          - Macros Rust: epitech/08-rust/16-macros.md
+      - Projets:
+          - epitech/06-projets/index.md
+          - Popeye (Docker): epitech/06-projets/01-popeye-docker.md
+          - Jeu 2D Java: epitech/06-projets/02-jeu-2d-java.md
+      - Aide-mémoires Epitech:
+          - epitech/fiches-reference/index.md
+          - Java: epitech/fiches-reference/01-aide-memoire-java.md
+          - Bash: epitech/fiches-reference/02-aide-memoire-bash.md
+          - HTML/CSS: epitech/fiches-reference/03-aide-memoire-html-css.md
+
+  - Infrastructure:
+      - devops/index.md
+      - CI/CD Pipelines:
+          - 11-ci-cd/index.md
+          - Introduction à la CI/CD: 11-ci-cd/01-introduction-ci-cd.md
+          - GitHub Actions -- Premiers pas: 11-ci-cd/02-github-actions-premiers-pas.md
+          - GitHub Actions -- Tests et lint: 11-ci-cd/03-github-actions-tests-lint.md
+          - GitHub Actions -- Build et artefacts: 11-ci-cd/04-github-actions-build-artefacts.md
+          - GitHub Actions -- Avancé: 11-ci-cd/05-github-actions-avance.md
+          - GitLab CI -- Introduction: 11-ci-cd/06-gitlab-ci-introduction.md
+          - GitLab CI -- Pipeline complet: 11-ci-cd/07-gitlab-ci-pipeline-complet.md
+          - Exécution locale des pipelines: 11-ci-cd/08-execution-locale-pipelines.md
+          - Stratégies de déploiement: 11-ci-cd/09-strategies-deploiement.md
+          - Projet intégrateur: 11-ci-cd/10-projet-integrateur.md
+      - Podman:
+          - devops/01-podman/index.md
+          - Introduction: devops/01-podman/01-introduction-podman.md
+          - Images et conteneurs: devops/01-podman/02-images-conteneurs.md
+          - Pods: devops/01-podman/03-pods-podman.md
+          - Podman Compose et Quadlet: devops/01-podman/04-podman-compose.md
+          - Fonctionnalités avancées: devops/01-podman/05-podman-avance.md
+      - OpenShift:
+          - devops/02-openshift/index.md
+          - Introduction: devops/02-openshift/01-introduction-openshift.md
+          - Installation CRC: devops/02-openshift/02-installation-crc.md
+          - Déployer une application: devops/02-openshift/03-deploiement-application.md
+          - Routes et services: devops/02-openshift/04-routes-services.md
+          - Builds et ImageStreams: devops/02-openshift/05-builds-imagestreams.md
+          - Stockage et configuration: devops/02-openshift/06-stockage-configuration.md
+      - Kubernetes:
+          - devops/03-kubernetes/index.md
+          - Introduction: devops/03-kubernetes/01-introduction-kubernetes.md
+          - Installation Minikube: devops/03-kubernetes/02-installation-minikube.md
+          - Pods et containers: devops/03-kubernetes/03-pods-containers.md
+          - Deployments et ReplicaSets: devops/03-kubernetes/04-deployments-replicasets.md
+          - Services et networking: devops/03-kubernetes/05-services-networking.md
+          - ConfigMaps et Secrets: devops/03-kubernetes/06-configmaps-secrets.md
+          - Volumes et persistance: devops/03-kubernetes/07-volumes-persistance.md
+          - Namespaces et RBAC: devops/03-kubernetes/08-namespaces-rbac.md
+          - Health checks et autoscaling: devops/03-kubernetes/09-health-checks-autoscaling.md
+          - Helm — Gestionnaire de packages: devops/03-kubernetes/10-helm-gestionnaire-packages.md
+          - Déployer Symfony sur Kubernetes: devops/03-kubernetes/11-deployer-symfony-kubernetes.md
+          - Projet intégrateur: devops/03-kubernetes/12-projet-integrateur.md
+      - Monitoring et Observabilité:
+          - 14-monitoring/index.md
+          - Introduction à l'observabilité: 14-monitoring/01-introduction-observabilite.md
+          - Logs structurés: 14-monitoring/02-logs-structures.md
+          - Prometheus -- Introduction: 14-monitoring/03-prometheus-introduction.md
+          - Prometheus -- Métriques applicatives: 14-monitoring/04-prometheus-metriques.md
+          - Grafana -- Dashboards: 14-monitoring/05-grafana-dashboards.md
+          - Grafana -- Alerting: 14-monitoring/06-grafana-alerting.md
+          - Logs avec Loki: 14-monitoring/07-logs-loki.md
+          - Traces distribuées: 14-monitoring/08-traces-distribuees.md
+          - Monitoring d'infrastructure: 14-monitoring/09-monitoring-infrastructure.md
+          - Projet intégrateur: 14-monitoring/10-projet-integrateur.md
+      - Réseaux:
+          - 20-reseaux/index.md
+          - Introduction aux réseaux: 20-reseaux/01-introduction-reseaux.md
+          - Adressage IP: 20-reseaux/02-adressage-ip.md
+          - Protocoles de transport: 20-reseaux/03-protocoles-transport.md
+          - DNS et DHCP: 20-reseaux/04-dns-dhcp.md
+          - Routage: 20-reseaux/05-routage.md
+          - Commutation et VLANs: 20-reseaux/06-commutations-vlans.md
+          - Firewalls et filtrage: 20-reseaux/07-firewalls-filtrage.md
+          - Services réseau: 20-reseaux/08-services-reseau.md
+          - Wi-Fi et sécurité sans fil: 20-reseaux/09-wifi-securite.md
+          - Diagnostic et outils: 20-reseaux/10-diagnostic-outils.md
+          - Architecture réseau d'entreprise: 20-reseaux/11-architecture-entreprise.md
+          - Projet intégrateur: 20-reseaux/12-projet-integrateur.md
+          - IPv6 et coexistence IPv4/IPv6: 20-reseaux/13-ipv6-coexistence.md
+          - "BGP : le routage entre opérateurs": 20-reseaux/14-bgp-routage-internet.md
+      - Services Système:
+          - 21-services-systeme/index.md
+          - Serveur web avancé: 21-services-systeme/01-serveur-web-avance.md
+          - Serveur DNS: 21-services-systeme/02-serveur-dns.md
+          - Serveur de messagerie: 21-services-systeme/03-serveur-mail.md
+          - Annuaire LDAP: 21-services-systeme/04-annuaire-ldap.md
+          - Serveur DHCP: 21-services-systeme/05-serveur-dhcp.md
+          - Proxy et reverse proxy: 21-services-systeme/06-proxy-reverse-proxy.md
+          - Conteneurisation des services: 21-services-systeme/07-conteneurisation-services.md
+          - Projet intégrateur: 21-services-systeme/08-projet-integrateur.md
+          - Certificats TLS avec Let's Encrypt: 21-services-systeme/09-certificats-letsencrypt.md
+      - Cloud:
+          - 22-cloud/index.md
+          - Introduction au Cloud: 22-cloud/01-introduction-cloud.md
+          - Compute: 22-cloud/02-cloud-compute.md
+          - Stockage: 22-cloud/03-cloud-stockage.md
+          - Réseau cloud: 22-cloud/04-cloud-reseau.md
+          - IAM et sécurité: 22-cloud/05-iam-securite.md
+          - Infrastructure as Code: 22-cloud/06-infrastructure-as-code.md
+          - Bases de données managées: 22-cloud/07-bases-de-donnees-cloud.md
+          - Conteneurs dans le cloud: 22-cloud/08-conteneurs-cloud.md
+          - Monitoring et logs cloud: 22-cloud/09-monitoring-cloud.md
+          - Projet intégrateur: 22-cloud/10-projet-integrateur.md
+          - "Serverless : API Gateway + Lambda": 22-cloud/11-serverless-api-gateway-lambda.md
+          - Infrastructure as Code avec AWS CDK: 22-cloud/12-iac-aws-cdk.md
+          - "FinOps : maîtriser les coûts cloud": 22-cloud/13-finops-optimisation-couts.md
+      - Virtualisation:
+          - 24-virtualisation/index.md
+          - Concepts de virtualisation: 24-virtualisation/01-concepts-virtualisation.md
+          - KVM et QEMU: 24-virtualisation/02-kvm-qemu.md
+          - Proxmox VE: 24-virtualisation/03-proxmox.md
+          - Stockage virtualisé: 24-virtualisation/04-stockage-virtualise.md
+          - Réseau virtualisé: 24-virtualisation/05-reseau-virtualise.md
+          - Projet intégrateur: 24-virtualisation/06-projet-integrateur.md
+      - Langage C:
+          - 19-langage-c/index.md
+          - Introduction au langage C: 19-langage-c/01-introduction-c.md
+          - Variables et types: 19-langage-c/02-variables-types.md
+          - Opérateurs et contrôle: 19-langage-c/03-operateurs-controle.md
+          - Fonctions: 19-langage-c/04-fonctions.md
+          - Pointeurs: 19-langage-c/05-pointeurs.md
+          - Tableaux et chaînes: 19-langage-c/06-tableaux-chaines.md
+          - Allocation dynamique: 19-langage-c/07-allocation-dynamique.md
+          - Structures et unions: 19-langage-c/08-structures-unions.md
+          - Fichiers et I/O: 19-langage-c/09-fichiers-io.md
+          - Projet intégrateur: 19-langage-c/10-projet-integrateur.md
+      - Ansible:
+          - ansible/index.md
+          - Introduction: ansible/01-ansible/01-introduction-ansible.md
+          - Installation et configuration: ansible/01-ansible/02-installation-configuration.md
+          - Inventaire: ansible/01-ansible/03-inventaire.md
+          - Commandes ad-hoc et modules: ansible/01-ansible/04-commandes-ad-hoc-modules.md
+          - Playbooks fondamentaux: ansible/01-ansible/05-playbooks-fondamentaux.md
+          - Variables et facts: ansible/01-ansible/06-variables-facts.md
+          - Conditions et boucles: ansible/01-ansible/07-conditions-boucles.md
+          - Templates Jinja2: ansible/01-ansible/08-templates-jinja2.md
+          - Handlers et tags: ansible/01-ansible/09-handlers-tags.md
+          - Rôles: ansible/01-ansible/10-roles.md
+          - Ansible Galaxy: ansible/01-ansible/11-ansible-galaxy.md
+          - Ansible Vault: ansible/01-ansible/12-ansible-vault.md
+          - Multi-environnement: ansible/01-ansible/13-gestion-multi-environnement.md
+          - Intégration CI/CD: ansible/01-ansible/14-integration-ci-cd.md
+
+
+  - Cybersécurité:
+      - cybersecurite/index.md
+      - Phase 1 - Fondamentaux informatiques:
+          - cybersecurite/01-fondamentaux-informatiques/index.md
+          - Architecture matérielle: cybersecurite/01-fondamentaux-informatiques/01-architecture-materielle.md
+          - Systèmes d'exploitation: cybersecurite/01-fondamentaux-informatiques/02-systemes-exploitation.md
+          - Réseaux et protocoles: cybersecurite/01-fondamentaux-informatiques/03-reseaux-protocoles.md
+          - Programmation et scripting: cybersecurite/01-fondamentaux-informatiques/04-programmation-scripting.md
+      - Phase 2 - Fondamentaux sécurité:
+          - cybersecurite/02-fondamentaux-securite/index.md
+          - Principes de sécurité: cybersecurite/02-fondamentaux-securite/01-principes-securite.md
+          - Cryptographie: cybersecurite/02-fondamentaux-securite/02-cryptographie.md
+          - Sécurité des réseaux: cybersecurite/02-fondamentaux-securite/03-securite-reseaux.md
+          - Gouvernance, Risque et Conformité: cybersecurite/02-fondamentaux-securite/04-gouvernance-risque-conformite.md
+      - Phase 3 - Compétences intermédiaires:
+          - cybersecurite/03-competences-intermediaires/index.md
+          - Sécurité des systèmes d'exploitation: cybersecurite/03-competences-intermediaires/01-securite-systemes-exploitation.md
+          - Sécurité Web et Applicative: cybersecurite/03-competences-intermediaires/02-securite-web-applicative.md
+          - Analyse de vulnérabilités: cybersecurite/03-competences-intermediaires/03-analyse-vulnerabilites.md
+          - Introduction au SOC et Monitoring: cybersecurite/03-competences-intermediaires/04-introduction-soc-monitoring.md
+      - Phase 4 - Spécialisation Offensive:
+          - cybersecurite/04-specialisation-offensive/index.md
+          - Méthodologie de Pentest: cybersecurite/04-specialisation-offensive/01-methodologie-pentest.md
+          - Exploitation et Post-Exploitation: cybersecurite/04-specialisation-offensive/02-exploitation-post-exploitation.md
+          - Active Directory: cybersecurite/04-specialisation-offensive/03-active-directory.md
+          - Sécurité Web Avancée: cybersecurite/04-specialisation-offensive/04-securite-web-avancee.md
+          - Certifications Offensives: cybersecurite/04-specialisation-offensive/05-certifications-offensives.md
+      - Phase 5 - Spécialisation Défensive:
+          - cybersecurite/05-specialisation-defensive/index.md
+          - Détection et Réponse aux Incidents: cybersecurite/05-specialisation-defensive/01-detection-reponse-incidents.md
+          - Analyse de Malware: cybersecurite/05-specialisation-defensive/02-analyse-malware.md
+          - Threat Hunting et Intelligence: cybersecurite/05-specialisation-defensive/03-threat-hunting-intelligence.md
+          - Sécurité Endpoint (EDR/XDR): cybersecurite/05-specialisation-defensive/04-securite-endpoint.md
+          - Certifications Défensives: cybersecurite/05-specialisation-defensive/05-certifications-defensives.md
+      - Phase 6 - Domaines Avancés:
+          - cybersecurite/06-domaines-avances/index.md
+          - Sécurité Cloud: cybersecurite/06-domaines-avances/01-securite-cloud.md
+          - Sécurité OT/ICS/SCADA: cybersecurite/06-domaines-avances/02-securite-ot-ics-scada.md
+          - Sécurité IA et Machine Learning: cybersecurite/06-domaines-avances/03-securite-ia-machine-learning.md
+          - Sécurité Mobile et IoT: cybersecurite/06-domaines-avances/04-securite-mobile-iot.md
+          - DevSecOps: cybersecurite/06-domaines-avances/05-devsecops.md
+      - Phase 7 - Red Team Avancé:
+          - cybersecurite/07-red-team-avance/index.md
+          - Red Team Operations: cybersecurite/07-red-team-avance/01-red-team-operations.md
+          - Évasion et outils offensifs: cybersecurite/07-red-team-avance/02-evasion-outils-offensifs.md
+          - Exploit Development: cybersecurite/07-red-team-avance/03-exploit-development.md
+          - Active Directory Avancé: cybersecurite/07-red-team-avance/04-active-directory-avance.md
+      - Phase 8 - Expertise et Leadership:
+          - cybersecurite/08-expertise-leadership/index.md
+          - Architecture de Sécurité: cybersecurite/08-expertise-leadership/01-architecture-securite.md
+          - GRC Avancée et Management: cybersecurite/08-expertise-leadership/02-grc-avancee.md
+          - Recherche en Sécurité: cybersecurite/08-expertise-leadership/03-recherche-securite.md
+          - Tendances 2026 et Au-delà: cybersecurite/08-expertise-leadership/04-tendances-2026.md
+
+  - Intelligence Artificielle:
+      - ia/index.md
+      - Phase 1 - Fondamentaux mathématiques:
+          - ia/01-fondamentaux-mathematiques/index.md
+          - Algèbre linéaire: ia/01-fondamentaux-mathematiques/01-algebre-lineaire.md
+          - Calcul différentiel et optimisation: ia/01-fondamentaux-mathematiques/02-calcul-differentiel-optimisation.md
+          - Probabilités et statistiques: ia/01-fondamentaux-mathematiques/03-probabilites-statistiques.md
+          - Théorie de l'information: ia/01-fondamentaux-mathematiques/04-theorie-information.md
+      - Phase 2 - Programmation et outils:
+          - ia/02-programmation-outils/index.md
+          - Python pour l'IA: ia/02-programmation-outils/01-python-pour-ia.md
+          - Environnement de développement: ia/02-programmation-outils/02-environnement-developpement-infrastructure.md
+          - Manipulation et ingénierie des données: ia/02-programmation-outils/03-manipulation-ingenierie-donnees.md
+      - Phase 3 - Machine learning classique:
+          - ia/03-machine-learning-classique/index.md
+          - Apprentissage supervisé: ia/03-machine-learning-classique/01-apprentissage-supervise.md
+          - Apprentissage non supervisé: ia/03-machine-learning-classique/02-apprentissage-non-supervise.md
+          - Sélection de modèles et méthodologie: ia/03-machine-learning-classique/03-selection-modeles-methodologie.md
+          - scikit-learn en profondeur: ia/03-machine-learning-classique/04-scikit-learn-profondeur.md
+      - Phase 4 - Deep learning fondamental:
+          - ia/04-deep-learning-fondamental/index.md
+          - Réseaux de neurones: ia/04-deep-learning-fondamental/01-reseaux-neurones-theorie-pratique.md
+          - PyTorch: ia/04-deep-learning-fondamental/02-pytorch.md
+          - Réseaux convolutifs (CNN): ia/04-deep-learning-fondamental/03-reseaux-convolutifs-cnn.md
+          - Réseaux récurrents et séquences: ia/04-deep-learning-fondamental/04-reseaux-recurrents-sequences.md
+      - Phase 5 - Architectures modernes et NLP:
+          - ia/05-architectures-modernes-nlp/index.md
+          - "Transformers : l'architecture": ia/05-architectures-modernes-nlp/01-transformers-architecture.md
+          - Du NLP classique aux LLM: ia/05-architectures-modernes-nlp/02-nlp-classique-llm.md
+          - Vision Transformers et multimodal: ia/05-architectures-modernes-nlp/03-vision-transformers-multimodal.md
+          - Modèles génératifs: ia/05-architectures-modernes-nlp/04-modeles-generatifs.md
+      - Phase 6 - Large Language Models:
+          - ia/06-large-language-models/index.md
+          - Architecture et fonctionnement: ia/06-large-language-models/01-architecture-fonctionnement-llm.md
+          - Prompt engineering et context engineering: ia/06-large-language-models/02-prompt-engineering-context-engineering.md
+          - RAG: ia/06-large-language-models/03-rag-retrieval-augmented-generation.md
+          - Fine-tuning et adaptation: ia/06-large-language-models/04-fine-tuning-adaptation-modeles.md
+          - Évaluation des LLM: ia/06-large-language-models/05-evaluation-llm.md
+      - Phase 7 - Systèmes agentiques et MLOps:
+          - ia/07-systemes-agentiques-mlops/index.md
+          - AI Agents et design patterns: ia/07-systemes-agentiques-mlops/01-ai-agents-architecture-design-patterns.md
+          - Frameworks d'agents: ia/07-systemes-agentiques-mlops/02-frameworks-agents.md
+          - MLOps et mise en production: ia/07-systemes-agentiques-mlops/03-mlops-mise-production.md
+          - LLMOps: ia/07-systemes-agentiques-mlops/04-llmops-specificites-production.md
+      - Phase 8 - Spécialisations avancées:
+          - ia/08-specialisations-avancees/index.md
+          - Computer vision avancée: ia/08-specialisations-avancees/01-computer-vision-avancee.md
+          - NLP avancé et traitement de la parole: ia/08-specialisations-avancees/02-nlp-avance-traitement-parole.md
+          - Reinforcement learning: ia/08-specialisations-avancees/03-reinforcement-learning.md
+          - Robotique et IA physique: ia/08-specialisations-avancees/04-robotique-ia-physique.md
+          - IA pour la science: ia/08-specialisations-avancees/05-ia-pour-science.md
+      - Phase 9 - Expertise, recherche et leadership:
+          - ia/09-expertise-recherche-leadership/index.md
+          - Lecture et reproduction de papers: ia/09-expertise-recherche-leadership/01-lecture-reproduction-papers.md
+          - AI Safety, alignement et éthique: ia/09-expertise-recherche-leadership/02-ai-safety-alignement-ethique.md
+          - Frontières de la recherche 2026: ia/09-expertise-recherche-leadership/03-frontieres-recherche-2026.md
+          - Contribution et leadership: ia/09-expertise-recherche-leadership/04-contribution-leadership.md
+
+  - Spécialisations:
+      - Faust:
+          - faust/index.md
+          - Phase 1 - Fondamentaux acoustique:
+              - faust/01-fondamentaux-acoustique/index.md
+              - Acoustique et psychoacoustique: faust/01-fondamentaux-acoustique/01-acoustique-psychoacoustique.md
+              - Audio numérique et théorie du signal: faust/01-fondamentaux-acoustique/02-audio-numerique-theorie-signal.md
+              - Mathématiques pour le DSP: faust/01-fondamentaux-acoustique/03-mathematiques-dsp.md
+              - Synthèse sonore - théorie: faust/01-fondamentaux-acoustique/04-synthese-sonore-theorie.md
+          - Phase 2 - Prérequis programmation:
+              - faust/02-prerequis-programmation/index.md
+              - Programmation fonctionnelle - concepts: faust/02-prerequis-programmation/01-programmation-fonctionnelle-concepts.md
+              - "C++ : notions essentielles": faust/02-prerequis-programmation/02-cpp-notions-essentielles.md
+              - Environnement et outils: faust/02-prerequis-programmation/03-environnement-outils.md
+          - Phase 3 - Langage Faust fondamentaux:
+              - faust/03-langage-faust-fondamentaux/index.md
+              - Syntaxe et sémantique de base: faust/03-langage-faust-fondamentaux/01-syntaxe-semantique-base.md
+              - Les cinq opérateurs de composition: faust/03-langage-faust-fondamentaux/02-cinq-operateurs-composition.md
+              - Interfaces utilisateur (UI): faust/03-langage-faust-fondamentaux/03-interfaces-utilisateur-ui.md
+              - Mémoire et délais: faust/03-langage-faust-fondamentaux/04-memoire-delais.md
+          - Phase 4 - DSP appliqué:
+              - faust/04-dsp-applique/index.md
+              - Oscillateurs et synthèse: faust/04-dsp-applique/01-oscillateurs-synthese.md
+              - Filtres: faust/04-dsp-applique/02-filtres.md
+              - Effets audio: faust/04-dsp-applique/03-effets-audio.md
+              - Modélisation physique: faust/04-dsp-applique/04-modelisation-physique.md
+              - Bibliothèques Faust: faust/04-dsp-applique/05-bibliotheques-faust.md
+              - Anti-aliasing et oscillateurs band-limited: faust/04-dsp-applique/06-anti-aliasing-oscillateurs.md
+          - Phase 5 - Déploiement et architectures:
+              - faust/05-deploiement-architectures/index.md
+              - Système d'architectures Faust: faust/05-deploiement-architectures/01-systeme-architectures-faust.md
+              - Plugins audio (VST/AU/LV2): faust/05-deploiement-architectures/02-plugins-audio-vst-au-lv2.md
+              - Applications standalone: faust/05-deploiement-architectures/03-applications-standalone.md
+              - Web et mobile: faust/05-deploiement-architectures/04-web-mobile.md
+              - Embarqué et hardware: faust/05-deploiement-architectures/05-embarque-hardware.md
+          - Phase 6 - Intégration et projets avancés:
+              - faust/06-integration-projets-avances/index.md
+              - "libfaust : compilateur embarquable": faust/06-integration-projets-avances/01-libfaust-compilateur-embarquable.md
+              - Faust et JUCE: faust/06-integration-projets-avances/02-faust-juce.md
+              - Faust et Max/PureData/SuperCollider: faust/06-integration-projets-avances/03-faust-max-puredata-supercollider.md
+              - MIDI, OSC et capteurs: faust/06-integration-projets-avances/04-midi-osc-capteurs.md
+              - Faust et Machine Learning (DDSP): faust/06-integration-projets-avances/05-faust-machine-learning-ddsp.md
+          - Phase 7 - Maîtrise et contribution:
+              - faust/07-maitrise-contribution/index.md
+              - Optimisation et performance: faust/07-maitrise-contribution/01-optimisation-performance.md
+              - Contribution au projet Faust: faust/07-maitrise-contribution/02-contribution-projet.md
+              - Recherche et innovation: faust/07-maitrise-contribution/03-recherche-innovation.md
+              - Projets créatifs: faust/07-maitrise-contribution/04-projets-creatifs.md
+              - Aide-mémoire des signatures de bibliothèque: faust/07-maitrise-contribution/05-aide-memoire-signatures.md
+      - Crypto-monnaies:
+          - crypto-monnaies/index.md
+          - Phase 1 - Fondamentaux:
+              - crypto-monnaies/01-fondamentaux/index.md
+              - La monnaie - fonctions, confiance et limites: crypto-monnaies/01-fondamentaux/01-monnaie-fonctions-confiance-limites.md
+              - Cryptographie essentielle: crypto-monnaies/01-fondamentaux/02-cryptographie-essentielle.md
+              - Réseaux pair-à-pair et décentralisation: crypto-monnaies/01-fondamentaux/03-reseaux-pair-a-pair-decentralisation.md
+              - Blockchain - une structure de données: crypto-monnaies/01-fondamentaux/04-blockchain-structure-de-donnees.md
+          - Phase 2 - Bitcoin:
+              - crypto-monnaies/02-bitcoin/index.md
+              - Contexte de naissance et principes: crypto-monnaies/02-bitcoin/01-contexte-naissance-principes.md
+              - Transactions - UTXOs, scripts et vérification: crypto-monnaies/02-bitcoin/02-transactions-utxos-scripts.md
+              - Proof of Work - le consensus par l'énergie: crypto-monnaies/02-bitcoin/03-proof-of-work-consensus-energie.md
+              - Le réseau - noeuds, mineurs et pools: crypto-monnaies/02-bitcoin/04-reseau-noeuds-mineurs-pools.md
+              - Bitcoin en chiffres - adoption réelle: crypto-monnaies/02-bitcoin/05-bitcoin-chiffres-adoption-reelle.md
+              - Forks et évolution des protocoles: crypto-monnaies/02-bitcoin/06-forks-evolution-protocoles.md
+          - Phase 3 - Ethereum et les smart contracts:
+              - crypto-monnaies/03-ethereum-smart-contracts/index.md
+              - Ethereum - ce que Bitcoin ne fait pas: crypto-monnaies/03-ethereum-smart-contracts/01-ethereum-au-dela-de-bitcoin.md
+              - Smart contracts - du code, pas de la magie: crypto-monnaies/03-ethereum-smart-contracts/02-smart-contracts-du-code.md
+              - Gas, EVM et les coûts réels: crypto-monnaies/03-ethereum-smart-contracts/03-gas-evm-couts-reels.md
+              - Anatomie d'un smart contract: crypto-monnaies/03-ethereum-smart-contracts/04-anatomie-smart-contract-solidity.md
+          - Phase 4 - L'écosystème crypto:
+              - crypto-monnaies/04-ecosysteme-signal-bruit/index.md
+              - Taxonomie des tokens: crypto-monnaies/04-ecosysteme-signal-bruit/01-taxonomie-tokens.md
+              - DeFi - finance ou casino décentralisé: crypto-monnaies/04-ecosysteme-signal-bruit/02-defi-finance-ou-casino.md
+              - NFTs - technologie vs spéculation: crypto-monnaies/04-ecosysteme-signal-bruit/03-nfts-technologie-vs-speculation.md
+              - DAOs - gouvernance décentralisée: crypto-monnaies/04-ecosysteme-signal-bruit/04-daos-gouvernance-decentralisee.md
+              - Stablecoins - l'innovation utile: crypto-monnaies/04-ecosysteme-signal-bruit/05-stablecoins-innovation-utile.md
+              - Staking en pratique: crypto-monnaies/04-ecosysteme-signal-bruit/06-staking-en-pratique.md
+              - Marchés de prédiction: crypto-monnaies/04-ecosysteme-signal-bruit/07-marches-prediction.md
+              - Gambling crypto: crypto-monnaies/04-ecosysteme-signal-bruit/08-gambling-crypto.md
+              - Memecoins et launchpads: crypto-monnaies/04-ecosysteme-signal-bruit/09-memecoins-launchpads-loterie.md
+          - Phase 5 - Sécurité et survie:
+              - crypto-monnaies/05-securite-survie/index.md
+              - Wallets - comprendre ce qu'on possède: crypto-monnaies/05-securite-survie/01-wallets-comprendre-possession.md
+              - Arnaques et manipulation: crypto-monnaies/05-securite-survie/02-arnaques-scams-manipulation.md
+              - FOMO, FUD et biais cognitifs: crypto-monnaies/05-securite-survie/03-fomo-fud-biais-cognitifs.md
+              - Régulation en France et en Europe: crypto-monnaies/05-securite-survie/04-regulation-loi-france-europe.md
+              - Fiscalité des crypto-monnaies: crypto-monnaies/05-securite-survie/05-fiscalite-imposition-crypto.md
+              - "Acheter et vendre concrètement (France)": crypto-monnaies/05-securite-survie/06-acheter-vendre-concretement.md
+          - Phase 6 - Analyse critique et due diligence:
+              - crypto-monnaies/06-analyse-critique-due-diligence/index.md
+              - Lire un whitepaper: crypto-monnaies/06-analyse-critique-due-diligence/01-lire-whitepaper-red-flags.md
+              - Tokenomics: crypto-monnaies/06-analyse-critique-due-diligence/02-tokenomics-projets-viables.md
+              - Analyse on-chain: crypto-monnaies/06-analyse-critique-due-diligence/03-analyse-on-chain-donnees.md
+              - Autopsie de projets: crypto-monnaies/06-analyse-critique-due-diligence/04-autopsie-projets-par-categorie.md
+              - Due diligence: crypto-monnaies/06-analyse-critique-due-diligence/05-due-diligence-checklist-sceptique.md
+              - Lire un block explorer: crypto-monnaies/06-analyse-critique-due-diligence/06-lire-block-explorer.md
+          - Phase 7 - Concepts techniques avancés:
+              - crypto-monnaies/07-concepts-techniques-avances/index.md
+              - Layer 2 et scalabilité: crypto-monnaies/07-concepts-techniques-avances/01-layer-2-scalabilite.md
+              - Bridges et interopérabilité: crypto-monnaies/07-concepts-techniques-avances/02-bridges-interoperabilite.md
+              - Zero-knowledge proofs: crypto-monnaies/07-concepts-techniques-avances/03-zero-knowledge-proofs-vie-privee.md
+              - MEV et front-running: crypto-monnaies/07-concepts-techniques-avances/04-mev-front-running-cote-obscur.md
+              - Mécanismes de consensus: crypto-monnaies/07-concepts-techniques-avances/05-mecanismes-consensus-pos-bft.md
+              - Blockchains alternatives: crypto-monnaies/07-concepts-techniques-avances/06-blockchains-alternatives-comparaison.md
+              - Monero et la confidentialité par défaut: crypto-monnaies/07-concepts-techniques-avances/07-monero-confidentialite.md
+          - Phase 8 - Perspective et avenir réaliste:
+              - crypto-monnaies/08-perspective-avenir-realiste/index.md
+              - Impact environnemental: crypto-monnaies/08-perspective-avenir-realiste/01-impact-environnemental-vrais-chiffres.md
+              - CBDC vs crypto-monnaies: crypto-monnaies/08-perspective-avenir-realiste/02-cbdc-vs-crypto-monnaies.md
+              - Ce que la crypto résout vraiment: crypto-monnaies/08-perspective-avenir-realiste/03-ce-que-crypto-resout-vraiment.md
+              - L'avenir réaliste: crypto-monnaies/08-perspective-avenir-realiste/04-avenir-realiste-ni-utopie-ni-apocalypse.md
+          - Phase 9 - Acteurs de l'écosystème:
+              - crypto-monnaies/09-acteurs-ecosysteme/index.md
+              - Ledger: crypto-monnaies/09-acteurs-ecosysteme/01-ledger.md
+              - Trezor: crypto-monnaies/09-acteurs-ecosysteme/02-trezor.md
+              - Coinbase: crypto-monnaies/09-acteurs-ecosysteme/03-coinbase.md
+              - Binance: crypto-monnaies/09-acteurs-ecosysteme/04-binance.md
+              - Kraken: crypto-monnaies/09-acteurs-ecosysteme/05-kraken.md
+              - Circle: crypto-monnaies/09-acteurs-ecosysteme/06-circle.md
+              - Chainalysis: crypto-monnaies/09-acteurs-ecosysteme/07-chainalysis.md
+              - Consensys: crypto-monnaies/09-acteurs-ecosysteme/08-consensys.md
+
+  - Compétences Transverses:
+      - Gestion de Projet:
+          - 25-gestion-projet/index.md
+          - Introduction à la gestion de projet IT: 25-gestion-projet/01-introduction-gestion-projet.md
+          - Méthodes agiles: 25-gestion-projet/02-methodes-agiles.md
+          - Outils de gestion de projet: 25-gestion-projet/03-outils-projet.md
+          - Rédiger un cahier des charges: 25-gestion-projet/04-cahier-des-charges.md
+          - Qualité et documentation technique: 25-gestion-projet/05-qualite-documentation.md
+          - Projet intégrateur: 25-gestion-projet/06-projet-integrateur.md
+      - Droit et RGPD:
+          - 26-droit-rgpd/index.md
+          - Introduction au RGPD: 26-droit-rgpd/01-introduction-rgpd.md
+          - RGPD pour développeurs: 26-droit-rgpd/02-rgpd-pour-developpeurs.md
+          - Sécurité des données personnelles: 26-droit-rgpd/03-securite-donnees.md
+          - Conformité en pratique: 26-droit-rgpd/04-conformite-pratique.md
+      - UX Design:
+          - 27-ux-design/index.md
+          - Principes UX pour développeurs: 27-ux-design/01-principes-ux.md
+          - Wireframes et maquettes: 27-ux-design/02-wireframes-maquettes.md
+          - Design system: 27-ux-design/03-design-system.md
+          - Tests utilisateurs: 27-ux-design/04-tests-utilisateurs.md
+      - Audit et Qualité:
+          - 28-audit-qualite/index.md
+          - Pourquoi auditer une application existante: 28-audit-qualite/01-pourquoi-auditer.md
+          - Cartographier une application: 28-audit-qualite/02-cartographier-application.md
+          - Identifier les invariants métier: 28-audit-qualite/03-invariants-metier.md
+          - Prioriser les risques: 28-audit-qualite/04-prioriser-risques.md
+          - Lire le code pour repérer les bugs: 28-audit-qualite/05-lire-code-detecter-bugs.md
+          - Rédiger une issue technique efficace: 28-audit-qualite/06-rediger-issue-technique.md
+
+  - Références:
+      - fiches-reference/index.md
+      - Carte des cursus: carte-cursus.md
+      - Parcours suggérés: parcours.md
+      - Aide-mémoire Docker: fiches-reference/01-aide-memoire-docker.md
+      - Aide-mémoire Symfony: fiches-reference/02-aide-memoire-symfony.md
+      - Guide de debug: fiches-reference/03-guide-debug.md
+      - Aide-mémoire PostgreSQL: fiches-reference/04-aide-memoire-postgresql.md
+      - Aide-mémoire Git: fiches-reference/05-aide-memoire-git.md
+      - Guide tmux: fiches-reference/06-guide-tmux.md
+      - Aide-mémoire PHP: fiches-reference/07-aide-memoire-php.md
+      - Aide-mémoire JavaScript: fiches-reference/08-aide-memoire-javascript.md
+      - Aide-mémoire React: fiches-reference/09-aide-memoire-react.md
+      - Aide-mémoire Kubernetes: fiches-reference/10-aide-memoire-kubernetes.md
+      - Aide-mémoire Ansible: fiches-reference/11-aide-memoire-ansible.md
+      - Aide-mémoire TypeScript: fiches-reference/12-aide-memoire-typescript.md
+      - Aide-mémoire CI/CD: fiches-reference/13-aide-memoire-cicd.md
+      - Aide-mémoire API Design: fiches-reference/14-aide-memoire-api-design.md
+      - Aide-mémoire Redis: fiches-reference/15-aide-memoire-redis.md
+      - Aide-mémoire Monitoring: fiches-reference/16-aide-memoire-monitoring.md
+      - Aide-mémoire Architecture: fiches-reference/17-aide-memoire-architecture.md
+      - Aide-mémoire Testing: fiches-reference/18-aide-memoire-testing.md
+      - Certification:
+          - 00-blocs-competences/index.md
+          - Présentation: 00-blocs-competences/00-presentation-certification.md
+          - BC01 - Besoins utilisateurs:
+              - 00-blocs-competences/BC01-besoins-utilisateurs/index.md
+              - Cahier des charges: 00-blocs-competences/BC01-besoins-utilisateurs/01-cahier-des-charges.md
+              - Étude de marché: 00-blocs-competences/BC01-besoins-utilisateurs/02-etude-de-marche.md
+              - Analyse de faisabilité: 00-blocs-competences/BC01-besoins-utilisateurs/03-analyse-faisabilite.md
+          - BC02 - Pilotage projet:
+              - 00-blocs-competences/BC02-pilotage-projet/index.md
+              - Méthodologies agiles: 00-blocs-competences/BC02-pilotage-projet/01-methodologies-agiles.md
+              - Gestion d'équipe: 00-blocs-competences/BC02-pilotage-projet/02-gestion-equipe.md
+              - Roadmap et planification: 00-blocs-competences/BC02-pilotage-projet/03-roadmap-planification.md
+          - BC03 - Cloud computing:
+              - 00-blocs-competences/BC03-cloud-computing/index.md
+              - Introduction au Cloud: 00-blocs-competences/BC03-cloud-computing/01-introduction-cloud.md
+              - Tests d'intrusion: 00-blocs-competences/BC03-cloud-computing/02-tests-intrusion-pentest.md
+              - Infrastructure as Code: 00-blocs-competences/BC03-cloud-computing/03-infrastructure-as-code.md
+              - Déploiement continu: 00-blocs-competences/BC03-cloud-computing/04-deploiement-continu.md
+              - Bases Kubernetes: 00-blocs-competences/BC03-cloud-computing/05-kubernetes-bases.md
+          - BC04 - Développement logiciel:
+              - 00-blocs-competences/BC04-developpement-logiciel/index.md
+              - Architecture serveur web: 00-blocs-competences/BC04-developpement-logiciel/01-architecture-serveur-web.md
+              - Sécurité et authentification: 00-blocs-competences/BC04-developpement-logiciel/02-securite-authentification.md
+              - Tests et qualité: 00-blocs-competences/BC04-developpement-logiciel/03-tests-qualite-logicielle.md
+              - Applications mobiles: 00-blocs-competences/BC04-developpement-logiciel/04-applications-mobiles.md
+          - BC05 - Architecture SI:
+              - 00-blocs-competences/BC05-architecture-si/index.md
+              - Infrastructure réseau: 00-blocs-competences/BC05-architecture-si/01-infrastructure-reseau.md
+              - Supervision et monitoring: 00-blocs-competences/BC05-architecture-si/02-supervision-monitoring.md
+              - Sécurité du SI: 00-blocs-competences/BC05-architecture-si/03-securite-systeme-information.md
+              - Audit de sécurité: 00-blocs-competences/BC05-architecture-si/04-audit-securite.md
+
+      - Tags: tags.md

@@ -1,0 +1,45 @@
+# Third-party notices
+
+Learning Docs redistributes or bundles the following third-party materials.
+
+## KaTeX fonts and stylesheet
+
+- Location: `docs/stylesheets/katex.min.css`, `docs/stylesheets/fonts/`, `docs/javascripts/katex.min.js`, `docs/javascripts/katex-auto-render.min.js`
+- Project: [KaTeX](https://katex.org/)
+- License: MIT License
+- Copyright: Khan Academy and other contributors
+- Purpose: offline math rendering for pedagogical pages (no CDN at runtime)
+- Full license text: `third-party-licenses/KaTeX-LICENSE.txt`
+
+## Mermaid JavaScript bundle
+
+- Location: `docs/javascripts/mermaid.min.js`
+- Project: [Mermaid](https://mermaid.js.org/)
+- License: MIT License
+- Copyright: Knut Sveidqvist and other contributors
+- Purpose: offline rendering of diagrams in pedagogical pages
+- Full license text: `third-party-licenses/Mermaid-LICENSE.txt`
+
+## MkDocs Material (build-time dependency)
+
+- Not vendored in this repository; installed via `requirements.txt` / Docker image
+- Project: [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+- License: MIT
+- Image pin documented in `docker-compose.yml` and README
+
+## Node development tools
+
+- Listed in `package.json` / `package-lock.json`
+- Installed only for development, lint, and tests (not required to *read* the Markdown corpus offline)
+
+## Pedagogical code examples
+
+Short code samples in `docs/` are provided for education. They are not a warranty of fitness for production use. Prefer the official documentation of each technology for authoritative behaviour.
+
+## Project licensing summary
+
+| Material | Licence |
+| -------- | ------- |
+| Pedagogical content (`docs/**` text, structure) | Creative Commons Attribution 4.0 International (CC BY 4.0) - see `LICENSE` |
+| Project tooling scripts under `scripts/` and repo configuration authored for this project | MIT - see `LICENSE-CODE` |
+| Third-party assets above | Their respective licences, reproduced under `third-party-licenses/` |

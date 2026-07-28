@@ -1,0 +1,80 @@
+{
+  "name": "learning-docs",
+  "version": "1.0.0",
+  "description": "Documentation pédagogique de programmation structurée et explicite (Learning Docs)",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThomasCrouzet/learning-docs.git"
+  },
+  "homepage": "https://thomascrouzet.github.io/learning-docs/",
+  "bugs": {
+    "url": "https://github.com/ThomasCrouzet/learning-docs/issues"
+  },
+  "scripts": {
+    "lint": "markdownlint \"docs/**/*.md\" \"*.md\"",
+    "lint:fix": "markdownlint \"docs/**/*.md\" \"*.md\" --fix",
+    "lint:check-names": "node scripts/check-filenames.js",
+    "lint:frontmatter": "node scripts/validate-frontmatter.js",
+    "lint:emdash": "node scripts/fix-emdash.js",
+    "lint:emdash:fix": "node scripts/fix-emdash.js --fix",
+    "lint:accents": "node scripts/fix-accents.js",
+    "lint:accents:fix": "node scripts/fix-accents.js --fix",
+    "lint:accents:discover": "node scripts/fix-accents.js --discover",
+    "lint:prereq-links": "node scripts/check-prereq-links.js",
+    "lint:structure": "node scripts/check-structure.js",
+    "lint:consistency": "node scripts/check-consistency.js",
+    "lint:cursus-map": "node scripts/generate-cursus-map.js --check",
+    "lint:review-registry": "node scripts/check-review-registry.js",
+    "lint:vendored-assets": "node scripts/check-vendored-assets.js",
+    "audit:docs": "node scripts/doc-audit.js",
+    "audit:snippets": "node scripts/run-snippet-runtime.js",
+    "audit:crypto-accents": "node scripts/scan-crypto-accent-residual.js",
+    "audit:crypto-accents:fix": "node scripts/scan-crypto-accent-residual.js --fix",
+    "audit:sync-final-report": "node scripts/sync-final-report-from-coverage.js",
+    "audit:check-final-report": "node scripts/check-final-report-claims.js",
+    "lint:ci": "npm run lint && npm run lint:check-names && npm run lint:emdash && npm run lint:accents && npm run lint:prereq-links && npm run lint:frontmatter && npm run lint:structure && npm run lint:consistency && npm run lint:cursus-map && npm run lint:vendored-assets",
+    "a11y:reading-time": "node scripts/add-reading-time.js",
+    "a11y:navigation": "node scripts/add-navigation-metadata.js",
+    "a11y:en-bref": "node scripts/generate-en-bref.js",
+    "generate:cursus-map": "node scripts/generate-cursus-map.js",
+    "a11y:all": "npm run a11y:reading-time && npm run a11y:navigation && npm run a11y:en-bref",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:a11y": "playwright test e2e/a11y.spec.js",
+    "test:a11y:baseline": "node e2e/axe-baseline.mjs",
+    "serve:site": "npx --yes serve site -l 4173",
+    "validate": "npm test && npm run lint:ci",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.61.1",
+    "@vitest/coverage-v8": "4.1.6",
+    "an-array-of-french-words": "^2.0.0",
+    "husky": "^9.0.0",
+    "js-yaml": "^4.1.1",
+    "katex": "^0.16.40",
+    "lint-staged": "^15.0.0",
+    "markdownlint-cli": "^0.49.1",
+    "mermaid": "^11.13.0",
+    "vitest": "^4.1.0"
+  },
+  "lint-staged": {
+    "docs/**/*.md": [
+      "node scripts/fix-accents.js --fix",
+      "node scripts/fix-emdash.js --fix",
+      "markdownlint --fix"
+    ],
+    "{README,CONTRIBUTING,CODE_OF_CONDUCT,SECURITY}.md": [
+      "node scripts/fix-emdash.js --fix",
+      "markdownlint --fix"
+    ]
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

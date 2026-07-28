@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<script>var _origGetById=document.getElementById;document.getElementById=function(id){return id?_origGetById.call(document,id):null}</script>
+{% if page and page.meta %}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }} - {{ config.site_name }}" />
+<meta property="og:description" content="{{ page.meta.description | default(config.site_description) }}" />
+<meta property="og:url" content="{{ page.canonical_url }}" />
+<meta property="og:site_name" content="{{ config.site_name }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ page.title }} - {{ config.site_name }}" />
+<meta name="twitter:description" content="{{ page.meta.description | default(config.site_description) }}" />
+{% endif %}
+{% endblock %}
+{% block content %}
+  {% if page.meta.estimated_time %}
+  <div class="fiche-meta-badge" role="group" aria-label="Métadonnées de la fiche">
+    <span>&#9201; {{ page.meta.estimated_time }}</span>
+    {% if page.meta.cursus %}<span class="fiche-meta-sep" aria-hidden="true">|</span><span>{{ page.meta.cursus }}</span>{% endif %}
+    {% if page.meta.fiche_number %}<span class="fiche-meta-sep" aria-hidden="true">|</span><span>Fiche {{ page.meta.fiche_number }}/{{ page.meta.total_fiches }}</span>{% endif %}
+    {% if page.meta.tags %}
+      {% for tag in page.meta.tags %}
+        {% if tag in ["Débutant", "Intermédiaire", "Avancé", "Expert"] %}
+          <span class="fiche-meta-sep" aria-hidden="true">|</span><span class="level-badge level-{{ tag | lower }}">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  {# Material navigation.instant.progress : progressbar sans nom accessible (WCAG 4.1.2) #}
+  <script>
+    (function () {
+      function nameProgressBars() {
+        document.querySelectorAll('.md-progress[role="progressbar"]:not([aria-label])').forEach(function (el) {
+          el.setAttribute("aria-label", "Progression du chargement de la page");
+          el.setAttribute("aria-valuemin", "0");
+          el.setAttribute("aria-valuemax", "100");
+        });
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", nameProgressBars);
+      } else {
+        nameProgressBars();
+      }
+      if (typeof document$ !== "undefined") {
+        document$.subscribe(nameProgressBars);
+      }
+    })();
+  </script>
+{% endblock %}

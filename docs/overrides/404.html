@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% set base = config.site_url if config.site_url else base_url %}
+<h1 id="page-introuvable">Page introuvable</h1>
+<p>La page que tu cherches n'existe pas ou a été déplacée.</p>
+<hr>
+<h2>Que faire ?</h2>
+<ul>
+  <li><a href="{{ base }}">Retour à l'accueil</a> - Page principale du wiki</li>
+  <li><a href="{{ base }}tags/">Rechercher une fiche</a> - Parcourir toutes les fiches par tags</li>
+  <li><a href="{{ base }}carte-cursus/">Carte des cursus</a> - Vue d'ensemble de tous les cursus</li>
+</ul>
+<p>Tu peux aussi utiliser la <strong>barre de recherche</strong> en haut de la page pour trouver ce que tu cherches.</p>
+{% endblock %}

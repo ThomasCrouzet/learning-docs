@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+
+# External project folders
+projet-lea/
+
+# Generated files
+pdf/
+
+# Non-documentation markdown
+informations-diplome/
+
+# Claude Code config
+.claude/

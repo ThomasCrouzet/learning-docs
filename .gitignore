@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+._*
+*.textClipping
+
+# Logs
+*.log
+
+# PDF artefacts (generate on demand)
+pdf/
+*.pdf
+*.zip
+
+# MkDocs build output and cache
+site/
+.cache/
+
+# Test coverage / Playwright local
+coverage/
+audit-artifacts/
+playwright-report/
+test-results/
+blob-report/
+
+# Local maintainer tooling and generated review records
+.claude/
+.codex/
+audit-reports/
+CLAUDE.md
+create-pdf.sh
+
+# Internal work products (not public wiki surface)
+audits/
+audit-partials/
+prompts/
+_audits-archive/
+deep-audit-prompt.md
+plan.md
+informations-diplome/
+.gitea/
+
+# Programme reference dumps
+EPITECH-Programme_MasterOfScience-E236.md
+EPITECH-Programme_MasterOfScience-E236*.pdf
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Env
+.env
+.env.*
+!.env.example
