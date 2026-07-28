@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thomascrouzet.github.io/learning-docs/sitemap.xml

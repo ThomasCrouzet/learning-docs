@@ -1,0 +1,1339 @@
+/* ==========================================================================
+   Documentation Pédagogique — CSS Accessibilité
+   Conçu pour un confort de lecture maximal (profil neuroatypique)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. CONTRASTE WCAG 2.2 AA — palette Material teal
+   Le teal Material par défaut (#009485) donne ~3.76:1 avec le blanc (échec AA).
+   #00695c (teal 800) donne ~6.61:1 avec le blanc.
+   -------------------------------------------------------------------------- */
+
+[data-md-color-primary="teal"] {
+  --md-primary-fg-color: #00695c;
+  --md-primary-fg-color--light: #26a69a;
+  --md-primary-fg-color--dark: #004d40;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+
+/* Onglets : le thème applique une opacité trop faible (~#b3dfda, 2.59:1).
+   On force un blanc lisible et on distingue l'onglet actif autrement. */
+.md-tabs__link {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.md-tabs__item:not(.md-tabs__item--active) .md-tabs__link {
+  color: #e0f2f1;
+}
+
+.md-tabs__item--active > .md-tabs__link {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Titre du site dans le header : blanc sur primary */
+.md-header__topic,
+.md-header__button,
+.md-header__source {
+  color: #ffffff;
+}
+
+/* Accent deep-orange : #e64a19 ≈ 3.91:1 sur blanc (échec AA).
+   #bf360c (deep-orange 900) ≈ 5.60:1 sur blanc. */
+[data-md-color-accent="deep-orange"] {
+  --md-accent-fg-color: #bf360c;
+  --md-accent-fg-color--transparent: rgba(191, 54, 12, 0.12);
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+
+/* Mode sombre : primary sombre illisible comme texte de bouton/lien sur fond slate.
+   Header conserve le teal foncé (blanc sur #00695c OK) ; liens du corps en teal clair. */
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #4db6ac;
+  --md-code-hl-comment-color: #b0bec5;
+  --md-code-hl-variable-color: #cfd8dc;
+  --md-code-hl-operator-color: #b0bec5;
+  --md-code-hl-punctuation-color: #b0bec5;
+  --md-code-hl-generic-color: #b0bec5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button {
+  color: #4db6ac;
+  border-color: #4db6ac;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  color: #0d1117;
+  background-color: #4db6ac;
+  border-color: #4db6ac;
+}
+
+/* Commentaires / variables de code (pygments).
+   Material définit --md-code-hl-* sur :root>* après notre :root ;
+   on re-spécifie sur .md-typeset (portée du contenu) + couleur directe. */
+.md-typeset {
+  --md-code-hl-comment-color: #424242;
+  --md-code-hl-variable-color: #263238;
+  --md-code-hl-operator-color: #37474f;
+  --md-code-hl-punctuation-color: #37474f;
+  --md-code-hl-generic-color: #37474f;
+}
+
+/* #424242 sur #f5f5f5 ≈ 9.22:1 ; #717171 par défaut ≈ 4.47:1 (échec AA) */
+.md-typeset .highlight .c,
+.md-typeset .highlight .c1,
+.md-typeset .highlight .cm,
+.md-typeset .highlight .ch,
+.md-typeset .highlight .cs,
+.md-typeset .highlighttable .c1,
+.md-typeset pre > code .c1,
+.md-typeset code .c,
+.md-typeset code .c1,
+.md-typeset code .cm {
+  color: #424242 !important;
+}
+
+.md-typeset .highlight .nv,
+.md-typeset .highlight .vc,
+.md-typeset .highlight .vg,
+.md-typeset .highlight .vi,
+.md-typeset .highlighttable .nv,
+.md-typeset pre > code .nv,
+.md-typeset code .nv {
+  color: #263238 !important;
+}
+
+/* Target size : listes latérales (WCAG 2.2 2.5.8)
+   Marge entre voisins pour que la zone cliquable "safe" ≥ 24px (axe). */
+.md-sidebar .md-nav__link:not(.md-nav__container) {
+  min-height: 2.25rem;
+  margin-block: 0.2rem;
+  padding-block: 0.45em;
+}
+
+.md-sidebar__scrollwrap {
+  scroll-padding-block: 0.75rem;
+}
+
+.md-sidebar--primary .md-sidebar__inner,
+.md-sidebar--secondary .md-sidebar__inner {
+  padding-block: 0.35rem;
+}
+
+/* Lien actif toujours entièrement visible dans le viewport latéral */
+.md-nav__link--active {
+  scroll-margin-block: 0.75rem;
+}
+
+/* Conteneur titre de section + toggle : ne pas forcer min-height/z-index */
+.md-nav__container {
+  min-height: 0;
+  z-index: auto;
+}
+
+/* Material "lifted" rend le titre de section active sticky (top:0, z-index:1),
+   ce qui masque partiellement les liens enfants au scroll de la sidebar
+   → échec axe target-size (WCAG 2.5.8). On conserve l'indication d'état
+   (poids/couleur) sans sticky. */
+.md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link,
+.md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__container {
+  position: static;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+/* Pied de page : #7f7f7f sur #171717 ≈ 4.47:1 (sous le seuil) */
+.md-copyright,
+.md-footer-meta {
+  color: #b0b0b0;
+}
+
+.md-copyright a {
+  color: #d0d0d0;
+}
+
+/* --------------------------------------------------------------------------
+   1. TYPOGRAPHIE ET LISIBILITÉ
+   -------------------------------------------------------------------------- */
+
+:root {
+  --md-text-font-size: 1rem;
+  --md-text-letter-spacing: 0.02em;
+}
+
+/* Corps du texte : typographie accessible (Lexend + espacement optimise) */
+.md-typeset {
+  font-size: var(--md-text-font-size);
+  line-height: 1.8;
+  word-spacing: 0.05em;
+  letter-spacing: var(--md-text-letter-spacing);
+  font-weight: 400;
+}
+
+/* Espacement accru entre paragraphes */
+.md-typeset p {
+  margin-bottom: 1.2em;
+}
+
+/* --------------------------------------------------------------------------
+   1b. AÉRATION DU CONTENU
+   -------------------------------------------------------------------------- */
+
+/* Grille principale elargie pour exploiter les grands ecrans
+   (la grille est le parent qui borne sidebar + contenu + TOC) */
+.md-grid {
+  max-width: 70rem;
+}
+
+/* Zone de contenu plus large pour respirer */
+.md-content {
+  max-width: 52rem;
+}
+
+/* Plus d'espace autour des blocs de code */
+.md-typeset pre {
+  margin: 1.2em 0;
+}
+
+/* Plus d'espace autour des tableaux */
+.md-typeset table:not([class]) {
+  margin: 1.5em 0;
+}
+
+/* Espacement entre listes et le contenu suivant */
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: 1em;
+}
+
+/* Séparateurs (hr) plus visibles et espacés */
+.md-typeset hr {
+  margin: 2.5em 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Blockquotes plus aérés */
+.md-typeset blockquote {
+  margin: 1.5em 0;
+  padding: 0.8em 1.2em;
+}
+
+/* Titres : espacement généreux au-dessus pour séparer les sections */
+.md-typeset h2 {
+  margin-top: 2.5em;
+  padding-top: 1em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset h3 {
+  margin-top: 2em;
+}
+
+/* Italique remplace par semi-bold (lisibilite neurodivergente) */
+.md-typeset em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Code : Atkinson Hyperlegible Mono avec fallbacks */
+.md-typeset code,
+.md-typeset pre code,
+.md-typeset kbd {
+  font-family: "Atkinson Hyperlegible Mono", "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: 0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   2. LIENS — TOUJOURS SOULIGNÉS
+   Ne pas reposer uniquement sur la couleur pour identifier un lien
+   -------------------------------------------------------------------------- */
+
+.md-typeset a:not(.md-button):not(.md-nav__link):not(.md-source):not(.headerlink):not(.tag) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.md-typeset a:not(.md-button):not(.md-nav__link):not(.md-source):not(.headerlink):not(.tag):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. FOCUS VISIBLE — Navigation clavier claire
+   -------------------------------------------------------------------------- */
+
+*:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. BLOCS DE CODE — Plus lisibles et spacieux
+   -------------------------------------------------------------------------- */
+
+.md-typeset pre {
+  padding: 1.2em;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset code {
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+/* Numéros de ligne plus visibles */
+.md-typeset .linenums ol li {
+  padding-left: 0.8em;
+}
+
+/* Scrollbar toujours visible sur les blocs de code */
+.md-typeset pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.md-typeset pre::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+}
+
+/* Zones défilables focusables (JS ajoute tabindex=0 si overflow réel) */
+.md-typeset pre > code[data-a11y-scroll-region="true"],
+.md-typeset__scrollwrap[data-a11y-scroll-region="true"],
+.md-typeset pre[data-a11y-scroll-region="true"] {
+  outline-offset: 2px;
+}
+
+.md-typeset pre > code[data-a11y-scroll-region="true"]:focus-visible,
+.md-typeset__scrollwrap[data-a11y-scroll-region="true"]:focus-visible,
+.md-typeset pre[data-a11y-scroll-region="true"]:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+}
+
+/* --------------------------------------------------------------------------
+   5. TABLEAUX — Lisibles, avec alternance de couleurs
+   -------------------------------------------------------------------------- */
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+
+.md-typeset table:not([class]) thead {
+  background: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.8em 1em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Tableaux responsive : scroll horizontal */
+.md-typeset .md-typeset__scrollwrap {
+  margin-bottom: 1em;
+}
+
+/* --------------------------------------------------------------------------
+   6. ADMONITIONS — Style distinct et prévisible pour chaque type
+   -------------------------------------------------------------------------- */
+
+/* Espacement accru autour des admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  margin: 1.5em 0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  border-left-width: 5px;
+}
+
+/* --------------------------------------------------------------------------
+   7. NAVIGATION LATÉRALE — Lisible et espacée
+   WCAG 2.2 Target Size (Minimum) : 24×24 CSS px, espace suffisant
+   -------------------------------------------------------------------------- */
+
+/* Taille de texte de la nav + cibles cliquables ≥ 24px (WCAG 2.2 2.5.8)
+   Important : ne pas styler .md-nav__container (qui porte aussi .md-nav__link)
+   comme un lien flex, sinon les sous-menus chevauchent le titre de section. */
+.md-nav__link:not(.md-nav__container) {
+  font-size: 0.82rem;
+  padding: 0.5em 0.65em;
+  min-height: 2rem;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Indicateur de section active plus visible */
+.md-nav__item--active > .md-nav__link {
+  font-weight: 600;
+}
+
+/* Espacement entre les items de nav */
+.md-nav__item {
+  padding: 0.15em 0;
+}
+
+/* Liens permanents (¶) : cible minimale sans élargir le flux */
+.md-typeset .headerlink {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   8. BREADCRUMBS — Visibilité accrue
+   -------------------------------------------------------------------------- */
+
+.md-path {
+  margin-bottom: 0.5em;
+}
+
+/* --------------------------------------------------------------------------
+   9. NAVIGATION FOOTER — Plus visible
+   -------------------------------------------------------------------------- */
+
+.md-footer {
+  margin-top: 3em;
+}
+
+/* --------------------------------------------------------------------------
+   10. GRIDS / CARDS — Pour la page d'accueil
+   -------------------------------------------------------------------------- */
+
+/* Cards avec hover subtil */
+.md-typeset .grid.cards > ul > li {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   10b. ACCUEIL — Ligne d'ampleur (sous le hero)
+   -------------------------------------------------------------------------- */
+
+.md-typeset .home-stats {
+  margin: 1em 0 0;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   10c. ACCUEIL — Bloc "Par où commencer" (intentions)
+   -------------------------------------------------------------------------- */
+
+.md-typeset .home-intent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 1.5em 0;
+}
+
+/* Les <li> deviennent directement les cellules de la grille parente */
+.md-typeset .home-intent > ul {
+  display: contents;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.md-typeset .home-intent > ul > li {
+  margin: 0;
+  padding: 1em 1.2em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 8px;
+  background: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .home-intent > ul > li > :last-child {
+  margin-bottom: 0;
+}
+
+.home-intent__icon {
+  color: var(--md-primary-fg-color);
+  vertical-align: -0.15em;
+  margin-right: 0.2em;
+}
+
+/* --------------------------------------------------------------------------
+   10d. ACCUEIL — Cartes-domaines compactes (vitrine)
+   -------------------------------------------------------------------------- */
+
+.md-typeset .grid.cards.home-families > ul > li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2em 1.3em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-top: 3px solid var(--md-primary-fg-color);
+  border-radius: 8px;
+}
+
+.md-typeset .grid.cards.home-families > ul > li > p:first-child .twemoji {
+  color: var(--md-primary-fg-color);
+}
+
+/* Le lien d'action est poussé en bas pour aligner les rangées */
+.md-typeset .grid.cards.home-families > ul > li > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 0.6em;
+}
+
+.md-typeset .grid.cards.home-families > ul > li > p:last-child > a {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards.home-families > ul > li > p:last-child > a {
+  color: var(--md-typeset-a-color);
+}
+
+.md-typeset .grid.cards.home-families > ul > li:hover {
+  border-top-color: var(--md-accent-fg-color);
+}
+
+/* Hero : boutons côte à côte */
+.md-typeset .md-button + .md-button {
+  margin-left: 0.6em;
+}
+
+/* Mode sombre : bordures un cran plus visibles */
+[data-md-color-scheme="slate"] .md-typeset .home-intent > ul > li,
+[data-md-color-scheme="slate"] .md-typeset .grid.cards.home-families > ul > li {
+  border-color: var(--md-default-fg-color--light);
+}
+
+/* --------------------------------------------------------------------------
+   11. RÉDUCTION DE MOUVEMENT — Respect des préférences système
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. MODE SOMBRE — Ajustements de contraste
+   -------------------------------------------------------------------------- */
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-top-color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+  border-color: var(--md-default-fg-color--light);
+}
+
+/* --------------------------------------------------------------------------
+   14. BLOCS VISUELS PÉDAGOGIQUES
+   Mis en valeur automatiquement par extra.js (même logique que les PDFs)
+   -------------------------------------------------------------------------- */
+
+/* Bloc Définition — bleu */
+.pedagogical-block--definition {
+  background-color: #e7f3ff;
+  border-left: 4px solid #0066cc;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+/* Bloc Analogie — vert */
+.pedagogical-block--analogy {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+/* Bloc Warning (⚠️) — orange */
+.pedagogical-block--warning {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+/* Bloc Solution (✅) — vert */
+.pedagogical-block--solution {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+/* Bloc Note (blockquote) — violet */
+.pedagogical-block--note {
+  background-color: #f3e5f5;
+  border-left: 4px solid #9c27b0;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+/* Bloc Résultat attendu — gris neutre */
+.pedagogical-block--result {
+  background-color: #f5f5f5;
+  border-left: 4px solid #757575;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+/* --------------------------------------------------------------------------
+   15. BLOCS VISUELS — MODE SOMBRE
+   -------------------------------------------------------------------------- */
+
+[data-md-color-scheme="slate"] .pedagogical-block--definition {
+  background-color: rgba(0, 102, 204, 0.12);
+  border-left-color: #4d9fff;
+}
+
+[data-md-color-scheme="slate"] .pedagogical-block--analogy {
+  background-color: rgba(76, 175, 80, 0.12);
+  border-left-color: #66bb6a;
+}
+
+[data-md-color-scheme="slate"] .pedagogical-block--warning {
+  background-color: rgba(255, 152, 0, 0.12);
+  border-left-color: #ffb74d;
+}
+
+[data-md-color-scheme="slate"] .pedagogical-block--solution {
+  background-color: rgba(76, 175, 80, 0.12);
+  border-left-color: #66bb6a;
+}
+
+[data-md-color-scheme="slate"] .pedagogical-block--note {
+  background-color: rgba(156, 39, 176, 0.12);
+  border-left-color: #ba68c8;
+}
+
+[data-md-color-scheme="slate"] .pedagogical-block--result {
+  background-color: rgba(117, 117, 117, 0.12);
+  border-left-color: #9e9e9e;
+}
+
+/* --------------------------------------------------------------------------
+   16. BARRE DE PROGRESSION DE LECTURE
+   -------------------------------------------------------------------------- */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--md-accent-fg-color);
+  z-index: 999;
+  transition: width 0.15s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress {
+    transition: none;
+  }
+}
+
+@media print {
+  .reading-progress {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. BADGE MÉTADONNÉES (temps + cursus + progression)
+   -------------------------------------------------------------------------- */
+
+.fiche-meta-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  padding: 0.4em 0.8em;
+  margin-bottom: 1em;
+  font-size: 0.82rem;
+  /* #6d6d6d sur #ededed ≈ 4.41:1 — forcer un gris plus sombre */
+  color: #424242;
+  background: #f0f0f0;
+  border-radius: 6px;
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .fiche-meta-badge {
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.fiche-meta-sep {
+  opacity: 0.3;
+}
+
+.level-badge {
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.level-badge.level-débutant {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.level-badge.level-intermédiaire {
+  background: #fff3e0;
+  color: #bf360c;
+}
+
+.level-badge.level-avancé {
+  background: #fce4ec;
+  color: #b71c1c;
+}
+
+.level-badge.level-expert {
+  background: #f3e5f5;
+  color: #4a148c;
+}
+
+[data-md-color-scheme="slate"] .level-badge.level-débutant {
+  background: #1b5e20;
+  color: #a5d6a7;
+}
+
+[data-md-color-scheme="slate"] .level-badge.level-intermédiaire {
+  background: #bf360c;
+  color: #ffcc80;
+}
+
+[data-md-color-scheme="slate"] .level-badge.level-avancé {
+  background: #b71c1c;
+  color: #ef9a9a;
+}
+
+[data-md-color-scheme="slate"] .level-badge.level-expert {
+  background: #4a148c;
+  color: #ce93d8;
+}
+
+@media print {
+  .fiche-meta-badge {
+    border: 1px solid #ccc;
+    background: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. PRINT — Styles d'impression basiques
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .md-sidebar,
+  .md-header,
+  .md-footer,
+  .md-path {
+    display: none;
+  }
+
+  .md-typeset {
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+}
+
+/* --- Diagrammes Mermaid --- */
+
+.mermaid-diagram {
+  text-align: center;
+  margin: 1.5em 0;
+  overflow-x: auto;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Diagramme activable clavier (role=button via JS) */
+.mermaid-diagram:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 4px;
+}
+
+.mermaid-diagram > div {
+  width: 100%;
+}
+
+.mermaid-diagram svg {
+  height: auto !important;
+  max-width: 100% !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fix troncature du texte dans les diagrammes Mermaid */
+.mermaid-diagram svg foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid-diagram svg foreignObject > div {
+  overflow: visible !important;
+}
+
+.mermaid-lightbox-transform svg foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid-lightbox-transform svg foreignObject > div {
+  overflow: visible !important;
+}
+
+.mermaid-diagram:hover::after {
+  content: "\1F50D Cliquer pour agrandir";
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Lightbox zoomable */
+
+.mermaid-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quand la lightbox est ouverte, le reste de la page n'est pas focusable */
+body.mermaid-lightbox-open {
+  overflow: hidden;
+}
+
+.mermaid-lightbox-viewport {
+  flex: 1;
+  overflow: hidden;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+
+.mermaid-lightbox-viewport:active {
+  cursor: grabbing;
+}
+
+.mermaid-lightbox-transform {
+  transform-origin: center center;
+  transition: none;
+}
+
+.mermaid-lightbox-transform svg {
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mermaid-lightbox-controls {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  gap: 6px;
+  z-index: 10000;
+}
+
+.mermaid-lightbox-controls button {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.mermaid-lightbox-controls button:focus-visible {
+  outline: 3px solid #ffab91;
+  outline-offset: 2px;
+  border-color: #e64a19;
+}
+
+.mermaid-lightbox-controls button:hover {
+  background: #fff;
+}
+
+.mermaid-lightbox-controls button[data-action="close"] {
+  background: rgba(231, 76, 60, 0.9);
+  color: #fff;
+}
+
+.mermaid-lightbox-controls button[data-action="close"]:hover {
+  background: #e74c3c;
+}
+
+.mermaid-lightbox-controls button[data-action="fit"] {
+  width: auto;
+  padding: 0 12px;
+  font-size: 0.85rem;
+}
+
+[data-md-color-scheme="slate"] .mermaid-lightbox-transform svg {
+  background: #2e303e;
+}
+
+[data-md-color-scheme="slate"] .mermaid-lightbox-controls button {
+  background: rgba(60, 60, 80, 0.9);
+  color: #ddd;
+}
+
+[data-md-color-scheme="slate"] .mermaid-lightbox-controls button:hover {
+  background: rgba(80, 80, 100, 1);
+}
+
+/* --------------------------------------------------------------------------
+   18. CHANGELOG — Timeline visuelle
+   -------------------------------------------------------------------------- */
+
+.changelog-entry {
+  position: relative;
+  padding-left: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.changelog-entry::before {
+  content: "";
+  position: absolute;
+  left: 0.65em;
+  top: 2.2em;
+  bottom: -2.5em;
+  width: 2px;
+  background: var(--md-default-fg-color--lightest);
+}
+
+.changelog-entry:last-child::before {
+  display: none;
+}
+
+.changelog-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.3em 1em;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.changelog-date::before {
+  content: "";
+  position: absolute;
+  left: -1.85em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--md-primary-fg-color);
+  border: 3px solid var(--md-default-bg-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--md-primary-fg-color);
+}
+
+.changelog-category {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.changelog-category .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.2em 0.7em;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge--new {
+  background: rgba(76, 175, 80, 0.15);
+  color: #2e7d32;
+  border-left: 3px solid #4caf50;
+}
+
+.badge--updated {
+  background: rgba(33, 150, 243, 0.15);
+  color: #1565c0;
+  border-left: 3px solid #2196f3;
+}
+
+.badge--fixed {
+  background: rgba(255, 152, 0, 0.15);
+  color: #e65100;
+  border-left: 3px solid #ff9800;
+}
+
+[data-md-color-scheme="slate"] .badge--new {
+  background: rgba(76, 175, 80, 0.2);
+  color: #81c784;
+}
+
+[data-md-color-scheme="slate"] .badge--updated {
+  background: rgba(33, 150, 243, 0.2);
+  color: #64b5f6;
+}
+
+[data-md-color-scheme="slate"] .badge--fixed {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ffb74d;
+}
+
+.changelog-entry ul {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}
+
+.changelog-entry ul li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.changelog-stats {
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  margin: 1.5em 0 2.5em;
+  padding: 1em 1.5em;
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+}
+
+.changelog-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.changelog-stats .stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+
+.changelog-stats .stat-label {
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   19. ONGLET CHANGELOG — Séparé des autres onglets de navigation
+   -------------------------------------------------------------------------- */
+
+.md-tabs__list li:last-child {
+  margin-left: auto;
+}
+
+.md-tabs__list li:last-child .md-tabs__link {
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+
+/* --------------------------------------------------------------------------
+   20. BANDEAU REPRISE DE LECTURE
+   -------------------------------------------------------------------------- */
+
+.reading-resume-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 0.6em 1em;
+  margin: 0.5em 0 1.5em;
+  background: var(--md-accent-fg-color--transparent, rgba(0, 150, 136, 0.08));
+  border-left: 3px solid var(--md-accent-fg-color);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.88rem;
+  color: var(--md-default-fg-color);
+}
+
+.reading-resume-btn {
+  padding: 0.45em 0.9em;
+  min-height: 2rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.reading-resume-btn:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.reading-resume-btn:hover {
+  opacity: 0.9;
+}
+
+.reading-resume-close {
+  margin-left: auto;
+  padding: 0.35em 0.6em;
+  min-width: 2rem;
+  min-height: 2rem;
+  border: none;
+  background: none;
+  color: var(--md-default-fg-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.reading-resume-close:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.reading-resume-close:hover {
+  color: var(--md-default-fg-color);
+}
+
+/* --------------------------------------------------------------------------
+   21. SOLUTIONS D'EXERCICES MASQUEES
+   -------------------------------------------------------------------------- */
+
+.solution-wrapper {
+  margin: 1.5em 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.solution-wrapper > .solution-summary {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 1.2em;
+  background: var(--md-default-fg-color--lightest);
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.solution-wrapper > .solution-summary::-webkit-details-marker {
+  display: none;
+}
+
+.solution-wrapper > .solution-summary::before {
+  content: "\25B6";
+  margin-right: 0.6em;
+  font-size: 0.7em;
+  transition: transform 0.2s ease;
+}
+
+.solution-wrapper[open] > .solution-summary::before {
+  transform: rotate(90deg);
+}
+
+.solution-wrapper > :not(summary) {
+  padding: 0 1.2em;
+}
+
+[data-md-color-scheme="slate"] .solution-wrapper {
+  border-color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .solution-wrapper > .solution-summary {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   22. MOBILE — Indicateurs de scroll horizontal (code blocks)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 76.25em) {
+  .md-typeset pre {
+    position: relative;
+  }
+
+  .code-scroll-indicator {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2.5em;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--md-code-bg-color, #f5f5f5)
+    );
+    pointer-events: none;
+    opacity: 0.9;
+    border-radius: 0 8px 8px 0;
+    transition: opacity 0.3s;
+  }
+
+  .code-scroll-indicator.hidden {
+    opacity: 0;
+  }
+
+  [data-md-color-scheme="slate"] .code-scroll-indicator {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--md-code-bg-color, #2e303e)
+    );
+  }
+}
+
+/* --------------------------------------------------------------------------
+   23. MOBILE — Cibles tactiles 44px minimum (WCAG 2.2)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 76.25em) {
+  .md-nav__link {
+    padding: 0.6em 0.8em;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .md-nav__item {
+    padding: 0;
+  }
+
+  .md-clipboard {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Bouton back-to-top plus grand sur mobile */
+  .md-top {
+    padding: 0.8em 1.2em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   24. MOBILE — Lisibilité petits écrans
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  :root {
+    --md-text-font-size: 0.95rem;
+  }
+  .md-content {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+  .md-typeset h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   25. MOBILE — Indicateur scroll tableaux
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 76.25em) {
+  .table-scroll-hint {
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--md-default-fg-color--light);
+    padding: 0.2em 0.5em 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   26. BARRE DE PROGRESSION INSTANT (Material) — nom accessible
+   Le markup theme a role="progressbar" sans nom ; le label est ajouté en JS,
+   ce style évite qu'elle reçoive le focus clavier inutilement.
+   -------------------------------------------------------------------------- */
+
+.md-progress[role="progressbar"] {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   27. CHECKLISTS DE VALIDATION — zone cliquable lisible
+   -------------------------------------------------------------------------- */
+
+.md-typeset .task-list-item {
+  padding-left: 0.2em;
+}
+
+.md-typeset .task-list-control {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+.md-typeset .task-list-control input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+}

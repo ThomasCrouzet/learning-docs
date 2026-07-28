@@ -1,0 +1,140 @@
+{
+  "default": true,
+
+  "MD001": true,
+
+  "MD003": {
+    "style": "atx"
+  },
+
+  "MD004": {
+    "style": "dash"
+  },
+
+  "MD009": {
+    "br_spaces": 0,
+    "strict": true
+  },
+
+  "MD012": {
+    "maximum": 2
+  },
+
+  "MD013": {
+    "line_length": 500,
+    "heading_line_length": 120,
+    "code_block_line_length": 200,
+    "tables": false
+  },
+
+  "MD022": {
+    "lines_above": 1,
+    "lines_below": 1
+  },
+
+  "MD024": {
+    "siblings_only": true
+  },
+
+  "MD025": {
+    "level": 1
+  },
+
+  "MD029": {
+    "style": "ordered"
+  },
+
+  "MD031": true,
+
+  "MD032": true,
+
+  "MD033": {
+    "allowed_elements": ["br", "hr", "kbd", "sub", "sup", "details", "summary", "div", "span", "img", "a", "p", "em", "strong"]
+  },
+
+  "MD035": {
+    "style": "---"
+  },
+
+  "MD036": false,
+
+  "MD040": {
+    "allowed_languages": [
+      "bash",
+      "text",
+      "php",
+      "yaml",
+      "nginx",
+      "dockerfile",
+      "env",
+      "sql",
+      "javascript",
+      "js",
+      "json",
+      "html",
+      "css",
+      "java",
+      "xml",
+      "twig",
+      "markdown",
+      "md",
+      "sh",
+      "shell",
+      "ini",
+      "toml",
+      "diff",
+      "python",
+      "c",
+      "cpp",
+      "makefile",
+      "properties",
+      "hcl",
+      "promql",
+      "terraform",
+      "console",
+      "plaintext",
+      "rust",
+      "typescript",
+      "tsx",
+      "jsx",
+      "graphql",
+      "jinja2",
+      "faust",
+      "solidity",
+      "mermaid",
+      "powershell",
+      "csharp",
+      "ldif",
+      "csv"
+    ],
+    "language_only": false
+  },
+
+  "MD041": true,
+
+  "MD046": {
+    "style": "fenced"
+  },
+
+  "MD047": true,
+
+  "MD048": {
+    "style": "backtick"
+  },
+
+  "MD049": {
+    "style": "underscore"
+  },
+
+  "MD050": {
+    "style": "asterisk"
+  },
+
+  "MD055": {
+    "style": "leading_and_trailing"
+  },
+
+  "MD056": true,
+
+  "MD060": false
+}

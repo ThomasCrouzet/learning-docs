@@ -1,0 +1,26 @@
+---
+tags:
+  - Docker
+  - Débutant
+description: "Conteneurisation d'un projet Symfony avec Docker Compose."
+hide:
+  - toc
+---
+
+# Docker
+
+Ce module couvre la mise en place d'un environnement de développement avec Docker Compose pour un projet Symfony. Tu apprendras à conteneuriser une application Symfony et à initialiser le projet avec Git.
+
+**Prérequis** : Aucun.
+
+## Fiches
+
+| # | Fiche | Description |
+| - | ----- | ----------- |
+| 01 | [Docker Compose pour Symfony](01-docker-compose-symfony.md) | Configurer un environnement Docker pour un projet Symfony |
+| 02 | [Lancement du projet et Git](02-lancement-projet-git.md) | Initialiser le projet Symfony et le versionner avec Git |
+
+!!! tip "Parcours recommandé"
+    Suis les fiches dans l'ordre numérique. Une fois les bases de l'environnement Docker posées, enchaîne avec le cursus [EasyAdmin](../03-easyadmin/index.md).
+
+<!-- material/tags { scope: true } -->
