@@ -25,7 +25,7 @@ cursus: "Monitoring et Observabilité"
 | Technologie | Version |
 | --- | --- |
 | Grafana | 11.x |
-| Prometheus | 2.53.x |
+| Prometheus | 3.13.x |
 | Docker | 27.x |
 
 ## Objectif de cette fiche
@@ -121,7 +121,7 @@ Crée le fichier `docker-compose.yml` avec Prometheus et Grafana :
 # ~/monitoring-cursus/grafana-dashboards/docker-compose.yml
 services:
   prometheus:
-    image: prom/prometheus:v2.53.0
+    image: prom/prometheus:v3.13.0
     ports:
       - "9090:9090"
     volumes:

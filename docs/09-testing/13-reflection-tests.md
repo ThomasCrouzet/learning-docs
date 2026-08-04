@@ -246,7 +246,7 @@ Time: 00:00.012, Memory: 6.00 MB
 OK (1 test, 2 assertions)
 ```
 
-**Note PHP 8.1+** : avant PHP 8.1, il fallait écrire `$property->setAccessible(true);` avant `setValue`. Depuis PHP 8.1, l'appel à `setAccessible(true)` reste autorisé mais déclenche un warning de dépréciation dans certains contextes. La règle simple : ne l'écris plus, sauf si tu cibles une version de PHP antérieure.
+**Note PHP 8.1 / 8.5** : avant PHP 8.1, il fallait écrire `$property->setAccessible(true);` avant `setValue`. Depuis PHP 8.1, cet appel n'a plus d'effet (accès Reflection par défaut). Depuis PHP 8.5, `setAccessible()` est **déprécié**. Sur PHP 8.3 (référence du cursus), ne l'écris plus.
 
 ---
 
@@ -512,18 +512,18 @@ static::assertTrue($order->hasReachedMaxAttempts());
 
 ---
 
-### Piège 3 : Oublier que `setAccessible` est implicite en PHP 8.1+
+### Piège 3 : Oublier que `setAccessible` est inutile en PHP 8.1+ (déprécié en 8.5)
 
-⚠️ **Problème** : Sur un projet PHP 8.1 ou supérieur, écrire `$property->setAccessible(true);` est inutile et peut être signalé par certains analyseurs statiques.
+⚠️ **Problème** : Sur un projet PHP 8.1 ou supérieur, écrire `$property->setAccessible(true);` n'a plus d'effet. Depuis PHP 8.5, cet appel est **déprécié** et peut produire un avertissement de dépréciation.
 
-✅ **Solution** : Vérifie la version de PHP du projet (`php -v` ou `composer.json` clé `require.php`). Si tu cibles PHP 8.1+, supprime l'appel à `setAccessible`. Si tu maintiens du code compatible avec PHP 8.0 ou antérieur, conserve l'appel.
+✅ **Solution** : Vérifie la version de PHP du projet (`php -v` ou `composer.json` clé `require.php`). Si tu cibles PHP 8.1+ (dont la référence du cursus, PHP 8.3), supprime l'appel à `setAccessible`. Si tu maintiens du code compatible avec PHP 8.0 ou antérieur, conserve l'appel.
 
 ```php
 // PHP 8.0 et antérieur
 $property->setAccessible(true);
 $property->setValue($obj, 42);
 
-// PHP 8.1+
+// PHP 8.1+ (et PHP 8.3 de référence)
 $property->setValue($obj, 42);
 ```
 
@@ -531,7 +531,7 @@ $property->setValue($obj, 42);
 
 ### Piège 4 : Reflection sur une propriété `readonly`
 
-⚠️ **Problème** : Depuis PHP 8.1, le mot-clé `readonly` empêche la modification après initialisation, même via Reflection. Une `ReflectionException` est levée.
+⚠️ **Problème** : Depuis PHP 8.1, le mot-clé `readonly` empêche la modification après initialisation, même via Reflection. PHP lève une `Error` (pas une `ReflectionException`) du type « Cannot modify readonly property… ».
 
 ```php
 class Identifier
@@ -545,7 +545,7 @@ class Identifier
 $id = new Identifier(1);
 $ref = new \ReflectionClass($id);
 $ref->getProperty('value')->setValue($id, 2);
-// ReflectionException: Cannot modify readonly property Identifier::$value
+// Error: Cannot modify readonly property Identifier::$value
 ```
 
 ✅ **Solution** : Utilise `newInstanceWithoutConstructor()` puis `setValue` avant que la propriété ne soit considérée comme initialisée. Si ce n'est pas possible, repense le test : une propriété `readonly` est un signal que la valeur doit être passée au constructeur.

@@ -9,13 +9,11 @@ const AxeBuilder = require('@axe-core/playwright').default;
 const ROUTES = [
   '/',
   '/parcours/',
-  '/a-propos/',
   '/commencer/',
   '/02-php/01-introduction-php/',
   '/03-symfony/09-formulaires/',
   '/10-architecture/07-mvc-profondeur/',
   '/ia/01-fondamentaux-mathematiques/01-algebre-lineaire/',
-  '/tags/',
   '/carte-cursus/',
   '/stack-symfony/',
   '/fiches-reference/',

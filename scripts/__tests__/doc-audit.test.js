@@ -257,6 +257,38 @@ describe('temporal heuristics', () => {
     );
     expect(findings.filter((f) => f.category === 'temporal_suspect')).toHaveLength(0);
   });
+
+  it('signale une promesse excessive de devenir expert', () => {
+    const findings = detectHeuristicIssues(
+      '# t\n\nTu vas devenir expert en cybersécurité en 3 mois.\n',
+      'x.md'
+    );
+    expect(findings.filter((f) => f.category === 'overpromise').length).toBeGreaterThan(0);
+  });
+
+  it('ne signale pas un disclaimer qui nie la promesse de devenir expert', () => {
+    const line =
+      "Ce n'est **pas** une promesse de devenir expert, ni une autorisation d'attaquer un système tiers.";
+    const findings = detectHeuristicIssues(`# t\n\n${line}\n`, 'cyber.md');
+    expect(findings.filter((f) => f.category === 'overpromise')).toHaveLength(0);
+  });
+
+  it('signale encore une promesse réelle même si la ligne contient n est pas', () => {
+    // Faux négatif à éviter : négation trop large sur « n'est pas »
+    const line = "Ce n'est pas difficile : tu vas devenir expert en quelques semaines.";
+    const findings = detectHeuristicIssues(`# t\n\n${line}\n`, 'x.md');
+    expect(findings.filter((f) => f.category === 'overpromise').length).toBeGreaterThan(0);
+  });
+
+  it('signale une promesse coexistant avec une autre négation hors disclaimer', () => {
+    const line = "Ce n'est pas un framework : tu deviendras un expert Symfony.";
+    // « devenir expert » via OVERPROMISE ; si formulation exacte diffère, tester devenir expert
+    const findings = detectHeuristicIssues(
+      "# t\n\nCe n'est pas un framework. Tu vas devenir expert Symfony.\n",
+      'x.md'
+    );
+    expect(findings.filter((f) => f.category === 'overpromise').length).toBeGreaterThan(0);
+  });
 });
 
 describe('formatReportMarkdown', () => {

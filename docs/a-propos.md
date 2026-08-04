@@ -37,7 +37,7 @@ Ce n'est **pas** :
 | Élément | Détail |
 | ------- | ------ |
 | Date de référence du contenu | juillet 2026 |
-| Versions de référence (cadre pédagogique) | PHP 8.3 (correctifs sécurité jusqu'au 31 déc. 2027 ; support actif terminé fin 2025), Symfony 7.4 LTS (bugs jusqu'à nov. 2028, sécurité jusqu'à nov. 2029), PostgreSQL 16 (EOL nov. 2028), Node.js 22 LTS en maintenance (EOL 30 avr. 2027 ; Node 24 est l'Active LTS en 2026) |
+| Versions de référence (cadre pédagogique) | PHP 8.3 (support actif terminé le 31 déc. 2025 ; correctifs de sécurité jusqu'au 31 déc. 2027 - [php.net/supported-versions](https://www.php.net/supported-versions.php) ; pour un support actif, préférer PHP 8.4 ou 8.5), Symfony 7.4 LTS (bugs jusqu'à nov. 2028, sécurité jusqu'à nov. 2029), PostgreSQL 16 (EOL nov. 2028), Node.js 22 LTS en maintenance (EOL 30 avr. 2027 ; Node 24 est l'Active LTS en 2026) |
 | Contrôles automatiques | lints Markdown, frontmatter, structure des fiches, navigation, carte des cursus et audit documentaire local (`npm run audit:docs`) |
 | Contrôles éditoriaux | relectures par cursus, corrections techniques ciblées, campagnes d'audit documentées |
 | Fraîcheur | voir [Politique de fraîcheur](politique-fraicheur.md) |

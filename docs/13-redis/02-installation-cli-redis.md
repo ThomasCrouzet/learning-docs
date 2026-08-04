@@ -677,12 +677,7 @@ cd ~/redis-lab && docker compose down
 
 Les données sont conservées dans le volume Docker `redis_data`. Au prochain `docker compose up -d`, tes données seront toujours là.
 
-Pour supprimer aussi le volume (et donc les données) :
-
-```bash
-# Arrête les services ET supprime les volumes
-docker compose down -v
-```
+⚠️ **Ne lance pas** `docker compose down -v` : le flag `-v` supprime aussi les volumes nommés (donc toutes les données Redis du lab). Pour arrêter les services en conservant les données, utilise uniquement `docker compose down` (sans `-v`), comme ci-dessus.
 
 ---
 

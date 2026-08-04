@@ -321,16 +321,16 @@ docker run -d \
   --name prometheus-test \
   -p 9090:9090 \
   -v ~/monitoring-cursus/prometheus.yml:/etc/prometheus/prometheus.yml:ro \
-  prom/prometheus:v2.53.0
+  prom/prometheus:v3.13.0
 ```
 
 **Résultat attendu** :
 
 ```text
-Unable to find image 'prom/prometheus:v2.53.0' locally
-v2.53.0: Pulling from prom/prometheus
+Unable to find image 'prom/prometheus:v3.13.0' locally
+v3.13.0: Pulling from prom/prometheus
 ...
-Status: Downloaded newer image for prom/prometheus:v2.53.0
+Status: Downloaded newer image for prom/prometheus:v3.13.0
 a1b2c3d4e5f6...
 ```
 
@@ -465,7 +465,7 @@ prometheus-test
 # Monte le fichier de configuration en lecture seule (:ro)
 docker run -d -p 9090:9090 \
   -v ./prometheus.yml:/etc/prometheus/prometheus.yml:ro \
-  prom/prometheus:v2.53.0
+  prom/prometheus:v3.13.0
 ```
 
 ---
@@ -519,7 +519,7 @@ docker run -d \
   --name prometheus-exercice \
   -p 9090:9090 \
   -v ~/monitoring-cursus/prometheus.yml:/etc/prometheus/prometheus.yml:ro \
-  prom/prometheus:v2.53.0
+  prom/prometheus:v3.13.0
 ```
 
 **Question 1 : Combien de cibles ?**

@@ -25,7 +25,7 @@ cursus: "Ansible"
 
 | Technologie | Version |
 | ----------- | ------- |
-| Ansible     | 10.x (ansible-core 2.17) |
+| Ansible     | 14.x (ansible-core 2.21) |
 
 ## Objectif de cette fiche
 

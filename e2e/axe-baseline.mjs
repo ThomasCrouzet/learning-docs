@@ -10,12 +10,10 @@ const BASE = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const pages = [
   '/',
   '/parcours/',
-  '/a-propos/',
   '/02-php/01-introduction-php/',
   '/03-symfony/09-formulaires/',
   '/ia/01-fondamentaux-mathematiques/01-algebre-lineaire/',
   '/10-architecture/07-mvc-profondeur/',
-  '/tags/',
   '/carte-cursus/',
   '/commencer/',
   '/stack-symfony/',

@@ -506,7 +506,7 @@ jobs:
       - name: Installer Node.js
         uses: actions/setup-node@v4
         with:
-          # Installe Node.js version 20
+          # Installe Node.js version 22 LTS (référence du cursus)
           node-version: "22"
 
       # Étape 3 : vérifier que Node.js est bien installé

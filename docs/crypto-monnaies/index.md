@@ -11,7 +11,7 @@ Curriculum structuré en **9 phases progressives**. Approche factuelle et critiq
 **Durée estimée totale** : 6-12 mois selon intensité.
 
 !!! warning "Pas un conseil d'investissement, juridique ou fiscal"
-    Contenu **pédagogique** et critique uniquement. Aucune fiche de ce cursus ne constitue un conseil d'investissement, un avis juridique ou fiscal, ni une recommandation d'acheter, de vendre ou de détenir un actif. Les règles (AMF, MiCA, fiscalité) évoluent : vérifie les sources officielles (`amf-france.org`, `impots.gouv.fr`, EUR-Lex) et un professionnel habilité pour ta situation. N'engage jamais plus que ce que tu acceptes de perdre à 100%. Date de référence éditoriale : [À propos](../a-propos.md).
+    Contenu **pédagogique** et critique uniquement. Aucune fiche de ce cursus ne constitue un conseil d'investissement, un avis juridique ou fiscal, ni une recommandation d'acheter, de vendre ou de détenir un actif. Les règles (AMF, MiCA, fiscalité) évoluent : vérifie les sources officielles (`amf-france.org`, `impots.gouv.fr`, EUR-Lex) et un professionnel habilité pour ta situation. N'engage jamais plus que ce que tu acceptes de perdre à 100%. Date de référence éditoriale du corpus : juillet 2026.
 
 ---
 

@@ -51,6 +51,26 @@ const OVERPROMISE_PHRASES = [
 ];
 
 /**
+ * Disclaimers qui nient explicitement une promesse d'expertise / professionnalisation.
+ * Intentionnellement étroit : un simple « n'est pas » sur la même ligne ne suffit pas
+ * (ex. « Ce n'est pas difficile : tu vas devenir expert » doit rester signalé).
+ * Ignore le marquage Markdown d'emphase pour la détection.
+ * @param {string} line
+ * @returns {boolean}
+ */
+function isOverpromiseNegated(line) {
+  const plain = String(line).replace(/\*+/g, '').replace(/_+/g, '');
+  return (
+    /\bpas\s+une\s+promesse\s+de\s+devenir\b/i.test(plain) ||
+    /\bn['']?est\s+pas\s+une\s+promesse\b/i.test(plain) ||
+    /\baucune\s+promesse\s+de\s+devenir\b/i.test(plain) ||
+    /\bne\s+promet\s+pas\s+de\s+devenir\b/i.test(plain) ||
+    /\bsans\s+promesse\s+de\s+devenir\b/i.test(plain) ||
+    /\bne\s+constitue\s+pas\s+une\s+promesse\b/i.test(plain)
+  );
+}
+
+/**
  * Mentions temporelles potentiellement perimees (annees avant 2024).
  * Ne s'applique qu'avec un contexte "actualité / version courante" (voir isTemporalStaleContext).
  */
@@ -277,7 +297,7 @@ function detectHeuristicIssues(content, relPath) {
       }
     }
     for (const re of OVERPROMISE_PHRASES) {
-      if (re.test(line)) {
+      if (re.test(line) && !isOverpromiseNegated(line)) {
         findings.push({
           category: 'overpromise',
           severity: 'medium',
@@ -845,6 +865,7 @@ module.exports = {
   isHistoricalContext,
   isTemporalHistoricalOk,
   isTemporalStaleContext,
+  isOverpromiseNegated,
   slugifyHeading,
   extractHeadings,
   extractMarkdownLinks,

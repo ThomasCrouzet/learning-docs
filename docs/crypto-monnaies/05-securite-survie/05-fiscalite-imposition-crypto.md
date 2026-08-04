@@ -57,7 +57,11 @@ Cette fiche ne constitue pas un conseil fiscal. Elle explique les mécanismes po
 
 **Point essentiel** : L'échange crypto-crypto sans soulte n'est en principe **pas un fait générateur d'imposition immédiate** (sursis d'imposition). Si tu échanges du Bitcoin contre de l'Ethereum, aucune plus-value n'est en principe à déclarer à ce moment-là. L'imposition intervient lors d'une cession imposable (sortie vers fiat, achat d'un bien, etc.). Ce n'est pas une exonération définitive du gain : conserve tes historiques de prix d'acquisition.
 
-Vérifie toujours le texte et la FAQ en vigueur sur `impots.gouv.fr`.
+**Seuil d'exonération de 305 € (art. 150 VH bis du CGI)** : lorsque le **total des prix de cession** de l'année (foyer fiscal) n'excède pas **305 €**, les plus-values de cession d'actifs numériques sont **exonérées d'impôt**.
+
+Ce seuil s'apprécie sur la somme des prix de cession, pas sur le montant de la plus-value. S'il est dépassé, **toute** la plus-value annuelle devient imposable (y compris les petites opérations). Ce seuil ne dispense pas de conserver les justificatifs, ni de déclarer un compte d'actifs numériques à l'étranger (formulaire 3916-bis) le cas échéant.
+
+Vérifie toujours le texte et la FAQ en vigueur sur `impots.gouv.fr` et Légifrance.
 
 ---
 
@@ -79,13 +83,15 @@ Vérifie toujours le texte et la FAQ en vigueur sur `impots.gouv.fr`.
 
 Tu peux choisir de soumettre tes plus-values crypto au barème progressif de l'impôt sur le revenu (au lieu des 12,8% forfaitaires). Les 18,6% de prélèvements sociaux s'appliquent dans tous les cas.
 
-| Tranche de revenu imposable (2025) | Taux marginal |
-| ----------------------------------- | ------------- |
-| Jusqu'à 11 294 euros | 0% |
-| De 11 295 à 28 797 euros | 11% |
-| De 28 798 à 82 341 euros | 30% |
-| De 82 342 à 177 106 euros | 41% |
-| Au-delà de 177 106 euros | 45% |
+| Tranche de revenu imposable (barème 2026, revenus 2025, 1 part) | Taux marginal |
+| -------------------------------------------------------------- | ------------- |
+| Jusqu'à 11 600 euros | 0% |
+| De 11 601 à 29 579 euros | 11% |
+| De 29 580 à 84 577 euros | 30% |
+| De 84 578 à 181 917 euros | 41% |
+| Au-delà de 181 917 euros | 45% |
+
+Ces tranches sont revalorisées chaque année. Vérifie le barème en vigueur sur `service-public.fr` ou `impots.gouv.fr` avant tout calcul.
 
 **Quand choisir le barème progressif** : Si ton revenu imposable total (salaires + plus-values crypto) est faible, le barème progressif peut être plus avantageux. Par exemple, si tu es étudiant sans revenus et que tu réalises une plus-value crypto de 5 000 euros, le barème progressif te coûterait 0% d'impôt sur le revenu (tranche à 0%) + 18,6% de prélèvements sociaux = 18,6%, au lieu de 31,4% avec la flat tax.
 
@@ -287,7 +293,7 @@ cette plus-value supplémentaire est également imposable.
 | Oublier de déclarer un compte à l'étranger | Amende de 750 euros minimum par compte |
 | Confondre échange crypto-crypto et cession imposable | Déclarer trop (ou pas assez) de plus-values |
 | Ne pas conserver l'historique des transactions | Impossibilité de justifier le prix d'acquisition en cas de contrôle |
-| Oublier de déclarer les petits montants | L'administration fiscale n'a pas de seuil minimum. Tout est declarable |
+| Croire que « petit montant = rien à faire » | En dessous de 305 € de cessions annuelles les plus-values sont exonérées, mais les justificatifs restent nécessaires ; un compte à l'étranger doit quand même être déclaré (3916-bis) |
 
 ---
 
@@ -302,13 +308,14 @@ cette plus-value supplémentaire est également imposable.
 | Formulaire comptes etrangers | 3916-bis |
 | Minage | BNC (bénéfices non commerciaux) |
 | Moins-values | Compensables avec les plus-values de la même année. Non reportables |
-| Seuil minimum | Aucun. Toute plus-value est déclarable |
+| Seuil d'exonération | 305 € de prix de cession totaux par an (art. 150 VH bis) : en dessous, plus-values exonérées ; au-delà, totalité imposable |
 
 ---
 
 ## Checklist de Validation
 
 - [ ] Je sais que la conversion crypto vers fiat déclenche l'imposition, et que l'échange crypto-crypto sans soulte relève en principe d'un sursis d'imposition (pas d'imposition immédiate)
+- [ ] Je connais le seuil d'exonération de 305 € de cessions annuelles (art. 150 VH bis) et sa limite (dépassement = totalité imposable)
 - [ ] Je connais le taux de la flat tax (31,4% = 12,8% IR + 18,6% prélèvements sociaux depuis le 1er janvier 2026)
 - [ ] Je sais calculer une plus-value avec la formule officielle (prix de cession - prix d'acquisition x proportion cédée)
 - [ ] Je sais quand le barème progressif est plus avantageux que la flat tax

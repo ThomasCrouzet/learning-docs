@@ -8,6 +8,10 @@ docs_dir: docs
 exclude_docs: |
   includes/
   ansible/01-ansible/index.md
+  a-propos.md
+  politique-fraicheur.md
+  accessibility-audit.md
+  tags.md
 
 theme:
   name: material
@@ -275,9 +279,6 @@ extra:
 
 nav:
   - Accueil: index.md
-  - À propos: a-propos.md
-  - Politique de fraîcheur: politique-fraicheur.md
-  - Audit d'accessibilité: accessibility-audit.md
   - Parcours: parcours.md
 
   - Développement Web:
@@ -1027,7 +1028,6 @@ nav:
   - Références:
       - fiches-reference/index.md
       - Carte des cursus: carte-cursus.md
-      - Parcours suggérés: parcours.md
       - Aide-mémoire Docker: fiches-reference/01-aide-memoire-docker.md
       - Aide-mémoire Symfony: fiches-reference/02-aide-memoire-symfony.md
       - Guide de debug: fiches-reference/03-guide-debug.md
@@ -1078,5 +1078,3 @@ nav:
               - Supervision et monitoring: 00-blocs-competences/BC05-architecture-si/02-supervision-monitoring.md
               - Sécurité du SI: 00-blocs-competences/BC05-architecture-si/03-securite-systeme-information.md
               - Audit de sécurité: 00-blocs-competences/BC05-architecture-si/04-audit-securite.md
-
-      - Tags: tags.md

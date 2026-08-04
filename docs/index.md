@@ -14,11 +14,10 @@ Fiches de cours structurées et explicites pour l'apprentissage en autonomie, co
 Chaque fiche suit le même format : concepts définis explicitement, étapes pratiques ordonnées, exercices et checklist de validation. Cette prévisibilité réduit l'implicite et la charge cognitive, sans prétendre convenir de façon identique à chaque personne.
 
 !!! info "Provenance IA"
-    La **majorité du corpus a été générée ou largement développée avec l'aide de l'intelligence artificielle**. La relecture humaine est progressive et reste incomplète. Les validations automatiques vérifient surtout la structure : elles ne garantissent pas l'exactitude de chaque explication ou exemple. Consulte [À propos](a-propos.md) pour la méthode, les limites et la façon de signaler un problème.
+    La **majorité du corpus a été générée ou largement développée avec l'aide de l'intelligence artificielle**. La relecture humaine est progressive et reste incomplète. Les validations automatiques vérifient surtout la structure : elles ne garantissent pas l'exactitude de chaque explication ou exemple. Ce n'est pas une certification professionnelle, juridique, médicale ou de sécurité. Signale une erreur via les issues du dépôt du projet.
 
 [Suivre un parcours guidé :material-routes:](parcours.md){ .md-button .md-button--primary }
 [Débuter de zéro :material-rocket-launch:](commencer/index.md){ .md-button }
-[À propos du wiki :material-information:](a-propos.md){ .md-button }
 
 <p class="home-stats">604 fiches · 64 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
 
@@ -120,5 +119,4 @@ Choisis un domaine pour voir la liste de ses cursus.
 
 ## Trouver une fiche
 
-Utilise la barre de recherche en haut de page (raccourci : ++f++ ou ++s++) pour trouver n'importe quelle fiche par mot-clé.
-Tu peux aussi explorer par [tags](tags.md) pour filtrer par technologie, niveau ou type de contenu.
+Utilise la barre de recherche en haut de page (raccourci : ++f++ ou ++s++) pour trouver n'importe quelle fiche par mot-clé, ou parcours la [carte des cursus](carte-cursus.md).

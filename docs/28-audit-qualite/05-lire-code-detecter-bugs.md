@@ -304,7 +304,7 @@ $label = match ($status) {
 | --- | --- |
 | Toutes les valeurs sont connues et fixes | Ajouter `default => throw new \UnexpectedValueException(...)` pour échouer explicitement |
 | Valeur inconnue = cas neutre | Ajouter `default => null` ou une valeur de repli |
-| PHP 8.1+ avec enum | Utiliser un `enum` : le type contraint les valeurs possibles, PHPStan détecte les `match` incomplets |
+| PHP ≥ 8.1 (enums, disponibles depuis PHP 8.1 ; référence cursus PHP 8.3) | Utiliser un `enum` : le type contraint les valeurs possibles, PHPStan détecte les `match` incomplets |
 
 **Ce que ce pattern n'est PAS** :
 

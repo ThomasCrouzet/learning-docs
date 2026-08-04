@@ -891,7 +891,7 @@ lint:
   image: python:3.11
   before_script:
     # Installe les outils de lint
-    - pip install 'ansible>=10.0,<11.0' ansible-lint yamllint
+    - pip install 'ansible>=14.0,<15.0' ansible-lint yamllint
   script:
     # Vérifie le formatage YAML de tous les fichiers
     - yamllint .
@@ -914,7 +914,7 @@ test-nginx:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
   before_script:
-    - pip install 'ansible>=10.0,<11.0' molecule molecule-plugins[docker]
+    - pip install 'ansible>=14.0,<15.0' molecule molecule-plugins[docker]
   script:
     # Exécute les tests Molecule pour le rôle nginx
     - cd roles/nginx && molecule test
@@ -928,7 +928,7 @@ deploy-staging:
   stage: deploy
   image: python:3.11
   before_script:
-    - pip install 'ansible>=10.0,<11.0'
+    - pip install 'ansible>=14.0,<15.0'
     # Crée le fichier de mot de passe Vault à partir de la variable CI/CD
     - echo "$VAULT_PASSWORD" > .vault_pass
     # Restreint les permissions du fichier (lecture seule pour le propriétaire)
@@ -964,7 +964,7 @@ deploy-production:
   stage: deploy
   image: python:3.11
   before_script:
-    - pip install 'ansible>=10.0,<11.0'
+    - pip install 'ansible>=14.0,<15.0'
     - echo "$VAULT_PASSWORD" > .vault_pass
     - chmod 600 .vault_pass
     - mkdir -p ~/.ssh
@@ -1052,7 +1052,7 @@ jobs:
           python-version: "3.11"
 
       - name: Installer les outils de lint
-        run: pip install 'ansible>=10.0,<11.0' ansible-lint yamllint
+        run: pip install 'ansible>=14.0,<15.0' ansible-lint yamllint
 
       - name: Exécuter yamllint
         run: yamllint .
@@ -1078,7 +1078,7 @@ jobs:
           python-version: "3.11"
 
       - name: Installer Molecule et ses dépendances
-        run: pip install 'ansible>=10.0,<11.0' molecule molecule-plugins[docker]
+        run: pip install 'ansible>=14.0,<15.0' molecule molecule-plugins[docker]
 
       - name: Exécuter Molecule pour le rôle nginx
         run: cd roles/nginx && molecule test
@@ -1103,7 +1103,7 @@ jobs:
           python-version: "3.11"
 
       - name: Installer Ansible
-        run: pip install 'ansible>=10.0,<11.0'
+        run: pip install 'ansible>=14.0,<15.0'
 
       - name: Configurer la clé SSH
         run: |
@@ -1151,7 +1151,7 @@ jobs:
           python-version: "3.11"
 
       - name: Installer Ansible
-        run: pip install 'ansible>=10.0,<11.0'
+        run: pip install 'ansible>=14.0,<15.0'
 
       - name: Configurer la clé SSH
         run: |
@@ -1425,7 +1425,7 @@ chmod +x .git/hooks/pre-commit
 
 **Problème** : Le pipeline échoue avec `ansible-playbook: command not found`. L'image Docker utilisée par le runner CI (par exemple `python:3.11`) ne contient pas Ansible par défaut.
 
-**Solution** : Ajoute toujours `pip install 'ansible>=10.0,<11.0'` dans la section `before_script` de chaque job qui utilise Ansible (borne alignée sur Ansible 10 / core 2.17).
+**Solution** : Ajoute toujours `pip install 'ansible>=14.0,<15.0'` dans la section `before_script` de chaque job qui utilise Ansible (borne alignée sur Ansible 14 / core 2.21).
 
 ```yaml
 # ❌ Incorrect : Ansible n'est pas installé
@@ -1434,7 +1434,7 @@ script:
 
 # ✅ Correct : Ansible est installé avant utilisation
 before_script:
-  - pip install 'ansible>=10.0,<11.0'
+  - pip install 'ansible>=14.0,<15.0'
 script:
   - ansible-playbook playbooks/site.yml
 ```
@@ -1487,7 +1487,7 @@ test:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
   script:
-    - pip install 'ansible>=10.0,<11.0' molecule molecule-plugins[docker]
+    - pip install 'ansible>=14.0,<15.0' molecule molecule-plugins[docker]
     - cd roles/nginx && molecule test
 ```
 
@@ -1775,7 +1775,7 @@ lint:
   stage: lint
   image: python:3.11
   before_script:
-    - pip install 'ansible>=10.0,<11.0' ansible-lint yamllint
+    - pip install 'ansible>=14.0,<15.0' ansible-lint yamllint
   script:
     - yamllint .
     - ansible-lint
@@ -1789,7 +1789,7 @@ test-nginx:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
   before_script:
-    - pip install 'ansible>=10.0,<11.0' molecule molecule-plugins[docker]
+    - pip install 'ansible>=14.0,<15.0' molecule molecule-plugins[docker]
   script:
     - cd roles/nginx && molecule test
 
@@ -1797,7 +1797,7 @@ deploy-staging:
   stage: deploy
   image: python:3.11
   before_script:
-    - pip install 'ansible>=10.0,<11.0'
+    - pip install 'ansible>=14.0,<15.0'
     - echo "$VAULT_PASSWORD" > .vault_pass
     - chmod 600 .vault_pass
     - mkdir -p ~/.ssh
@@ -1821,7 +1821,7 @@ deploy-production:
   stage: deploy
   image: python:3.11
   before_script:
-    - pip install 'ansible>=10.0,<11.0'
+    - pip install 'ansible>=14.0,<15.0'
     - echo "$VAULT_PASSWORD" > .vault_pass
     - chmod 600 .vault_pass
     - mkdir -p ~/.ssh

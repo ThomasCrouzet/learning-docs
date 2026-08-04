@@ -180,7 +180,7 @@ services:
 
   # === ADMIN - Monitoring ===
   prometheus:
-    image: prom/prometheus:v2.53.3
+    image: prom/prometheus:v3.13.0
     volumes:
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     networks:

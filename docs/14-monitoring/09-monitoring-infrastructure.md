@@ -27,7 +27,7 @@ cursus: "Monitoring et Observabilité"
 | --- | --- |
 | node_exporter | 1.8.x |
 | cAdvisor | 0.49.x |
-| Prometheus | 2.53.x |
+| Prometheus | 3.13.x |
 | Grafana | 11.x |
 
 ## Objectif de cette fiche
@@ -232,7 +232,7 @@ services:
 
   # Prometheus : collecte les métriques de node_exporter et cAdvisor
   prometheus:
-    image: prom/prometheus:v2.53.0
+    image: prom/prometheus:v3.13.0
     ports:
       - "9090:9090"
     volumes:

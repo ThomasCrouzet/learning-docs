@@ -17,7 +17,7 @@ cursus: "Dev Mobile"
 ## Prérequis
 
 - [Introduction au dev mobile](01-introduction-mobile.md) terminée
-- Node.js 20 LTS ou supérieur installé (22 LTS recommandé)
+- Node.js 22 LTS ou supérieur installé (Node.js 20 est en fin de support depuis avril 2026)
 
 - Un téléphone avec Expo Go installé (ou un émulateur configuré)
 

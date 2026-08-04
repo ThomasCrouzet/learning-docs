@@ -27,8 +27,8 @@ cursus: "Ansible"
 
 | Technologie | Version |
 | ----------- | ------- |
-| Ansible | 10.x (ansible-core 2.17) |
-| Python | 3.10+ |
+| Ansible | 14.x (ansible-core 2.21) |
+| Python | 3.12+ |
 | Ubuntu | 22.04 ou 24.04 LTS |
 | Multipass | dernière version stable |
 
@@ -76,7 +76,7 @@ flowchart TD
 
 **Conditions requises pour le nœud de contrôle** :
 
-- Python 3.10 ou supérieur installé (ansible-core 2.17 requiert Python ≥ 3.10 ; les versions futures exigent davantage : ansible-core 2.19 requiert Python ≥ 3.11, ansible-core 2.21 requiert Python ≥ 3.12)
+- Python 3.12 ou supérieur installé (ansible-core 2.21 / Ansible 14.x requiert Python ≥ 3.12 sur le nœud de contrôle ; les anciennes lignes, par exemple ansible-core 2.19 / Ansible 12, acceptaient encore Python 3.11 - contexte historique uniquement)
 - Système d'exploitation : Linux ou macOS
 - Windows n'est **pas** supporté comme nœud de contrôle (c'est une limitation d'Ansible, pas un choix). Si tu es sous Windows, utilise WSL2 (Windows Subsystem for Linux)
 - Connexion SSH vers les nœuds gérés
@@ -118,7 +118,7 @@ Le concept de "nœud géré" dans Ansible permet de traiter n'importe quelle mac
 | Lance les commandes | Reçoit et exécute les commandes |
 | Contient les playbooks et l'inventaire | Ne contient rien d'Ansible |
 | Un seul par projet | Un ou plusieurs (jusqu'à des milliers) |
-| Nécessite Python 3.10+ | Nécessite Python 3 (n'importe quelle version récente) |
+| Nécessite Python 3.12+ | Nécessite Python 3 (n'importe quelle version récente supportée) |
 | Linux ou macOS uniquement | Linux, Windows, macOS, équipements réseau |
 
 ---
@@ -219,7 +219,7 @@ Le processus se déroule en deux phases :
 
 ### Étape 1 : Vérifier la version de Python
 
-Ansible est écrit en Python. Il nécessite Python 3.10 ou supérieur sur le nœud de contrôle.
+Ansible est écrit en Python. Le nœud de contrôle nécessite Python 3.12 ou supérieur (requis par ansible-core 2.21 / Ansible 14.x).
 
 Commande :
 
@@ -231,10 +231,10 @@ python3 --version
 **Résultat attendu** :
 
 ```text
-Python 3.10.12
+Python 3.12.3
 ```
 
-Le numéro exact peut varier. L'important est que le premier nombre après le point soit 10 ou supérieur (3.**10**, 3.**11**, 3.**12**...).
+Le numéro exact peut varier. L'important est d'avoir Python **3.12** ou supérieur (3.**12**, 3.**13**, 3.**14**...).
 
 Si Python n'est pas installé ou si la version est trop ancienne, installe-le :
 
@@ -312,11 +312,11 @@ deactivate
 Maintenant que l'environnement virtuel est actif, installe Ansible :
 
 ```bash
-# Installe Ansible 10.x (ansible-core 2.17) dans l'environnement virtuel
-# Epingle la serie 10.x pour coller aux versions de reference de ce cursus.
+# Installe Ansible 14.x (ansible-core 2.21) dans l'environnement virtuel
+# Epingle la serie 13.x pour coller aux versions de reference de ce cursus.
 # Sans borne, pip installe la derniere version majeure (comportements et Python
 # minimum peuvent differer de ceux documentes ici).
-pip install 'ansible>=10.0,<11.0'
+pip install 'ansible>=14.0,<15.0'
 ```
 
 L'installation prend quelques minutes. pip télécharge Ansible et toutes ses dépendances.
@@ -331,7 +331,7 @@ ansible --version
 **Résultat attendu** :
 
 ```text
-ansible [core 2.17.x]
+ansible [core 2.21.x]
   config file = None
   configured module search path = ['/home/utilisateur/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /home/utilisateur/ansible-env/lib/python3.12/site-packages/ansible
@@ -344,17 +344,17 @@ ansible [core 2.17.x]
 
 Les points à vérifier :
 
-- `ansible [core 2.17.x]` : La version d'ansible-core
+- `ansible [core 2.21.x]` : La version d'ansible-core
 - `config file = None` : Normal, on n'a pas encore créé de fichier `ansible.cfg`
-- `python version = 3.10+` : Python 3.10 ou supérieur
+- `python version = 3.12+` : Python 3.12 ou supérieur (requis par ansible-core 2.21)
 - `executable location` contient `ansible-env` : Ansible est bien dans l'environnement virtuel
 
 **Pourquoi pip et pas apt ?**
 
 | Installation via apt | Installation via pip |
 | --- | --- |
-| `sudo apt install ansible` | `pip install 'ansible>=10.0,<11.0'` |
-| Version souvent ancienne (dépend de la distribution) | Version controlée (ici Ansible 10 / core 2.17) |
+| `sudo apt install ansible` | `pip install 'ansible>=14.0,<15.0'` |
+| Version souvent ancienne (dépend de la distribution) | Version controlée (ici Ansible 14 / core 2.21) |
 | Installé globalement sur le système | Isolé dans l'environnement virtuel |
 | Mise à jour liée à la distribution | Mise à jour contrôlée avec une borne de version |
 
@@ -620,7 +620,7 @@ cd ~/projets/ansible-lab && ansible --version
 **Résultat attendu** (extrait) :
 
 ```text
-ansible [core 2.17.x]
+ansible [core 2.21.x]
   config file = /home/utilisateur/projets/ansible-lab/ansible.cfg
 ```
 
@@ -745,7 +745,7 @@ Les points à vérifier :
 | `python3 --version` | Affiche la version de Python installée |
 | `source ~/ansible-env/bin/activate` | Active l'environnement virtuel Ansible |
 | `deactivate` | Désactive l'environnement virtuel |
-| `pip install 'ansible>=10.0,<11.0'` | Installe Ansible 10.x (core 2.17) dans l'environnement virtuel actif |
+| `pip install 'ansible>=14.0,<15.0'` | Installe Ansible 14.x (core 2.21) dans l'environnement virtuel actif |
 | `pip install --upgrade ansible` | Met à jour Ansible vers la dernière version |
 | `ansible --version` | Affiche la version d'Ansible et le fichier de configuration utilisé |
 | `ansible-inventory --list` | Affiche l'inventaire au format JSON |
@@ -764,9 +764,9 @@ Les points à vérifier :
 
 ### Piège 1 : Installer Ansible avec apt au lieu de pip
 
-**Problème** : La commande `sudo apt install ansible` installe une version souvent ancienne d'Ansible. Par exemple, Ubuntu 22.04 fournit Ansible 2.10, alors que la version actuelle est 2.17.
+**Problème** : La commande `sudo apt install ansible` installe une version souvent ancienne d'Ansible. Par exemple, Ubuntu 22.04 fournit encore une version datée, alors que le paquet communautaire actuel (maintenu) est Ansible 14.x (ansible-core 2.21).
 
-**Solution** : Installe toujours Ansible avec `pip install 'ansible>=10.0,<11.0'` dans un environnement virtuel Python, comme décrit dans les étapes 2 et 3.
+**Solution** : Installe toujours Ansible avec `pip install 'ansible>=14.0,<15.0'` dans un environnement virtuel Python, comme décrit dans les étapes 2 et 3.
 
 ```bash
 # ❌ Ne pas faire
@@ -774,7 +774,7 @@ sudo apt install ansible
 
 # ✅ Faire à la place
 source ~/ansible-env/bin/activate
-pip install 'ansible>=10.0,<11.0'
+pip install 'ansible>=14.0,<15.0'
 ```
 
 ---
@@ -898,9 +898,9 @@ Tu dois voir ta clé publique dans la sortie.
 
 ## Checklist de Validation
 
-- [ ] Python 3.10+ est installé (`python3 --version` affiche 3.10 ou supérieur)
+- [ ] Python 3.12+ est installé (`python3 --version` affiche 3.12 ou supérieur)
 - [ ] L'environnement virtuel est créé et activé (`which ansible` pointe vers `~/ansible-env/bin/ansible`)
-- [ ] Ansible est installé et `ansible --version` affiche la version 10.x (core 2.17.x)
+- [ ] Ansible est installé et `ansible --version` affiche la version 14.x (core 2.21.x)
 - [ ] Une VM de test est créée et en cours d'exécution (`multipass list` montre la VM en état "Running")
 - [ ] Ma VM de test est accessible en SSH sans mot de passe (`ssh ubuntu@<IP>` se connecte sans demander de mot de passe)
 - [ ] Mon fichier `ansible.cfg` est configuré dans `~/projets/ansible-lab/`

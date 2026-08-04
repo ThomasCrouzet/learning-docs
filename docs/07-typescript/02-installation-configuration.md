@@ -280,7 +280,7 @@ Voici un tableau détaillé des options principales :
 | ------ | ------ | ----------- |
 | `target` | `"ES2020"` | Le JavaScript généré utilisera la syntaxe ES2020. Node.js 22 prend en charge cette version. |
 | `module` | `"commonjs"` | Utilise le système de modules `require()` / `module.exports` de Node.js. |
-| `strict` | `true` | Active toutes les vérifications strictes. Équivaut à activer 8 options individuelles. |
+| `strict` | `true` | Active toutes les vérifications strictes. Équivaut à activer 9 options individuelles. |
 | `rootDir` | `"./src"` | Les fichiers TypeScript source sont dans le dossier `src/`. |
 | `outDir` | `"./dist"` | Les fichiers JavaScript compilés sont placés dans le dossier `dist/`. |
 | `esModuleInterop` | `true` | Permet `import express from 'express'` au lieu de `import * as express from 'express'`. |
@@ -288,7 +288,7 @@ Voici un tableau détaillé des options principales :
 | `skipLibCheck` | `true` | Ne vérifie pas les types dans `node_modules`. Accélère la compilation. |
 | `sourceMap` | `true` | Crée des fichiers `.js.map` pour le débogage. |
 
-**Les 8 options activées par `strict: true`** :
+**Les 9 options activées par `strict: true`** :
 
 | Option | Effet |
 | ------ | ----- |
@@ -300,6 +300,7 @@ Voici un tableau détaillé des options principales :
 | `noImplicitThis` | Interdit `this` quand son type est implicitement `any` |
 | `alwaysStrict` | Ajoute `"use strict"` en haut de chaque fichier JavaScript généré |
 | `useUnknownInCatchVariables` | Le paramètre `catch(e)` est de type `unknown` au lieu de `any` |
+| `strictBuiltinIteratorReturn` | Les itérateurs natifs ont un type de retour `undefined` au lieu de `any` (depuis TypeScript 5.6) |
 
 **`"module": "commonjs"` vs `"module": "NodeNext"`** :
 

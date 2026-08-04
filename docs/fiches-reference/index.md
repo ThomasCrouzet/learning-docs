@@ -34,6 +34,6 @@ Ce module regroupe les aide-mémoires et guides de référence rapide. Ces fiche
 | 18 | [Aide-mémoire Testing](18-aide-memoire-testing.md) | PHPUnit, Jest, Playwright et couverture de code |
 
 !!! info "Index des tags"
-    Consulte la [page des tags](../tags.md) pour retrouver toutes les fiches par thématique.
+    Utilise la **recherche** du wiki ou la [carte des cursus](../carte-cursus.md) pour retrouver une fiche par thématique.
 
 <!-- material/tags { scope: true } -->

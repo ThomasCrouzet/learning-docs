@@ -24,7 +24,7 @@ cursus: "Monitoring et Observabilité"
 
 | Technologie | Version |
 | --- | --- |
-| Prometheus | 2.53.x |
+| Prometheus | 3.13.x |
 | Grafana | 11.x |
 | Loki | 3.1.x |
 | Promtail | 3.1.x |
@@ -169,7 +169,7 @@ services:
 
   # Prometheus : collecte toutes les métriques
   prometheus:
-    image: prom/prometheus:v2.53.0
+    image: prom/prometheus:v3.13.0
     ports:
       - "9090:9090"
     volumes:

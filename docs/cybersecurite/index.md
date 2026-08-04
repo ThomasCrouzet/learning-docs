@@ -12,7 +12,7 @@ Curriculum structuré en **8 phases progressives**. Chaque phase est conçue pou
 
 > **Limite honnête** : parcourir ce cursus permet de **comprendre** le domaine et de **pratiquer** sur des labs **explicitement autorisés** (machines virtuelles personnelles, plateformes type Hack The Box / TryHackMe avec compte, labs d'employeur avec mandat écrit). Ce n'est **pas** une promesse de devenir « expert » ni un titre professionnel.
 >
-> **Cadre légal** : les techniques offensives décrites dans ce cursus ne doivent être utilisées **que** sur des systèmes que tu possèdes ou pour lesquels tu as une **autorisation écrite**. Un scan ou une exploitation sans autorisation peut être illégal en France (Code pénal, art. 323-1 et s.). Ce wiki n'est **pas** une autorisation d'attaque. Voir [À propos](../a-propos.md) et le [parcours cybersécurité](../parcours.md).
+> **Cadre légal** : les techniques offensives décrites dans ce cursus ne doivent être utilisées **que** sur des systèmes que tu possèdes ou pour lesquels tu as une **autorisation écrite**. Un scan ou une exploitation sans autorisation peut être illégal en France (Code pénal, art. 323-1 et s.). Ce wiki n'est **pas** une autorisation d'attaque. Voir le [parcours cybersécurité](../parcours.md) pour l'ordre de lecture.
 
 ---
 

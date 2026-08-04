@@ -209,7 +209,7 @@ services:
 
   # Prometheus : métriques (pour la corrélation)
   prometheus:
-    image: prom/prometheus:v2.53.0
+    image: prom/prometheus:v3.13.0
     ports:
       - "9090:9090"
     volumes:

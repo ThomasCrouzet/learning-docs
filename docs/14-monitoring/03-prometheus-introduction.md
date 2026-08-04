@@ -24,7 +24,7 @@ cursus: "Monitoring et Observabilité"
 
 | Technologie | Version |
 | --- | --- |
-| Prometheus | 2.53.x |
+| Prometheus | 3.13.x |
 | Docker | 27.x |
 
 ## Objectif de cette fiche
@@ -323,7 +323,7 @@ cat > ~/monitoring-cursus/prometheus-intro/docker-compose.yml << 'EOF'
 services:
   prometheus:
     # Image officielle de Prometheus
-    image: prom/prometheus:v2.53.0
+    image: prom/prometheus:v3.13.0
     ports:
       # Expose Prometheus sur le port 9090
       - "9090:9090"
@@ -373,7 +373,7 @@ docker compose -f ~/monitoring-cursus/prometheus-intro/docker-compose.yml ps
 
 ```text
 NAME                                IMAGE                    STATUS         PORTS
-prometheus-intro-prometheus-1       prom/prometheus:v2.53.0  Up 10 seconds  0.0.0.0:9090->9090/tcp
+prometheus-intro-prometheus-1       prom/prometheus:v3.13.0  Up 10 seconds  0.0.0.0:9090->9090/tcp
 ```
 
 ---
@@ -509,7 +509,7 @@ Modifie le fichier `docker-compose.yml` :
 # docker-compose.yml mis à jour
 services:
   prometheus:
-    image: prom/prometheus:v2.53.0
+    image: prom/prometheus:v3.13.0
     ports:
       - "9090:9090"
     volumes:

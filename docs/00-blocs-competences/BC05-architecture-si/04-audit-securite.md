@@ -14,6 +14,8 @@ cursus: "BC05 - Architecture SI"
 
 > **En bref** : À la fin de cette fiche, tu sauras ce qu'est un audit de sécurité, comment le préparer et le réaliser, et comment rédiger un rapport d'audit avec des recommandations. Lecture estimée : 20 min.
 
+!!! warning "Cadre légal : lab et autorisation uniquement"
+    Les commandes d'audit offensif de cette fiche (`nmap`, `nikto`, etc.) ne s'utilisent que sur un **lab que tu contrôles** ou avec une **autorisation écrite**. Sans autorisation, le scan d'un système tiers peut être illégal (Code pénal, art. 323-1 et s.). Les hôtes d'exemple sont fictifs.
 
 ## Prérequis
 

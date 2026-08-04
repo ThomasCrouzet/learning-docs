@@ -27,7 +27,7 @@ cursus: "Monitoring et Observabilité"
 | PHP | 8.3 |
 | Symfony | 7.4 |
 | promphp/prometheus_client_php | 2.x |
-| Prometheus | 2.53.x |
+| Prometheus | 3.13.x |
 
 ## Objectif de cette fiche
 
