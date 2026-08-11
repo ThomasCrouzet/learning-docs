@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Documentation Pédagogique — CSS Accessibilité
+   Documentation Pédagogique ; CSS Accessibilité
    Conçu pour un confort de lecture maximal (profil neuroatypique)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   0. CONTRASTE WCAG 2.2 AA — palette Material teal
+   0. CONTRASTE WCAG 2.2 AA : palette Material teal
    Le teal Material par défaut (#009485) donne ~3.76:1 avec le blanc (échec AA).
    #00695c (teal 800) donne ~6.61:1 avec le blanc.
    -------------------------------------------------------------------------- */
@@ -247,7 +247,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. LIENS — TOUJOURS SOULIGNÉS
+   2. LIENS : TOUJOURS SOULIGNÉS
    Ne pas reposer uniquement sur la couleur pour identifier un lien
    -------------------------------------------------------------------------- */
 
@@ -262,7 +262,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. FOCUS VISIBLE — Navigation clavier claire
+   3. FOCUS VISIBLE : Navigation clavier claire
    -------------------------------------------------------------------------- */
 
 *:focus-visible {
@@ -276,7 +276,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. BLOCS DE CODE — Plus lisibles et spacieux
+   4. BLOCS DE CODE : Plus lisibles et spacieux
    -------------------------------------------------------------------------- */
 
 .md-typeset pre {
@@ -320,7 +320,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   5. TABLEAUX — Lisibles, avec alternance de couleurs
+   5. TABLEAUX : Lisibles, avec alternance de couleurs
    -------------------------------------------------------------------------- */
 
 .md-typeset table:not([class]) {
@@ -353,7 +353,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   6. ADMONITIONS — Style distinct et prévisible pour chaque type
+   6. ADMONITIONS : Style distinct et prévisible pour chaque type
    -------------------------------------------------------------------------- */
 
 /* Espacement accru autour des admonitions */
@@ -366,7 +366,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. NAVIGATION LATÉRALE — Lisible et espacée
+   7. NAVIGATION LATÉRALE : Lisible et espacée
    WCAG 2.2 Target Size (Minimum) : 24×24 CSS px, espace suffisant
    -------------------------------------------------------------------------- */
 
@@ -403,7 +403,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   8. BREADCRUMBS — Visibilité accrue
+   8. BREADCRUMBS : Visibilité accrue
    -------------------------------------------------------------------------- */
 
 .md-path {
@@ -411,7 +411,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. NAVIGATION FOOTER — Plus visible
+   9. NAVIGATION FOOTER : Plus visible
    -------------------------------------------------------------------------- */
 
 .md-footer {
@@ -419,7 +419,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   10. GRIDS / CARDS — Pour la page d'accueil
+   10. GRIDS / CARDS : Pour la page d'accueil
    -------------------------------------------------------------------------- */
 
 /* Cards avec hover subtil */
@@ -437,7 +437,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   10b. ACCUEIL — Ligne d'ampleur (sous le hero)
+   10b. ACCUEIL ; Ligne d'ampleur (sous le hero)
    -------------------------------------------------------------------------- */
 
 .md-typeset .home-stats {
@@ -448,7 +448,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   10c. ACCUEIL — Bloc "Par où commencer" (intentions)
+   10c. ACCUEIL ; Bloc "Par où commencer" (intentions)
    -------------------------------------------------------------------------- */
 
 .md-typeset .home-intent {
@@ -486,7 +486,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   10d. ACCUEIL — Cartes-domaines compactes (vitrine)
+   10d. ACCUEIL ; Cartes-domaines compactes (vitrine)
    -------------------------------------------------------------------------- */
 
 .md-typeset .grid.cards.home-families > ul > li {
@@ -534,7 +534,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   11. RÉDUCTION DE MOUVEMENT — Respect des préférences système
+   11. RÉDUCTION DE MOUVEMENT : Respect des préférences système
    -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -547,7 +547,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   12. MODE SOMBRE — Ajustements de contraste
+   12. MODE SOMBRE : Ajustements de contraste
    -------------------------------------------------------------------------- */
 
 [data-md-color-scheme="slate"] .md-typeset h2 {
@@ -563,7 +563,7 @@
    Mis en valeur automatiquement par extra.js (même logique que les PDFs)
    -------------------------------------------------------------------------- */
 
-/* Bloc Définition — bleu */
+/* Bloc Définition : bleu */
 .pedagogical-block--definition {
   background-color: #e7f3ff;
   border-left: 4px solid #0066cc;
@@ -572,7 +572,7 @@
   margin: 1.2em 0;
 }
 
-/* Bloc Analogie — vert */
+/* Bloc Analogie : vert */
 .pedagogical-block--analogy {
   background-color: #e8f5e9;
   border-left: 4px solid #4caf50;
@@ -581,7 +581,7 @@
   margin: 1.2em 0;
 }
 
-/* Bloc Warning (⚠️) — orange */
+/* Bloc Warning (⚠️) : orange */
 .pedagogical-block--warning {
   background-color: #fff3e0;
   border-left: 4px solid #ff9800;
@@ -590,7 +590,7 @@
   margin: 1.2em 0;
 }
 
-/* Bloc Solution (✅) — vert */
+/* Bloc Solution (✅) : vert */
 .pedagogical-block--solution {
   background-color: #e8f5e9;
   border-left: 4px solid #4caf50;
@@ -599,7 +599,7 @@
   margin: 1.2em 0;
 }
 
-/* Bloc Note (blockquote) — violet */
+/* Bloc Note (blockquote) : violet */
 .pedagogical-block--note {
   background-color: #f3e5f5;
   border-left: 4px solid #9c27b0;
@@ -608,7 +608,7 @@
   margin: 1.2em 0;
 }
 
-/* Bloc Résultat attendu — gris neutre */
+/* Bloc Résultat attendu : gris neutre */
 .pedagogical-block--result {
   background-color: #f5f5f5;
   border-left: 4px solid #757575;
@@ -618,7 +618,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   15. BLOCS VISUELS — MODE SOMBRE
+   15. BLOCS VISUELS : MODE SOMBRE
    -------------------------------------------------------------------------- */
 
 [data-md-color-scheme="slate"] .pedagogical-block--definition {
@@ -690,7 +690,7 @@
   padding: 0.4em 0.8em;
   margin-bottom: 1em;
   font-size: 0.82rem;
-  /* #6d6d6d sur #ededed ≈ 4.41:1 — forcer un gris plus sombre */
+  /* #6d6d6d sur #ededed ≈ 4.41:1 : forcer un gris plus sombre */
   color: #424242;
   background: #f0f0f0;
   border-radius: 6px;
@@ -762,7 +762,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   13. PRINT — Styles d'impression basiques
+   13. PRINT : Styles d'impression basiques
    -------------------------------------------------------------------------- */
 
 @media print {
@@ -948,7 +948,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   18. CHANGELOG — Timeline visuelle
+   18. CHANGELOG : Timeline visuelle
    -------------------------------------------------------------------------- */
 
 .changelog-entry {
@@ -1088,7 +1088,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   19. ONGLET CHANGELOG — Séparé des autres onglets de navigation
+   19. ONGLET CHANGELOG : Séparé des autres onglets de navigation
    -------------------------------------------------------------------------- */
 
 .md-tabs__list li:last-child {
@@ -1212,7 +1212,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   22. MOBILE — Indicateurs de scroll horizontal (code blocks)
+   22. MOBILE : Indicateurs de scroll horizontal (code blocks)
    -------------------------------------------------------------------------- */
 
 @media (max-width: 76.25em) {
@@ -1251,7 +1251,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   23. MOBILE — Cibles tactiles 44px minimum (WCAG 2.2)
+   23. MOBILE : Cibles tactiles 44px minimum (WCAG 2.2)
    -------------------------------------------------------------------------- */
 
 @media (max-width: 76.25em) {
@@ -1278,7 +1278,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   24. MOBILE — Lisibilité petits écrans
+   24. MOBILE : Lisibilité petits écrans
    -------------------------------------------------------------------------- */
 
 @media (max-width: 640px) {
@@ -1298,7 +1298,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   25. MOBILE — Indicateur scroll tableaux
+   25. MOBILE : Indicateur scroll tableaux
    -------------------------------------------------------------------------- */
 
 @media (max-width: 76.25em) {
@@ -1311,7 +1311,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   26. BARRE DE PROGRESSION INSTANT (Material) — nom accessible
+   26. BARRE DE PROGRESSION INSTANT (Material) : nom accessible
    Le markup theme a role="progressbar" sans nom ; le label est ajouté en JS,
    ce style évite qu'elle reçoive le focus clavier inutilement.
    -------------------------------------------------------------------------- */
@@ -1321,7 +1321,7 @@ body.mermaid-lightbox-open {
 }
 
 /* --------------------------------------------------------------------------
-   27. CHECKLISTS DE VALIDATION — zone cliquable lisible
+   27. CHECKLISTS DE VALIDATION : zone cliquable lisible
    -------------------------------------------------------------------------- */
 
 .md-typeset .task-list-item {

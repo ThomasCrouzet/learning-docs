@@ -32,7 +32,7 @@ function updateFrontmatter(filepath) {
 
   // Séparer le frontmatter du contenu
   if (!content.startsWith('---')) {
-    // Pas de frontmatter — on en crée un minimal
+    // Pas de frontmatter : on en crée un minimal
     const time = calculateReadingTime(content);
     const fm = `---\nestimated_time: "${time}"\n---\n\n`;
     fs.writeFileSync(filepath, fm + content, 'utf-8');

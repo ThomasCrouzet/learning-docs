@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Audit documentaire unifie — runner CLI.
+ * Audit documentaire unifie : runner CLI.
  *
  * Usage :
  *   node scripts/doc-audit.js              # ecrit rapport JSON + MD sous audit-reports/
@@ -98,7 +98,7 @@ const mdPath = path.join(REPORTS_DIR, 'doc-audit-latest.md');
 const datedJson = path.join(REPORTS_DIR, `doc-audit-${dateStamp}.json`);
 
 // Strip full findings from "latest" display? Keep full for tooling.
-// Cap findings in dated? No — full JSON is the machine-readable source.
+// Cap findings in dated? No : full JSON is the machine-readable source.
 const jsonOut = JSON.stringify(report, null, 2);
 fs.writeFileSync(jsonPath, jsonOut);
 fs.writeFileSync(mdPath, md);

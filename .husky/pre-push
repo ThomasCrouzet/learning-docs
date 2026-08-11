@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+policy_check=${REPOSITORY_POLICY_CHECK:-$HOME/.config/git/repository-policy/policy-check.sh}
+input_file=$(mktemp "${TMPDIR:-/tmp}/repository-policy-push.XXXXXX")
+trap 'rm -f "$input_file"' EXIT HUP INT TERM
+cat > "$input_file"
+[ ! -x "$policy_check" ] || "$policy_check" push < "$input_file"

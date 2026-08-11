@@ -178,7 +178,7 @@ for (const rel of files) {
       });
     } else {
       const err = outcome.error || '';
-      // JSON with comments (//) or multi-value pedagogy — not single RFC JSON
+      // JSON with comments (//) or multi-value pedagogy : not single RFC JSON
       if (
         /json/i.test(snip.lang) &&
         (/\/\/|\/\*|\.\.\./.test(snip.body) ||
@@ -214,7 +214,7 @@ for (const rel of files) {
         continue;
       }
       // Explicit pedagogical "broken on purpose" markers in the BODY only.
-      // Do NOT match bare "SyntaxError:" in error text — only intentional markers.
+      // Do NOT match bare "SyntaxError:" in error text : only intentional markers.
       if (
         /\/\/\s*❌|\/\*\s*❌|#\s*❌|ne compile pas|erreur intentionnelle|exemple d.erreur|\/\/\s*ERREUR|\/\/\s*BAD\b|\/\/\s*Incorrect|Private field|#\s*Incorrect/i.test(
           snip.body
@@ -244,7 +244,7 @@ for (const rel of files) {
         });
         continue;
       }
-      // Missing npm packages (react, express, …) — not a syntax bug in the fence
+      // Missing npm packages (react, express, …) : not a syntax bug in the fence
       if (/ERR_MODULE_NOT_FOUND|Cannot find package|Cannot find module/i.test(err)) {
         results.push({
           file: snip.file,
@@ -270,7 +270,7 @@ for (const rel of files) {
         });
         continue;
       }
-      // Environment / tool missing only — NOT generic SyntaxError / IndentationError
+      // Environment / tool missing only : NOT generic SyntaxError / IndentationError
       if (
         /command not found|ENOENT|not found in PATH|php_cli_missing|python3_missing|bad option|unknown option|ERR_UNKNOWN/i.test(
           err
@@ -384,5 +384,5 @@ console.log(
 console.log(`Report: ${path.relative(ROOT, jsonPath)}`);
 
 if (summary.unclassified > 0) process.exit(2);
-// fail does not exit 1 by default — mission may fix fails in a second pass
+// fail does not exit 1 by default : mission may fix fails in a second pass
 process.exit(0);

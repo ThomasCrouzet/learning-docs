@@ -1,5 +1,4 @@
 #!/bin/sh
 set -eu
 policy_check=${REPOSITORY_POLICY_CHECK:-$HOME/.config/git/repository-policy/policy-check.sh}
-[ ! -x "$policy_check" ] || "$policy_check" staged
-npx lint-staged
+[ ! -x "$policy_check" ] || "$policy_check" message "$1"
