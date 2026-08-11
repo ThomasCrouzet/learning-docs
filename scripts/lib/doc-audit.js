@@ -217,7 +217,7 @@ function extractCodeFences(content) {
     } else if (len >= openLen && rest === '') {
       openLen = 0;
     }
-    // Sinon : fence intérieure plus courte (contenu d'exemple) — ignorée.
+    // Sinon : fence intérieure plus courte (contenu d'exemple) : ignorée.
   }
   return fences;
 }
@@ -324,7 +324,7 @@ function detectHeuristicIssues(content, relPath) {
           severity: 'medium',
           file: relPath,
           line: i + 1,
-          message: `${label} — "${line.trim().slice(0, 80)}"`,
+          message: `${label} : "${line.trim().slice(0, 80)}"`,
         });
         break;
       }
@@ -387,7 +387,7 @@ function resolveHref(fromRel, href) {
     return { path: null, anchor: null, external: true, absolute: false };
   }
   if (clean.startsWith('/')) {
-    // Absolute from site root — treat as docs-relative without leading slash
+    // Absolute from site root : treat as docs-relative without leading slash
     const stripped = clean.replace(/^\//, '');
     const [p, a] = stripped.split('#');
     return { path: p || null, anchor: a || null, external: false, absolute: true };
@@ -572,7 +572,7 @@ function runDocAudit({ pages, readContent, fileExists, mkdocsYml = null, options
 
       // Only check .md targets (and extensionless treated as not md)
       if (!resolved.path.endsWith('.md')) {
-        // could be image or other asset — skip anchor checks for non-md
+        // could be image or other asset : skip anchor checks for non-md
         if (fileExists(resolved.path)) {
           referenced.add(resolved.path);
         } else if (/\.(png|jpg|jpeg|gif|svg|webp|pdf)$/i.test(resolved.path)) {
@@ -602,7 +602,7 @@ function runDocAudit({ pages, readContent, fileExists, mkdocsYml = null, options
       if (resolved.anchor) {
         // Validate anchor against target page headings (or self)
         const targetHeadings = headingsByPage.get(resolved.path);
-        // If target not yet loaded, defer — second pass below
+        // If target not yet loaded, defer : second pass below
         if (targetHeadings) {
           const slug = slugifyHeading(decodeURIComponent(resolved.anchor));
           const ok = targetHeadings.some(
@@ -630,7 +630,7 @@ function runDocAudit({ pages, readContent, fileExists, mkdocsYml = null, options
   }
 
   // Second pass : ancres vers pages chargees apres le source (already in headingsByPage)
-  // Re-check deferred anchors — actually first pass only checks if target already processed.
+  // Re-check deferred anchors : actually first pass only checks if target already processed.
   // Full re-scan for anchors only:
   for (const rel of pages) {
     let content;
@@ -835,7 +835,7 @@ function formatReportMarkdown(report, extra = {}) {
     lines.push('_Aucun._');
   } else {
     for (const f of high.slice(0, 100)) {
-      lines.push(`- \`${f.file}\`${f.line ? `:${f.line}` : ''} — ${f.message}`);
+      lines.push(`- \`${f.file}\`${f.line ? `:${f.line}` : ''} ; ${f.message}`);
     }
     if (high.length > 100) lines.push(`- … et ${high.length - 100} autres`);
   }
@@ -843,7 +843,7 @@ function formatReportMarkdown(report, extra = {}) {
   lines.push('## Findings moyenne sévérité (extrait, max 80)');
   lines.push('');
   for (const f of medium.slice(0, 80)) {
-    lines.push(`- \`${f.file}\`${f.line ? `:${f.line}` : ''} — [${f.category}] ${f.message}`);
+    lines.push(`- \`${f.file}\`${f.line ? `:${f.line}` : ''} ; [${f.category}] ${f.message}`);
   }
   if (medium.length > 80) lines.push(`- … et ${medium.length - 80} autres`);
   lines.push('');

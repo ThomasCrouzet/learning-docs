@@ -119,7 +119,7 @@ for (const file of files) {
 }
 
 // Générer le fichier de review
-const reviewContent = `# Review — Sections "En Bref" générées
+const reviewContent = `# Review ; Sections "En Bref" générées
 
 ${reviewEntries.map(e => `## ${e.file}\n\n> **En bref** : ${e.summary}\n`).join('\n')}
 `;

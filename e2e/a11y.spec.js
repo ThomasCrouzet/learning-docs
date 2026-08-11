@@ -268,7 +268,7 @@ test.describe('Navigation clavier', () => {
     await page.keyboard.press('ArrowRight');
     await page.waitForTimeout(400);
     // Ne doit pas changer de fiche (pathname) ni cliquer prev/next
-    // (le hash peut bouger via navigation.tracking Material — hors scope)
+    // (le hash peut bouger via navigation.tracking Material : hors scope)
     expect(new URL(page.url()).pathname).toBe(pathBefore);
     const clicks = await page.evaluate(() => window.__interFicheClicks || []);
     expect(clicks).toEqual([]);

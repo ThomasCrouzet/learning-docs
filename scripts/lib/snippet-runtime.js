@@ -319,7 +319,7 @@ function fragmentSkipReason(lang, body) {
       if (ifSubj && !isTsDeclared(ifSubj[1])) {
         return 'fragment_undeclared_subject';
       }
-      // "prop" in foo — ReferenceError if foo is free
+      // "prop" in foo : ReferenceError if foo is free
       for (const m of t.matchAll(/\bin\s+([A-Za-z_$][\w$]*)/g)) {
         if (!isTsDeclared(m[1])) return 'fragment_undeclared_in_operand';
       }
@@ -395,7 +395,7 @@ function fragmentSkipReason(lang, body) {
   }
 
   if (l === 'php') {
-    // fragments without <?php often still lintable if we wrap — leave to runner
+    // fragments without <?php often still lintable if we wrap : leave to runner
     if (/^\s*\?>/m.test(t)) return 'php_close_only';
   }
 
