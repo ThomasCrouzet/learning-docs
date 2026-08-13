@@ -9,7 +9,7 @@ hide:
 
 # Cursus Epitech
 
-Ce cursus couvre les technologies enseignées dans le cadre du programme Epitech : Java, Unix/Bash, Git, HTML/CSS, JavaScript, Node.js, Rust ainsi que des projets pratiques.
+Ce cursus est une reconstruction pédagogique (état 13 août 2026) des technologies souvent associées à un parcours type Epitech (Java, Unix/Bash, Git, HTML/CSS, JavaScript, Node.js, Rust, projets). Ce n'est pas un sujet officiel Epitech, ni une norme de moulinette.
 
 **69 fiches** réparties sur 9 modules.
 

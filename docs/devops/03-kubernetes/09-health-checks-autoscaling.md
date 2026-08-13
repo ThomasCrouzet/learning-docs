@@ -24,8 +24,8 @@ cursus: "Kubernetes"
 
 | Technologie | Version |
 | ----------- | ------- |
-| Kubernetes  | 1.31+   |
-| kubectl     | 1.31+   |
+| Kubernetes  | 1.34+ (supportées août 2026 : 1.34, 1.35, 1.36) |
+| kubectl     | 1.34+   |
 | Minikube    | 1.34+   |
 
 ## Objectif de cette fiche

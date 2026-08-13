@@ -26,7 +26,7 @@ cursus: "Kubernetes"
 | Technologie | Version |
 | ----------- | ------- |
 | Minikube    | 1.34+   |
-| kubectl     | 1.31+   |
+| kubectl     | 1.34+   |
 | Docker      | 24+     |
 
 ## Objectif de cette fiche

@@ -29,7 +29,7 @@ cursus: "JavaScript"
 | ----------- | ------- |
 | Symfony | 7.4 LTS |
 | Node.js | 22 LTS |
-| Webpack Encore | 4.x |
+| Webpack Encore | 5.x / 6.x (API CJS de cette fiche ; 7.x est ESM-only depuis juin 2026) |
 
 ## Objectif de cette fiche
 
@@ -37,7 +37,7 @@ cursus: "JavaScript"
 
 ---
 
-> **Contexte 2025-2026** : Webpack Encore est couvert ici car il est très présent dans les projets Symfony existants. Les nouveaux projets Symfony 6.3+ utilisent **AssetMapper** par défaut (pas de bundler, import maps navigateur). Les concepts de cette fiche (organisation des assets, imports CSS/JS, compilation prod) restent utiles pour comprendre la gestion des ressources frontend, quelle que soit l'approche choisie.
+> **Contexte 2026** : Webpack Encore est couvert ici car il est très présent dans les projets Symfony existants. Les nouveaux projets Symfony 6.3+ utilisent **AssetMapper** par défaut. `@symfony/webpack-encore` 7.x (juin 2026) est ESM-only et `getWebpackConfig()` est asynchrone : les exemples CJS de cette fiche correspondent à Encore 5.x/6.x. Pour Encore 7, voir le guide d'upgrade officiel.
 
 ---
 

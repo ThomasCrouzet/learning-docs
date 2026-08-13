@@ -145,7 +145,7 @@ La taille du KV-cache dépend de :
 Formule : `taille = 2 * L * H * d * n * taille_type`
 
 Pour un modèle comme Llama 2 70B (80 couches, 64 têtes, dimension 128, en float16) avec 4096 tokens :
-`2 * 80 * 64 * 128 * 4096 * 2 octets = ~10 Go par requête`
+Pour un modèle **MHA** de 80 couches, 64 têtes, d=128, float16, 4096 tokens : `2 * L * H * d * n * 2 ≈ 10 Go`. Llama 2 70B utilise GQA (64 têtes query, **8 têtes KV**) : remplacer H par n_kv_heads=8 donne ≈ 1,25 Go, pas 10 Go.
 
 #### Le speculative decoding
 

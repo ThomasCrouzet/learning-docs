@@ -11,7 +11,7 @@ Curriculum structuré en **9 phases progressives**. Approche factuelle et critiq
 **Durée estimée totale** : 6-12 mois selon intensité.
 
 !!! warning "Pas un conseil d'investissement, juridique ou fiscal"
-    Contenu **pédagogique** et critique uniquement. Aucune fiche de ce cursus ne constitue un conseil d'investissement, un avis juridique ou fiscal, ni une recommandation d'acheter, de vendre ou de détenir un actif. Les règles (AMF, MiCA, fiscalité) évoluent : vérifie les sources officielles (`amf-france.org`, `impots.gouv.fr`, EUR-Lex) et un professionnel habilité pour ta situation. N'engage jamais plus que ce que tu acceptes de perdre à 100%. Date de référence éditoriale du corpus : juillet 2026.
+    Contenu **pédagogique** et critique uniquement. Aucune fiche de ce cursus ne constitue un conseil d'investissement, un avis juridique ou fiscal, ni une recommandation d'acheter, de vendre ou de détenir un actif. Les règles (AMF, MiCA, fiscalité) évoluent : vérifie les sources officielles (`amf-france.org`, `impots.gouv.fr`, EUR-Lex) et un professionnel habilité pour ta situation. N'engage jamais plus que ce que tu acceptes de perdre à 100%. Date de référence éditoriale du corpus : août 2026.
 
 ---
 
@@ -85,6 +85,7 @@ Avant d'interagir avec l'écosystème, il faut savoir se protéger. Arnaques, bi
 | 03 | [FOMO, FUD et biais cognitifs](05-securite-survie/03-fomo-fud-biais-cognitifs.md) | Pourquoi ton cerveau te piège face aux crypto-monnaies |
 | 04 | [Régulation en France et en Europe](05-securite-survie/04-regulation-loi-france-europe.md) | Ce que dit la loi : PSAN, MiCA, AMF |
 | 05 | [Fiscalité des crypto-monnaies](05-securite-survie/05-fiscalite-imposition-crypto.md) | Déclarer et comprendre l'imposition en France |
+| 06 | [Acheter et vendre concrètement](05-securite-survie/06-acheter-vendre-concretement.md) | PSAN, KYC, premier achat, retrait vers son wallet |
 
 ---
 

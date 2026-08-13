@@ -245,7 +245,7 @@ services:
 
   # Grafana : dashboards
   grafana:
-    image: grafana/grafana:11.1.0
+    image: grafana/grafana:13.1.3
     ports:
       - "3000:3000"
     volumes:

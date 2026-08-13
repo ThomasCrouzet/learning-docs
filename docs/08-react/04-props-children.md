@@ -612,7 +612,7 @@ interface CarteProps {
 **Énoncé** : Crée un système de notification réutilisable avec les composants suivants :
 
 1. Un composant `Notification` qui accepte les props :
-   - `type` : "succès" | "erreur" | "info" (obligatoire)
+   - `type` : `"succes"` | `"erreur"` | `"info"` (identifiant ASCII, obligatoire)
    - `children` : le contenu du message (obligatoire)
    - `fermable` : booléen optionnel (par défaut `false`), affiche un bouton "X" si `true`
 

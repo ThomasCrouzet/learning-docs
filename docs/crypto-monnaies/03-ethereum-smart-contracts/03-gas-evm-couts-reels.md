@@ -208,12 +208,12 @@ Objectif : maintenir les blocs a environ 50% de leur capacité.
 Depuis l'activation de l'EIP-1559 (août 2021) et The Merge (septembre 2022), le burn moyen a souvent dépasse les nouvelles émissions d'ETH. Quand le réseau est très utilise, plus d'ETH sont detruits que créés.
 
 ```text
-Émission d'ETH par bloc (PoS) : environ 0,02 ETH
-Si la base fee est élevée : le burn par bloc peut dépasser 0,02 ETH
-  -> ETH est déflationniste (la quantité totale diminue)
-
-Si la base fee est faible : le burn est inférieur a 0,02 ETH
-  -> ETH est inflationniste (la quantité totale augmente)
+Émission d'ETH (PoS) : de l'ordre de 1 700 ETH/jour au Merge
+(environ 0,24 ETH par slot de 12 s, pour ~14 millions d'ETH stakés).
+L'émission croît avec la racine carrée de l'ETH staké
+(plusieurs milliers d'ETH/jour en 2026).
+Si le burn de base fee dépasse cette émission -> offre nette en baisse.
+Sinon -> offre nette en hausse.
 ```
 
 **Point critique** : la deflation d'ETH n'est pas garantie. Elle dépend entièrement du niveau d'utilisation du réseau. Si le réseau est peu utilise, ETH redevient inflationniste. Ceux qui presentent ETH comme "toujours déflationniste" simplifient excessivement la réalité.

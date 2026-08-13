@@ -669,9 +669,11 @@ exit
 ```
 
 ```bash
-# Nettoyage final (optionnel)
-docker compose down -v
+# Arrêt (conserve le volume / les données)
+docker compose down
 ```
+
+⚠️ `docker compose down -v` détruirait le volume MongoDB. Ne l'utilise que pour un reset volontaire, jamais comme nettoyage habituel.
 
 ---
 

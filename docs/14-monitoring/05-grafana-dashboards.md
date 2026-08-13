@@ -133,7 +133,7 @@ services:
 
   # Grafana : visualisation des métriques
   grafana:
-    image: grafana/grafana:11.1.0
+    image: grafana/grafana:13.1.3
     ports:
       # Expose Grafana sur le port 3000
       - "3000:3000"
@@ -485,7 +485,7 @@ http://prometheus:9090
 
 ```yaml
 grafana:
-  image: grafana/grafana:11.1.0
+  image: grafana/grafana:13.1.3
   volumes:
     # Ce volume persiste les données entre les redémarrages
     - grafana-data:/var/lib/grafana

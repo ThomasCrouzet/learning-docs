@@ -25,7 +25,7 @@ cursus: "PHP"
 
 | Technologie | Version |
 | ----------- | ------- |
-| PHP         | 8.3     |
+| PHP         | 8.3 (cadre pédagogique ; support actif terminé le 31 déc. 2025, correctifs de sécurité jusqu'au 31 déc. 2027) |
 
 ## Objectif de cette fiche
 

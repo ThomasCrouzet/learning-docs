@@ -170,8 +170,8 @@ final class PriceCalculatorTest extends TestCase
 {
     public function testCalculateTotalReturnsZeroWhenProductNotFound(): void
     {
-        // On crée un stub du repository
-        $repository = $this->createMock(ProductRepository::class);
+        // On crée un stub du repository (createStub, pas createMock)
+        $repository = $this->createStub(ProductRepository::class);
 
         // On force la méthode getPrice à renvoyer null
         // (cas où le produit n'existe pas en base)

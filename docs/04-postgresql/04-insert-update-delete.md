@@ -244,7 +244,7 @@ VALUES ('Clavier RGB', 89.99, true);
 ### Étape 1 : Se connecter à PostgreSQL
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 **Résultat attendu** :

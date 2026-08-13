@@ -101,7 +101,7 @@ Sans GRC, voici les problèmes rencontrés :
 **Obligations principales** :
 
 1. **Gestion des risques** : mettre en place des mesures techniques et organisationnelles proportionnées
-2. **Notification des incidents** : signaler les incidents significatifs dans les 24h (alerte initiale) puis 72h (rapport complet)
+2. **Notification des incidents** : alerte précoce sous 24h, notification sous 72h, rapport final sous 1 mois (directive NIS2, art. 23)
 3. **Responsabilité de la direction** : les dirigeants doivent superviser et approuver les mesures de cybersécurité
 4. **Sécurité de la chaîne d'approvisionnement** : évaluer les risques liés aux fournisseurs
 5. **Coopération** : partager les informations sur les menaces avec les autorités
@@ -758,7 +758,7 @@ controles = [
     },
     {
         "id": "CIS 6",
-        "nom": "Gestion des vulnérabilités",
+        "nom": "Gestion du contrôle d'accès",
         "cible": "Scan hebdomadaire, patch sous 48h pour les critiques",
         "etat": "Mises à jour manuelles, pas de scan régulier",
         "score_cible": 5,
@@ -828,7 +828,7 @@ CIS 2 - Inventaire des logiciels           0/5     5/5     5 URGENT
 CIS 3 - Protection des données             2/5     5/5     3 HAUTE
 CIS 4 - Configuration sécurisée            2/5     5/5     3 HAUTE
 CIS 5 - Gestion des comptes                3/5     5/5     2 MOYENNE
-CIS 6 - Gestion des vulnérabilités         1/5     5/5     4 URGENT
+CIS 6 - Gestion du contrôle d'accès         1/5     5/5     4 URGENT
 ---------------------------------------------------------------------------
 Score global                              10/30          Maturité : 33%
 
@@ -841,7 +841,7 @@ RECOMMANDATIONS PRIORITAIRES
   Cible : Inventaire automatisé avec whitelist
   Écart : 5 points
 
-[PRIORITAIRE] CIS 6 - Gestion des vulnérabilités
+[PRIORITAIRE] CIS 6 - Gestion du contrôle d'accès
   État actuel : Mises à jour manuelles, pas de scan régulier
   Cible : Scan hebdomadaire, patch sous 48h pour les critiques
   Écart : 4 points

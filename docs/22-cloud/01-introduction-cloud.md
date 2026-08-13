@@ -3,7 +3,7 @@ tags:
   - Cloud
   - Débutant
   - Concept
-description: "Introduction au cloud computing : IaaS, PaaS, SaaS, cloud public, prive et hybride, principaux providers (AWS, Azure, GCP)."
+description: "Introduction au cloud computing : IaaS, PaaS, SaaS, cloud public, privé et hybride, principaux providers (AWS, Azure, GCP)."
 estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 13
@@ -12,7 +12,7 @@ cursus: "Cloud"
 
 # 01 - Introduction au Cloud
 
-> **En bref** : Tu découvriras ce qu'est le cloud computing, les trois modèles de service (IaaS, PaaS, SaaS), les types de déploiement (public, prive, hybride) et les principaux fournisseurs (AWS, Azure, GCP). Lecture estimée : 60 min.
+> **En bref** : Tu découvriras ce qu'est le cloud computing, les trois modèles de service (IaaS, PaaS, SaaS), les types de déploiement (public, privé, hybride) et les principaux fournisseurs (AWS, Azure, GCP). Lecture estimée : 60 min.
 
 ## Prérequis
 
@@ -22,7 +22,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras définir le cloud computing, distinguer IaaS, PaaS et SaaS, choisir entre cloud public, prive et hybride, et identifier les services principaux des trois grands fournisseurs cloud.
+À la fin de cette fiche, tu sauras définir le cloud computing, distinguer IaaS, PaaS et SaaS, choisir entre cloud public, privé et hybride, et identifier les services principaux des trois grands fournisseurs cloud.
 
 ---
 
@@ -32,7 +32,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce que le cloud computing ?
 
-**Définition** : Le cloud computing est la mise a disposition de ressources informatiques (serveurs, stockage, bases de données, réseau, logiciels) via Internet, facturees a l'usage, sans que tu aies besoin de posséder ou gérer l'infrastructure physique.
+**Définition** : Le cloud computing est la mise à disposition de ressources informatiques (serveurs, stockage, bases de données, réseau, logiciels) via Internet, facturées à l'usage, sans que tu aies besoin de posséder ou gérer l'infrastructure physique.
 
 **Le problème que le cloud computing résout** :
 

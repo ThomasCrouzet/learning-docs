@@ -182,7 +182,7 @@ services:
       - prometheus-data:/prometheus
 
   grafana:
-    image: grafana/grafana:11.1.0
+    image: grafana/grafana:13.1.3
     ports:
       - "3000:3000"
     volumes:
@@ -192,7 +192,7 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       # Active le serveur SMTP intégré pour les tests
       - GF_SMTP_ENABLED=false
-      # Unified alerting activé par défaut dans Grafana 11
+      # Unified alerting activé par défaut (Grafana 9+ ; image 13.1.3 vérifiée le 13 août 2026)
 
   node-exporter:
     image: prom/node-exporter:v1.8.1

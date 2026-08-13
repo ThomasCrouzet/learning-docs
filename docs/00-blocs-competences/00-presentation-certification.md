@@ -245,7 +245,7 @@ Chaque bloc peut être validé de manière autonome. Si tu valides un bloc mais 
 | Date d'échéance de l'enregistrement | 18-10-2026 |
 | Dernière délivrance possible | 18-10-2030 |
 
-**Actualité du code RNCP** : sur France Compétences, la fiche RNCP38114 indique qu'elle est **remplacée par RNCP42634** ("Architecte des systèmes d'information"). Vérifie toujours le code actif et les conditions sur le site officiel avant de t'inscrire : les libellés, les blocs et les modalités peuvent évoluer.
+**Actualité du code RNCP** (vérifié le 13 août 2026 sur [francecompetences.fr/recherche/rncp/38114](https://www.francecompetences.fr/recherche/rncp/38114/)) : la fiche RNCP38114 est encore affichée comme active, avec échéance d'enregistrement au **18-10-2026**, et indique qu'elle est **remplacée par RNCP42634** ("Architecte des systèmes d'information"). Vérifie toujours le code actif et les conditions sur le site officiel avant de t'inscrire : les libellés, les blocs et les modalités peuvent évoluer.
 
 ### Niveau et équivalences
 

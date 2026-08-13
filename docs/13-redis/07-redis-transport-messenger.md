@@ -190,7 +190,7 @@ Tentative 4 (max_retries atteint) : le message est envoyé au transport "failed"
 | -------- | ------ |
 | `messenger:failed:show` | Liste les messages en échec |
 | `messenger:failed:retry {id}` | Retente un message spécifique |
-| `messenger:failed:retry --all` | Retente tous les messages |
+| `messenger:failed:retry` | Retente les messages en échec (interactif, un par un) |
 | `messenger:failed:remove {id}` | Supprime un message en échec |
 
 ---
@@ -548,7 +548,7 @@ php bin/console messenger:failed:show 1
 php bin/console messenger:failed:retry 1
 
 # Retente tous les messages en échec
-php bin/console messenger:failed:retry --all
+php bin/console messenger:failed:retry
 
 # Supprime un message en échec (sans le retenter)
 php bin/console messenger:failed:remove 1
@@ -699,7 +699,7 @@ supervisorctl stop messenger-consume:*
 | `php bin/console messenger:consume async --limit=100` | Traite 100 messages puis s'arrête |
 | `php bin/console messenger:failed:show` | Liste les messages en échec |
 | `php bin/console messenger:failed:retry {id}` | Retente un message |
-| `php bin/console messenger:failed:retry --all` | Retente tous les messages |
+| `php bin/console messenger:failed:retry 20 --force` | Retente le message d'identifiant 20 sans confirmation |
 | `php bin/console messenger:failed:remove {id}` | Supprime un message en échec |
 | `php bin/console messenger:stats` | Affiche le nombre de messages par transport |
 | `php bin/console debug:messenger` | Affiche les messages et handlers configurés |

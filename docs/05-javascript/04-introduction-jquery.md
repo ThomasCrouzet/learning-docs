@@ -115,8 +115,8 @@ Sans jQuery, voici les problèmes rencontrés :
 Dans le terminal, à la racine de ton projet Symfony :
 
 ```bash
-# Installe jQuery et l'enregistre comme dépendance du projet
-npm install jquery
+# Installe jQuery 3.7.1 (LTS de cette fiche ; 4.0.0 casse des API dépréciées)
+npm install jquery@3.7.1
 ```
 
 **Résultat attendu** :
@@ -460,7 +460,7 @@ $('#titre').text().addClass('active');
 
 | Commande | Action |
 | -------- | ------ |
-| `npm install jquery` | Installe jQuery dans le projet |
+| `npm install jquery@3.7.1` | Installe jQuery 3.7.1 (pas 4.0) |
 | `npm run dev` | Compile les assets avec Webpack Encore |
 | `npm run watch` | Compile et surveille les changements en continu |
 | `console.log($.fn.jquery)` | Affiche la version de jQuery chargée |
@@ -681,7 +681,9 @@ $(function() {
             return; // Ne fait rien si le champ est vide
         }
 
-        let nouvelleTache = $('<li>' + texte + ' <button class="btn-supprimer">X</button></li>');
+        let nouvelleTache = $('<li></li>');
+        nouvelleTache.append(document.createTextNode(texte + ' '));
+        nouvelleTache.append($('<button type="button" class="btn-supprimer">X</button>'));
         $('#todo-list').append(nouvelleTache);
         nouvelleTache.hide().fadeIn(300);
         $('#todo-input').val(''); // Vide le champ

@@ -335,7 +335,7 @@ class ProductCrudController extends AbstractCrudController
 mkdir -p public/uploads/images/products
 
 # Donner les droits d'écriture
-chmod -R 777 public/uploads/
+chown -R www-data:www-data public/uploads/ && chmod -R 775 public/uploads/
 ```
 
 ### Piège 2 : Confusion entre setBasePath et setUploadDir

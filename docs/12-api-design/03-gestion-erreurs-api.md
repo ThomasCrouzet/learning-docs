@@ -61,7 +61,7 @@ Sans gestion d'erreurs standardisée, voici les problèmes rencontrés :
 
 ### RFC 7807 - Problem Details for HTTP APIs
 
-**Définition** : La RFC 7807 (remplacée par la RFC 9457 en 2023, le contenu est identique) définit un format standard pour décrire les erreurs HTTP dans les API. Le type de contenu est `application/problem+json`.
+**Définition** : La RFC 9457 (juillet 2023) rend obsolète la RFC 7807 et définit le format actuel _Problem Details for HTTP APIs_. Le type de contenu reste `application/problem+json`. Les membres `type` et `title` sont optionnels (un `type` absent équivaut à `about:blank`). La RFC 9457 ajoute notamment un registre IANA des types de problème et des précisions pour plusieurs problèmes dans une même réponse.
 
 **Le problème que la RFC 7807 résout** :
 

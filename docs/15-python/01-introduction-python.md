@@ -259,7 +259,7 @@ Crée un fichier `erreur.py` avec une erreur volontaire :
 
 ```python
 # erreur.py - Démonstration d'une erreur d'indentation
-# ❌ Erreur intentionnelle : indentation manquante (ne compile pas)
+# ❌ Erreur intentionnelle : indentation manquante (provoque une erreur à l'exécution)
 
 if True:
 print("Cette ligne n'est pas indentée")  # Erreur volontaire
@@ -273,10 +273,10 @@ python3 erreur.py
 **Résultat attendu** :
 
 ```text
-  File "erreur.py", line 4
+  File "erreur.py", line 5
     print("Cette ligne n'est pas indentée")
     ^
-IndentationError: expected an indented block after 'if' statement on line 3
+IndentationError: expected an indented block after 'if' statement on line 4
 ```
 
 Python t'indique le fichier, le numéro de ligne et le type d'erreur. Corrige le fichier en ajoutant 4 espaces devant `print` :

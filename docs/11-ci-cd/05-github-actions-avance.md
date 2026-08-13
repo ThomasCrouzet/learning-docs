@@ -53,10 +53,10 @@ Le diagramme suivant montre comment une matrice génère plusieurs combinaisons 
 
 ```mermaid
 graph TD
-    matrix[Matrix Strategy] --> combo1[PHP 8.2 + Node 18]
-    matrix --> combo2[PHP 8.3 + Node 18]
-    matrix --> combo3[PHP 8.2 + Node 22]
-    matrix --> combo4[PHP 8.3 + Node 22]
+    matrix[Matrix Strategy] --> combo1[PHP 8.3 + Node 22]
+    matrix --> combo2[PHP 8.4 + Node 22]
+    matrix --> combo3[PHP 8.3 + Node 24]
+    matrix --> combo4[PHP 8.4 + Node 24]
     combo1 --> parallel[Jobs en parallèle]
     combo2 --> parallel
     combo3 --> parallel

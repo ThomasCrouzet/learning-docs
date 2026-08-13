@@ -128,10 +128,10 @@ Observation: La population française en 2024 est de 68,4 millions d'habitants.
 
 Thought: Je peux maintenant calculer le PIB par habitant.
 Action: calculate("2923000000000 / 68400000")
-Observation: 42 749 euros
+Observation: 42 719 euros
 
-Thought: J'ai toutes les informations. Le PIB par habitant de la France en 2024 est d'environ 42 749 euros.
-Answer: Le PIB par habitant de la France en 2024 est d'environ 42 749 euros.
+Thought: 2 923 milliards / 68,4 millions ≈ 42 719 euros.
+Answer: Le PIB par habitant de la France en 2024 est d'environ 42 719 euros.
 ```
 
 ---

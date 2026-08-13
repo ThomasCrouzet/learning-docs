@@ -675,7 +675,7 @@ class ApiTaskController extends AbstractController
 
         function appendTask(task) {
             // Construire le DOM sans concaténer de HTML brut (évite XSS)
-            const $li = $('<li></li>');
+            const $li = $('<li></li>').attr('id', 'task-' + task.id);
             $li.append(document.createTextNode(task.title + ' '));
             const $btn = $('<button type="button" class="btn-del"></button>')
                 .text('Supprimer')

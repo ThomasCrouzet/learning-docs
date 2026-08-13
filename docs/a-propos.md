@@ -36,11 +36,12 @@ Ce n'est **pas** :
 
 | Élément | Détail |
 | ------- | ------ |
-| Date de référence du contenu | juillet 2026 |
-| Versions de référence (cadre pédagogique) | PHP 8.3 (support actif terminé le 31 déc. 2025 ; correctifs de sécurité jusqu'au 31 déc. 2027 - [php.net/supported-versions](https://www.php.net/supported-versions.php) ; pour un support actif, préférer PHP 8.4 ou 8.5), Symfony 7.4 LTS (bugs jusqu'à nov. 2028, sécurité jusqu'à nov. 2029), PostgreSQL 16 (EOL nov. 2028), Node.js 22 LTS en maintenance (EOL 30 avr. 2027 ; Node 24 est l'Active LTS en 2026) |
+| Date de référence du contenu | août 2026 |
+| Versions de référence (cadre pédagogique) | PHP 8.3 (support actif terminé le 31 déc. 2025 ; correctifs de sécurité jusqu'au 31 déc. 2027 - [php.net/supported-versions](https://www.php.net/supported-versions.php) ; pour un support actif, préférer PHP 8.4 ou 8.5), Symfony 7.4 LTS (bugs jusqu'à nov. 2028, sécurité jusqu'à nov. 2029), PostgreSQL 16 (EOL 9 nov. 2028), Node.js 22 LTS en maintenance (EOL 30 avr. 2027) ; Node.js 24 Active LTS (EOL 30 avr. 2028) ; Ansible communautaire 14.x / ansible-core 2.21 (PyPI `ansible` 14.3.0 au 13 août 2026) |
 | Contrôles automatiques | lints Markdown, frontmatter, structure des fiches, navigation, carte des cursus et audit documentaire local (`npm run audit:docs`) |
 | Contrôles éditoriaux | relectures par cursus, corrections techniques ciblées, campagnes d'audit documentées |
 | Fraîcheur | voir [Politique de fraîcheur](politique-fraicheur.md) |
+| Accessibilité | rapport technique [Audit d'accessibilité WCAG 2.2 AA](accessibility-audit.md) (hors parcours pédagogique) |
 
 Ces versions sont un **socle d'apprentissage cohérent**, pas une obligation d'installer exactement ces numéros en production. Vérifie toujours les pages de support officielles avant une mise à jour.
 

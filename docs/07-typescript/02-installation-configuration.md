@@ -196,7 +196,7 @@ npx tsc --version
 Version 6.x.x ou 7.x.x
 ```
 
-> **Note versions** : TypeScript 7.0 (compilateur natif en Go) est stable depuis juillet 2026. Si tu installes `typescript@latest`, tu obtiens la version courante de la branche 7.x. TypeScript 6.x reste supporté et compatible avec ce cursus. Les exemples de ce cursus fonctionnent avec 6.x et 7.x.
+> **Note versions** : TypeScript 7.0 (compilateur natif en Go) est annoncé stable depuis juillet 2026 ([annonce officielle](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)). Si tu installes `typescript@latest`, tu obtiens la version courante de la branche 7.x. TypeScript 6.x reste supporté et compatible avec ce cursus. Les exemples de ce cursus fonctionnent avec 6.x et 7.x.
 
 ---
 

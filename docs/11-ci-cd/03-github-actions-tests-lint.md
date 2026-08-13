@@ -229,8 +229,7 @@ Crée le fichier `phpunit.xml` :
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php"
-         colors="true"
-         verbose="true">
+         colors="true">
     <testsuites>
         <testsuite name="Tests">
             <directory>tests</directory>

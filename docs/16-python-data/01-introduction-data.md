@@ -434,7 +434,7 @@ pip install pandas
 
 ```text
 Nombre total de produits vendus : 530
-Chiffre d'affaires total : 560.50 EUR
+Chiffre d'affaires total : 600.00 EUR
 ```
 
 ---

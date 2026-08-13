@@ -10,7 +10,9 @@ description: "Comment les contenus périssables sont datés, revalidés et signa
 
 ## Date de référence
 
-La date de référence éditoriale actuelle est **juillet 2026**. Elle apparaît dans [À propos](a-propos.md). Les outils d'audit peuvent générer des rapports locaux non versionnés sous `audit-reports/`.
+La date de référence éditoriale actuelle est **août 2026**. Elle apparaît dans [À propos](a-propos.md). Les outils d'audit peuvent générer des rapports locaux non versionnés sous `audit-reports/`.
+
+Le rapport technique d'accessibilité (campagne WCAG 2.2 AA) est dans [Audit d'accessibilité](accessibility-audit.md) (page mainteneur, hors parcours pédagogique).
 
 Une date de référence n'est pas une promesse que chaque phrase a été re-vérifiée ce jour-là. Elle indique le cadre temporel des versions et des contrôles de campagne.
 

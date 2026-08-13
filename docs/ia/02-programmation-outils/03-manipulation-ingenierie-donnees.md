@@ -210,7 +210,7 @@ Sans normalisation, voici les problèmes rencontrés :
 | MinMaxScaler | StandardScaler |
 | ------------ | -------------- |
 | Transforme en [0, 1] | Transforme en moyenne = 0, écart-type = 1 |
-| Sensible aux outliers | Moins sensible aux outliers |
+| Sensible aux outliers (min et max) | Aussi sensible aux outliers (moyenne et écart-type) ; pour les outliers, utiliser RobustScaler |
 | Adapté quand les données ont des bornes connues | Adapté quand les données suivent une distribution normale |
 | Formule : (x - min) / (max - min) | Formule : (x - moyenne) / écart-type |
 

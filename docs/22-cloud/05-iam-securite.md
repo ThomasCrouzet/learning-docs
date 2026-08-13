@@ -3,7 +3,7 @@ tags:
   - Cloud
   - Intermédiaire
   - Concept
-description: "IAM et sécurité cloud : utilisateurs, groupes, rôles, politiques, MFA, principe du moindre privilege et audit."
+description: "IAM et sécurité cloud : utilisateurs, groupes, rôles, politiques, MFA, principe du moindre privilège et audit."
 estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 13

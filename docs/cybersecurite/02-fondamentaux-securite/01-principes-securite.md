@@ -333,7 +333,9 @@ Les 6 premiers contrôles (les plus critiques) :
 3. **Protection des données** : classifier et protéger les données sensibles
 4. **Configuration sécurisée** : durcir les configurations par défaut
 5. **Gestion des comptes** : contrôler les accès et les privilèges
-6. **Gestion des vulnérabilités** : scanner, prioriser et corriger les failles
+6. **Gestion du contrôle d'accès** : authentification, autorisation, moindre privilège (CIS Control 6)
+
+La **gestion continue des vulnérabilités** est le **CIS Control 7**, pas le 6.
 
 ---
 
@@ -551,7 +553,7 @@ cat << 'EOF' > audit-cis-controls.md
 - [ ] Le MFA est activé pour les comptes à privilèges
 - [ ] Les mots de passe respectent la politique de sécurité
 
-## Contrôle 6 : Gestion des vulnérabilités
+## Contrôle 7 : Gestion continue des vulnérabilités
 - [ ] Des scans de vulnérabilités sont effectués régulièrement
 - [ ] Les correctifs critiques sont appliqués sous 48h
 - [ ] Un processus de suivi des vulnérabilités est en place
@@ -753,7 +755,7 @@ L'axe le plus critique est l'**intégrité** : une modification non autorisée d
 
 1. **Contrôle 5 - Gestion des comptes** : activer le MFA pour les comptes professeurs, désactiver les comptes des anciens étudiants
 2. **Contrôle 4 - Configuration sécurisée** : durcir PostgreSQL (désactiver les connexions distantes non nécessaires, changer les mots de passe par défaut)
-3. **Contrôle 6 - Gestion des vulnérabilités** : scanner l'application avec un outil comme OWASP ZAP, corriger les failles critiques sous 48h
+3. **Contrôle 7 - Gestion continue des vulnérabilités** : scanner l'application avec un outil comme OWASP ZAP, corriger les failles critiques sous 48h
 
 ---
 

@@ -357,7 +357,7 @@ Tu peux scanner le QR code avec Expo Go sur ton téléphone pour voir l'applicat
 **Indications** :
 
 - Crée un projet avec `npx create-expo-app@latest exercice-01 --template blank-typescript`
-- Ouvre le fichier `App.js` dans ton éditeur
+- Ouvre le fichier `App.tsx` dans ton éditeur
 - Remplace le texte par "Ma première application mobile"
 - Lance le serveur de développement et vérifie le résultat sur Expo Go
 

@@ -66,7 +66,7 @@ Sans les événements React :
 
 **Ce que les événements React ne sont PAS** :
 
-- Les événements React ne sont pas les événements natifs du navigateur. Ils enveloppent les événements natifs mais ajoutent des fonctionnalités (pooling, normalisation).
+- Les événements React ne sont pas les événements natifs du navigateur. Ils enveloppent les événements natifs et normalisent le comportement entre navigateurs. Le pooling d'événements (React 16) n'existe plus depuis React 17.
 - Les événements React ne nécessitent pas `addEventListener`. On les déclare directement dans le JSX.
 
 ---

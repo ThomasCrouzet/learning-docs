@@ -6,7 +6,7 @@ description: "Parcours d'apprentissage suggérés à travers les cursus du wiki,
 
 # Parcours suggérés
 
-> **En bref** : Plusieurs chemins curés à travers les 63 cursus du wiki, adaptés à différents profils et objectifs. Chaque parcours est une suggestion d'ordre, libre à toi d'adapter selon tes besoins.
+> **En bref** : Plusieurs chemins proposés à travers les 64 cursus du wiki, adaptés à différents profils et objectifs. Chaque parcours est une suggestion d'ordre, libre à toi d'adapter selon tes besoins.
 
 ## Comment lire cette page
 

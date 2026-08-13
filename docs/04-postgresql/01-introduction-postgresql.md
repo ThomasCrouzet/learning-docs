@@ -159,7 +159,7 @@ Dans un projet Symfony avec Docker, PostgreSQL tourne dans un conteneur. Pour y 
 Ton terminal
     ↓ docker compose exec database
 Conteneur "database"
-    ↓ psql -U app -d app
+    ↓ psql -U symfony_user -d symfony_db
 Client psql connecté à PostgreSQL
 ```
 
@@ -194,7 +194,7 @@ docker compose up -d
 ### Étape 2 : Se connecter à PostgreSQL via Docker
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 **Explication de la commande** :
@@ -204,7 +204,7 @@ docker compose exec database psql -U app -d app
 | `docker compose exec` | Exécute une commande dans un conteneur |
 | `database` | Nom du service (défini dans docker-compose.yml) |
 | `psql` | Client PostgreSQL |
-| `-U app` | Utilisateur "app" |
+| `-U symfony_user` | Utilisateur défini dans le `docker-compose.yml` du cursus Docker |
 | `-d app` | Base de données "app" |
 
 **Résultat attendu** :
@@ -382,7 +382,7 @@ Tu reviens dans le terminal normal.
 Tu peux exécuter une requête directement depuis le terminal :
 
 ```bash
-docker compose exec database psql -U app -d app -c "SELECT COUNT(*) FROM product;"
+docker compose exec database psql -U symfony_user -d symfony_db -c "SELECT COUNT(*) FROM product;"
 ```
 
 **L'option `-c`** permet d'exécuter une commande SQL et de quitter immédiatement.
@@ -407,8 +407,8 @@ Cette commande utilise la connexion configurée dans `.env`.
 
 | Commande | Action |
 | -------- | ------ |
-| `docker compose exec database psql -U app -d app` | Ouvrir psql |
-| `docker compose exec database psql -U app -d app -c "SQL"` | Exécuter une requête |
+| `docker compose exec database psql -U symfony_user -d symfony_db` | Ouvrir psql |
+| `docker compose exec database psql -U symfony_user -d symfony_db -c "SQL"` | Exécuter une requête |
 | `docker compose logs database` | Voir les logs PostgreSQL |
 | `docker compose restart database` | Redémarrer PostgreSQL |
 
@@ -527,7 +527,7 @@ SELECT * FROM product;
 ## Checklist de Validation
 
 - [ ] Je sais lancer le conteneur PostgreSQL avec Docker
-- [ ] Je sais me connecter à PostgreSQL avec `docker compose exec database psql -U app -d app`
+- [ ] Je sais me connecter à PostgreSQL avec `docker compose exec database psql -U symfony_user -d symfony_db`
 - [ ] Je sais lister les tables avec `\dt`
 - [ ] Je sais examiner une table avec `\d nom_table`
 - [ ] Je sais exécuter une requête SELECT simple
@@ -565,7 +565,7 @@ SELECT * FROM product;
 **Étape 1 : Connexion**
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 **Étape 2 : Lister les tables**

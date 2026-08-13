@@ -103,7 +103,7 @@ Sans source de bruit, voici les problèmes rencontrés :
 | Type | Spectre | Expression Faust |
 | ---- | ------- | ---------------- |
 | Blanc | Plat (énergie égale par Hz) | `no.noise` |
-| Rose | -3 dB/octave | `no.noise : fi.pink_filter` |
+| Rose | -3 dB/octave | `no.pink_noise` (ou `no.noise : no.pink_filter`) |
 | Brun | -6 dB/octave | `no.noise : fi.lowpass(1, 500)` |
 
 ---

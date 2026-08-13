@@ -25,9 +25,9 @@ cursus: "Docker"
 
 | Technologie | Version |
 | ----------- | ------- |
-| PHP | 8.3 |
-| PostgreSQL | 16 |
-| Symfony | 7.4 LTS |
+| PHP | 8.3 (cadre pédagogique ; sécurité jusqu'au 31 déc. 2027) |
+| PostgreSQL | 16 (support jusqu'au 9 nov. 2028) |
+| Symfony | 7.4 LTS (bugs nov. 2028, sécurité nov. 2029) |
 | Nginx | alpine (dernière version stable) |
 
 ## Objectif de cette fiche
@@ -856,32 +856,23 @@ server {
         try_files $uri /index.php$is_args$args;
     }
 
-    # Traitement des fichiers PHP
+    # Front controller Symfony (index.php)
     location ~ ^/index\.php(/|$) {
-        # Transmet la requête au conteneur PHP via FastCGI
-        # "php" est le nom du service dans docker-compose.yml
-        # 9000 est le port de PHP-FPM
         fastcgi_pass php:9000;
-
-        # Découpe l'URI pour extraire le script et les infos de chemin
         fastcgi_split_path_info ^(.+\.php)(/.*)$;
-
-        # Inclut les paramètres FastCGI par défaut
         include fastcgi_params;
-
-        # Définit le script PHP à exécuter
         fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
-
-        # Transmet les infos de chemin
         fastcgi_param DOCUMENT_ROOT $realpath_root;
-
-        # Empêche l'accès direct à ce fichier
-        internal;
     }
 
-    # Bloque l'accès aux autres fichiers PHP (sécurité)
+    # Autres scripts PHP dans public/ (cursus PHP : test.php, notes.php, etc.)
+    # En production Symfony seule, on peut restreindre à index.php.
     location ~ \.php$ {
-        return 404;
+        try_files $uri =404;
+        fastcgi_pass php:9000;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
     }
 
     # Emplacement des logs d'erreur
@@ -1190,7 +1181,7 @@ DATABASE_URL="postgresql://symfony_user:symfony_password@database:5432/symfony_d
 ✅ **Solution** : Donne les permissions au dossier `var` de Symfony :
 
 ```bash
-docker compose exec php chmod -R 777 var/
+docker compose exec php chown -R www-data:www-data var/ && chmod -R 775 var/
 ```
 
 ---

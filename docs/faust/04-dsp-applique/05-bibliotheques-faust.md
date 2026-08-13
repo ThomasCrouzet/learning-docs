@@ -88,17 +88,17 @@ Constantes fondamentales et fonctions de conversion entre unités audio.
 
 | Fonction | Description |
 | -------- | ----------- |
-| `ma.db2linear(x)` | Convertit des dB en amplitude linéaire |
-| `ma.linear2db(x)` | Convertit une amplitude linéaire en dB |
-| `ma.midi2cps(n)` | Convertit un numéro MIDI (0-127) en fréquence Hz |
-| `ma.cps2midi(f)` | Convertit une fréquence Hz en numéro MIDI |
+| `ba.db2linear(x)` | Convertit des dB en amplitude linéaire |
+| `ba.linear2db(x)` | Convertit une amplitude linéaire en dB |
+| `ba.midikey2hz(n)` | Convertit un numéro MIDI (0-127) en fréquence Hz |
+| `ba.hz2midikey(f)` | Convertit une fréquence Hz en numéro MIDI |
 
 ```faust
 import("stdfaust.lib");
 
 // Oscillateur contrôlé par un numéro MIDI, volume en dB
-freq = ma.midi2cps(hslider("note", 69, 24, 96, 1));
-gain = ma.db2linear(hslider("volume [unit:dB]", -12, -96, 0, 0.1));
+freq = ba.midikey2hz(hslider("note", 69, 24, 96, 1));
+gain = ba.db2linear(hslider("volume [unit:dB]", -12, -96, 0, 0.1));
 process = os.osc(freq) * gain;
 ```
 
@@ -111,7 +111,7 @@ Compteurs, sélecteurs, bypass, conversions tempo/échantillons.
 | Fonction | Description |
 | -------- | ----------- |
 | `ba.bus(N)` | Bus de N signaux parallèles (identité sur N canaux) |
-| `ba.selector(N, i)` | Sélectionne le signal i parmi N entrées |
+| `ba.selector(i, N)` | Sélectionne l'entrée i (0-based) parmi N (constantes à la compilation) |
 | `ba.counter(trig)` | Compteur incrémenté à chaque trigger |
 | `ba.time` | Compteur d'échantillons depuis le début de l'exécution |
 | `ba.tempo(bpm)` | Nombre d'échantillons par beat à un BPM donné |
@@ -362,7 +362,7 @@ Fournit `pl.SR` (sample rate) et `pl.BS` (buffer size), identiques à `ma.SR` et
 import("stdfaust.lib");
 
 // Vu-mètre : affiche le niveau en dB
-level = an.amp_follower(0.1) : ma.linear2db
+level = an.amp_follower(0.1) : ba.linear2db
       : hbargraph("level [unit:dB]", -60, 0);
 process = _ <: _, level : attach;
 ```
@@ -490,11 +490,11 @@ import("stdfaust.lib");
 
 // Conversion MIDI vers Hz
 midi_note = hslider("MIDI note", 69, 24, 96, 1);
-freq = ma.midi2cps(midi_note);  // MIDI 69 = La4 = 440 Hz
+freq = ba.midikey2hz(midi_note);  // MIDI 69 = La4 = 440 Hz
 
 // Conversion dB vers linéaire
 volume_db = hslider("volume [unit:dB]", -12, -96, 0, 0.1);
-gain = ma.db2linear(volume_db);  // -12 dB ≈ 0.25, 0 dB = 1.0
+gain = ba.db2linear(volume_db);  // -12 dB ≈ 0.25, 0 dB = 1.0
 
 process = os.osc(freq) * gain;
 ```
@@ -529,7 +529,7 @@ import("stdfaust.lib");
 // Paramètres (si = signals.lib pour le lissage)
 freq = hslider("freq", 440, 50, 2000, 1) : si.smoo;
 gate = button("gate");
-gain = ma.db2linear(hslider("volume [unit:dB]", -12, -96, 0, 0.1));  // ma
+gain = ba.db2linear(hslider("volume [unit:dB]", -12, -96, 0, 0.1));  // ma
 
 // Source : oscillateur + bruit (os + no)
 noise_amount = hslider("noise", 0.05, 0, 0.5, 0.01);
@@ -648,7 +648,7 @@ import("stdfaust.lib");
 
 - [ ] Je sais écrire `import("stdfaust.lib");` et expliquer ce que cela importe
 - [ ] Je connais le préfixe de chaque bibliothèque (ma, ba, si, os, no, fi, en, co, re, de, ro, sp, pm, an)
-- [ ] Je sais utiliser `ma.db2linear` et `ma.midi2cps` pour les conversions
+- [ ] Je sais utiliser `ba.db2linear` et `ba.midikey2hz` pour les conversions
 - [ ] Je sais quand utiliser `si.smoo` et pourquoi
 - [ ] Je sais choisir le bon oscillateur (`os.osc` vs `os.sawtooth` vs `os.lf_saw`)
 - [ ] Je sais utiliser `fi.resonlp` et `en.adsr`

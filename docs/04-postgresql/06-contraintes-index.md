@@ -352,7 +352,7 @@ On va créer trois tables liées : `category`, `product` et `order_item`.
 Connecte-toi à PostgreSQL :
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 Crée les tables dans l'ordre (les tables référencées doivent exister avant celles qui les référencent) :

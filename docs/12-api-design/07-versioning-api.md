@@ -156,8 +156,8 @@ Sans dépréciation :
 
 | Méthode | Description | Exemple |
 | ------- | ----------- | ------- |
-| Header `Deprecation` | Header HTTP standard (RFC 8594) | `Deprecation: true` |
-| Header `Sunset` | Date de retrait prévue | `Sunset: Sat, 01 Jan 2027 00:00:00 GMT` |
+| Header `Deprecation` | Header HTTP standard (RFC 9745, mars 2025) | `Deprecation: true` |
+| Header `Sunset` | Date de retrait prévue (RFC 8594) | `Sunset: Sat, 01 Jan 2027 00:00:00 GMT` |
 | Documentation OpenAPI | Attribut `deprecated: true` | Dans la spécification OpenAPI |
 | Champ dans la réponse | Message d'avertissement | `"_deprecated": "Utilisez /v2/books"` |
 

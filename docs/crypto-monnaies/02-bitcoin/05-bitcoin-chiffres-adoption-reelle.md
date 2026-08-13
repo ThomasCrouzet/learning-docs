@@ -47,7 +47,7 @@ Sans limite d'offre, voici les problèmes rencontrès dans les monnaies traditio
 | Métrique | Valeur |
 | --- | --- |
 | Nombre maximum de BTC | 21 000 000 (exactement) |
-| BTC déjà mines (2025-2026) | Environ 19,9 millions (~95%) |
+| BTC déjà minés (août 2026) | Environ 20,06 millions (~95,5%) |
 | BTC restant a miner | Environ 1,1 million (~5%) |
 | Date estimée du dernier BTC | Vers 2140 |
 | Plus petite unité (1 satoshi) | 0,00000001 BTC |

@@ -21,6 +21,8 @@ Chaque fiche suit le même format : concepts définis explicitement, étapes pra
 
 <p class="home-stats">604 fiches · 64 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
 
+Date de référence éditoriale : août 2026. Le paquet Ansible communautaire enseigné est la série 14.x (ansible-core 2.21 ; PyPI 14.3.0 au 13 août 2026).
+
 ---
 
 ## Par où commencer
@@ -112,7 +114,7 @@ Choisis un domaine pour voir la liste de ses cursus.
 
 ## Certification et aide-mémoires
 
-- :material-certificate: **[Certification RNCP](00-blocs-competences/index.md)** : préparation au titre professionnel RNCP38114 (5 blocs de compétences).
+- :material-certificate: **[Certification RNCP](00-blocs-competences/index.md)** : préparation autour du titre RNCP38114 (remplacé par RNCP42634 sur France Compétences ; échéance 18-10-2026).
 - :material-bookmark-outline: **[Aide-mémoires](fiches-reference/index.md)** : fiches de référence rapide pour réviser (Docker, Symfony, Git, PHP, JS, React, Kubernetes, Ansible).
 
 ---

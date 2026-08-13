@@ -77,9 +77,9 @@ Vérifie toujours le texte et la FAQ en vigueur sur `impots.gouv.fr` et Légifra
 | Prélèvements sociaux | 18,6% | CSG, CRDS et autres prélèvements sociaux |
 | **Total** | **31,4%** | **Taux unique appliqué sur la plus-value nette** |
 
-**Note sur l'évolution du taux** : Jusqu'au 31 décembre 2025, le total de la flat tax était de 30% (12,8% + 17,2% de prélèvements sociaux). Depuis le 1er janvier 2026, la loi de financement de la Sécurité sociale 2026 a relevé la CSG de 1,4 point, portant les prélèvements sociaux à 18,6% et le total à 31,4%.
+**Note sur l'évolution du taux** : Jusqu'au 31 décembre 2025, le total de la flat tax était de 30% (12,8% + 17,2% de prélèvements sociaux). Depuis le 1er janvier 2026, la loi de financement de la Sécurité sociale 2026 a relevé la CSG de 1,4 point, portant les prélèvements sociaux à 18,6% et le total à 31,4%. Vérifié le 13 août 2026 sur [service-public.fr (plus-values valeurs mobilières / PFU)](https://www.service-public.fr/particuliers/vosdroits/F21618).
 
-**L'option pour le bareme progressif** :
+**L'option pour le barème progressif** :
 
 Tu peux choisir de soumettre tes plus-values crypto au barème progressif de l'impôt sur le revenu (au lieu des 12,8% forfaitaires). Les 18,6% de prélèvements sociaux s'appliquent dans tous les cas.
 
@@ -95,7 +95,7 @@ Ces tranches sont revalorisées chaque année. Vérifie le barème en vigueur su
 
 **Quand choisir le barème progressif** : Si ton revenu imposable total (salaires + plus-values crypto) est faible, le barème progressif peut être plus avantageux. Par exemple, si tu es étudiant sans revenus et que tu réalises une plus-value crypto de 5 000 euros, le barème progressif te coûterait 0% d'impôt sur le revenu (tranche à 0%) + 18,6% de prélèvements sociaux = 18,6%, au lieu de 31,4% avec la flat tax.
 
-**Attention** : Le choix du barème progressif s'applique à TOUS tes revenus du capital (dividendes, intérêts, plus-values), pas seulement aux crypto-monnaies. Il faut donc faire le calcul global.
+**Attention** : Pour les plus-values d'actifs numériques, l'option pour le barème (case **3CN**) est **indépendante** de l'option barème sur les revenus de capitaux mobiliers, et elle est **définitive** (source : `impots.gouv.fr`, FAQ plus-values d'actifs numériques, mise à jour 17/07/2026). Vérifie toujours la FAQ en vigueur avant de cocher.
 
 ---
 
@@ -261,7 +261,7 @@ cette plus-value supplémentaire est également imposable.
 
 | Situation | Regime fiscal probable | Niveau de certitude |
 | --------- | ---------------------- | ------------------- |
-| Staking | BNC (comme le minage) ou plus-values selon le contexte | Incertain - pas de jurisprudence claire |
+| Staking | BNC (comme le minage), selon `impots.gouv.fr` (FAQ 17/07/2026) | Élevé - texte officiel, pas une exonération |
 | Airdrops | BNC au moment de la reception | Incertain - pas de texte spécifique |
 | Rewards de défi (yield farming) | BNC ou plus-values selon le mécanisme | Très incertain |
 

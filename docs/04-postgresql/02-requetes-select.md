@@ -223,7 +223,7 @@ HAVING COUNT(*) > 5;
 ### Étape 1 : Connexion à PostgreSQL
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 Pour les exemples suivants, on suppose une table `product` avec les colonnes :

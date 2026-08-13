@@ -420,19 +420,24 @@ java HelloWorld
 
 ---
 
-### Piège 5 : Lancer java avec l'extension
+### Piège 5 : Confondre compilation et lancement source
 
-⚠️ **Problème** : Erreur "Could not find or load main class HelloWorld.java"
+⚠️ **Problème** : Tu lances `java HelloWorld.class` (erreur). Ou tu crois que `java HelloWorld.java` est toujours interdit.
 
-✅ **Solution** : Ne pas mettre l'extension quand tu lances `java`.
+✅ **Solution** :
+
+- Pour un programme déjà compilé : `java HelloWorld` (sans extension).
+- Depuis Java 11 (donc aussi Java 21), `java HelloWorld.java` lance un **fichier source unique** sans `javac`. Ça marche seulement pour un seul fichier, sans dépendances. Pour ce cursus, préfère `javac` puis `java HelloWorld` dès qu'il y a plusieurs classes.
 
 ```bash
-# Incorrect
-java HelloWorld.java
+# Incorrect : lancer le fichier .class comme nom de classe
 java HelloWorld.class
 
-# Correct
+# Correct après compilation
 java HelloWorld
+
+# Correct aussi depuis Java 11 : un seul fichier source
+java HelloWorld.java
 ```
 
 ---

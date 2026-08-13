@@ -136,7 +136,7 @@ Les transactions sont associées à des adresses cryptographiques, pas à des no
 
 **Propriété 3 : Offre limitée a 21 millions**
 
-Le protocole Bitcoin est programmé pour ne jamais créer plus de 21 millions de bitcoins. Ce nombre est codé dans le logiciel. Environ 19,9 millions de bitcoins existent déjà (mars 2026). Le dernier bitcoin sera miné vers l'année 2140.
+Le protocole Bitcoin est programmé pour ne jamais créer plus de 21 millions de bitcoins. Ce nombre est codé dans le logiciel. Environ 20,0 millions de bitcoins existent déjà (le 20 millionième BTC a été miné le 9 mars 2026). Vers août 2026 : ~20,06 millions (~95,5%). Le dernier bitcoin sera miné vers l'année 2140.
 
 **Propriété 4 : Transparent**
 

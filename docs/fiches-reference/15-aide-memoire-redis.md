@@ -189,7 +189,7 @@ framework:
 | `messenger:consume async --limit=10` | Traiter 10 messages puis s'arrêter |
 | `messenger:consume -vv` | Mode verbose |
 | `messenger:failed:show` | Lister les messages en échec |
-| `messenger:failed:retry --all` | Relancer tous les échecs |
+| `messenger:failed:retry` | Relancer les échecs (interactif) ; ajoute un id et `--force` pour un message précis |
 
 ---
 

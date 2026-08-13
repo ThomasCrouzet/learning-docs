@@ -685,7 +685,7 @@ crontab -e
 0 2 * * * /home/<utilisateur>/scripts/backup-auto.sh
 ```
 
-> **Note** : En cron, `$HOME` n'est généralement pas défini. Utilise le chemin absolu complet en remplaçant `<utilisateur>` par ton nom d'utilisateur réel (ex : `/home/thomas/scripts/backup-auto.sh`), ou définis `HOME=/home/tonnom` en tête de ta crontab.
+> **Note** : Cron définit `HOME`, `LOGNAME` et `SHELL` depuis `/etc/passwd`. En revanche `PATH` est minimal (`/usr/bin:/bin` en général). Utilise des chemins absolus pour les commandes, ou définis `PATH=` en tête de crontab.
 
 ---
 

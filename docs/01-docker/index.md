@@ -21,6 +21,6 @@ Ce module couvre la mise en place d'un environnement de développement avec Dock
 | 02 | [Lancement du projet et Git](02-lancement-projet-git.md) | Initialiser le projet Symfony et le versionner avec Git |
 
 !!! tip "Parcours recommandé"
-    Suis les fiches dans l'ordre numérique. Une fois les bases de l'environnement Docker posées, enchaîne avec le cursus [EasyAdmin](../03-easyadmin/index.md).
+    Suis les fiches dans l'ordre numérique. Une fois l'environnement Docker posé, enchaîne avec [PHP](../02-php/index.md), puis [Symfony](../03-symfony/index.md). EasyAdmin vient après ces deux cursus.
 
 <!-- material/tags { scope: true } -->

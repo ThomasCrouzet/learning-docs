@@ -26,7 +26,7 @@ cursus: "OpenShift"
 
 | Technologie | Version |
 | ----------- | ------- |
-| OpenShift | 4.14+ |
+| OpenShift | 4.14+ (plancher pédagogique ; CRC récent embarque souvent une 4.16+) |
 | CLI oc | 4.14+ |
 
 ## Objectif de cette fiche

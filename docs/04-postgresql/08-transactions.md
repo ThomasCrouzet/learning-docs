@@ -278,7 +278,7 @@ Table: compte
 Connecte-toi à PostgreSQL et crée la table :
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 ```sql
@@ -471,10 +471,10 @@ Ouvre **deux terminaux** connectés à la même base de données :
 
 ```bash
 # Terminal 1
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 
 # Terminal 2
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 **Séquence d'actions** :

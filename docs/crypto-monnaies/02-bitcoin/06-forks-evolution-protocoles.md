@@ -219,7 +219,7 @@ revelee. Les conditions b et c restent invisibles.
 | Format d'adresses | bc1q... (SegWit v0) | bc1p... (SegWit v1, Taproot) |
 | Taille des transactions complexes | Grande (toutes les branches du script) | Réduite (seule la branche utilisée) |
 
-**Adoption** : l'adoption de Taproot est plus lente que celle de SegWit. En 2025-2026, environ 50% des transactions utilisent Taproot. Les wallets et les services intègrent progressivement le nouveau format d'adresses bc1p...
+**Adoption** : l'adoption de Taproot est plus lente et plus volatile que celle de SegWit. En 2025-2026, environ 15-20% des transactions utilisent Taproot (pic au-dessus de 40% en 2024 lié aux inscriptions/Runes). Les wallets intègrent progressivement le format `bc1p...`.
 
 ---
 

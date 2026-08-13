@@ -218,7 +218,7 @@ Sans divergence KL, voici les problèmes rencontrés :
 | ---------------------------- | ---------------------------- |
 | Pénalise quand q est 0 et p est non-nul | Pénalise quand p est 0 et q est non-nul |
 | q couvre tout le support de p (mean-seeking) | q se concentre sur les modes de p (mode-seeking) |
-| Utilisée pour l'inférence variationnelle | Utilisée pour la distillation de modèle |
+| Utilisée pour la distillation (KL professeur \|\| élève) | Utilisée pour l'inférence variationnelle / VAE (KL(q \|\| p)) |
 
 ```python
 import numpy as np

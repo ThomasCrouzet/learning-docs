@@ -47,7 +47,7 @@ Fiche de référence rapide pour les commandes Docker Compose.
 | -------- | ------ |
 | `docker compose exec php bash` | Ouvrir un terminal dans le conteneur PHP |
 | `docker compose exec php php bin/console ...` | Exécuter une commande Symfony |
-| `docker compose exec database psql -U app -d app` | Se connecter à PostgreSQL |
+| `docker compose exec database psql -U symfony_user -d symfony_db` | Se connecter à PostgreSQL |
 
 **Format général** :
 
@@ -71,11 +71,11 @@ docker compose exec [service] [commande]
 
 | Commande | Action |
 | -------- | ------ |
-| `docker compose down -v` | Arrêter et supprimer les volumes |
-| `docker system prune` | Supprimer les ressources inutilisées |
-| `docker volume prune` | Supprimer les volumes orphelins |
+| `docker compose down` | Arrêter et supprimer les conteneurs (conserve les volumes) |
+| `docker system prune` | Supprimer les ressources inutilisées (demande confirmation) |
+| `docker volume prune` | Supprimer uniquement les volumes orphelins (demande confirmation) |
 
-**Attention** : `docker compose down -v` supprime les données de la base !
+⚠️ **Ne jamais** utiliser `docker compose down -v` comme nettoyage habituel : le `-v` **détruit les volumes** (données PostgreSQL, etc.). Réservé à un reset volontaire et documenté.
 
 ---
 
@@ -102,7 +102,7 @@ docker compose exec php php bin/console [commande]
 **Accéder à PostgreSQL** :
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 **Voir les logs en cas de problème** :

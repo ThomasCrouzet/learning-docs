@@ -340,7 +340,7 @@ docker compose logs -f php
 4. Vérifier les permissions du dossier `var/` :
 
    ```bash
-   chmod -R 777 var/
+   chmod -R 775 var/
    ```
 
 ---

@@ -293,7 +293,7 @@ Table: article
 Connecte-toi à PostgreSQL et crée les tables :
 
 ```bash
-docker compose exec database psql -U app -d app
+docker compose exec database psql -U symfony_user -d symfony_db
 ```
 
 ```sql

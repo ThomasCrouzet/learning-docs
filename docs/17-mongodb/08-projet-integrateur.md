@@ -1075,8 +1075,8 @@ exit
 ```bash
 # Arrete le serveur (Ctrl+C)
 
-# Supprime les conteneurs
-docker compose down -v
+# Arrête les conteneurs (conserve le volume)
+docker compose down
 
 # Supprime le projet (optionnel)
 cd .. && rm -rf librairie-api
@@ -1094,7 +1094,7 @@ cd .. && rm -rf librairie-api
 | `curl -X PUT url -H "Content-Type: application/json" -d '{}'` | Requête PUT avec JSON |
 | `curl -X DELETE url` | Requête DELETE |
 | `docker compose up -d` | Lance MongoDB |
-| `docker compose down -v` | Arrete et supprime MongoDB + données |
+| `docker compose down` | Arrête MongoDB (conserve les données) |
 
 ---
 
