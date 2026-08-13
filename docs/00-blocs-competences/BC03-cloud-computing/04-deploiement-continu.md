@@ -209,8 +209,8 @@ deploy:staging:
     - docker build -t $DOCKER_IMAGE .
     - docker push $DOCKER_IMAGE
     - ssh deploy@staging "docker pull $DOCKER_IMAGE && docker compose up -d"
-  only:
-    - develop
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
 
 # Déploiement production (manuel)
 deploy:production:
@@ -223,9 +223,9 @@ deploy:production:
     - docker build -t $DOCKER_IMAGE .
     - docker push $DOCKER_IMAGE
     - ssh deploy@production "docker pull $DOCKER_IMAGE && docker compose up -d"
-  only:
-    - main
-  when: manual
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: manual
 ```
 
 ---
@@ -557,8 +557,8 @@ notify:success:
        --data "{\"text\":\"✅ Deployment successful: $CI_PROJECT_NAME ($CI_COMMIT_REF_NAME)\"}"
        $SLACK_WEBHOOK_URL'
   when: on_success
-  only:
-    - main
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
 
 notify:failure:
   stage: .post
@@ -753,8 +753,8 @@ deploy:staging:
   environment:
     name: staging
     url: https://staging.example.com
-  only:
-    - develop
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
 ```
 
 **Variables à configurer dans GitLab** (Settings > CI/CD > Variables) :

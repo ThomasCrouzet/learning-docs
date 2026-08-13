@@ -458,7 +458,7 @@ module "web_server" {
 
 ⚠️ **Problème** : Modifier un serveur via la console AWS crée un décalage avec le code Terraform.
 
-✅ **Solution** : Toujours modifier via le code, jamais manuellement. Utiliser `terraform refresh` si nécessaire.
+✅ **Solution** : Toujours modifier via le code, jamais manuellement. Si le state a dérivé, utiliser `terraform apply -refresh-only` (la commande `terraform refresh` est retirée des workflows récents).
 
 ---
 

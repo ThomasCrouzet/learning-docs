@@ -553,7 +553,7 @@ dig monserveur.example.com ANY
 
 ⚠️ **Problème** : Sur un serveur ou un service qui journalise les adresses IP, l'adresse IPv6 générée par SLAAC contient l'adresse MAC de la machine - ce qui est un problème de vie privée.
 
-✅ **Solution** : Activer les "privacy extensions" (RFC 4941) pour générer un identifiant d'interface aléatoire, ou utiliser une adresse statique pour les serveurs :
+✅ **Solution** : Activer les privacy extensions (RFC 8981, qui remplace RFC 4941) pour générer un identifiant d'interface aléatoire, ou utiliser une adresse statique pour les serveurs :
 
 ```bash
 # Activer les privacy extensions (adresse temporaire aléatoire)

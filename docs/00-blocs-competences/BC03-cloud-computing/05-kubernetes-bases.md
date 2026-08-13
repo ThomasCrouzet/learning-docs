@@ -519,13 +519,15 @@ spec:
           ports:
             - containerPort: 80
           env:
-            - name: DATABASE_URL
-              value: "postgresql://app_user:$(DATABASE_PASSWORD)@postgres-service:5432/app_db"
+            # DATABASE_PASSWORD doit précéder DATABASE_URL :
+            # Kubernetes n'étend $(VAR) qu'avec les variables déjà définies ci-dessus.
             - name: DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: postgres-secrets
                   key: password
+            - name: DATABASE_URL
+              value: "postgresql://app_user:$(DATABASE_PASSWORD)@postgres-service:5432/app_db"
           readinessProbe:
             httpGet:
               path: /health
