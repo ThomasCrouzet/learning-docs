@@ -12,7 +12,7 @@ cursus: "Phase 5 - Sécurité et survie"
 
 # 06 - Acheter et vendre concrètement (France)
 
-> **En bref** : Connaître le geste pratique d'entrée et de sortie en crypto-monnaies en France : choisir une plateforme enregistrée PSAN, passer le KYC, faire un premier achat étape par étape, retirer vers son propre wallet et conserver les justificatifs pour la déclaration fiscale. Lecture estimée : 40 min.
+> **En bref** : Connaître le geste pratique d'entrée et de sortie en crypto-monnaies en France : choisir une plateforme agréée PSCA (liste blanche AMF), passer le KYC, faire un premier achat étape par étape, retirer vers son propre wallet et conserver les justificatifs pour la déclaration fiscale. Lecture estimée : 40 min.
 
 ## Prérequis
 
@@ -25,7 +25,7 @@ cursus: "Phase 5 - Sécurité et survie"
 
 ## Objectif de cette fiche
 
-À la fin de cette fiche, tu sauras choisir une plateforme enregistrée PSAN, comprendre pourquoi le KYC est demandé et ce qu'il implique, réaliser un premier achat par virement SEPA en distinguant ordre au marché et ordre à cours limité, retirer tes crypto-monnaies vers ton propre wallet en sécurité, revendre vers des euros, et conserver les justificatifs nécessaires à ta déclaration fiscale.
+À la fin de cette fiche, tu sauras choisir une plateforme agréée PSCA (liste blanche AMF), comprendre pourquoi le KYC est demandé et ce qu'il implique, réaliser un premier achat par virement SEPA en distinguant ordre au marché et ordre à cours limité, retirer tes crypto-monnaies vers ton propre wallet en sécurité, revendre vers des euros, et conserver les justificatifs nécessaires à ta déclaration fiscale.
 
 Cette fiche décrit un geste technique. Elle ne constitue **pas un conseil d'investissement**, ni un avis fiscal ou juridique : aucun montant, aucun token et aucun moment d'achat ou de vente n'y sont recommandés. Vérifie le statut d'enregistrement sur `amf-france.org` et tes obligations sur `impots.gouv.fr` avant toute opération.
 
@@ -39,15 +39,15 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 **IMPORTANT** : Acheter des crypto-monnaies, c'est exposer de l'argent à un actif dont le prix peut perdre une grande partie de sa valeur. Rien dans cette fiche n'incite à acheter ou à vendre. La règle de la fiche 02 reste valable : ne jamais engager plus que ce que tu acceptes de perdre à 100%.
 
-Les noms de plateformes cités le sont à titre d'exemple factuel (présence ou non sur la liste PSAN de l'AMF), pas comme recommandation.
+Les noms de plateformes cités le sont à titre d'exemple factuel (présence ou non sur la liste blanche **PSCA** de l'AMF), pas comme recommandation.
 
 ---
 
-### Qu'est-ce qu'un PSAN enregistré ?
+### Qu'est-ce qu'un prestataire autorisé (PSCA / CASP) ?
 
-**Définition** : Un PSAN (Prestataire de Services sur Actifs Numériques) enregistré est une entreprise inscrite auprès de l'AMF (Autorité des Marchés Financiers) pour fournir des services sur actifs numériques en France. L'enregistrement vérifie notamment que la plateforme applique le KYC, respecte les obligations de lutte contre le blanchiment (LCB-FT) et que ses dirigeants présentent des garanties d'honorabilité. Le statut PSAN a été détaillé dans la [fiche 04](04-regulation-loi-france-europe.md).
+**Définition** : Un **PSCA** (prestataire de services sur crypto-actifs, **CASP** en anglais) est une entreprise **agréée** au titre de MiCA pour fournir des services sur crypto-actifs dans l'Union. En France, l'AMF publie la liste blanche des PSCA. L'ancien statut national **PSAN** (loi PACTE) n'est plus le régime vivant depuis le 1er juillet 2026 : les PSAN sans agrément MiCA ont été radiés. Le cadre est détaillé dans la [fiche 04](04-regulation-loi-france-europe.md).
 
-**Le problème que le statut PSAN résout** :
+**Le problème que l'agrément PSCA résout** :
 
 Sans liste officielle, voici les problèmes rencontrés au moment d'acheter :
 
@@ -55,23 +55,23 @@ Sans liste officielle, voici les problèmes rencontrés au moment d'acheter :
 2. **Aucune obligation légale opposable** : une plateforme non enregistrée n'a aucun compte à rendre à un régulateur français
 3. **Aucun recours identifié** : en cas de litige, tu ne sais ni à qui t'adresser ni quelle autorité saisir
 
-**Comment le statut PSAN aide à résoudre ces problèmes** :
+**Comment l'agrément PSCA aide à résoudre ces problèmes** :
 
-| Problème | Apport du statut PSAN |
-| -------- | --------------------- |
-| Distinguer vraie et fausse plateforme | La liste publique des PSAN sur `amf-france.org` fait foi |
-| Absence d'obligation opposable | Un PSAN est soumis au contrôle de l'AMF et aux obligations LCB-FT |
-| Absence de recours | Un acteur enregistré à une existence légale identifiable en France |
+| Problème | Apport de l'agrément PSCA |
+| -------- | ------------------------- |
+| Distinguer vraie et fausse plateforme | La liste blanche PSCA sur `amf-france.org` fait foi |
+| Absence d'obligation opposable | Un PSCA est soumis au contrôle de l'AMF et aux obligations LCB-FT / MiCA |
+| Absence de recours | Un acteur agréé a une existence légale identifiable |
 
-**Analogie concrète** : Choisir un PSAN enregistré, c'est comme choisir un commerce qui affiche un numéro SIRET vérifiable plutôt qu'un vendeur sur un marché qui plie son étal et disparaît. Le numéro ne garantit pas la qualité du produit, mais il prouve que le vendeur existe légalement et peut être retrouvé.
+**Analogie concrète** : Choisir un PSCA agréé, c'est comme choisir un commerce qui affiche un numéro SIRET vérifiable plutôt qu'un vendeur sur un marché qui plie son étal et disparaît. Le numéro ne garantit pas la qualité du produit, mais il prouve que le vendeur existe légalement et peut être retrouvé.
 
-**Ce que le statut PSAN n'est PAS** :
+**Ce que l'agrément PSCA n'est PAS** :
 
-- Le statut PSAN n'est pas une garantie que tu gagneras de l'argent. Il encadre la plateforme, pas la valeur de ce que tu achètes
-- Le statut PSAN n'est pas une assurance contre la faillite ou le piratage. Une plateforme enregistrée peut tout de même faire faillite ou être piratée (la fiche 01 cite FTX, qui appliquait pourtant le KYC)
-- Le statut PSAN n'est pas l'agrément MiCA, plus exigeant, qui le remplace progressivement à l'échelle européenne (voir la [fiche 04](04-regulation-loi-france-europe.md))
+- Ce n'est pas une garantie que tu gagneras de l'argent. Il encadre la plateforme, pas la valeur de ce que tu achètes
+- Ce n'est pas une assurance contre la faillite ou le piratage. Une plateforme agréée peut tout de même faire faillite ou être piratée (la fiche 01 cite FTX, qui appliquait pourtant le KYC)
+- Ce n'est pas l'ancien enregistrement PSAN. Le PSAN est un statut historique ; le contrôle vivant est la liste blanche PSCA (voir la [fiche 04](04-regulation-loi-france-europe.md))
 
-**Pourquoi privilégier un PSAN enregistré** : à risque équivalent sur l'actif, une plateforme enregistrée t'offre une existence légale identifiable, des obligations de conformité contrôlées et une autorité (l'AMF) à qui signaler un problème. Une plateforme absente de la liste n'a aucune de ces trois propriétés.
+**Pourquoi privilégier un PSCA agréé** : à risque équivalent sur l'actif, une plateforme agréée t'offre une existence légale identifiable, des obligations de conformité contrôlées et une autorité (l'AMF) à qui signaler un problème. Une plateforme absente de la liste blanche n'a aucune de ces trois propriétés.
 
 ---
 
@@ -240,7 +240,7 @@ Mécanisme :
 6. Les fonds ne sortent jamais ; le site finit par disparaître
 
 Defense :
-- Verifier le nom EXACT sur la liste des PSAN de l'AMF (amf-france.org)
+- Verifier le nom EXACT sur la liste blanche PSCA de l'AMF (amf-france.org)
 - Verifier la liste noire de l'AMF (amf-france.org, espace epargnants)
 - Ne jamais faire confiance à un logo ou un numéro affiche sur le site lui-même :
   toujours remonter à la source officielle (l'AMF), jamais l'inverse
@@ -272,25 +272,25 @@ Defense :
 
 Les étapes ci-dessous décrivent un parcours type. Les libellés exacts des boutons varient d'une plateforme à l'autre, mais la logique est commune.
 
-### Étape 1 : vérifier que la plateforme est enregistrée PSAN
+### Étape 1 : vérifier que la plateforme est un PSCA agréé
 
-Avant toute inscription, vérifie l'enregistrement à la source officielle.
+Avant toute inscription, vérifie l'agrément à la source officielle.
 
 ```text
 1. Va sur amf-france.org
-2. Cherche "Liste des PSAN enregistres"
-3. Vérifie que le nom EXACT de la plateforme figure dans la liste
+2. Ouvre Espace épargnants > Listes blanches > catégorie PSCA
+3. Vérifie que le nom EXACT de la plateforme figure dans cette liste
 4. Consulte aussi la liste noire (espace epargnants) pour t'assurer
    que la plateforme n'y est PAS
-5. Si la plateforme n'est pas sur la liste positive : ne l'utilise pas
+5. Si la plateforme n'est pas sur la liste blanche PSCA : ne l'utilise pas
 ```
 
 **Résultat attendu** :
 
 ```text
 Tu as confirme, depuis le site de l'AMF (et non depuis le site de la
-plateforme), que la plateforme est bien enregistrée PSAN et absente
-de la liste noire.
+plateforme), que la plateforme figure sur la liste blanche PSCA et
+est absente de la liste noire.
 ```
 
 ---
@@ -420,7 +420,7 @@ fiscale (flat tax 31,4% en 2026, voir fiche 05).
 
 | Étape | Action | Point de vigilance |
 | ----- | ------ | ------------------ |
-| Vérifier le PSAN | Liste positive AMF + liste noire | Vérifier le nom exact, depuis le site de l'AMF |
+| Vérifier le PSCA | Liste blanche PSCA AMF + liste noire | Vérifier le nom exact, depuis le site de l'AMF |
 | KYC | Pièce, domicile, selfie | Anticiper de quelques minutes à 72 heures |
 | Dépôt | Virement SEPA en euros | Indiquer la référence exacte ; compter 1 à 2 jours |
 | Achat | Ordre au marché ou à cours limité | Vérifier les frais ; éviter l'achat carte plus cher |
@@ -434,9 +434,9 @@ fiscale (flat tax 31,4% en 2026, voir fiche 05).
 
 ### Piège 1 : choisir une plateforme non enregistrée parce qu'elle est "moins chère"
 
-⚠️ **Problème** : Une plateforme non enregistrée PSAN affiche parfois des frais plus bas ou un achat "sans vérification d'identité" pour attirer.
+⚠️ **Problème** : Une plateforme non agréée PSCA affiche parfois des frais plus bas ou un achat "sans vérification d'identité" pour attirer.
 
-✅ **Solution** : Vérifier le nom exact sur la liste des PSAN de l'AMF (`amf-france.org`) et consulter la liste noire. Une plateforme absente de la liste positive n'est pas autorisée à opérer en France : l'économie de frais ne compense pas l'absence totale de recours.
+✅ **Solution** : Vérifier le nom exact sur la liste blanche PSCA de l'AMF (`amf-france.org`) et consulter la liste noire. Une plateforme absente de cette liste n'est pas autorisée à opérer en France : l'économie de frais ne compense pas l'absence totale de recours.
 
 ### Piège 2 : se tromper de réseau au moment du retrait
 
@@ -466,7 +466,7 @@ fiscale (flat tax 31,4% en 2026, voir fiche 05).
 
 ## Checklist de Validation
 
-- [ ] Je sais vérifier qu'une plateforme est enregistrée PSAN sur le site de l'AMF, et pourquoi privilégier un PSAN enregistré
+- [ ] Je sais vérifier qu'une plateforme figure sur la liste blanche PSCA de l'AMF, et pourquoi privilégier un prestataire agréé
 - [ ] Je sais ce que le KYC me demandé (pièce, domicile, selfie) et pourquoi il est légalement obligatoire (LCB-FT)
 - [ ] J'anticipe les délais (KYC, virement SEPA, premier retrait)
 - [ ] Je distingue un ordre au marché d'un ordre à cours limité
@@ -516,7 +516,7 @@ Liste les signaux d'alerte présents dans cette situation, et indique la démarc
 ```text
 1. Aller sur amf-france.org (le site officiel de l'AMF, pas un lien fourni
    par la plateforme ou par un tiers)
-2. Chercher le nom EXACT de la plateforme dans la liste des PSAN enregistres
+2. Chercher le nom EXACT de la plateforme dans la liste blanche PSCA
 3. Verifier que la plateforme ne figure PAS dans la liste noire de l'AMF
 4. Si elle est absente de la liste positive : ne pas l'utiliser, ne rien déposer
 5. Ne jamais payér de "frais" ou de "taxe" reclames d'avance pour debloquer un retrait

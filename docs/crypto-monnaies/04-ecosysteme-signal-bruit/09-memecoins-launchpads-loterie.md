@@ -278,7 +278,7 @@ La colonne "Régulation" est clé :
 
 - Les memecoins ne sont **pas spécifiquement régulés** : il n'existe pas de loi interdisant la création ou l'achat de memecoins
 - En revanche, les plateformes qui les vendent doivent être enregistrées comme **PSAN** (Prestataire de Services sur Actifs Numériques) auprès de l'AMF
-- Pump.fun n'est pas enregistrée PSAN et n'est donc pas autorisée a opérer en France (mais accessible)
+- Pump.fun n'est pas un PSCA agréé AMF et n'est donc pas autorisée à opérer en France (mais accessible)
 - L'AMF publie régulièrement des **mises en garde** contre les memecoins et les tokens spéculatifs
 - Les plus-values realisees sur les memecoins sont imposables (flat tax 31,4% depuis le 1er janvier 2026, soit 12,8% d'impot sur le revenu + 18,6% de prélèvements sociaux), même si le token a été achète sur une plateforme non régulée
 - Les perps DEX (Hyperliquid, dYdX) ne sont pas enregistrès PSAN ni autorises par l'AMF en France

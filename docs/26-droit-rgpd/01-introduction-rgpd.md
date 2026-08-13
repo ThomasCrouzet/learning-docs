@@ -348,7 +348,7 @@ Situations :
 3. Déclaration des salaires → Obligation légale (le Code général des impôts l'impose)
 4. Dossier médical au SAMU → Intérêts vitaux (urgence médicale)
 5. Listes électorales → Mission d'intérêt public
-6. Analyse de navigation → Intérêts légitimes (si proportionné et si l'utilisateur est informé)
+6. Analyse de navigation → Consentement (cookies / traceurs). Exception étroite : exemption CNIL « mesure d'audience » (finalité limitée, first-party, pas de recoupement). Ce n'est pas l'intérêt légitime.
 ```
 
 ---

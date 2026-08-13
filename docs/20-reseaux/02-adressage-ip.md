@@ -134,11 +134,11 @@ Toutes les machines dont l'adresse commence par `192.168.1` sont sur le meme ré
 
 Ces plages d'adresses sont reservees aux réseaux internes et ne sont pas routables sur Internet :
 
-| Classe | Plage privée | Masque | Usage typique |
-| --- | --- | --- | --- |
-| A | 10.0.0.0 - 10.255.255.255 | 255.0.0.0 | Grandes entreprises |
-| B | 172.16.0.0 - 172.31.255.255 | 255.240.0.0 | Moyennes entreprises |
-| C | 192.168.0.0 - 192.168.255.255 | 255.255.0.0 | Réseaux domestiques |
+| Préfixe RFC 1918 | Plage privée | Masque | Usage typique |
+| ---------------- | ------------ | ------ | ------------- |
+| /8 | 10.0.0.0 - 10.255.255.255 | 255.0.0.0 | Grands réseaux internes |
+| /12 (pas une classe B) | 172.16.0.0 - 172.31.255.255 | 255.240.0.0 | Réseaux internes moyens |
+| /16 (pas une classe C) | 192.168.0.0 - 192.168.255.255 | 255.255.0.0 | Réseaux domestiques |
 
 **Adresses speciales** :
 

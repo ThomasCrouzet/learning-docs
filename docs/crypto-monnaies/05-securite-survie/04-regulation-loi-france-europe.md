@@ -82,25 +82,25 @@ Sans régulation, voici les problèmes constatés :
 
 L'Autorité des Marchés Financiers est le régulateur français des marchés financiers. En matière de crypto-monnaies, elle :
 
-- Enregistre les PSAN et vérifie qu'ils respectent les obligations
-- Tient une liste publique des PSAN enregistrés (consultable sur `amf-france.org`)
-- Publie une liste noire des sites non autorisés (consultable sur `amf-france.org/espace-epargnants`)
+- Agrée les **PSCA** (prestataires de services sur crypto-actifs / CASP) au titre de MiCA
+- Tient la **liste blanche des PSCA** autorisés en France (Espace épargnants > Listes blanches, `amf-france.org`)
+- Publie une **liste des PSAN radiés** (les PSAN sans agrément MiCA au 1er juillet 2026 ont été radiés le 2 juillet 2026)
+- Publie une liste noire des sites non autorisés (Espace épargnants)
 - Peut sanctionner les acteurs non conformes
 
-**Comment vérifier si une plateforme est enregistrée** :
+**Comment vérifier si une plateforme est autorisée (après le 1er juillet 2026)** :
 
 ```text
 1. Va sur amf-france.org
-2. Cherche "Liste des PSAN enregistres"
-3. Vérifie que la plateforme que tu veux utiliser est dans la liste
-4. Si elle n'y est pas, cela signifie qu'elle n'est pas autorisée
-   a operer en France
+2. Ouvre Espace épargnants > Protéger son épargne > Listes blanches
+3. Filtre la catégorie PSCA (prestataires de services sur crypto-actifs)
+4. Vérifie que le nom EXACT de la plateforme figure dans cette liste
+5. Consulte aussi la liste noire (espace épargnants)
+6. Si elle n'est pas sur la liste blanche PSCA : elle n'est pas
+   autorisée à opérer en France sous le régime vivant
 
-Quelques PSAN enregistrès en France (liste non exhaustive) :
-- Coinhouse
-- Paymium
-- SocGen Forge (Société Générale)
-- Bitstamp (pour ses activités en France)
+Le mot « PSAN » désigne l'ancien statut national (loi PACTE).
+Ce n'est plus la liste à consulter pour un nouvel acteur.
 ```
 
 ---
@@ -112,8 +112,8 @@ Quelques PSAN enregistrès en France (liste non exhaustive) :
 **Transition PSAN (France) vers CASP (MiCA)** :
 
 - Le statut national **PSAN** (enregistrement AMF) a préparé le terrain ; MiCA impose un **agrément** de prestataire de services sur crypto-actifs (**CASP** / PSCA) plus exigeant.
-- Une période de transition permet aux PSAN déjà enregistrés de continuer sous conditions pendant qu'ils demandent l'agrément MiCA (calendrier et conditions : site AMF, à vérifier à la date de ta lecture).
-- En pratique, pour un utilisateur en France : continue de vérifier la **liste officielle AMF** des acteurs autorisés (et la liste noire), plutôt qu'un logo affiché sur un site.
+- La période transitoire française s'est **terminée le 1er juillet 2026**. L'AMF a radié automatiquement, le 2 juillet 2026, les PSAN qui n'avaient pas obtenu d'agrément MiCA. Un ancien enregistrement PSAN **ne permet plus** de continuer à opérer.
+- En pratique, pour un utilisateur en France : vérifie la **liste blanche PSCA** de l'AMF (et la liste noire), jamais un logo affiché sur un site.
 
 **Ce que MiCA change** :
 
@@ -232,8 +232,7 @@ Pour ouvrir un compte sur une plateforme régulée, tu dois fournir :
    ne l'utilise PAS
 
 Attention : la liste n'est pas exhaustive. Un site absent de la liste
-noire n'est pas forcément fiable. Vérifie aussi la liste positive
-(PSAN enregistres).
+noire n'est pas forcément fiable. Vérifie aussi la liste blanche PSCA.
 ```
 
 ---

@@ -707,10 +707,12 @@ Profils recherchés :
 ### 5. Plan de crise DORA
 
 ```text
-Obligations de notification DORA (Art. 19) :
-- Notification initiale : dès que l'incident majeur est classifié
-- Notification intermédiaire : sous 72h ; rapport final : sous 1 mois (DORA art. 19 ; NIS2 art. 23)
+Obligations de notification DORA (Art. 19 + RTS) :
+- Notification initiale : dans les 4 heures après la classification
+  comme incident majeur, et au plus tard 24 heures après la détection
+- Notification intermédiaire : sous 72 heures après la notification initiale
 - Rapport final : dans un délai d'un mois après l'incident
+  (NIS2 art. 23 a son propre calendrier 24h / 72h / 1 mois)
 
 Critères d'incident majeur DORA :
 - Impact sur la continuité des services financiers critiques

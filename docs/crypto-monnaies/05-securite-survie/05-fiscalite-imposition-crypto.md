@@ -209,10 +209,10 @@ Exemples de plateformes a déclarer :
 - Bybit (siege a Dubai)
 - KuCoin (siege aux Seychelles)
 
-Exemples de plateformes qui n'ont PAS besoin d'être declarees
-(car enregistrées PSAN en France) :
-- Coinhouse (siege en France)
-- Paymium (siege en France)
+Exemples de comptes qui n'ont PAS besoin d'être déclarés au 3916-bis
+(prestataire établi en France, agréé PSCA / CASP sur la liste blanche AMF) :
+- Coinhouse (siège en France)
+- Paymium (siège en France)
 ```
 
 **Sanctions en cas de non-déclaration** :
@@ -236,7 +236,7 @@ Exemples de plateformes qui n'ont PAS besoin d'être declarees
 | Catégorie fiscale | BNC (Benefices Non Commerciaux) |
 | Fait générateur | La réception des crypto-monnaies minées (pas leur vente) |
 | Base imposable | Valeur en euros des crypto-monnaies au moment de leur réception |
-| Régime | Micro-BNC si recettes annuelles inférieures à 77 700 euros (abattement de 34%), ou régime réel |
+| Régime | Micro-BNC si recettes annuelles inférieures à 83 600 euros HT (seuil 2026, abattement de 34%), ou régime réel |
 
 **Exemple** :
 
@@ -255,7 +255,7 @@ cette plus-value supplémentaire est également imposable.
 
 ### Le cas du staking et des airdrops
 
-**Définition** : Le staking (immobilisation de crypto-monnaies pour sécuriser un réseau) et les airdrops (distribution gratuite de tokens) sont des situations où le cadre fiscal est encore en cours de clarification.
+**Définition** : Le staking (immobilisation de crypto-monnaies pour sécuriser un réseau) est imposé en BNC selon `impots.gouv.fr` (FAQ du 17 juillet 2026). Les airdrops (distribution gratuite de tokens) n'ont pas de texte spécifique aussi net.
 
 **État des lieux** :
 
@@ -323,7 +323,7 @@ cette plus-value supplémentaire est également imposable.
 - [ ] Je sais que les comptes sur des plateformes étrangères doivent être déclarés (amende de 750 euros par compte)
 - [ ] Je comprends que les moins-values ne sont pas reportables d'une année sur l'autre
 - [ ] Je sais que le minage est imposé comme BNC, pas comme plus-value
-- [ ] Je comprends que le cadre fiscal du staking et des airdrops est encore incertain
+- [ ] Je sais que le staking est imposé en BNC (FAQ impots.gouv.fr, 17/07/2026) et que les airdrops restent sans texte spécifique
 - [ ] Je sais que je dois conserver l'historique de toutes mes transactions
 
 ---

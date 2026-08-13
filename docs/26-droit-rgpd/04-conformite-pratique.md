@@ -262,9 +262,9 @@ Sans réglementation des transferts, voici les problèmes rencontrés :
 | 2022 | Meta (Ireland) | 405 M EUR | Traitement de données de mineurs (Instagram) |
 | 2023 | Meta (Ireland) | 1,2 Md EUR | Transferts de données vers les États-Unis |
 | 2022 | Google (France) | 150 M EUR | Bannière de cookies non conforme |
-| 2021 | Amazon (Luxembourg) | 746 M EUR | Publicité ciblée sans consentement valide |
+| 2021 | Amazon (Luxembourg) | 746 M EUR (amende annulée le 12 mars 2026 par le tribunal administratif luxembourgeois ; le dossier est renvoyé à la CNPD) | Publicité ciblée : la CNPD avait rejeté l'intérêt légitime ; l'amende n'est plus une sanction en vigueur |
 | 2020 | Google (France) | 100 M EUR | Cookies déposés sans consentement |
-| 2019 | British Airways (UK) | 22 M GBP | Violation de données (500 000 clients) |
+| 2020 | British Airways (UK, ICO) | 20 M GBP | Violation de données (amende ICO du 16 octobre 2020 ; l'intention initiale de 2019 était 183 M GBP, pas 22 M) |
 
 **Critères pris en compte pour le montant** :
 

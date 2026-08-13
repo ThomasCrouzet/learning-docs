@@ -136,11 +136,11 @@ graph TD
 - Masque de sous-réseau : définit la partie réseau et la partie hôte (ex : `255.255.255.0` ou `/24`)
 - Adresses privées (non routables sur Internet) :
 
-| Plage | Classe | Masque par défaut | Nombre d'adresses |
-| ----- | ------ | ----------------- | ------------------ |
-| 10.0.0.0 - 10.255.255.255 | A | /8 | 16 777 216 |
-| 172.16.0.0 - 172.31.255.255 | B | /12 | 1 048 576 |
-| 192.168.0.0 - 192.168.255.255 | C | /16 | 65 536 |
+| Plage | Préfixe RFC 1918 | Nombre d'adresses |
+| ----- | ---------------- | ----------------- |
+| 10.0.0.0 - 10.255.255.255 | /8 | 16 777 216 |
+| 172.16.0.0 - 172.31.255.255 | /12 (pas une classe B : une classe B historique fait /16) | 1 048 576 |
+| 192.168.0.0 - 192.168.255.255 | /16 (pas une classe C : une classe C historique fait /24) | 65 536 |
 
 **IPv6** :
 
