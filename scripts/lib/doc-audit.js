@@ -714,6 +714,8 @@ function runDocAudit({ pages, readContent, fileExists, mkdocsYml = null, options
     'parcours.md',
     'carte-cursus.md',
     'a-propos.md',
+    'politique-fraicheur.md',
+    'accessibility-audit.md',
     'includes/glossary.md',
     // Hub volontairement exclu de la pub MkDocs (exclude_docs) mais utile en source
     'ansible/01-ansible/index.md',
