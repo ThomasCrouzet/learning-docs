@@ -252,8 +252,8 @@ Tri par prix (decroissant) :
 Tri par Region (asc) puis CA (desc) :
   Region Produit   CA
 4   Nord  Orange  120
-0   Nord   Pomme   60
 2   Nord  Banane   96
+0   Nord   Pomme   60
 1    Sud  Banane   96
 3    Sud   Pomme   72
 ```
@@ -688,7 +688,7 @@ CA par categorie :
 categorie
 Audio            400
 Ecran           1400
-Peripherique     235
+Peripherique     260
 
 Categorie la plus rentable : Ecran (1400 EUR)
 

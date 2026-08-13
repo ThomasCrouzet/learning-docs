@@ -640,7 +640,10 @@ public function configureMenuItems(): iterable
 
 ```php
 AssociationField::new('category')
-    ->hideLink()  // Désactive le lien vers le CRUD
+    // hideLink() n'existe pas dans EasyAdmin 4.
+    // Sans CrudController pour l'entité liée, le template générique
+    // affiche le libellé sans générer d'URL.
+    ->setTemplateName('crud/field/generic');
 ```
 
 ---

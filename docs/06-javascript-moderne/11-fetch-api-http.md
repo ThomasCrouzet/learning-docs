@@ -738,6 +738,8 @@ Erreur : Connexion refusée : le serveur http://localhost:9999/api/test ne répo
 
 ### Étape 8 : Client HTTP réutilisable
 
+Les étapes 4 et 5 ont modifié la base en mémoire du serveur (création d'un utilisateur, suppression d'un autre). Redémarre le serveur (`Ctrl+C` puis `node ~/js-moderne/serveur-json.mjs`) avant cette étape pour que les identifiants ci-dessous correspondent à un serveur fraîchement lancé.
+
 Remplace le contenu de `11-fetch-api.mjs` par le code suivant :
 
 ```javascript

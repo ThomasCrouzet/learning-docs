@@ -539,15 +539,17 @@ mon_projet/
 
 ```text
 === Utilitaires texte ===
-Nombre de mots : 5
-Texte inversé : nohtyP em'j ,ruojnoB
+Nombre de mots : 4
+Texte inversé : nohtyP neib emia'j ,ruojnoB
 Est palindrome ('radar') : True
 Est palindrome ('python') : False
 
 === Utilitaires date ===
-Date : 07/04/2026
-Jours avant Noël : 262
+Date : JJ/MM/AAAA
+Jours avant Noël : N
 ```
+
+`split()` coupe sur les espaces : `"Bonjour, j'aime bien Python"` donne 4 mots (`Bonjour,`, `j'aime`, `bien`, `Python`). La date et le nombre de jours avant Noël dépendent du jour d'exécution (le 13 août 2026 : `13/08/2026` et `134` jours).
 
 ---
 

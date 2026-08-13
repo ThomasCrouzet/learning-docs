@@ -35,7 +35,7 @@ cursus: "Kubernetes"
 | PostgreSQL  | 16      |
 | Redis       | 7.x     |
 | Nginx       | 1.26    |
-| Node.js     | 20 LTS  |
+| Node.js     | 22 LTS  |
 
 ## Objectif de cette fiche
 

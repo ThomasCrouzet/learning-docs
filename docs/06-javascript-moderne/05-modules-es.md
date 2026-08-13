@@ -682,13 +682,32 @@ const afficherTaches = (taches, titre = "Liste des tâches") => {
 export default afficherTaches;
 ```
 
+**Fichier `index.js`** :
+
+```javascript
+// index.js - Ré-exporte l'API publique des modules
+export { creerTache } from "./tache.js";
+export {
+  ajouterTache,
+  supprimerTache,
+  marquerFaite,
+  listerTaches,
+} from "./stockage.js";
+export { default as afficherTaches } from "./affichage.js";
+```
+
 **Fichier `demo-taches.js`** :
 
 ```javascript
 // demo-taches.js - Scénario de test
-import { creerTache } from "./tache.js";
-import { ajouterTache, supprimerTache, marquerFaite, listerTaches } from "./stockage.js";
-import afficherTaches from "./affichage.js";
+import {
+  creerTache,
+  ajouterTache,
+  supprimerTache,
+  marquerFaite,
+  listerTaches,
+  afficherTaches,
+} from "./index.js";
 
 // Ajouter des tâches
 ajouterTache(creerTache("Apprendre les modules ES", "haute"));

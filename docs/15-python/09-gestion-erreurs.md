@@ -551,9 +551,9 @@ else:
 
 ```text
 Validation de l'inscription...
-Erreur d'âge : L'âge 10 n'est pas valide (doit être entre 13 et 120).
+Erreur d'âge : L'âge 10 n'est pas valide (doit être au moins 13).
 Erreur d'email : L'email 'test.exemple.com' est invalide (doit contenir un @).
-Erreur de mot de passe : Le mot de passe est trop court (3 caractères, minimum 8).
+Erreur de mot de passe : Le mot de passe est invalide (trop court (3 caractères, minimum 8)).
 ```
 
 ---

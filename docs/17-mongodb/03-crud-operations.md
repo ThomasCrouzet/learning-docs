@@ -632,17 +632,20 @@ docker volume rm mongo-crud-data
 
 ### Piège 1 : Oublier l'opérateur `$set` dans updateOne
 
-⚠️ **Problème** : Tu écris `updateOne({nom: "Alice"}, {age: 30})` sans `$set`. MongoDB interprete le deuxième argument comme un remplacement complet du document (comme `replaceOne`).
+⚠️ **Problème** : Tu écris `updateOne({nom: "Alice"}, {age: 30})` sans `$set`. Depuis MongoDB 5, `updateOne` exige un opérateur de mise à jour (`$set`, `$unset`, `$inc`, etc.). Un document nu provoque une erreur (`the update operation document must contain atomic operators`). Pour remplacer tout le document, utilise `replaceOne`.
 
 ✅ **Solution** : Utilise toujours `$set` (ou un autre opérateur) avec `updateOne` :
 
 ```javascript
-// Mauvais : ecrase tout le document
-db.utilisateurs.updateOne({ nom: "Alice" }, { age: 30 })
-// Resultat : le document ne contient plus que { _id: ..., age: 30 }
+// Mauvais : MongoDB 8 refuse un document sans opérateur
+// db.utilisateurs.updateOne({ nom: "Alice" }, { age: 30 })
+// MongoServerError: the update operation document must contain atomic operators
 
 // Bon : modifie uniquement le champ age
 db.utilisateurs.updateOne({ nom: "Alice" }, { $set: { age: 30 } })
+
+// Remplacement complet du document : replaceOne
+db.utilisateurs.replaceOne({ nom: "Alice" }, { nom: "Alice", age: 30 })
 ```
 
 ---

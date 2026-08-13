@@ -86,7 +86,7 @@ Sans EAS Build, voici les problèmes rencontrés :
 
 **Ce qu'EAS Build n'est PAS** :
 
-- EAS Build n'est pas gratuit de façon illimitée. Le plan gratuit offre 30 builds par mois avec une file d'attente. Le plan payant offre des builds prioritaires et plus de builds.
+- EAS Build n'est pas gratuit de façon illimitée. Le plan gratuit offre 15 builds Android et 15 builds iOS par mois (file d'attente basse priorité). Le plan payant offre des builds prioritaires et plus de builds.
 - EAS Build n'est pas obligatoire. Tu peux compiler localement avec `npx expo run:android` et `npx expo run:ios` si tu as les outils installés.
 
 ---

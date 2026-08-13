@@ -54,7 +54,7 @@ L'objet `Date` existe depuis 1995 et a été copié sur une vieille bibliothèqu
 
 **Ce que Temporal n'est PAS** :
 
-- Temporal n'est pas une bibliothèque externe comme Moment.js ou date-fns. C'est une API standardisée du langage JavaScript lui-même, intégrée dans ES2026 et déjà disponible nativement dans Chrome 144+, Firefox 139+ et Node.js 26.
+- Temporal n'est pas une bibliothèque externe comme Moment.js ou date-fns. C'est une API standardisée du langage JavaScript lui-même (stade 4 TC39 depuis mars 2026, publication ECMAScript attendue en 2027) et déjà disponible nativement dans Chrome 144+, Firefox 139+ et Node.js 26.
 - Temporal n'est pas un remplacement automatique de `Date`. Le code existant qui utilise `Date` continue de fonctionner. Tu choisis Temporal pour les nouveaux développements.
 - Temporal n'est pas un objet unique. C'est une famille d'objets (`PlainDate`, `PlainTime`, `ZonedDateTime`, `Duration`, etc.), chacun pour un usage précis.
 
@@ -62,12 +62,12 @@ L'objet `Date` existe depuis 1995 et a été copié sur une vieille bibliothèqu
 
 ### Le statut de Temporal (important)
 
-**Définition** : Temporal est une API standardisée du langage JavaScript, adoptée par le comité TC39 au **stade 4** (stage 4) le 11 mars 2026. Le stade 4 est le stade final : la spécification est incorporée dans la norme ECMAScript 2026 (ES2026). Temporal fait donc partie du langage JavaScript officiel depuis cette date.
+**Définition** : Temporal est une API standardisée du langage JavaScript, adoptée par le comité TC39 au **stade 4** (stage 4) le 11 mars 2026. Le stade 4 signifie que la spécification est figée et intégrée au brouillon ECMA-262. La liste officielle des propositions terminées (consultée le 13 août 2026) indique une **année de publication ECMAScript attendue : 2027**, pas 2026.
 
 | Statut | Signification |
 | ------ | ------------- |
-| Stade de la proposition | Stage 4 (spécification adoptée dans ES2026 - 11 mars 2026) |
-| Cible de standardisation | ES2026 (confirmé) |
+| Stade de la proposition | Stage 4 (11 mars 2026) |
+| Cible de standardisation | Publication ECMAScript attendue en 2027 (liste TC39 finished-proposals, 13 août 2026) |
 | Support natif Chrome 144+ | Oui, sans flag (depuis janvier 2026) |
 | Support natif Firefox 139+ | Oui, sans flag (depuis mai 2025) |
 | Support natif Edge 144+ | Oui, sans flag |
@@ -518,7 +518,7 @@ console.log(Temporal.PlainDate.compare(jour, jourEvenement));
 ## Checklist de Validation
 
 - [ ] Je sais citer au moins trois défauts de l'objet `Date`
-- [ ] Je sais que Temporal est au stade 4 (ES2026 confirmé depuis mars 2026) et nécessite encore un polyfill sur Node.js 22
+- [ ] Je sais que Temporal est au stade 4 depuis mars 2026 (publication ECMAScript attendue en 2027) et nécessite encore un polyfill sur Node.js 22
 - [ ] Je sais installer et importer `@js-temporal/polyfill`
 - [ ] Je sais que les objets Temporal sont immuables
 - [ ] Je sais créer une `PlainDate` depuis une chaîne ISO et depuis un objet

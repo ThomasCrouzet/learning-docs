@@ -409,7 +409,7 @@ Age : 25
 Email : None
 Email : N/A
 Après modification : {'nom': 'Alice', 'age': 26, 'notes': [15, 12, 18], 'active': True, 'email': 'alice@exemple.com'}
-Apres suppression : {'nom': 'Alice', 'age': 26, 'notes': [15, 12, 18], 'email': 'alice@exemple.com'}
+Après suppression : {'nom': 'Alice', 'age': 26, 'notes': [15, 12, 18], 'email': 'alice@exemple.com'}
 Clés : ['nom', 'age', 'notes', 'email']
 Valeurs : ['Alice', 26, [15, 12, 18], 'alice@exemple.com']
 Paires : [('nom', 'Alice'), ('age', 26), ('notes', [15, 12, 18]), ('email', 'alice@exemple.com')]

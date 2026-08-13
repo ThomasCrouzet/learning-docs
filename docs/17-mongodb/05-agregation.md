@@ -577,7 +577,7 @@ db.commandes.aggregate([
 
 ```text
 [
-  { nb_commandes: 1, mois: 1, categorie: 'Informatique', chiffre_affaires: 1378 },
+  { nb_commandes: 2, mois: 1, categorie: 'Informatique', chiffre_affaires: 1378 },
   { nb_commandes: 1, mois: 2, categorie: 'Audio', chiffre_affaires: 250 },
   { nb_commandes: 1, mois: 2, categorie: 'Informatique', chiffre_affaires: 177 },
   { nb_commandes: 2, mois: 3, categorie: 'Audio', chiffre_affaires: 379 },

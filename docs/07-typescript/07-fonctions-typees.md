@@ -760,7 +760,7 @@ const cb: Callback = (x) => x * 2;
 
 ```text
 Entrée : "  bonjour le monde  "
-Après pipeline : ".EDNOM EL RUOJNOB"
+Après pipeline : "EDNOM EL RUOJNOB."
 ```
 
 ---

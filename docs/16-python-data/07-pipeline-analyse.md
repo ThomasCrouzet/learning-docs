@@ -722,7 +722,7 @@ ax1.set_ylabel("Temperature (C)")
 ax1.set_xticks(range(1, 13))
 
 # Boxplot par ville
-sns.boxplot(data=df, x="ville", y="temperature", palette="Set2", ax=ax2)
+sns.boxplot(data=df, x="ville", y="temperature", hue="ville", palette="Set2", legend=False, ax=ax2)
 ax2.set_title("Distribution des temperatures par ville", fontweight="bold")
 
 fig.suptitle("Rapport meteo 2024", fontsize=15, fontweight="bold")

@@ -428,8 +428,8 @@ Top 3 des produits les plus chers en stock :
   Casque audio - 129.99 €
   Clavier - 89.99 €
 
-Valeur totale du stock : 7254.60 €
-Prix moyen : 95.02 €
+Valeur totale du stock : 6614.68 €
+Prix moyen : 103.36 €
 ```
 
 ---

@@ -44,4 +44,4 @@ description: "Cursus React : construire des interfaces utilisateur modernes avec
 
 ## Durée totale estimée
 
-~23 heures de lecture et pratique.
+~26 heures 30 de lecture et pratique.

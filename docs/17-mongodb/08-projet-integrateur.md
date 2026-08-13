@@ -25,9 +25,9 @@ cursus: "MongoDB"
 | Technologie | Version |
 | ----------- | ------- |
 | MongoDB | 8.x |
-| Node.js | 20 LTS |
+| Node.js | 22 LTS (ou 24 LTS) |
 | Express | 4.x |
-| Mongoose | 8.x |
+| Mongoose | 9.x |
 
 ## Objectif de cette fiche
 

@@ -176,7 +176,7 @@ import "@testing-library/jest-dom";
 ```text
 Le projet est créé. npm run dev affiche le serveur Vite sans erreur :
 
-  VITE v6.x.x  ready in XXX ms
+  VITE v7.x.x / v8.x.x  ready in XXX ms
 
   ➜  Local:   http://localhost:5173/
 ```

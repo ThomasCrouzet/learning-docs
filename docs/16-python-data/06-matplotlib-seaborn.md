@@ -316,7 +316,7 @@ sns.set_theme(style="whitegrid")
 
 # --- Graphique 1 : Distribution par categorie ---
 fig, ax = plt.subplots(figsize=(10, 6))
-sns.boxplot(data=df, x="Departement", y="Salaire", palette="Set2", ax=ax)
+sns.boxplot(data=df, x="Departement", y="Salaire", hue="Departement", palette="Set2", legend=False, ax=ax)
 ax.set_title("Salaires par departement", fontsize=14, fontweight="bold")
 plt.tight_layout()
 plt.savefig("output/seaborn_boxplot.png", dpi=150)
@@ -571,7 +571,7 @@ axes[0, 0].set_ylabel("Effectif")
 axes[0, 0].legend()
 
 # 2. Boxplot par filiere
-sns.boxplot(data=df, x="Filiere", y="Maths", palette="Set2", ax=axes[0, 1])
+sns.boxplot(data=df, x="Filiere", y="Maths", hue="Filiere", palette="Set2", legend=False, ax=axes[0, 1])
 axes[0, 1].set_title("Notes de maths par filiere")
 
 # 3. Scatter maths vs francais avec regression

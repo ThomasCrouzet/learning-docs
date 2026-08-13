@@ -29,7 +29,7 @@ cursus: "JavaScript"
 | Symfony | 7.4 LTS |
 | Node.js | 22 LTS |
 | PHP | 8.3 |
-| Webpack Encore | dernière version stable |
+| Webpack Encore | 5.x / 6.x (API CJS de cette fiche ; 7.x est ESM-only depuis juin 2026) |
 
 ## Objectif de cette fiche
 
@@ -305,6 +305,8 @@ Ce fichier est le cœur de la configuration d'Encore. Il se trouve à la racine 
 ```javascript
 // webpack.config.js
 
+// API CJS Encore 5.x / 6.x (cette fiche).
+// Encore 7 : fichier ESM + `export default await Encore.getWebpackConfig()`.
 const Encore = require('@symfony/webpack-encore');
 
 if (!Encore.isRuntimeEnvironmentConfigured()) {

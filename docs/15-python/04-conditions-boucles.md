@@ -694,7 +694,7 @@ nombre_secret = random.randint(1, 100)
 tentatives = 0
 
 print("=== Jeu de devinette ===")
-print("Je pense a un nombre entre 1 et 100.\n")
+print("Je pense à un nombre entre 1 et 100.\n")
 
 # Boucle principale du jeu
 while True:

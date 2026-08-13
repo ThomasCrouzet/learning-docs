@@ -451,7 +451,7 @@ except UnicodeDecodeError as e:
 Les caractères spéciaux : é, è, ê, ë, à, ç, ù, ô
 日本語のテキスト (texte japonais)
 
-Erreur d'encodage : 'ascii' codec can't decode byte 0xc3 in position 30: ordinal not in range(128)
+Erreur d'encodage : 'ascii' codec can't decode byte 0xc3 in position 10: ordinal not in range(128)
 ```
 
 ---

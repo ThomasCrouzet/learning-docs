@@ -7,7 +7,7 @@ description: "Cursus Python Data : analyse de données avec NumPy, Pandas, Matpl
 
 # Python Data
 
-> **En bref** : Un cursus complet pour apprendre l'analyse de données avec Python, couvrant NumPy, Pandas, Matplotlib et Seaborn. 8 fiches, environ 9 heures de lecture et pratique.
+> **En bref** : Un cursus complet pour apprendre l'analyse de données avec Python, couvrant NumPy, Pandas, Matplotlib et Seaborn. 8 fiches, environ 10 heures 30 de lecture et pratique.
 
 ---
 
@@ -32,4 +32,4 @@ description: "Cursus Python Data : analyse de données avec NumPy, Pandas, Matpl
 
 ## Durée totale estimée
 
-~9 heures de lecture et pratique.
+~10 heures 30 de lecture et pratique.

@@ -538,7 +538,7 @@ print(e.autre)   # 100
 **Résultat attendu** :
 
 ```text
-=== Catalogue ===
+=== Catalogue de Bibliothèque municipale ===
   [DISPO] Le Petit Prince - Antoine de Saint-Exupéry (ISBN: 978-2-07-040850-4)
   [DISPO] 1984 - George Orwell (ISBN: 978-2-07-036822-8)
   [DISPO] Dune - Frank Herbert (ISBN: 978-2-221-25847-3)
@@ -552,7 +552,7 @@ Alice emprunte "1984" : OK
 
 Alice retourne "Le Petit Prince" : OK
 
-=== Catalogue après retour ===
+=== Catalogue de Bibliothèque municipale ===
   [DISPO] Le Petit Prince - Antoine de Saint-Exupéry (ISBN: 978-2-07-040850-4)
   [EMPRUNTÉ] 1984 - George Orwell (ISBN: 978-2-07-036822-8)
   [DISPO] Dune - Frank Herbert (ISBN: 978-2-221-25847-3)

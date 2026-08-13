@@ -494,7 +494,7 @@ axes[2, 0].legend(fontsize=10)
 
 # --- 6. Boxplot CA par categorie et magasin ---
 sns.boxplot(data=df, x="categorie", y="chiffre_affaires",
-            palette="Set2", ax=axes[2, 1])
+            hue="categorie", palette="Set2", legend=False, ax=axes[2, 1])
 axes[2, 1].set_title("Distribution CA par categorie", fontsize=13, fontweight="bold")
 axes[2, 1].set_ylabel("CA (EUR)")
 axes[2, 1].set_xlabel("")
@@ -845,11 +845,11 @@ axes[1, 0].set_xlabel("Jours")
 # 4. Emprunts par tranche d'age
 sns.countplot(data=df, x="tranche_age",
               order=["Enfant", "Ado", "Adulte", "Senior"],
-              palette="Set2", ax=axes[1, 1])
+              hue="tranche_age", palette="Set2", legend=False, ax=axes[1, 1])
 axes[1, 1].set_title("Emprunts par tranche d'age", fontweight="bold")
 
 # 5. Boxplot duree par genre
-sns.boxplot(data=df, x="genre", y="duree_jours", palette="Set2", ax=axes[2, 0])
+sns.boxplot(data=df, x="genre", y="duree_jours", hue="genre", palette="Set2", legend=False, ax=axes[2, 0])
 axes[2, 0].set_title("Duree d'emprunt par genre", fontweight="bold")
 axes[2, 0].tick_params(axis="x", rotation=45)
 

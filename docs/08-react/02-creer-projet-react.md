@@ -54,7 +54,7 @@ Sans Vite, voici les problèmes rencontrés :
 **Ce que Vite n'est PAS** :
 
 - Vite n'est pas un framework. C'est un outil de build qui fonctionne avec React, Vue, Svelte ou tout autre framework.
-- Vite n'est pas nécessaire en production. En production, Vite utilise Rollup pour créer un bundle optimisé, puis Vite n'est plus impliqué.
+- Vite n'est pas nécessaire en production. Vite 7 utilise encore Rollup pour créer le bundle de production. Vite 8 (mars 2026) utilise Rolldown comme bundler unifié. Une fois le bundle généré, l'outil de dev n'est plus impliqué.
 
 **Comparaison Vite vs Webpack** :
 
@@ -448,7 +448,7 @@ npm run dev
 **Résultat attendu** :
 
 ```text
-  VITE v6.x.x  ready in XXX ms
+  VITE v7.x.x / v8.x.x  ready in XXX ms
 
   ➜  Local:   http://localhost:5173/
 ```
