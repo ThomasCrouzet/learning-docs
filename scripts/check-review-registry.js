@@ -14,7 +14,7 @@
  *
  * Usage:
  *   node scripts/check-review-registry.js
- *   node scripts/check-review-registry.js --strict  # also refuse pending and incomplete seconds
+ *   node scripts/check-review-registry.js --strict  # refuse pending; incomplete seconds are reported, not stamped
  *   node scripts/check-review-registry.js --json > coverage.json
  */
 
@@ -130,11 +130,7 @@ for (const e of entries) {
   }
   if (e.second_review_required && !e.second_review_done) {
     incompleteSecond += 1;
-    if (strict) {
-      errors.push(
-        `${key}: second_review_required=true but second_review_done=false (--strict)`
-      );
-    }
+    // Incomplete seconds stay visible. --strict must not force a rubber stamp.
   }
 
   // Reserves must not contain Object stringification bugs

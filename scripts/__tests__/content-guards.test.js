@@ -36,4 +36,75 @@ describe('content guards (shipped docs)', () => {
     }
     expect(hits).toEqual([]);
   });
+
+  it('does not teach the AMF PSAN register as the live 2026 check', () => {
+    const hits = [];
+    for (const f of files) {
+      const t = fs.readFileSync(f, 'utf8');
+      if (/Liste des PSAN enregistr/i.test(t) || /liste des PSAN de l'AMF/i.test(t)) {
+        hits.push(path.relative(ROOT, f));
+      }
+    }
+    expect(hits).toEqual([]);
+  });
+
+  it('does not keep micro-BNC 77 700 as the current 2026 threshold', () => {
+    const hits = [];
+    for (const f of files) {
+      const t = fs.readFileSync(f, 'utf8');
+      if (t.includes('77 700')) hits.push(path.relative(ROOT, f));
+    }
+    expect(hits).toEqual([]);
+  });
+
+  it('does not present Amazon 746 M EUR as a standing fine', () => {
+    const hits = [];
+    for (const f of files) {
+      const t = fs.readFileSync(f, 'utf8');
+      if (t.includes('746 M') && !/annul/i.test(t)) hits.push(path.relative(ROOT, f));
+    }
+    expect(hits).toEqual([]);
+  });
+
+  it('does not state the ICO British Airways fine as 22 M GBP', () => {
+    const hits = [];
+    for (const f of files) {
+      const t = fs.readFileSync(f, 'utf8');
+      if (/British Airways/.test(t) && /22 M GBP/.test(t)) {
+        hits.push(path.relative(ROOT, f));
+      }
+    }
+    expect(hits).toEqual([]);
+  });
+
+  it('does not label RFC 1918 172.16/12 as Class B or 192.168/16 as Class C', () => {
+    const hits = [];
+    for (const f of files) {
+      const t = fs.readFileSync(f, 'utf8');
+      if (/172\.16\.0\.0[^\n]*\|\s*B\s*\|/.test(t) || /\|\s*B\s*\|[^\n]*172\.16\.0\.0/.test(t)) {
+        hits.push(path.relative(ROOT, f));
+      }
+    }
+    expect(hits).toEqual([]);
+  });
+
+  it('states the DORA Art. 19 initial clock as 4 hours', () => {
+    const f = path.join(
+      DOCS,
+      'cybersecurite/08-expertise-leadership/02-grc-avancee.md'
+    );
+    const t = fs.readFileSync(f, 'utf8');
+    expect(t).toMatch(/4 heures/);
+    expect(t).not.toMatch(
+      /Notification initiale : dès que l'incident majeur est classifié\n/
+    );
+  });
+
+  it('does not answer audience analytics with legitimate interest alone', () => {
+    const f = path.join(DOCS, '26-droit-rgpd/01-introduction-rgpd.md');
+    const t = fs.readFileSync(f, 'utf8');
+    expect(t).not.toMatch(
+      /Analyse de navigation → Intérêts légitimes \(si proportionné/
+    );
+  });
 });
