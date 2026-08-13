@@ -220,7 +220,7 @@ Exemples de plateformes qui n'ont PAS besoin d'être declarees
 | Infraction | Sanction |
 | ---------- | -------- |
 | Non-déclaration d'un compte à l'étranger | 750 euros par compte et par année (1 500 euros si dans un État non coopératif) |
-| Non-déclaration d'un compte d'une valeur supérieure à 50 000 euros | 1 500 euros par compte et par année (10 000 euros si État non coopératif) |
+| Non-déclaration d'un compte d'actifs numériques à l'étranger (3916-bis) | 750 euros par compte et par année (1 500 euros si le montant des avoirs dépasse 50 000 euros) - barème spécifique aux comptes d'actifs numériques, distinct des comptes bancaires |
 | Non-déclaration de plus-values | Redressement fiscal + majorations de 10% à 80% selon la situation + intérêts de retard |
 
 ---

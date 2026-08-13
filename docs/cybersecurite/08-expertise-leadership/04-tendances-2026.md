@@ -182,7 +182,7 @@ Le edge computing et la 5G introduisent de nouveaux risques :
 
 | Texte | Entrée en vigueur | Cible | Obligation principale |
 | ----- | ------------------ | ----- | --------------------- |
-| NIS2 | Octobre 2024 | Entités essentielles et importantes (18 secteurs) | Mesures de sécurité, notification d'incident 24h, responsabilité dirigeants |
+| NIS2 | Transposition 17 oct. 2024 (entrée en vigueur 16 janv. 2023) | Entités essentielles et importantes (18 secteurs) | Mesures de sécurité, alerte 24h / notification 72h / rapport 1 mois, responsabilité dirigeants |
 | DORA | Janvier 2025 | Secteur financier | Résilience numérique, tests TLPT, gestion risque tiers ICT |
 | AI Act | Août 2025 (progressif) | Fournisseurs et utilisateurs de systèmes d'IA | Classification des risques IA, obligations par niveau de risque |
 | Cyber Resilience Act (CRA) | 2027 (progressif) | Fabricants de produits numériques (logiciels, IoT, hardware) | Sécurité by design, mises à jour pendant 5 ans, marquage CE |

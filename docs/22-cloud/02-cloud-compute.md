@@ -177,7 +177,8 @@ AMI_ID=$(aws ssm get-parameters \
   --query 'Parameters[0].Value' \
   --output text)
 
-# Lancer une instance t3.micro (eligible Free Tier) avec Amazon Linux 2023
+# Lancer une instance t3.micro avec Amazon Linux 2023
+# (le Free Plan AWS a changé en 2025 : ne suppose pas que t3.micro est gratuit)
 aws ec2 run-instances \
   --image-id "$AMI_ID" \
   --instance-type t3.micro \

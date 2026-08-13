@@ -203,7 +203,7 @@ aws rds create-db-instance \
   --db-instance-identifier demo-postgres \
   --db-instance-class db.t3.micro \
   --engine postgres \
-  --engine-version 16.4 \
+  --engine-version 16.14 \
   --master-username admin_user \
   --master-user-password MonMotDePasse123! \
   --allocated-storage 20 \
@@ -583,7 +583,7 @@ aws rds create-db-instance \
   --db-instance-identifier todo-db \
   --db-instance-class db.t3.micro \
   --engine postgres \
-  --engine-version 16.4 \
+  --engine-version 16.14 \
   --master-username todo_admin \
   --master-user-password TodoPass2025! \
   --allocated-storage 20 \

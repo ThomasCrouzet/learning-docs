@@ -127,7 +127,7 @@ Sans approche multi-référentiel, voici les problèmes rencontrés :
 | ----------- | ---- | ------ | ---------- |
 | ISO 27001:2022 | Standard international | SMSI (Système de Management de la Sécurité de l'Information) | Volontaire (mais souvent exigé par les clients) |
 | SOC 2 Type II | Rapport d'audit (AICPA) | Contrôles de sécurité, disponibilité, confidentialité | Volontaire (exigé par les clients US) |
-| NIS2 | Directive européenne | Entités essentielles et importantes (énergie, transport, santé, numérique) | Obligatoire depuis octobre 2024 |
+| NIS2 | Directive européenne | Entités essentielles et importantes (énergie, transport, santé, numérique) | Transposition prévue au 17 oct. 2024 ; vérifier le droit national |
 | DORA | Règlement européen | Secteur financier (banques, assurances, fintech) | Obligatoire depuis janvier 2025 |
 | RGPD | Règlement européen | Données personnelles | Obligatoire |
 | PCI-DSS v4.0 | Standard industriel | Données de cartes de paiement | Obligatoire si traitement de cartes |
@@ -709,7 +709,7 @@ Profils recherchés :
 ```text
 Obligations de notification DORA (Art. 19) :
 - Notification initiale : dès que l'incident majeur est classifié
-- Rapport intermédiaire : dans la semaine suivant la notification initiale
+- Notification intermédiaire : sous 72h ; rapport final : sous 1 mois (DORA art. 19 ; NIS2 art. 23)
 - Rapport final : dans un délai d'un mois après l'incident
 
 Critères d'incident majeur DORA :

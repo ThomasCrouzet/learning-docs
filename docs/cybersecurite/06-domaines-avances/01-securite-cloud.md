@@ -175,7 +175,7 @@ Les fonctions serverless (AWS Lambda, Azure Functions, GCP Cloud Functions) ont 
 
 | Misconfiguration | Impact | Exemple réel |
 | ---------------- | ------ | ------------ |
-| Bucket S3 public | Fuite de données | Capital One (2019) : 100M de dossiers exposés |
+| Mauvaise config IAM / SSRF vers le metadata service | Fuite de données | Capital One (2019) : SSRF + IMDSv1, pas un bucket S3 public |
 | Security groups trop ouverts | Accès non autorisé | Port 22 (SSH) ouvert à 0.0.0.0/0 |
 | Absence de logging | Pas de détection | CloudTrail désactivé = aucune trace des actions |
 | Clés d'accès dans le code | Compromission complète | Clés AWS dans un dépôt GitHub public |

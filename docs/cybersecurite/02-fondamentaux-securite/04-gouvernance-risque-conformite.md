@@ -89,7 +89,7 @@ Sans GRC, voici les problèmes rencontrés :
 
 #### NIS2 (Network and Information Security Directive 2)
 
-**Définition** : NIS2 est une directive européenne (2022/2555), entrée en vigueur en octobre 2024, qui impose des obligations de cybersécurité aux entités essentielles et importantes dans l'UE.
+**Définition** : NIS2 est une directive européenne (2022/2555). Elle est entrée en vigueur le 16 janvier 2023 ; le délai de transposition était le 17 octobre 2024. Vérifie l'état de transposition dans ton pays (la France n'était pas encore pleinement transposée à l'été 2026).
 
 **Qui est concerné ?** :
 

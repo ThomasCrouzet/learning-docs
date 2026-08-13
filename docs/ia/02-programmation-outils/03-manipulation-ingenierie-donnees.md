@@ -448,7 +448,7 @@ Outliers détectés : 1
 Salaire max après clipping : ...
 Valeurs manquantes restantes :
 age            10
-salaire         0
+salaire         5
 experience      8
 departement     0
 niveau          0

@@ -53,9 +53,11 @@ Sans régulation, voici les problèmes constatés :
 
 ---
 
-### Le cadre français : le statut PSAN
+### Le cadre français : du PSAN au PSCA (MiCA)
 
-**Définition** : PSAN signifie Prestataire de Services sur Actifs Numériques. C'est un statut juridique créé par la loi PACTE (2019) qui oblige les entreprises fournissant des services sur actifs numériques en France à s'enregistrer auprès de l'AMF (Autorité des Marchés Financiers).
+**Définition** : PSAN signifie Prestataire de Services sur Actifs Numériques. C'est un statut juridique créé par la loi PACTE (2019) qui obligeait les entreprises fournissant des services sur actifs numériques en France à s'enregistrer auprès de l'AMF.
+
+**Transition 2026** : le régime transitoire PSAN s'est refermé le 1er juillet 2026. L'AMF publie désormais surtout le registre des **PSCA** (prestataires de services sur crypto-actifs) / **CASP** au titre de MiCA. Vérifie toujours la liste officielle sur `amf-france.org` avant d'utiliser une plateforme. Le mot « PSAN » reste utile pour lire les textes et les archives, mais ce n'est plus le statut vivant pour un nouvel acteur.
 
 **Les services concernés par le statut PSAN** :
 
