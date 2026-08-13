@@ -32,7 +32,7 @@ Wiki : `http://localhost:8100` (MkDocs Material).
 | Lint Markdown seul | `npm run lint` |
 | Régénérer la carte des cursus | `npm run generate:cursus-map` |
 | Audit documentaire | `npm run audit:docs` |
-| Build strict du site | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.6 build --strict` |
+| Build strict du site | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build --strict` |
 
 ## Que contribuer
 

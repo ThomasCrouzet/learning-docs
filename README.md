@@ -71,7 +71,7 @@ Ouvre `http://localhost:8100`.
 | Audit documentaire | `npm run audit:docs` |
 | Échantillon d'exécution de snippets | `npm run audit:snippets` |
 | Régénérer la carte des cursus | `npm run generate:cursus-map` |
-| Build MkDocs strict | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.6 build --strict` |
+| Build MkDocs strict | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build --strict` |
 | Ou avec Python local | `pip install -r requirements.txt && mkdocs build --strict` |
 
 Les versions de référence de la pile principale sont résumées dans [docs/a-propos.md](docs/a-propos.md). Préférer les lignes LTS ou maintenues plutôt que le dernier numéro disponible, sauf si une fiche traite explicitement du legacy.

@@ -16,7 +16,7 @@ cursus: "Références"
 ## Prérequis
 
 - Aucune connaissance préalable d'accessibilité n'est requise pour lire ce rapport.
-- Contexte technique : le projet est un **wiki statique** (MkDocs Material 9.7.6 au moment de la campagne OSS), pas une SPA.
+- Contexte technique : le projet est un **wiki statique** (MkDocs Material 9.7.6 au moment de la campagne OSS ; pin courant du dépôt : 9.7.7, correctif XSS des suggestions de recherche du 17 juillet 2026), pas une SPA.
 
 ## Objectif de cette fiche
 
@@ -58,7 +58,7 @@ cursus: "Références"
 | Date | 2026-07-22 |
 | Branche | `audit/wcag-2.2-aa-2026-07` |
 | Node | >= 22 (mesuré : v26.5.0) |
-| MkDocs Material | 9.7.6 (Docker `squidfunk/mkdocs-material:9.7.6`) |
+| MkDocs Material | 9.7.6 lors de la campagne ; pin courant `squidfunk/mkdocs-material:9.7.7` |
 | Serveur de validation | `npx serve site -l 4173` (**build de production**, pas `mkdocs serve`) |
 | axe-core | via `@axe-core/playwright` 4.12.1 |
 | Playwright | 1.61.1 (Chromium desktop + mobile) |
