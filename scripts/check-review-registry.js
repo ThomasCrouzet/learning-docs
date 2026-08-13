@@ -25,6 +25,7 @@ const {
   sourcesMatchPath,
   isGenericPerishableOnly,
 } = require('./lib/review-registry-sources');
+const { isPageOwnedEntry } = require('./lib/review-registry-page-owned');
 
 const ROOT = path.join(__dirname, '..');
 const DOCS = path.join(ROOT, 'docs');
@@ -84,6 +85,7 @@ let stampSecond = 0;
 let pathMismatch = 0;
 let genericPerishable = 0;
 let shallowOk = 0;
+let notPageOwned = 0;
 
 for (const e of entries) {
   const key = e.path_final || e.path_initial;
@@ -206,6 +208,15 @@ for (const e of entries) {
         );
       }
     }
+
+    if (!isPageOwnedEntry(key, e)) {
+      notPageOwned += 1;
+      if (strict) {
+        errors.push(
+          `${key}: not a page-owned review (lot overlay / generic claims / missing path-scoped sources)`
+        );
+      }
+    }
   }
 
   if (strict && (result === 'pending' || !e.review_date)) {
@@ -251,13 +262,27 @@ const coverage = {
     path_source_mismatches: pathMismatch,
     generic_perishable_ok_banned: genericPerishable,
     shallow_ok_banned: shallowOk,
+    not_page_owned: notPageOwned,
   },
   campaign_notes: registry.campaign_notes || null,
-  full_corpus_page_level_review: false,
+  full_corpus_page_level_review:
+    errors.length === 0 &&
+    notPageOwned === 0 &&
+    entries.length === pages.length &&
+    pages.length > 0,
   not_a_human_expert_certification: true,
   gate_errors: errors.length,
   ok: errors.length === 0,
 };
+
+if (strict && !coverage.full_corpus_page_level_review) {
+  errors.push(
+    'full_corpus_page_level_review=false (--strict requires a page-owned entry for every docs page)'
+  );
+  coverage.ok = false;
+  coverage.gate_errors = errors.length;
+  coverage.full_corpus_page_level_review = false;
+}
 
 if (errors.length) {
   coverage.ok = false;
@@ -279,7 +304,7 @@ if (jsonOut) {
   process.stdout.write(JSON.stringify(coverage, null, 2) + '\n');
 } else {
   console.log(
-    `check-review-registry OK (entries=${entries.length} pages=${pages.length} ${JSON.stringify(counts)} second_reviews=${secondDone}/${secondRequired} named=${secondWithReviewer} incomplete=${incompleteSecond})`
+    `check-review-registry OK (entries=${entries.length} pages=${pages.length} ${JSON.stringify(counts)} second_reviews=${secondDone}/${secondRequired} named=${secondWithReviewer} incomplete=${incompleteSecond} full_corpus_page_level_review=${coverage.full_corpus_page_level_review})`
   );
 }
 process.exit(0);

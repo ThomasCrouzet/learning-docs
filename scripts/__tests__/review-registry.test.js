@@ -109,4 +109,17 @@ describeReviewRegistry('review registry (local audit artefact)', () => {
     expect(r.status).toBe(0);
     expect(r.stdout).toMatch(/check-review-registry OK/);
   });
+
+  it('strict mode reports full_corpus_page_level_review true with zero missing paths', () => {
+    const r = spawnSync(process.execPath, [CHECKER, '--strict', '--json'], {
+      encoding: 'utf8',
+      cwd: ROOT,
+    });
+    expect(r.status).toBe(0);
+    const coverage = JSON.parse(r.stdout);
+    expect(coverage.entries).toBe(coverage.pages);
+    expect(coverage.full_corpus_page_level_review).toBe(true);
+    expect(coverage.quality_flags.not_page_owned).toBe(0);
+    expect(coverage.ok).toBe(true);
+  });
 });
