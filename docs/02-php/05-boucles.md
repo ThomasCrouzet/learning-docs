@@ -96,14 +96,10 @@ for (initialisation; condition; incrémentation) {
 
 Le diagramme suivant illustre le cycle d'une boucle for :
 
-```mermaid
-flowchart TD
-    init["Initialisation<br>$i = 0"] --> cond{"Condition<br>$i < 10 ?"}
-    cond -->|Vrai| body[Exécuter le code]
-    body --> incr["Incrémenter<br>$i++"]
-    incr --> cond
-    cond -->|Faux| fin[Sortie de la boucle]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-05-boucles-1.html">La boucle for (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-05-boucles-1.html" title="La boucle for" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 En détail :
 

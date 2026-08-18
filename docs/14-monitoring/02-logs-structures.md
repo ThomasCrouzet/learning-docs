@@ -151,13 +151,10 @@ Sans Monolog, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le pipeline de logs Monolog dans Symfony.
 
-```mermaid
-flowchart LR
-    app[Application Symfony] --> monolog[Monolog]
-    monolog --> handler1[Handler fichier<br>var/log/]
-    monolog --> handler2[Handler Loki<br>Agrégation]
-    handler2 --> grafana[Grafana<br>Visualisation]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/14-monitoring-02-logs-structures-1.html">Qu&#x27;est-ce que Monolog ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-02-logs-structures-1.html" title="Qu&#x27;est-ce que Monolog ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ```text
 Logger

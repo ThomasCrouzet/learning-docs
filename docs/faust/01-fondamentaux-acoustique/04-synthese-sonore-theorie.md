@@ -61,12 +61,10 @@ Sans synthèse sonore, voici les problèmes rencontrés :
 
 Le diagramme suivant présente les trois grandes familles de synthèse sonore et leur principe distinctif.
 
-```mermaid
-graph TD
-    synth[Synthèse sonore] --> additive[Additive<br>Somme de sinusoïdes]
-    synth --> sub[Soustractive<br>Filtre un signal riche]
-    synth --> fm[FM<br>Modulation de fréquence]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/faust-01-fondamentaux-acoustique-04-synthese-sonore-theorie-1.html">Qu&#x27;est-ce que la synthèse sonore ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-01-fondamentaux-acoustique-04-synthese-sonore-theorie-1.html" title="Qu&#x27;est-ce que la synthèse sonore ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

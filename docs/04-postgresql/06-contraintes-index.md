@@ -100,14 +100,10 @@ Sans index, voici les problèmes rencontrés :
 
 Le diagramme suivant présente les cinq types de contraintes SQL et leur rôle :
 
-```mermaid
-graph TD
-    constraints[Contraintes] --> pk[PRIMARY KEY<br>Identifiant unique]
-    constraints --> fk[FOREIGN KEY<br>Lien entre tables]
-    constraints --> unique[UNIQUE<br>Pas de doublons]
-    constraints --> check[CHECK<br>Règle métier]
-    constraints --> notnull[NOT NULL<br>Valeur obligatoire]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/04-postgresql-06-contraintes-index-1.html">Qu&#x27;est-ce qu&#x27;un index ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-06-contraintes-index-1.html" title="Qu&#x27;est-ce qu&#x27;un index ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

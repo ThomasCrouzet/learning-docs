@@ -63,29 +63,10 @@ Sans architecture multi-tiers, voici les problèmes rencontres :
 
 Le projet consiste a construire l'infrastructure suivante :
 
-```mermaid
-graph TD
-    subgraph vlan10["VLAN 10 - DMZ (reseau public)"]
-        WEB[VM web-server<br/>Nginx<br/>10.10.10.10]
-    end
-
-    subgraph vlan20["VLAN 20 - Backend (reseau prive)"]
-        DB[VM db-server<br/>PostgreSQL<br/>10.10.20.10]
-    end
-
-    subgraph vlan30["VLAN 30 - Management (reseau admin)"]
-        MON[VM monitoring<br/>Prometheus + Grafana<br/>10.10.30.10]
-    end
-
-    INTERNET[Internet] --> WEB
-    WEB --> DB
-    MON --> WEB
-    MON --> DB
-
-    NFS[Stockage NFS<br/>Sauvegardes]
-    DB --> NFS
-    MON --> NFS
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/24-virtualisation-06-projet-integrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
+<iframe src="../../diagrams/24-virtualisation-06-projet-integrateur-1.html" title="Architecture du projet" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
+</div>
 
 **Composants** :
 

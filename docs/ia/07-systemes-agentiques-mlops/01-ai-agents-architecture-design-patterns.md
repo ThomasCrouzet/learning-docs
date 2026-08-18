@@ -102,14 +102,10 @@ Sans ReAct, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre la boucle ReAct, qui alterne raisonnement, action et observation :
 
-```mermaid
-flowchart TD
-    observe[Observation<br>Entrée utilisateur] --> think[Réflexion<br>Que faire ?]
-    think --> act[Action<br>Appel d'outil]
-    act --> result[Résultat<br>Retour de l'outil]
-    result --> observe
-    think -->|Réponse prête| answer[Réponse finale]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-07-systemes-agentiques-mlops-01-ai-agents-architecture-design-patterns-1.html">Qu&#x27;est-ce que le pattern ReAct ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-07-systemes-agentiques-mlops-01-ai-agents-architecture-design-patterns-1.html" title="Qu&#x27;est-ce que le pattern ReAct ?" style="width:100%;min-height:660px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : ReAct fonctionne comme un détective qui enquête. Il réfléchit (Thought : "Le suspect était à Paris ce jour-là"), agit (Action : vérifier les caméras de surveillance), observe le résultat (Observation : "Les caméras confirment sa présence"), puis ajuste son raisonnement pour l'étape suivante.
 

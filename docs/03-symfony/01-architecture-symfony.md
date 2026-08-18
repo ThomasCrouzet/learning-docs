@@ -81,14 +81,10 @@ Sans framework, voici les problèmes rencontrés :
 
 **Flux de traitement** :
 
-```mermaid
-flowchart TD
-    Req["Request"] --> C["Controller"]
-    C --> M["Model\n(Entity, Repository)"]
-    M -.-> C
-    C --> V["View\n(Twig)"]
-    V --> Resp["Response\n(HTML)"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-01-architecture-symfony-1.html">L&#x27;architecture MVC (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-01-architecture-symfony-1.html" title="L&#x27;architecture MVC" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 1. L'utilisateur envoie une **requête** (Request)
 2. Le **Controller** reçoit la requête

@@ -111,16 +111,10 @@ Sans formulaire contrôlé :
 
 Le diagramme suivant montre le cycle d'un formulaire contrôlé React : l'utilisateur tape, l'état est mis à jour, et le composant se re-rend avec la nouvelle valeur.
 
-```mermaid
-sequenceDiagram
-    participant U as Utilisateur
-    participant I as Input
-    participant S as État React
-
-    U->>I: Tape une lettre
-    I->>S: onChange → setState
-    S->>I: Re-rendu avec nouvelle valeur
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-06-evenements-formulaires-1.html">Qu&#x27;est-ce qu&#x27;un formulaire contrôlé ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-06-evenements-formulaires-1.html" title="Qu&#x27;est-ce qu&#x27;un formulaire contrôlé ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce que SyntheticEvent ?
 

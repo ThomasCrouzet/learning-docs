@@ -342,28 +342,10 @@ $sms->send('Code : 1234');
 
 Le diagramme suivant illustre les relations entre une interface, une classe abstraite et des classes concrètes :
 
-```mermaid
-classDiagram
-    class PaymentInterface {
-        <<interface>>
-        +pay(float amount) bool
-    }
-    class AbstractPayment {
-        <<abstract>>
-        #float amount
-        +pay(float amount) bool*
-        +formatAmount() string
-    }
-    class CreditCard {
-        +pay(float amount) bool
-    }
-    class PayPal {
-        +pay(float amount) bool
-    }
-    PaymentInterface <|.. CreditCard
-    PaymentInterface <|.. PayPal
-    AbstractPayment <|-- CreditCard
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-11-interfaces-classes-abstraites-1.html">Comparaison interface vs classe abstraite (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-11-interfaces-classes-abstraites-1.html" title="Comparaison interface vs classe abstraite" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 - Les lignes en pointillés (`<|..`) signifient "implémente l'interface"
 - La ligne pleine (`<|--`) signifie "hérite de la classe abstraite"

@@ -65,15 +65,10 @@ Les fichiers de configuration (`docker-compose.yml`, `Dockerfile`) décrivent co
 
 Le diagramme suivant représente les différents états d'un conteneur Docker et les commandes qui permettent de passer de l'un à l'autre :
 
-```mermaid
-stateDiagram-v2
-    [*] --> Créé: docker compose create
-    Créé --> Actif: docker compose up
-    Actif --> Arrêté: docker compose stop
-    Arrêté --> Actif: docker compose start
-    Arrêté --> Supprimé: docker compose down
-    Supprimé --> [*]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/01-docker-02-lancement-projet-git-1.html">Qu&#x27;est-ce que lancer un projet Docker ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/01-docker-02-lancement-projet-git-1.html" title="Qu&#x27;est-ce que lancer un projet Docker ?" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 En résumé sous forme textuelle :
 

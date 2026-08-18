@@ -106,20 +106,10 @@ Si un nœud disparaît, le réseau continue de fonctionner.
 
 Le diagramme suivant met en regard les deux architectures :
 
-```mermaid
-graph TD
-    subgraph centralized[Centralisé]
-        server[Serveur central] --> c1[Client 1]
-        server --> c2[Client 2]
-        server --> c3[Client 3]
-    end
-
-    subgraph p2p[Pair-a-pair]
-        n1[Noeud 1] <--> n2[Noeud 2]
-        n2 <--> n3[Noeud 3]
-        n3 <--> n1
-    end
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-01-fondamentaux-03-reseaux-pair-a-pair-decentralisation-1.html">Qu&#x27;est-ce qu&#x27;un réseau pair-à-pair (P2P) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-01-fondamentaux-03-reseaux-pair-a-pair-decentralisation-1.html" title="Qu&#x27;est-ce qu&#x27;un réseau pair-à-pair (P2P) ?" style="width:100%;min-height:720px;border:0;background:transparent"></iframe>
+</div>
 
 **Exemples concrets de P2P** :
 

@@ -78,13 +78,10 @@ Sans CRC, voici les problèmes rencontrés pour apprendre OpenShift :
 
 Le diagramme suivant résume les étapes d'installation et de démarrage de CRC.
 
-```mermaid
-flowchart TD
-    download[Télécharger CRC] --> setup[crc setup<br>Configuration initiale]
-    setup --> start[crc start<br>Démarrage du cluster]
-    start --> login[oc login<br>Connexion]
-    login --> console[Console web<br>Accessible]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-02-openshift-02-installation-crc-1.html">Qu&#x27;est-ce que CRC (CodeReady Containers) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-02-openshift-02-installation-crc-1.html" title="Qu&#x27;est-ce que CRC (CodeReady Containers) ?" style="width:100%;min-height:616px;border:0;background:transparent"></iframe>
+</div>
 
 **Comparaison CRC vs Minikube** :
 

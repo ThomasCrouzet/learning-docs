@@ -95,18 +95,10 @@ Sans Express, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le parcours d'une requête HTTP dans Express, du client jusqu'à la réponse.
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant E as Express
-    participant MW as Middleware
-    participant R as Route Handler
-
-    C->>E: Requête HTTP
-    E->>MW: Middleware 1, 2, 3
-    MW->>R: Route handler
-    R-->>C: Réponse
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-07-nodejs-06-introduction-express-1.html">Le cycle requête/réponse (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-07-nodejs-06-introduction-express-1.html" title="Le cycle requête/réponse" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ```text
 Client (navigateur)          Serveur Express

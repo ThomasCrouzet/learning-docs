@@ -103,13 +103,10 @@ Sans Secret :
 
 Le diagramme suivant montre les deux mécanismes d'injection de configuration dans un Pod.
 
-```mermaid
-flowchart TD
-    cm[ConfigMap<br>Clé: valeur] --> env[Variables d'environnement]
-    secret[Secret<br>Données chiffrées] --> vol[Volume monté]
-    env --> pod[Pod]
-    vol --> pod
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-06-configmaps-secrets-1.html">Qu&#x27;est-ce qu&#x27;un Secret ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-06-configmaps-secrets-1.html" title="Qu&#x27;est-ce qu&#x27;un Secret ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Deux façons d'utiliser ConfigMaps et Secrets
 

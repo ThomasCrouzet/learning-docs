@@ -63,13 +63,10 @@ Sans les oscillateurs de la bibliothèque, voici les problèmes rencontrés :
 
 Le diagramme suivant présente les quatre formes d'onde fondamentales et leur caractère sonore.
 
-```mermaid
-graph TD
-    osc[Oscillateur] --> sine[Sinusoïde<br>Son pur]
-    osc --> saw[Dent de scie<br>Riche en harmoniques]
-    osc --> square[Carrée<br>Son creux]
-    osc --> tri[Triangle<br>Son doux]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/faust-04-dsp-applique-01-oscillateurs-synthese-1.html">Qu&#x27;est-ce qu&#x27;un oscillateur en Faust ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-04-dsp-applique-01-oscillateurs-synthese-1.html" title="Qu&#x27;est-ce qu&#x27;un oscillateur en Faust ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 #### Les quatre oscillateurs de base
 

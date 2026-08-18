@@ -58,14 +58,10 @@ Sans `async`/`await`, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre le flux d'exécution d'une fonction async/await, incluant la suspension et la gestion d'erreur.
 
-```mermaid
-flowchart TD
-    start[Appel fonction async] --> await1[await fetch '/api/data']
-    await1 -->|Suspension| wait[Attend la réponse...]
-    wait --> await2[await response.json]
-    await2 --> result[Données disponibles]
-    await1 -->|Erreur| catch[Bloc catch]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-10-async-await-1.html">Qu&#x27;est-ce que `async`/`await` ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-10-async-await-1.html" title="Qu&#x27;est-ce que `async`/`await` ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 ### La syntaxe `async`
 

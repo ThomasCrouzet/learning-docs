@@ -149,13 +149,10 @@ Sans ImageStream, voici les problèmes rencontrés :
 
 Le diagramme suivant résume le flux Source-to-Image, du code source au déploiement des Pods.
 
-```mermaid
-flowchart LR
-    source[Code source<br>Git] --> s2i[Build S2I]
-    s2i --> image[Image conteneur]
-    image --> is[ImageStream<br>Référence]
-    is --> deploy[Déploiement<br>Pods créés]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-02-openshift-05-builds-imagestreams-1.html">Qu&#x27;est-ce qu&#x27;un ImageStream ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-02-openshift-05-builds-imagestreams-1.html" title="Qu&#x27;est-ce qu&#x27;un ImageStream ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Un ImageStream fonctionne comme un abonnement à un journal. Sans abonnement, tu dois aller acheter le journal chaque jour au kiosque (pull manuel de l'image). Avec un abonnement (ImageStream), le journal est livré automatiquement dans ta boîte aux lettres dès qu'une nouvelle édition (nouvelle version de l'image) sort. Tu n'as rien à faire : la livraison est automatique.
 

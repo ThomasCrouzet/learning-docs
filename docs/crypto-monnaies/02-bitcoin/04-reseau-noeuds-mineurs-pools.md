@@ -51,15 +51,10 @@ Sans nœuds repartis dans le monde, voici les problèmes rencontrès :
 
 Le diagramme suivant illustre les types de nœuds et ce qu'ils stockent :
 
-```mermaid
-graph TD
-    network[Réseau Bitcoin] --> full[Full Node<br>Vérifie tout]
-    network --> light[Light Node SPV<br>Vérifie les headers]
-    network --> mining[Mining Node<br>Crée les blocs]
-    full -->|Stocke| blockchain[(Blockchain complète)]
-    light -->|Stocke| headers[Headers uniquement]
-    mining --> full
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-02-bitcoin-04-reseau-noeuds-mineurs-pools-1.html">Les différents types de nœuds (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-02-bitcoin-04-reseau-noeuds-mineurs-pools-1.html" title="Les différents types de nœuds" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Full node (nœud complet) en détail** :
 

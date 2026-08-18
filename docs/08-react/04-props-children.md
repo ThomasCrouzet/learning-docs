@@ -314,11 +314,10 @@ export default App;
 
 Le diagramme suivant illustre le flux unidirectionnel des props : le parent transmet les données aux enfants.
 
-```mermaid
-graph TD
-    parent["Parent<br>state: nom='Alice'"] -->|"prop: nom"| child1[Enfant 1<br>Affiche 'Alice']
-    parent -->|"prop: nom"| child2[Enfant 2<br>Affiche 'Alice']
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-04-props-children-1.html">Étape 3 : Créer un composant avec children (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-04-props-children-1.html" title="Étape 3 : Créer un composant avec children" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Étape 4 : Passer des fonctions comme props
 

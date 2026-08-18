@@ -87,15 +87,10 @@ Sans API Platform, voici les problèmes rencontrés :
 
 Le schéma suivant illustre comment un seul attribut `#[ApiResource]` sur une entité PHP génère automatiquement les cinq opérations CRUD :
 
-```mermaid
-graph TD
-    entity[Entité PHP<br>avec attribut ApiResource] --> platform[API Platform]
-    platform --> get[GET /api/articles<br>Liste]
-    platform --> getOne[GET /api/articles/1<br>Détail]
-    platform --> post[POST /api/articles<br>Création]
-    platform --> patch[PATCH /api/articles/1<br>Modification]
-    platform --> delete[DELETE /api/articles/1<br>Suppression]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-05-api-platform-introduction-1.html">L&#x27;attribut ApiResource (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-05-api-platform-introduction-1.html" title="L&#x27;attribut ApiResource" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que l'attribut ApiResource n'est PAS** :
 

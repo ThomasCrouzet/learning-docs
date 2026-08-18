@@ -84,20 +84,10 @@ Sans orchestration cloud, voici les problèmes rencontres :
 
 **Architecture ECS** :
 
-```mermaid
-graph TD
-    A[ECS Cluster] --> B[Service]
-    B --> C[Task 1]
-    B --> D[Task 2]
-    B --> E[Task 3]
-    C --> F[Conteneur App]
-    D --> G[Conteneur App]
-    E --> H[Conteneur App]
-    I[Load Balancer] --> B
-    J[Task Definition] -.-> C
-    J -.-> D
-    J -.-> E
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/22-cloud-08-conteneurs-cloud-1.html">Qu&#x27;est-ce que Amazon ECS ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/22-cloud-08-conteneurs-cloud-1.html" title="Qu&#x27;est-ce que Amazon ECS ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

@@ -77,10 +77,10 @@ Sans Clean Architecture, voici les problèmes rencontrés :
 
 **Règle de dépendance** : les dépendances pointent toujours vers l'intérieur. Les couches externes dépendent des couches internes, jamais l'inverse.
 
-```mermaid
-flowchart LR
-    F["Frameworks\n& Drivers"] --> A["Interface\nAdapters"] --> U["Use Cases"] --> E["Entities"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-08-clean-architecture-1.html">Les 4 couches de Clean Architecture (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-08-clean-architecture-1.html" title="Les 4 couches de Clean Architecture" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Les Entities ne connaissent rien des couches extérieures. Chaque couche ne dépend que de la couche immédiatement intérieure.
 

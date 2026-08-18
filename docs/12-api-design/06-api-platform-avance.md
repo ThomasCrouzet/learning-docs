@@ -88,13 +88,10 @@ Les opérations CRUD standard (GET, POST, PATCH, DELETE) ne couvrent pas tous le
 
 Le diagramme suivant montre le rôle du State Provider (lecture) et du State Processor (écriture) dans le traitement d'une requête API Platform.
 
-```mermaid
-flowchart LR
-    read[Requête GET] --> provider[State Provider<br>Lit les données]
-    provider --> response[Réponse JSON]
-    write[Requête POST/PATCH] --> processor[State Processor<br>Écrit les données]
-    processor --> db[(Base de données)]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-06-api-platform-avance-1.html">Qu&#x27;est-ce qu&#x27;une opération personnalisée ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-06-api-platform-avance-1.html" title="Qu&#x27;est-ce qu&#x27;une opération personnalisée ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

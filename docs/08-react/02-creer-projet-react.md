@@ -391,12 +391,10 @@ Cette configuration est minimale. Le plugin `@vitejs/plugin-react` fait tout le 
 
 Le diagramme suivant montre le pipeline HMR de Vite : quand tu modifies un fichier, Vite met à jour le navigateur sans rechargement complet.
 
-```mermaid
-flowchart LR
-    edit[Modifier un fichier] --> vite[Vite détecte le changement]
-    vite --> hmr[Hot Module Replacement]
-    hmr --> browser[Navigateur mis à jour<br>Sans rechargement complet]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-02-creer-projet-react-1.html">Étape 8 : Nettoyer le projet pour partir sur une base propre (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-02-creer-projet-react-1.html" title="Étape 8 : Nettoyer le projet pour partir sur une base propre" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Pour les exercices de ce cursus, on va nettoyer le projet par défaut.
 

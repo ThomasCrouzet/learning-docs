@@ -72,13 +72,10 @@ Sans alerting, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le pipeline d'alerte Grafana, de la condition au destinataire.
 
-```mermaid
-flowchart TD
-    rule[Règle d'alerte<br>CPU > 80%] --> eval[Évaluation périodique]
-    eval -->|Condition remplie| firing[Alerte déclenchée]
-    eval -->|Condition non remplie| ok[Normal]
-    firing --> notify[Notification<br>Email, Slack, PagerDuty]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/14-monitoring-06-grafana-alerting-1.html">L&#x27;architecture d&#x27;alerting Grafana (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-06-grafana-alerting-1.html" title="L&#x27;architecture d&#x27;alerting Grafana" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Les quatre composants** :
 

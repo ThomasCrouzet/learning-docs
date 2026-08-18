@@ -15,7 +15,7 @@ const SPECIAL_FILES = [
   'politique-fraicheur.md',
 ];
 
-const DIR_PATTERN = /^(\d{2}-[a-z0-9-]+|fiches-reference|epitech|devops|ansible|thomas|commencer|stack-symfony|stylesheets|javascripts|overrides|ia|cybersecurite|faust|includes|fonts|crypto-monnaies)$/;
+const DIR_PATTERN = /^(\d{2}-[a-z0-9-]+|fiches-reference|epitech|devops|ansible|thomas|commencer|stack-symfony|stylesheets|javascripts|overrides|ia|cybersecurite|faust|includes|fonts|crypto-monnaies|diagrams)$/;
 
 const SPECIAL_DIRS = ['BC01', 'BC02', 'BC03', 'BC04', 'BC05', 'BC06', 'BC07', 'BC08'];
 

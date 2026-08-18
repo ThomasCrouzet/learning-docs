@@ -113,16 +113,10 @@ Sans pooling, voici les problèmes rencontrés :
 
 Le diagramme suivant montre l'architecture type d'un CNN, de l'image d'entrée jusqu'à la classification :
 
-```mermaid
-flowchart LR
-    input[Image<br>entrée] --> conv1[Convolution<br>+ ReLU]
-    conv1 --> pool1[Pooling]
-    pool1 --> conv2[Convolution<br>+ ReLU]
-    conv2 --> pool2[Pooling]
-    pool2 --> flatten[Aplatissement]
-    flatten --> fc[Couches denses]
-    fc --> output[Classification]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-04-deep-learning-fondamental-03-reseaux-convolutifs-cnn-1.html">Qu&#x27;est-ce que le pooling ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-04-deep-learning-fondamental-03-reseaux-convolutifs-cnn-1.html" title="Qu&#x27;est-ce que le pooling ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

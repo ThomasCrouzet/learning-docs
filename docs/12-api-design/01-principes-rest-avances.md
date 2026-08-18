@@ -84,15 +84,10 @@ Sans ce modèle, voici les problèmes rencontrés :
 
 **Progression des niveaux** :
 
-```mermaid
-flowchart TD
-    N0["Niveau 0 - Le marais\nUne seule URL, POST uniquement"]
-    N1["Niveau 1 - Ressources\nURL distinctes par ressource"]
-    N2["Niveau 2 - Méthodes HTTP\nGET, POST, PUT, DELETE"]
-    N3["Niveau 3 - HATEOAS\nLiens hypermédia dans les réponses"]
-
-    N0 --> N1 --> N2 --> N3
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-01-principes-rest-avances-1.html">Les niveaux de maturité de Richardson (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-01-principes-rest-avances-1.html" title="Les niveaux de maturité de Richardson" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 La majorité des API en production sont au niveau 2. Le niveau 2 est le minimum recommandé.
 

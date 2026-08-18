@@ -101,12 +101,10 @@ Sans RBAC :
 
 Le diagramme suivant montre le modèle RBAC : un sujet obtient des permissions sur des ressources via un RoleBinding.
 
-```mermaid
-graph TD
-    subject[Sujet<br>User / ServiceAccount] --> binding[RoleBinding]
-    binding --> role[Role<br>Permissions]
-    role --> resources[Ressources<br>pods, services, secrets]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-08-namespaces-rbac-1.html">Qu&#x27;est-ce que le RBAC ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-08-namespaces-rbac-1.html" title="Qu&#x27;est-ce que le RBAC ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 ### Les objets RBAC
 

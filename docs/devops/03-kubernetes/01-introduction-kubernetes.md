@@ -294,36 +294,10 @@ Cette fiche est théorique. Les étapes pratiques commencent dans la fiche 02 av
 
 Voici un schéma textuel de l'architecture d'un cluster Kubernetes :
 
-```mermaid
-flowchart TD
-    subgraph CP["Control Plane"]
-        API["API Server\n(kube-apiserver)"]
-        ETCD["etcd"]
-        SCHED["Scheduler"]
-        CM["Controller\nManager"]
-        API --- ETCD
-        API --- SCHED
-        API --- CM
-    end
-
-    API --> N1 & N2 & N3
-
-    subgraph N1["Worker Node 1"]
-        K1["kubelet"] --- KP1["kube-proxy"]
-        K1 --- C1["containerd"]
-        C1 --- P1["Pod A"] & P2["Pod B"]
-    end
-    subgraph N2["Worker Node 2"]
-        K2["kubelet"] --- KP2["kube-proxy"]
-        K2 --- C2["containerd"]
-        C2 --- P3["Pod C"] & P4["Pod D"]
-    end
-    subgraph N3["Worker Node 3"]
-        K3["kubelet"] --- KP3["kube-proxy"]
-        K3 --- C3["containerd"]
-        C3 --- P5["Pod E"] & P6["Pod F"]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-01-introduction-kubernetes-1.html">Étape 1 : Visualiser l&#x27;architecture (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-01-introduction-kubernetes-1.html" title="Étape 1 : Visualiser l&#x27;architecture" style="width:100%;min-height:800px;border:0;background:transparent"></iframe>
+</div>
 
 L'API Server est le point d'entrée unique du cluster. Toutes les commandes `kubectl` passent par lui. Le Scheduler décide sur quel node placer chaque pod. Le Controller Manager surveille l'état du cluster.
 

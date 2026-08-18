@@ -154,14 +154,10 @@ h1 {
 
 Le diagramme suivant montre comment Webpack Encore résout les imports depuis le point d'entrée pour construire le bundle final.
 
-```mermaid
-graph TD
-    app[app.js<br>Point d'entrée] --> import1[import module1]
-    app --> import2[import module2]
-    import1 --> dep1[Dépendance]
-    import2 --> dep1
-    app --> bundle[public/build/app.js<br>Bundle final]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/05-javascript-03-webpack-encore-utilisation-1.html">Étape 3 : Importer des modules JavaScript (HTML + SVG)</a></p>
+<iframe src="../../diagrams/05-javascript-03-webpack-encore-utilisation-1.html" title="Étape 3 : Importer des modules JavaScript" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Crée un module réutilisable :
 

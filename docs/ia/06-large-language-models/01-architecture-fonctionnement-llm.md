@@ -68,15 +68,10 @@ Sans architecture decoder-only, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre le flux de données dans un modèle decoder-only, des tokens d'entrée jusqu'à la prédiction du token suivant :
 
-```mermaid
-graph TD
-    input[Tokens d'entrée] --> embed[Embeddings<br>+ Encodage positionnel]
-    embed --> block1[Bloc Transformer 1<br>Attention + FFN]
-    block1 --> block2[Bloc Transformer 2<br>Attention + FFN]
-    block2 --> blockN[... Bloc N]
-    blockN --> norm[Normalisation]
-    norm --> output[Prédiction du token suivant]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-06-large-language-models-01-architecture-fonctionnement-llm-1.html">Qu&#x27;est-ce que l&#x27;architecture decoder-only ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-06-large-language-models-01-architecture-fonctionnement-llm-1.html" title="Qu&#x27;est-ce que l&#x27;architecture decoder-only ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 #### Fonctionnement du masque causal
 

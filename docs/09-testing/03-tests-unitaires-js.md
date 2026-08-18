@@ -142,13 +142,10 @@ expect([1, 2]).not.toContain(5); // le tableau ne contient pas 5
 
 Le diagramme suivant montre la structure hiérarchique des tests Jest : `describe` regroupe les blocs `it`, et chaque `it` contient un `expect`.
 
-```mermaid
-graph TD
-    describe["describe('Calculator')"] --> it1["it('should add')"]
-    describe --> it2["it('should subtract')"]
-    it1 --> expect1["expect(add(2,3)).toBe(5)"]
-    it2 --> expect2["expect(sub(5,3)).toBe(2)"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/09-testing-03-tests-unitaires-js-1.html">Qu&#x27;est-ce que expect et les matchers ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/09-testing-03-tests-unitaires-js-1.html" title="Qu&#x27;est-ce que expect et les matchers ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce qu'un mock ?
 

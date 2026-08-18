@@ -467,20 +467,10 @@ Tous les véhicules :
 
 Le diagramme suivant montre la visibilité des membres dans une hiérarchie de classes TypeScript avec une classe abstraite.
 
-```mermaid
-classDiagram
-    class Animal {
-        <<abstract>>
-        #string name
-        +move() void
-        +speak() void*
-    }
-    class Dog {
-        -string breed
-        +speak() void
-    }
-    Animal <|-- Dog
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/07-typescript-08-classes-heritage-1.html">Étape 4 : Classes abstraites (HTML + SVG)</a></p>
+<iframe src="../../diagrams/07-typescript-08-classes-heritage-1.html" title="Étape 4 : Classes abstraites" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Crée un fichier `src/classes-abstraites.ts` :
 

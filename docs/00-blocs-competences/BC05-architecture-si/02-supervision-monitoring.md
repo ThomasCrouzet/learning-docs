@@ -54,12 +54,10 @@ Sans supervision, voici les problèmes rencontrés :
 
 Le diagramme suivant présente les trois piliers de l'observabilité et la question à laquelle chacun répond.
 
-```mermaid
-graph TD
-    obs[Observabilité] --> logs[Logs<br>Que s'est-il passé ?]
-    obs --> metrics[Métriques<br>Combien ?]
-    obs --> traces[Traces<br>Où dans le système ?]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/00-blocs-competences-bc05-architecture-si-02-supervision-monitoring-1.html">Qu&#x27;est-ce que la supervision (monitoring) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-competences-bc05-architecture-si-02-supervision-monitoring-1.html" title="Qu&#x27;est-ce que la supervision (monitoring) ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

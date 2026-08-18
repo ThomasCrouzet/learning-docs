@@ -94,17 +94,10 @@ Throwable (interface)
 
 Le diagramme suivant représente cette hiérarchie sous forme visuelle :
 
-```mermaid
-graph TD
-    throwable[Throwable] --> error[Error]
-    throwable --> exception[Exception]
-    error --> typeError[TypeError]
-    error --> parseError[ParseError]
-    exception --> runtime[RuntimeException]
-    exception --> logic[LogicException]
-    logic --> invalid[InvalidArgumentException]
-    runtime --> overflow[OverflowException]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-13-exceptions-gestion-erreurs-1.html">Erreurs PHP vs Exceptions (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-13-exceptions-gestion-erreurs-1.html" title="Erreurs PHP vs Exceptions" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 - `Throwable` est l'interface racine commune aux erreurs et aux exceptions
 - `Error` regroupe les erreurs internes de PHP (TypeError, ParseError)

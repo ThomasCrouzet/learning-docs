@@ -99,17 +99,10 @@ class NomDeLaClasse
 
 Le diagramme suivant montre la structure typique d'une classe avec ses propriétés et méthodes :
 
-```mermaid
-classDiagram
-    class User {
-        -int id
-        -string email
-        -string password
-        +getId() int
-        +getEmail() string
-        +setEmail(string) void
-    }
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-07-introduction-poo-1.html">Qu&#x27;est-ce qu&#x27;une classe ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-07-introduction-poo-1.html" title="Qu&#x27;est-ce qu&#x27;une classe ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le signe `-` indique une propriété privée, le signe `+` indique une méthode publique.
 
@@ -137,12 +130,10 @@ Tu as un seul moule, mais tu peux faire 10 gâteaux avec. Chaque gâteau est une
 
 Le schéma suivant illustre la relation entre une classe et ses objets :
 
-```mermaid
-graph TD
-    cls[Classe User<br>Plan / Modèle] --> obj1["Objet alice<br>email: alice@mail.com"]
-    cls --> obj2["Objet bob<br>email: bob@mail.com"]
-    cls --> obj3["Objet charlie<br>email: charlie@mail.com"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-07-introduction-poo-2.html">Qu&#x27;est-ce qu&#x27;un objet ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-07-introduction-poo-2.html" title="Qu&#x27;est-ce qu&#x27;un objet ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 La classe `User` est le modèle unique. Chaque objet (`alice`, `bob`, `charlie`) est une instance concrète avec ses propres valeurs.
 

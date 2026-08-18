@@ -90,12 +90,10 @@ Ces règles sont **absolues** en Rust. Il n'y a pas d'exception.
 
 Le diagramme suivant montre ce qui se passe quand une valeur est moved d'une variable à une autre.
 
-```mermaid
-flowchart TD
-    s1["s1 = String::from(hello)"] -->|move| s2[s2 = s1]
-    s1 -->|s1 invalidé| invalid[s1 inutilisable]
-    s2 --> valid[s2 possède la valeur]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-08-rust-04-ownership-1.html">Qu&#x27;est-ce qu&#x27;un move ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-08-rust-04-ownership-1.html" title="Qu&#x27;est-ce qu&#x27;un move ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Exemple** :
 

@@ -157,16 +157,10 @@ Dans un Pod contenant Nginx et PHP-FPM :
 - Nginx contacte PHP-FPM via `localhost:9000`
 - Le Pod expose le port 80 vers la machine hôte
 
-```mermaid
-flowchart TD
-    subgraph HOST["Machine hôte"]
-        subgraph POD["Pod 'mon-pod' (IP: 10.88.0.5)"]
-            NGINX["Nginx\n:80"] --> |localhost:9000| PHP["PHP-FPM\n:9000"]
-            PAUSE["Conteneur infra (pause)\nMaintient le réseau actif"]
-        end
-    end
-    EXT["Port 8080"] --> NGINX
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-01-podman-03-pods-podman-1.html">Comment fonctionne le réseau partagé dans un Pod ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-01-podman-03-pods-podman-1.html" title="Comment fonctionne le réseau partagé dans un Pod ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

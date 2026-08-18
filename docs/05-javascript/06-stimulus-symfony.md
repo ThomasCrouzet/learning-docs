@@ -162,15 +162,10 @@ Une value est une donnée passée depuis le HTML (ou Twig) vers le contrôleur J
 
 Le schéma suivant illustre les transitions entre les différents états du cycle de vie d'un contrôleur Stimulus :
 
-```mermaid
-stateDiagram-v2
-    [*] --> initialize: Élément détecté dans le DOM
-    initialize --> connect: Controller instancié
-    connect --> Actif: Événements écoutés
-    Actif --> Actif: Actions utilisateur
-    Actif --> disconnect: Élément retiré du DOM
-    disconnect --> [*]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/05-javascript-06-stimulus-symfony-1.html">Le cycle de vie d&#x27;un contrôleur (HTML + SVG)</a></p>
+<iframe src="../../diagrams/05-javascript-06-stimulus-symfony-1.html" title="Le cycle de vie d&#x27;un contrôleur" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 ```javascript
 // assets/controllers/clock_controller.js

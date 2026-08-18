@@ -13,30 +13,10 @@ description: "Vue d'ensemble des 604 fiches réparties sur 64 cursus."
 
 ## Dépendances entre cursus
 
-```mermaid
-graph LR
-    Commencer --> Stack[Stack Symfony]
-    Stack --> JS[JavaScript Moderne]
-    Stack --> QA[Testing et Qualité]
-    JS --> TS[TypeScript]
-    TS --> React
-    QA --> Archi[Architecture]
-    Archi --> API[API Design]
-    Stack --> Infra[Infrastructure]
-    Infra --> K8s[Kubernetes]
-    Infra --> Ansible
-    Epitech([Cursus Epitech])
-    Cyber([Cybersécurité])
-    IA([Intelligence Artificielle])
-    Faust([Faust])
-    Crypto([Crypto-monnaies])
-    style Commencer fill:#4CAF50,color:#fff
-    style Epitech fill:#2196F3,color:#fff
-    style Cyber fill:#2196F3,color:#fff
-    style IA fill:#2196F3,color:#fff
-    style Faust fill:#2196F3,color:#fff
-    style Crypto fill:#2196F3,color:#fff
-```
+<div class="diagram-design">
+<p><a href="../diagrams/carte-cursus-1.html">Dépendances entre cursus (HTML + SVG)</a></p>
+<iframe src="../diagrams/carte-cursus-1.html" title="Dépendances entre cursus" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis et peuvent être suivis directement.
 

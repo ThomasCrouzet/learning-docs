@@ -69,27 +69,10 @@ Résultat de la jointure :
 
 Le schéma suivant illustre les relations entre les tables d'un modèle de blog typique :
 
-```mermaid
-erDiagram
-    USERS ||--o{ ARTICLES : "écrit"
-    USERS {
-        int id PK
-        string email
-        string name
-    }
-    ARTICLES {
-        int id PK
-        string title
-        text content
-        int user_id FK
-    }
-    ARTICLES ||--o{ COMMENTS : "a"
-    COMMENTS {
-        int id PK
-        text body
-        int article_id FK
-    }
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/04-postgresql-03-jointures-1.html">Qu&#x27;est-ce qu&#x27;une jointure ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-03-jointures-1.html" title="Qu&#x27;est-ce qu&#x27;une jointure ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

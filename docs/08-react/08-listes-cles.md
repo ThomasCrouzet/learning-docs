@@ -85,20 +85,10 @@ Sans clés (ou avec de mauvaises clés) :
 
 Le schéma suivant illustre la différence de comportement de React lors de la réconciliation, selon que les éléments ont des clés uniques ou utilisent l'index du tableau :
 
-```mermaid
-graph TD
-    subgraph withKeys[Avec clés uniques]
-        a1["key=1 Alice"] --> a1b["key=1 Alice ✓"]
-        a2["key=2 Bob"] --> a2b["key=2 Bob ✓"]
-        a3["Ajout key=3"] --> a3b["key=3 Charlie ✓"]
-    end
-
-    subgraph withoutKeys[Sans clés]
-        b1["index=0 Alice"] --> b1b["index=0 Alice ?"]
-        b2["index=1 Bob"] --> b2b["index=1 Bob ?"]
-        b3["Ajout index=2"] --> b3b["Tout recalculé ✗"]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-08-listes-cles-1.html">Qu&#x27;est-ce qu&#x27;une clé (key) ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-08-listes-cles-1.html" title="Qu&#x27;est-ce qu&#x27;une clé (key) ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que les clés ne sont PAS** :
 

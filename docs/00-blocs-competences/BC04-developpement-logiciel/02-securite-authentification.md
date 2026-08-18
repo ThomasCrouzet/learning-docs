@@ -84,20 +84,10 @@ if (password_verify($passwordSaisi, $hashStocke)) {
 
 Le diagramme suivant montre le flux complet d'authentification par JWT.
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant A as API
-    participant DB as Base de données
-
-    C->>A: POST /login (email, password)
-    A->>DB: Vérifier identifiants
-    DB-->>A: Utilisateur trouvé
-    A-->>C: JWT Token
-    C->>A: GET /api/data + Authorization: Bearer JWT
-    A->>A: Vérifier signature JWT
-    A-->>C: Données protégées
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/00-blocs-competences-bc04-developpement-logiciel-02-securite-authentification-1.html">Qu&#x27;est-ce qu&#x27;un JWT ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-competences-bc04-developpement-logiciel-02-securite-authentification-1.html" title="Qu&#x27;est-ce qu&#x27;un JWT ?" style="width:100%;min-height:560px;border:0;background:transparent"></iframe>
+</div>
 
 **Structure d'un JWT** :
 

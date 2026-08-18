@@ -87,16 +87,10 @@ Les états possibles d'un pod :
 
 **Schéma du cycle de vie** :
 
-```mermaid
-stateDiagram-v2
-    [*] --> Pending
-    Pending --> Running
-    Running --> Succeeded
-    Running --> Failed
-    Pending --> Failed
-    Succeeded --> [*]
-    Failed --> [*]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-03-pods-containers-1.html">Le cycle de vie d&#x27;un pod (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-03-pods-containers-1.html" title="Le cycle de vie d&#x27;un pod" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

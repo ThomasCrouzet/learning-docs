@@ -79,6 +79,10 @@ describe('isValidDirname', () => {
     expect(isValidDirname('crypto-monnaies')).toBe(true);
   });
 
+  it('accepte diagrams (figures HTML autonomes)', () => {
+    expect(isValidDirname('diagrams')).toBe(true);
+  });
+
   it('accepte BC01 (dossier special)', () => {
     expect(isValidDirname('BC01')).toBe(true);
   });

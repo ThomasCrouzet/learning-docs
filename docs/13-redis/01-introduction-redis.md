@@ -260,11 +260,10 @@ Redis écrit chaque commande d'écriture dans un fichier journal (`appendonly.ao
 
 **Schéma de fonctionnement** :
 
-```mermaid
-flowchart LR
-    APP["Application PHP\n(Symfony)"] --> REDIS["Serveur Redis\n(port 6379, en mémoire)"]
-    CLI["redis-cli\n(terminal)"] --> REDIS
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-01-introduction-redis-1.html">L&#x27;architecture client-serveur de Redis (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-01-introduction-redis-1.html" title="L&#x27;architecture client-serveur de Redis" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Protocole** : Redis utilise un protocole texte simple appelé RESP (Redis Serialization Protocol). Tu envoies une commande en texte, Redis répond en texte. C'est un protocole simple et efficace.
 

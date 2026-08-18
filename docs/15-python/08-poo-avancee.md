@@ -52,14 +52,10 @@ Sans héritage multiple, voici les problèmes rencontrés :
 
 ---
 
-```mermaid
-graph TD
-    A[Vehicule] --> B[VoitureElectrique]
-    A --> C[VoitureConnectee]
-    B --> D[VoitureElectriqueConnectee]
-    C --> D
-    style D fill:#e1f5fe
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/15-python-08-poo-avancee-1.html">L&#x27;héritage multiple (HTML + SVG)</a></p>
+<iframe src="../../diagrams/15-python-08-poo-avancee-1.html" title="L&#x27;héritage multiple" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

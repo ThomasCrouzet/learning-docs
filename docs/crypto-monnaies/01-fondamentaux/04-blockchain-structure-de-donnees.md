@@ -128,12 +128,10 @@ La flèche ← signifie "référence".
 
 Le diagramme suivant illustre le chaînage des blocs par leurs empreintes :
 
-```mermaid
-graph LR
-    b0[Bloc 0<br>Genesis] -->|Hash 0| b1[Bloc 1<br>Hash précédent: abc...]
-    b1 -->|Hash 1| b2[Bloc 2<br>Hash précédent: def...]
-    b2 -->|Hash 2| b3[Bloc 3<br>Hash précédent: ghi...]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-01-fondamentaux-04-blockchain-structure-de-donnees-1.html">Comment les blocs sont chaînes (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-01-fondamentaux-04-blockchain-structure-de-donnees-1.html" title="Comment les blocs sont chaînes" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Pourquoi c'est difficile à falsifier** :
 

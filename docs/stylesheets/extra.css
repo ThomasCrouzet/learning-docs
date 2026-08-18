@@ -779,7 +779,20 @@
   }
 }
 
-/* --- Diagrammes Mermaid --- */
+/* --- Diagrammes diagram-design --- */
+
+.diagram-design {
+  margin: 1.5em 0;
+}
+
+.diagram-design iframe {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #f5f5f5;
+}
+
+/* --- Diagrammes Mermaid (runtime conserve si une page historique en a) --- */
 
 .mermaid-diagram {
   text-align: center;

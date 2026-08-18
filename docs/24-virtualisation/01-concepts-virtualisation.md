@@ -116,32 +116,10 @@ Cas d'usage : postes de développement, tests, formation, environnements tempora
 
 **Analogie concrète** : Un hyperviseur de type 1, c'est comme un gerant d'immeuble qui possède le bâtiment et repartit les étages entre les locataires. Il a un accès direct a toutes les ressources. Un hyperviseur de type 2, c'est comme un sous-locataire qui loue un étage et le repartit en bureaux. Il dépend du propriétaire de l'étage (le système d'exploitation hôte) pour accéder aux ressources.
 
-```mermaid
-graph TD
-    subgraph type1["Type 1 - Bare-metal"]
-        HW1[Materiel physique]
-        HV1[Hyperviseur]
-        VM1A[VM A]
-        VM1B[VM B]
-        VM1C[VM C]
-        HW1 --> HV1
-        HV1 --> VM1A
-        HV1 --> VM1B
-        HV1 --> VM1C
-    end
-
-    subgraph type2["Type 2 - Hosted"]
-        HW2[Materiel physique]
-        OS2[Systeme d'exploitation hote]
-        HV2[Hyperviseur]
-        VM2A[VM A]
-        VM2B[VM B]
-        HW2 --> OS2
-        OS2 --> HV2
-        HV2 --> VM2A
-        HV2 --> VM2B
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/24-virtualisation-01-concepts-virtualisation-1.html">Qu&#x27;est-ce qu&#x27;un hyperviseur ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/24-virtualisation-01-concepts-virtualisation-1.html" title="Qu&#x27;est-ce qu&#x27;un hyperviseur ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 
@@ -180,36 +158,10 @@ Les VMs fonctionnent bien, mais elles ont des limites :
 | Environnement de dev rapide | Conteneur | Démarrage instantané, images partagées |
 | Applications legacy Windows sur Linux | VM | Necessite un OS Windows complet |
 
-```mermaid
-graph TD
-    subgraph vm["Machine Virtuelle"]
-        HW_VM[Materiel]
-        HV_VM[Hyperviseur]
-        OS_A[OS invite A]
-        OS_B[OS invite B]
-        APP_A[Application A]
-        APP_B[Application B]
-        HW_VM --> HV_VM
-        HV_VM --> OS_A
-        HV_VM --> OS_B
-        OS_A --> APP_A
-        OS_B --> APP_B
-    end
-
-    subgraph ct["Conteneur"]
-        HW_CT[Materiel]
-        OS_CT[OS hote + noyau partage]
-        CT_A[Conteneur A]
-        CT_B[Conteneur B]
-        APP_CT_A[Application A]
-        APP_CT_B[Application B]
-        HW_CT --> OS_CT
-        OS_CT --> CT_A
-        OS_CT --> CT_B
-        CT_A --> APP_CT_A
-        CT_B --> APP_CT_B
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/24-virtualisation-01-concepts-virtualisation-2.html">Machine virtuelle vs conteneur (HTML + SVG)</a></p>
+<iframe src="../../diagrams/24-virtualisation-01-concepts-virtualisation-2.html" title="Machine virtuelle vs conteneur" style="width:100%;min-height:920px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

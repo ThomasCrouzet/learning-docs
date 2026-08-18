@@ -73,36 +73,10 @@ Sans Factory Method, voici les problèmes rencontrés :
 
 **Structure du pattern** :
 
-```mermaid
-classDiagram
-    class Creator {
-        <<abstract>>
-        +factoryMethod() Product
-        +operation()
-    }
-    class ConcreteCreatorA {
-        +factoryMethod() Product
-    }
-    class ConcreteCreatorB {
-        +factoryMethod() Product
-    }
-    class Product {
-        <<interface>>
-        +use()
-    }
-    class ConcreteProductA {
-        +use()
-    }
-    class ConcreteProductB {
-        +use()
-    }
-    Creator <|-- ConcreteCreatorA
-    Creator <|-- ConcreteCreatorB
-    Product <|.. ConcreteProductA
-    Product <|.. ConcreteProductB
-    ConcreteCreatorA ..> ConcreteProductA : cree
-    ConcreteCreatorB ..> ConcreteProductB : cree
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-04-patterns-creation-1.html">Factory Method (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-04-patterns-creation-1.html" title="Factory Method" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le Creator définit la méthode de création. Chaque sous-classe décide quel produit concret instancier.
 
@@ -414,21 +388,10 @@ Sans Builder, voici les problèmes rencontrés :
 
 **Flux de construction avec Builder** :
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant D as Director
-    participant B as Builder
-    participant P as Produit
-
-    C->>D: construire()
-    D->>B: buildPartA()
-    D->>B: buildPartB()
-    D->>B: buildPartC()
-    D->>B: getResult()
-    B-->>D: Produit construit
-    D-->>C: Produit final
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-04-patterns-creation-2.html">Builder (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-04-patterns-creation-2.html" title="Builder" style="width:100%;min-height:560px;border:0;background:transparent"></iframe>
+</div>
 
 Le Director orchestre les étapes dans le bon ordre. Le Builder assemble le produit pièce par pièce. Le client n'a pas besoin de connaître les détails de construction.
 

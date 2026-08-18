@@ -304,17 +304,10 @@ Sans réglementation des transferts, voici les problèmes rencontrés :
 
 **Procédure de contrôle** :
 
-```mermaid
-flowchart TD
-    A[Plainte ou contrôle d'initiative] --> B[Investigation]
-    B --> C{Conformité ?}
-    C -->|Oui| D[Clôture du dossier]
-    C -->|Non| E[Mise en demeure]
-    E --> F{Mise en conformité ?}
-    F -->|Oui| G[Clôture]
-    F -->|Non| H[Sanction]
-    H --> I[Publication de la décision]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/26-droit-rgpd-04-conformite-pratique-1.html">Le rôle de la CNIL (HTML + SVG)</a></p>
+<iframe src="../../diagrams/26-droit-rgpd-04-conformite-pratique-1.html" title="Le rôle de la CNIL" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

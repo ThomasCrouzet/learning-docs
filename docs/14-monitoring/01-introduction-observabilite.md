@@ -213,21 +213,10 @@ Avant d'installer quoi que ce soit, comprends l'architecture de la stack que tu 
 
 Voici le schéma de la stack complète :
 
-```mermaid
-flowchart BT
-    APP["Application Symfony"]
-
-    APP -->|endpoint /metrics| PROM["Prometheus\n(Métriques)"]
-    APP -->|fichiers de logs| PROMTAIL["Promtail\n(Agent)"]
-    APP -->|SDK OpenTelemetry| OTEL["OTEL\n(SDK PHP)"]
-
-    PROMTAIL --> LOKI["Loki\n(Logs)"]
-    OTEL --> TEMPO["Tempo\n(Traces)"]
-
-    PROM --> GRAFANA["Grafana\n(Visualisation unifiée)"]
-    LOKI --> GRAFANA
-    TEMPO --> GRAFANA
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/14-monitoring-01-introduction-observabilite-1.html">Étape 1 : Visualiser la stack d&#x27;observabilité (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-01-introduction-observabilite-1.html" title="Étape 1 : Visualiser la stack d&#x27;observabilité" style="width:100%;min-height:496px;border:0;background:transparent"></iframe>
+</div>
 
 Ce schéma montre que :
 

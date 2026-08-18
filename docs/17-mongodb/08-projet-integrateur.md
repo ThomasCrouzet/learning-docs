@@ -60,12 +60,10 @@ Une API REST pour une librairie en ligne avec :
 
 ### Architecture de l'application
 
-```mermaid
-graph TD
-    CLIENT["Client HTTP\n(Postman / curl)"] -->|Requetes HTTP| EXPRESS["Express\n(Routes API)"]
-    EXPRESS --> MONGOOSE["Mongoose\n(Schemas + Models)"]
-    MONGOOSE --> MONGO["MongoDB\n(Docker)"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/17-mongodb-08-projet-integrateur-1.html">Architecture de l&#x27;application (HTML + SVG)</a></p>
+<iframe src="../../diagrams/17-mongodb-08-projet-integrateur-1.html" title="Architecture de l&#x27;application" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 **Structure du projet** :
 

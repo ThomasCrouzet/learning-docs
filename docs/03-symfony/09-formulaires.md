@@ -132,15 +132,10 @@ Symfony propose de nombreux types de champs prédéfinis :
 
 Le diagramme suivant illustre le flux complet d'un formulaire Symfony, de la définition du FormType jusqu'à la sauvegarde en base :
 
-```mermaid
-flowchart TD
-    formType[FormType<br>Définit les champs] --> render[Twig<br>Affiche le formulaire]
-    render --> submit[Utilisateur<br>Soumet le formulaire]
-    submit --> handle[handleRequest<br>Traite les données]
-    handle --> valid{isValid ?}
-    valid -->|Oui| save[Sauvegarder en BDD]
-    valid -->|Non| render
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-09-formulaires-1.html">Le cycle de vie d&#x27;un formulaire (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-09-formulaires-1.html" title="Le cycle de vie d&#x27;un formulaire" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 Sous forme textuelle :
 

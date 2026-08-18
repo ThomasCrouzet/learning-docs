@@ -38,17 +38,10 @@ cursus: "React"
 2. **Maintenance difficile** : ajouter ou modifier une prop nécessite de modifier tous les composants intermédiaires.
 3. **Composants pollués** : les composants intermédiaires reçoivent des props dont ils n'ont pas besoin.
 
-```mermaid
-flowchart TD
-    subgraph drilling["Prop Drilling"]
-        A1["App\n(possède le thème)"] -->|theme| L1["Layout\n(ne l'utilise pas)"]
-        L1 -->|theme| S1["Sidebar\n(ne l'utilise pas)"]
-        S1 -->|theme| B1["Bouton\n(l'utilise)"]
-    end
-    subgraph context["Avec Context"]
-        A2["App + Provider"] -.-> B2["Bouton\nuseContext()"]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-10-context-etat-global-1.html">Qu&#x27;est-ce que le prop drilling ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-10-context-etat-global-1.html" title="Qu&#x27;est-ce que le prop drilling ?" style="width:100%;min-height:824px;border:0;background:transparent"></iframe>
+</div>
 
 Avec le prop drilling, chaque composant intermédiaire transmet les props sans les utiliser. Avec le Context, le Bouton accède directement aux données du Provider.
 
@@ -78,11 +71,10 @@ Sans Context :
 
 **Le flux du Context en 3 étapes** :
 
-```mermaid
-flowchart LR
-    CC["1. createContext()"] --> P["2. Provider\nfournit la valeur"]
-    P --> UC["3. useContext()\nconsomme la valeur"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-10-context-etat-global-2.html">Qu&#x27;est-ce que le Context API ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-10-context-etat-global-2.html" title="Qu&#x27;est-ce que le Context API ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que le Context n'est PAS** :
 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qu&#x27;est-ce qu&#x27;un hyperviseur ?</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper: #f5f5f5;
+      --color-ink: #2d3142;
+      --color-muted: #4f5d75;
+      --color-accent: #eb6c36;
+      --font-sans: system-ui, 'Segoe UI', sans-serif;
+      --font-serif: Georgia, 'Iowan Old Style', serif;
+      --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+    .frame { max-width: 1200px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    svg { width: 100%; min-width: 720px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">layers · Diagram Design</p>
+    <h1>Qu&#x27;est-ce qu&#x27;un hyperviseur ?</h1>
+    <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="24-virtualisation-01-concepts-virtualisation-1-title 24-virtualisation-01-concepts-virtualisation-1-desc">
+      <title id="24-virtualisation-01-concepts-virtualisation-1-title">Qu&#x27;est-ce qu&#x27;un hyperviseur ?</title>
+      <desc id="24-virtualisation-01-concepts-virtualisation-1-desc">Deux piles d&#x27;hyperviseurs : type 1 directement sur le matériel, type 2 au-dessus de l&#x27;OS hôte, chacune portant des machines virtuelles.</desc>
+      <defs>
+        <marker id="24-virtualisation-01-concepts-virtualisation-1-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="24-virtualisation-01-concepts-virtualisation-1-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        <marker id="24-virtualisation-01-concepts-virtualisation-1-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+      <rect x="32" y="28" width="360" height="344" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <rect x="44" y="32" width="132" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="110" y="42" fill="rgba(45,49,66,0.40)" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">TYPE 1 · BARE-METAL</text>
+
+      <rect x="408" y="28" width="360" height="344" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <rect x="420" y="32" width="100" height="12" rx="2" fill="#f5f5f5"/>
+      <text x="470" y="42" fill="rgba(45,49,66,0.40)" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle" letter-spacing="0.14em">TYPE 2 · HOSTED</text>
+
+      <path d="M 92 116 L 92 132" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+      <path d="M 212 116 L 212 132" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+      <path d="M 332 116 L 332 132" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+      <path d="M 212 184 L 212 200" fill="none" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow-accent)"/>
+
+      <path d="M 508 116 L 508 132" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+      <path d="M 668 116 L 668 132" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+      <path d="M 588 184 L 588 200" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+      <path d="M 588 252 L 588 268" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-1-arrow)"/>
+
+      <rect x="48" y="64" width="88" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="48" y="64" width="88" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="92" y="96" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">VM A</text>
+
+      <rect x="168" y="64" width="88" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="168" y="64" width="88" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="212" y="96" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">VM B</text>
+
+      <rect x="288" y="64" width="88" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="288" y="64" width="88" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="332" y="96" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">VM C</text>
+
+      <rect x="80" y="132" width="264" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="80" y="132" width="264" height="52" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="212" y="156" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Hyperviseur type 1</text>
+      <text x="212" y="172" fill="#4f5d75" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">ESXi · Proxmox · Hyper-V</text>
+
+      <rect x="80" y="200" width="264" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="80" y="200" width="264" height="52" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="212" y="232" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Matériel physique</text>
+
+      <text x="212" y="280" fill="#7a8399" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">accès direct au matériel</text>
+      <text x="212" y="296" fill="#7a8399" font-size="8" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Production, datacenter</text>
+
+      <rect x="464" y="64" width="88" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="464" y="64" width="88" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="508" y="96" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">VM A</text>
+
+      <rect x="624" y="64" width="88" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="624" y="64" width="88" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="668" y="96" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">VM B</text>
+
+      <rect x="456" y="132" width="264" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="456" y="132" width="264" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="588" y="156" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Hyperviseur type 2</text>
+      <text x="588" y="172" fill="#4f5d75" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">VirtualBox · VMware · QEMU</text>
+
+      <rect x="456" y="200" width="264" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="456" y="200" width="264" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="588" y="232" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">OS hôte</text>
+
+      <rect x="456" y="268" width="264" height="52" rx="6" fill="#f5f5f5"/>
+      <rect x="456" y="268" width="264" height="52" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+      <text x="588" y="300" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Matériel physique</text>
+
+      <text x="588" y="344" fill="#7a8399" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" text-anchor="middle">passe par l&#x27;OS hôte</text>
+      <text x="588" y="360" fill="#7a8399" font-size="8" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Développement, tests</text>
+
+      <line x1="32" y1="396" x2="768" y2="396" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="32" y="416" fill="#4f5d75" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">LEGEND</text>
+      <rect x="104" y="408" width="12" height="8" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+      <text x="124" y="416" fill="#4f5d75" font-size="8" font-family="system-ui, 'Segoe UI', sans-serif">accès direct</text>
+      <rect x="228" y="408" width="12" height="8" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="248" y="416" fill="#4f5d75" font-size="8" font-family="system-ui, 'Segoe UI', sans-serif">couche intermédiaire</text>
+    </svg>
+  </div>
+</body>
+</html>

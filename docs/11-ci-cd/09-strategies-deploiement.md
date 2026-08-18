@@ -78,23 +78,10 @@ Sans blue-green, voici les problèmes rencontrés :
 
 **Schéma du blue-green** :
 
-```mermaid
-flowchart TD
-    subgraph before["Avant le déploiement"]
-        LB1["Load Balancer"] -->|100%| B1["Blue v1.0\nEn service"]
-        G1["Green\nInactif"]
-    end
-    subgraph during["Pendant le déploiement"]
-        LB2["Load Balancer"] -->|100%| B2["Blue v1.0\nEn service"]
-        G2["Green v2.0\nPrêt"]
-    end
-    subgraph after["Après le basculement"]
-        LB3["Load Balancer"] -->|100%| G3["Green v2.0\nEn service"]
-        B3["Blue v1.0\nEn attente"]
-    end
-
-    before --> during --> after
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-09-strategies-deploiement-1.html">Qu&#x27;est-ce que le déploiement blue-green ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-09-strategies-deploiement-1.html" title="Qu&#x27;est-ce que le déploiement blue-green ?" style="width:100%;min-height:656px;border:0;background:transparent"></iframe>
+</div>
 
 Le basculement est instantané : le Load Balancer redirige 100% du trafic de Blue vers Green. En cas de problème, le rollback est tout aussi instantané.
 
@@ -126,22 +113,10 @@ Sans canary, voici les problèmes rencontrés :
 
 **Schéma du canary** :
 
-```mermaid
-flowchart TD
-    subgraph p1["Phase 1 - Canary à 5%"]
-        LB1["Load Balancer"] -->|95%| S1["v1.0 stable"]
-        LB1 -->|5%| C1["v2.0 canary"]
-    end
-    subgraph p2["Phase 2 - Canary à 25%"]
-        LB2["Load Balancer"] -->|75%| S2["v1.0 stable"]
-        LB2 -->|25%| C2["v2.0 canary"]
-    end
-    subgraph p3["Phase 3 - Déploiement complet"]
-        LB3["Load Balancer"] -->|100%| C3["v2.0"]
-    end
-
-    p1 --> p2 --> p3
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-09-strategies-deploiement-2.html">Qu&#x27;est-ce que le déploiement canary ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-09-strategies-deploiement-2.html" title="Qu&#x27;est-ce que le déploiement canary ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
+</div>
 
 À chaque phase, les métriques (erreurs, latence) sont mesurées sur le canary. Si un problème est détecté, le canary est retiré et 100% du trafic revient sur v1.0.
 
@@ -182,23 +157,10 @@ Sans rolling update, voici les problèmes rencontrés :
 
 **Schéma du rolling update** :
 
-```mermaid
-flowchart TD
-    subgraph init["État initial"]
-        LB0["Load Balancer"] --> I1["v1.0"] & I2["v1.0"] & I3["v1.0"]
-    end
-    subgraph ph1["Phase 1"]
-        LB1["Load Balancer"] --> A1["v2.0"] & A2["v1.0"] & A3["v1.0"]
-    end
-    subgraph ph2["Phase 2"]
-        LB2["Load Balancer"] --> B1["v2.0"] & B2["v2.0"] & B3["v1.0"]
-    end
-    subgraph ph3["Phase 3"]
-        LB3["Load Balancer"] --> C1["v2.0"] & C2["v2.0"] & C3["v2.0"]
-    end
-
-    init --> ph1 --> ph2 --> ph3
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-09-strategies-deploiement-3.html">Qu&#x27;est-ce que le rolling update ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-09-strategies-deploiement-3.html" title="Qu&#x27;est-ce que le rolling update ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
+</div>
 
 Les instances sont remplacées une par une. Les deux versions coexistent pendant la transition. C'est pourquoi elles doivent être compatibles entre elles.
 

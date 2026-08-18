@@ -91,22 +91,10 @@ Sans pull model, voici les problèmes rencontrés avec le push model :
 
 **Comment fonctionne le scraping** :
 
-```mermaid
-sequenceDiagram
-    participant P as Prometheus
-    participant A as Service A
-    participant B as Service B
-    participant C as Service C
-
-    loop Toutes les 15 secondes
-        P->>A: HTTP GET /metrics
-        A-->>P: métriques
-        P->>B: HTTP GET /metrics
-        B-->>P: métriques
-        P->>C: HTTP GET /metrics
-        C-->>P: métriques
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/14-monitoring-03-prometheus-introduction-1.html">L&#x27;architecture pull model (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-03-prometheus-introduction-1.html" title="L&#x27;architecture pull model" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
+</div>
 
 Prometheus contrôle le rythme du scraping. Les services n'ont pas besoin de savoir que Prometheus existe : ils exposent leur endpoint `/metrics`.
 

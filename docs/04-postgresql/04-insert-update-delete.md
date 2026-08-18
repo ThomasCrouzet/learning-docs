@@ -56,15 +56,10 @@ Sans commandes d'écriture, voici les problèmes rencontrés :
 
 Le diagramme suivant montre les trois opérations DML et leur effet sur une table :
 
-```mermaid
-flowchart TD
-    dml[Opérations DML] --> insert[INSERT<br>Ajouter des lignes]
-    dml --> update[UPDATE<br>Modifier des lignes]
-    dml --> delete[DELETE<br>Supprimer des lignes]
-    insert --> table[(Table)]
-    update --> table
-    delete --> table
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/04-postgresql-04-insert-update-delete-1.html">Qu&#x27;est-ce que les commandes DML d&#x27;écriture ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-04-insert-update-delete-1.html" title="Qu&#x27;est-ce que les commandes DML d&#x27;écriture ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que ces commandes ne sont PAS** :
 

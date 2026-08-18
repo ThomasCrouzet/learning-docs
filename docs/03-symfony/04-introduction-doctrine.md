@@ -69,14 +69,10 @@ Sans ORM, voici les problèmes rencontrés :
 
 Le schéma suivant illustre comment Doctrine fait le pont entre tes classes PHP et les tables SQL :
 
-```mermaid
-graph LR
-    phpClass[Classe PHP<br>Article] <--> doctrine[Doctrine ORM]
-    doctrine <--> table[(Table SQL<br>article)]
-
-    phpClass -.-> prop1[propriété title]
-    table -.-> col1[colonne title]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-04-introduction-doctrine-1.html">Qu&#x27;est-ce qu&#x27;un ORM ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-04-introduction-doctrine-1.html" title="Qu&#x27;est-ce qu&#x27;un ORM ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

@@ -60,14 +60,10 @@ Sans un système de transfert décentralisé, voici les problèmes rencontrès :
 
 Le schéma suivant résume le parcours d'une transaction Bitcoin :
 
-```mermaid
-flowchart TD
-    wallet[Portefeuille] -->|Signe avec clé privée| tx[Transaction]
-    tx --> mempool[Mempool<br>File d'attente]
-    mempool -->|Mineur sélectionne| block[Bloc]
-    block -->|Ajouté a la chaîne| chain[Blockchain]
-    chain --> confirm[Confirmation]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-02-bitcoin-02-transactions-utxos-scripts-1.html">Comment fonctionne un transfert Bitcoin (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-02-bitcoin-02-transactions-utxos-scripts-1.html" title="Comment fonctionne un transfert Bitcoin" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

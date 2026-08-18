@@ -1006,6 +1006,13 @@ function protectUrls(line) {
     idx++;
     return placeholder;
   });
+  // Chemins HTML (iframes diagram-design) : ne pas accentuer le nom de fichier
+  protected_ = protected_.replace(/\b(?:href|src)="[^"]+"/g, (match) => {
+    const placeholder = `\x00ATTR${idx}\x00`;
+    placeholders.push({ placeholder, original: match });
+    idx++;
+    return placeholder;
+  });
   return { line: protected_, placeholders };
 }
 

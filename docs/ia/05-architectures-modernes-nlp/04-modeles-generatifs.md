@@ -70,14 +70,10 @@ Sans VAE, voici les problèmes rencontrés :
 
 #### Architecture du VAE
 
-```mermaid
-flowchart LR
-    IN["Entrée\n(image)"] --> ENC["Encoder\n(CNN)"]
-    ENC --> MU["μ, σ\n(paramètres gaussiens)"]
-    MU --> REP["Reparameterization\nz = μ + σ * ε"]
-    REP --> DEC["Decoder\n(CNN inversé)"]
-    DEC --> OUT["Sortie\n(image reconstruite)"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-1.html">Architecture du VAE (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-1.html" title="Architecture du VAE" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 #### Reparameterization trick
 
@@ -193,13 +189,10 @@ Sans GAN, voici les problèmes rencontrés :
 
 #### Architecture du GAN
 
-```mermaid
-flowchart LR
-    Z["Bruit aléatoire\nz ~ N(0,1)"] --> G["Generator"]
-    G --> |Image fausse| D["Discriminator"]
-    REAL["Données réelles"] --> D
-    D --> OUT["Vrai (1) ou\nFaux (0) ?"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-2.html">Architecture du GAN (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-2.html" title="Architecture du GAN" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ```python
 import torch
@@ -386,15 +379,10 @@ Sans latent diffusion, voici les problèmes rencontrés :
 
 #### Architecture de Stable Diffusion
 
-```mermaid
-flowchart TD
-    TXT["Texte\n'a cat sitting on a chair'"] --> CLIP["CLIP Text Encoder"]
-    CLIP --> |embeddings textuels| UNET
-    NOISE["Bruit z_T"] --> UNET["U-Net + cross-attention\n(espace latent 64x64x4)"]
-    UNET --> Z0["z_0\n(latent débruité)"]
-    Z0 --> DEC["VAE Decoder"]
-    DEC --> IMG["Image finale\n(512x512x3)"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-3.html">Architecture de Stable Diffusion (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-3.html" title="Architecture de Stable Diffusion" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

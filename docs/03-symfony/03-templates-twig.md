@@ -151,13 +151,10 @@ Le template parent définit la structure avec des "blocs" vides. Chaque template
 
 Le diagramme suivant montre comment le template parent définit les blocs, et comment chaque template enfant remplit ses propres blocs :
 
-```mermaid
-graph TD
-    base[base.html.twig<br>Structure HTML] --> page[article/index.html.twig<br>Contenu spécifique]
-    base --> page2[user/profile.html.twig<br>Contenu spécifique]
-    base -->|block body| content[Contenu remplacé]
-    base -->|block title| title[Titre remplacé]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-03-templates-twig-1.html">L&#x27;héritage de templates (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-03-templates-twig-1.html" title="L&#x27;héritage de templates" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Sous forme textuelle :
 

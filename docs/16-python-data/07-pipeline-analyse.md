@@ -55,14 +55,10 @@ Sans pipeline structure, voici les problèmes rencontrés :
 
 **Structure du pipeline** :
 
-```mermaid
-graph TD
-    A[1. Chargement] --> B[2. Exploration initiale]
-    B --> C[3. Nettoyage]
-    C --> D[4. Analyse]
-    D --> E[5. Visualisation]
-    E --> F[6. Export]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/16-python-data-07-pipeline-analyse-1.html">Qu&#x27;est-ce qu&#x27;un pipeline d&#x27;analyse ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/16-python-data-07-pipeline-analyse-1.html" title="Qu&#x27;est-ce qu&#x27;un pipeline d&#x27;analyse ?" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

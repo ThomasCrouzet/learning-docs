@@ -92,14 +92,10 @@ lireFichier("config.json", (erreur1, config) => {
 
 Le schéma suivant illustre les trois états d'une Promise et les transitions entre eux :
 
-```mermaid
-stateDiagram-v2
-    [*] --> Pending: new Promise()
-    Pending --> Fulfilled: resolve(valeur)
-    Pending --> Rejected: reject(erreur)
-    Fulfilled --> [*]: .then(callback)
-    Rejected --> [*]: .catch(callback)
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-09-promises-1.html">Qu&#x27;est-ce qu&#x27;une Promise ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-09-promises-1.html" title="Qu&#x27;est-ce qu&#x27;une Promise ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

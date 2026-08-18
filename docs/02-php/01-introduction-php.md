@@ -97,18 +97,10 @@ Quand tu tapes une adresse dans ton navigateur, voici ce qui se passe (étape pa
 
 Le diagramme suivant résume ce parcours :
 
-```mermaid
-sequenceDiagram
-    participant B as Navigateur
-    participant N as Nginx
-    participant P as PHP-FPM
-
-    B->>N: Requête HTTP GET /page.php
-    N->>P: Transmet le fichier .php
-    P->>P: Exécute le code PHP
-    P-->>N: HTML généré
-    N-->>B: Réponse HTTP 200
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-01-introduction-php-1.html">Comment fonctionne PHP avec Docker ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-01-introduction-php-1.html" title="Comment fonctionne PHP avec Docker ?" style="width:100%;min-height:480px;border:0;background:transparent"></iframe>
+</div>
 
 **Où se trouvent tes fichiers PHP ?**
 

@@ -324,15 +324,10 @@ Sans RAG, voici les problèmes rencontrés :
 
 Le diagramme suivant résume le pipeline RAG lors d'une requête utilisateur :
 
-```mermaid
-flowchart TD
-    query[Question utilisateur] --> embed[Embedding de la question]
-    embed --> search[Recherche vectorielle]
-    search --> docs[Documents pertinents]
-    docs --> prompt[Prompt enrichi<br>Question + Contexte]
-    prompt --> llm[LLM]
-    llm --> answer[Réponse générée<br>à vérifier]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-06-large-language-models-03-rag-retrieval-augmented-generation-1.html">Qu&#x27;est-ce que l&#x27;architecture RAG ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-06-large-language-models-03-rag-retrieval-augmented-generation-1.html" title="Qu&#x27;est-ce que l&#x27;architecture RAG ?" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
+</div>
 
 **Pipeline RAG complet** :
 

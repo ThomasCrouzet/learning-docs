@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine virtuelle vs conteneur</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --color-paper: #f5f5f5;
+      --color-ink: #2d3142;
+      --color-muted: #4f5d75;
+      --color-accent: #eb6c36;
+      --font-sans: system-ui, 'Segoe UI', sans-serif;
+      --font-serif: Georgia, 'Iowan Old Style', serif;
+      --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+    .frame { max-width: 1200px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    svg { width: 100%; min-width: 720px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">architecture · Diagram Design</p>
+    <h1>Machine virtuelle vs conteneur</h1>
+    <svg viewBox="0 0 640 880" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="24-virtualisation-01-concepts-virtualisation-2-title 24-virtualisation-01-concepts-virtualisation-2-desc">
+<title id="24-virtualisation-01-concepts-virtualisation-2-title">Machine virtuelle vs conteneur</title>
+<desc id="24-virtualisation-01-concepts-virtualisation-2-desc">Architecture showing Machine virtuelle vs conteneur.</desc>
+<defs>
+<marker id="24-virtualisation-01-concepts-virtualisation-2-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+<marker id="24-virtualisation-01-concepts-virtualisation-2-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+<marker id="24-virtualisation-01-concepts-virtualisation-2-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+<rect x="32" y="416" width="396" height="368" rx="8" fill="rgba(127,127,127,0.04)" stroke="rgba(45,49,66,0.16)" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="44" y="436" fill="#4f5d75" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">CONTENEUR</text>
+<rect x="32" y="32" width="396" height="368" rx="8" fill="rgba(127,127,127,0.04)" stroke="rgba(45,49,66,0.16)" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="44" y="52" fill="#4f5d75" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">MACHINE VIRTUELLE</text>
+<path d="M 128 124 L 128 152" fill="none" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow-accent)"/>
+<path d="M 128 204 L 128 232" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 208 176 L 228 176 Q 236 176 236 184 L 236 256" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 128 284 L 128 312" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 316 284 L 316 312" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 128 508 L 128 540" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 128 596 L 128 616" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 208 568 L 228 568 Q 236 568 236 576 L 236 640" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 128 668 L 128 696" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<path d="M 316 668 L 316 696" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#24-virtualisation-01-concepts-virtualisation-2-arrow)"/>
+<rect x="48" y="72" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="72" width="160" height="52" rx="6" fill="rgba(235,108,54,0.10)" stroke="#eb6c36" stroke-width="1"/>
+<text x="128" y="104" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Materiel</text>
+<rect x="48" y="152" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="152" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="184" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Hyperviseur</text>
+<rect x="48" y="232" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="232" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="264" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">OS invite A</text>
+<rect x="236" y="232" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="236" y="232" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="316" y="264" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">OS invite B</text>
+<rect x="48" y="312" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="312" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="344" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Application A</text>
+<rect x="236" y="312" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="236" y="312" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="316" y="344" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Application B</text>
+<rect x="48" y="456" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="456" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="488" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Materiel</text>
+<rect x="48" y="540" width="160" height="56" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="540" width="160" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="568" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">OS hote + noyau</text>
+<text x="128" y="580" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">partage</text>
+<rect x="48" y="616" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="616" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="648" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Conteneur A</text>
+<rect x="236" y="616" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="236" y="616" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="316" y="648" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Conteneur B</text>
+<rect x="48" y="696" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="696" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="728" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Application A</text>
+<rect x="236" y="696" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="236" y="696" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="316" y="728" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Application B</text>
+<line x1="30" y1="840" x2="610" y2="840" stroke="rgba(45,49,66,0.16)" stroke-width="0.8"/>
+<text x="30" y="856" fill="#4f5d75" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">LEGEND · ARCHITECTURE · DIAGRAM-DESIGN</text>
+</svg>
+  </div>
+</body>
+</html>

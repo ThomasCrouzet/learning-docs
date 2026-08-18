@@ -293,16 +293,10 @@ Documente le système d'information actuel :
 
 #### Schéma d'architecture actuel
 
-```mermaid
-flowchart TD
-    INET["Internet"] --> FW["Firewall"]
-    FW --> WEB["Site Web\n(Nginx - port 443)"]
-    FW --> CRM["CRM\n(Apache - port 8080)"]
-    FW --> ERP["ERP SAP\n(SAP AS - port 3200)"]
-    WEB --> PG["PostgreSQL\nwebsite_db"]
-    CRM --> MY["MySQL\ncrm_db"]
-    ERP --> ORA["Oracle\nSAP_PROD"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/00-blocs-competences-bc01-besoins-utilisateurs-03-analyse-faisabilite-1.html">Schéma d&#x27;architecture actuel (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-competences-bc01-besoins-utilisateurs-03-analyse-faisabilite-1.html" title="Schéma d&#x27;architecture actuel" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 **Légende** :
 

@@ -85,19 +85,10 @@ Docker fonctionne bien, mais il impose une architecture qui pose des problèmes 
 
 Le schéma suivant illustre la différence d'architecture entre Docker (avec démon central) et Podman (sans démon) :
 
-```mermaid
-graph TD
-    subgraph docker[Docker]
-        client1[Client CLI] --> daemon[Démon dockerd<br>root]
-        daemon --> c1[Conteneur 1]
-        daemon --> c2[Conteneur 2]
-    end
-
-    subgraph podman[Podman]
-        client2[Client CLI] --> c3[Conteneur 1<br>rootless]
-        client2 --> c4[Conteneur 2<br>rootless]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-01-podman-01-introduction-podman-1.html">Qu&#x27;est-ce que Podman ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-01-podman-01-introduction-podman-1.html" title="Qu&#x27;est-ce que Podman ?" style="width:100%;min-height:728px;border:0;background:transparent"></iframe>
+</div>
 
 Avec Docker, toutes les commandes passent par un démon central qui tourne en root. Avec Podman, chaque conteneur est lancé directement par le client CLI, sans intermédiaire et sans droits root.
 

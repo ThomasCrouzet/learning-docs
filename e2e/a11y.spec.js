@@ -4,7 +4,7 @@ const AxeBuilder = require('@axe-core/playwright').default;
 
 /**
  * Pages représentatives de la cartographie (accueil, parcours, fiche,
- * mermaid, tags, index cursus). Le shell MkDocs est partagé par ~700 pages.
+ * diagram-design, tags, index cursus). Le shell MkDocs est partagé par ~700 pages.
  */
 const ROUTES = [
   '/',
@@ -33,7 +33,7 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
  */
 async function gotoStable(page, path) {
   await page.goto(path, { waitUntil: 'networkidle' });
-  // Laisser extra.js / mermaid / labels checklists s'exécuter
+  // Laisser extra.js / labels checklists s'exécuter
   await page.waitForTimeout(1200);
   await page
     .locator('main, [role="main"], .md-content')
@@ -325,6 +325,30 @@ test.describe('Zones scrollables (C13 non-régression)', () => {
       expect(label).toBeTruthy();
     }
   });
+});
+
+test.describe('Diagram-design iframes', () => {
+  const diagramRoutes = [
+    '/02-php/01-introduction-php/',
+    '/03-symfony/07-relations-entites/',
+    '/10-architecture/07-mvc-profondeur/',
+    '/carte-cursus/',
+    '/11-ci-cd/10-projet-integrateur/',
+    '/crypto-monnaies/02-bitcoin/04-reseau-noeuds-mineurs-pools/',
+  ];
+
+  for (const route of diagramRoutes) {
+    test(`SVG rendu dans l'iframe : ${route}`, async ({ page }) => {
+      await gotoStable(page, route);
+      const iframe = page.locator('.diagram-design iframe').first();
+      await expect(iframe).toBeVisible();
+      const src = await iframe.getAttribute('src');
+      expect(src).toMatch(/diagrams\/[A-Za-z0-9._-]+\.html$/);
+      const frame = page.frameLocator('.diagram-design iframe').first();
+      await expect(frame.locator('svg[role="img"]')).toBeVisible();
+      await expect(frame.locator('svg title')).not.toBeEmpty();
+    });
+  }
 });
 
 test.describe('Mermaid lightbox (si présent)', () => {

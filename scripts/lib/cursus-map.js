@@ -88,33 +88,13 @@ function buildMarkdown(groups) {
     '',
   ];
 
-  // Diagramme de dependances
+  // Diagramme de dependances (HTML + SVG diagram-design, pas Mermaid)
   lines.push('## Dépendances entre cursus');
   lines.push('');
-  lines.push('```mermaid');
-  lines.push('graph LR');
-  lines.push('    Commencer --> Stack[Stack Symfony]');
-  lines.push('    Stack --> JS[JavaScript Moderne]');
-  lines.push('    Stack --> QA[Testing et Qualité]');
-  lines.push('    JS --> TS[TypeScript]');
-  lines.push('    TS --> React');
-  lines.push('    QA --> Archi[Architecture]');
-  lines.push('    Archi --> API[API Design]');
-  lines.push('    Stack --> Infra[Infrastructure]');
-  lines.push('    Infra --> K8s[Kubernetes]');
-  lines.push('    Infra --> Ansible');
-  lines.push('    Epitech([Cursus Epitech])');
-  lines.push('    Cyber([Cybersécurité])');
-  lines.push('    IA([Intelligence Artificielle])');
-  lines.push('    Faust([Faust])');
-  lines.push('    Crypto([Crypto-monnaies])');
-  lines.push('    style Commencer fill:#4CAF50,color:#fff');
-  lines.push('    style Epitech fill:#2196F3,color:#fff');
-  lines.push('    style Cyber fill:#2196F3,color:#fff');
-  lines.push('    style IA fill:#2196F3,color:#fff');
-  lines.push('    style Faust fill:#2196F3,color:#fff');
-  lines.push('    style Crypto fill:#2196F3,color:#fff');
-  lines.push('```');
+  lines.push('<div class="diagram-design">');
+  lines.push('<p><a href="../diagrams/carte-cursus-1.html">Dépendances entre cursus (HTML + SVG)</a></p>');
+  lines.push('<iframe src="../diagrams/carte-cursus-1.html" title="Dépendances entre cursus" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>');
+  lines.push('</div>');
   lines.push('');
   lines.push('Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis et peuvent être suivis directement.');
   lines.push('');

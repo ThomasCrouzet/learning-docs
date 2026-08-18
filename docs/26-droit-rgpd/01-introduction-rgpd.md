@@ -115,17 +115,10 @@ La directive de 1995 laissait chaque pays libre de transposer les règles à sa 
 
 **Vue d'ensemble des principes** :
 
-```mermaid
-graph TD
-    A[Principes du RGPD] --> B[Licéité]
-    A --> C[Loyauté et transparence]
-    A --> D[Limitation des finalités]
-    A --> E[Minimisation des données]
-    A --> F[Exactitude]
-    A --> G[Limitation de conservation]
-    A --> H[Intégrité et confidentialité]
-    A --> I[Responsabilité]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/26-droit-rgpd-01-introduction-rgpd-1.html">Les 7 principes fondamentaux du RGPD (HTML + SVG)</a></p>
+<iframe src="../../diagrams/26-droit-rgpd-01-introduction-rgpd-1.html" title="Les 7 principes fondamentaux du RGPD" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Détail de chaque principe** :
 
@@ -247,18 +240,10 @@ Sans bases légales, voici les problèmes rencontrés :
 
 **Quelle base choisir ?** :
 
-```mermaid
-flowchart TD
-    A[Je veux traiter des données] --> B{La loi m'y oblige ?}
-    B -->|Oui| C[Obligation légale]
-    B -->|Non| D{C'est pour exécuter un contrat ?}
-    D -->|Oui| E[Contrat]
-    D -->|Non| F{J'ai obtenu un consentement explicite ?}
-    F -->|Oui| G[Consentement]
-    F -->|Non| H{Mon intérêt est légitime et proportionné ?}
-    H -->|Oui| I[Intérêts légitimes]
-    H -->|Non| J[Traitement interdit]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/26-droit-rgpd-01-introduction-rgpd-2.html">Les 6 bases légales du traitement (HTML + SVG)</a></p>
+<iframe src="../../diagrams/26-droit-rgpd-01-introduction-rgpd-2.html" title="Les 6 bases légales du traitement" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Attention au consentement** :
 

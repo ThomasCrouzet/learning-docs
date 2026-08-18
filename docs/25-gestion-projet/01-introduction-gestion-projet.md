@@ -81,15 +81,10 @@ Sans découpage en phases, voici les problèmes rencontrés :
 
 **Les phases classiques d'un projet informatique** :
 
-```mermaid
-graph TD
-    A[1. Cadrage] --> B[2. Analyse des besoins]
-    B --> C[3. Conception]
-    C --> D[4. Développement]
-    D --> E[5. Tests]
-    E --> F[6. Déploiement]
-    F --> G[7. Maintenance]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/25-gestion-projet-01-introduction-gestion-projet-1.html">Qu&#x27;est-ce que le cycle de vie d&#x27;un projet ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/25-gestion-projet-01-introduction-gestion-projet-1.html" title="Qu&#x27;est-ce que le cycle de vie d&#x27;un projet ?" style="width:100%;min-height:756px;border:0;background:transparent"></iframe>
+</div>
 
 | Phase | Activité principale | Livrable |
 | --- | --- | --- |
@@ -196,12 +191,10 @@ Sans cette vision, voici les problèmes rencontrés :
 | Décisions sans analyse | Chaque décision est évaluée sur les trois axes |
 | Conflits dans l'équipe | Cadre objectif pour arbitrer les priorités |
 
-```mermaid
-graph TD
-    Q[Qualité] --- C[Coût]
-    C --- D[Délai]
-    D --- Q
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/25-gestion-projet-01-introduction-gestion-projet-2.html">Qu&#x27;est-ce que le triangle qualité/coût/délai ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/25-gestion-projet-01-introduction-gestion-projet-2.html" title="Qu&#x27;est-ce que le triangle qualité/coût/délai ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Les trois contraintes** :
 

@@ -55,11 +55,10 @@ Sans outil E2E, voici les problèmes rencontrés :
 
 Le schéma suivant illustre la pyramide des tests. Les tests E2E (comme ceux écrits avec Playwright) se situent au sommet : ils sont peu nombreux et lents, mais couvrent des parcours complets :
 
-```mermaid
-graph TD
-    e2e[Tests E2E<br>Peu nombreux, lents] --> integration[Tests d'intégration<br>Nombre moyen]
-    integration --> unit[Tests unitaires<br>Nombreux, rapides]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/09-testing-07-tests-e2e-playwright-1.html">Qu&#x27;est-ce que Playwright ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/09-testing-07-tests-e2e-playwright-1.html" title="Qu&#x27;est-ce que Playwright ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que Playwright n'est PAS** :
 

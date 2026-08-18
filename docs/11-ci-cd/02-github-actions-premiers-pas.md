@@ -96,15 +96,10 @@ Workflow (fichier .yml)
 
 Le schéma suivant illustre la structure hiérarchique d'un workflow GitHub Actions :
 
-```mermaid
-graph TD
-    event[Événement<br>push, pull_request] --> workflow[Workflow<br>.github/workflows/ci.yml]
-    workflow --> job1[Job 1 : test]
-    workflow --> job2[Job 2 : build]
-    job1 --> step1[Step 1 : Checkout]
-    job1 --> step2[Step 2 : Setup Node]
-    job1 --> step3[Step 3 : npm test]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-02-github-actions-premiers-pas-1.html">Qu&#x27;est-ce qu&#x27;un workflow ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-02-github-actions-premiers-pas-1.html" title="Qu&#x27;est-ce qu&#x27;un workflow ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 Un événement Git déclenche un workflow. Le workflow contient un ou plusieurs jobs qui s'exécutent en parallèle (ou en séquence avec `needs`). Chaque job contient des steps qui s'exécutent dans l'ordre.
 

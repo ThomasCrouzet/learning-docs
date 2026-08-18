@@ -131,12 +131,10 @@ Sans StorageClass :
 
 Le schéma suivant illustre la hiérarchie du stockage persistant dans Kubernetes :
 
-```mermaid
-graph TD
-    pod[Pod] -->|monte| pvc[PersistentVolumeClaim<br>Demande de stockage]
-    pvc -->|lié à| pv[PersistentVolume<br>Stockage réel]
-    sc[StorageClass<br>Provisionnement auto] -->|crée| pv
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-07-volumes-persistance-1.html">Qu&#x27;est-ce qu&#x27;une StorageClass ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-07-volumes-persistance-1.html" title="Qu&#x27;est-ce qu&#x27;une StorageClass ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le Pod monte un PVC (sa demande de stockage). Le PVC est lié à un PV (le stockage réel). La StorageClass peut créer automatiquement le PV quand un PVC est créé (provisionnement dynamique).
 

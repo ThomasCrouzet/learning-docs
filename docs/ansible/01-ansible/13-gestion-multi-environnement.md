@@ -61,12 +61,10 @@ Sans gestion multi-environnement, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment un playbook commun est utilisé avec des inventaires et variables différents par environnement.
 
-```mermaid
-graph TD
-    playbook[Playbook commun] --> dev[Inventaire dev<br>Variables dev]
-    playbook --> staging[Inventaire staging<br>Variables staging]
-    playbook --> prod[Inventaire prod<br>Variables prod]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-13-gestion-multi-environnement-1.html">Qu&#x27;est-ce que la gestion multi-environnement ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-13-gestion-multi-environnement-1.html" title="Qu&#x27;est-ce que la gestion multi-environnement ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que la gestion multi-environnement n'est PAS** :
 

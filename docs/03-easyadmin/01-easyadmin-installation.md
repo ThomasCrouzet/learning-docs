@@ -155,13 +155,10 @@ Sans migrations, voici les problèmes rencontrés :
 
 Le schéma suivant illustre le flux de travail des migrations Doctrine, de l'entité PHP jusqu'à la base de données :
 
-```mermaid
-flowchart LR
-    entity[Entité PHP] --> makeMigration[make:migration]
-    makeMigration --> file[Fichier migration]
-    file --> migrate[doctrine:migrations:migrate]
-    migrate --> db[(Base de données)]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-easyadmin-01-easyadmin-installation-1.html">Qu&#x27;est-ce qu&#x27;une migration ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-easyadmin-01-easyadmin-installation-1.html" title="Qu&#x27;est-ce qu&#x27;une migration ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 En résumé :
 
@@ -224,14 +221,10 @@ Pour chaque entité, tu as besoin des mêmes fonctionnalités :
 
 Le schéma suivant montre comment le Dashboard, les CRUD Controllers et les entités s'articulent dans EasyAdmin :
 
-```mermaid
-graph TD
-    dashboard[DashboardController] --> menu[Menu Items]
-    menu --> crud1[ArticleCrudController]
-    menu --> crud2[UserCrudController]
-    crud1 --> entity1[Entité Article]
-    crud2 --> entity2[Entité User]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-easyadmin-01-easyadmin-installation-2.html">Architecture EasyAdmin (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-easyadmin-01-easyadmin-installation-2.html" title="Architecture EasyAdmin" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 Le DashboardController est le point d'entrée. Il définit un menu dont chaque élément pointe vers un CRUD Controller. Chaque CRUD Controller gère les opérations sur une entité Doctrine.
 

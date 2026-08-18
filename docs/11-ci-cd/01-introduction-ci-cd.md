@@ -136,12 +136,10 @@ Sans pipeline, voici les problèmes rencontrés :
 
 **Structure typique d'un pipeline** :
 
-```mermaid
-flowchart LR
-    L["Lint\nVérifie le formatage"] --> T["Tests\nExécute les tests auto."]
-    T --> B["Build\nCompile le code\n/ image Docker"]
-    B --> D["Deploy\nEnvoie en production"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-01-introduction-ci-cd-1.html">Qu&#x27;est-ce qu&#x27;un pipeline ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-01-introduction-ci-cd-1.html" title="Qu&#x27;est-ce qu&#x27;un pipeline ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Si une étape échoue, le pipeline s'arrête. Les étapes suivantes ne s'exécutent pas.
 
@@ -171,21 +169,10 @@ Dans ce cursus, tu apprendras **GitHub Actions** (fiches 2 à 5) et **GitLab CI*
 
 **Flux typique** :
 
-```mermaid
-sequenceDiagram
-    participant Dev as Développeur
-    participant Git as Git
-    participant CI as Pipeline CI/CD
-
-    Dev->>Git: git push
-    Git->>CI: déclenche
-    CI->>CI: lint
-    CI->>CI: tests
-    CI->>CI: build
-    CI->>CI: deploy
-    CI-->>Git: résultat
-    Git-->>Dev: notification (succès/échec)
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-01-introduction-ci-cd-2.html">Comment la CI/CD s&#x27;intègre avec Git (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-01-introduction-ci-cd-2.html" title="Comment la CI/CD s&#x27;intègre avec Git" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
+</div>
 
 **Événements Git qui déclenchent un pipeline** :
 
@@ -531,11 +518,10 @@ DÉCLENCHEUR : git push sur n'importe quelle branche
 
 **Schéma résumé** :
 
-```mermaid
-flowchart LR
-    PUSH["push"] --> LINT["Lint"] --> TEST["Tests"] --> BUILD["Build"] --> STG["Deploy\nStaging"]
-    STG --> |Validation\nmanuelle| PROD["Deploy\nProduction"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-01-introduction-ci-cd-3.html">Solution de l&#x27;Exercice (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-01-introduction-ci-cd-3.html" title="Solution de l&#x27;Exercice" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

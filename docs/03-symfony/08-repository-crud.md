@@ -52,13 +52,10 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Le diagramme suivant montre les quatre opérations CRUD et les méthodes Doctrine associées :
 
-```mermaid
-flowchart TD
-    crud[Opérations CRUD] --> create[Create<br>persist + flush]
-    crud --> read[Read<br>find / findBy]
-    crud --> update[Update<br>modifier + flush]
-    crud --> delete[Delete<br>remove + flush]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-08-repository-crud-1.html">Qu&#x27;est-ce que CRUD ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-08-repository-crud-1.html" title="Qu&#x27;est-ce que CRUD ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

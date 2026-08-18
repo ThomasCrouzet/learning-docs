@@ -106,16 +106,10 @@ roles/
 
 Le schéma suivant illustre la structure d'un rôle Ansible et ses sous-répertoires :
 
-```mermaid
-graph TD
-    role[Rôle : nginx] --> tasks[tasks/<br>main.yml]
-    role --> handlers[handlers/<br>main.yml]
-    role --> templates[templates/<br>nginx.conf.j2]
-    role --> vars[vars/<br>main.yml]
-    role --> defaults[defaults/<br>main.yml]
-    role --> files[files/]
-    role --> meta[meta/<br>main.yml]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-10-roles-1.html">Quelle est la structure d&#x27;un rôle ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-10-roles-1.html" title="Quelle est la structure d&#x27;un rôle ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque sous-répertoire a un rôle précis : `tasks/` contient les actions, `handlers/` les réactions aux changements, `templates/` les fichiers dynamiques, `vars/` et `defaults/` les variables, `files/` les fichiers statiques, et `meta/` les métadonnées.
 

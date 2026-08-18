@@ -136,14 +136,10 @@ Sans cette séparation, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment un même code Faust est compilé vers différentes architectures cibles :
 
-```mermaid
-graph TD
-    dsp[Code Faust<br>DSP] --> compiler[Compilateur Faust]
-    compiler --> jack[Architecture JACK]
-    compiler --> alsa[Architecture ALSA]
-    compiler --> vst[Architecture VST]
-    compiler --> web[Architecture Web Audio]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/faust-05-deploiement-architectures-01-systeme-architectures-faust-1.html">Comment fonctionne la séparation DSP / UI / Audio ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-05-deploiement-architectures-01-systeme-architectures-faust-1.html" title="Comment fonctionne la séparation DSP / UI / Audio ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

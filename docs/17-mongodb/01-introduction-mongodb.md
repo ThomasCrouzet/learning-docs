@@ -223,16 +223,10 @@ Sans BSON, voici les problèmes rencontrés :
 - Gros volumes de données avec besoin de scalabilité horizontale
 - Données naturellement imbriquées (articles avec commentaires)
 
-```mermaid
-flowchart TD
-    Q1{Tes donnees ont des<br>relations complexes ?}
-    Q1 -->|Oui| PG[PostgreSQL]
-    Q1 -->|Non| Q2{Ton schema<br>evolue souvent ?}
-    Q2 -->|Oui| MG[MongoDB]
-    Q2 -->|Non| Q3{Tu sers du JSON<br>a une API REST ?}
-    Q3 -->|Oui| MG
-    Q3 -->|Non| PG
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/17-mongodb-01-introduction-mongodb-1.html">MongoDB vs PostgreSQL : quand choisir quoi ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/17-mongodb-01-introduction-mongodb-1.html" title="MongoDB vs PostgreSQL : quand choisir quoi ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

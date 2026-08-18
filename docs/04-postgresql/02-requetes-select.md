@@ -58,15 +58,10 @@ OFFSET nombre;            -- Sauter des résultats (pagination)
 
 Le schéma suivant illustre l'ordre réel dans lequel PostgreSQL exécute les clauses d'un SELECT :
 
-```mermaid
-flowchart TD
-    from["1. FROM<br>Quelle table ?"] --> where["2. WHERE<br>Filtrer les lignes"]
-    where --> group["3. GROUP BY<br>Regrouper"]
-    group --> having["4. HAVING<br>Filtrer les groupes"]
-    having --> select["5. SELECT<br>Choisir les colonnes"]
-    select --> orderby["6. ORDER BY<br>Trier"]
-    orderby --> limit["7. LIMIT<br>Limiter le nombre"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/04-postgresql-02-requetes-select-1.html">La structure d&#x27;une requête SELECT (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-02-requetes-select-1.html" title="La structure d&#x27;une requête SELECT" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Imagine une bibliothèque. SELECT est comme dire au bibliothécaire :
 

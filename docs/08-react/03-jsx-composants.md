@@ -469,16 +469,10 @@ export default MessageAccueil;
 
 Le schéma suivant illustre comment les composants React forment une arborescence, du composant racine `App` jusqu'aux composants les plus spécifiques :
 
-```mermaid
-graph TD
-    app[App] --> header[Header]
-    app --> main[Main]
-    app --> footer[Footer]
-    main --> sidebar[Sidebar]
-    main --> content[Content]
-    content --> article1[Article]
-    content --> article2[Article]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-03-jsx-composants-1.html">Étape 6 : Composer des composants ensemble (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-03-jsx-composants-1.html" title="Étape 6 : Composer des composants ensemble" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 Crée `src/components/Footer.tsx` :
 

@@ -118,15 +118,10 @@ Sans ces méthodes, déployer une application nécessite d'écrire manuellement 
 
 Le schéma suivant illustre les trois méthodes de déploiement et leur chemin vers un Pod :
 
-```mermaid
-graph TD
-    deploy[Déployer sur OpenShift] --> yaml[Méthode 1<br>Fichiers YAML]
-    deploy --> newapp[Méthode 2<br>oc new-app]
-    deploy --> s2i[Méthode 3<br>Source-to-Image]
-    yaml --> pod1[Pod]
-    newapp --> pod2[Pod]
-    s2i -->|Code source vers Image| pod3[Pod]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-02-openshift-03-deploiement-application-1.html">Les 3 méthodes de déploiement sur OpenShift (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-02-openshift-03-deploiement-application-1.html" title="Les 3 méthodes de déploiement sur OpenShift" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque méthode aboutit à un Pod en cours d'exécution. La méthode 1 offre un contrôle total, la méthode 2 automatise la création des ressources, et la méthode 3 construit l'image directement depuis le code source.
 

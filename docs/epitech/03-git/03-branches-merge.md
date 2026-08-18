@@ -61,19 +61,10 @@ Sans branches, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment les commits divergent sur une branche et se rejoignent lors du merge.
 
-```mermaid
-graph LR
-    c1((C1)) --> c2((C2))
-    c2 --> c3((C3))
-    c2 --> f1((F1))
-    f1 --> f2((F2))
-    c3 --> merge((Merge))
-    f2 --> merge
-
-    c3 -.- main[main]
-    f2 -.- feature[feature]
-    merge -.- merged[main après merge]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-03-git-03-branches-merge-1.html">Visualisation des branches (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-03-git-03-branches-merge-1.html" title="Visualisation des branches" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Une branche linéaire** :
 

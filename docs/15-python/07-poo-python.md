@@ -55,26 +55,10 @@ Sans POO, voici les problèmes rencontrés :
 
 ---
 
-```mermaid
-classDiagram
-    class Animal {
-        +nom: str
-        +age: int
-        +__init__(nom, age)
-        +parler() str
-        +__str__() str
-    }
-    class Chien {
-        +race: str
-        +parler() str
-    }
-    class Chat {
-        +couleur: str
-        +parler() str
-    }
-    Animal <|-- Chien
-    Animal <|-- Chat
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/15-python-07-poo-python-1.html">Qu&#x27;est-ce que la POO ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/15-python-07-poo-python-1.html" title="Qu&#x27;est-ce que la POO ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

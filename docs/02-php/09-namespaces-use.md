@@ -60,15 +60,10 @@ Sans namespaces, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment les namespaces organisent les classes en arborescence :
 
-```mermaid
-graph TD
-    app[App] --> entity[App\Entity]
-    app --> controller[App\Controller]
-    app --> service[App\Service]
-    entity --> user[User.php]
-    entity --> article[Article.php]
-    controller --> main[MainController.php]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-09-namespaces-use-1.html">Qu&#x27;est-ce qu&#x27;un namespace ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-09-namespaces-use-1.html" title="Qu&#x27;est-ce qu&#x27;un namespace ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

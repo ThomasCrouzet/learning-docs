@@ -74,16 +74,10 @@ Un pipeline CI/CD complet pour un projet Symfony + React qui automatise :
 
 **Pipeline CI/CD** :
 
-```mermaid
-flowchart TD
-    PUSH["push"] --> LB["Lint Backend"] & LF["Lint Frontend"]
-    LB --> TB["Tests Backend"]
-    LF --> TF["Tests Frontend"]
-    TB --> BB["Build Backend"]
-    TF --> BF["Build Frontend"]
-    BB & BF --> STG["Deploy Staging"]
-    STG --> |Approbation manuelle| PROD["Deploy Production\n(blue-green switch)"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-10-projet-integrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-10-projet-integrateur-1.html" title="Architecture du projet" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Rôle de chaque composant** :
 
@@ -1239,20 +1233,10 @@ find . -type f -not -path './.git/*' | sort
 
 **Récapitulatif du pipeline complet** :
 
-```mermaid
-flowchart TD
-    subgraph CI["Étape 1 : CI (push et PR)"]
-        LB["Lint Backend"] & LF["Lint Frontend"]
-        LB --> TB["Test Backend"]
-        LF --> TF["Test Frontend"]
-        TB & TF --> BUILD["Build Docker\n(push image si main)"]
-    end
-    subgraph CD["Étape 2 : CD (main uniquement)"]
-        STG["Staging\n(health check)"]
-        STG -->|Approbation manuelle| PROD["Production\n(blue-green + rollback auto)"]
-    end
-    BUILD --> STG
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-10-projet-integrateur-2.html">Affiche la structure du projet (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-10-projet-integrateur-2.html" title="Affiche la structure du projet" style="width:100%;min-height:772px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

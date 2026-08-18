@@ -69,20 +69,10 @@ Sans séparation claire entre frontend et backend :
 
 Le schéma suivant illustre comment le navigateur, Symfony et JavaScript interagissent dans cette architecture :
 
-```mermaid
-graph LR
-    browser[Navigateur] -->|Requête HTTP| symfony[Symfony<br>PHP côté serveur]
-    symfony -->|HTML + JS| browser
-    browser --> js[JavaScript<br>Côté client]
-    js -->|Interaction DOM| browser
-
-    subgraph backend[Côté serveur]
-        symfony
-    end
-    subgraph frontend[Côté client]
-        js
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/05-javascript-01-javascript-dans-symfony-1.html">Qu&#x27;est-ce que le frontend et le backend dans Symfony ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/05-javascript-01-javascript-dans-symfony-1.html" title="Qu&#x27;est-ce que le frontend et le backend dans Symfony ?" style="width:100%;min-height:564px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

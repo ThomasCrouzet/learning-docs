@@ -74,15 +74,10 @@ Sans réseau, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre l'empilement des 7 couches du modèle OSI, de l'application jusqu'au support physique :
 
-```mermaid
-graph TD
-    l7[Couche 7 - Application<br>HTTP, DNS, SMTP] --> l6[Couche 6 - Présentation<br>SSL/TLS, compression]
-    l6 --> l5[Couche 5 - Session<br>Connexions]
-    l5 --> l4[Couche 4 - Transport<br>TCP, UDP]
-    l4 --> l3[Couche 3 - Réseau<br>IP, ICMP]
-    l3 --> l2[Couche 2 - Liaison<br>Ethernet, Wi-Fi]
-    l2 --> l1[Couche 1 - Physique<br>Câbles, signaux]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-03-reseaux-protocoles-1.html">Qu&#x27;est-ce que le modèle OSI ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-03-reseaux-protocoles-1.html" title="Qu&#x27;est-ce que le modèle OSI ?" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que le modèle OSI n'est PAS** :
 

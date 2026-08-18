@@ -97,12 +97,10 @@ La monnaie n'a pas toujours été un billet ou un chiffre sur un écran. Elle a 
 
 Le diagramme suivant résume les grandes étapes de cette évolution.
 
-```mermaid
-flowchart LR
-    troc[Troc] --> marchandise[Monnaie-marchandise<br>Or, coquillages]
-    marchandise --> fiat[Monnaie fiduciaire<br>Billets, pièces]
-    fiat --> digital[Monnaie numérique<br>Bitcoin, Ethereum]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-01-fondamentaux-01-monnaie-fonctions-confiance-limites-1.html">L&#x27;évolution historique de la monnaie (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-01-fondamentaux-01-monnaie-fonctions-confiance-limites-1.html" title="L&#x27;évolution historique de la monnaie" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 #### Étape 1 : le troc (avant la monnaie)
 

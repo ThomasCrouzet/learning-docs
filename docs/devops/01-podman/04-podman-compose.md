@@ -67,16 +67,10 @@ Sans podman-compose, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre l'architecture d'une application multi-conteneurs gérée par podman-compose.
 
-```mermaid
-graph TD
-    compose[podman-compose.yml] --> web[Conteneur web<br>Nginx]
-    compose --> app[Conteneur app<br>PHP-FPM]
-    compose --> db[Conteneur db<br>PostgreSQL]
-    web --> net[Réseau partagé]
-    app --> net
-    db --> net
-    db --> vol[(Volume persistant)]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-01-podman-04-podman-compose-1.html">Qu&#x27;est-ce que podman-compose ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-01-podman-04-podman-compose-1.html" title="Qu&#x27;est-ce que podman-compose ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : podman-compose est comme un adaptateur de prise électrique. Tu as un appareil avec une prise européenne (le fichier `docker-compose.yml` conçu pour Docker). Tu veux le brancher sur une prise américaine (Podman). L'adaptateur (podman-compose) permet de brancher l'appareil sans le modifier. L'appareil fonctionne exactement comme avant, mais sur un système différent.
 

@@ -52,25 +52,10 @@ Tu travailles pour une PME fictive "TechNova" qui a besoin d'une architecture rÃ
 
 L'architecture suit le modÃ¨le a 3 zones :
 
-```mermaid
-graph TD
-    Internet[Internet] --> FW[Firewall / Reverse Proxy]
-    FW --> DMZ[DMZ]
-    FW --> LAN[LAN Interne]
-    FW --> ADMIN[VLAN Administration]
-
-    DMZ --> WEB1[Web Serveur 1]
-    DMZ --> WEB2[Web Serveur 2]
-
-    LAN --> API[API Interne]
-    LAN --> DB[(PostgreSQL)]
-    LAN --> MON[Monitoring]
-
-    ADMIN --> VPN[VPN]
-    ADMIN --> WIFI_EMP[Wi-Fi Employes]
-
-    Internet -.-> WIFI_INV[Wi-Fi Invites]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-reseaux-12-projet-integrateur-1.html">Architecture cible (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-12-projet-integrateur-1.html" title="Architecture cible" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ### Plan d'adressage IP
 

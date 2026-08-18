@@ -74,17 +74,10 @@ Sans handlers, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le flux de notification et d'exécution différée d'un handler.
 
-```mermaid
-sequenceDiagram
-    participant T as Tâche
-    participant N as Notification
-    participant H as Handler
-
-    T->>T: Installer Nginx (changed)
-    T->>N: notify: restart nginx
-    Note over N: Exécution différée
-    N->>H: Fin du play → restart nginx
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-09-handlers-tags-1.html">Comment fonctionnent les handlers ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-09-handlers-tags-1.html" title="Comment fonctionnent les handlers ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Le cycle complet d'un handler** :
 

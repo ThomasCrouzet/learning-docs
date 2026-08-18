@@ -419,13 +419,10 @@ $(function() {
 
 Le diagramme suivant illustre le principe du chaînage : chaque méthode retourne l'objet jQuery, ce qui permet d'enchaîner les appels.
 
-```mermaid
-flowchart LR
-    select["$('.element')"] --> method1[.addClass]
-    method1 --> method2[.css]
-    method2 --> method3[.fadeIn]
-    method3 --> result[Objet jQuery<br>retourné à chaque étape]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/05-javascript-04-introduction-jquery-1.html">Étape 11 : Chaîner les méthodes (HTML + SVG)</a></p>
+<iframe src="../../diagrams/05-javascript-04-introduction-jquery-1.html" title="Étape 11 : Chaîner les méthodes" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque méthode jQuery retourne l'objet jQuery, ce qui permet d'enchaîner plusieurs actions sur une seule ligne.
 

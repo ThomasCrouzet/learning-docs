@@ -302,24 +302,10 @@ npx tsc && node dist/interfaces-options.js
 
 Le diagramme suivant illustre comment une classe peut implémenter plusieurs interfaces pour combiner leurs contrats.
 
-```mermaid
-classDiagram
-    class HasId {
-        <<interface>>
-        +number id
-    }
-    class HasName {
-        <<interface>>
-        +string name
-    }
-    class User {
-        +number id
-        +string name
-        +string email
-    }
-    HasId <|.. User
-    HasName <|.. User
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/07-typescript-05-objets-interfaces-1.html">Étape 3 : Extension d&#x27;interfaces (HTML + SVG)</a></p>
+<iframe src="../../diagrams/07-typescript-05-objets-interfaces-1.html" title="Étape 3 : Extension d&#x27;interfaces" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Crée un fichier `src/interfaces-extends.ts` :
 

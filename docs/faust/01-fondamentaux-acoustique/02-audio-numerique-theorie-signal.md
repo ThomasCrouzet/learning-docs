@@ -60,12 +60,10 @@ Sans échantillonnage, voici les problèmes rencontrés :
 
 Le diagramme suivant résume les trois étapes de la conversion analogique-numérique, de l'onde sonore au signal PCM :
 
-```mermaid
-flowchart LR
-    analog[Signal analogique] --> sample[Échantillonnage<br>44 100 Hz]
-    sample --> quant[Quantification<br>16 / 24 bits]
-    quant --> pcm[Signal PCM<br>numérique]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/faust-01-fondamentaux-acoustique-02-audio-numerique-theorie-signal-1.html">Qu&#x27;est-ce que l&#x27;échantillonnage ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-01-fondamentaux-acoustique-02-audio-numerique-theorie-signal-1.html" title="Qu&#x27;est-ce que l&#x27;échantillonnage ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 #### Fréquences d'échantillonnage courantes
 

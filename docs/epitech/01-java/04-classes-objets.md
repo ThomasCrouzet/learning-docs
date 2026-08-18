@@ -102,12 +102,10 @@ class Voiture {
 
 Le diagramme suivant montre la relation entre une classe et ses objets.
 
-```mermaid
-graph TD
-    cls[Classe Voiture<br>Plan / Modèle] --> obj1[ma Voiture<br>rouge, Toyota]
-    cls --> obj2[ta Voiture<br>bleue, Honda]
-    cls --> obj3[sa Voiture<br>noire, BMW]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-01-java-04-classes-objets-1.html">Qu&#x27;est-ce qu&#x27;une classe ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-01-java-04-classes-objets-1.html" title="Qu&#x27;est-ce qu&#x27;une classe ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce qu'un objet ?
 

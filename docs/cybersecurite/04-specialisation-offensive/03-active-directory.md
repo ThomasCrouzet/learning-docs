@@ -70,16 +70,10 @@ Sans Active Directory, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre la hiérarchie des objets dans Active Directory, de la forêt jusqu'aux utilisateurs et groupes :
 
-```mermaid
-graph TD
-    forest[Forêt AD] --> domain1[Domaine corp.local]
-    forest --> domain2[Domaine filiale.local]
-    domain1 --> ou1[OU : Utilisateurs]
-    domain1 --> ou2[OU : Serveurs]
-    domain1 --> ou3[OU : Groupes]
-    ou1 --> user1[Utilisateur]
-    ou3 --> group1[Groupe]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/cybersecurite-04-specialisation-offensive-03-active-directory-1.html">Qu&#x27;est-ce qu&#x27;Active Directory ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-04-specialisation-offensive-03-active-directory-1.html" title="Qu&#x27;est-ce qu&#x27;Active Directory ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce qu'Active Directory n'est PAS** :
 

@@ -98,14 +98,10 @@ var nom = "Alice";
 
 Le diagramme suivant montre comment la portée par bloc fonctionne avec `let`/`const` par rapport à `var`.
 
-```mermaid
-graph TD
-    global[Portée globale] --> func[Portée fonction]
-    func --> block1[Bloc if<br>let/const visibles ici]
-    func --> block2[Bloc for<br>let/const visibles ici]
-    block1 -.->|var remonte à| func
-    block1 -.->|let/const restent dans| block1
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-01-let-const-portee-1.html">Qu&#x27;est-ce que `var` et pourquoi l&#x27;éviter ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-01-let-const-portee-1.html" title="Qu&#x27;est-ce que `var` et pourquoi l&#x27;éviter ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce que `let` ?
 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qu&#x27;est-ce que le modèle de responsabilité partagée ?</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --color-paper: #f5f5f5;
+      --color-ink: #2d3142;
+      --color-muted: #4f5d75;
+      --color-accent: #eb6c36;
+      --font-sans: system-ui, 'Segoe UI', sans-serif;
+      --font-serif: Georgia, 'Iowan Old Style', serif;
+      --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+    .frame { max-width: 1200px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    svg { width: 100%; min-width: 720px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">architecture · Diagram Design</p>
+    <h1>Qu&#x27;est-ce que le modèle de responsabilité partagée ?</h1>
+    <svg viewBox="0 0 640 476" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cybersecurite-06-domaines-avances-01-securite-cloud-1-title cybersecurite-06-domaines-avances-01-securite-cloud-1-desc">
+<title id="cybersecurite-06-domaines-avances-01-securite-cloud-1-title">Qu&#x27;est-ce que le modèle de responsabilité partagée ?</title>
+<desc id="cybersecurite-06-domaines-avances-01-securite-cloud-1-desc">Architecture showing Qu&#x27;est-ce que le modèle de responsabilité partagée ?.</desc>
+<defs>
+<marker id="cybersecurite-06-domaines-avances-01-securite-cloud-1-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+<marker id="cybersecurite-06-domaines-avances-01-securite-cloud-1-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+<marker id="cybersecurite-06-domaines-avances-01-securite-cloud-1-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+<rect x="32" y="176" width="584" height="128" rx="8" fill="rgba(127,127,127,0.04)" stroke="rgba(45,49,66,0.16)" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="44" y="196" fill="#4f5d75" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">RESPONSABILITÉ DU FOURNISSEU</text>
+<rect x="32" y="32" width="584" height="128" rx="8" fill="rgba(127,127,127,0.04)" stroke="rgba(45,49,66,0.16)" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="44" y="52" fill="#4f5d75" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.08em">RESPONSABILITÉ DU CLIENT</text>
+<rect x="48" y="72" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="72" width="160" height="52" rx="6" fill="rgba(235,108,54,0.10)" stroke="#eb6c36" stroke-width="1"/>
+<text x="128" y="104" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Données</text>
+<rect x="236" y="72" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="236" y="72" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="316" y="104" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Applications</text>
+<rect x="424" y="72" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="424" y="72" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="504" y="104" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Configuration</text>
+<rect x="48" y="216" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="216" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="128" y="248" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Infrastructure</text>
+<rect x="236" y="216" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="236" y="216" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="316" y="248" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Réseau</text>
+<rect x="424" y="216" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="424" y="216" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="504" y="248" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">Sécurité physique</text>
+<rect x="32" y="344" width="160" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="32" y="344" width="160" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="112" y="376" fill="#2d3142" font-size="12" font-weight="600" font-family="system-ui, 'Segoe UI', sans-serif" text-anchor="middle">IaaS</text>
+<line x1="30" y1="436" x2="610" y2="436" stroke="rgba(45,49,66,0.16)" stroke-width="0.8"/>
+<text x="30" y="452" fill="#4f5d75" font-size="8" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.14em">LEGEND · ARCHITECTURE · DIAGRAM-DESIGN</text>
+</svg>
+  </div>
+</body>
+</html>

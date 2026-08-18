@@ -83,13 +83,10 @@ Sans apprentissage supervisé, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le pipeline classique d'un projet de ML supervisé, de la collecte des données à la prédiction.
 
-```mermaid
-flowchart LR
-    data[Données] --> split[Train / Test<br>split]
-    split --> train[Entraînement<br>du modèle]
-    train --> eval[Évaluation<br>Métriques]
-    eval --> predict[Prédiction<br>Nouvelles données]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-03-machine-learning-classique-01-apprentissage-supervise-1.html">Qu&#x27;est-ce que l&#x27;apprentissage supervisé ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-03-machine-learning-classique-01-apprentissage-supervise-1.html" title="Qu&#x27;est-ce que l&#x27;apprentissage supervisé ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 
