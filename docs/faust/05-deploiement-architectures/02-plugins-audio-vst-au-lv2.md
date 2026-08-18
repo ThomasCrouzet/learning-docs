@@ -62,8 +62,8 @@ Sans plugins audio, voici les problèmes rencontrés :
 Le diagramme suivant montre le workflow de création d'un plugin audio depuis le code Faust jusqu'à son utilisation dans un DAW.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/faust-05-déploiement-architectures-02-plugins-audio-vst-au-lv2-1.html">Qu&#x27;est-ce qu&#x27;un plugin audio ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/faust-05-déploiement-architectures-02-plugins-audio-vst-au-lv2-1.html" title="Qu&#x27;est-ce qu&#x27;un plugin audio ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/faust-05-deploiement-architectures-02-plugins-audio-vst-au-lv2-1.html">Qu&#x27;est-ce qu&#x27;un plugin audio ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-05-deploiement-architectures-02-plugins-audio-vst-au-lv2-1.html" title="Qu&#x27;est-ce qu&#x27;un plugin audio ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

@@ -60,8 +60,8 @@ Sans cryptographie, voici les problèmes rencontrés :
 Le diagramme suivant présente les trois grandes familles de chiffrement et leurs algorithmes principaux.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/cybersecurite-02-fondamentaux-sécurité-02-cryptographie-1.html">Qu&#x27;est-ce que la cryptographie ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/cybersecurite-02-fondamentaux-sécurité-02-cryptographie-1.html" title="Qu&#x27;est-ce que la cryptographie ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/cybersecurite-02-fondamentaux-securite-02-cryptographie-1.html">Qu&#x27;est-ce que la cryptographie ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-02-fondamentaux-securite-02-cryptographie-1.html" title="Qu&#x27;est-ce que la cryptographie ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ### Fondements mathématiques

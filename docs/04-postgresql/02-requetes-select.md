@@ -59,8 +59,8 @@ OFFSET nombre;            -- Sauter des résultats (pagination)
 Le schéma suivant illustre l'ordre réel dans lequel PostgreSQL exécute les clauses d'un SELECT :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/04-postgresql-02-requêtes-select-1.html">La structure d&#x27;une requête SELECT (HTML + SVG)</a></p>
-<iframe src="../../diagrams/04-postgresql-02-requêtes-select-1.html" title="La structure d&#x27;une requête SELECT" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/04-postgresql-02-requetes-select-1.html">La structure d&#x27;une requête SELECT (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-02-requetes-select-1.html" title="La structure d&#x27;une requête SELECT" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
 </div>
 
 **Analogie concrète** : Imagine une bibliothèque. SELECT est comme dire au bibliothécaire :

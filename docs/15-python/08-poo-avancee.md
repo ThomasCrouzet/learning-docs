@@ -53,8 +53,8 @@ Sans héritage multiple, voici les problèmes rencontrés :
 ---
 
 <div class="diagram-design">
-<p><a href="../../diagrams/15-python-08-poo-avancée-1.html">L&#x27;héritage multiple (HTML + SVG)</a></p>
-<iframe src="../../diagrams/15-python-08-poo-avancée-1.html" title="L&#x27;héritage multiple" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/15-python-08-poo-avancee-1.html">L&#x27;héritage multiple (HTML + SVG)</a></p>
+<iframe src="../../diagrams/15-python-08-poo-avancee-1.html" title="L&#x27;héritage multiple" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
 </div>
 
 ---

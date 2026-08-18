@@ -40,8 +40,8 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 Le diagramme suivant résume les trois niveaux de visibilité en PHP :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/02-php-08-classes-en-détail-1.html">La visibilité des propriétés et méthodes (HTML + SVG)</a></p>
-<iframe src="../../diagrams/02-php-08-classes-en-détail-1.html" title="La visibilité des propriétés et méthodes" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/02-php-08-classes-en-detail-1.html">La visibilité des propriétés et méthodes (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-08-classes-en-detail-1.html" title="La visibilité des propriétés et méthodes" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Les trois niveaux de visibilité** :

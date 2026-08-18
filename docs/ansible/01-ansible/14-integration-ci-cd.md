@@ -67,8 +67,8 @@ Sans CI/CD, voici les problèmes rencontrés :
 Le diagramme suivant montre le flux d'un pipeline CI/CD Ansible, du push Git jusqu'au déploiement sur les serveurs.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/ansible-01-ansible-14-intégration-ci-cd-1.html">Qu&#x27;est-ce que l&#x27;intégration CI/CD pour Ansible ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/ansible-01-ansible-14-intégration-ci-cd-1.html" title="Qu&#x27;est-ce que l&#x27;intégration CI/CD pour Ansible ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/ansible-01-ansible-14-integration-ci-cd-1.html">Qu&#x27;est-ce que l&#x27;intégration CI/CD pour Ansible ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-14-integration-ci-cd-1.html" title="Qu&#x27;est-ce que l&#x27;intégration CI/CD pour Ansible ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce que l'intégration CI/CD n'est PAS** :

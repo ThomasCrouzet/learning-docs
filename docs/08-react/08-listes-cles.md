@@ -86,8 +86,8 @@ Sans clés (ou avec de mauvaises clés) :
 Le schéma suivant illustre la différence de comportement de React lors de la réconciliation, selon que les éléments ont des clés uniques ou utilisent l'index du tableau :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/08-react-08-listes-clés-1.html">Qu&#x27;est-ce qu&#x27;une clé (key) ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/08-react-08-listes-clés-1.html" title="Qu&#x27;est-ce qu&#x27;une clé (key) ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/08-react-08-listes-cles-1.html">Qu&#x27;est-ce qu&#x27;une clé (key) ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-08-listes-cles-1.html" title="Qu&#x27;est-ce qu&#x27;une clé (key) ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce que les clés ne sont PAS** :

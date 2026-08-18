@@ -85,8 +85,8 @@ if (password_verify($passwordSaisi, $hashStocke)) {
 Le diagramme suivant montre le flux complet d'authentification par JWT.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/00-blocs-compétences-bc04-développement-logiciel-02-sécurité-authentification-1.html">Qu&#x27;est-ce qu&#x27;un JWT ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/00-blocs-compétences-bc04-développement-logiciel-02-sécurité-authentification-1.html" title="Qu&#x27;est-ce qu&#x27;un JWT ?" style="width:100%;min-height:560px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/00-blocs-competences-bc04-developpement-logiciel-02-securite-authentification-1.html">Qu&#x27;est-ce qu&#x27;un JWT ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-competences-bc04-developpement-logiciel-02-securite-authentification-1.html" title="Qu&#x27;est-ce qu&#x27;un JWT ?" style="width:100%;min-height:560px;border:0;background:transparent"></iframe>
 </div>
 
 **Structure d'un JWT** :

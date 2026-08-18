@@ -87,8 +87,8 @@ Sans useState :
 Le schéma suivant illustre le cycle de re-rendu déclenché par `useState` :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/08-react-05-état-usestate-1.html">Qu&#x27;est-ce que useState ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/08-react-05-état-usestate-1.html" title="Qu&#x27;est-ce que useState ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/08-react-05-etat-usestate-1.html">Qu&#x27;est-ce que useState ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-05-etat-usestate-1.html" title="Qu&#x27;est-ce que useState ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
 </div>
 
 **Syntaxe de base** :

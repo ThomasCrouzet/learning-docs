@@ -87,8 +87,8 @@ private ?string $title = null;
 Le diagramme suivant résume le processus de validation depuis la soumission des données jusqu'au résultat :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/03-symfony-11-validation-données-1.html">Les contraintes de validation (HTML + SVG)</a></p>
-<iframe src="../../diagrams/03-symfony-11-validation-données-1.html" title="Les contraintes de validation" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/03-symfony-11-validation-donnees-1.html">Les contraintes de validation (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-11-validation-donnees-1.html" title="Les contraintes de validation" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 En détail :

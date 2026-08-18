@@ -99,8 +99,8 @@ var nom = "Alice";
 Le diagramme suivant montre comment la portée par bloc fonctionne avec `let`/`const` par rapport à `var`.
 
 <div class="diagram-design">
-<p><a href="../../diagrams/06-javascript-moderne-01-let-const-portée-1.html">Qu&#x27;est-ce que `var` et pourquoi l&#x27;éviter ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/06-javascript-moderne-01-let-const-portée-1.html" title="Qu&#x27;est-ce que `var` et pourquoi l&#x27;éviter ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/06-javascript-moderne-01-let-const-portee-1.html">Qu&#x27;est-ce que `var` et pourquoi l&#x27;éviter ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-01-let-const-portee-1.html" title="Qu&#x27;est-ce que `var` et pourquoi l&#x27;éviter ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
 </div>
 
 ### Qu'est-ce que `let` ?

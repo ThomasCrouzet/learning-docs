@@ -124,4 +124,14 @@ describe('diagram-design (shipped docs)', () => {
     const missing = targets.filter((t) => !fs.existsSync(t.abs));
     expect(missing).toEqual([]);
   });
+
+  it('diagram filenames and iframe hrefs stay ASCII', () => {
+    const nonAscii = /[^\u0000-\u007f]/;
+    const files = fs.readdirSync(DIAGRAMS).filter((n) => n.endsWith('.html'));
+    expect(files.filter((n) => nonAscii.test(n))).toEqual([]);
+    const accentedHrefs = iframeTargets(DOCS)
+      .filter((t) => t.href.includes('diagrams/') && nonAscii.test(path.basename(t.href)))
+      .map((t) => t.href);
+    expect(accentedHrefs).toEqual([]);
+  });
 });

@@ -378,8 +378,8 @@ et hash502, sans avoir besoin de demander l'avis des autres nœuds.
 Le diagramme suivant illustre les trois grandes familles de mécanismes de consensus et leur principe distinctif.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-05-mécanismes-consensus-pos-bft-1.html">Proof of History (PoH) - Solana (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-05-mécanismes-consensus-pos-bft-1.html" title="Proof of History (PoH) - Solana" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-05-mecanismes-consensus-pos-bft-1.html">Proof of History (PoH) - Solana (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-05-mecanismes-consensus-pos-bft-1.html" title="Proof of History (PoH) - Solana" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ### Tableau comparatif de tous les mécanismes de consensus

@@ -64,8 +64,8 @@ Sans architecture multi-tiers, voici les problèmes rencontres :
 Le projet consiste a construire l'infrastructure suivante :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/24-virtualisation-06-projet-intégrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
-<iframe src="../../diagrams/24-virtualisation-06-projet-intégrateur-1.html" title="Architecture du projet" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/24-virtualisation-06-projet-integrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
+<iframe src="../../diagrams/24-virtualisation-06-projet-integrateur-1.html" title="Architecture du projet" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
 </div>
 
 **Composants** :

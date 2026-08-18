@@ -129,8 +129,8 @@ La flèche ← signifie "référence".
 Le diagramme suivant illustre le chaînage des blocs par leurs empreintes :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/crypto-monnaies-01-fondamentaux-04-blockchain-structure-de-données-1.html">Comment les blocs sont chaînes (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/crypto-monnaies-01-fondamentaux-04-blockchain-structure-de-données-1.html" title="Comment les blocs sont chaînes" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/crypto-monnaies-01-fondamentaux-04-blockchain-structure-de-donnees-1.html">Comment les blocs sont chaînes (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-01-fondamentaux-04-blockchain-structure-de-donnees-1.html" title="Comment les blocs sont chaînes" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Pourquoi c'est difficile à falsifier** :

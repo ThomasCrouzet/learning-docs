@@ -79,8 +79,8 @@ Sans blue-green, voici les problèmes rencontrés :
 **Schéma du blue-green** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/11-ci-cd-09-stratégies-déploiement-1.html">Qu&#x27;est-ce que le déploiement blue-green ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/11-ci-cd-09-stratégies-déploiement-1.html" title="Qu&#x27;est-ce que le déploiement blue-green ?" style="width:100%;min-height:656px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/11-ci-cd-09-strategies-deploiement-1.html">Qu&#x27;est-ce que le déploiement blue-green ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-09-strategies-deploiement-1.html" title="Qu&#x27;est-ce que le déploiement blue-green ?" style="width:100%;min-height:656px;border:0;background:transparent"></iframe>
 </div>
 
 Le basculement est instantané : le Load Balancer redirige 100% du trafic de Blue vers Green. En cas de problème, le rollback est tout aussi instantané.
@@ -114,8 +114,8 @@ Sans canary, voici les problèmes rencontrés :
 **Schéma du canary** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/11-ci-cd-09-stratégies-déploiement-2.html">Qu&#x27;est-ce que le déploiement canary ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/11-ci-cd-09-stratégies-déploiement-2.html" title="Qu&#x27;est-ce que le déploiement canary ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/11-ci-cd-09-strategies-deploiement-2.html">Qu&#x27;est-ce que le déploiement canary ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-09-strategies-deploiement-2.html" title="Qu&#x27;est-ce que le déploiement canary ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
 </div>
 
 À chaque phase, les métriques (erreurs, latence) sont mesurées sur le canary. Si un problème est détecté, le canary est retiré et 100% du trafic revient sur v1.0.
@@ -158,8 +158,8 @@ Sans rolling update, voici les problèmes rencontrés :
 **Schéma du rolling update** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/11-ci-cd-09-stratégies-déploiement-3.html">Qu&#x27;est-ce que le rolling update ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/11-ci-cd-09-stratégies-déploiement-3.html" title="Qu&#x27;est-ce que le rolling update ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/11-ci-cd-09-strategies-deploiement-3.html">Qu&#x27;est-ce que le rolling update ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-09-strategies-deploiement-3.html" title="Qu&#x27;est-ce que le rolling update ?" style="width:100%;min-height:640px;border:0;background:transparent"></iframe>
 </div>
 
 Les instances sont remplacées une par une. Les deux versions coexistent pendant la transition. C'est pourquoi elles doivent être compatibles entre elles.

@@ -39,6 +39,14 @@ describe('protectUrls', () => {
     const result = protectUrls('Voir [la fiche](../01-docker/01-definition.md)');
     expect(result.placeholders.length).toBeGreaterThanOrEqual(1);
   });
+
+  it('protege href et src HTML des figures diagram-design', () => {
+    const line =
+      '<iframe src="../../diagrams/03-symfony-07-relations-entites-1.html" title="Relation">';
+    const result = protectUrls(line);
+    expect(result.line).not.toContain('relations-entites');
+    expect(result.placeholders.some((p) => p.original.includes('src='))).toBe(true);
+  });
 });
 
 describe('protectEnglishPhrases', () => {
@@ -123,6 +131,15 @@ describe('processFile', () => {
     const input = 'Premiere etape\nDeuxieme etape\nTexte correct';
     const { changeCount } = processFile(input);
     expect(changeCount).toBe(2);
+  });
+
+  it('ne reaccentue pas le fichier cible d une iframe diagram-design', () => {
+    const input =
+      '<iframe src="../../diagrams/03-symfony-07-relations-entites-1.html" title="Relation">';
+    const { content, changeCount } = processFile(input);
+    expect(content).toContain('relations-entites-1.html');
+    expect(content).not.toContain('relations-entités');
+    expect(changeCount).toBe(0);
   });
 
   it('gere le contenu mixte code et texte', () => {

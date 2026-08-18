@@ -114,8 +114,8 @@ Sans pooling, voici les problèmes rencontrés :
 Le diagramme suivant montre l'architecture type d'un CNN, de l'image d'entrée jusqu'à la classification :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/ia-04-deep-learning-fondamental-03-réseaux-convolutifs-cnn-1.html">Qu&#x27;est-ce que le pooling ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/ia-04-deep-learning-fondamental-03-réseaux-convolutifs-cnn-1.html" title="Qu&#x27;est-ce que le pooling ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/ia-04-deep-learning-fondamental-03-reseaux-convolutifs-cnn-1.html">Qu&#x27;est-ce que le pooling ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-04-deep-learning-fondamental-03-reseaux-convolutifs-cnn-1.html" title="Qu&#x27;est-ce que le pooling ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

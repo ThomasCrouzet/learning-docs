@@ -156,8 +156,8 @@ WHERE filtre les lignes _avant_ le regroupement. Dans certains cas, on veut filt
 Le diagramme suivant illustre l'ordre dans lequel PostgreSQL traite une requête avec GROUP BY :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/04-postgresql-05-fonctions-agrégation-1.html">Qu&#x27;est-ce que HAVING ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/04-postgresql-05-fonctions-agrégation-1.html" title="Qu&#x27;est-ce que HAVING ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/04-postgresql-05-fonctions-agregation-1.html">Qu&#x27;est-ce que HAVING ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-05-fonctions-agregation-1.html" title="Qu&#x27;est-ce que HAVING ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
 </div>
 
 En détail :

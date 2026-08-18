@@ -77,8 +77,8 @@ Doctrine propose trois types de relations principales :
 **Schéma** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/03-symfony-07-relations-entités-1.html">Relation ManyToOne (Plusieurs vers Un) (HTML + SVG)</a></p>
-<iframe src="../../diagrams/03-symfony-07-relations-entités-1.html" title="Relation ManyToOne (Plusieurs vers Un)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/03-symfony-07-relations-entites-1.html">Relation ManyToOne (Plusieurs vers Un) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-07-relations-entites-1.html" title="Relation ManyToOne (Plusieurs vers Un)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **En base de données** :
@@ -184,8 +184,8 @@ Dans une relation bidirectionnelle, un côté est "propriétaire" et l'autre est
 **Schéma** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/03-symfony-07-relations-entités-2.html">Relation ManyToMany (Plusieurs vers Plusieurs) (HTML + SVG)</a></p>
-<iframe src="../../diagrams/03-symfony-07-relations-entités-2.html" title="Relation ManyToMany (Plusieurs vers Plusieurs)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/03-symfony-07-relations-entites-2.html">Relation ManyToMany (Plusieurs vers Plusieurs) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-07-relations-entites-2.html" title="Relation ManyToMany (Plusieurs vers Plusieurs)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **En base de données** :

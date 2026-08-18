@@ -72,8 +72,8 @@ Sans stratégie de cache définie, voici les problèmes rencontrés :
 **Schéma de fonctionnement** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/13-redis-06-stratégies-cache-1.html">Cache-aside (Lazy Loading) (HTML + SVG)</a></p>
-<iframe src="../../diagrams/13-redis-06-stratégies-cache-1.html" title="Cache-aside (Lazy Loading)" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/13-redis-06-strategies-cache-1.html">Cache-aside (Lazy Loading) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-06-strategies-cache-1.html" title="Cache-aside (Lazy Loading)" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
 </div>
 
 **Avantages** :
@@ -107,8 +107,8 @@ $products = $cache->get('all_products', function (ItemInterface $item) use ($rep
 **Schéma de fonctionnement** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/13-redis-06-stratégies-cache-2.html">Write-through (HTML + SVG)</a></p>
-<iframe src="../../diagrams/13-redis-06-stratégies-cache-2.html" title="Write-through" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/13-redis-06-strategies-cache-2.html">Write-through (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-06-strategies-cache-2.html" title="Write-through" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
 </div>
 
 **Avantages** :
@@ -202,8 +202,8 @@ class ProductService
 **Schéma de fonctionnement** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/13-redis-06-stratégies-cache-3.html">Write-behind (Write-back) (HTML + SVG)</a></p>
-<iframe src="../../diagrams/13-redis-06-stratégies-cache-3.html" title="Write-behind (Write-back)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/13-redis-06-strategies-cache-3.html">Write-behind (Write-back) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-06-strategies-cache-3.html" title="Write-behind (Write-back)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Avantages** :

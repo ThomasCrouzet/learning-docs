@@ -87,8 +87,8 @@ Sans instrumentation, voici les problèmes rencontrés :
 Le diagramme suivant montre le flux d'exposition des métriques depuis l'application Symfony jusqu'aux dashboards Grafana.
 
 <div class="diagram-design">
-<p><a href="../../diagrams/14-monitoring-04-prometheus-métriques-1.html">La bibliothèque promphp/prometheus_client_php (HTML + SVG)</a></p>
-<iframe src="../../diagrams/14-monitoring-04-prometheus-métriques-1.html" title="La bibliothèque promphp/prometheus_client_php" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/14-monitoring-04-prometheus-metriques-1.html">La bibliothèque promphp/prometheus_client_php (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-04-prometheus-metriques-1.html" title="La bibliothèque promphp/prometheus_client_php" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ### L'endpoint /metrics

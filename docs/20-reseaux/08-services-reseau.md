@@ -91,8 +91,8 @@ Sans HTTP, voici les problèmes rencontres :
 **Fonctionnement d'une requête HTTP** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/20-réseaux-08-services-réseau-1.html">Qu&#x27;est-ce que HTTP/HTTPS ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/20-réseaux-08-services-réseau-1.html" title="Qu&#x27;est-ce que HTTP/HTTPS ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/20-reseaux-08-services-reseau-1.html">Qu&#x27;est-ce que HTTP/HTTPS ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-08-services-reseau-1.html" title="Qu&#x27;est-ce que HTTP/HTTPS ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---
@@ -158,8 +158,8 @@ Sans ces protocoles, voici les problèmes rencontres :
 **Parcours d'un e-mail** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/20-réseaux-08-services-réseau-2.html">Qu&#x27;est-ce que SMTP/IMAP ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/20-réseaux-08-services-réseau-2.html" title="Qu&#x27;est-ce que SMTP/IMAP ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/20-reseaux-08-services-reseau-2.html">Qu&#x27;est-ce que SMTP/IMAP ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-08-services-reseau-2.html" title="Qu&#x27;est-ce que SMTP/IMAP ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

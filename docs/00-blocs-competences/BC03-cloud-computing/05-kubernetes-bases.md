@@ -156,8 +156,8 @@ spec:
 Le diagramme suivant montre l'architecture simplifiée d'un déploiement Kubernetes avec Ingress, Service et Pods.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/00-blocs-compétences-bc03-cloud-computing-05-kubernetes-bases-1.html">Qu&#x27;est-ce qu&#x27;un Service ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/00-blocs-compétences-bc03-cloud-computing-05-kubernetes-bases-1.html" title="Qu&#x27;est-ce qu&#x27;un Service ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/00-blocs-competences-bc03-cloud-computing-05-kubernetes-bases-1.html">Qu&#x27;est-ce qu&#x27;un Service ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-competences-bc03-cloud-computing-05-kubernetes-bases-1.html" title="Qu&#x27;est-ce qu&#x27;un Service ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Types de Services** :

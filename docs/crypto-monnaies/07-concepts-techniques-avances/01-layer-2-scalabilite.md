@@ -92,8 +92,8 @@ Sans scalabilité, les blockchains ne peuvent pas être utilisées à grande éc
 Le diagramme suivant illustre les tensions entre les trois propriétés du trilemme :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-01-layer-2-scalabilité-1.html">Le trilemme de la scalabilité (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-01-layer-2-scalabilité-1.html" title="Le trilemme de la scalabilité" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-01-layer-2-scalabilite-1.html">Le trilemme de la scalabilité (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-01-layer-2-scalabilite-1.html" title="Le trilemme de la scalabilité" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce que le trilemme n'est PAS** :

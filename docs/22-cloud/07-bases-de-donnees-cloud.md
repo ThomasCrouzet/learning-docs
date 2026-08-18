@@ -160,8 +160,8 @@ Sans cache, voici les problèmes rencontres :
 **Arbre de décision** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/22-cloud-07-bases-de-données-cloud-1.html">Comment choisir le bon service ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/22-cloud-07-bases-de-données-cloud-1.html" title="Comment choisir le bon service ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/22-cloud-07-bases-de-donnees-cloud-1.html">Comment choisir le bon service ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/22-cloud-07-bases-de-donnees-cloud-1.html" title="Comment choisir le bon service ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
 </div>
 
 **Tableau récapitulatif** :

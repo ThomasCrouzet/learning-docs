@@ -71,8 +71,8 @@ Sans VAE, voici les problèmes rencontrés :
 #### Architecture du VAE
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modèles-generatifs-1.html">Architecture du VAE (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modèles-generatifs-1.html" title="Architecture du VAE" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-1.html">Architecture du VAE (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-1.html" title="Architecture du VAE" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 #### Reparameterization trick
@@ -190,8 +190,8 @@ Sans GAN, voici les problèmes rencontrés :
 #### Architecture du GAN
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modèles-generatifs-2.html">Architecture du GAN (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modèles-generatifs-2.html" title="Architecture du GAN" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-2.html">Architecture du GAN (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-2.html" title="Architecture du GAN" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ```python
@@ -380,8 +380,8 @@ Sans latent diffusion, voici les problèmes rencontrés :
 #### Architecture de Stable Diffusion
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modèles-generatifs-3.html">Architecture de Stable Diffusion (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modèles-generatifs-3.html" title="Architecture de Stable Diffusion" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-3.html">Architecture de Stable Diffusion (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-04-modeles-generatifs-3.html" title="Architecture de Stable Diffusion" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

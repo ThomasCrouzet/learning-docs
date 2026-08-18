@@ -62,8 +62,8 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 **Schéma de l'architecture** :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/devops-03-kubernetes-12-projet-intégrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/devops-03-kubernetes-12-projet-intégrateur-1.html" title="Architecture du projet" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/devops-03-kubernetes-12-projet-integrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-12-projet-integrateur-1.html" title="Architecture du projet" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Les composants** :

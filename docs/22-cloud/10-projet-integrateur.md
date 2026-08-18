@@ -36,8 +36,8 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 Le projet deploie une application de gestion de taches (API REST) avec l'architecture suivante :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/22-cloud-10-projet-intégrateur-1.html">Architecture cible (HTML + SVG)</a></p>
-<iframe src="../../diagrams/22-cloud-10-projet-intégrateur-1.html" title="Architecture cible" style="width:100%;min-height:720px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/22-cloud-10-projet-integrateur-1.html">Architecture cible (HTML + SVG)</a></p>
+<iframe src="../../diagrams/22-cloud-10-projet-integrateur-1.html" title="Architecture cible" style="width:100%;min-height:720px;border:0;background:transparent"></iframe>
 </div>
 
 **Composants** :

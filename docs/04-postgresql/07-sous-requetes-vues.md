@@ -56,8 +56,8 @@ Sans sous-requêtes, voici les problèmes rencontrés :
 Le diagramme suivant montre comment une sous-requête est imbriquée dans la requête principale :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/04-postgresql-07-sous-requêtes-vues-1.html">Qu&#x27;est-ce qu&#x27;une sous-requête ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/04-postgresql-07-sous-requêtes-vues-1.html" title="Qu&#x27;est-ce qu&#x27;une sous-requête ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/04-postgresql-07-sous-requetes-vues-1.html">Qu&#x27;est-ce qu&#x27;une sous-requête ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-07-sous-requetes-vues-1.html" title="Qu&#x27;est-ce qu&#x27;une sous-requête ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce qu'une sous-requête n'est PAS** :

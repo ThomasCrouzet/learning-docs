@@ -54,8 +54,8 @@ Sans DMZ, voici les problèmes rencontres :
 **Architecture DMZ** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/20-réseaux-11-architecture-entreprise-1.html">Qu&#x27;est-ce qu&#x27;une DMZ ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/20-réseaux-11-architecture-entreprise-1.html" title="Qu&#x27;est-ce qu&#x27;une DMZ ?" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/20-reseaux-11-architecture-entreprise-1.html">Qu&#x27;est-ce qu&#x27;une DMZ ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-11-architecture-entreprise-1.html" title="Qu&#x27;est-ce qu&#x27;une DMZ ?" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
 </div>
 
 **Règles de trafic entre les zones** :
@@ -139,8 +139,8 @@ Sans reverse proxy, voici les problèmes rencontres :
 **Architecture avec reverse proxy** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/20-réseaux-11-architecture-entreprise-2.html">Qu&#x27;est-ce qu&#x27;un reverse proxy ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/20-réseaux-11-architecture-entreprise-2.html" title="Qu&#x27;est-ce qu&#x27;un reverse proxy ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/20-reseaux-11-architecture-entreprise-2.html">Qu&#x27;est-ce qu&#x27;un reverse proxy ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-11-architecture-entreprise-2.html" title="Qu&#x27;est-ce qu&#x27;un reverse proxy ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
 </div>
 
 ---
@@ -177,8 +177,8 @@ Sans load balancer, voici les problèmes rencontres :
 **Architecture avec load balancer** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/20-réseaux-11-architecture-entreprise-3.html">Qu&#x27;est-ce qu&#x27;un load balancer ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/20-réseaux-11-architecture-entreprise-3.html" title="Qu&#x27;est-ce qu&#x27;un load balancer ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/20-reseaux-11-architecture-entreprise-3.html">Qu&#x27;est-ce qu&#x27;un load balancer ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-11-architecture-entreprise-3.html" title="Qu&#x27;est-ce qu&#x27;un load balancer ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
 </div>
 
 ---

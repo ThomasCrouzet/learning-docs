@@ -103,8 +103,8 @@ Sans SIEM, voici les problèmes rencontrés :
 Le diagramme suivant illustre le flux d'une alerte dans un SOC, depuis la collecte des logs jusqu'a la réponse incident :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/cybersecurite-03-compétences-intermédiaires-04-introduction-soc-monitoring-1.html">Qu&#x27;est-ce qu&#x27;un SIEM ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/cybersecurite-03-compétences-intermédiaires-04-introduction-soc-monitoring-1.html" title="Qu&#x27;est-ce qu&#x27;un SIEM ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/cybersecurite-03-competences-intermediaires-04-introduction-soc-monitoring-1.html">Qu&#x27;est-ce qu&#x27;un SIEM ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-03-competences-intermediaires-04-introduction-soc-monitoring-1.html" title="Qu&#x27;est-ce qu&#x27;un SIEM ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
 </div>
 
 **Comparaison des principaux SIEM** :

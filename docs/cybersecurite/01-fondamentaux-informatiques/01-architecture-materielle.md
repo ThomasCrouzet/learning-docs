@@ -314,8 +314,8 @@ Sans rings de privilèges, voici les problèmes rencontrés :
 Le diagramme suivant illustre la hiérarchie des rings de privilèges, du noyau (accès total) jusqu'aux applications utilisateur (accès restreint) :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-01-architecture-matérielle-1.html">Qu&#x27;est-ce que les rings de privilèges (Ring 0-3) ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-01-architecture-matérielle-1.html" title="Qu&#x27;est-ce que les rings de privilèges (Ring 0-3) ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-01-architecture-materielle-1.html">Qu&#x27;est-ce que les rings de privilèges (Ring 0-3) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-01-architecture-materielle-1.html" title="Qu&#x27;est-ce que les rings de privilèges (Ring 0-3) ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce que les rings ne sont PAS** :

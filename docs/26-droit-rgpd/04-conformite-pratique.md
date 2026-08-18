@@ -305,8 +305,8 @@ Sans réglementation des transferts, voici les problèmes rencontrés :
 **Procédure de contrôle** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/26-droit-rgpd-04-conformité-pratique-1.html">Le rôle de la CNIL (HTML + SVG)</a></p>
-<iframe src="../../diagrams/26-droit-rgpd-04-conformité-pratique-1.html" title="Le rôle de la CNIL" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/26-droit-rgpd-04-conformite-pratique-1.html">Le rôle de la CNIL (HTML + SVG)</a></p>
+<iframe src="../../diagrams/26-droit-rgpd-04-conformite-pratique-1.html" title="Le rôle de la CNIL" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

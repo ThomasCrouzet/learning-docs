@@ -44,8 +44,8 @@ Les cinq opérateurs de composition sont **le concept central du langage Faust**
 Le diagramme suivant donne une vue synthétique des cinq opérateurs de composition et de leur rôle :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/faust-03-langage-faust-fondamentaux-02-cinq-opérateurs-composition-1.html">Vue d&#x27;ensemble : les cinq opérateurs (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/faust-03-langage-faust-fondamentaux-02-cinq-opérateurs-composition-1.html" title="Vue d&#x27;ensemble : les cinq opérateurs" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/faust-03-langage-faust-fondamentaux-02-cinq-operateurs-composition-1.html">Vue d&#x27;ensemble : les cinq opérateurs (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-03-langage-faust-fondamentaux-02-cinq-operateurs-composition-1.html" title="Vue d&#x27;ensemble : les cinq opérateurs" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ### Règles de priorité des opérateurs

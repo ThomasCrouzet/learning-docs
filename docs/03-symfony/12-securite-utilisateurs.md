@@ -82,8 +82,8 @@ Sans système de sécurité, voici les problèmes rencontrés :
 Le schéma suivant illustre comment ces trois éléments interagissent pour traiter une requête :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/03-symfony-12-sécurité-utilisateurs-1.html">Le composant Security de Symfony (HTML + SVG)</a></p>
-<iframe src="../../diagrams/03-symfony-12-sécurité-utilisateurs-1.html" title="Le composant Security de Symfony" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/03-symfony-12-securite-utilisateurs-1.html">Le composant Security de Symfony (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-12-securite-utilisateurs-1.html" title="Le composant Security de Symfony" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Fichier de configuration** : `config/packages/security.yaml`

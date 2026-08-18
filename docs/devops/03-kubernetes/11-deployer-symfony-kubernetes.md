@@ -84,8 +84,8 @@ Sans architecture multi-services :
 Le diagramme suivant illustre l'architecture complète de la stack Symfony sur Kubernetes.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/devops-03-kubernetes-11-déployer-symfony-kubernetes-1.html">Les composants de la stack Symfony sur Kubernetes (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/devops-03-kubernetes-11-déployer-symfony-kubernetes-1.html" title="Les composants de la stack Symfony sur Kubernetes" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/devops-03-kubernetes-11-deployer-symfony-kubernetes-1.html">Les composants de la stack Symfony sur Kubernetes (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-11-deployer-symfony-kubernetes-1.html" title="Les composants de la stack Symfony sur Kubernetes" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
 </div>
 
 ```text

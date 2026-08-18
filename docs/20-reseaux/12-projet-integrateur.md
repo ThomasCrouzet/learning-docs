@@ -53,8 +53,8 @@ Tu travailles pour une PME fictive "TechNova" qui a besoin d'une architecture r�
 L'architecture suit le modèle a 3 zones :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/20-réseaux-12-projet-intégrateur-1.html">Architecture cible (HTML + SVG)</a></p>
-<iframe src="../../diagrams/20-réseaux-12-projet-intégrateur-1.html" title="Architecture cible" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/20-reseaux-12-projet-integrateur-1.html">Architecture cible (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-reseaux-12-projet-integrateur-1.html" title="Architecture cible" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
 </div>
 
 ### Plan d'adressage IP

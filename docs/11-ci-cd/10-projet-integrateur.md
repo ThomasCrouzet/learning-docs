@@ -75,8 +75,8 @@ Un pipeline CI/CD complet pour un projet Symfony + React qui automatise :
 **Pipeline CI/CD** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/11-ci-cd-10-projet-intégrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
-<iframe src="../../diagrams/11-ci-cd-10-projet-intégrateur-1.html" title="Architecture du projet" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/11-ci-cd-10-projet-integrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-10-projet-integrateur-1.html" title="Architecture du projet" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Rôle de chaque composant** :
@@ -1234,8 +1234,8 @@ find . -type f -not -path './.git/*' | sort
 **Récapitulatif du pipeline complet** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/11-ci-cd-10-projet-intégrateur-2.html">Affiche la structure du projet (HTML + SVG)</a></p>
-<iframe src="../../diagrams/11-ci-cd-10-projet-intégrateur-2.html" title="Affiche la structure du projet" style="width:100%;min-height:772px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/11-ci-cd-10-projet-integrateur-2.html">Affiche la structure du projet (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-10-projet-integrateur-2.html" title="Affiche la structure du projet" style="width:100%;min-height:772px;border:0;background:transparent"></iframe>
 </div>
 
 ---

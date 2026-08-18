@@ -61,8 +61,8 @@ Une application web Symfony qui gère un catalogue de produits avec :
 Le diagramme suivant montre l'architecture complète de l'application avec les trois usages de Redis.
 
 <div class="diagram-design">
-<p><a href="../../diagrams/13-redis-08-projet-intégrateur-1.html">Architecture de l&#x27;application (HTML + SVG)</a></p>
-<iframe src="../../diagrams/13-redis-08-projet-intégrateur-1.html" title="Architecture de l&#x27;application" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/13-redis-08-projet-integrateur-1.html">Architecture de l&#x27;application (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-08-projet-integrateur-1.html" title="Architecture de l&#x27;application" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
 </div>
 
 **Schéma** :

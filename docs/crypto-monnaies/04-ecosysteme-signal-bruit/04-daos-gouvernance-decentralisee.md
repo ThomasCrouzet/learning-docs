@@ -93,8 +93,8 @@ Sans DAO, les organisations décentralisées rencontrent ces problèmes :
 Le diagramme suivant résume le processus de vote dans une DAO :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/crypto-monnaies-04-écosystème-signal-bruit-04-daos-gouvernance-décentralisée-1.html">Comment fonctionne le vote dans une DAO (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/crypto-monnaies-04-écosystème-signal-bruit-04-daos-gouvernance-décentralisée-1.html" title="Comment fonctionne le vote dans une DAO" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/crypto-monnaies-04-ecosysteme-signal-bruit-04-daos-gouvernance-decentralisee-1.html">Comment fonctionne le vote dans une DAO (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-04-ecosysteme-signal-bruit-04-daos-gouvernance-decentralisee-1.html" title="Comment fonctionne le vote dans une DAO" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
 </div>
 
 **Délégation du vote** :

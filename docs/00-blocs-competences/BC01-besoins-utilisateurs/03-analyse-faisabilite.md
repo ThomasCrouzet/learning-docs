@@ -294,8 +294,8 @@ Documente le système d'information actuel :
 #### Schéma d'architecture actuel
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/00-blocs-compétences-bc01-besoins-utilisateurs-03-analyse-faisabilite-1.html">Schéma d&#x27;architecture actuel (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/00-blocs-compétences-bc01-besoins-utilisateurs-03-analyse-faisabilite-1.html" title="Schéma d&#x27;architecture actuel" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/00-blocs-competences-bc01-besoins-utilisateurs-03-analyse-faisabilite-1.html">Schéma d&#x27;architecture actuel (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-competences-bc01-besoins-utilisateurs-03-analyse-faisabilite-1.html" title="Schéma d&#x27;architecture actuel" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
 </div>
 
 **Légende** :

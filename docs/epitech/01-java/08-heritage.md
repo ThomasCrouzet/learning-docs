@@ -98,8 +98,8 @@ class Chat extends Animal {
 Le diagramme suivant illustre une hiérarchie d'héritage classique.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/epitech-01-java-08-héritage-1.html">Qu&#x27;est-ce que l&#x27;héritage ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/epitech-01-java-08-héritage-1.html" title="Qu&#x27;est-ce que l&#x27;héritage ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/epitech-01-java-08-heritage-1.html">Qu&#x27;est-ce que l&#x27;héritage ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-01-java-08-heritage-1.html" title="Qu&#x27;est-ce que l&#x27;héritage ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

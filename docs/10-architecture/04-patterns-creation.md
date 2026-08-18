@@ -74,8 +74,8 @@ Sans Factory Method, voici les problèmes rencontrés :
 **Structure du pattern** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/10-architecture-04-patterns-création-1.html">Factory Method (HTML + SVG)</a></p>
-<iframe src="../../diagrams/10-architecture-04-patterns-création-1.html" title="Factory Method" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/10-architecture-04-patterns-creation-1.html">Factory Method (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-04-patterns-creation-1.html" title="Factory Method" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 Le Creator définit la méthode de création. Chaque sous-classe décide quel produit concret instancier.
@@ -389,8 +389,8 @@ Sans Builder, voici les problèmes rencontrés :
 **Flux de construction avec Builder** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/10-architecture-04-patterns-création-2.html">Builder (HTML + SVG)</a></p>
-<iframe src="../../diagrams/10-architecture-04-patterns-création-2.html" title="Builder" style="width:100%;min-height:560px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/10-architecture-04-patterns-creation-2.html">Builder (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-04-patterns-creation-2.html" title="Builder" style="width:100%;min-height:560px;border:0;background:transparent"></iframe>
 </div>
 
 Le Director orchestre les étapes dans le bon ordre. Le Builder assemble le produit pièce par pièce. Le client n'a pas besoin de connaître les détails de construction.

@@ -67,8 +67,8 @@ cursus: "Phase 6 - Domaines Avancés"
 Le diagramme suivant illustre la répartition des responsabilités entre le client et le fournisseur cloud :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/cybersecurite-06-domaines-avances-01-sécurité-cloud-1.html">Qu&#x27;est-ce que le modèle de responsabilité partagée ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/cybersecurite-06-domaines-avances-01-sécurité-cloud-1.html" title="Qu&#x27;est-ce que le modèle de responsabilité partagée ?" style="width:100%;min-height:556px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/cybersecurite-06-domaines-avances-01-securite-cloud-1.html">Qu&#x27;est-ce que le modèle de responsabilité partagée ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-06-domaines-avances-01-securite-cloud-1.html" title="Qu&#x27;est-ce que le modèle de responsabilité partagée ?" style="width:100%;min-height:556px;border:0;background:transparent"></iframe>
 </div>
 
 **Répartition par type de service** :

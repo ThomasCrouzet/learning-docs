@@ -102,8 +102,8 @@ public function __construct(
 Le diagramme suivant montre comment le container résout les dépendances et injecte un service dans un contrôleur :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/03-symfony-13-services-injection-dépendances-1.html">Le container de services (HTML + SVG)</a></p>
-<iframe src="../../diagrams/03-symfony-13-services-injection-dépendances-1.html" title="Le container de services" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/03-symfony-13-services-injection-dependances-1.html">Le container de services (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-13-services-injection-dependances-1.html" title="Le container de services" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 ---

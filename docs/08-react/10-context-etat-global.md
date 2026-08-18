@@ -39,8 +39,8 @@ cursus: "React"
 3. **Composants pollués** : les composants intermédiaires reçoivent des props dont ils n'ont pas besoin.
 
 <div class="diagram-design">
-<p><a href="../../diagrams/08-react-10-context-état-global-1.html">Qu&#x27;est-ce que le prop drilling ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/08-react-10-context-état-global-1.html" title="Qu&#x27;est-ce que le prop drilling ?" style="width:100%;min-height:824px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/08-react-10-context-etat-global-1.html">Qu&#x27;est-ce que le prop drilling ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-10-context-etat-global-1.html" title="Qu&#x27;est-ce que le prop drilling ?" style="width:100%;min-height:824px;border:0;background:transparent"></iframe>
 </div>
 
 Avec le prop drilling, chaque composant intermédiaire transmet les props sans les utiliser. Avec le Context, le Bouton accède directement aux données du Provider.
@@ -72,8 +72,8 @@ Sans Context :
 **Le flux du Context en 3 étapes** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/08-react-10-context-état-global-2.html">Qu&#x27;est-ce que le Context API ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/08-react-10-context-état-global-2.html" title="Qu&#x27;est-ce que le Context API ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/08-react-10-context-etat-global-2.html">Qu&#x27;est-ce que le Context API ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-10-context-etat-global-2.html" title="Qu&#x27;est-ce que le Context API ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce que le Context n'est PAS** :

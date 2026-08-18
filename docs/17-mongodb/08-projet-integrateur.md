@@ -61,8 +61,8 @@ Une API REST pour une librairie en ligne avec :
 ### Architecture de l'application
 
 <div class="diagram-design">
-<p><a href="../../diagrams/17-mongodb-08-projet-intégrateur-1.html">Architecture de l&#x27;application (HTML + SVG)</a></p>
-<iframe src="../../diagrams/17-mongodb-08-projet-intégrateur-1.html" title="Architecture de l&#x27;application" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/17-mongodb-08-projet-integrateur-1.html">Architecture de l&#x27;application (HTML + SVG)</a></p>
+<iframe src="../../diagrams/17-mongodb-08-projet-integrateur-1.html" title="Architecture de l&#x27;application" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
 </div>
 
 **Structure du projet** :

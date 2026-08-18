@@ -652,7 +652,7 @@ docs/
 - Fichiers : `[numéro]-[sujet-en-kebab-case].md`
 - Dossiers : `[numéro]-[technologie]/`
 - Toujours en minuscules, sans espaces ni caractères spéciaux
-- Exceptions de nommage : `BC01`-`BC08`, `fiches-reference`, sous-dossiers `epitech/`
+- Exceptions de nommage : `BC01`-`BC08`, `fiches-reference`, `diagrams`, sous-dossiers `epitech/`
 
 ---
 

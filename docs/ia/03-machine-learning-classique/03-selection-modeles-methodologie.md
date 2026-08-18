@@ -102,8 +102,8 @@ Sans comprendre le biais-variance, voici les problèmes rencontrés :
 Le diagramme suivant illustre les trois zones du compromis biais-variance en fonction de la complexité du modèle.
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/ia-03-machine-learning-classique-03-sélection-modèles-méthodologie-1.html">Qu&#x27;est-ce que le compromis biais-variance ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/ia-03-machine-learning-classique-03-sélection-modèles-méthodologie-1.html" title="Qu&#x27;est-ce que le compromis biais-variance ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/ia-03-machine-learning-classique-03-selection-modeles-methodologie-1.html">Qu&#x27;est-ce que le compromis biais-variance ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-03-machine-learning-classique-03-selection-modeles-methodologie-1.html" title="Qu&#x27;est-ce que le compromis biais-variance ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
 </div>
 
 **Diagnostic avec les learning curves** :

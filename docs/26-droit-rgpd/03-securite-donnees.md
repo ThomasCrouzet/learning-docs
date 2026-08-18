@@ -185,8 +185,8 @@ Sans journalisation, voici les problèmes rencontrés :
 **Procédure de notification (article 33 et 34)** :
 
 <div class="diagram-design">
-<p><a href="../../diagrams/26-droit-rgpd-03-sécurité-données-1.html">Qu&#x27;est-ce qu&#x27;une violation de données ? (HTML + SVG)</a></p>
-<iframe src="../../diagrams/26-droit-rgpd-03-sécurité-données-1.html" title="Qu&#x27;est-ce qu&#x27;une violation de données ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
+<p><a href="../../diagrams/26-droit-rgpd-03-securite-donnees-1.html">Qu&#x27;est-ce qu&#x27;une violation de données ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/26-droit-rgpd-03-securite-donnees-1.html" title="Qu&#x27;est-ce qu&#x27;une violation de données ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
 </div>
 
 **Délais et obligations** :

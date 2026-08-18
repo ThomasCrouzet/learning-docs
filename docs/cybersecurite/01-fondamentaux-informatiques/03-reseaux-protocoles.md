@@ -75,8 +75,8 @@ Sans réseau, voici les problèmes rencontrés :
 Le diagramme suivant illustre l'empilement des 7 couches du modèle OSI, de l'application jusqu'au support physique :
 
 <div class="diagram-design">
-<p><a href="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-03-réseaux-protocoles-1.html">Qu&#x27;est-ce que le modèle OSI ? (HTML + SVG)</a></p>
-<iframe src="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-03-réseaux-protocoles-1.html" title="Qu&#x27;est-ce que le modèle OSI ?" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
+<p><a href="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-03-reseaux-protocoles-1.html">Qu&#x27;est-ce que le modèle OSI ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-03-reseaux-protocoles-1.html" title="Qu&#x27;est-ce que le modèle OSI ?" style="width:100%;min-height:784px;border:0;background:transparent"></iframe>
 </div>
 
 **Ce que le modèle OSI n'est PAS** :
