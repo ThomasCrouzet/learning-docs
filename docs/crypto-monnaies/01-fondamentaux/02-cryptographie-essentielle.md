@@ -124,12 +124,10 @@ Alice veut envoyer un message secret à Bob.
 
 Le schéma suivant illustre le flux de chiffrement asymétrique entre Alice et Bob :
 
-```mermaid
-flowchart LR
-    alice[Alice] -->|Chiffre avec clé publique de Bob| message[Message chiffré]
-    message -->|Déchiffre avec clé privée de Bob| bob[Bob]
-    bob -.->|Partage clé publique| alice
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-01-fondamentaux-02-cryptographie-essentielle-1.html">Qu&#x27;est-ce que le chiffrement asymétrique ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-01-fondamentaux-02-cryptographie-essentielle-1.html" title="Qu&#x27;est-ce que le chiffrement asymétrique ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Une boîte aux lettrès dans la rue. Tout le monde connaît son emplacement (clé publique) et peut y déposer du courrier par la fente. Mais seul le propriétaire possède la clé physique (clé privée) pour ouvrir la boîte et lire le courrier. Déposer un courrier est facile. L'extraire sans la clé est impossible.
 

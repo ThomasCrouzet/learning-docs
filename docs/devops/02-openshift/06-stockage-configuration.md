@@ -117,13 +117,10 @@ Sans ConfigMap, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment un Pod accède aux trois types de ressources de configuration et de stockage.
 
-```mermaid
-graph TD
-    pod[Pod] --> pvc[PVC<br>Stockage persistant]
-    pod --> cm[ConfigMap<br>Configuration]
-    pod --> secret[Secret<br>Données sensibles]
-    pvc --> pv[(PersistentVolume)]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-02-openshift-06-stockage-configuration-1.html">Qu&#x27;est-ce qu&#x27;une ConfigMap ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-02-openshift-06-stockage-configuration-1.html" title="Qu&#x27;est-ce qu&#x27;une ConfigMap ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Deux façons d'utiliser une ConfigMap** :
 

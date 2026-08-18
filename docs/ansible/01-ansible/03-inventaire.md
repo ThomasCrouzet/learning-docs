@@ -59,17 +59,10 @@ Sans inventaire, voici les problèmes rencontrés :
 
 Le diagramme suivant montre la structure hiérarchique d'un inventaire avec des groupes et des hôtes.
 
-```mermaid
-graph TD
-    inventory[Inventaire] --> web[Groupe : web]
-    inventory --> db[Groupe : db]
-    inventory --> all[Groupe : all]
-    web --> srv1[serveur-web-1]
-    web --> srv2[serveur-web-2]
-    db --> srv3[serveur-db-1]
-    all --> web
-    all --> db
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-03-inventaire-1.html">Qu&#x27;est-ce qu&#x27;un inventaire Ansible ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-03-inventaire-1.html" title="Qu&#x27;est-ce qu&#x27;un inventaire Ansible ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce qu'un inventaire n'est PAS** :
 

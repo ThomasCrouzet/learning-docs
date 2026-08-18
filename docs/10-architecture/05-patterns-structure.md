@@ -74,25 +74,10 @@ Sans Adapter, voici les problèmes rencontrés :
 
 **Structure du pattern** :
 
-```mermaid
-classDiagram
-    class Target {
-        <<interface>>
-        +request()
-    }
-    class Adapter {
-        -adaptee: Adaptee
-        +request()
-    }
-    class Adaptee {
-        +specificRequest()
-    }
-    class Client
-
-    Client --> Target : utilise
-    Target <|.. Adapter
-    Adapter --> Adaptee : traduit les appels
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-05-patterns-structure-1.html">Adapter (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-05-patterns-structure-1.html" title="Adapter" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le Client utilise l'interface Target. L'Adapter traduit les appels vers l'Adaptee sans que le Client ne connaisse l'Adaptee.
 
@@ -229,34 +214,10 @@ Sans Decorator, voici les problèmes rencontrés :
 
 **Structure du pattern** :
 
-```mermaid
-classDiagram
-    class Component {
-        <<interface>>
-        +operation()
-    }
-    class ConcreteComponent {
-        +operation()
-    }
-    class Decorator {
-        <<abstract>>
-        -component: Component
-        +operation()
-    }
-    class DecoratorA {
-        +operation()
-        +addedBehavior()
-    }
-    class DecoratorB {
-        +operation()
-        +addedBehavior()
-    }
-    Component <|.. ConcreteComponent
-    Component <|.. Decorator
-    Decorator <|-- DecoratorA
-    Decorator <|-- DecoratorB
-    Decorator --> Component : enveloppe
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-05-patterns-structure-2.html">Decorator (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-05-patterns-structure-2.html" title="Decorator" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque Decorator enveloppe un Component (qui peut être un autre Decorator). C'est cette imbrication qui permet d'empiler les fonctionnalités.
 

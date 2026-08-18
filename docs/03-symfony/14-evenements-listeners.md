@@ -102,20 +102,10 @@ Sans événements, voici les problèmes rencontrés :
 
 Le schéma suivant illustre le cycle de vie d'un événement dispatché à travers le système :
 
-```mermaid
-sequenceDiagram
-    participant C as Controller
-    participant D as EventDispatcher
-    participant L1 as Listener 1
-    participant L2 as Listener 2
-
-    C->>D: dispatch(ArticleCreatedEvent)
-    D->>L1: onArticleCreated()
-    L1-->>D: OK
-    D->>L2: onArticleCreated()
-    L2-->>D: OK
-    D-->>C: Événement traité
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-14-événements-listeners-1.html">L&#x27;EventDispatcher (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-14-événements-listeners-1.html" title="L&#x27;EventDispatcher" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

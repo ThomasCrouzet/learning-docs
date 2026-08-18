@@ -117,17 +117,10 @@ Un play contient quatre éléments principaux :
 
 Le schéma suivant illustre la structure hiérarchique d'un playbook :
 
-```mermaid
-graph TD
-    playbook[Playbook] --> play1[Play 1<br>hosts: web]
-    playbook --> play2[Play 2<br>hosts: db]
-    play1 --> task1[Task 1<br>Installer Nginx]
-    play1 --> task2[Task 2<br>Copier config]
-    play1 --> task3[Task 3<br>Démarrer service]
-    task1 --> module1[Module : apt]
-    task2 --> module2[Module : template]
-    task3 --> module3[Module : service]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-05-playbooks-fondamentaux-1.html">Qu&#x27;est-ce qu&#x27;un play ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-05-playbooks-fondamentaux-1.html" title="Qu&#x27;est-ce qu&#x27;un play ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 Un playbook contient un ou plusieurs plays. Chaque play cible un groupe de machines et contient des tasks. Chaque task utilise un module Ansible pour effectuer une action précise.
 

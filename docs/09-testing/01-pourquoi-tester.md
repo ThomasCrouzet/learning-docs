@@ -103,11 +103,10 @@ Sans pyramide des tests, voici les problèmes rencontrés :
 /____________________\ - Tres rapides (millisecondes)
 ```
 
-```mermaid
-flowchart TD
-    E2E["Tests E2E\n5-10% | Lents\nNavigateur complet"] --> INT["Tests d'integration\n15-25% | Moyens\nPlusieurs composants"]
-    INT --> UNIT["Tests unitaires\n65-80% | Tres rapides\nFonction isolee"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/09-testing-01-pourquoi-tester-1.html">Qu&#x27;est-ce que la pyramide des tests ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/09-testing-01-pourquoi-tester-1.html" title="Qu&#x27;est-ce que la pyramide des tests ?" style="width:100%;min-height:496px;border:0;background:transparent"></iframe>
+</div>
 
 Plus on descend dans la pyramide, plus les tests sont nombreux et rapides. Plus on monte, plus les tests sont réalistes mais lents et coûteux.
 

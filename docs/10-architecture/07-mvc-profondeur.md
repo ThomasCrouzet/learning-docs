@@ -195,16 +195,10 @@ Etape par etape :
 
 **Schéma du flux** :
 
-```mermaid
-flowchart LR
-    N["Navigateur"] --> R["Router"]
-    R --> C["Controleur"]
-    C --> M["Modele\n(Entity, Repo, Service)"]
-    C --> V["Vue\n(Twig)"]
-    M -.-> C
-    V --> Resp["Response\n(HTML)"]
-    Resp --> N
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-07-mvc-profondeur-1.html">Le flux MVC dans Symfony (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-07-mvc-profondeur-1.html" title="Le flux MVC dans Symfony" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 
@@ -241,12 +235,10 @@ Le MVC classique a été conçu pour des applications de bureau (GUI). Dans une 
 
 **Définition** : Dans MVP, le Presenter contient toute la logique de présentation. La Vue est passive : elle ne fait que afficher ce que le Presenter lui dit et transmettre les interactions de l'utilisateur.
 
-```mermaid
-flowchart LR
-    subgraph MVP
-        V1["Vue"] <--> P["Presenter"] <--> M1["Modele"]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-07-mvc-profondeur-2.html">Les variantes de MVC (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-07-mvc-profondeur-2.html" title="Les variantes de MVC" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 La Vue ne connaît pas le Modèle. Le Presenter orchestre tout.
 
@@ -260,12 +252,10 @@ La Vue ne connaît pas le Modèle. Le Presenter orchestre tout.
 
 **Définition** : Dans MVVM, le ViewModel expose des propriétés observables. La Vue se lie automatiquement à ces propriétés (data binding). Quand le ViewModel change, la Vue se met à jour automatiquement.
 
-```mermaid
-flowchart LR
-    subgraph MVVM
-        V2["Vue"] <-->|data binding| VM["ViewModel"] <--> M2["Modele"]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-07-mvc-profondeur-3.html">Les variantes de MVC (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-07-mvc-profondeur-3.html" title="Les variantes de MVC" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 La Vue se lie automatiquement aux propriétés du ViewModel. Pas besoin de code pour mettre a jour l'affichage.
 

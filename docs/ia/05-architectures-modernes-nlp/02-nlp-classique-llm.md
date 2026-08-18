@@ -158,13 +158,10 @@ vec("Paris") - vec("France") + vec("Italie") ≈ vec("Rome")
 
 Le diagramme suivant résume l'évolution des techniques de NLP, des approches classiques jusqu'aux modèles génératifs actuels.
 
-```mermaid
-flowchart LR
-    bow[Bag of Words] --> w2v[Word2Vec<br>Embeddings]
-    w2v --> rnn[RNN / LSTM]
-    rnn --> bert[BERT<br>Bidirectionnel]
-    bert --> gpt[GPT<br>Génératif]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-02-nlp-classique-llm-1.html">Embeddings contextuels (2018+) (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-02-nlp-classique-llm-1.html" title="Embeddings contextuels (2018+)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

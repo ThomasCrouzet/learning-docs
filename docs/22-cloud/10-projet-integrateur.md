@@ -35,33 +35,10 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Le projet deploie une application de gestion de taches (API REST) avec l'architecture suivante :
 
-```mermaid
-graph TD
-    U[Utilisateurs] --> ALB[Application Load Balancer]
-    ALB --> ECS1[ECS Task 1]
-    ALB --> ECS2[ECS Task 2]
-    ECS1 --> RDS[(RDS PostgreSQL)]
-    ECS2 --> RDS
-    ECS1 --> REDIS[ElastiCache Redis]
-    ECS2 --> REDIS
-    CW[CloudWatch] -.-> ECS1
-    CW -.-> ECS2
-    CW -.-> RDS
-    CW -.-> ALB
-    SNS[SNS Notifications] -.-> CW
-
-    subgraph VPC
-        subgraph Sous-reseaux publics
-            ALB
-        end
-        subgraph Sous-reseaux prives
-            ECS1
-            ECS2
-            RDS
-            REDIS
-        end
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/22-cloud-10-projet-intégrateur-1.html">Architecture cible (HTML + SVG)</a></p>
+<iframe src="../../diagrams/22-cloud-10-projet-intégrateur-1.html" title="Architecture cible" style="width:100%;min-height:720px;border:0;background:transparent"></iframe>
+</div>
 
 **Composants** :
 

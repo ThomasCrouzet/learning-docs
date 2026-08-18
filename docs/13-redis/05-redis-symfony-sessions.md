@@ -84,12 +84,10 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Le diagramme suivant montre comment Redis centralise les sessions pour plusieurs serveurs PHP.
 
-```mermaid
-graph TD
-    symfony[Symfony] --> redis[(Redis<br>Sessions partagées)]
-    server1[Serveur 1] --> redis
-    server2[Serveur 2] --> redis
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-05-redis-symfony-sessions-1.html">Le problème du stockage des sessions en fichiers (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-05-redis-symfony-sessions-1.html" title="Le problème du stockage des sessions en fichiers" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Le stockage en fichiers, c'est comme chaque caissier d'un magasin qui note les achats d'un client fidèle sur son propre carnet. Si le client passe à une autre caisse, le caissier ne connaît pas son historique. Redis, c'est comme un système informatique central : n'importe quel caissier peut consulter le profil du client.
 

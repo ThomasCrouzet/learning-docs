@@ -71,24 +71,10 @@ Sans stratégie de cache définie, voici les problèmes rencontrés :
 
 **Schéma de fonctionnement** :
 
-```mermaid
-sequenceDiagram
-    participant App as Application
-    participant R as Redis
-    participant DB as PostgreSQL
-
-    Note over App,DB: Cache HIT
-    App->>R: 1. GET clé
-    R-->>App: Donnée trouvée
-
-    Note over App,DB: Cache MISS
-    App->>R: 1. GET clé
-    R-->>App: (nil)
-    App->>DB: 2. SELECT
-    DB-->>App: Donnée trouvée
-    App->>R: 3. SET clé
-    R-->>App: OK
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-06-stratégies-cache-1.html">Cache-aside (Lazy Loading) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-06-stratégies-cache-1.html" title="Cache-aside (Lazy Loading)" style="width:100%;min-height:600px;border:0;background:transparent"></iframe>
+</div>
 
 **Avantages** :
 
@@ -120,22 +106,10 @@ $products = $cache->get('all_products', function (ItemInterface $item) use ($rep
 
 **Schéma de fonctionnement** :
 
-```mermaid
-sequenceDiagram
-    participant App as Application
-    participant DB as PostgreSQL
-    participant R as Redis
-
-    Note over App,R: Écriture
-    App->>DB: 1. INSERT/UPDATE
-    DB-->>App: OK
-    App->>R: 2. SET (même donnée)
-    R-->>App: OK
-
-    Note over App,R: Lecture
-    App->>R: 1. GET clé
-    R-->>App: Donnée toujours à jour
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-06-stratégies-cache-2.html">Write-through (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-06-stratégies-cache-2.html" title="Write-through" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
+</div>
 
 **Avantages** :
 
@@ -227,17 +201,10 @@ class ProductService
 
 **Schéma de fonctionnement** :
 
-```mermaid
-sequenceDiagram
-    participant App as Application
-    participant R as Redis
-    participant DB as PostgreSQL
-
-    App->>R: 1. SET clé
-    R-->>App: OK (retour immédiat)
-    Note over R,DB: En arrière-plan
-    R->>DB: 2. INSERT/UPDATE (asynchrone)
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-06-stratégies-cache-3.html">Write-behind (Write-back) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-06-stratégies-cache-3.html" title="Write-behind (Write-back)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Avantages** :
 

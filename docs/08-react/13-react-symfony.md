@@ -141,12 +141,10 @@ Sans JWT :
 
 Le diagramme suivant montre l'architecture d'une application React + Symfony avec deux serveurs distincts qui communiquent en JSON.
 
-```mermaid
-graph LR
-    react[React<br>localhost:5173] -->|fetch /api/*| symfony[Symfony API<br>localhost:8000]
-    symfony --> db[(PostgreSQL)]
-    symfony -->|JSON| react
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-13-react-symfony-1.html">Qu&#x27;est-ce que l&#x27;authentification JWT ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-13-react-symfony-1.html" title="Qu&#x27;est-ce que l&#x27;authentification JWT ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

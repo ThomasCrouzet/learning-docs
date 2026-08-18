@@ -66,12 +66,10 @@ Sans generics, voici les problèmes rencontrés :
 
 Le schéma suivant illustre comment un generic est remplacé par un type concret à chaque utilisation :
 
-```mermaid
-graph TD
-    generic["function identity&lt;T&gt;(arg: T): T"] --> string["identity&lt;string&gt;('hello')<br>T = string"]
-    generic --> number["identity&lt;number&gt;(42)<br>T = number"]
-    generic --> user["identity&lt;User&gt;(alice)<br>T = User"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/07-typescript-10-generics-1.html">Qu&#x27;est-ce qu&#x27;un type générique ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/07-typescript-10-generics-1.html" title="Qu&#x27;est-ce qu&#x27;un type générique ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

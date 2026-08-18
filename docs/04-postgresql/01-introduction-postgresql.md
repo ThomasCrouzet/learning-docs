@@ -117,15 +117,10 @@ Serveur PostgreSQL
 
 Le schéma suivant illustre la structure hiérarchique d'un serveur PostgreSQL :
 
-```mermaid
-graph TD
-    server[Serveur PostgreSQL] --> db1[(Base : app_dev)]
-    server --> db2[(Base : app_test)]
-    db1 --> t1[Table : users]
-    db1 --> t2[Table : articles]
-    db1 --> t3[Table : comments]
-    t1 --> col1[id, email, password]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/04-postgresql-01-introduction-postgresql-1.html">Structure d&#x27;une base de données (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-01-introduction-postgresql-1.html" title="Structure d&#x27;une base de données" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

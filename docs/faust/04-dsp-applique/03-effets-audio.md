@@ -117,15 +117,10 @@ atanclip(drive, x) = ma.atan(x * drive) / ma.atan(drive);
 
 Le diagramme suivant montre l'architecture d'un delay avec boucle de feedback :
 
-```mermaid
-flowchart LR
-    input[Signal sec] --> delay[Ligne de délai]
-    delay --> feedback[Feedback<br>Rétroaction]
-    feedback --> delay
-    input --> mix[Mixage]
-    delay --> mix
-    mix --> output[Signal traité]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/faust-04-dsp-applique-03-effets-audio-1.html">Qu&#x27;est-ce qu&#x27;un delay ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-04-dsp-applique-03-effets-audio-1.html" title="Qu&#x27;est-ce qu&#x27;un delay ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

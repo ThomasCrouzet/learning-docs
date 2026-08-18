@@ -81,15 +81,10 @@ Sans système de sécurité, voici les problèmes rencontrés :
 
 Le schéma suivant illustre comment ces trois éléments interagissent pour traiter une requête :
 
-```mermaid
-graph TD
-    request[Requête HTTP] --> firewall[Firewall]
-    firewall --> provider[User Provider<br>Charge l'utilisateur]
-    firewall --> auth[Authenticator<br>Vérifie les identifiants]
-    auth --> access[Access Control<br>Vérifie les rôles]
-    access --> granted[Accès autorisé]
-    access --> denied[Accès refusé 403]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-12-sécurité-utilisateurs-1.html">Le composant Security de Symfony (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-12-sécurité-utilisateurs-1.html" title="Le composant Security de Symfony" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Fichier de configuration** : `config/packages/security.yaml`
 

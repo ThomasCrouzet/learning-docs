@@ -58,12 +58,10 @@ Sans types union, voici les problèmes rencontrés :
 
 Le diagramme suivant résume la différence entre un type union (accepte l'un ou l'autre) et un type intersection (exige les deux).
 
-```mermaid
-graph TD
-    union["Type A | B<br>A OU B"] --> acceptA[Accepte valeurs de A]
-    union --> acceptB[Accepte valeurs de B]
-    intersection["Type A & B<br>A ET B"] --> both[Doit avoir propriétés<br>de A et de B]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/07-typescript-06-types-union-intersection-1.html">Qu&#x27;est-ce qu&#x27;un type union ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/07-typescript-06-types-union-intersection-1.html" title="Qu&#x27;est-ce qu&#x27;un type union ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce qu'un type intersection ?
 

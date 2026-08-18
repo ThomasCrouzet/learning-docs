@@ -50,19 +50,10 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Le schéma suivant illustre le cycle complet d'une requête AJAX entre le navigateur et un contrôleur Symfony :
 
-```mermaid
-sequenceDiagram
-    participant B as Navigateur
-    participant JS as jQuery AJAX
-    participant S as Symfony Controller
-
-    B->>JS: Clic bouton
-    JS->>S: $.ajax() GET /api/articles
-    S->>S: Traitement PHP
-    S-->>JS: JsonResponse
-    JS->>B: Met à jour le DOM
-    Note over B: Page non rechargée
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/05-javascript-05-jquery-ajax-symfony-1.html">Qu&#x27;est-ce qu&#x27;AJAX ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/05-javascript-05-jquery-ajax-symfony-1.html" title="Qu&#x27;est-ce qu&#x27;AJAX ?" style="width:100%;min-height:480px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

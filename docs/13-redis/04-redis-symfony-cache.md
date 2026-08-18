@@ -66,14 +66,10 @@ Sans composant Cache, voici les problèmes rencontrés :
 
 **Flux de lecture du cache** :
 
-```mermaid
-flowchart TD
-    R["Requête"] --> C{"Cache\nexiste ?"}
-    C -->|Oui - cache hit| RET["Retourne les\ndonnées du cache"]
-    C -->|Non - cache miss| BDD["Interroge la\nbase de données"]
-    BDD --> STORE["Stocke le résultat\nen cache"]
-    STORE --> RET2["Retourne les\ndonnées"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-04-redis-symfony-cache-1.html">Qu&#x27;est-ce que le composant Cache de Symfony ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-04-redis-symfony-cache-1.html" title="Qu&#x27;est-ce que le composant Cache de Symfony ?" style="width:100%;min-height:616px;border:0;background:transparent"></iframe>
+</div>
 
 En cas de cache hit, la base de données n'est pas sollicitée. En cas de cache miss, le résultat est stocké en cache pour les prochaines requêtes.
 

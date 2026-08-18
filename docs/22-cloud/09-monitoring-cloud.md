@@ -119,15 +119,10 @@ Sans monitoring, voici les problèmes rencontres :
 
 **Structure des logs** :
 
-```mermaid
-graph TD
-    A[Log Group] --> B[Log Stream 1]
-    A --> C[Log Stream 2]
-    A --> D[Log Stream 3]
-    B --> E[Evenement de log]
-    B --> F[Evenement de log]
-    C --> G[Evenement de log]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/22-cloud-09-monitoring-cloud-1.html">Les logs CloudWatch (HTML + SVG)</a></p>
+<iframe src="../../diagrams/22-cloud-09-monitoring-cloud-1.html" title="Les logs CloudWatch" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 | Concept | Description | Exemple |
 | --- | --- | --- |

@@ -64,13 +64,10 @@ La différence avec un distributeur physique : un smart contract est transparent
 
 Le diagramme suivant montre les étapes principales de la vie d'un smart contract, de l'écriture du code à la mise à jour de l'état sur la blockchain.
 
-```mermaid
-flowchart TD
-    write[Écrire le code<br>Solidity] --> deploy[Déployer<br>Transaction]
-    deploy --> address[Adresse du contrat]
-    address --> appel[Appel de fonction]
-    appel --> etat["État mis à jour<br>sur la blockchain"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-03-ethereum-smart-contracts-02-smart-contracts-du-code-1.html">Cycle de vie d&#x27;un smart contract (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-03-ethereum-smart-contracts-02-smart-contracts-du-code-1.html" title="Cycle de vie d&#x27;un smart contract" style="width:100%;min-height:616px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

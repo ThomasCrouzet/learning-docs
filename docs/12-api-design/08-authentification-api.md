@@ -111,17 +111,10 @@ Un protocole de délégation d'autorisation. Un client (application tierce) obti
 
 Le diagramme suivant illustre le flux complet d'authentification JWT entre un client et l'API.
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant A as API
-
-    C->>A: POST /login (email, password)
-    A-->>C: JWT Token
-    C->>A: GET /api/data<br>Authorization: Bearer JWT
-    A->>A: Vérifie la signature
-    A-->>C: Données protégées
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-08-authentification-api-1.html">Les trois mécanismes d&#x27;authentification (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-08-authentification-api-1.html" title="Les trois mécanismes d&#x27;authentification" style="width:100%;min-height:480px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce qu'un JWT ?
 

@@ -98,16 +98,10 @@ Sans Proof of Work, voici les problèmes rencontrès :
 
 Le diagramme suivant résume le processus de minage Proof of Work :
 
-```mermaid
-flowchart TD
-    txs[Transactions en attente] --> template[Bloc candidat]
-    template --> hash[Calcul du hash]
-    hash -->|Hash > cible| nonce[Incrémenter le nonce]
-    nonce --> hash
-    hash -->|Hash < cible| found[Bloc valide trouvé]
-    found --> broadcast[Diffusion au réseau]
-    broadcast --> reward[Récompense : BTC]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-02-bitcoin-03-proof-of-work-consensus-energie-1.html">Le mécanisme de Proof of Work (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-02-bitcoin-03-proof-of-work-consensus-energie-1.html" title="Le mécanisme de Proof of Work" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que le Proof of Work n'est PAS** :
 

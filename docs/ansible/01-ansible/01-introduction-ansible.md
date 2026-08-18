@@ -140,15 +140,10 @@ Sans architecture agentless (c'est-à-dire avec des agents), voici les problème
 
 Le schéma suivant illustre l'architecture agentless push-based d'Ansible :
 
-```mermaid
-graph TD
-    control[Nœud de contrôle<br>Ansible installé] -->|SSH| server1[Serveur web<br>Aucun agent]
-    control -->|SSH| server2[Base de données<br>Aucun agent]
-    control -->|SSH| server3[Cache Redis<br>Aucun agent]
-
-    inventory[Inventaire] --> control
-    playbook[Playbook YAML] --> control
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-01-introduction-ansible-1.html">Qu&#x27;est-ce que l&#x27;architecture agentless ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-01-introduction-ansible-1.html" title="Qu&#x27;est-ce que l&#x27;architecture agentless ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 Le nœud de contrôle (ta machine) est le seul endroit où Ansible est installé. Il lit l'inventaire et le playbook, puis se connecte via SSH à chaque machine cible. Les machines cibles n'ont besoin d'aucun agent.
 

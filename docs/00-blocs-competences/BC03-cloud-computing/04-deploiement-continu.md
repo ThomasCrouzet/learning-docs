@@ -69,14 +69,10 @@ Sans CI/CD, voici les problèmes rencontrés :
 
 Le diagramme suivant montre les étapes d'un pipeline CI/CD complet.
 
-```mermaid
-flowchart LR
-    commit[Commit] --> ci[CI<br>Tests + Lint]
-    ci -->|Succès| build[Build<br>Image Docker]
-    build --> staging[Déploiement<br>Staging]
-    staging -->|Validation| prod[Déploiement<br>Production]
-    ci -->|Échec| fix[Corriger]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/00-blocs-compétences-bc03-cloud-computing-04-déploiement-continu-1.html">Qu&#x27;est-ce qu&#x27;un pipeline ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-compétences-bc03-cloud-computing-04-déploiement-continu-1.html" title="Qu&#x27;est-ce qu&#x27;un pipeline ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Structure d'un pipeline typique** :
 

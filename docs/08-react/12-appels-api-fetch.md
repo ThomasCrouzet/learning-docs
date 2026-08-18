@@ -63,14 +63,10 @@ Sans fetch :
 
 Le schéma suivant illustre les transitions entre les trois états possibles d'une requête API :
 
-```mermaid
-stateDiagram-v2
-    [*] --> Chargement: useEffect déclenché
-    Chargement --> Succès: Données reçues
-    Chargement --> Erreur: Requête échouée
-    Succès --> [*]: Affichage des données
-    Erreur --> [*]: Affichage du message d'erreur
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-12-appels-api-fetch-1.html">Les trois états d&#x27;une requête (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-12-appels-api-fetch-1.html" title="Les trois états d&#x27;une requête" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 **Les trois états** :
 

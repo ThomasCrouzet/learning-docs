@@ -61,15 +61,10 @@ Sans SOLID, voici les problèmes rencontrés :
 
 **Vue d'ensemble des 5 principes** :
 
-```mermaid
-flowchart TD
-    SOLID["SOLID"]
-    SOLID --> S["S - Single Responsibility\nUne classe = une raison de changer"]
-    SOLID --> O["O - Open/Closed\nExtensible sans modification"]
-    SOLID --> L["L - Liskov Substitution\nSous-type remplace le parent"]
-    SOLID --> I["I - Interface Segregation\nPetites interfaces spécialisées"]
-    SOLID --> D["D - Dependency Inversion\nDépendre d'abstractions"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-02-solid-principes-1.html">Qu&#x27;est-ce que SOLID ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-02-solid-principes-1.html" title="Qu&#x27;est-ce que SOLID ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque principe renforce les autres. Ensemble, ils produisent du code maintenable, extensible et testable.
 
@@ -507,16 +502,10 @@ Sans DIP, voici les problèmes rencontrés :
 
 **Avant vs après DIP** :
 
-```mermaid
-flowchart TD
-    subgraph AVANT["Avant DIP"]
-        HA["Module haut niveau"] --> BA["Module bas niveau"]
-    end
-    subgraph APRES["Après DIP"]
-        HB["Module haut niveau"] --> I["Interface\n(abstraction)"]
-        BB["Module bas niveau"] -.-> I
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-02-solid-principes-2.html">D - Dependency Inversion Principle (DIP) (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-02-solid-principes-2.html" title="D - Dependency Inversion Principle (DIP)" style="width:100%;min-height:648px;border:0;background:transparent"></iframe>
+</div>
 
 Avant DIP, le module haut niveau dépend directement du bas niveau. Après DIP, les deux dépendent d'une abstraction (interface). Le module bas niveau implémente l'interface (flèche pointillée).
 

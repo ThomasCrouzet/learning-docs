@@ -410,18 +410,10 @@ volumes: # Volumes pour la persistance
 
 Le schéma suivant illustre l'architecture multi-conteneurs gérée par Docker Compose pour un projet Symfony :
 
-```mermaid
-graph TD
-    browser[Navigateur] --> nginx[Nginx :80]
-    nginx --> phpfpm[PHP-FPM :9000]
-    phpfpm --> postgres[(PostgreSQL :5432)]
-
-    subgraph compose[Docker Compose]
-        nginx
-        phpfpm
-        postgres
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/01-docker-01-docker-compose-symfony-1.html">Qu&#x27;est-ce que Docker Compose ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/01-docker-01-docker-compose-symfony-1.html" title="Qu&#x27;est-ce que Docker Compose ?" style="width:100%;min-height:572px;border:0;background:transparent"></iframe>
+</div>
 
 - Le **navigateur** envoie une requête HTTP à **Nginx**
 - **Nginx** transmet les requêtes PHP à **PHP-FPM**

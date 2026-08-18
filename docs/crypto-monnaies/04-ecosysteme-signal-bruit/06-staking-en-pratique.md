@@ -66,13 +66,10 @@ Sans staking, les réseaux Proof of Stake rencontrent ces problèmes :
 
 Le diagramme suivant résume le flux de staking, du dépôt des tokens jusqu'aux récompenses et au retrait.
 
-```mermaid
-flowchart TD
-    deposit[Déposer des tokens] --> lock[Tokens verrouillés<br>Période de staking]
-    lock --> validate[Validation des blocs]
-    validate --> rewards[Récompenses]
-    lock --> withdraw[Retrait possible<br>Après la période]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-04-écosystème-signal-bruit-06-staking-en-pratique-1.html">Qu&#x27;est-ce que le staking ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-04-écosystème-signal-bruit-06-staking-en-pratique-1.html" title="Qu&#x27;est-ce que le staking ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

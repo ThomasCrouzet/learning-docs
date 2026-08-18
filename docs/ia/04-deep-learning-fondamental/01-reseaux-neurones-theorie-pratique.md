@@ -119,29 +119,10 @@ Sans fonction d'activation, voici les problèmes rencontrés :
 
 Le diagramme suivant montre l'architecture d'un perceptron multi-couche (MLP) avec une couche d'entrée, une couche cachée et une couche de sortie :
 
-```mermaid
-graph LR
-    subgraph input[Couche d'entrée]
-        i1[x1]
-        i2[x2]
-        i3[x3]
-    end
-    subgraph hidden[Couche cachée]
-        h1[neurone]
-        h2[neurone]
-    end
-    subgraph output[Couche de sortie]
-        o1[ŷ]
-    end
-    i1 --> h1
-    i1 --> h2
-    i2 --> h1
-    i2 --> h2
-    i3 --> h1
-    i3 --> h2
-    h1 --> o1
-    h2 --> o1
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-04-deep-learning-fondamental-01-réseaux-neurones-theorie-pratique-1.html">Qu&#x27;est-ce qu&#x27;une fonction d&#x27;activation ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-04-deep-learning-fondamental-01-réseaux-neurones-theorie-pratique-1.html" title="Qu&#x27;est-ce qu&#x27;une fonction d&#x27;activation ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

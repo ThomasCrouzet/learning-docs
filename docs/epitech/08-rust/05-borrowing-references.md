@@ -79,12 +79,10 @@ Sans références, voici les problèmes rencontrés :
 
 Le diagramme suivant montre la différence entre emprunt immutable et emprunt mutable.
 
-```mermaid
-graph TD
-    owner["Propriétaire<br>let s = String"] --> immut1["&s<br>Emprunt immutable 1"]
-    owner --> immut2["&s<br>Emprunt immutable 2"]
-    owner --> mut["&mut s<br>Emprunt mutable<br>un seul à la fois"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-08-rust-05-borrowing-références-1.html">Références immutables vs mutables (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-08-rust-05-borrowing-références-1.html" title="Références immutables vs mutables" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 | Référence immutable `&T` | Référence mutable `&mut T` |
 | --- | --- |

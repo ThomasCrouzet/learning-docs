@@ -90,15 +90,10 @@ Sans HTTP, voici les problèmes rencontres :
 
 **Fonctionnement d'une requête HTTP** :
 
-```mermaid
-sequenceDiagram
-    participant C as Client (navigateur)
-    participant S as Serveur web
-    C->>S: GET /index.html HTTP/1.1
-    S-->>C: HTTP/1.1 200 OK + contenu HTML
-    C->>S: GET /style.css HTTP/1.1
-    S-->>C: HTTP/1.1 200 OK + contenu CSS
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-réseaux-08-services-réseau-1.html">Qu&#x27;est-ce que HTTP/HTTPS ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-réseaux-08-services-réseau-1.html" title="Qu&#x27;est-ce que HTTP/HTTPS ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 
@@ -162,16 +157,10 @@ Sans ces protocoles, voici les problèmes rencontres :
 
 **Parcours d'un e-mail** :
 
-```mermaid
-sequenceDiagram
-    participant E as Expediteur
-    participant SA as Serveur SMTP (expediteur)
-    participant SB as Serveur SMTP (destinataire)
-    participant D as Destinataire
-    E->>SA: SMTP (port 587) - Envoi
-    SA->>SB: SMTP (port 25) - Relais
-    D->>SB: IMAP (port 993) - Lecture
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-réseaux-08-services-réseau-2.html">Qu&#x27;est-ce que SMTP/IMAP ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-réseaux-08-services-réseau-2.html" title="Qu&#x27;est-ce que SMTP/IMAP ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

@@ -71,16 +71,10 @@ Sans ViT, voici les problèmes rencontrés :
 
 #### Architecture détaillée du ViT
 
-```mermaid
-flowchart TD
-    IMG["Image (224x224x3)"] --> PATCH["Découpage en patches\n16x16 pixels → 196 patches"]
-    PATCH --> PROJ["Projection linéaire\npatch → vecteur de dimension D"]
-    PROJ --> CLS["Ajout du CLS token\nen position 0"]
-    CLS --> POS["Positional embeddings\nvecteur de position appris"]
-    POS --> ENC["Transformer Encoder\nN couches self-attention + FFN"]
-    ENC --> CLSF["CLS token final\nrésume toute l'image"]
-    CLSF --> HEAD["Tête de classification\nMLP → classe prédite"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-03-vision-transformers-multimodal-1.html">Architecture détaillée du ViT (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-03-vision-transformers-multimodal-1.html" title="Architecture détaillée du ViT" style="width:100%;min-height:868px;border:0;background:transparent"></iframe>
+</div>
 
 ```python
 import torch
@@ -144,14 +138,10 @@ Sans CLIP, voici les problèmes rencontrés :
 
 #### Fonctionnement de CLIP
 
-```mermaid
-flowchart TD
-    IMG["Images"] --> IENC["Image Encoder\n(ViT)"]
-    TXT["Textes"] --> TENC["Text Encoder\n(Transformer)"]
-    IENC --> EMB_I["Embeddings images\ni₁, i₂, i₃"]
-    TENC --> EMB_T["Embeddings textes\nt₁, t₂, t₃"]
-    EMB_I & EMB_T --> SIM["Similarité cosinus\n→ Matrice NxN"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ia-05-architectures-modernes-nlp-03-vision-transformers-multimodal-2.html">Fonctionnement de CLIP (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ia-05-architectures-modernes-nlp-03-vision-transformers-multimodal-2.html" title="Fonctionnement de CLIP" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 Objectif : maximiser la diagonale de la matrice (chaque image associée à son texte).
 

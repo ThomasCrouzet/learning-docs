@@ -159,17 +159,10 @@ Sans cache, voici les problèmes rencontres :
 
 **Arbre de décision** :
 
-```mermaid
-graph TD
-    A[Quel type de donnees ?] --> B{Relations entre les donnees ?}
-    B -->|Oui, relations complexes| C[RDS - PostgreSQL/MySQL]
-    B -->|Non, acces par cle| D{Volume de donnees ?}
-    D -->|Moins de 100 Go| E[RDS - plus simple a gerer]
-    D -->|Plus de 100 Go ou scaling illimite| F[DynamoDB]
-    A --> G{Besoin de cache ?}
-    G -->|Oui, reduire la latence| H[ElastiCache Redis]
-    G -->|Oui, cache simple| I[ElastiCache Memcached]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/22-cloud-07-bases-de-données-cloud-1.html">Comment choisir le bon service ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/22-cloud-07-bases-de-données-cloud-1.html" title="Comment choisir le bon service ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 **Tableau récapitulatif** :
 

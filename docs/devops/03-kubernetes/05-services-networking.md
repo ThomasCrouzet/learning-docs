@@ -106,39 +106,19 @@ Sans Service :
 
 Le schéma suivant montre comment les types de Services s'empilent, du plus restrictif au plus exposé :
 
-```mermaid
-graph TD
-    clusterIP[ClusterIP<br>Accès interne uniquement] --> pod1[Pods]
-    nodePort[NodePort<br>Accès via port du nœud] --> clusterIP
-    loadBalancer[LoadBalancer<br>Accès externe via IP publique] --> nodePort
-    external[Trafic externe] --> loadBalancer
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-05-services-networking-1.html">ExternalName (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-05-services-networking-1.html" title="ExternalName" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque type de Service est une couche au-dessus du précédent. Un LoadBalancer crée un NodePort, qui crée un ClusterIP. Le trafic externe traverse toute la chaîne pour atteindre les Pods.
 
 **Niveaux d'exposition des Services** :
 
-```mermaid
-flowchart LR
-    U["Utilisateur\n(extérieur)"]
-
-    subgraph cluster["Cluster Kubernetes"]
-        ING["Ingress\nRoutage HTTP L7"]
-        LB["LoadBalancer\nIP publique L4"]
-        NP["NodePort\nPort 30000-32767"]
-        CIP["ClusterIP\nIP interne"]
-        P["Pods"]
-
-        ING -->|route| CIP
-        LB --> NP
-        NP --> CIP
-        CIP --> P
-    end
-
-    U -->|"HTTP/HTTPS"| ING
-    U -->|"IP:port"| LB
-    U -->|"NodeIP:NodePort"| NP
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-05-services-networking-2.html">ExternalName (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-05-services-networking-2.html" title="ExternalName" style="width:100%;min-height:504px;border:0;background:transparent"></iframe>
+</div>
 
 Tous les types de Services sont des ressources internes au cluster. L'utilisateur extérieur accède aux Pods via Ingress (routage HTTP), LoadBalancer (IP publique) ou NodePort (port du node). ClusterIP reste accessible uniquement depuis l'intérieur du cluster.
 

@@ -62,13 +62,10 @@ Sans fonctions, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le flux d'exécution lorsqu'une fonction est appelée :
 
-```mermaid
-flowchart LR
-    call["Appel : calcul(5, 3)"] --> params[Paramètres reçus<br>a=5, b=3]
-    params --> exec[Exécution du code]
-    exec --> ret["return résultat"]
-    ret --> result["Valeur retournée : 8"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-06-fonctions-1.html">Qu&#x27;est-ce qu&#x27;une fonction ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-06-fonctions-1.html" title="Qu&#x27;est-ce qu&#x27;une fonction ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

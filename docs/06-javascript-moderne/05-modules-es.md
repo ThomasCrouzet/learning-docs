@@ -62,12 +62,10 @@ Sans les modules, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment les fichiers modules s'importent entre eux pour construire l'application.
 
-```mermaid
-graph LR
-    math[math.js<br>export add, multiply] --> app[app.js<br>import add from math]
-    utils[utils.js<br>export default format] --> app
-    app --> output[Application]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-05-modules-es-1.html">Qu&#x27;est-ce qu&#x27;un module ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-05-modules-es-1.html" title="Qu&#x27;est-ce qu&#x27;un module ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Export nommé vs export par défaut
 

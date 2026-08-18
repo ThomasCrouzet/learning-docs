@@ -59,13 +59,10 @@ Sans filtres, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre les quatre types de filtres audio les plus courants et leur effet sur le signal :
 
-```mermaid
-graph TD
-    input[Signal audio] --> lpf[Passe-bas<br>Coupe les aigus]
-    input --> hpf[Passe-haut<br>Coupe les graves]
-    input --> bpf[Passe-bande<br>Garde une bande]
-    input --> resonant[Résonant<br>Amplifie une fréquence]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/faust-04-dsp-applique-02-filtres-1.html">Qu&#x27;est-ce qu&#x27;un filtre audio ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/faust-04-dsp-applique-02-filtres-1.html" title="Qu&#x27;est-ce qu&#x27;un filtre audio ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

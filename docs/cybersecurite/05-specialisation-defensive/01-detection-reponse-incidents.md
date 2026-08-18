@@ -123,13 +123,10 @@ Sans chain of custody, voici les problèmes rencontrés :
 
 Le diagramme suivant résume le pipeline d'analyse forensique, de la découverte de l'incident jusqu'au rapport final.
 
-```mermaid
-flowchart TD
-    discovery[Découverte<br>Alerte ou rapport] --> memory[Analyse mémoire<br>Volatility]
-    memory --> disk[Analyse disque<br>Autopsy]
-    disk --> network[Analyse réseau<br>Wireshark]
-    network --> report[Rapport<br>Conclusions]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/cybersecurite-05-specialisation-defensive-01-détection-réponse-incidents-1.html">Étapes Pratiques (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-05-specialisation-defensive-01-détection-réponse-incidents-1.html" title="Étapes Pratiques" style="width:100%;min-height:616px;border:0;background:transparent"></iframe>
+</div>
 
 ### Étape 1 : Installer Volatility 3
 

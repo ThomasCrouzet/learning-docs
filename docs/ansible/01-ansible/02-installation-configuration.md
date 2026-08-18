@@ -66,13 +66,10 @@ Sans nœud de contrôle dédié, voici les problèmes rencontrés :
 
 Le diagramme suivant résume les étapes de configuration initiale d'Ansible, de l'installation jusqu'au premier test de connexion.
 
-```mermaid
-flowchart TD
-    install[Installer Ansible<br>pip / apt] --> config[ansible.cfg<br>Configuration]
-    config --> inventory[Inventaire<br>Définir les hôtes]
-    inventory --> ssh[Clés SSH<br>Authentification]
-    ssh --> test[ansible -m ping<br>Tester la connexion]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-02-installation-configuration-1.html">Qu&#x27;est-ce que le nœud de contrôle (control node) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-02-installation-configuration-1.html" title="Qu&#x27;est-ce que le nœud de contrôle (control node) ?" style="width:100%;min-height:616px;border:0;background:transparent"></iframe>
+</div>
 
 **Conditions requises pour le nœud de contrôle** :
 

@@ -54,13 +54,10 @@ Sans build automatisé, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre les étapes d'un pipeline de build et de publication d'artefacts.
 
-```mermaid
-flowchart LR
-    code[Code source] --> test[Tests]
-    test --> build[Build Docker]
-    build --> push[Push vers GHCR]
-    push --> artifact[Artefact disponible]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-04-github-actions-build-artefacts-1.html">Qu&#x27;est-ce que le build dans un pipeline CI/CD ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-04-github-actions-build-artefacts-1.html" title="Qu&#x27;est-ce que le build dans un pipeline CI/CD ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Imagine une boulangerie industrielle. Chaque baguette est fabriquée par la même machine, avec les mêmes ingrédients, à la même température. Le résultat est identique à chaque fois. Le build CI est cette machine : il produit le même résultat à partir du même code, à chaque fois.
 

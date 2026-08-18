@@ -101,12 +101,10 @@ Sans Promtail, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le pipeline de collecte, stockage et consultation des logs avec Loki.
 
-```mermaid
-flowchart LR
-    app[Application] --> promtail[Promtail<br>Collecte]
-    promtail --> loki[Loki<br>Stockage]
-    loki --> grafana[Grafana<br>Requêtes LogQL]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/14-monitoring-07-logs-loki-1.html">Qu&#x27;est-ce que Promtail ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-07-logs-loki-1.html" title="Qu&#x27;est-ce que Promtail ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ```text
 ┌──────────────┐     ┌──────────────┐     ┌──────────┐     ┌─────────┐

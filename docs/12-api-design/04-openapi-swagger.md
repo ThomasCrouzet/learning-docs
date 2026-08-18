@@ -114,12 +114,10 @@ Sans ce bundle :
 
 Le diagramme suivant montre le pipeline de documentation API : du code annoté vers la spécification OpenAPI, puis vers Swagger UI et la génération de clients.
 
-```mermaid
-flowchart LR
-    code[Code annoté<br>Attributs PHP] --> spec[Spécification<br>OpenAPI YAML]
-    spec --> swagger[Swagger UI<br>Documentation interactive]
-    spec --> client[Génération client<br>SDK automatique]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-04-openapi-swagger-1.html">NelmioApiDocBundle (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-04-openapi-swagger-1.html" title="NelmioApiDocBundle" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

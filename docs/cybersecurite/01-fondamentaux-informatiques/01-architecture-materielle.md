@@ -313,15 +313,10 @@ Sans rings de privilèges, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre la hiérarchie des rings de privilèges, du noyau (accès total) jusqu'aux applications utilisateur (accès restreint) :
 
-```mermaid
-graph TD
-    ring0[Ring 0<br>Noyau / Kernel] --> ring1[Ring 1<br>Pilotes systèmes]
-    ring1 --> ring2[Ring 2<br>Services système]
-    ring2 --> ring3[Ring 3<br>Applications utilisateur]
-
-    ring0 -.->|Accès total| hw[Matériel]
-    ring3 -.->|Accès restreint| hw
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-01-architecture-matérielle-1.html">Qu&#x27;est-ce que les rings de privilèges (Ring 0-3) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-01-fondamentaux-informatiques-01-architecture-matérielle-1.html" title="Qu&#x27;est-ce que les rings de privilèges (Ring 0-3) ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que les rings ne sont PAS** :
 

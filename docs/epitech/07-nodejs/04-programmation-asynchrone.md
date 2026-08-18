@@ -64,13 +64,10 @@ Sans asynchrone, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le fonctionnement de l'Event Loop dans Node.js.
 
-```mermaid
-flowchart TD
-    code[Code JavaScript] --> callstack[Call Stack]
-    callstack -->|Opération async| api[API Node.js<br>Timer, I/O, réseau]
-    api -->|Terminée| queue[Callback Queue]
-    queue -->|Call Stack vide| callstack
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-07-nodejs-04-programmation-asynchrone-1.html">Qu&#x27;est-ce que l&#x27;asynchrone ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-07-nodejs-04-programmation-asynchrone-1.html" title="Qu&#x27;est-ce que l&#x27;asynchrone ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ### Les trois façons de gérer l'asynchrone
 

@@ -72,31 +72,10 @@ Sans Strategy, voici les problèmes rencontrés :
 
 **Structure du pattern** :
 
-```mermaid
-classDiagram
-    class Context {
-        -strategy: Strategy
-        +setStrategy(Strategy)
-        +execute()
-    }
-    class Strategy {
-        <<interface>>
-        +algorithm()
-    }
-    class StrategyA {
-        +algorithm()
-    }
-    class StrategyB {
-        +algorithm()
-    }
-    class StrategyC {
-        +algorithm()
-    }
-    Context --> Strategy : utilise
-    Strategy <|.. StrategyA
-    Strategy <|.. StrategyB
-    Strategy <|.. StrategyC
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-06-patterns-comportement-1.html">Strategy (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-06-patterns-comportement-1.html" title="Strategy" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le Context delegue l'exécution a la Strategy active. On peut changer de stratégie a l'exécution sans modifier le Context.
 
@@ -272,21 +251,10 @@ Sans Observer, voici les problèmes rencontrés :
 
 **Flux de notification** :
 
-```mermaid
-sequenceDiagram
-    participant S as Subject
-    participant A as ObserverA
-    participant B as ObserverB
-    participant C as ObserverC
-
-    Note over S: L'etat change
-    S->>A: notify(event)
-    A-->>A: reagit
-    S->>B: notify(event)
-    B-->>B: reagit
-    S->>C: notify(event)
-    C-->>C: reagit
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-06-patterns-comportement-2.html">Observer (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-06-patterns-comportement-2.html" title="Observer" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
+</div>
 
 Le Subject notifie tous les observateurs inscrits. Chaque observateur réagit indépendamment sans connaître les autres.
 
@@ -724,17 +692,10 @@ Sans State, voici les problèmes rencontrés :
 
 **Transitions d'états d'une commande** :
 
-```mermaid
-stateDiagram-v2
-    [*] --> EnAttente : création
-    EnAttente --> Payée : payer()
-    EnAttente --> Annulée : annuler()
-    Payée --> Expédiée : expédier()
-    Payée --> Annulée : annuler()
-    Expédiée --> Livrée : livrer()
-    Livrée --> [*]
-    Annulée --> [*]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-06-patterns-comportement-3.html">State (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-06-patterns-comportement-3.html" title="State" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 Chaque état (EnAttente, Payee, etc.) est une classe qui implemente les transitions autorisées. Les transitions invalides levent une exception.
 

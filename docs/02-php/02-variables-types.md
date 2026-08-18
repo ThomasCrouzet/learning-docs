@@ -120,19 +120,10 @@ En PHP, la convention est d'écrire les variables en "camelCase" :
 
 Le diagramme suivant présente la classification des types de données en PHP :
 
-```mermaid
-graph TD
-    types[Types PHP] --> scalar[Types scalaires]
-    types --> compound[Types composés]
-    types --> special[Types spéciaux]
-    scalar --> string[string]
-    scalar --> int[int]
-    scalar --> float[float]
-    scalar --> bool[bool]
-    compound --> array[array]
-    compound --> object[object]
-    special --> null[null]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-02-variables-types-1.html">Les types de données (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-02-variables-types-1.html" title="Les types de données" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Définition** : Le type de données définit quelle sorte de valeur une variable contient. PHP détermine automatiquement le type selon la valeur assignée.
 

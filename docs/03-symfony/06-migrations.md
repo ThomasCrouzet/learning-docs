@@ -82,19 +82,10 @@ Voici comment les migrations s'intègrent dans le développement :
 
 Le diagramme suivant détaille les interactions entre le développeur, l'entité, la migration et la base de données :
 
-```mermaid
-sequenceDiagram
-    participant D as Développeur
-    participant E as Entité PHP
-    participant M as Migration SQL
-    participant DB as Base de données
-
-    D->>E: Modifie l'entité
-    D->>M: make:migration
-    M-->>D: Fichier SQL généré
-    D->>DB: doctrine:migrations:migrate
-    DB-->>D: Schéma mis à jour
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-06-migrations-1.html">Le cycle de vie des migrations (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-06-migrations-1.html" title="Le cycle de vie des migrations" style="width:100%;min-height:480px;border:0;background:transparent"></iframe>
+</div>
 
 **Point important** : Les migrations doivent être versionnées dans Git avec le code. Ainsi, quand un collègue récupère tes modifications, il peut appliquer les migrations pour avoir la même structure de base.
 

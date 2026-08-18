@@ -67,12 +67,10 @@ Sans Ansible Vault, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le cycle de vie d'un fichier géré par Ansible Vault.
 
-```mermaid
-flowchart LR
-    plain[Fichier en clair] -->|ansible-vault encrypt| encrypted[Fichier chiffré]
-    encrypted -->|ansible-vault edit| plain
-    encrypted -->|ansible-playbook --ask-vault-pass| runtime[Déchiffré à l'exécution]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-12-ansible-vault-1.html">Qu&#x27;est-ce qu&#x27;Ansible Vault ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-12-ansible-vault-1.html" title="Qu&#x27;est-ce qu&#x27;Ansible Vault ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Comparaison Ansible Vault vs HashiCorp Vault** :
 

@@ -85,13 +85,10 @@ Sans ces outils, voici les problèmes rencontrés :
 
 Le diagramme suivant montre les principales commandes de débogage et ce qu'elles permettent d'observer sur un conteneur.
 
-```mermaid
-flowchart LR
-    container[Conteneur] --> inspect[podman inspect<br>Détails complets]
-    container --> logs[podman logs<br>Sortie console]
-    container --> stats[podman stats<br>CPU, mémoire]
-    container --> exec[podman exec<br>Shell interactif]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-01-podman-05-podman-avance-1.html">Qu&#x27;est-ce que l&#x27;inspection et le débogage des conteneurs ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-01-podman-05-podman-avance-1.html" title="Qu&#x27;est-ce que l&#x27;inspection et le débogage des conteneurs ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 **Les cinq commandes de débogage** :
 

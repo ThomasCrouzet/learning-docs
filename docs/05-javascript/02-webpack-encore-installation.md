@@ -114,13 +114,10 @@ Sans Encore, configurer Webpack directement pose ces problèmes :
 
 Le schéma suivant illustre le pipeline de compilation de Webpack Encore :
 
-```mermaid
-flowchart LR
-    assets[assets/<br>JS, CSS, images] --> encore[Webpack Encore<br>Compilation]
-    encore --> build[public/build/<br>Fichiers optimisés]
-    encore --> manifest[manifest.json<br>Mapping fichiers]
-    build --> browser[Navigateur]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/05-javascript-02-webpack-encore-installation-1.html">Qu&#x27;est-ce que Webpack Encore ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/05-javascript-02-webpack-encore-installation-1.html" title="Qu&#x27;est-ce que Webpack Encore ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

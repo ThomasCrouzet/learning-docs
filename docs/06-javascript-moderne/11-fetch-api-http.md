@@ -116,19 +116,10 @@ Sans `fetch()`, voici les problèmes rencontrés :
 
 Le schéma suivant illustre le cycle complet d'une requête HTTP avec `fetch()` :
 
-```mermaid
-sequenceDiagram
-    participant JS as JavaScript
-    participant F as fetch()
-    participant S as Serveur
-
-    JS->>F: fetch('/api/data')
-    F->>S: Requête HTTP
-    S-->>F: Réponse (JSON)
-    F-->>JS: Promise Response
-    JS->>JS: response.json()
-    Note over JS: Données utilisables
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-11-fetch-api-http-1.html">Qu&#x27;est-ce que `fetch()` ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-11-fetch-api-http-1.html" title="Qu&#x27;est-ce que `fetch()` ?" style="width:100%;min-height:480px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

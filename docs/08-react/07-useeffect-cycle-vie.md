@@ -52,18 +52,10 @@ Sans gestion des effets :
 
 **Cycle de vie d'un composant avec useEffect** :
 
-```mermaid
-stateDiagram-v2
-    [*] --> Montage
-    Montage --> Rendu : premier rendu
-    Rendu --> Effet : après le paint
-    Effet --> ReRendu : changement état/props
-    ReRendu --> Cleanup : avant nouvel effet
-    Cleanup --> Effet : nouvel effet exécuté
-    ReRendu --> Demontage : composant retiré
-    Demontage --> CleanupFinal : nettoyage final
-    CleanupFinal --> [*]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-07-useeffect-cycle-vie-1.html">Qu&#x27;est-ce qu&#x27;un effet de bord (side effect) ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-07-useeffect-cycle-vie-1.html" title="Qu&#x27;est-ce qu&#x27;un effet de bord (side effect) ?" style="width:100%;min-height:836px;border:0;background:transparent"></iframe>
+</div>
 
 Un changement d'état ou de props déclenche un nouveau rendu (ReRendu). Le Cleanup de l'ancien effet s'exécute avant le nouvel Effet. Au démontage, le Cleanup final s'exécute.
 

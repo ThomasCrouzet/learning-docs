@@ -85,19 +85,10 @@ Pour revenir sur Ethereum :
 
 Le diagramme suivant illustre le mécanisme lock-and-mint :
 
-```mermaid
-flowchart LR
-    user[Utilisateur] -->|Envoie ETH| lock[Smart contract<br>Verrouillage]
-    lock -->|Preuve| bridge[Bridge<br>Vérification]
-    bridge -->|Mint| weth[WETH créé<br>sur chaîne B]
-
-    subgraph chainA[Chaîne A - Ethereum]
-        lock
-    end
-    subgraph chainB[Chaîne B - Polygon]
-        weth
-    end
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-02-bridges-interopérabilité-1.html">Mécanisme 1 : Lock-and-mint (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/crypto-monnaies-07-concepts-techniques-avances-02-bridges-interopérabilité-1.html" title="Mécanisme 1 : Lock-and-mint" style="width:100%;min-height:652px;border:0;background:transparent"></iframe>
+</div>
 
 **Le point critique** : qui décide de créer le token sur la chaîne de destination ? C'est la question de confiance centrale. Quelqu'un (ou quelque chose) doit vérifier que le dépôt a bien eu lieu sur la chaîne source avant de créer le token sur la chaîne de destination.
 

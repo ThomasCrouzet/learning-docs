@@ -261,15 +261,10 @@ Sans comprendre le cycle de vie, voici les problèmes rencontrés :
 
 Le schéma suivant résume le cycle de vie d'une image et d'un conteneur Podman :
 
-```mermaid
-flowchart TD
-    dockerfile[Containerfile] -->|podman build| image[Image]
-    image -->|podman run| container[Conteneur actif]
-    container -->|podman stop| stopped[Conteneur arrêté]
-    stopped -->|podman start| container
-    stopped -->|podman rm| removed[Supprimé]
-    image -->|podman push| registry[(Registry)]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-01-podman-02-images-conteneurs-1.html">Quel est le cycle de vie d&#x27;un conteneur Podman ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-01-podman-02-images-conteneurs-1.html" title="Quel est le cycle de vie d&#x27;un conteneur Podman ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 Le Containerfile est la source. La commande `podman build` produit une image. Depuis cette image, `podman run` crée un conteneur actif. Le conteneur peut être arrêté, redémarré ou supprimé. L'image peut aussi être publiée vers un registry avec `podman push`.
 

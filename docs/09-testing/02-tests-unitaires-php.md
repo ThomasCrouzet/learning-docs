@@ -118,11 +118,10 @@ Sans assertions standardisées, voici les problèmes rencontrés :
 
 Le diagramme suivant montre la structure AAA (Arrange-Act-Assert) que chaque test unitaire doit suivre.
 
-```mermaid
-flowchart LR
-    arrange[Arrange<br>Préparer les données] --> act[Act<br>Exécuter l'action]
-    act --> assert[Assert<br>Vérifier le résultat]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/09-testing-02-tests-unitaires-php-1.html">Qu&#x27;est-ce qu&#x27;une assertion ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/09-testing-02-tests-unitaires-php-1.html" title="Qu&#x27;est-ce qu&#x27;une assertion ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Qu'est-ce qu'un data provider ?
 

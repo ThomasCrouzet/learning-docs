@@ -123,13 +123,10 @@ Sans Trace Viewer, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment un test interagit avec un Page Object qui centralise les locators et les actions.
 
-```mermaid
-graph TD
-    test[Test] --> page[LoginPage<br>Page Object]
-    page --> locators[Locators<br>Sélecteurs centralisés]
-    page --> actions[Actions<br>login, logout]
-    test --> assertions[Assertions<br>Vérifications]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/09-testing-08-playwright-avance-1.html">Qu&#x27;est-ce que le Trace Viewer ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/09-testing-08-playwright-avance-1.html" title="Qu&#x27;est-ce que le Trace Viewer ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

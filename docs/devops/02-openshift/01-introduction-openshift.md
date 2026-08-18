@@ -310,31 +310,10 @@ Sans SCC, voici les problèmes de sécurité rencontrés :
 
 **Les composants d'OpenShift** :
 
-```mermaid
-flowchart TD
-    subgraph CLUSTER["Cluster OpenShift"]
-        subgraph CP["Control Plane (Master Nodes)"]
-            API["API Server\n(Kubernetes)"]
-            CM["Controller\nManager"]
-            ETCD["etcd\n(base de données)"]
-            HAP["HAProxy\nRouter"]
-            REG["Registre\nd'images"]
-            WEB["Console Web\nOpenShift"]
-            OPS["Operators\n(gestion des composants)"]
-        end
-        subgraph WORKERS["Worker Nodes (CoreOS)"]
-            subgraph N1["Node 1"]
-                PA["Pod A"]
-                PB["Pod B"]
-            end
-            subgraph N2["Node 2"]
-                PC["Pod C"]
-                PD["Pod D"]
-            end
-        end
-    end
-    CP --> WORKERS
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-02-openshift-01-introduction-openshift-1.html">L&#x27;architecture d&#x27;OpenShift (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-02-openshift-01-introduction-openshift-1.html" title="L&#x27;architecture d&#x27;OpenShift" style="width:100%;min-height:500px;border:0;background:transparent"></iframe>
+</div>
 
 **Les composants spécifiques à OpenShift** :
 

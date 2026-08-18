@@ -140,12 +140,10 @@ Sans HPA :
 
 Le diagramme suivant montre le fonctionnement du HPA : il ajuste le nombre de pods en fonction des métriques de charge.
 
-```mermaid
-flowchart TD
-    metrics[Métriques<br>CPU, Mémoire] --> hpa[HPA<br>Horizontal Pod Autoscaler]
-    hpa -->|Charge élevée| scaleUp[Scale Up<br>Ajouter des pods]
-    hpa -->|Charge faible| scaleDown[Scale Down<br>Retirer des pods]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-09-health-checks-autoscaling-1.html">Qu&#x27;est-ce que le HorizontalPodAutoscaler (HPA) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-09-health-checks-autoscaling-1.html" title="Qu&#x27;est-ce que le HorizontalPodAutoscaler (HPA) ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que le HPA n'est PAS** :
 

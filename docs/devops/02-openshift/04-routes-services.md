@@ -139,13 +139,10 @@ La Route est une ressource spécifique à OpenShift. Dans Kubernetes standard (s
 
 Le diagramme suivant montre le cheminement d'une requête depuis l'utilisateur externe jusqu'aux Pods via la Route et le Service.
 
-```mermaid
-graph TD
-    user[Utilisateur externe] --> route[Route<br>app.example.com]
-    route --> svc[Service<br>Port 8080]
-    svc --> pod1[Pod 1]
-    svc --> pod2[Pod 2]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-02-openshift-04-routes-services-1.html">Qu&#x27;est-ce qu&#x27;une Route OpenShift ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-02-openshift-04-routes-services-1.html" title="Qu&#x27;est-ce qu&#x27;une Route OpenShift ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 **Schéma du flux de trafic** :
 

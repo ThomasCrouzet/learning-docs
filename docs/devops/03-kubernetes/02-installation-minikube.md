@@ -63,13 +63,10 @@ Sans Minikube, voici les problèmes rencontrés pour apprendre Kubernetes :
 
 Le diagramme suivant illustre l'architecture de Minikube, qui regroupe le Control Plane et le Worker dans une seule VM.
 
-```mermaid
-graph TD
-    minikube[Minikube VM] --> cp[Control Plane<br>API Server, etcd, Scheduler]
-    minikube --> worker[Worker<br>kubelet, kube-proxy]
-    cp --> pods[Pods applicatifs]
-    worker --> pods
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-02-installation-minikube-1.html">Qu&#x27;est-ce que Minikube ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-02-installation-minikube-1.html" title="Qu&#x27;est-ce que Minikube ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que Minikube n'est PAS** :
 

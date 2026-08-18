@@ -102,15 +102,10 @@ Sans SIEM, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre le flux d'une alerte dans un SOC, depuis la collecte des logs jusqu'a la réponse incident :
 
-```mermaid
-flowchart TD
-    sources[Sources de logs] --> siem[SIEM<br>Collecte et corrélation]
-    siem --> rules[Règles de détection]
-    rules -->|Alerte| l1[Analyste L1<br>Triage]
-    l1 -->|Faux positif| close[Clôturé]
-    l1 -->|Confirmé| l2[Analyste L2<br>Investigation]
-    l2 --> l3[Analyste L3<br>Réponse incident]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/cybersecurite-03-compétences-intermédiaires-04-introduction-soc-monitoring-1.html">Qu&#x27;est-ce qu&#x27;un SIEM ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-03-compétences-intermédiaires-04-introduction-soc-monitoring-1.html" title="Qu&#x27;est-ce qu&#x27;un SIEM ?" style="width:100%;min-height:700px;border:0;background:transparent"></iframe>
+</div>
 
 **Comparaison des principaux SIEM** :
 

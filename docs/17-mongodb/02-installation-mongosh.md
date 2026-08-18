@@ -108,12 +108,10 @@ Sans Docker, voici les problèmes rencontrés :
 
 **Architecture Docker pour MongoDB** :
 
-```mermaid
-flowchart LR
-    APP["Application Node.js"] -->|port 27017| MONGO["Conteneur MongoDB\n(mongod)"]
-    CLI["mongosh\n(dans le conteneur)"] --> MONGO
-    COMPASS["MongoDB Compass\n(sur ta machine)"] -->|port 27017| MONGO
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/17-mongodb-02-installation-mongosh-1.html">Docker et MongoDB (HTML + SVG)</a></p>
+<iframe src="../../diagrams/17-mongodb-02-installation-mongosh-1.html" title="Docker et MongoDB" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 **Port par défaut** : MongoDB écoute sur le port **27017**. C'est l'équivalent du port 5432 pour PostgreSQL ou du port 6379 pour Redis.
 

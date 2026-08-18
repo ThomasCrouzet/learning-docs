@@ -87,21 +87,10 @@ Sans tracing distribué, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre comment une trace traverse plusieurs services, avec un Trace ID partagé.
 
-```mermaid
-sequenceDiagram
-    participant G as Gateway
-    participant A as Service Auth
-    participant B as Service Articles
-    participant D as Base de données
-
-    G->>A: Vérifier token
-    A-->>G: OK
-    G->>B: GET /articles
-    B->>D: SELECT * FROM articles
-    D-->>B: Résultats
-    B-->>G: JSON articles
-    Note over G,D: Trace ID partagé entre tous les services
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/14-monitoring-08-traces-distribuees-1.html">Les composants d&#x27;une trace (HTML + SVG)</a></p>
+<iframe src="../../diagrams/14-monitoring-08-traces-distribuees-1.html" title="Les composants d&#x27;une trace" style="width:100%;min-height:520px;border:0;background:transparent"></iframe>
+</div>
 
 **Exemple de trace** :
 

@@ -145,13 +145,10 @@ TypeScript fournit quatre utility types intégrés qui transforment la casse des
 
 Le schéma suivant illustre comment ces quatre mécanismes se combinent pour construire les utility types intégrés de TypeScript :
 
-```mermaid
-graph TD
-    mapped["Mapped type<br>{ [K in keyof T]: ... }"] --> partial["Partial&lt;T&gt;, Readonly&lt;T&gt;, Pick&lt;T, K&gt;"]
-    conditional["Conditional type<br>T extends U ? X : Y"] --> exclude["Exclude&lt;T, U&gt;, NonNullable&lt;T&gt;"]
-    infer["infer R<br>dans un conditional"] --> returntype["ReturnType&lt;T&gt;, Awaited&lt;T&gt;, Parameters&lt;T&gt;"]
-    template["Template literal<br>backtick dollar accolade"] --> casse["Uppercase&lt;S&gt;, Capitalize&lt;S&gt;"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/07-typescript-15-types-avances-1.html">Que sont les template literal types ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/07-typescript-15-types-avances-1.html" title="Que sont les template literal types ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

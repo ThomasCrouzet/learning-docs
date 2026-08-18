@@ -53,21 +53,10 @@ Sans DMZ, voici les problèmes rencontres :
 
 **Architecture DMZ** :
 
-```mermaid
-graph TD
-    Internet[Internet] --> FW1[Firewall externe]
-    FW1 --> DMZ[DMZ]
-    DMZ --> FW2[Firewall interne]
-    FW2 --> LAN[Reseau interne LAN]
-
-    DMZ --> WEB[Serveur web]
-    DMZ --> MAIL[Serveur mail]
-    DMZ --> DNS[DNS public]
-
-    LAN --> DB[Base de donnees]
-    LAN --> PC[Postes de travail]
-    LAN --> FILES[Partage de fichiers]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-réseaux-11-architecture-entreprise-1.html">Qu&#x27;est-ce qu&#x27;une DMZ ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-réseaux-11-architecture-entreprise-1.html" title="Qu&#x27;est-ce qu&#x27;une DMZ ?" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 **Règles de trafic entre les zones** :
 
@@ -149,13 +138,10 @@ Sans reverse proxy, voici les problèmes rencontres :
 
 **Architecture avec reverse proxy** :
 
-```mermaid
-graph LR
-    Client[Client Internet] --> RP[Reverse Proxy<br>Caddy/Nginx<br>Port 443]
-    RP -->|app.example.com| APP[Serveur App<br>Port 3000]
-    RP -->|api.example.com| API[Serveur API<br>Port 8080]
-    RP -->|static.example.com| CDN[Serveur Fichiers<br>Port 9000]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-réseaux-11-architecture-entreprise-2.html">Qu&#x27;est-ce qu&#x27;un reverse proxy ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-réseaux-11-architecture-entreprise-2.html" title="Qu&#x27;est-ce qu&#x27;un reverse proxy ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 
@@ -190,16 +176,10 @@ Sans load balancer, voici les problèmes rencontres :
 
 **Architecture avec load balancer** :
 
-```mermaid
-graph TD
-    Client[Clients] --> LB[Load Balancer]
-    LB --> S1[Serveur 1]
-    LB --> S2[Serveur 2]
-    LB --> S3[Serveur 3]
-    S1 --> DB[(Base de donnees)]
-    S2 --> DB
-    S3 --> DB
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-réseaux-11-architecture-entreprise-3.html">Qu&#x27;est-ce qu&#x27;un load balancer ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-réseaux-11-architecture-entreprise-3.html" title="Qu&#x27;est-ce qu&#x27;un load balancer ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

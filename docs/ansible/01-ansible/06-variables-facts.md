@@ -356,12 +356,10 @@ Ansible possède 22 niveaux de précédence. Voici les 8 niveaux les plus import
 
 Le diagramme suivant illustre l'ordre de priorité des variables, de la plus haute à la plus basse.
 
-```mermaid
-graph TD
-    cli["CLI (-e)<br>Priorité la plus haute"] --> playbook[Playbook vars]
-    playbook --> inventory[Inventaire vars]
-    inventory --> role[Role defaults<br>Priorité la plus basse]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-06-variables-facts-1.html">Qu&#x27;est-ce que la précédence des variables ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-06-variables-facts-1.html" title="Qu&#x27;est-ce que la précédence des variables ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Imagine que tu t'habilles avec plusieurs couches de vêtements. Tu enfiles d'abord un t-shirt (defaults de rôle), puis un pull (group_vars), puis une veste (vars du play), et enfin un manteau (extra-vars). La couche la plus extérieure est celle qui est visible. Les `extra-vars` sont comme le manteau : elles recouvrent tout le reste.
 

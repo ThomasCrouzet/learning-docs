@@ -88,18 +88,10 @@ Sans iptables, voici les problèmes rencontres :
 
 **Architecture d'iptables** :
 
-```mermaid
-graph TD
-    A[Paquet entrant] --> B{Chaine PREROUTING}
-    B --> C{Destination locale ?}
-    C -->|Oui| D[Chaine INPUT]
-    C -->|Non| E[Chaine FORWARD]
-    D --> F[Application locale]
-    F --> G[Chaine OUTPUT]
-    G --> H[Chaine POSTROUTING]
-    E --> H
-    H --> I[Paquet sortant]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/20-réseaux-07-firewalls-filtrage-1.html">Qu&#x27;est-ce qu&#x27;iptables ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/20-réseaux-07-firewalls-filtrage-1.html" title="Qu&#x27;est-ce qu&#x27;iptables ?" style="width:100%;min-height:676px;border:0;background:transparent"></iframe>
+</div>
 
 **Les trois chaînes principales** :
 

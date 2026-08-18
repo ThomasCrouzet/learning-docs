@@ -140,12 +140,10 @@ Date:   Mon Jan 15 10:30:00 2024
 
 Le diagramme suivant montre comment les fichiers circulent entre les trois zones de Git.
 
-```mermaid
-flowchart LR
-    wd[Working Directory<br>Fichiers modifiés] -->|git add| staging[Staging Area<br>Index]
-    staging -->|git commit| repo[Repository<br>Historique]
-    repo -->|git checkout| wd
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-03-git-01-concepts-git-1.html">La staging area (zone de transit) (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-03-git-01-concepts-git-1.html" title="La staging area (zone de transit)" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Pourquoi une staging area ?**
 

@@ -81,13 +81,10 @@ Sans une méthode structuree, voici les problèmes rencontrés :
 
 **Les 5 étapes du cycle de vie** :
 
-```mermaid
-graph TD
-    A[1. Collecte] --> B[2. Nettoyage]
-    B --> C[3. Exploration]
-    C --> D[4. Analyse]
-    D --> E[5. Communication]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/16-python-data-01-introduction-data-1.html">Qu&#x27;est-ce que le cycle de vie des données ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/16-python-data-01-introduction-data-1.html" title="Qu&#x27;est-ce que le cycle de vie des données ?" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 1. **Collecte** : obtenir les données (fichier CSV, base de données, API, scraping web)
 2. **Nettoyage** : corriger les erreurs, supprimer les doublons, gérer les valeurs manquantes

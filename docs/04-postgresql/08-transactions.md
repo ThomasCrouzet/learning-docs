@@ -123,17 +123,10 @@ ROLLBACK;
 
 Le schéma suivant illustre le cycle de vie d'une transaction :
 
-```mermaid
-stateDiagram-v2
-    [*] --> Begin: BEGIN
-    Begin --> EnCours: Exécution des requêtes
-    EnCours --> EnCours: INSERT / UPDATE / DELETE
-    EnCours --> Validée: COMMIT
-    EnCours --> Annulée: ROLLBACK
-    EnCours --> Annulée: Erreur
-    Validée --> [*]
-    Annulée --> [*]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/04-postgresql-08-transactions-1.html">BEGIN, COMMIT et ROLLBACK (HTML + SVG)</a></p>
+<iframe src="../../diagrams/04-postgresql-08-transactions-1.html" title="BEGIN, COMMIT et ROLLBACK" style="width:100%;min-height:596px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

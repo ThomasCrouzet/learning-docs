@@ -84,15 +84,10 @@ Sans traitement asynchrone, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le flux asynchrone complet de Symfony Messenger avec Redis.
 
-```mermaid
-flowchart LR
-    controller[Controller] -->|dispatch| bus[Message Bus]
-    bus -->|envoie| redis[(Redis<br>Transport)]
-    redis -->|consume| worker[Worker<br>messenger:consume]
-    worker --> handler[Handler<br>Traitement]
-    handler -->|Échec| retry[File retry]
-    retry --> redis
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/13-redis-07-redis-transport-messenger-1.html">Les composants de Messenger (HTML + SVG)</a></p>
+<iframe src="../../diagrams/13-redis-07-redis-transport-messenger-1.html" title="Les composants de Messenger" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Schéma de fonctionnement** :
 

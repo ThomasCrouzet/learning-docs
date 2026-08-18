@@ -65,18 +65,10 @@ Sans TDD, voici les problèmes rencontrés :
 
 **Les trois étapes** :
 
-```mermaid
-flowchart LR
-    R["ROUGE\nÉcrire un test\nqui échoue"]
-    V["VERT\nÉcrire le minimum\nde code"]
-    RF["REFACTOR\nAméliorer\nle code"]
-
-    R --> V --> RF --> R
-
-    style R fill:#e74c3c,color:#fff
-    style V fill:#2ecc71,color:#fff
-    style RF fill:#3498db,color:#fff
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/09-testing-06-introduction-tdd-1.html">Qu&#x27;est-ce que le cycle rouge-vert-refactor ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/09-testing-06-introduction-tdd-1.html" title="Qu&#x27;est-ce que le cycle rouge-vert-refactor ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le cycle se répète pour chaque nouvelle fonctionnalité :
 

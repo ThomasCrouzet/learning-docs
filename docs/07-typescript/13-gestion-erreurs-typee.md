@@ -119,14 +119,10 @@ Sans assertion functions, voici le problème rencontré :
 
 Le diagramme suivant montre le flux de traitement d'une erreur typée dans un bloc try/catch avec `instanceof`.
 
-```mermaid
-flowchart TD
-    try[Bloc try] --> code[Code susceptible d'échouer]
-    code -->|Erreur| catch{catch error}
-    catch -->|instanceof AppError| handle1[Traitement AppError]
-    catch -->|instanceof NetworkError| handle2[Traitement NetworkError]
-    catch -->|Error générique| handle3[Traitement par défaut]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/07-typescript-13-gestion-erreurs-typee-1.html">Étape 1 : Classes d&#x27;erreurs personnalisées (HTML + SVG)</a></p>
+<iframe src="../../diagrams/07-typescript-13-gestion-erreurs-typee-1.html" title="Étape 1 : Classes d&#x27;erreurs personnalisées" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Crée un fichier `src/erreurs-custom.ts` :
 

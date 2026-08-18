@@ -95,13 +95,10 @@ Sans Deployment :
 
 **Hiérarchie Deployment → ReplicaSet → Pod** :
 
-```mermaid
-flowchart TD
-    D["Deployment"] --> RS1["ReplicaSet v1"]
-    D --> RS2["ReplicaSet v2\n(après mise à jour)"]
-    RS1 --> P1["Pod 1"] & P2["Pod 2"] & P3["Pod 3"]
-    RS2 --> P4["Pod 1"] & P5["Pod 2"] & P6["Pod 3"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-04-deployments-replicasets-1.html">Qu&#x27;est-ce qu&#x27;un Deployment ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-04-deployments-replicasets-1.html" title="Qu&#x27;est-ce qu&#x27;un Deployment ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Le Deployment gère les versions. Chaque ReplicaSet maintient le nombre voulu de pods pour une version donnée. Lors d'une mise à jour, un nouveau ReplicaSet est créé et l'ancien est progressivement réduit.
 

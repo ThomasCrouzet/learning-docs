@@ -60,17 +60,10 @@ Sans conditions, voici les problèmes rencontrés :
 
 Le diagramme suivant illustre le flux de décision dans une structure if / elseif / else :
 
-```mermaid
-flowchart TD
-    start[Début] --> cond1{Condition 1 ?}
-    cond1 -->|Vrai| block1[Bloc if]
-    cond1 -->|Faux| cond2{Condition 2 ?}
-    cond2 -->|Vrai| block2[Bloc elseif]
-    cond2 -->|Faux| block3[Bloc else]
-    block1 --> suite[Suite du code]
-    block2 --> suite
-    block3 --> suite
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/02-php-04-conditions-1.html">Qu&#x27;est-ce qu&#x27;une condition ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/02-php-04-conditions-1.html" title="Qu&#x27;est-ce qu&#x27;une condition ?" style="width:100%;min-height:516px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

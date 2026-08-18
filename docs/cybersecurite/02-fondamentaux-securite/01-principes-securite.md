@@ -53,12 +53,10 @@ Sans un modèle structuré pour penser la sécurité, voici les problèmes renco
 
 Le diagramme suivant illustre les trois piliers de la triade CIA et la question centrale que chacun adresse :
 
-```mermaid
-graph TD
-    cia[Sécurité de l'information] --> conf[Confidentialité<br>Qui peut voir ?]
-    cia --> integrity[Intégrité<br>Données non altérées ?]
-    cia --> avail[Disponibilité<br>Accessible quand nécessaire ?]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/cybersecurite-02-fondamentaux-sécurité-01-principes-sécurité-1.html">Qu&#x27;est-ce que la Triade CIA ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/cybersecurite-02-fondamentaux-sécurité-01-principes-sécurité-1.html" title="Qu&#x27;est-ce que la Triade CIA ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce que la triade CIA n'est PAS** :
 

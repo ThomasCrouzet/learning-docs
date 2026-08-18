@@ -61,13 +61,10 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 **Schéma de l'architecture** :
 
-```mermaid
-flowchart TD
-    ING["Ingress\n(routage)"] --> |"/"| FRONT["Front-end\n(React + Nginx)"]
-    ING --> |"/api"| BACK["Back-end\n(Symfony + PHP-FPM + Nginx)"]
-    BACK --> PG["PostgreSQL\n(+ PVC)"]
-    BACK --> REDIS["Redis\n(cache)"]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/devops-03-kubernetes-12-projet-intégrateur-1.html">Architecture du projet (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/devops-03-kubernetes-12-projet-intégrateur-1.html" title="Architecture du projet" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Les composants** :
 

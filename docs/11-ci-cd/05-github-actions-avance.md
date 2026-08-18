@@ -51,17 +51,10 @@ Sans matrix builds, voici les problèmes rencontrés :
 
 Le diagramme suivant montre comment une matrice génère plusieurs combinaisons de paramètres exécutées en parallèle.
 
-```mermaid
-graph TD
-    matrix[Matrix Strategy] --> combo1[PHP 8.3 + Node 22]
-    matrix --> combo2[PHP 8.4 + Node 22]
-    matrix --> combo3[PHP 8.3 + Node 24]
-    matrix --> combo4[PHP 8.4 + Node 24]
-    combo1 --> parallel[Jobs en parallèle]
-    combo2 --> parallel
-    combo3 --> parallel
-    combo4 --> parallel
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-05-github-actions-avance-1.html">Qu&#x27;est-ce qu&#x27;un matrix build ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-05-github-actions-avance-1.html" title="Qu&#x27;est-ce qu&#x27;un matrix build ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Imagine un fabricant de t-shirts. Au lieu de créer une chaîne de production par taille (S, M, L, XL), il utilise une seule chaîne qui ajuste automatiquement les dimensions. Le matrix build fonctionne de la même façon : un seul job ajuste automatiquement les paramètres.
 

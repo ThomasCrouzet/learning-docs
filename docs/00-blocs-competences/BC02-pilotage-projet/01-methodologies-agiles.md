@@ -101,14 +101,10 @@ Sans agilité (méthode dite "en cascade" ou "waterfall"), voici les problèmes 
 
 Le diagramme suivant montre le cycle Scrum, du backlog produit jusqu'à la rétrospective qui boucle vers le backlog.
 
-```mermaid
-flowchart LR
-    backlog[Product Backlog] --> sprint[Sprint Planning]
-    sprint --> dev[Développement<br>2-4 semaines]
-    dev --> review[Sprint Review]
-    review --> retro[Rétrospective]
-    retro --> backlog
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/00-blocs-compétences-bc02-pilotage-projet-01-méthodologies-agiles-1.html">Qu&#x27;est-ce que Scrum ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/00-blocs-compétences-bc02-pilotage-projet-01-méthodologies-agiles-1.html" title="Qu&#x27;est-ce que Scrum ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

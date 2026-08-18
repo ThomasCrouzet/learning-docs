@@ -65,12 +65,10 @@ Sans conditions, voici les problèmes rencontrés :
 
 Le diagramme suivant montre le flux d'exécution conditionnelle d'une tâche Ansible.
 
-```mermaid
-flowchart TD
-    task[Tâche Ansible] --> when{"when: condition ?"}
-    when -->|Vrai| exec[Exécuter la tâche]
-    when -->|Faux| skip[Passer la tâche<br>skipping]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/ansible-01-ansible-07-conditions-boucles-1.html">Qu&#x27;est-ce qu&#x27;une condition (`when`) ? (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/ansible-01-ansible-07-conditions-boucles-1.html" title="Qu&#x27;est-ce qu&#x27;une condition (`when`) ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 **Ce qu'une condition n'est PAS** :
 

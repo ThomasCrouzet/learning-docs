@@ -151,13 +151,10 @@ Ces patterns contrôlent **comment les objets communiquent entre eux**.
 
 **Vue d'ensemble des 23 patterns GoF** :
 
-```mermaid
-flowchart TD
-    GoF["Design Patterns GoF (23)"]
-    GoF --> C["Création (5)"]
-    GoF --> S["Structure (7)"]
-    GoF --> B["Comportement (11)"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-01-introduction-design-patterns-1.html">Les trois catégories de patterns (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-01-introduction-design-patterns-1.html" title="Les trois catégories de patterns" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 Ce diagramme montre la classification complète. Les patterns de comportement sont les plus nombreux (11) car la communication entre objets est le problème le plus varié en programmation orientée objet.
 
@@ -191,32 +188,10 @@ Exemple pour le pattern Observer :
 
 Le schéma montre les relations entre les participants :
 
-```mermaid
-classDiagram
-    class Subject {
-        <<abstract>>
-        +attach(Observer)
-        +detach(Observer)
-        +notify()
-    }
-    class Observer {
-        <<interface>>
-        +update()
-    }
-    class ConcreteSubject {
-        -state
-        +getState()
-        +setState()
-    }
-    class ConcreteObserver {
-        -subject
-        +update()
-    }
-    Subject "1" --> "*" Observer : notifie
-    ConcreteSubject --|> Subject
-    ConcreteObserver ..|> Observer
-    ConcreteObserver --> ConcreteSubject : observe
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/10-architecture-01-introduction-design-patterns-2.html">Comment lire et comprendre un pattern (HTML + SVG)</a></p>
+<iframe src="../../diagrams/10-architecture-01-introduction-design-patterns-2.html" title="Comment lire et comprendre un pattern" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Étape 4 : Examiner les conséquences**
 

@@ -134,12 +134,10 @@ function useCompteur(initial: number = 0, pas: number = 1) {
 
 Le diagramme suivant montre comment un hook personnalisé centralise la logique partagée entre plusieurs composants.
 
-```mermaid
-graph TD
-    hook[useApi - Hook personnalisé<br>Logique partagée] --> comp1[Composant Articles<br>Utilise useApi]
-    hook --> comp2[Composant Users<br>Utilise useApi]
-    hook --> comp3[Composant Comments<br>Utilise useApi]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-11-hooks-personnalises-1.html">Les conventions des hooks personnalisés (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-11-hooks-personnalises-1.html" title="Les conventions des hooks personnalisés" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Quand créer un hook personnalisé ?
 

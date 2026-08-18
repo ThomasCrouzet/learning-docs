@@ -44,13 +44,10 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Le diagramme suivant montre le cycle add-commit-push utilisé au quotidien.
 
-```mermaid
-flowchart LR
-    edit[Modifier fichiers] --> add[git add]
-    add --> commit[git commit]
-    commit --> push[git push]
-    push --> remote[(Remote<br>GitHub)]
-```
+<div class="diagram-design">
+<p><a href="../../../diagrams/epitech-03-git-02-workflow-basique-1.html">Le workflow quotidien (HTML + SVG)</a></p>
+<iframe src="../../../diagrams/epitech-03-git-02-workflow-basique-1.html" title="Le workflow quotidien" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

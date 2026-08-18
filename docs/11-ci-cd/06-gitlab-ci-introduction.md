@@ -73,22 +73,10 @@ Sans stages, tous les jobs s'exécutent en parallèle. Tu ne peux pas garantir q
 
 **Comment les stages organisent le pipeline** :
 
-```mermaid
-flowchart TD
-    subgraph S1["Stage 1 : lint (parallèle)"]
-        L1["lint-php"] & L2["lint-js"] & L3["lint-md"]
-    end
-    subgraph S2["Stage 2 : test (parallèle)"]
-        T1["test-php"] & T2["test-js"]
-    end
-    subgraph S3["Stage 3 : build"]
-        B1["build-img"]
-    end
-    subgraph S4["Stage 4 : deploy"]
-        D1["deploy-stg"]
-    end
-    S1 --> S2 --> S3 --> S4
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/11-ci-cd-06-gitlab-ci-introduction-1.html">Qu&#x27;est-ce qu&#x27;un stage ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/11-ci-cd-06-gitlab-ci-introduction-1.html" title="Qu&#x27;est-ce qu&#x27;un stage ?" style="width:100%;min-height:500px;border:0;background:transparent"></iframe>
+</div>
 
 **Comparaison avec GitHub Actions** :
 

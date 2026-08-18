@@ -53,18 +53,10 @@ Sans GraphQL, voici les problèmes rencontrés avec une API REST :
 
 Le schéma suivant illustre la différence principale entre REST et GraphQL : avec REST, le client doit envoyer plusieurs requêtes pour assembler les données. Avec GraphQL, une seule requête suffit :
 
-```mermaid
-graph LR
-    subgraph rest[REST : 3 requêtes]
-        r1[GET /users/1] --> server1[Serveur]
-        r2[GET /users/1/posts] --> server1
-        r3[GET /posts/5/comments] --> server1
-    end
-
-    subgraph graphql[GraphQL : 1 requête]
-        q1["query { user posts comments }"] --> server2[Serveur]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-09-introduction-graphql-1.html">Qu&#x27;est-ce que GraphQL ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-09-introduction-graphql-1.html" title="Qu&#x27;est-ce que GraphQL ?" style="width:100%;min-height:644px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : GraphQL fonctionne comme un menu à la carte dans un restaurant. Au lieu de commander un « menu du jour » (REST) qui inclut une entrée, un plat et un dessert fixes, tu commandes exactement ce que tu veux : juste le plat principal et un dessert, sans entrée. Le serveur te sert exactement ce que tu as demandé.
 

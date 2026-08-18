@@ -55,17 +55,10 @@ Sans modules, voici les problèmes rencontrés :
 
 ---
 
-```mermaid
-graph TD
-    A[mon_projet/] --> B[main.py]
-    A --> C[utils.py - module]
-    A --> D[calculs/ - package]
-    D --> E[__init__.py]
-    D --> F[math_avance.py]
-    D --> G[stats.py]
-    B -->|import utils| C
-    B -->|from calculs import stats| G
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/15-python-06-modules-packages-1.html">Qu&#x27;est-ce qu&#x27;un module ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/15-python-06-modules-packages-1.html" title="Qu&#x27;est-ce qu&#x27;un module ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

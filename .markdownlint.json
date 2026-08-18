@@ -49,7 +49,7 @@
   "MD032": true,
 
   "MD033": {
-    "allowed_elements": ["br", "hr", "kbd", "sub", "sup", "details", "summary", "div", "span", "img", "a", "p", "em", "strong"]
+    "allowed_elements": ["br", "hr", "kbd", "sub", "sup", "details", "summary", "div", "span", "img", "a", "p", "em", "strong", "iframe", "figure"]
   },
 
   "MD035": {

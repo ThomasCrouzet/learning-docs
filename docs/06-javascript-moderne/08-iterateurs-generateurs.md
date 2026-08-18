@@ -57,13 +57,10 @@ Sans les itérateurs, voici les problèmes rencontrés :
 
 Le schéma suivant illustre le protocole itérateur, de l'objet itérable jusqu'à l'épuisement de la séquence :
 
-```mermaid
-flowchart LR
-    iterable[Objet Itérable] -->|Symbol.iterator| iterator[Itérateur]
-    iterator -->|next| result1["{value: 1, done: false}"]
-    result1 -->|next| result2["{value: 2, done: false}"]
-    result2 -->|next| result3["{value: undefined, done: true}"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-08-iterateurs-generateurs-1.html">Qu&#x27;est-ce qu&#x27;un itérateur ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-08-iterateurs-generateurs-1.html" title="Qu&#x27;est-ce qu&#x27;un itérateur ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ```javascript
 // Créer un itérateur manuellement

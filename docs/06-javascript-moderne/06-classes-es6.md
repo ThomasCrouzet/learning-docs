@@ -93,21 +93,10 @@ console.log(alice.actif); // true
 
 Le diagramme suivant représente la hiérarchie d'héritage entre une classe parente et ses sous-classes.
 
-```mermaid
-classDiagram
-    class Animal {
-        +String name
-        +speak() void
-    }
-    class Dog {
-        +fetch() void
-    }
-    class Cat {
-        +purr() void
-    }
-    Animal <|-- Dog
-    Animal <|-- Cat
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/06-javascript-moderne-06-classes-es6-1.html">Syntaxe de base d&#x27;une classe (HTML + SVG)</a></p>
+<iframe src="../../diagrams/06-javascript-moderne-06-classes-es6-1.html" title="Syntaxe de base d&#x27;une classe" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ### Héritage avec `extends` et `super`
 

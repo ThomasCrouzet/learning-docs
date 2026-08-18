@@ -60,12 +60,10 @@ Sans contrôleurs, voici les problèmes rencontrés :
 
 Le diagramme suivant résume le flux d'une requête HTTP dans Symfony, de la route jusqu'à la réponse :
 
-```mermaid
-flowchart LR
-    request[Requête HTTP<br>GET /articles] --> router[Router<br>Trouve la route]
-    router --> controller[Controller<br>Exécute l'action]
-    controller --> response[Réponse HTTP<br>HTML ou JSON]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/03-symfony-02-controleurs-routes-1.html">Qu&#x27;est-ce qu&#x27;un contrôleur ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/03-symfony-02-controleurs-routes-1.html" title="Qu&#x27;est-ce qu&#x27;un contrôleur ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

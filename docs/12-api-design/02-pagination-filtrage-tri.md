@@ -99,15 +99,10 @@ Le serveur utilise le cursor (souvent l'id du dernier élément encodé) pour sa
 
 Le diagramme suivant compare les deux stratégies de pagination : offset (accès direct par numéro de page) et cursor (parcours séquentiel par identifiant).
 
-```mermaid
-graph TD
-    subgraph offset[Pagination Offset]
-        req1["GET /api?page=2&limit=10"] --> skip[Saute 10 résultats<br>Renvoie 10 suivants]
-    end
-    subgraph cursor[Pagination Cursor]
-        req2["GET /api?after=abc123"] --> seek[Cherche après le curseur<br>Renvoie 10 suivants]
-    end
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/12-api-design-02-pagination-filtrage-tri-1.html">Pagination offset vs cursor (HTML + SVG)</a></p>
+<iframe src="../../diagrams/12-api-design-02-pagination-filtrage-tri-1.html" title="Pagination offset vs cursor" style="width:100%;min-height:688px;border:0;background:transparent"></iframe>
+</div>
 
 ### Filtrage par query parameters
 

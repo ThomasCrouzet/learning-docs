@@ -94,14 +94,10 @@ Sans paramètres d'URL :
 
 Le diagramme suivant montre comment React Router analyse l'URL et affiche le composant correspondant.
 
-```mermaid
-graph TD
-    url[URL change] --> router[React Router<br>Analyse le chemin]
-    router --> route1["/ → Page Accueil"]
-    router --> route2["/articles → Page Articles"]
-    router --> route3["/articles/:id → Page Détail"]
-    router --> notFound["* → Page 404"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-09-react-router-1.html">Qu&#x27;est-ce qu&#x27;un paramètre d&#x27;URL ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-09-react-router-1.html" title="Qu&#x27;est-ce qu&#x27;un paramètre d&#x27;URL ?" style="width:100%;min-height:448px;border:0;background:transparent"></iframe>
+</div>
 
 ---
 

@@ -206,13 +206,10 @@ Avec le fetch manuel, après avoir ajouté un article :
 
 **Le cycle complet d'une mutation** :
 
-```mermaid
-flowchart LR
-    A["L'utilisateur soumet"] --> B["useMutation\nappelle l'API"]
-    B --> C["onSuccess :\ninvalidateQueries"]
-    C --> D["useQuery recharge\nla donnée concernée"]
-    D --> E["L'écran affiche\nla liste à jour"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-18-tanstack-query-1.html">Qu&#x27;est-ce que useMutation et l&#x27;invalidation ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-18-tanstack-query-1.html" title="Qu&#x27;est-ce que useMutation et l&#x27;invalidation ?" style="width:100%;min-height:440px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : `useMutation` est comme déposer une nouvelle annonce sur le tableau d'affichage. L'invalidation, c'est dire à l'assistant documentaire : "le tableau a changé, ta photo n'est plus valable". Il reprend alors une photo récente (rechargement), et tout le monde voit la version à jour.
 

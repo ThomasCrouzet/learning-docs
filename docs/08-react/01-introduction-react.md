@@ -120,12 +120,10 @@ Sans virtual DOM, voici les problèmes rencontrés :
 2. **Diffing** : React compare le nouveau virtual DOM avec l'ancien pour trouver les différences
 3. **Commit** : React applique uniquement les différences au DOM réel du navigateur
 
-```mermaid
-flowchart TD
-    DATA["Données changent"] --> NEW["Nouveau<br>Virtual DOM"]
-    NEW -->|"Comparaison<br>(diffing)"| OLD["Ancien<br>Virtual DOM"]
-    OLD -->|"Seules les<br>différences"| DOM["DOM réel<br>(navigateur)"]
-```
+<div class="diagram-design">
+<p><a href="../../diagrams/08-react-01-introduction-react-1.html">Qu&#x27;est-ce que le Virtual DOM ? (HTML + SVG)</a></p>
+<iframe src="../../diagrams/08-react-01-introduction-react-1.html" title="Qu&#x27;est-ce que le Virtual DOM ?" style="width:100%;min-height:532px;border:0;background:transparent"></iframe>
+</div>
 
 **Analogie concrète** : Imagine que tu corriges un document de 100 pages. Sans virtual DOM, c'est comme réimprimer les 100 pages à chaque correction. Avec le virtual DOM, c'est comme comparer le brouillon corrigé avec l'original et ne réimprimer que les pages qui ont changé.
 
