@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "campaign": "monumental-deepsearch-2026-08",
-  "base_sha": "86a88bda78cc77dc5bcf4efe3d8c3280b2bf7673",
-  "generated_at": "2026-08-20T20:25:28.924Z",
+  "base_sha": "63d205d2df86e9776bde4e50512eca96cca78b44",
+  "generated_at": "2026-08-20T23:20:00.000Z",
   "not_a_human_expert_certification": true,
   "initial_page_ids": [
     "00-outils-ia/01-utiliser-ia-pour-apprendre.md",
