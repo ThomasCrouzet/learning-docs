@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Gate: final-report coverage counts must match coverage.json;
- * if report claims zero crypto accents, residual hit_count must be 0.
+ * Gate: les affirmations du rapport final doivent dériver des registres.
+ * Priorité : review-evidence/closure.json (campagne). Sinon artefacts
+ * historiques audit-reports/ (absents d'un clone propre).
  */
 
 const fs = require('fs');
@@ -16,11 +17,40 @@ const ROOT = path.join(__dirname, '..');
 const COVERAGE = path.join(ROOT, 'audit-reports', 'editorial', 'coverage.json');
 const RESIDUAL = path.join(ROOT, 'audit-reports', 'editorial', 'crypto-accent-residual.json');
 const REPORT = path.join(ROOT, 'audit-reports', 'final-report-2026-07.md');
+const CLOSURE = path.join(ROOT, 'review-evidence', 'closure.json');
 
 const errors = [];
 
+function checkClosure() {
+  if (!fs.existsSync(CLOSURE)) return { present: false, errors: [] };
+  const closure = JSON.parse(fs.readFileSync(CLOSURE, 'utf8'));
+  const local = [];
+  if (closure.derived_from !== 'registers') {
+    local.push('closure.derived_from must be "registers" (not free prose)');
+  }
+  const criteria = closure.criteria || {};
+  for (const [k, v] of Object.entries(criteria)) {
+    if (v !== true) local.push(`closure.criteria.${k} is not true`);
+  }
+  return { present: true, errors: local, closure };
+}
+
+const campaign = checkClosure();
+if (campaign.present) {
+  errors.push(...campaign.errors);
+  if (errors.length) {
+    console.error('check-final-report-claims FAILED (closure.json):');
+    for (const e of errors) console.error(' -', e);
+    process.exit(1);
+  }
+  console.log(
+    `check-final-report-claims OK (closure.json criteria=${Object.keys(campaign.closure.criteria || {}).length})`
+  );
+  process.exit(0);
+}
+
 if (!fs.existsSync(COVERAGE) || !fs.existsSync(REPORT)) {
-  console.error('Missing coverage.json or final-report');
+  console.error('Missing coverage.json or final-report (and no review-evidence/closure.json)');
   process.exit(1);
 }
 

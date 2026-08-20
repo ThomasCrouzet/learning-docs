@@ -41,6 +41,16 @@ describe('review-registry-sources (shipped path map)', () => {
     ).toBe(false);
     expect(
       sourcesMatchPath('15-python/01.md', sourcesForPath('15-python/01.md'))
+    ).toBe(false);
+    expect(
+      sourcesMatchPath('15-python/01.md', [
+        {
+          url: 'https://docs.python.org/3/tutorial/appetite.html',
+          section: '1. Whetting Your Appetite',
+          excerpt: 'If you do much work on computers, eventually you find that you want to automate some task.',
+          claim_id: 'c-h1',
+        },
+      ])
     ).toBe(true);
   });
 

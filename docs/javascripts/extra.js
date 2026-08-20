@@ -588,6 +588,13 @@
   document.addEventListener("DOMContentLoaded", function () {
     initAll();
     initKeyboardShortcuts();
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      if (resizeTimer) window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        initScrollIndicators();
+      }, 150);
+    });
 
     // document$ est disponible apres DOMContentLoaded (le JS du theme a deja execute)
     if (typeof document$ !== "undefined") {

@@ -4,6 +4,7 @@ const {
   fragmentSkipReason,
   buildValidationJob,
   runInlineJob,
+  processExitCode,
 } = require('../lib/snippet-runtime');
 
 describe('extractSnippets', () => {
@@ -55,6 +56,17 @@ describe('buildValidationJob', () => {
     expect(job.argv[0]).toBe('node');
     expect(job.argv).toContain('--check');
     expect(job.files).toHaveLength(1);
+  });
+});
+
+describe('processExitCode', () => {
+  it('strict mode exits non-zero when fail > 0', () => {
+    expect(processExitCode({ fail: 1, unclassified: 0, skipped_without_reason: 0 }, { strict: true })).toBe(
+      1
+    );
+    expect(processExitCode({ fail: 0, unclassified: 0, skipped_without_reason: 0 }, { strict: true })).toBe(
+      0
+    );
   });
 });
 

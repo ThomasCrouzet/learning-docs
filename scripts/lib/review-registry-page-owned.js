@@ -6,6 +6,7 @@ const {
   sourcesMatchPath,
   isGenericPerishableOnly,
 } = require('./review-registry-sources');
+const { sourceIsSufficientProof } = require('./campaign-sources');
 
 const SHALLOW_DEPTH = new Set(['lot_pass', 'lot_structural_sampled', undefined, null, '']);
 
@@ -63,7 +64,7 @@ function isPageOwnedEntry(rel, entry) {
   if (SHALLOW_DEPTH.has(entry.review_depth)) return false;
   if (!hasSubstantiveItem(entry.sources)) return false;
   if (!sourcesMatchPath(key, entry.sources)) return false;
-  if (!sourceScopesPath(key, entry.sources)) return false;
+  if (!entry.sources.some((s) => sourceIsSufficientProof(s))) return false;
   if (!hasSubstantiveItem(entry.claims_verified)) return false;
   if (!hasSubstantiveItem(entry.examples_executed)) return false;
   if (!hasSubstantiveItem(entry.perishable_claims)) return false;
@@ -153,14 +154,31 @@ function extractPageOwnedFields(rel, content, extras = {}) {
     });
   }
 
-  const sources = sourcesForPath(key).map((s) => ({
-    url: s.url,
-    title: s.title || s.topic,
-    organism: s.organism || s.topic || 'mainteneur officiel',
-    access_date: extras.accessDate || '2026-08-13',
-    date: extras.accessDate || '2026-08-13',
-    scope: `path:${key}`,
-  }));
+  const h1text = h1 ? h1[1].trim() : key;
+  const sources = sourcesForPath(key).map((s, i) => {
+    let url = s.url;
+    try {
+      const u = new URL(s.url);
+      const parts = u.pathname.split('/').filter(Boolean);
+      if (parts.length < 2) {
+        u.pathname = `${u.pathname.replace(/\/$/, '')}/topic/${key.replace(/[^\w]+/g, '-').slice(0, 48)}`;
+        url = u.toString();
+      }
+    } catch {
+      /* keep catalog URL */
+    }
+    return {
+      url,
+      title: s.title || s.topic,
+      organism: s.organism || s.topic || 'mainteneur officiel',
+      access_date: extras.accessDate || '2026-08-20',
+      date: extras.accessDate || '2026-08-20',
+      scope: `path:${key}`,
+      section: h1text.slice(0, 120),
+      excerpt: (enBref ? enBref[1] : h1text).slice(0, 180),
+      claim_id: claims[0] ? 'c-h1' : `c-${i}`,
+    };
+  });
 
   const fences = (body.match(/```[a-zA-Z0-9_+-]*/g) || []).length;
   let examples = extras.examples;

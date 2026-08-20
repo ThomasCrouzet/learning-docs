@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thomascrouzet.github.io/learning-docs/review-evidence/schema.json",
+  "title": "Learning Docs campaign compact manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "campaign",
+    "base_sha",
+    "pages",
+    "transitions",
+    "not_a_human_expert_certification"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "campaign": { "type": "string" },
+    "base_sha": { "type": "string", "minLength": 7 },
+    "generated_at": { "type": "string" },
+    "not_a_human_expert_certification": { "type": "boolean", "const": true },
+    "initial_page_ids": { "type": "array", "items": { "type": "string" } },
+    "created_page_ids": { "type": "array", "items": { "type": "string" } },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "op", "source_ids", "justification"],
+        "properties": {
+          "id": { "type": "string" },
+          "op": { "type": "string", "enum": ["moved", "merged", "removed", "split"] },
+          "source_ids": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "destination_ids": { "type": "array", "items": { "type": "string" } },
+          "justification": { "type": "string" },
+          "commit": { "type": "string" }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "page_id",
+          "path",
+          "hash",
+          "status",
+          "primary_run_id",
+          "second_review_run_id",
+          "primary_reviewer",
+          "second_reviewer",
+          "sources",
+          "dossier_digest"
+        ],
+        "properties": {
+          "page_id": { "type": "string" },
+          "path": { "type": "string" },
+          "kind": { "type": "string" },
+          "hash": { "type": "string", "minLength": 64, "maxLength": 64 },
+          "status": { "type": "string", "const": "verified" },
+          "date": { "type": "string" },
+          "primary_run_id": { "type": "string" },
+          "second_review_run_id": { "type": "string" },
+          "primary_reviewer": { "type": "string" },
+          "second_reviewer": { "type": "string" },
+          "second_review_required": { "type": "boolean" },
+          "second_review_done": { "type": "boolean" },
+          "claim_ids": { "type": "array", "items": { "type": "string" } },
+          "sources": { "type": "array" },
+          "snippet_verdict": { "type": "object" },
+          "revalidation": { "type": "string" },
+          "dossier_digest": { "type": "string" }
+        }
+      }
+    },
+    "primary_partition": { "type": "array" },
+    "counter_partition": { "type": "array" }
+  }
+}

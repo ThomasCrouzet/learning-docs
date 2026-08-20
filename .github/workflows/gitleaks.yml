@@ -1,7 +1,8 @@
 name: gitleaks
 
-# Analyse de secrets sur l'historique Git complet. Les faux secrets pédagogiques
-# dans docs/**/*.md sont en allowlist dans .gitleaks.toml (voir commentaires du fichier).
+# Analyse de secrets sur l'historique Git complet, y compris docs/.
+# .gitleaks.toml n'exclut plus tout le corpus Markdown : seuls les
+# placeholders explicitement factices et les rapports d'audit locaux.
 on:
   push:
     branches: [main]

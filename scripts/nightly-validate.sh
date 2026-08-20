@@ -7,8 +7,10 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.." || exit 1
 
-RESULT=$(npm run validate 2>&1) || true
+set +e
+RESULT=$(npm run validate 2>&1)
 EXIT=$?
+set -e
 
 if [ "$EXIT" -ne 0 ]; then
   if [[ -n "${LEARNING_DOCS_NOTIFY_URL:-}" ]]; then

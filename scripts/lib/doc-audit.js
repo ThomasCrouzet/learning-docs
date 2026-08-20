@@ -858,12 +858,27 @@ function formatReportMarkdown(report, extra = {}) {
   return lines.join('\n');
 }
 
+const SEVERITY_RANK = { high: 3, medium: 2, low: 1, never: 99 };
+
+/**
+ * True si un finding atteint le seuil --fail-on (low/medium/high).
+ * failOn=never (défaut historique) ne fait jamais échouer.
+ * @param {Array<{severity?: string}>} findings
+ * @param {string} failOn
+ */
+function findingsExceedThreshold(findings, failOn) {
+  const threshold = SEVERITY_RANK[failOn] ?? 99;
+  if (threshold >= 99) return false;
+  return (findings || []).some((f) => (SEVERITY_RANK[f.severity] || 0) >= threshold);
+}
+
 module.exports = {
   SKIP_DIRS,
   VAGUE_PHRASES,
   OVERPROMISE_PHRASES,
   TEMPORAL_SUSPECT,
   STALE_VERSION_PATTERNS,
+  SEVERITY_RANK,
   isHistoricalContext,
   isTemporalHistoricalOk,
   isTemporalStaleContext,
@@ -880,5 +895,6 @@ module.exports = {
   inventaireMarkdown,
   runDocAudit,
   formatReportMarkdown,
+  findingsExceedThreshold,
   isFiche,
 };

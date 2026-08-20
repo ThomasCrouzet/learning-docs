@@ -32,7 +32,9 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
  * @param {string} path
  */
 async function gotoStable(page, path) {
-  await page.goto(path, { waitUntil: 'networkidle' });
+  const resp = await page.goto(path, { waitUntil: 'networkidle' });
+  const status = resp ? resp.status() : 0;
+  expect(status, `HTTP ${status} pour ${path}`).toBe(200);
   // Laisser extra.js / labels checklists s'exécuter
   await page.waitForTimeout(1200);
   await page
@@ -56,6 +58,16 @@ function formatViolations(violations) {
     .map((v) => `${v.id} (${v.impact}) ×${v.nodes.length}: ${v.help}`)
     .join('\n');
 }
+
+test.describe('HTTP réel', () => {
+  test('une route inconnue n\'est pas un 200', async ({ page }) => {
+    const resp = await page.goto('/page-inexistante-campagne-404/', {
+      waitUntil: 'domcontentloaded',
+    });
+    const status = resp ? resp.status() : 0;
+    expect(status).not.toBe(200);
+  });
+});
 
 test.describe('Structure documentaire', () => {
   for (const route of ROUTES) {
@@ -245,20 +257,14 @@ test.describe('Navigation clavier', () => {
             true,
           );
         });
-      const code = document.querySelector('.md-typeset pre > code');
-      if (code) {
-        code.style.maxWidth = '80px';
-        code.style.overflowX = 'auto';
-        code.style.display = 'block';
-        code.setAttribute('tabindex', '0');
-        code.setAttribute('role', 'region');
-        code.setAttribute(
-          'aria-label',
-          'Bloc de code défilable horizontalement',
-        );
-        code.setAttribute('data-a11y-scroll-region', 'true');
-      }
+      document.querySelectorAll('.md-typeset pre > code, .md-typeset pre').forEach((el) => {
+        el.style.maxWidth = '80px';
+        el.style.overflowX = 'auto';
+        el.style.display = 'block';
+      });
+      window.dispatchEvent(new Event('resize'));
     });
+    await page.waitForTimeout(250);
 
     const target = page.locator('[data-a11y-scroll-region="true"]').first();
     await expect(target).toBeAttached();
@@ -282,30 +288,15 @@ test.describe('Zones scrollables (C13 non-régression)', () => {
     // Forcer un viewport étroit pour provoquer l'overflow
     await page.setViewportSize({ width: 375, height: 812 });
     await gotoStable(page, '/02-php/01-introduction-php/');
-    // Réévaluer overflow après layout mobile
     await page.evaluate(() => {
-      // Déclencher re-init si besoin : redimensionner force recalcul au prochain initAll
-      // Appliquer manuellement la même logique que makeScrollRegionFocusable
-      document.querySelectorAll('.md-typeset pre > code').forEach((el) => {
-        if (el.scrollWidth > el.clientWidth + 2) {
-          el.setAttribute('tabindex', '0');
-          el.setAttribute('role', 'region');
-          el.setAttribute(
-            'aria-label',
-            'Bloc de code défilable horizontalement',
-          );
-          el.setAttribute('data-a11y-scroll-region', 'true');
-        }
+      document.querySelectorAll('.md-typeset pre > code, .md-typeset pre').forEach((el) => {
+        el.style.maxWidth = '80px';
+        el.style.overflowX = 'auto';
+        el.style.display = 'block';
       });
-      document.querySelectorAll('.md-typeset__scrollwrap').forEach((el) => {
-        if (el.scrollWidth > el.clientWidth + 2) {
-          el.setAttribute('tabindex', '0');
-          el.setAttribute('role', 'region');
-          el.setAttribute('aria-label', 'Tableau défilable horizontalement');
-          el.setAttribute('data-a11y-scroll-region', 'true');
-        }
-      });
+      window.dispatchEvent(new Event('resize'));
     });
+    await page.waitForTimeout(250);
     const regions = page.locator('[data-a11y-scroll-region="true"]');
     // Sur fiche PHP il y a des blocs de code ; au moins un doit overflow en 375px
     // Si aucun (contenu court), le test reste informatif via axe mobile

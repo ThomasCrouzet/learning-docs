@@ -546,6 +546,36 @@ function runInlineJob(job, deps = {}) {
   return { ok: false, error: 'unknown_inline' };
 }
 
+/**
+ * Code de sortie du runner. En mode strict, fail>0 ou skip sans raison
+ * termine en 1 ; unclassified termine en 2. Sans --strict, fail ne masque
+ * plus un 0 : le CLI doit passer strict pour un gate de campagne.
+ * @param {{fail?: number, unclassified?: number, skipped_without_reason?: number}} summary
+ * @param {{strict?: boolean}} [options]
+ * @returns {number}
+ */
+function processExitCode(summary, options = {}) {
+  const unclassified = Number(summary && summary.unclassified) || 0;
+  const fail = Number(summary && summary.fail) || 0;
+  const skipNoReason = Number(summary && summary.skipped_without_reason) || 0;
+  if (unclassified > 0) return 2;
+  if (options.strict) {
+    if (fail > 0) return 1;
+    if (skipNoReason > 0) return 1;
+  }
+  return 0;
+}
+
+function resolveSnippetTargetFile(onlyFile, { root, docs }) {
+  if (!onlyFile) return null;
+  const path = require('path');
+  const fs = require('fs');
+  if (path.isAbsolute(onlyFile)) return onlyFile;
+  const fromRoot = path.join(root, onlyFile);
+  if (fs.existsSync(fromRoot)) return fromRoot;
+  return path.join(docs, onlyFile.replace(/^docs\//, ''));
+}
+
 module.exports = {
   NON_EXECUTABLE_LANGS,
   RUNTIME_LANGS,
@@ -554,4 +584,6 @@ module.exports = {
   classifySnippet,
   buildValidationJob,
   runInlineJob,
+  processExitCode,
+  resolveSnippetTargetFile,
 };
