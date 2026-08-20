@@ -34,7 +34,7 @@ description: "Cursus JavaScript Moderne (ES6+) : maîtriser le JavaScript modern
 
 ## Prérequis
 
-- Cursus JavaScript Stack Symfony (`05-javascript/`) ou JavaScript Epitech (`epitech/05-javascript/`)
+- Cursus JavaScript Stack Symfony (`05-javascript/`) ou JavaScript (bases) (`fondamentaux/05-javascript/`)
 
 ## Durée totale estimée
 

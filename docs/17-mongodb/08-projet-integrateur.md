@@ -17,7 +17,7 @@ cursus: "MongoDB"
 ## Prérequis
 
 - Toutes les fiches précédentes du cursus MongoDB (01 a 07)
-- [Cursus Node.js](../epitech/07-nodejs/index.md) termine (npm, modules, Express, API REST)
+- [Cursus Node.js](../fondamentaux/07-nodejs/index.md) termine (npm, modules, Express, API REST)
 - Savoir créer des routes Express et manipuler du JSON
 
 ## Version utilisée dans cette fiche

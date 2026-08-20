@@ -17,7 +17,7 @@ cursus: "C#"
 ## Prérequis
 
 - Avoir terminé la fiche **[04 - Fonctions et méthodes](04-fonctions-methodes.md)**
-- Connaître les concepts de base de la POO grâce au [cursus Java](../epitech/01-java/index.md) (classes, objets, constructeurs)
+- Connaître les concepts de base de la POO grâce au [cursus Java](../fondamentaux/01-java/index.md) (classes, objets, constructeurs)
 - Savoir déclarer et appeler des méthodes
 
 ## Objectif de cette fiche

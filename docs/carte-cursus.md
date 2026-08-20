@@ -2,14 +2,14 @@
 hide:
   - navigation
   - toc
-description: "Vue d'ensemble des 604 fiches réparties sur 64 cursus."
+description: "Vue d'ensemble des 603 fiches réparties sur 64 cursus."
 ---
 
 # Carte des cursus
 
 > **En bref** : Vue d'ensemble de tous les cursus disponibles, avec le nombre de fiches et le temps estimé.
 
-**604 fiches** au total, réparties sur **64 cursus**.
+**603 fiches** au total, réparties sur **64 cursus**.
 
 ## Dépendances entre cursus
 
@@ -44,19 +44,19 @@ Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis
 | **[Dev Mobile](23-dev-mobile/index.md)** | 13 | 16h 30min | Débutant → Intermédiaire → Avancé |
 | **[Redis et Cache](13-redis/index.md)** | 8 | 9h 45min | Débutant → Intermédiaire → Avancé |
 
-## Cursus Epitech
+## Langages et fondamentaux
 
 | Cursus | Fiches | Temps estimé | Niveaux |
 | ------ | -----: | -----------: | ------- |
-| **[Java](epitech/01-java/index.md)** | 12 | 13h 15min | Débutant → Intermédiaire → Avancé |
-| **[Unix/Bash](epitech/02-unix-bash/index.md)** | 10 | 10h 35min | Débutant → Intermédiaire → Avancé |
-| **[Git](epitech/03-git/index.md)** | 5 | 7h 15min | Débutant → Intermédiaire → Avancé |
-| **[HTML/CSS](epitech/04-html-css/index.md)** | 7 | 3h 35min | Débutant → Intermédiaire |
-| **[JavaScript](epitech/05-javascript/index.md)** | 4 | 2h 35min | Débutant → Intermédiaire |
-| **[Node.js](epitech/07-nodejs/index.md)** | 10 | 10h 35min | Débutant → Intermédiaire → Avancé |
-| **[Rust](epitech/08-rust/index.md)** | 16 | 19h 15min | Débutant → Intermédiaire → Avancé |
-| **[Projets](epitech/06-projets/index.md)** | 2 | 1h | Débutant |
-| **[Aide-mémoires Epitech](epitech/fiches-reference/index.md)** | 3 | 1h 20min | Débutant |
+| **[Java](fondamentaux/01-java/index.md)** | 12 | 13h 15min | Débutant → Intermédiaire → Avancé |
+| **[Unix/Bash](fondamentaux/02-unix-bash/index.md)** | 10 | 10h 35min | Débutant → Intermédiaire → Avancé |
+| **[Git](fondamentaux/03-git/index.md)** | 5 | 7h 15min | Débutant → Intermédiaire → Avancé |
+| **[HTML/CSS](fondamentaux/04-html-css/index.md)** | 7 | 3h 35min | Débutant → Intermédiaire |
+| **[JavaScript](fondamentaux/05-javascript/index.md)** | 4 | 2h 35min | Débutant → Intermédiaire |
+| **[Node.js](fondamentaux/07-nodejs/index.md)** | 10 | 10h 35min | Débutant → Intermédiaire → Avancé |
+| **[Rust](fondamentaux/08-rust/index.md)** | 16 | 19h 15min | Débutant → Intermédiaire → Avancé |
+| **[Projets](fondamentaux/06-projets/index.md)** | 2 | 1h | Débutant |
+| **[Aide-mémoires Java, Bash, HTML/CSS](fondamentaux/fiches-reference/index.md)** | 3 | 1h 20min | Débutant |
 
 ## Infrastructure
 
@@ -113,6 +113,7 @@ Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis
 | Cursus | Fiches | Temps estimé | Niveaux |
 | ------ | -----: | -----------: | ------- |
 | **[Gestion de Projet](25-gestion-projet/index.md)** | 6 | 7h 10min | Débutant → Intermédiaire → Avancé |
+| **[Compétences métier](competences-metier/index.md)** | 19 | 9h 40min | Débutant → Intermédiaire |
 | **[Droit et RGPD](26-droit-rgpd/index.md)** | 4 | 4h 30min | Débutant → Intermédiaire |
 | **[UX Design](27-ux-design/index.md)** | 4 | 4h 15min | Débutant → Intermédiaire |
 | **[Audit et Qualité](28-audit-qualite/index.md)** | 6 | 6h | Tous niveaux |
@@ -121,6 +122,5 @@ Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis
 
 | Cursus | Fiches | Temps estimé | Niveaux |
 | ------ | -----: | -----------: | ------- |
-| **[Certification](00-blocs-competences/index.md)** | 20 | 9h 50min | Débutant → Intermédiaire |
 | **[Aide-mémoires](fiches-reference/index.md)** | 18 | 6h 55min | Débutant |
 

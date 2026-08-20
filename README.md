@@ -6,7 +6,7 @@ Le contenu d'apprentissage (`docs/`) est **en français**. Ce dépôt et le site
 
 | Métrique (recalculée depuis le dépôt) | Valeur |
 | ------------------------------------- | -----: |
-| Fiches pédagogiques (gate structure) | **604** |
+| Fiches pédagogiques (gate structure) | **603** |
 | Cursus (carte générée) | **64** |
 | Pages Markdown sous `docs/` | **~700** |
 
@@ -43,7 +43,7 @@ Cette provenance fait partie du projet, pas d'une note de bas de page. Le dépô
 
 ## Domaines couverts (aperçu)
 
-Pile web (Docker, PHP, Symfony, PostgreSQL, JavaScript, TypeScript, React), qualité (tests, architecture, API), infrastructure (CI/CD, Kubernetes, Ansible, monitoring, cloud), systèmes et parcours Epitech, cybersécurité, IA, Faust (audio DSP), crypto-monnaies (ton critique, sans promotion), gestion de projet, introduction RGPD, UX et fiches de référence.
+Pile web (Docker, PHP, Symfony, PostgreSQL, JavaScript, TypeScript, React), qualité (tests, architecture, API), infrastructure (CI/CD, Kubernetes, Ansible, monitoring, cloud), langages et fondamentaux (Java, Unix/Bash, Git, HTML/CSS, Node.js, Rust), cybersécurité, IA, Faust (audio DSP), crypto-monnaies (ton critique, sans promotion), gestion de projet, introduction RGPD, UX et fiches de référence.
 
 Carte complète : [`docs/carte-cursus.md`](docs/carte-cursus.md).
 

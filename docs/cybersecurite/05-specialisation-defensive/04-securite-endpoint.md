@@ -771,4 +771,4 @@ Playbook SOAR → TheHive (case management)
 
 ← Fiche précédente : **[03 - Threat Hunting et Intelligence](03-threat-hunting-intelligence.md)**
 
-→ Fiche suivante : **[05 - Certifications Défensives - Guide et Préparation](05-certifications-defensives.md)**
+→ Fiche suivante : **[05 - Parcours de pratique défensive](05-parcours-pratique-defensive.md)**

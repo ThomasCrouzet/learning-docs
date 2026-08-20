@@ -57,7 +57,7 @@ Ce projet est un **repo de documentation uniquement** (pas d'application). Le co
 
 ### Contenu pédagogique (`docs/`)
 
-Le projet contient **604 fiches réparties sur 64 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
+Le projet contient **603 fiches réparties sur 64 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
 
 **Développement Web** :
 
@@ -82,7 +82,7 @@ Le projet contient **604 fiches réparties sur 64 cursus** (chiffres à recalcul
 - **C#** (`18-csharp/`) : langage et .NET (10 fiches)
 - **Dev Mobile** (`23-dev-mobile/`) : React Native, Expo (13 fiches)
 
-**Cursus Epitech** (`epitech/`) : Java, Unix/Bash, Git, HTML/CSS, JavaScript, Node.js, Rust, projets, aide-mémoires (64 fiches sur 9 cursus)
+**Langages et fondamentaux** (`fondamentaux/`) : Java, Unix/Bash, Git, HTML/CSS, JavaScript, Node.js, Rust, projets, aide-mémoires (64 fiches sur 9 cursus)
 
 **Infrastructure et DevOps** :
 
@@ -112,9 +112,9 @@ Le projet contient **604 fiches réparties sur 64 cursus** (chiffres à recalcul
 - **UX Design** (`27-ux-design/`) : ergonomie, accessibilité (4 fiches)
 - **Audit et Qualité** (`28-audit-qualite/`) : tests avancés, workflow, patterns d'isolation (6 fiches)
 
-**Références et certification** :
+**Compétences métier et références** :
 
-- **Certification** (`00-blocs-competences/`) : RNCP BC01 à BC05 - besoins utilisateurs, pilotage projet, cloud, dev logiciel, architecture SI (20 fiches)
+- **Compétences métier** (`competences-metier/`) : besoins utilisateurs, pilotage projet, cloud, développement logiciel, architecture SI
 - **Aide-mémoires** (`fiches-reference/`) : fiches courtes de référence rapide (18 fiches)
 
 ### Wiki MkDocs
@@ -652,7 +652,7 @@ docs/
 - Fichiers : `[numéro]-[sujet-en-kebab-case].md`
 - Dossiers : `[numéro]-[technologie]/`
 - Toujours en minuscules, sans espaces ni caractères spéciaux
-- Exceptions de nommage : `BC01`-`BC08`, `fiches-reference`, `diagrams`, sous-dossiers `epitech/`
+- Exceptions de nommage : `fiches-reference`, `diagrams`, `fondamentaux`, `competences-metier`
 
 ---
 

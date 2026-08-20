@@ -712,7 +712,7 @@ Réalise les tâches suivantes :
 | Axe | Niveau requis | Justification |
 | --- | ------------- | ------------- |
 | Confidentialité | **Élevé** | Les notes sont des données personnelles (RGPD). Seul l'étudiant concerné et ses professeurs doivent y accéder |
-| Intégrité | **Critique** | Une note modifiée frauduleusement peut invalider un diplôme. C'est l'axe le plus critique |
+| Intégrité | **Critique** | Une note modifiée frauduleusement peut invalider un bulletin. C'est l'axe le plus critique |
 | Disponibilité | **Moyen** | L'application doit être disponible pendant les périodes de saisie et de consultation, mais une indisponibilité de quelques heures est tolérable |
 
 L'axe le plus critique est l'**intégrité** : une modification non autorisée des notes a des conséquences juridiques et académiques graves.

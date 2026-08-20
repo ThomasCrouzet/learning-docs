@@ -16,7 +16,7 @@ cursus: "MongoDB"
 
 ## Prérequis
 
-- [Cursus Node.js](../epitech/07-nodejs/index.md) termine (npm, modules, Express, API REST)
+- [Cursus Node.js](../fondamentaux/07-nodejs/index.md) termine (npm, modules, Express, API REST)
 - Savoir ce qu'est une base de données et une requête SQL basique
 
 ## Version utilisée dans cette fiche

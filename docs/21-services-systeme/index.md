@@ -29,7 +29,7 @@ description: "Cursus Services système : déployer et administrer des services r
 
 ## Prérequis
 
-- Cursus [Unix/Bash](../epitech/02-unix-bash/index.md)
+- Cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 - Cursus [Réseaux](../20-reseaux/index.md)
 - Cursus [Docker](../01-docker/index.md)
 

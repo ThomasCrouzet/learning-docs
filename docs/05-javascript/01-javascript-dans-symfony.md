@@ -18,7 +18,7 @@ cursus: "JavaScript"
 
 ## Prérequis
 
-- Avoir lu les fiches **[Introduction à JavaScript](../epitech/05-javascript/01-introduction-js.md)**, **[Variables et fonctions](../epitech/05-javascript/02-variables-fonctions.md)**, **[Manipulation du DOM](../epitech/05-javascript/03-dom-manipulation.md)** et **[Événements](../epitech/05-javascript/04-evenements.md)** (bases JS, DOM, événements)
+- Avoir lu les fiches **[Introduction à JavaScript](../fondamentaux/05-javascript/01-introduction-js.md)**, **[Variables et fonctions](../fondamentaux/05-javascript/02-variables-fonctions.md)**, **[Manipulation du DOM](../fondamentaux/05-javascript/03-dom-manipulation.md)** et **[Événements](../fondamentaux/05-javascript/04-evenements.md)** (bases JS, DOM, événements)
 - Avoir lu la fiche **[03 - Templates Twig](../03-symfony/03-templates-twig.md)** (héritage de templates, blocs, fonctions Twig)
 - Avoir un projet Symfony fonctionnel avec un serveur de développement accessible
 

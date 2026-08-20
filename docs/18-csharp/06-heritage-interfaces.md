@@ -18,7 +18,7 @@ cursus: "C#"
 
 - Avoir terminé la fiche **[05 - Classes et objets](05-classes-objets.md)**
 - Connaître les classes, propriétés et constructeurs en C#
-- Connaître les concepts d'héritage et d'interfaces du [cursus Java](../epitech/01-java/index.md)
+- Connaître les concepts d'héritage et d'interfaces du [cursus Java](../fondamentaux/01-java/index.md)
 
 ## Objectif de cette fiche
 

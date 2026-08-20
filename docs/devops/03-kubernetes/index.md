@@ -34,7 +34,7 @@ description: "Cursus Kubernetes : orchestrer des conteneurs, des pods aux déplo
 
 - Cursus Docker (`01-docker/`)
 - Cursus OpenShift (`devops/02-openshift/`, recommandé)
-- Cursus Unix/Bash Epitech (`epitech/02-unix-bash/`)
+- Cursus Unix/Bash (`fondamentaux/02-unix-bash/`)
 
 ## Durée totale estimée
 

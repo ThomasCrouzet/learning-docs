@@ -30,7 +30,7 @@ description: "Cursus CI/CD Pipelines : mettre en place l'intégration et le dép
 
 ## Prérequis
 
-- Cursus Git Epitech (`epitech/03-git/`)
+- Cursus Git (`fondamentaux/03-git/`)
 - Cursus Docker (`01-docker/`)
 - Cursus Testing (`09-testing/`, recommandé)
 

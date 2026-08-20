@@ -14,7 +14,7 @@ Cette section couvre l'utilisation de JavaScript dans un projet Symfony : gestio
 
 Avant de commencer cette section, tu dois avoir terminé :
 
-- La section **[JavaScript Epitech](../epitech/05-javascript/index.md)** (bases JS, DOM, événements)
+- La section **[JavaScript (bases)](../fondamentaux/05-javascript/index.md)** (bases JS, DOM, événements)
 - La section **[Symfony](../03-symfony/index.md)** (contrôleurs, routes, templates Twig)
 
 ## Fiches

@@ -26,7 +26,7 @@ description: "Cursus Virtualisation : hyperviseurs, KVM/QEMU, Proxmox VE, stocka
 
 ## Prérequis
 
-- Cursus [Unix/Bash](../epitech/02-unix-bash/index.md)
+- Cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 - Cursus [Réseaux](../20-reseaux/index.md)
 
 ## Durée totale estimée

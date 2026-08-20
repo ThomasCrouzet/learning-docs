@@ -16,7 +16,7 @@ cursus: "Réseaux"
 
 ## Prérequis
 
-- Savoir utiliser le terminal Linux (ouvrir un terminal, taper une commande, lire le résultat) - cursus [Unix/Bash](../epitech/02-unix-bash/index.md)
+- Savoir utiliser le terminal Linux (ouvrir un terminal, taper une commande, lire le résultat) - cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 - Aucune connaissance prealable des réseaux n'est requise (tout est explique ci-dessous)
 
 ## Objectif de cette fiche

@@ -19,7 +19,7 @@ const ROUTES = [
   '/fiches-reference/',
   '/cybersecurite/',
   '/crypto-monnaies/',
-  '/epitech/',
+  '/fondamentaux/',
   '/faust/',
   '/ansible/',
   '/devops/',

@@ -19,7 +19,7 @@ cursus: "Symfony"
 
 - Avoir lu la fiche **[02 - Les contrôleurs et les routes](02-controleurs-routes.md)** (créer un contrôleur, définir une route, retourner une réponse)
 - Avoir un projet Symfony fonctionnel avec au moins un contrôleur et un template
-- _(Optionnel, si tu suis le cursus Blocs de compétences)_ Fiche [BC04/03 - Tests et qualité logicielle](../00-blocs-competences/BC04-developpement-logiciel/03-tests-qualite-logicielle.md) - les concepts de base des tests sont expliqués directement dans cette fiche
+- _(Optionnel)_ Fiche [Tests et qualité logicielle](../competences-metier/04-developpement-logiciel/03-tests-qualite-logicielle.md) - vue métier des tests, les concepts de base sont aussi expliqués dans cette fiche
 
 ## Objectif de cette fiche
 

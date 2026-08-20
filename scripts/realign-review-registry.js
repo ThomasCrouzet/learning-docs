@@ -30,7 +30,7 @@ const SENSITIVE_PREFIXES = [
   'crypto-monnaies/',
   '26-droit-rgpd/',
   '22-cloud/',
-  '00-blocs-competences/',
+  'competences-metier/',
 ];
 
 function isSensitive(rel) {

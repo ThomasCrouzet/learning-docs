@@ -17,7 +17,7 @@ cursus: "MongoDB"
 ## Prérequis
 
 - [Fiche précédente : Indexation et performances](06-indexation-performances.md)
-- [Cursus Node.js](../epitech/07-nodejs/index.md) termine (npm, modules, Express, API REST)
+- [Cursus Node.js](../fondamentaux/07-nodejs/index.md) termine (npm, modules, Express, API REST)
 - Savoir créer un projet Node.js avec npm et utiliser les modules ES
 
 ## Version utilisée dans cette fiche

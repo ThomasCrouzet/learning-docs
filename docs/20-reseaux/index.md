@@ -34,7 +34,7 @@ description: "Cursus Réseaux : des fondamentaux du modèle OSI aux architecture
 
 ## Prérequis
 
-- Cursus [Unix/Bash](../epitech/02-unix-bash/index.md)
+- Cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 
 ## Durée totale estimée
 

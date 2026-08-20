@@ -18,7 +18,7 @@ cursus: "Virtualisation"
 
 - Avoir lu la fiche [01 - Concepts de virtualisation](01-concepts-virtualisation.md)
 - Avoir un processeur avec la virtualisation matérielle activee (verifie avec `kvm-ok`)
-- Connaitre les commandes de base Linux (cursus [Unix/Bash](../epitech/02-unix-bash/index.md))
+- Connaitre les commandes de base Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
 
 ## Objectif de cette fiche
 

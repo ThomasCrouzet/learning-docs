@@ -18,7 +18,7 @@ cursus: "Virtualisation"
 
 - Avoir lu la fiche [03 - Proxmox VE](03-proxmox.md)
 - Savoir créer et gérer des VMs avec KVM/QEMU (fiche [02 - KVM et QEMU](02-kvm-qemu.md))
-- Connaitre les bases du système de fichiers Linux (cursus [Unix/Bash](../epitech/02-unix-bash/index.md))
+- Connaitre les bases du système de fichiers Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
 
 ## Objectif de cette fiche
 

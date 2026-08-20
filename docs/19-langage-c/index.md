@@ -31,7 +31,7 @@ description: "Cursus Langage C : programmation système, pointeurs, allocation d
 ## Prérequis
 
 - Aucune connaissance prealable en programmation n'est requise (tout est explique depuis zéro)
-- Ce cursus est autonome. Pour aller plus loin sur les concepts de gestion mémoire, le [cursus Rust](../epitech/08-rust/index.md) offre un approfondissement complémentaire
+- Ce cursus est autonome. Pour aller plus loin sur les concepts de gestion mémoire, le [cursus Rust](../fondamentaux/08-rust/index.md) offre un approfondissement complémentaire
 
 ## Durée totale estimée
 

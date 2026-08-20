@@ -673,7 +673,7 @@ RAPPORT D'AUDIT - MODÈLE DE DÉCISION DE CRÉDIT
 
 **Énoncé** : Audite un modèle de classification pour biais et explicabilité.
 
-1. Crée un dataset de 2000 lignes simulant des décisions d'embauche avec 5 features (expérience, diplôme, compétences, âge, localisation) et un attribut sensible (genre)
+1. Crée un dataset de 2000 lignes simulant des décisions d'embauche avec 5 features (expérience, niveau d'études, compétences, âge, localisation) et un attribut sensible (genre)
 2. Introduis un biais de genre dans la cible
 3. Entraîne un Random Forest et mesure l'accuracy
 4. Calcule la demographic parity et l'equalized odds par genre

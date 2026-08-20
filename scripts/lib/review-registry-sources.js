@@ -105,29 +105,29 @@ const PATH_PREFIX_SOURCES = [
   ['21-services-systeme/', [
     { url: 'https://www.freedesktop.org/software/systemd/man/', topic: 'systemd man pages', date: DATE },
   ]],
-  ['epitech/01-java/', [
+  ['fondamentaux/01-java/', [
     { url: 'https://docs.oracle.com/en/java/javase/21/', topic: 'Java 21 documentation', date: DATE },
   ]],
-  ['epitech/02-unix-bash/', [
+  ['fondamentaux/02-unix-bash/', [
     { url: 'https://www.gnu.org/software/bash/manual/', topic: 'Bash manual', date: DATE },
   ]],
-  ['epitech/03-git/', [
+  ['fondamentaux/03-git/', [
     { url: 'https://git-scm.com/doc', topic: 'Git documentation', date: DATE },
   ]],
-  ['epitech/04-html-css/', [
+  ['fondamentaux/04-html-css/', [
     { url: 'https://developer.mozilla.org/fr/docs/Web/HTML', topic: 'MDN HTML', date: DATE },
   ]],
-  ['epitech/05-javascript/', [
+  ['fondamentaux/05-javascript/', [
     { url: 'https://developer.mozilla.org/fr/docs/Web/JavaScript', topic: 'MDN JavaScript', date: DATE },
   ]],
-  ['epitech/07-nodejs/', [
+  ['fondamentaux/07-nodejs/', [
     { url: 'https://nodejs.org/docs/latest-v22.x/api/', topic: 'Node.js 22 API', date: DATE },
   ]],
-  ['epitech/08-rust/', [
+  ['fondamentaux/08-rust/', [
     { url: 'https://doc.rust-lang.org/book/', topic: 'The Rust Book', date: DATE },
   ]],
-  ['epitech/', [
-    { url: 'https://git-scm.com/doc', topic: 'Git / tooling (Epitech track)', date: DATE },
+  ['fondamentaux/', [
+    { url: 'https://git-scm.com/doc', topic: 'Git / tooling (fondamentaux)', date: DATE },
   ]],
   ['cybersecurite/', [
     { url: 'https://owasp.org/www-project-top-ten/', topic: 'OWASP Top 10', date: DATE },
@@ -157,8 +157,8 @@ const PATH_PREFIX_SOURCES = [
   ['faust/', [
     { url: 'https://faust.grame.fr/doc/', topic: 'Faust official docs', date: DATE },
   ]],
-  ['00-blocs-competences/', [
-    { url: 'https://www.francecompetences.fr/', topic: 'France compétences / RNCP', date: DATE },
+  ['competences-metier/', [
+    { url: 'https://www.iso.org/standard/45170.html', topic: 'ISO/IEC/IEEE 29148 requirements engineering', date: DATE },
   ]],
   ['fiches-reference/', [
     { url: 'https://developer.mozilla.org/', topic: 'MDN (référence web)', date: DATE },

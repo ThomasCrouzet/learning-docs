@@ -28,4 +28,4 @@ Cette phase couvre les techniques offensives utilisées en test d'intrusion prof
 | 02 | [Exploitation et Post-Exploitation](02-exploitation-post-exploitation.md) | Metasploit, exploitation mémoire, élévation de privilèges, pivoting |
 | 03 | [Active Directory - Attaque et Sécurisation](03-active-directory.md) | Énumération, Kerberoasting, mouvement latéral, défense |
 | 04 | [Sécurité Web Avancée](04-securite-web-avancee.md) | Prototype pollution, SSTI, request smuggling, fuzzing |
-| 05 | [Certifications Offensives - Guide et Préparation](05-certifications-offensives.md) | OSCP, OSWE, OSEP, PNPT, planning d'étude |
+| 05 | [Parcours de pratique offensive](05-parcours-pratique-offensive.md) | Labs, méthodologie, pentest avancé |

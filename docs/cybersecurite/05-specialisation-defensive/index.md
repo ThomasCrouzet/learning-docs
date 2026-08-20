@@ -25,7 +25,7 @@ Cette phase présente les compétences défensives avancées : réponse aux inci
 | 02 | [Analyse de Malware](02-analyse-malware.md) | Analyse statique/dynamique, reverse engineering, YARA, classification |
 | 03 | [Threat Hunting et Intelligence](03-threat-hunting-intelligence.md) | MITRE ATT&CK, Diamond Model, OSINT, MISP, OpenCTI, TheHive |
 | 04 | [Sécurité du Endpoint (EDR/XDR)](04-securite-endpoint.md) | Wazuh, Velociraptor, Sysmon, SOAR, corrélation XDR |
-| 05 | [Certifications Défensives - Guide et Préparation](05-certifications-defensives.md) | CySA+, BTL1, GCIH, GCFA, GREM, parcours et planning |
+| 05 | [Parcours de pratique défensive](05-parcours-pratique-defensive.md) | Labs DFIR, SOC, forensique |
 
 ## Ordre de lecture recommandé
 
@@ -33,7 +33,7 @@ Cette phase présente les compétences défensives avancées : réponse aux inci
 2. Enchaîne avec la fiche 02 (Analyse de Malware) : elle dépend des compétences forensiques de la fiche 01
 3. Puis la fiche 03 (Threat Hunting et Intelligence) : elle utilise les connaissances des fiches 01 et 02 pour la chasse proactive
 4. Ensuite la fiche 04 (Sécurité du Endpoint) : elle intègre les compétences des trois fiches précédentes dans un contexte EDR/XDR
-5. Termine par la fiche 05 (Certifications) : elle guide la préparation aux certifications après maîtrise des compétences techniques
+5. Termine par la fiche 05 (parcours de pratique) : elle oriente vers des labs et un plan de travail après les compétences techniques
 
 ## Phase suivante
 

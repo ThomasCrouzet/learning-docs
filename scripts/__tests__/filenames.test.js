@@ -59,8 +59,16 @@ describe('isValidDirname', () => {
     expect(isValidDirname('fiches-reference')).toBe(true);
   });
 
-  it('accepte epitech (exception)', () => {
-    expect(isValidDirname('epitech')).toBe(true);
+  it('accepte fondamentaux (exception)', () => {
+    expect(isValidDirname('fondamentaux')).toBe(true);
+  });
+
+  it('accepte competences-metier (exception)', () => {
+    expect(isValidDirname('competences-metier')).toBe(true);
+  });
+
+  it('rejette epitech (plus une exception d\'école)', () => {
+    expect(isValidDirname('epitech')).toBe(false);
   });
 
   it('accepte devops (exception)', () => {
@@ -83,12 +91,12 @@ describe('isValidDirname', () => {
     expect(isValidDirname('diagrams')).toBe(true);
   });
 
-  it('accepte BC01 (dossier special)', () => {
-    expect(isValidDirname('BC01')).toBe(true);
+  it('rejette BC01 (codes de blocs diplôme)', () => {
+    expect(isValidDirname('BC01')).toBe(false);
   });
 
-  it('accepte BC08 (dossier special)', () => {
-    expect(isValidDirname('BC08')).toBe(true);
+  it('rejette BC08 (codes de blocs diplôme)', () => {
+    expect(isValidDirname('BC08')).toBe(false);
   });
 
   it('rejette les noms avec majuscules non-BC', () => {

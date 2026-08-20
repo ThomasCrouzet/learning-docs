@@ -16,7 +16,7 @@ cursus: "C#"
 
 ## Prérequis
 
-- Avoir terminé le [cursus Java](../epitech/01-java/index.md) (les concepts de POO sont similaires)
+- Avoir terminé le [cursus Java](../fondamentaux/01-java/index.md) (les concepts de POO sont similaires)
 - Savoir ouvrir un terminal (invite de commandes)
 - Savoir créer un fichier texte avec un éditeur (VS Code ou autre)
 

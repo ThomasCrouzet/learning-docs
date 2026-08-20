@@ -789,7 +789,7 @@ if (convertir_entier(argv[2], &numero) != 0 || numero <= 0) {
 
 Tu as terminé le cursus Langage C. Tu maîtrises maintenant les fondamentaux : la compilation, les types, les structures de contrôle, les fonctions, les pointeurs, l'allocation dynamique, les structures et la gestion de fichiers.
 
-Pour approfondir la gestion de la mémoire et découvrir une approche moderne de la programmation système, le [cursus Rust](../epitech/08-rust/index.md) est un complément naturel. Rust reprend les concepts de bas niveau du C (pointeurs, allocation) tout en ajoutant un système de propriété (ownership) qui élimine les fuites mémoire et les accès invalides à la compilation.
+Pour approfondir la gestion de la mémoire et découvrir une approche moderne de la programmation système, le [cursus Rust](../fondamentaux/08-rust/index.md) est un complément naturel. Rust reprend les concepts de bas niveau du C (pointeurs, allocation) tout en ajoutant un système de propriété (ownership) qui élimine les fuites mémoire et les accès invalides à la compilation.
 
 ---
 

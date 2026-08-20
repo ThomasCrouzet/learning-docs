@@ -11,7 +11,7 @@ Cursus transversal en **4 fiches progressives**. Des principes fondamentaux de l
 
 **Durée estimée totale** : 4h15.
 
-**Prérequis** : avoir suivi le cursus [HTML / CSS](../epitech/04-html-css/index.md) pour connaître les bases de la structure web et du CSS.
+**Prérequis** : avoir suivi le cursus [HTML / CSS](../fondamentaux/04-html-css/index.md) pour connaître les bases de la structure web et du CSS.
 
 ---
 

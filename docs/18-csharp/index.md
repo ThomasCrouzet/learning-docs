@@ -11,7 +11,7 @@ Ce cursus couvre les fondamentaux du langage C# et de la plateforme .NET : synta
 
 ## Prérequis
 
-- Avoir terminé le [cursus Java](../epitech/01-java/index.md) (les concepts de POO sont similaires entre Java et C#)
+- Avoir terminé le [cursus Java](../fondamentaux/01-java/index.md) (les concepts de POO sont similaires entre Java et C#)
 
 ## Fiches du cursus
 

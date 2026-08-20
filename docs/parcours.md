@@ -29,7 +29,7 @@ Les temps estimés sont des fourchettes basées sur les fiches du wiki. Le temps
 - [Commencer](commencer/index.md) : préparer ton environnement
 - [Outils IA](00-outils-ia/index.md) : apprendre à apprendre avec l'IA
 - [Docker](01-docker/index.md) : isoler ton environnement de développement
-- [Git](epitech/03-git/index.md) : versionner ton code
+- [Git](fondamentaux/03-git/index.md) : versionner ton code
 
 ### Étape 2 - Backend PHP/Symfony (~50h)
 
@@ -68,7 +68,7 @@ Les temps estimés sont des fourchettes basées sur les fiches du wiki. Le temps
 
 ### Étape 1 - Fondations système (~30h)
 
-- [Unix/Bash](epitech/02-unix-bash/index.md) : ligne de commande, scripting
+- [Unix/Bash](fondamentaux/02-unix-bash/index.md) : ligne de commande, scripting
 - [Réseaux](20-reseaux/index.md) : TCP/IP, DNS, routage
 - [Services Système](21-services-systeme/index.md) : systemd, logs, cron
 
@@ -92,36 +92,36 @@ Les temps estimés sont des fourchettes basées sur les fiches du wiki. Le temps
 
 ---
 
-## Parcours 3 - Préparation à la certification RNCP
+## Parcours 3 - Du besoin utilisateur à l'architecture SI
 
-**Public** : tu vises une certification professionnelle RNCP en développement / architecture SI.
+**Public** : tu veux relier l'analyse d'un besoin, le pilotage de projet, le cloud, le développement et l'architecture d'un système d'information.
 
-**Objectif** : couvrir les 5 blocs de compétences du référentiel **à titre d'entraînement et de cartographie**. Ce wiki **ne délivre pas** de diplôme ni de certification RNCP ; seule un organisme habilité peut le faire.
+**Objectif** : parcourir les cursus métier du wiki, puis approfondir chaque thème avec les cursus techniques correspondants. Ce wiki **ne délivre pas** de diplôme ni de titre professionnel.
 
 **Temps estimé** : variable selon ton niveau de départ.
 
-### Bloc 1 - Besoins utilisateurs
+### Étape 1 - Besoins utilisateurs
 
-- [BC01 - Besoins utilisateurs](00-blocs-competences/BC01-besoins-utilisateurs/index.md) : cahier des charges, étude de marché, faisabilité
+- [Besoins utilisateurs](competences-metier/01-besoins-utilisateurs/index.md) : cahier des charges, étude de marché, faisabilité
 
-### Bloc 2 - Pilotage projet
+### Étape 2 - Pilotage de projet
 
-- [BC02 - Pilotage projet](00-blocs-competences/BC02-pilotage-projet/index.md) : agile, équipe, planification
+- [Pilotage de projet](competences-metier/02-pilotage-projet/index.md) : agile, équipe, planification
 - [Gestion de Projet](25-gestion-projet/index.md) : approfondissement
 
-### Bloc 3 - Cloud computing
+### Étape 3 - Cloud computing
 
-- [BC03 - Cloud computing](00-blocs-competences/BC03-cloud-computing/index.md) : IaC, déploiement continu, K8s
+- [Cloud computing](competences-metier/03-cloud-computing/index.md) : IaC, déploiement continu, Kubernetes
 - Approfondir avec : [CI/CD](11-ci-cd/index.md), [Cloud](22-cloud/index.md), [Kubernetes](devops/03-kubernetes/index.md)
 
-### Bloc 4 - Développement logiciel
+### Étape 4 - Développement logiciel
 
-- [BC04 - Développement logiciel](00-blocs-competences/BC04-developpement-logiciel/index.md) : architecture serveur, sécurité, tests, mobile
+- [Développement logiciel](competences-metier/04-developpement-logiciel/index.md) : architecture serveur, sécurité, tests, mobile
 - Approfondir avec : [Testing](09-testing/index.md), [Architecture](10-architecture/index.md), [Dev Mobile](23-dev-mobile/index.md)
 
-### Bloc 5 - Architecture SI
+### Étape 5 - Architecture SI
 
-- [BC05 - Architecture SI](00-blocs-competences/BC05-architecture-si/index.md) : infra réseau, supervision, sécurité, audit
+- [Architecture SI](competences-metier/05-architecture-si/index.md) : infra réseau, supervision, sécurité, audit
 - Approfondir avec : [Réseaux](20-reseaux/index.md), [Monitoring](14-monitoring/index.md), [Cybersécurité](cybersecurite/index.md)
 
 ---
@@ -189,7 +189,7 @@ Ces cursus sont **indépendants** : tu peux les commencer sans prérequis.
 
 - [Faust](faust/index.md) : programmation audio fonctionnelle, traitement DSP
 - [Crypto-monnaies](crypto-monnaies/index.md) : comprendre la blockchain sans le battage médiatique
-- [Cursus Epitech](epitech/index.md) : Java, Rust, Node.js - langages multiples
+- [Langages et fondamentaux](fondamentaux/index.md) : Java, Rust, Node.js - langages multiples
 - [UX Design](27-ux-design/index.md) : ergonomie et accessibilité
 - [Audit et Qualité](28-audit-qualite/index.md) : cartographier et auditer une application existante
 

@@ -17,7 +17,7 @@ cursus: "JavaScript Moderne"
 ## Prérequis
 
 - Connaître les bases de JavaScript : variables, types, fonctions, boucles
-- Avoir suivi le [cursus JavaScript Stack Symfony](../05-javascript/index.md) ou [JavaScript Epitech](../epitech/05-javascript/index.md)
+- Avoir suivi le [cursus JavaScript Stack Symfony](../05-javascript/index.md) ou [JavaScript (bases)](../fondamentaux/05-javascript/index.md)
 
 ## Objectif de cette fiche
 

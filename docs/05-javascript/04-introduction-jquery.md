@@ -18,8 +18,8 @@ cursus: "JavaScript"
 ## Prérequis
 
 - Avoir lu la fiche **[03 - Webpack Encore - Utilisation](03-webpack-encore-utilisation.md)**
-- Avoir lu la fiche **[03 - Manipulation du DOM](../epitech/05-javascript/03-dom-manipulation.md)**
-- Avoir lu la fiche **[04 - Les événements](../epitech/05-javascript/04-evenements.md)**
+- Avoir lu la fiche **[03 - Manipulation du DOM](../fondamentaux/05-javascript/03-dom-manipulation.md)**
+- Avoir lu la fiche **[04 - Les événements](../fondamentaux/05-javascript/04-evenements.md)**
 - Savoir utiliser `document.querySelector()` et `addEventListener()` en JavaScript
 
 ## Version utilisée dans cette fiche

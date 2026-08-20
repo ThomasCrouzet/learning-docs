@@ -18,7 +18,7 @@ cursus: "Virtualisation"
 
 - Avoir lu la fiche [02 - KVM et QEMU](02-kvm-qemu.md)
 - Comprendre les concepts d'hyperviseur de type 1, de VM et de conteneur (fiche [01 - Concepts de virtualisation](01-concepts-virtualisation.md))
-- Connaitre les bases de l'administration Linux (cursus [Unix/Bash](../epitech/02-unix-bash/index.md))
+- Connaitre les bases de l'administration Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
 
 ## Objectif de cette fiche
 

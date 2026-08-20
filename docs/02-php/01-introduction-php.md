@@ -612,7 +612,7 @@ echo "Bonjour";
 
     <ul>
         <li><?php echo "Étudiante en informatique"; ?></li>
-        <li><?php echo "Epitech Lyon"; ?></li>
+        <li><?php echo "Lyon"; ?></li>
         <li><?php echo "Passionnée de programmation"; ?></li>
     </ul>
 

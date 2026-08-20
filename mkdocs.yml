@@ -34,7 +34,7 @@ theme:
     text: Lexend
     code: Atkinson Hyperlegible Mono
   icon:
-    logo: material/school-outline
+    logo: material/book-open-variant
     tag:
       docker: simple/docker
       php: simple/php
@@ -142,7 +142,6 @@ plugins:
         - Faust
         - Crypto-monnaies
         - Outils IA
-        - Certification
         - Python
         - Data
         - MongoDB
@@ -276,6 +275,7 @@ extra:
     UX: ux
     Pratique: pratique
     Référence: reference
+    Méthodologie: concept
 
 nav:
   - Accueil: index.md
@@ -534,95 +534,95 @@ nav:
           - Redis comme transport Messenger: 13-redis/07-redis-transport-messenger.md
           - Projet intégrateur: 13-redis/08-projet-integrateur.md
 
-  - Cursus Epitech:
-      - epitech/index.md
+  - Langages et fondamentaux:
+      - fondamentaux/index.md
       - Java:
-          - epitech/01-java/index.md
-          - Hello World: epitech/01-java/01-hello-world.md
-          - Compilation et exécution: epitech/01-java/02-compilation-execution.md
-          - Variables et types: epitech/01-java/03-variables-types.md
-          - Classes et objets: epitech/01-java/04-classes-objets.md
-          - Constructeurs: epitech/01-java/05-constructeurs.md
-          - Visibilité et encapsulation: epitech/01-java/06-visibilite-encapsulation.md
-          - Méthodes et surcharge: epitech/01-java/07-methodes-surcharge.md
-          - Héritage: epitech/01-java/08-heritage.md
-          - Interfaces et abstraction: epitech/01-java/09-interfaces-abstraction.md
-          - Collections: epitech/01-java/10-collections.md
-          - Exceptions: epitech/01-java/11-exceptions-java.md
-          - Fichiers et I/O: epitech/01-java/12-fichiers-io.md
+          - fondamentaux/01-java/index.md
+          - Hello World: fondamentaux/01-java/01-hello-world.md
+          - Compilation et exécution: fondamentaux/01-java/02-compilation-execution.md
+          - Variables et types: fondamentaux/01-java/03-variables-types.md
+          - Classes et objets: fondamentaux/01-java/04-classes-objets.md
+          - Constructeurs: fondamentaux/01-java/05-constructeurs.md
+          - Visibilité et encapsulation: fondamentaux/01-java/06-visibilite-encapsulation.md
+          - Méthodes et surcharge: fondamentaux/01-java/07-methodes-surcharge.md
+          - Héritage: fondamentaux/01-java/08-heritage.md
+          - Interfaces et abstraction: fondamentaux/01-java/09-interfaces-abstraction.md
+          - Collections: fondamentaux/01-java/10-collections.md
+          - Exceptions: fondamentaux/01-java/11-exceptions-java.md
+          - Fichiers et I/O: fondamentaux/01-java/12-fichiers-io.md
       - Unix/Bash:
-          - epitech/02-unix-bash/index.md
-          - Système de fichiers: epitech/02-unix-bash/01-systeme-fichiers.md
-          - Permissions: epitech/02-unix-bash/02-permissions.md
-          - Commandes de base: epitech/02-unix-bash/03-commandes-base.md
-          - Scripts Bash: epitech/02-unix-bash/04-scripts-bash.md
-          - Processus et signaux: epitech/02-unix-bash/05-processus-signaux.md
-          - Gestion des utilisateurs: epitech/02-unix-bash/06-gestion-utilisateurs.md
-          - systemd et services: epitech/02-unix-bash/07-systemd-services.md
-          - Stockage et systèmes de fichiers: epitech/02-unix-bash/08-stockage-montages.md
-          - Tâches planifiées: epitech/02-unix-bash/09-taches-planifiees.md
-          - Sécurité système: epitech/02-unix-bash/10-securite-systeme.md
+          - fondamentaux/02-unix-bash/index.md
+          - Système de fichiers: fondamentaux/02-unix-bash/01-systeme-fichiers.md
+          - Permissions: fondamentaux/02-unix-bash/02-permissions.md
+          - Commandes de base: fondamentaux/02-unix-bash/03-commandes-base.md
+          - Scripts Bash: fondamentaux/02-unix-bash/04-scripts-bash.md
+          - Processus et signaux: fondamentaux/02-unix-bash/05-processus-signaux.md
+          - Gestion des utilisateurs: fondamentaux/02-unix-bash/06-gestion-utilisateurs.md
+          - systemd et services: fondamentaux/02-unix-bash/07-systemd-services.md
+          - Stockage et systèmes de fichiers: fondamentaux/02-unix-bash/08-stockage-montages.md
+          - Tâches planifiées: fondamentaux/02-unix-bash/09-taches-planifiees.md
+          - Sécurité système: fondamentaux/02-unix-bash/10-securite-systeme.md
       - Git:
-          - epitech/03-git/index.md
-          - Concepts Git: epitech/03-git/01-concepts-git.md
-          - Workflow basique: epitech/03-git/02-workflow-basique.md
-          - Branches et merge: epitech/03-git/03-branches-merge.md
-          - Résolution de conflits: epitech/03-git/04-resolution-conflits.md
-          - Git avancé: epitech/03-git/05-git-avance.md
+          - fondamentaux/03-git/index.md
+          - Concepts Git: fondamentaux/03-git/01-concepts-git.md
+          - Workflow basique: fondamentaux/03-git/02-workflow-basique.md
+          - Branches et merge: fondamentaux/03-git/03-branches-merge.md
+          - Résolution de conflits: fondamentaux/03-git/04-resolution-conflits.md
+          - Git avancé: fondamentaux/03-git/05-git-avance.md
       - HTML/CSS:
-          - epitech/04-html-css/index.md
-          - Structure HTML: epitech/04-html-css/01-structure-html.md
-          - HTML sémantique: epitech/04-html-css/02-html-semantique.md
-          - Formulaires: epitech/04-html-css/03-formulaires.md
-          - CSS de base: epitech/04-html-css/04-css-base.md
-          - Flexbox: epitech/04-html-css/05-flexbox.md
-          - CSS Grid: epitech/04-html-css/06-css-grid.md
-          - Animations CSS: epitech/04-html-css/07-animations-css.md
+          - fondamentaux/04-html-css/index.md
+          - Structure HTML: fondamentaux/04-html-css/01-structure-html.md
+          - HTML sémantique: fondamentaux/04-html-css/02-html-semantique.md
+          - Formulaires: fondamentaux/04-html-css/03-formulaires.md
+          - CSS de base: fondamentaux/04-html-css/04-css-base.md
+          - Flexbox: fondamentaux/04-html-css/05-flexbox.md
+          - CSS Grid: fondamentaux/04-html-css/06-css-grid.md
+          - Animations CSS: fondamentaux/04-html-css/07-animations-css.md
       - JavaScript:
-          - epitech/05-javascript/index.md
-          - Introduction: epitech/05-javascript/01-introduction-js.md
-          - Variables et fonctions: epitech/05-javascript/02-variables-fonctions.md
-          - Manipulation du DOM: epitech/05-javascript/03-dom-manipulation.md
-          - Événements: epitech/05-javascript/04-evenements.md
+          - fondamentaux/05-javascript/index.md
+          - Introduction: fondamentaux/05-javascript/01-introduction-js.md
+          - Variables et fonctions: fondamentaux/05-javascript/02-variables-fonctions.md
+          - Manipulation du DOM: fondamentaux/05-javascript/03-dom-manipulation.md
+          - Événements: fondamentaux/05-javascript/04-evenements.md
       - Node.js:
-          - epitech/07-nodejs/index.md
-          - Introduction: epitech/07-nodejs/01-introduction-nodejs.md
-          - npm et packages: epitech/07-nodejs/02-npm-packages.md
-          - Modules et imports: epitech/07-nodejs/03-modules-imports.md
-          - Programmation asynchrone: epitech/07-nodejs/04-programmation-asynchrone.md
-          - Système de fichiers: epitech/07-nodejs/05-systeme-fichiers.md
-          - Introduction Express: epitech/07-nodejs/06-introduction-express.md
-          - Middleware et routes: epitech/07-nodejs/07-middleware-routes.md
-          - API REST: epitech/07-nodejs/08-api-rest.md
-          - Variables d'environnement et configuration: epitech/07-nodejs/09-variables-environnement.md
-          - Validation des entrées: epitech/07-nodejs/10-validation-entrees.md
+          - fondamentaux/07-nodejs/index.md
+          - Introduction: fondamentaux/07-nodejs/01-introduction-nodejs.md
+          - npm et packages: fondamentaux/07-nodejs/02-npm-packages.md
+          - Modules et imports: fondamentaux/07-nodejs/03-modules-imports.md
+          - Programmation asynchrone: fondamentaux/07-nodejs/04-programmation-asynchrone.md
+          - Système de fichiers: fondamentaux/07-nodejs/05-systeme-fichiers.md
+          - Introduction Express: fondamentaux/07-nodejs/06-introduction-express.md
+          - Middleware et routes: fondamentaux/07-nodejs/07-middleware-routes.md
+          - API REST: fondamentaux/07-nodejs/08-api-rest.md
+          - Variables d'environnement et configuration: fondamentaux/07-nodejs/09-variables-environnement.md
+          - Validation des entrées: fondamentaux/07-nodejs/10-validation-entrees.md
       - Rust:
-          - epitech/08-rust/index.md
-          - Introduction et installation: epitech/08-rust/01-introduction-installation.md
-          - Variables et types: epitech/08-rust/02-variables-types.md
-          - Fonctions et contrôle de flux: epitech/08-rust/03-fonctions-controle-flux.md
-          - Ownership: epitech/08-rust/04-ownership.md
-          - Borrowing et références: epitech/08-rust/05-borrowing-references.md
-          - Structs: epitech/08-rust/06-structs.md
-          - Enums et pattern matching: epitech/08-rust/07-enums-pattern-matching.md
-          - Gestion des erreurs: epitech/08-rust/08-gestion-erreurs.md
-          - Collections: epitech/08-rust/09-collections.md
-          - Traits et génériques: epitech/08-rust/10-traits-generiques.md
-          - Modules et organisation: epitech/08-rust/11-modules-organisation.md
-          - Tests: epitech/08-rust/12-tests.md
-          - Programmation asynchrone: epitech/08-rust/13-programmation-asynchrone.md
-          - "Outils de qualité : clippy et rustfmt": epitech/08-rust/14-outils-qualite.md
-          - Workspaces Cargo (projets multi-crates): epitech/08-rust/15-workspaces-cargo.md
-          - Macros Rust: epitech/08-rust/16-macros.md
+          - fondamentaux/08-rust/index.md
+          - Introduction et installation: fondamentaux/08-rust/01-introduction-installation.md
+          - Variables et types: fondamentaux/08-rust/02-variables-types.md
+          - Fonctions et contrôle de flux: fondamentaux/08-rust/03-fonctions-controle-flux.md
+          - Ownership: fondamentaux/08-rust/04-ownership.md
+          - Borrowing et références: fondamentaux/08-rust/05-borrowing-references.md
+          - Structs: fondamentaux/08-rust/06-structs.md
+          - Enums et pattern matching: fondamentaux/08-rust/07-enums-pattern-matching.md
+          - Gestion des erreurs: fondamentaux/08-rust/08-gestion-erreurs.md
+          - Collections: fondamentaux/08-rust/09-collections.md
+          - Traits et génériques: fondamentaux/08-rust/10-traits-generiques.md
+          - Modules et organisation: fondamentaux/08-rust/11-modules-organisation.md
+          - Tests: fondamentaux/08-rust/12-tests.md
+          - Programmation asynchrone: fondamentaux/08-rust/13-programmation-asynchrone.md
+          - "Outils de qualité : clippy et rustfmt": fondamentaux/08-rust/14-outils-qualite.md
+          - Workspaces Cargo (projets multi-crates): fondamentaux/08-rust/15-workspaces-cargo.md
+          - Macros Rust: fondamentaux/08-rust/16-macros.md
       - Projets:
-          - epitech/06-projets/index.md
-          - Popeye (Docker): epitech/06-projets/01-popeye-docker.md
-          - Jeu 2D Java: epitech/06-projets/02-jeu-2d-java.md
-      - Aide-mémoires Epitech:
-          - epitech/fiches-reference/index.md
-          - Java: epitech/fiches-reference/01-aide-memoire-java.md
-          - Bash: epitech/fiches-reference/02-aide-memoire-bash.md
-          - HTML/CSS: epitech/fiches-reference/03-aide-memoire-html-css.md
+          - fondamentaux/06-projets/index.md
+          - Application de sondage (Docker): fondamentaux/06-projets/01-application-multi-conteneurs.md
+          - Jeu 2D Java: fondamentaux/06-projets/02-jeu-2d-java.md
+      - Aide-mémoires Java, Bash, HTML/CSS:
+          - fondamentaux/fiches-reference/index.md
+          - Java: fondamentaux/fiches-reference/01-aide-memoire-java.md
+          - Bash: fondamentaux/fiches-reference/02-aide-memoire-bash.md
+          - HTML/CSS: fondamentaux/fiches-reference/03-aide-memoire-html-css.md
 
   - Infrastructure:
       - devops/index.md
@@ -785,14 +785,14 @@ nav:
           - Exploitation et Post-Exploitation: cybersecurite/04-specialisation-offensive/02-exploitation-post-exploitation.md
           - Active Directory: cybersecurite/04-specialisation-offensive/03-active-directory.md
           - Sécurité Web Avancée: cybersecurite/04-specialisation-offensive/04-securite-web-avancee.md
-          - Certifications Offensives: cybersecurite/04-specialisation-offensive/05-certifications-offensives.md
+          - Parcours de pratique offensive: cybersecurite/04-specialisation-offensive/05-parcours-pratique-offensive.md
       - Phase 5 - Spécialisation Défensive:
           - cybersecurite/05-specialisation-defensive/index.md
           - Détection et Réponse aux Incidents: cybersecurite/05-specialisation-defensive/01-detection-reponse-incidents.md
           - Analyse de Malware: cybersecurite/05-specialisation-defensive/02-analyse-malware.md
           - Threat Hunting et Intelligence: cybersecurite/05-specialisation-defensive/03-threat-hunting-intelligence.md
           - Sécurité Endpoint (EDR/XDR): cybersecurite/05-specialisation-defensive/04-securite-endpoint.md
-          - Certifications Défensives: cybersecurite/05-specialisation-defensive/05-certifications-defensives.md
+          - Parcours de pratique défensive: cybersecurite/05-specialisation-defensive/05-parcours-pratique-defensive.md
       - Phase 6 - Domaines Avancés:
           - cybersecurite/06-domaines-avances/index.md
           - Sécurité Cloud: cybersecurite/06-domaines-avances/01-securite-cloud.md
@@ -1004,6 +1004,37 @@ nav:
           - Rédiger un cahier des charges: 25-gestion-projet/04-cahier-des-charges.md
           - Qualité et documentation technique: 25-gestion-projet/05-qualite-documentation.md
           - Projet intégrateur: 25-gestion-projet/06-projet-integrateur.md
+      - Compétences métier:
+          - competences-metier/index.md
+          - Besoins utilisateurs:
+              - competences-metier/01-besoins-utilisateurs/index.md
+              - Cahier des charges: competences-metier/01-besoins-utilisateurs/01-cahier-des-charges.md
+              - Étude de marché: competences-metier/01-besoins-utilisateurs/02-etude-de-marche.md
+              - Analyse de faisabilité: competences-metier/01-besoins-utilisateurs/03-analyse-faisabilite.md
+          - Pilotage de projet:
+              - competences-metier/02-pilotage-projet/index.md
+              - Méthodologies agiles: competences-metier/02-pilotage-projet/01-methodologies-agiles.md
+              - Gestion d'équipe: competences-metier/02-pilotage-projet/02-gestion-equipe.md
+              - Roadmap et planification: competences-metier/02-pilotage-projet/03-roadmap-planification.md
+          - Cloud computing:
+              - competences-metier/03-cloud-computing/index.md
+              - Introduction au Cloud: competences-metier/03-cloud-computing/01-introduction-cloud.md
+              - Tests d'intrusion: competences-metier/03-cloud-computing/02-tests-intrusion-pentest.md
+              - Infrastructure as Code: competences-metier/03-cloud-computing/03-infrastructure-as-code.md
+              - Déploiement continu: competences-metier/03-cloud-computing/04-deploiement-continu.md
+              - Bases Kubernetes: competences-metier/03-cloud-computing/05-kubernetes-bases.md
+          - Développement logiciel:
+              - competences-metier/04-developpement-logiciel/index.md
+              - Architecture serveur web: competences-metier/04-developpement-logiciel/01-architecture-serveur-web.md
+              - Sécurité et authentification: competences-metier/04-developpement-logiciel/02-securite-authentification.md
+              - Tests et qualité: competences-metier/04-developpement-logiciel/03-tests-qualite-logicielle.md
+              - Applications mobiles: competences-metier/04-developpement-logiciel/04-applications-mobiles.md
+          - Architecture SI:
+              - competences-metier/05-architecture-si/index.md
+              - Infrastructure réseau: competences-metier/05-architecture-si/01-infrastructure-reseau.md
+              - Supervision et monitoring: competences-metier/05-architecture-si/02-supervision-monitoring.md
+              - Sécurité du SI: competences-metier/05-architecture-si/03-securite-systeme-information.md
+              - Audit de sécurité: competences-metier/05-architecture-si/04-audit-securite.md
       - Droit et RGPD:
           - 26-droit-rgpd/index.md
           - Introduction au RGPD: 26-droit-rgpd/01-introduction-rgpd.md
@@ -1046,35 +1077,3 @@ nav:
       - Aide-mémoire Monitoring: fiches-reference/16-aide-memoire-monitoring.md
       - Aide-mémoire Architecture: fiches-reference/17-aide-memoire-architecture.md
       - Aide-mémoire Testing: fiches-reference/18-aide-memoire-testing.md
-      - Certification:
-          - 00-blocs-competences/index.md
-          - Présentation: 00-blocs-competences/00-presentation-certification.md
-          - BC01 - Besoins utilisateurs:
-              - 00-blocs-competences/BC01-besoins-utilisateurs/index.md
-              - Cahier des charges: 00-blocs-competences/BC01-besoins-utilisateurs/01-cahier-des-charges.md
-              - Étude de marché: 00-blocs-competences/BC01-besoins-utilisateurs/02-etude-de-marche.md
-              - Analyse de faisabilité: 00-blocs-competences/BC01-besoins-utilisateurs/03-analyse-faisabilite.md
-          - BC02 - Pilotage projet:
-              - 00-blocs-competences/BC02-pilotage-projet/index.md
-              - Méthodologies agiles: 00-blocs-competences/BC02-pilotage-projet/01-methodologies-agiles.md
-              - Gestion d'équipe: 00-blocs-competences/BC02-pilotage-projet/02-gestion-equipe.md
-              - Roadmap et planification: 00-blocs-competences/BC02-pilotage-projet/03-roadmap-planification.md
-          - BC03 - Cloud computing:
-              - 00-blocs-competences/BC03-cloud-computing/index.md
-              - Introduction au Cloud: 00-blocs-competences/BC03-cloud-computing/01-introduction-cloud.md
-              - Tests d'intrusion: 00-blocs-competences/BC03-cloud-computing/02-tests-intrusion-pentest.md
-              - Infrastructure as Code: 00-blocs-competences/BC03-cloud-computing/03-infrastructure-as-code.md
-              - Déploiement continu: 00-blocs-competences/BC03-cloud-computing/04-deploiement-continu.md
-              - Bases Kubernetes: 00-blocs-competences/BC03-cloud-computing/05-kubernetes-bases.md
-          - BC04 - Développement logiciel:
-              - 00-blocs-competences/BC04-developpement-logiciel/index.md
-              - Architecture serveur web: 00-blocs-competences/BC04-developpement-logiciel/01-architecture-serveur-web.md
-              - Sécurité et authentification: 00-blocs-competences/BC04-developpement-logiciel/02-securite-authentification.md
-              - Tests et qualité: 00-blocs-competences/BC04-developpement-logiciel/03-tests-qualite-logicielle.md
-              - Applications mobiles: 00-blocs-competences/BC04-developpement-logiciel/04-applications-mobiles.md
-          - BC05 - Architecture SI:
-              - 00-blocs-competences/BC05-architecture-si/index.md
-              - Infrastructure réseau: 00-blocs-competences/BC05-architecture-si/01-infrastructure-reseau.md
-              - Supervision et monitoring: 00-blocs-competences/BC05-architecture-si/02-supervision-monitoring.md
-              - Sécurité du SI: 00-blocs-competences/BC05-architecture-si/03-securite-systeme-information.md
-              - Audit de sécurité: 00-blocs-competences/BC05-architecture-si/04-audit-securite.md

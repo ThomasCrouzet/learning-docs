@@ -147,14 +147,14 @@ Lecture de papers, safety/alignement, frontières de la recherche et contributio
 
 ---
 
-## Parcours Certifications Suggéré
+## Ressources de formation complémentaires
 
-Ces certifications sont des repères optionnels, pas une preuve d'expertise complète.
+Ces ressources sont des **repères de cours**, pas un titre délivré par ce wiki.
 
-| Niveau | Certifications |
-| ------ | -------------- |
-| Débutant | Google Machine Learning Crash Course → AWS Cloud Practitioner |
-| Intermédiaire | AWS ML Specialty (le TensorFlow Developer Certificate n'est plus proposé depuis 2024) |
-| Confirmé | Google Professional ML Engineer → Databricks ML Associate |
-| Avancé | Databricks ML Professional → NVIDIA Deep Learning Institute |
+| Niveau | Ressources |
+| ------ | ---------- |
+| Débutant | Google Machine Learning Crash Course, documentation des bibliothèques (scikit-learn, PyTorch) |
+| Intermédiaire | Cours pratiques (fast.ai), notebooks et projets personnels |
+| Confirmé | Documentation cloud ML (AWS, GCP, Azure) et exercices MLOps |
+| Avancé | NVIDIA Deep Learning Institute, papiers et reproductions |
 | Recherche / contribution | Publications, contributions open source, projets documentés |

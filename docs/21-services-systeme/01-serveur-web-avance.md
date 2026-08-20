@@ -16,7 +16,7 @@ cursus: "Services système"
 
 ## Prérequis
 
-- Savoir utiliser le terminal Linux (naviguer, editer des fichiers, gérer les permissions) - cursus [Unix/Bash](../epitech/02-unix-bash/index.md)
+- Savoir utiliser le terminal Linux (naviguer, editer des fichiers, gérer les permissions) - cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 - Connaitre les bases des protocoles réseau (TCP/IP, DNS, HTTP) - cursus [Réseaux](../20-reseaux/index.md)
 - Savoir utiliser Docker et Docker Compose - cursus [Docker](../01-docker/index.md)
 

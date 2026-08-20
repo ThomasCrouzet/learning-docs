@@ -18,7 +18,7 @@ cursus: "C#"
 
 - Avoir terminé la fiche **[07 - Collections et LINQ](07-collections-linq.md)**
 - Connaître les classes, l'héritage et les interfaces
-- Connaître les concepts d'exceptions du [cursus Java](../epitech/01-java/11-exceptions-java.md)
+- Connaître les concepts d'exceptions du [cursus Java](../fondamentaux/01-java/11-exceptions-java.md)
 
 ## Objectif de cette fiche
 

@@ -16,7 +16,7 @@ cursus: "UX Design"
 
 ## Prérequis
 
-- Avoir suivi le cursus [HTML / CSS](../epitech/04-html-css/index.md) pour connaître les bases de la structure web
+- Avoir suivi le cursus [HTML / CSS](../fondamentaux/04-html-css/index.md) pour connaître les bases de la structure web
 - Savoir ce qu'est une page web (HTML, CSS, liens entre pages)
 - Aucune connaissance préalable de l'UX n'est requise (tout est expliqué ci-dessous)
 

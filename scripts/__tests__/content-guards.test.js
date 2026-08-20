@@ -108,3 +108,33 @@ describe('content guards (shipped docs)', () => {
     );
   });
 });
+
+describe('course-focus branding (shipped scanner)', () => {
+  it('flags school and diploma tokens in sample text', () => {
+    const { scanText } = require('../lib/course-focus-branding.js');
+    const hits = scanText(
+      'Cursus Epitech\nTitre RNCP38114\nFrance Compétences\nETNA\nBC01\nmoulinette',
+      'sample.md'
+    );
+    const ids = hits.map((h) => h.id).sort();
+    expect(ids).toEqual(
+      ['bc-code', 'epitech', 'etna', 'france-competences', 'moulinette', 'rncp'].sort()
+    );
+  });
+
+  it('does not flag ordinary course vocabulary', () => {
+    const { scanText } = require('../lib/course-focus-branding.js');
+    const hits = scanText(
+      'Cursus Java, Git et Unix/Bash. Ce wiki n\'est pas une certification professionnelle.',
+      'sample.md'
+    );
+    expect(hits).toEqual([]);
+  });
+
+  it('scans the published wiki and reports zero school or diploma branding', () => {
+    const { scanCourseFocusBranding } = require('../lib/course-focus-branding.js');
+    const { hits, structural } = scanCourseFocusBranding(ROOT);
+    expect(structural).toEqual([]);
+    expect(hits).toEqual([]);
+  });
+});

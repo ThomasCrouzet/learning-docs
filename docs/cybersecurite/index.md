@@ -65,7 +65,7 @@ Pentest, exploitation, Active Directory et sécurité web avancée.
 | 02 | [Exploitation et Post-Exploitation](04-specialisation-offensive/02-exploitation-post-exploitation.md) | Metasploit, privesc, pivoting, persistence |
 | 03 | [Active Directory](04-specialisation-offensive/03-active-directory.md) | Kerberoasting, DCSync, BloodHound, mouvement latéral |
 | 04 | [Sécurité Web Avancée](04-specialisation-offensive/04-securite-web-avancee.md) | SSTI, request smuggling, fuzzing, OSWE |
-| 05 | [Certifications Offensives](04-specialisation-offensive/05-certifications-offensives.md) | OSCP, OSEP, OSWE, PNPT, CRTP |
+| 05 | [Parcours de pratique offensive](04-specialisation-offensive/05-parcours-pratique-offensive.md) | Labs, méthodologie, pentest avancé |
 
 ---
 
@@ -79,7 +79,7 @@ DFIR, analyse de malware, threat hunting et sécurité endpoint.
 | 02 | [Analyse de Malware](05-specialisation-defensive/02-analyse-malware.md) | Ghidra, sandbox, YARA, reverse engineering |
 | 03 | [Threat Hunting](05-specialisation-defensive/03-threat-hunting-intelligence.md) | MITRE ATT&CK, Diamond Model, MISP, TheHive |
 | 04 | [Sécurité Endpoint](05-specialisation-defensive/04-securite-endpoint.md) | EDR/XDR, Sysmon, SOAR, Wazuh, Velociraptor |
-| 05 | [Certifications Défensives](05-specialisation-defensive/05-certifications-defensives.md) | CySA+, BTL1, GCIH, GCFA, SC-200 |
+| 05 | [Parcours de pratique défensive](05-specialisation-defensive/05-parcours-pratique-defensive.md) | Labs DFIR, SOC, forensique |
 
 ---
 
@@ -130,7 +130,7 @@ Architecture, GRC avancée, recherche et tendances futures.
 | TryHackMe | Débutant → Intermédiaire | Parcours guidés, labs browser-based |
 | Hack The Box | Intermédiaire → Avancé | Machines réalistes, AD labs |
 | PortSwigger Academy | Tous niveaux | Web security (gratuit) |
-| Proving Grounds (OffSec) | Intermédiaire | Préparation OSCP |
+| Proving Grounds (OffSec) | Intermédiaire | Labs d'exploitation réalistes |
 | CryptoHack / Cryptopals | Tous niveaux | Cryptographie appliquée |
 | PentesterLab | Intermédiaire | Web + infrastructure |
 | LetsDefend | Débutant → Intermédiaire | SOC analyst training |
@@ -141,12 +141,14 @@ Architecture, GRC avancée, recherche et tendances futures.
 
 ---
 
-## Parcours Certifications Suggéré
+## Ressources de formation complémentaires
 
-| Niveau | Certifications |
-| ------ | -------------- |
-| Débutant | CompTIA Security+ → CompTIA Network+ |
-| Intermédiaire | CySA+ (blue) ou PenTest+ (red) |
-| Confirmé | OSCP+ (red) ou BTL1/GCIH (blue) |
-| Avancé | OSEP/OSWE (red) ou GCFA/GREM (blue) |
-| Expert | CISSP ou CISM (management) + spécialisation |
+Ces ressources sont des **repères de cours et de labs**, pas un titre délivré par ce wiki.
+
+| Niveau | Ressources |
+| ------ | ---------- |
+| Débutant | Cours réseaux et fondamentaux sécurité, labs guidés (TryHackMe) |
+| Intermédiaire | Labs pentest et SOC (Hack The Box, LetsDefend) |
+| Confirmé | Labs d'exploitation et DFIR plus longs |
+| Avancé | Recherche, bug bounty, exercices red team / blue team |
+| Expertise | Projets documentés, relecture par des pairs, pratique en conditions réelles |

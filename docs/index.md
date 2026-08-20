@@ -19,7 +19,7 @@ Chaque fiche suit le même format : concepts définis explicitement, étapes pra
 [Suivre un parcours guidé :material-routes:](parcours.md){ .md-button .md-button--primary }
 [Débuter de zéro :material-rocket-launch:](commencer/index.md){ .md-button }
 
-<p class="home-stats">604 fiches · 64 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
+<p class="home-stats">603 fiches · 64 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
 
 Date de référence éditoriale : août 2026. Le paquet Ansible communautaire enseigné est la série 14.x (ansible-core 2.21 ; PyPI 14.3.0 au 13 août 2026).
 
@@ -31,7 +31,7 @@ Date de référence éditoriale : août 2026. Le paquet Ansible communautaire en
 
 -   :material-routes:{ .home-intent__icon } **Tu veux un chemin tracé**
 
-    Suis un [parcours guidé](parcours.md) : un ordre de cursus pensé par objectif (web, DevOps, cybersécurité, IA, certification).
+    Suis un [parcours guidé](parcours.md) : un ordre de cursus pensé par objectif (web, DevOps, cybersécurité, IA).
 
 -   :material-rocket-launch:{ .home-intent__icon } **Tu débutes en programmation**
 
@@ -67,13 +67,13 @@ Choisis un domaine pour voir la liste de ses cursus.
 
     [:octicons-arrow-right-24: Voir les cursus](carte-cursus.md#infrastructure)
 
--   :fontawesome-brands-java:{ .lg .middle } **Cursus Epitech**
+-   :fontawesome-brands-java:{ .lg .middle } **Langages et fondamentaux**
 
     ---
 
     Langages et fondamentaux : Java, Unix/Bash, Git, HTML/CSS, Node.js et Rust.
 
-    [:octicons-arrow-right-24: Voir les cursus](carte-cursus.md#cursus-epitech)
+    [:octicons-arrow-right-24: Voir les cursus](carte-cursus.md#langages-et-fondamentaux)
 
 -   :material-shield-lock:{ .lg .middle } **Cybersécurité**
 
@@ -112,9 +112,9 @@ Choisis un domaine pour voir la liste de ses cursus.
 
 ---
 
-## Certification et aide-mémoires
+## Aide-mémoires et compétences métier
 
-- :material-certificate: **[Certification RNCP](00-blocs-competences/index.md)** : préparation autour du titre RNCP38114 (remplacé par RNCP42634 sur France Compétences ; échéance 18-10-2026).
+- :material-clipboard-text: **[Compétences métier](competences-metier/index.md)** : besoin utilisateur, pilotage de projet, cloud, développement, architecture SI.
 - :material-bookmark-outline: **[Aide-mémoires](fiches-reference/index.md)** : fiches de référence rapide pour réviser (Docker, Symfony, Git, PHP, JS, React, Kubernetes, Ansible).
 
 ---

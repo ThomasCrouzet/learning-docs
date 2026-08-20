@@ -17,7 +17,7 @@ cursus: "UX Design"
 ## Prérequis
 
 - Avoir lu la fiche [01 - Principes UX pour développeurs](01-principes-ux.md) pour connaître les bases de l'UX, les heuristiques de Nielsen et les personas
-- Avoir suivi le cursus [HTML / CSS](../epitech/04-html-css/index.md) pour comprendre les concepts de mise en page web (flexbox, grid)
+- Avoir suivi le cursus [HTML / CSS](../fondamentaux/04-html-css/index.md) pour comprendre les concepts de mise en page web (flexbox, grid)
 - Savoir ce qu'est un navigateur web et comment inspecter une page (F12)
 
 ## Objectif de cette fiche

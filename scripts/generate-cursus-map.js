@@ -88,17 +88,17 @@ for (const tabEntry of nav) {
 
     // Direct .md entries in the tab (e.g. aide-mémoires under Références).
     // Previously counted only when the tab had zero nested sections, which
-    // dropped docs/fiches-reference/* whenever "Certification" lived in the
-    // same tab (604 numbered on disk vs 586 on the carte). Always count
+    // dropped docs/fiches-reference/* whenever a nested section lived in the
+    // same tab as numbered aide-mémoires. Always count
     // numbered fiches (isFiche) among direct files.
     const directFiches = directFiles.filter((f) => isFiche(f.path));
     if (directFiches.length > 0) {
       const stats = computeStats(directFiches);
       const name =
-        cursusInTab.length === 0
-          ? tabName
-          : tabName === 'Références'
-            ? 'Aide-mémoires'
+        tabName === 'Références'
+          ? 'Aide-mémoires'
+          : cursusInTab.length === 0
+            ? tabName
             : `${tabName} (fiches directes)`;
       cursusInTab.push({
         name,

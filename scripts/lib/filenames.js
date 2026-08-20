@@ -15,9 +15,9 @@ const SPECIAL_FILES = [
   'politique-fraicheur.md',
 ];
 
-const DIR_PATTERN = /^(\d{2}-[a-z0-9-]+|fiches-reference|epitech|devops|ansible|thomas|commencer|stack-symfony|stylesheets|javascripts|overrides|ia|cybersecurite|faust|includes|fonts|crypto-monnaies|diagrams)$/;
+const DIR_PATTERN = /^(\d{2}-[a-z0-9-]+|fiches-reference|fondamentaux|competences-metier|devops|ansible|thomas|commencer|stack-symfony|stylesheets|javascripts|overrides|ia|cybersecurite|faust|includes|fonts|crypto-monnaies|diagrams)$/;
 
-const SPECIAL_DIRS = ['BC01', 'BC02', 'BC03', 'BC04', 'BC05', 'BC06', 'BC07', 'BC08'];
+const SPECIAL_DIRS = [];
 
 /**
  * Verifie si un nom de fichier Markdown est valide.
@@ -34,8 +34,11 @@ function isValidFilename(name) {
  * @returns {boolean}
  */
 function isValidDirname(name) {
-  const isSpecialDir = SPECIAL_DIRS.some(prefix => name.startsWith(prefix));
-  return DIR_PATTERN.test(name) || isSpecialDir;
+  if (SPECIAL_DIRS.length > 0) {
+    const isSpecialDir = SPECIAL_DIRS.some((prefix) => prefix && name.startsWith(prefix));
+    if (isSpecialDir) return true;
+  }
+  return DIR_PATTERN.test(name);
 }
 
 module.exports = { FILE_PATTERN, SPECIAL_FILES, DIR_PATTERN, SPECIAL_DIRS, isValidFilename, isValidDirname };

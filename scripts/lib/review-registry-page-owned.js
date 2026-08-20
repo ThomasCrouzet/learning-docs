@@ -134,7 +134,7 @@ function extractPageOwnedFields(rel, content, extras = {}) {
     }
   }
   const dated = body.match(
-    /\b(?:20[2-3][0-9][-/][0-1][0-9][-/][0-3][0-9]|RNCP\d{5}|RFC\s?\d{3,5}|EOL|LTS|fin de support)\b/gi
+    /\b(?:20[2-3][0-9][-/][0-1][0-9][-/][0-3][0-9]|RFC\s?\d{3,5}|EOL|LTS|fin de support)\b/gi
   );
   if (dated) {
     for (const d of [...new Set(dated)].slice(0, 5)) {

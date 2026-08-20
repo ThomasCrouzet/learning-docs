@@ -996,7 +996,7 @@ Réalise les tâches suivantes :
 | ----- | ------ |
 | Finalité | Gestion RH et paie |
 | Base légale | Obligation légale (Art. 6.1.c) |
-| Données | Identité, coordonnées, n° SS, RIB, contrat, diplômes |
+| Données | Identité, coordonnées, n° SS, RIB, contrat, niveau d'études |
 | Durée | 5 ans après le départ |
 | Mesures | Accès restreint au service RH, chiffrement |
 

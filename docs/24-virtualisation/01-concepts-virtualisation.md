@@ -16,7 +16,7 @@ cursus: "Virtualisation"
 
 ## Prérequis
 
-- Connaitre les bases de l'administration système Linux (commandes, système de fichiers, processus) - cursus [Unix/Bash](../epitech/02-unix-bash/index.md)
+- Connaitre les bases de l'administration système Linux (commandes, système de fichiers, processus) - cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 - Comprendre les bases des réseaux (IP, ports, protocoles) - cursus [Réseaux](../20-reseaux/index.md)
 
 ## Objectif de cette fiche

@@ -18,7 +18,7 @@ cursus: "Podman"
 ## Prérequis
 
 - Fiche **[02 - Gérer les Images et les Conteneurs](02-images-conteneurs.md)** (`02-images-conteneurs.md`)
-- Fiche **[BC03 - 05 - Les Bases de Kubernetes](../../00-blocs-competences/BC03-cloud-computing/05-kubernetes-bases.md)** pour le concept de Pod Kubernetes
+- Fiche **[05 - Les Bases de Kubernetes](../../competences-metier/03-cloud-computing/05-kubernetes-bases.md)** pour le concept de Pod Kubernetes
 - Savoir utiliser le terminal (ligne de commande)
 
 ## Versions utilisées dans cette fiche

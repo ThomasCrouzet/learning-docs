@@ -17,7 +17,7 @@ cursus: "OpenShift"
 
 ## Prérequis
 
-- Fiche **[BC03 - 05 - Les Bases de Kubernetes](../../00-blocs-competences/BC03-cloud-computing/05-kubernetes-bases.md)**
+- Fiche **[05 - Les Bases de Kubernetes](../../competences-metier/03-cloud-computing/05-kubernetes-bases.md)**
 - Fiche **[01 - Introduction à Podman](../01-podman/01-introduction-podman.md)**
 - Connaître les concepts de base de Kubernetes : Pod, Service, Deployment, Namespace
 - Aucune connaissance préalable d'OpenShift n'est requise (tout est expliqué ci-dessous)

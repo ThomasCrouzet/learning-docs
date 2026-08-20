@@ -16,19 +16,19 @@ const TECH_TAGS = [
   { pattern: /02-php/, tag: 'PHP' },
   { pattern: /03-symfony/, tag: 'Symfony' },
   { pattern: /04-postgresql/, tag: 'PostgreSQL' },
-  { pattern: /epitech\/01-java/, tag: 'Java' },
-  { pattern: /epitech\/02-unix-bash/, tag: 'Unix/Bash' },
-  { pattern: /epitech\/03-git/, tag: 'Git' },
-  { pattern: /epitech\/04-html-css/, tag: 'HTML/CSS' },
-  { pattern: /epitech\/05-javascript/, tag: 'JavaScript' },
-  { pattern: /epitech\/07-nodejs/, tag: 'Node.js' },
-  { pattern: /epitech\/08-rust/, tag: 'Rust' },
-  { pattern: /epitech\/06-projets/, tag: 'Projet' },
+  { pattern: /fondamentaux\/01-java/, tag: 'Java' },
+  { pattern: /fondamentaux\/02-unix-bash/, tag: 'Unix/Bash' },
+  { pattern: /fondamentaux\/03-git/, tag: 'Git' },
+  { pattern: /fondamentaux\/04-html-css/, tag: 'HTML/CSS' },
+  { pattern: /fondamentaux\/05-javascript/, tag: 'JavaScript' },
+  { pattern: /fondamentaux\/07-nodejs/, tag: 'Node.js' },
+  { pattern: /fondamentaux\/08-rust/, tag: 'Rust' },
+  { pattern: /fondamentaux\/06-projets/, tag: 'Projet' },
   { pattern: /devops\/01-podman/, tag: 'Podman' },
   { pattern: /devops\/02-openshift/, tag: 'OpenShift' },
   { pattern: /ansible\/01-ansible/, tag: 'Ansible' },
   { pattern: /00-outils-ia/, tag: 'Outils IA' },
-  { pattern: /00-blocs-competences/, tag: 'Certification' },
+  { pattern: /competences-metier/, tag: 'Méthodologie' },
   { pattern: /fiches-reference/, tag: 'Référence' },
 ];
 
@@ -49,7 +49,7 @@ function getTypeTag(filepath) {
   if (lower.includes('aide-memoire') || lower.includes('guide-debug') || lower.includes('fiches-reference')) {
     return 'Référence';
   }
-  if (lower.includes('projet') || lower.includes('popeye') || lower.includes('jeu-2d')) {
+  if (lower.includes('projet') || lower.includes('application-multi-conteneurs') || lower.includes('jeu-2d')) {
     return 'Projet';
   }
   if (lower.includes('introduction') || lower.includes('concepts') || lower.includes('architecture') || lower.includes('presentation')) {

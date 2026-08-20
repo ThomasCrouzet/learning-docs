@@ -811,4 +811,4 @@ curl -s "https://shop.example.com/search?q={{config.items()}}"
 
 ← Fiche précédente : **[03 - Active Directory - Attaque et Sécurisation](03-active-directory.md)**
 
-→ Fiche suivante : **[05 - Certifications Offensives - Guide et Préparation](05-certifications-offensives.md)**
+→ Fiche suivante : **[05 - Parcours de pratique offensive](05-parcours-pratique-offensive.md)**

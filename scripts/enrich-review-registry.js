@@ -66,9 +66,9 @@ function lotOf(rel) {
     rel.startsWith('19-langage-c') ||
     rel.startsWith('20-reseaux') ||
     rel.startsWith('21-services-systeme') ||
-    rel.startsWith('epitech')
+    rel.startsWith('fondamentaux')
   )
-    return 'systems-epitech';
+    return 'systems-langages';
   if (
     rel.startsWith('15-python') ||
     rel.startsWith('16-python-data') ||
@@ -84,7 +84,7 @@ function lotOf(rel) {
     rel.startsWith('26-droit') ||
     rel.startsWith('27-ux') ||
     rel.startsWith('25-gestion') ||
-    rel.startsWith('00-blocs') ||
+    rel.startsWith('competences-metier') ||
     rel.startsWith('fiches-reference') ||
     rel.startsWith('commencer')
   )

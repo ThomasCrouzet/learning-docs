@@ -482,7 +482,7 @@ $etudiant = [
     "nom" => "Martin",
     "age" => 23,
     "ville" => "Lyon",
-    "ecole" => "Epitech"
+    "formation" => "informatique"
 ];
 
 echo "<h1>Fiche étudiant</h1>";
@@ -492,7 +492,7 @@ echo "<p><strong>Prénom :</strong> " . $etudiant["prenom"] . "</p>";
 echo "<p><strong>Nom :</strong> " . $etudiant["nom"] . "</p>";
 echo "<p><strong>Âge :</strong> " . $etudiant["age"] . " ans</p>";
 echo "<p><strong>Ville :</strong> " . $etudiant["ville"] . "</p>";
-echo "<p><strong>École :</strong> " . $etudiant["ecole"] . "</p>";
+echo "<p><strong>Formation :</strong> " . $etudiant["formation"] . "</p>";
 ```
 
 **Résultat attendu** :
@@ -504,7 +504,7 @@ Prénom : Clara
 Nom : Martin
 Âge : 23 ans
 Ville : Lyon
-École : Epitech
+Formation : informatique
 ```
 
 ---
@@ -520,7 +520,7 @@ $etudiant = [
     "nom" => "Martin",
     "age" => 23,
     "ville" => "Lyon",
-    "ecole" => "Epitech"
+    "formation" => "informatique"
 ];
 
 echo "<h1>Fiche étudiant (avec foreach)</h1>";

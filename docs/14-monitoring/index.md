@@ -31,7 +31,7 @@ description: "Cursus Monitoring et Observabilité : superviser des applications 
 ## Prérequis
 
 - Cursus Docker (`01-docker/`)
-- Cursus Unix/Bash Epitech (`epitech/02-unix-bash/`)
+- Cursus Unix/Bash (`fondamentaux/02-unix-bash/`)
 - Cursus Symfony (`03-symfony/`, recommandé)
 
 ## Durée totale estimée
