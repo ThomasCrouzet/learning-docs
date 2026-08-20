@@ -913,7 +913,7 @@ Le module `template` cherche le fichier source dans cet ordre :
 | `regex_replace(p, r)` | Remplacement regex | `{{ text \| regex_replace('[0-9]+', '') }}` |
 | `bool` | Conversion booléen | `{{ val \| bool }}` |
 | `mandatory` | Erreur si non défini | `{{ db_host \| mandatory }}` |
-| `ipaddr` | Validation IP | `{{ ip \| ipaddr }}` |
+| `ansible.utils.ipaddr` | Validation IP (collection `ansible.utils`, pas un filtre Jinja2 de base) | `{{ ip \| ansible.utils.ipaddr }}` |
 
 ### Commandes Ansible utiles pour les templates
 
