@@ -145,7 +145,7 @@ Crée le fichier `backend/composer.json` :
         "symfony/runtime": "^7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.0",
+        "phpunit/phpunit": "^12.0",
         "friendsofphp/php-cs-fixer": "^3.0"
     },
     "autoload": {
@@ -524,7 +524,7 @@ jobs:
         working-directory: backend
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP 8.3
         uses: shivammathur/setup-php@v2
@@ -533,7 +533,7 @@ jobs:
           tools: composer:v2, php-cs-fixer
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: backend/vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('backend/composer.lock') }}
@@ -557,7 +557,7 @@ jobs:
         working-directory: backend
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP 8.3
         uses: shivammathur/setup-php@v2
@@ -567,7 +567,7 @@ jobs:
           coverage: xdebug
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: backend/vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('backend/composer.lock') }}
@@ -591,10 +591,10 @@ jobs:
         working-directory: frontend
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -618,10 +618,10 @@ jobs:
         working-directory: frontend
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -649,7 +649,7 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Se connecter au registry GitHub Container Registry
       - name: Se connecter à GHCR
@@ -757,7 +757,7 @@ jobs:
       url: https://staging.mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Préparer le déploiement
         run: |
@@ -811,7 +811,7 @@ jobs:
       url: https://mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Préparer le déploiement blue-green
         run: |
@@ -1386,7 +1386,7 @@ Job `security-audit` à ajouter dans `.github/workflows/ci.yml` :
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Audit des dépendances PHP
       - name: Installer PHP 8.3
@@ -1404,7 +1404,7 @@ Job `security-audit` à ajouter dans `.github/workflows/ci.yml` :
 
       # Audit des dépendances JavaScript
       - name: Installer Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -1430,10 +1430,10 @@ Job `lighthouse` (simulé) à ajouter dans `.github/workflows/ci.yml` :
     needs: lint-frontend
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"

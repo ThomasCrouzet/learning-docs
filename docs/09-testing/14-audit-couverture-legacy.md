@@ -270,7 +270,7 @@ XDEBUG_MODE=coverage php bin/phpunit --coverage-html var/coverage
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 Runtime:       PHP 8.3.x with Xdebug 3.x.x
 Configuration: /var/www/html/phpunit.dist.xml
@@ -428,7 +428,7 @@ final class LabelFormatterCharacterizationTest extends TestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 ...                                                                 3 / 3 (100%)
 
@@ -754,7 +754,7 @@ final class PriceFormatterCharacterizationTest extends TestCase
 Résultat de l'exécution :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 .....                                                               5 / 5 (100%)
 

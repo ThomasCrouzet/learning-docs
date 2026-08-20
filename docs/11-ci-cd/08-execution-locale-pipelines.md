@@ -32,7 +32,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Pourquoi exécuter les pipelines localement ?
 
-**Définition** : L'exécution locale consiste à lancer les pipelines CI/CD sur ton propre ordinateur, sans pousser le code vers GitHub ou GitLab. Les outils `act` et `gitlab-runner exec` simulent l'environnement CI en utilisant Docker.
+**Définition** : L'exécution locale consiste à lancer les pipelines CI/CD sur ton propre ordinateur, sans pousser le code vers GitHub ou GitLab. `act` simule GitHub Actions via Docker. Pour GitLab CI, `gitlab-runner exec` **n'existe plus** depuis Runner 16+ : utilise `gitlab-ci-local` ou un runner local.
 
 **Le problème que l'exécution locale résout** :
 
@@ -668,7 +668,7 @@ jobs:
     steps:
       # Récupérer le code
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Vérifier le Markdown (vérification simple avec grep)
       - name: Vérifier le Markdown

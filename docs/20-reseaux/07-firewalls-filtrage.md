@@ -346,8 +346,10 @@ table inet filter {
         # Autorise le loopback
         iifname lo accept
 
-        # Autorise le ping
+        # Ping IPv4. La famille inet couvre aussi IPv6 :
+        # sans icmpv6 (nd-ns / nd-na), le NDP casse.
         icmp type echo-request accept
+        icmpv6 type { nd-ns, nd-na, nd-router-advert, echo-request } accept
 
         # Autorise SSH, HTTP, HTTPS
         tcp dport { 22, 80, 443 } accept
@@ -386,6 +388,7 @@ table inet filter {
         ct state established,related accept
         iifname "lo" accept
         icmp type echo-request accept
+        icmpv6 type { nd-ns, nd-na, nd-router-advert, echo-request } accept
         tcp dport { 22, 80, 443 } accept
         log prefix "nftables-drop: " drop
     }

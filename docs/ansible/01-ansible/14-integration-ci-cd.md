@@ -1036,7 +1036,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout du code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -1062,7 +1062,7 @@ jobs:
     needs: lint
     steps:
       - name: Checkout du code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -1087,7 +1087,7 @@ jobs:
     environment: staging
     steps:
       - name: Checkout du code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer Python et Ansible
         uses: actions/setup-python@v5
@@ -1135,7 +1135,7 @@ jobs:
     environment: production
     steps:
       - name: Checkout du code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer Python et Ansible
         uses: actions/setup-python@v5

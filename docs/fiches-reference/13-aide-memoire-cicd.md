@@ -31,8 +31,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -69,11 +69,11 @@ on:
 
 | Action | Usage |
 | ------ | ----- |
-| `actions/checkout@v4` | Récupérer le code |
-| `actions/setup-node@v4` | Installer Node.js |
+| `actions/checkout@v5` | Récupérer le code |
+| `actions/setup-node@v5` | Installer Node.js |
 | `shivammathur/setup-php@v2` | Installer PHP |
-| `actions/cache@v4` | Mettre en cache des fichiers |
-| `actions/upload-artifact@v4` | Sauvegarder des artefacts |
+| `actions/cache@v5` | Mettre en cache des fichiers |
+| `actions/upload-artifact@v5` | Sauvegarder des artefacts |
 | `actions/download-artifact@v4` | Récupérer des artefacts |
 | `docker/build-push-action@v6` | Build et push image Docker |
 | `docker/login-action@v3` | Connexion au registry Docker |
@@ -83,7 +83,7 @@ on:
 ## Cache
 
 ```yaml
-- uses: actions/cache@v4
+- uses: actions/cache@v5
   with:
     path: vendor
     key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
@@ -249,7 +249,7 @@ test-integration:
 
 | Piège | Solution |
 | ----- | -------- |
-| Oublier `actions/checkout@v4` | Toujours en premier step |
+| Oublier `actions/checkout@v5` | Toujours en premier step |
 | Indentation YAML incorrecte | 2 espaces par niveau, jamais de tabs |
 | `npm install` en CI | Utiliser `npm ci` (plus fiable avec le lockfile) |
 | `composer install` sans `--no-interaction` | Le pipeline bloque en attente d'input |

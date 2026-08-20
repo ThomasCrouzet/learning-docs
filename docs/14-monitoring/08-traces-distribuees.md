@@ -25,7 +25,7 @@ cursus: "Monitoring et Observabilité"
 
 | Technologie | Version |
 | --- | --- |
-| Grafana Tempo | 2.5.x |
+| Grafana Tempo | 3.0.x |
 | OpenTelemetry PHP | 1.x |
 | PHP | 8.3 |
 | Symfony | 7.4 |
@@ -211,7 +211,7 @@ mkdir -p ~/monitoring-cursus/tracing
 services:
   # Grafana Tempo : stockage des traces
   tempo:
-    image: grafana/tempo:2.5.0
+    image: grafana/tempo:3.0.0
     ports:
       # gRPC pour la réception des traces
       - "4317:4317"
@@ -567,7 +567,7 @@ Chaque span affiche sa durée. Tu vois immédiatement que la base de données pr
 cd ~/monitoring-cursus/tracing && docker compose down
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Tempo, Grafana). Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement les traces et configurations stockées dans les volumes.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Tempo, Grafana). Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement les traces et configurations stockées dans les volumes.
 
 ---
 

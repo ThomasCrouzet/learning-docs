@@ -572,7 +572,7 @@ spec:
   serviceAccountName: app-sa
   containers:
     - name: kubectl
-      image: bitnami/kubectl:1.31
+      image: bitnami/kubectl:1.34
       command: ["sh", "-c", "kubectl get pods -n dev && echo '---' && kubectl get nodes && sleep 3600"]
 ```
 
@@ -593,7 +593,7 @@ webapp-xxxxxxxxxx-xxxxx   1/1     Running   0          20m
 webapp-xxxxxxxxxx-xxxxx   1/1     Running   0          20m
 ---
 NAME       STATUS   ROLES           AGE   VERSION
-minikube   Ready    control-plane   2h    v1.31.x
+minikube   Ready    control-plane   2h    v1.34.x
 ```
 
 ---

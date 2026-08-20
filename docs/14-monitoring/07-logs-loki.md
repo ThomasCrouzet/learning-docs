@@ -506,7 +506,7 @@ Ce panel affiche les lignes de logs en erreur en temps réel.
 cd ~/monitoring-cursus/loki-logs && docker compose down
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Loki, Grafana). Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement les logs stockés dans Loki.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Loki, Grafana). Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement les logs stockés dans Loki.
 
 ---
 

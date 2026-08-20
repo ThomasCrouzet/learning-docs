@@ -231,7 +231,7 @@ Sans Webpack Encore :
 | Webpack Encore + `import` | Moyenne | Projet structuré avec plusieurs fichiers JS |
 | Stimulus (Symfony UX) | Moyenne | Interactivité déclarative, composants réutilisables |
 
-**Règle** : Pour un projet Symfony en production, la combinaison recommandée est Webpack Encore + Stimulus. Pour cette fiche d'introduction, on commence par les bases (scripts inline et fichiers externes).
+**Règle** : Pour un projet Symfony 7.4 en production, le défaut officiel est **AssetMapper** (fiche 07). Webpack Encore reste pertinent quand un bundler (npm, JSX, code splitting) est nécessaire (fiche 02). Pour cette fiche d'introduction, on commence par les bases (scripts inline et fichiers externes).
 
 ---
 

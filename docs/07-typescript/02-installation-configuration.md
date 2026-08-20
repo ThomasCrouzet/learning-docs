@@ -129,7 +129,7 @@ v22.x.x
 10.x.x
 ```
 
-Les numéros exacts peuvent varier, mais Node.js doit être en version 22 LTS (ou au minimum 20).
+Les numéros exacts peuvent varier, mais Node.js doit être en version **22 LTS**. Node.js 20 (Iron) est en fin de support depuis mars 2026 : ne l'utilise pas comme minimum pour ce cursus.
 
 ---
 
@@ -212,17 +212,12 @@ npx tsc --init
 **Résultat attendu** :
 
 ```text
-Created a new tsconfig.json with:
-
-  target: es2016
-  module: commonjs
-  strict: true
-  esModuleInterop: true
-  skipLibCheck: true
-  forceConsistentCasingInFileNames: true
+Created a new tsconfig.json
 ```
 
-Le fichier généré contient de nombreuses options commentées. Remplace son contenu par cette configuration simplifiée et commentée :
+La liste exacte des options affichée par `tsc --init` change selon la version de TypeScript. TypeScript 6/7 active notamment `strict` par défaut, `module` à `esnext`, et un `target` proche de l'ES stable courant. `moduleResolution: node` / `node10` n'est plus accepté. Ne recopie pas un ancien bandeau `target: es2016` / `module: commonjs` comme sortie actuelle.
+
+Le fichier généré contient de nombreuses options. Remplace son contenu par cette configuration simplifiée et commentée, volontairement plus simple que les défauts 6/7 (CommonJS pédagogique pour débuter) :
 
 ```json
 {
@@ -472,7 +467,9 @@ Alice a 25 ans et habite à Lyon.
 
 ### Étape 10 : Installer et utiliser `ts-node`
 
-Installe `ts-node` pour exécuter directement du TypeScript :
+Depuis Node.js 22.18, `node fichier.ts` exécute le TypeScript **effaçable** (sans enum, namespace runtime, ni propriétés de constructeur). Pour le TypeScript complet, Node documente `tsx`. `ts-node` reste un runner communautaire, utile à connaître, plus le chemin officiel.
+
+Installe `tsx` (recommandé) ; `ts-node` est optionnel :
 
 ```bash
 # Installe ts-node comme dépendance de développement

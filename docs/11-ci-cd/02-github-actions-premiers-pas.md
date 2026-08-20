@@ -181,7 +181,7 @@ jobs:
     # Exécuter sur une machine Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: npm run lint
 
   # Deuxième job : exécuter les tests
@@ -191,7 +191,7 @@ jobs:
     # Ce job attend que le job "lint" soit terminé avec succès
     needs: lint
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: npm test
 ```
 
@@ -206,7 +206,7 @@ jobs:
 | Type | Mot-clé | Exemple |
 | --- | --- | --- |
 | Commande shell | `run` | `run: echo "Hello"` |
-| Action réutilisable | `uses` | `uses: actions/checkout@v4` |
+| Action réutilisable | `uses` | `uses: actions/checkout@v5` |
 
 ---
 
@@ -218,12 +218,12 @@ jobs:
 
 | Action | Rôle |
 | --- | --- |
-| `actions/checkout@v4` | Récupère le code du dépôt dans le runner |
-| `actions/setup-node@v4` | Installe Node.js sur le runner |
+| `actions/checkout@v5` | Récupère le code du dépôt dans le runner (v4 n'est plus le major courant ; ce dépôt CI utilise v7) |
+| `actions/setup-node@v5` | Installe Node.js sur le runner |
 | `actions/setup-java@v4` | Installe Java sur le runner |
 | `shivammathur/setup-php@v2` | Installe PHP sur le runner |
-| `actions/cache@v4` | Met en cache des fichiers entre les exécutions |
-| `actions/upload-artifact@v4` | Sauvegarde des fichiers produits par le pipeline |
+| `actions/cache@v5` | Met en cache des fichiers entre les exécutions |
+| `actions/upload-artifact@v5` | Sauvegarde des fichiers produits par le pipeline |
 
 **Syntaxe YAML** :
 
@@ -231,11 +231,11 @@ jobs:
 steps:
   # Utiliser une action avec le mot-clé "uses"
   - name: Récupérer le code
-    uses: actions/checkout@v4
+    uses: actions/checkout@v5
 
   # Utiliser une action avec des paramètres (mot-clé "with")
   - name: Installer Node.js 22
-    uses: actions/setup-node@v4
+    uses: actions/setup-node@v5
     with:
       node-version: "22"
 
@@ -267,7 +267,7 @@ steps:
 **Ce qu'un runner n'est PAS** :
 
 - Un runner n'est pas un serveur permanent. Il est créé pour un job et détruit après. Chaque job commence sur une machine propre.
-- Un runner n'est pas ton ordinateur. Le code n'est pas présent sur le runner par défaut. Tu dois utiliser `actions/checkout@v4` pour le récupérer.
+- Un runner n'est pas ton ordinateur. Le code n'est pas présent sur le runner par défaut. Tu dois utiliser `actions/checkout@v5` pour le récupérer.
 
 ---
 
@@ -494,12 +494,12 @@ jobs:
       # Étape 1 : récupérer le code du dépôt
       # Sans cette étape, le runner ne contient PAS ton code
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Étape 2 : installer Node.js via une action du marketplace
       # Le paramètre "with" permet de configurer l'action
       - name: Installer Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           # Installe Node.js version 22 LTS (référence du cursus)
           node-version: "22"
@@ -662,14 +662,14 @@ Le workflow affiche :
 
 ### Piège 1 : Oublier `actions/checkout`
 
-⚠️ **Problème** : Tu écris un workflow qui compile du code, mais tu oublies l'étape `actions/checkout@v4`. Le runner ne contient pas ton code. Le build échoue avec "fichier introuvable".
+⚠️ **Problème** : Tu écris un workflow qui compile du code, mais tu oublies l'étape `actions/checkout@v5`. Le runner ne contient pas ton code. Le build échoue avec "fichier introuvable".
 
-✅ **Solution** : Ajoute toujours `actions/checkout@v4` comme première étape si ton workflow a besoin du code du dépôt.
+✅ **Solution** : Ajoute toujours `actions/checkout@v5` comme première étape si ton workflow a besoin du code du dépôt.
 
 ```yaml
 steps:
   # Toujours en premier si tu as besoin du code
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v5
   # Ensuite les autres étapes
   - run: npm install
 ```
@@ -742,14 +742,14 @@ git branch
 1. Se déclenche sur push vers `main` et sur `pull_request` vers `main`
 2. Contient deux jobs :
    - `info` : affiche le nom du dépôt, la branche, et l'événement déclencheur
-   - `check` : récupère le code avec `actions/checkout@v4`, puis affiche la liste des fichiers. Ce job doit attendre la fin du job `info`.
+   - `check` : récupère le code avec `actions/checkout@v5`, puis affiche la liste des fichiers. Ce job doit attendre la fin du job `info`.
 
 **Indications** :
 
 - Utilise `ubuntu-latest` comme runner
 - Utilise les variables `${{ github.xxx }}` pour les informations
 - Utilise `needs` pour créer la dépendance entre les jobs
-- N'oublie pas `actions/checkout@v4` avant de lister les fichiers
+- N'oublie pas `actions/checkout@v5` avant de lister les fichiers
 
 **Résultat attendu** : Le workflow s'exécute en deux étapes : d'abord `info`, puis `check`. Le job `info` affiche 3 informations. Le job `check` affiche la liste des fichiers du dépôt.
 
@@ -795,7 +795,7 @@ jobs:
     steps:
       # Récupère le code du dépôt
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Liste les fichiers
       - name: Lister les fichiers
@@ -808,7 +808,7 @@ jobs:
 
 - `on.push.branches` et `on.pull_request.branches` : deux événements qui déclenchent le même workflow
 - `needs: info` : le job `check` attend la fin du job `info`
-- `actions/checkout@v4` : récupère le code avant de pouvoir le lister
+- `actions/checkout@v5` : récupère le code avant de pouvoir le lister
 - `ls -la` : affiche tous les fichiers, y compris les fichiers cachés
 
 ---

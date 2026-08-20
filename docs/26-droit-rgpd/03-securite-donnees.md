@@ -194,7 +194,7 @@ Sans journalisation, voici les problèmes rencontrés :
 | Action | Délai | Destinataire |
 | ------ | ----- | ------------ |
 | Documentation interne | Immédiat | Registre interne des violations |
-| Notification à la CNIL | 72 heures maximum | CNIL (via téléservice en ligne) |
+| Notification à la CNIL | 72 heures **si la violation est susceptible d'engendrer un risque** (art. 33) | CNIL (via téléservice en ligne) |
 | Notification aux personnes | Dans les meilleurs délais | Personnes concernées (si risque élevé) |
 
 ---
@@ -615,7 +615,7 @@ PROCÉDURE DE NOTIFICATION DE VIOLATION DE DONNÉES
 
 ⚠️ **Problème** : L'équipe technique corrige la faille en silence sans notifier la CNIL, pensant que le problème est résolu.
 
-✅ **Solution** : La notification est obligatoire même si la faille est corrigée. Le délai de 72 heures court à partir de la prise de connaissance de la violation, pas de sa résolution. Ne pas notifier peut entraîner des sanctions supplémentaires.
+✅ **Solution** : L'article 33 n'oblige la notification à la CNIL que si la violation est **susceptible d'engendrer un risque** pour les personnes. Corriger la faille n'annule pas cette obligation lorsqu'elle existe. Le délai de 72 heures court à partir de la prise de connaissance, pas de la résolution. Documente toujours l'incident (art. 33.5), même sans notification.
 
 ---
 

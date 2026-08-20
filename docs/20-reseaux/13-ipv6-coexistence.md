@@ -46,7 +46,7 @@ Sans IPv6, voici les problèmes rencontrés :
 | Problème | Solution apportée par IPv6 |
 | --- | --- |
 | Épuisement IPv4 | 2^128 adresses (~3,4 × 10^38) - assez pour attribuer une adresse publique à chaque objet sur Terre |
-| Complexité du NAT | Chaque appareil peut avoir une adresse publique unique - le NAT devient inutile |
+| Complexité du NAT | Chaque appareil peut avoir une adresse publique unique. Le NAT n'est plus **nécessaire** pour économiser de l'IPv4, mais le NPTv6 / NAT66 existe encore dans certains déploiements. |
 | Absence d'auto-configuration | SLAAC (Stateless Address Autoconfiguration) permet à une machine de générer sa propre adresse sans serveur |
 
 **Analogie concrète** : IPv4 c'est comme un immeuble avec 4,3 milliards d'appartements - tous occupés. IPv6 c'est comme construire un nouvel immeuble avec 340 milliards de milliards de milliards de milliards d'appartements. Il n'y a plus besoin de faire partager un même appartement à plusieurs familles (NAT).

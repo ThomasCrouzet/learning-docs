@@ -36,7 +36,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce que le Privacy by Design ?
 
-**Définition** : Le Privacy by Design (protection des données dès la conception) est un principe du RGPD (article 25) qui impose de prendre en compte la protection des données personnelles dès la phase de conception d'un système, et non après coup.
+**Définition** : Le Privacy by Design est un cadre de 7 principes formulé par Ann Cavoukian. L'**article 25** du RGPD impose la protection des données dès la conception et par défaut. Il ne recopie pas la liste des 7 principes : ne les attribue pas à l'article 25.
 
 **Le problème que le Privacy by Design résout** :
 

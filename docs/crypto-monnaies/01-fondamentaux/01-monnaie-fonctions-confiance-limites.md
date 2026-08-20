@@ -224,7 +224,7 @@ Les limites listées ci-dessous sont des faits observables. Elles existent indé
 
 #### Limite 3 : exclusion bancaire
 
-**Fait** : Selon la Banque mondiale (Global Findex 2021), environ 1,4 milliard d'adultes dans le monde n'ont pas de compte bancaire. Ils ne peuvent pas recevoir de virements, épargner de manière sécurisée ni accéder au crédit formel.
+**Fait** : Selon la Banque mondiale (Global Findex **2021**), environ 1,4 milliard d'adultes n'avaient pas de compte bancaire. Le Findex **2025** actualise ce stock : cite toujours le millésime, ne présente pas 1,4 milliard comme un chiffre 2026.
 
 **Causes principales** :
 

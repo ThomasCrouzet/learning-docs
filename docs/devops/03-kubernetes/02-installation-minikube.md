@@ -205,7 +205,7 @@ kubectl version --client
 **Résultat attendu** :
 
 ```text
-Client Version: v1.31.x
+Client Version: v1.34.x
 Kustomize Version: v5.x.x
 ```
 
@@ -268,7 +268,7 @@ minikube start --driver=docker --cpus=2 --memory=4096
 👍  Starting "minikube" primary control-plane node in "minikube" cluster
 🚜  Pulling base image v0.0.45 ...
 🔥  Creating docker container (CPUs=2, Memory=4096MB) ...
-🐳  Preparing Kubernetes v1.31.x on Docker 27.x.x ...
+🐳  Preparing Kubernetes v1.34.x on Docker 27.x.x ...
     ▪ Generating certificates and keys ...
     ▪ Booting up control plane ...
     ▪ Configuring RBAC rules ...
@@ -308,7 +308,7 @@ kubectl get nodes
 
 ```text
 NAME       STATUS   ROLES           AGE   VERSION
-minikube   Ready    control-plane   2m    v1.31.x
+minikube   Ready    control-plane   2m    v1.34.x
 ```
 
 Tu vois un seul node appelé `minikube` avec le rôle `control-plane`. Ce node joue à la fois le rôle de control plane et de worker node.

@@ -593,7 +593,7 @@ final class OrderNotifierStubTest extends TestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 .                                                                   1 / 1 (100%)
 
@@ -709,7 +709,7 @@ final class OrderNotifierCallCountTest extends TestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 ....                                                                4 / 4 (100%)
 
@@ -801,7 +801,7 @@ final class OrderNotifierArgumentsTest extends TestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 ..                                                                  2 / 2 (100%)
 
@@ -928,7 +928,7 @@ final class UserRegistrationTest extends TestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 ...                                                                 3 / 3 (100%)
 
@@ -1276,7 +1276,7 @@ final class OrderProcessorTest extends TestCase
 **Résultat attendu de l'exécution** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 ..                                                                  2 / 2 (100%)
 

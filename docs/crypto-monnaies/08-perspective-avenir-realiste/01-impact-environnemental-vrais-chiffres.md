@@ -72,7 +72,7 @@ Le Proof of Work repose sur un principe delibere : gaspiller de l'énergie pour 
 | --- | --- |
 | Bitcoin | 100-150 TWh |
 | Extraction d'or | 130-240 TWh |
-| Data centers mondiaux | 200-250 TWh |
+| Data centers mondiaux | ~415 TWh (IEA 2024) ; ~460-500 TWh en 2025-2026 selon Electricity 2025/2026 |
 | Climatisation USA | ~500 TWh |
 | Consommation électrique mondiale | ~28 000 TWh |
 

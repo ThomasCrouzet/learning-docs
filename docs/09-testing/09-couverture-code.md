@@ -270,7 +270,7 @@ Lance les tests avec le rapport de couverture en mode texte :
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x.x by Sebastian Bergmann and contributors.
 
 ........                                                            8 / 8 (100%)
 

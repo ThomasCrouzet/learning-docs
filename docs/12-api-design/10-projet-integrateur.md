@@ -58,7 +58,7 @@ Author (1) ───── (N) Book (1) ───── (N) Review
 | Filtres | Recherche par titre, auteur, genre, année |
 | Tri | Par titre, année de publication, note moyenne |
 | Documentation | OpenAPI 3.1 générée automatiquement via API Platform |
-| Erreurs | Format RFC 7807 (Problem Details) |
+| Erreurs | RFC 9457 Problem Details (successeur de RFC 7807) |
 | Tests | Tests fonctionnels pour chaque endpoint |
 
 ---
@@ -985,7 +985,7 @@ php bin/phpunit tests/Api/BookTest.php
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x
+PHPUnit 12.x
 
 .......                                                            7 / 7 (100%)
 

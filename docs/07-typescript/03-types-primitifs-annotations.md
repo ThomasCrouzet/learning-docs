@@ -597,7 +597,7 @@ Répéter 3x : hey hey hey
 | -------- | ------ |
 | `npx tsc --noEmit` | Vérifie les types sans générer de fichier JavaScript |
 | `npx tsc && node dist/fichier.js` | Compile puis exécute en une seule commande |
-| `npx ts-node src/fichier.ts` | Compile et exécute directement |
+| `node src/fichier.ts` ou `npx tsx src/fichier.ts` | Node 22.18+ : TS effaçable ; tsx pour enums/namespaces |
 
 ---
 

@@ -237,7 +237,7 @@ final class OrderReflectionTest extends TestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 .                                                              1 / 1 (100%)
 

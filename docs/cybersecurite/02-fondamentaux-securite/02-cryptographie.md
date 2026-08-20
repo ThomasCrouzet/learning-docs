@@ -461,7 +461,7 @@ Certificate:
         Issuer: C = US, O = DigiCert Inc, CN = DigiCert Global G2 TLS RSA SHA256 2020 CA1
         Validity
             Not Before: Jan 13 00:00:00 2025 GMT
-            Not After : Feb 13 23:59:59 2026 GMT
+            Not After : Feb 13 23:59:59 2027 GMT
         Subject: C = US, ST = California, L = Los Angeles, O = Internet Corporation for Assigned Names and Numbers, CN = www.example.org
 ```
 

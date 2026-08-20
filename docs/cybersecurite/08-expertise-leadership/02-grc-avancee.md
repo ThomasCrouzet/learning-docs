@@ -127,7 +127,7 @@ Sans approche multi-référentiel, voici les problèmes rencontrés :
 | ----------- | ---- | ------ | ---------- |
 | ISO 27001:2022 | Standard international | SMSI (Système de Management de la Sécurité de l'Information) | Volontaire (mais souvent exigé par les clients) |
 | SOC 2 Type II | Rapport d'audit (AICPA) | Contrôles de sécurité, disponibilité, confidentialité | Volontaire (exigé par les clients US) |
-| NIS2 | Directive européenne | Entités essentielles et importantes (énergie, transport, santé, numérique) | Transposition prévue au 17 oct. 2024 ; vérifier le droit national |
+| NIS2 | Directive européenne | Entités essentielles et importantes (énergie, transport, santé, numérique), sous réserve du size-cap | Date de transposition : 17 oct. 2024 (échue). En 2026, lis le droit national d'exécution, pas cette date comme une obligation future. |
 | DORA | Règlement européen | Secteur financier (banques, assurances, fintech) | Obligatoire depuis janvier 2025 |
 | RGPD | Règlement européen | Données personnelles | Obligatoire |
 | PCI-DSS v4.0 | Standard industriel | Données de cartes de paiement | Obligatoire si traitement de cartes |

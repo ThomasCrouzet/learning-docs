@@ -385,7 +385,7 @@ docker compose exec php php bin/phpunit
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 .                                                                   1 / 1 (100%)
 
@@ -686,7 +686,7 @@ docker compose exec php php bin/phpunit
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x by Sebastian Bergmann and contributors.
 
 .........                                                         9 / 9 (100%)
 

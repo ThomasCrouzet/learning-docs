@@ -253,7 +253,7 @@ vendor/bin/phpunit
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x
+PHPUnit 12.x.x
 
 .....                                                               5 / 5 (100%)
 
@@ -289,7 +289,7 @@ jobs:
     steps:
       # Étape 1 : récupérer le code du dépôt
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Étape 2 : installer PHP 8.3 avec les extensions nécessaires
       - name: Installer PHP
@@ -306,7 +306,7 @@ jobs:
 
       # Étape 3 : mettre en cache les dépendances Composer
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           # Dossier à mettre en cache
           path: vendor
@@ -391,7 +391,7 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -473,11 +473,11 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Installe Node.js (nécessaire pour markdownlint)
       - name: Installer Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           # Cache intégré à l'action setup-node
@@ -605,10 +605,10 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -623,7 +623,7 @@ jobs:
 
       # Sauvegarde le rapport de couverture comme artefact
       - name: Sauvegarder le rapport de couverture
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         # "if: always()" signifie que cette étape s'exécute
         # même si les tests échouent
         if: always()
@@ -668,7 +668,7 @@ jobs:
     name: Lint PHP
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -677,7 +677,7 @@ jobs:
           tools: composer:v2
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
@@ -694,9 +694,9 @@ jobs:
     name: Lint Markdown
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -710,7 +710,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint-php
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -720,7 +720,7 @@ jobs:
           coverage: xdebug
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
@@ -735,9 +735,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint-md
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -914,9 +914,9 @@ key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
 - Utilise 4 jobs : `lint-php`, `lint-md`, `test-php`, `test-js`
 - `test-php` dépend de `lint-php` (utilise `needs`)
 - `test-js` dépend de `lint-md`
-- Utilise `actions/cache@v4` pour Composer
-- Utilise le cache intégré de `actions/setup-node@v4` pour npm
-- Utilise `actions/upload-artifact@v4` pour le rapport de couverture
+- Utilise `actions/cache@v5` pour Composer
+- Utilise le cache intégré de `actions/setup-node@v5` pour npm
+- Utilise `actions/upload-artifact@v5` pour le rapport de couverture
 
 **Résultat attendu** : Le workflow s'exécute avec 4 jobs. Les deux branches (PHP et JS) sont parallèles. Le rapport de couverture est téléchargeable.
 
@@ -951,7 +951,7 @@ jobs:
     name: Lint PHP
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -960,7 +960,7 @@ jobs:
           tools: composer:v2
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
@@ -978,7 +978,7 @@ jobs:
     # Attend que le lint PHP soit terminé
     needs: lint-php
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -988,7 +988,7 @@ jobs:
           coverage: xdebug
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
@@ -1008,9 +1008,9 @@ jobs:
     name: Lint Markdown
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -1024,9 +1024,9 @@ jobs:
     # Attend que le lint Markdown soit terminé
     needs: lint-md
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: "npm"
@@ -1038,7 +1038,7 @@ jobs:
 
       # Sauvegarde le rapport de couverture
       - name: Sauvegarder le rapport de couverture
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: jest-coverage-report
@@ -1053,7 +1053,7 @@ jobs:
 - Branche JS : `lint-md` → `test-js` (séquentiels grâce à `needs`)
 - Les deux branches s'exécutent en parallèle
 - Le cache Composer utilise `composer.lock` comme clé
-- Le cache npm est intégré à `actions/setup-node@v4`
+- Le cache npm est intégré à `actions/setup-node@v5`
 - Le rapport de couverture Jest est sauvegardé avec `if: always()`
 
 ---

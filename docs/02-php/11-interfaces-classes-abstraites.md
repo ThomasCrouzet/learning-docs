@@ -59,7 +59,7 @@ Sans interfaces, voici les problèmes rencontrés :
 **Ce qu'une interface n'est PAS** :
 
 - Une interface n'est pas une classe. Elle ne peut pas être instanciée (`new MonInterface()` provoque une erreur).
-- Une interface ne contient pas de code. Elle déclare des méthodes sans les définir.
+- Une interface ne contenait historiquement pas de code. Depuis PHP 8.1 elle peut avoir des constantes, et depuis PHP 8.4 des méthodes avec corps par défaut. Ne dis pas « jamais de code » sans borner la version.
 
 ---
 
@@ -385,8 +385,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return ['ROLE_USER'];
     }
 
-    // Méthode historique UserInterface (Symfony) : dépréciée depuis Symfony 7.3,
-    // plus appelée automatiquement en 7.4. Souvent laissée vide dans le code généré.
+    // Méthode historique UserInterface (Symfony) : dépréciée depuis 7.3
+    // (attribut #[Deprecated]), plus appelée automatiquement en 7.4.
     public function eraseCredentials(): void
     {
         // Nettoyer les données sensibles temporaires

@@ -645,7 +645,7 @@ Lance le test :
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x.x by Sebastian Bergmann and contributors.
 
 ......                                                              6 / 6 (100%)
 
@@ -792,7 +792,7 @@ class ProductServiceTest extends KernelTestCase
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x.x by Sebastian Bergmann and contributors.
 
 .........                                                           9 / 9 (100%)
 

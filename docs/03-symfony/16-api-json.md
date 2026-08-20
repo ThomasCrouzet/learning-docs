@@ -12,7 +12,7 @@ cursus: "Symfony"
 
 # 16 - API JSON
 
-> **En bref** : À la fin de cette fiche, tu sauras créer des endpoints JSON dans Symfony 7.4, sérialiser et désérialiser des objets PHP, valider les données d'entrée, et consommer l'API depuis JavaScript avec jQuery/AJAX. Lecture estimée : 85 min.
+> **En bref** : Créer des endpoints JSON dans Symfony 7.4, sérialiser/désérialiser, valider les entrées, et consommer l'API avec `fetch` (jQuery/AJAX reste une option historique, fiche JavaScript 05). Lecture estimée : 85 min.
 
 
 ## Prérequis

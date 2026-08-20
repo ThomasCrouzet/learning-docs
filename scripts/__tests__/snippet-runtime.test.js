@@ -71,6 +71,33 @@ describe('processExitCode', () => {
 });
 
 describe('fragmentSkipReason', () => {
+  it('skips PHP method fragments without a class', () => {
+    expect(
+      fragmentSkipReason('php', 'public function getRoles(): array\n{\n    return [];\n}\n')
+    ).toBe('fragment_method_with_modifier_without_class');
+    expect(
+      fragmentSkipReason(
+        'php',
+        '<?php\n#[ORM\\Column]\nprivate ?int $id = null;\n'
+      )
+    ).toBe('fragment_method_with_modifier_without_class');
+    expect(
+      fragmentSkipReason('php', '<?php\nclass User {\n    public function id(): int { return 1; }\n}\n')
+    ).toBeNull();
+    expect(
+      fragmentSkipReason('php', '<?php\n#[Route("/products", "product_list")]\n')
+    ).toBe('php_attribute_fragment');
+    expect(
+      fragmentSkipReason(
+        'php',
+        'function calculatePrice($a){return $a;}\nfunction calculatePrice(int $a): int {return $a;}\n'
+      )
+    ).toBe('duplicate_decl_before_after_demo');
+    expect(
+      fragmentSkipReason('php', "ChoiceField::new('status')->setChoices(\$choices)\n")
+    ).toBe('php_missing_terminator');
+  });
+
   it('detecte shell session', () => {
     expect(fragmentSkipReason('bash', '$ ls -la\n')).toBe('shell_session_prompt');
   });

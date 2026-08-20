@@ -605,7 +605,7 @@ Cette politique s'applique à tous les employés, prestataires et partenaires ay
 
 ### 3.2 Renouvellement
 
-- Les mots de passe standard ne sont pas soumis à expiration obligatoire (conformément aux recommandations ANSSI 2024)
+- Les mots de passe standard ne sont pas soumis à expiration obligatoire (recommandation ANSSI encore actuelle en 2026 : privilégier la longueur et un gestionnaire, pas la rotation périodique)
 - Les mots de passe doivent être changés immédiatement en cas de compromission suspectée
 - Les comptes à privilèges sont soumis à une rotation de 90 jours
 
@@ -757,8 +757,8 @@ controles = [
         "score_actuel": 3,
     },
     {
-        "id": "CIS 6",
-        "nom": "Gestion du contrôle d'accès",
+        "id": "CIS 7",
+        "nom": "Gestion continue des vulnérabilités",
         "cible": "Scan hebdomadaire, patch sous 48h pour les critiques",
         "etat": "Mises à jour manuelles, pas de scan régulier",
         "score_cible": 5,
@@ -828,7 +828,7 @@ CIS 2 - Inventaire des logiciels           0/5     5/5     5 URGENT
 CIS 3 - Protection des données             2/5     5/5     3 HAUTE
 CIS 4 - Configuration sécurisée            2/5     5/5     3 HAUTE
 CIS 5 - Gestion des comptes                3/5     5/5     2 MOYENNE
-CIS 6 - Gestion du contrôle d'accès         1/5     5/5     4 URGENT
+CIS 7 - Gestion continue des vulnérabilités  1/5     5/5     4 URGENT
 ---------------------------------------------------------------------------
 Score global                              10/30          Maturité : 33%
 
@@ -841,7 +841,7 @@ RECOMMANDATIONS PRIORITAIRES
   Cible : Inventaire automatisé avec whitelist
   Écart : 5 points
 
-[PRIORITAIRE] CIS 6 - Gestion du contrôle d'accès
+[PRIORITAIRE] CIS 7 - Gestion continue des vulnérabilités
   État actuel : Mises à jour manuelles, pas de scan régulier
   Cible : Scan hebdomadaire, patch sous 48h pour les critiques
   Écart : 4 points
@@ -963,7 +963,7 @@ Réalise les tâches suivantes :
 | Réglementation | Applicable ? | Justification |
 | -------------- | ------------ | ------------- |
 | **RGPD** | Oui | Traitement de données personnelles de résidents UE (données de santé = Art. 9) |
-| **NIS2** | Oui | Le secteur santé fait partie des entités essentielles (Annexe I) |
+| **NIS2** | Non (size-cap) | L'Annexe I (santé) ne suffit pas. La directive (UE) 2022/2555 vise en principe les entreprises au moins de taille moyenne (recommandation 2003/361/CE). Une clinique de 30 employés est une petite entreprise : NIS2 ne s'applique pas d'office, sauf si le droit national élargit le champ. |
 | **Code de la santé publique** | Oui | Obligations spécifiques au secret médical et à l'hébergement des données de santé |
 | **HDS** | Oui (fournisseur) | L'hébergeur SaaS doit être certifié HDS (Hébergeur de Données de Santé) |
 | **DORA** | Non | La clinique n'est pas un acteur du secteur financier |
@@ -975,7 +975,7 @@ Réalise les tâches suivantes :
 | Champ | Valeur |
 | ----- | ------ |
 | Finalité | Suivi médical des patients |
-| Base légale | Intérêt vital (Art. 6.1.d) + Médecine préventive (Art. 9.2.h) |
+| Base légale | Art. 9.2.h (médecine préventive / diagnostics) et, pour l'Art. 6, obligation légale ou intérêt public selon le cadre national. L'intérêt vital (Art. 6.1.d, considérant 46) est réservé aux urgences vitales quand la personne ne peut pas consentir, pas au suivi médical courant. |
 | Données | Identité, coordonnées, n° SS, antécédents, diagnostics, traitements, résultats d'examens |
 | Durée | 20 ans après le dernier passage (Code de la santé publique) |
 | Mesures | Chiffrement, accès par rôle médical, logs d'accès, hébergement HDS |

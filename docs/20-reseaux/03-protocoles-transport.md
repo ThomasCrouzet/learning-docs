@@ -452,7 +452,7 @@ Les états principaux d'une connexion TCP :
 
 ⚠️ **Problème** : Tu penses que DNS utilise uniquement UDP.
 
-✅ **Solution** : DNS utilise UDP pour les requêtes courtes (la majorité des cas). Mais il utilise TCP pour les réponses de plus de 512 octets et pour les transferts de zone entre serveurs DNS. Les deux protocoles coexistent sur le port 53.
+✅ **Solution** : Sans EDNS(0) (RFC 6891), une réponse DNS UDP dépassant 512 octets était tronquée (bit TC). Avec EDNS(0), UDP peut dépasser 512 octets. TCP reste utilisé si TC=1 et pour les transferts de zone. Les deux protocoles coexistent sur le port 53.
 
 ---
 

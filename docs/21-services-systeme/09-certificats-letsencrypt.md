@@ -54,7 +54,7 @@ Sans certificat signé par une CA reconnue, voici les problèmes rencontrés :
 
 **Ce que Let's Encrypt n'est PAS** :
 
-- Let's Encrypt ne délivre pas de certificats EV (Extended Validation) qui affichent le nom de l'entreprise dans la barre d'adresse. Pour un site e-commerce ou bancaire nécessitant ce niveau de confiance visible, une CA commerciale est nécessaire.
+- Let's Encrypt ne délivre pas de certificats EV. Chrome a retiré le nom d'entreprise de la barre d'adresse (Chrome 77, 2019) : un certificat EV n'affiche plus ce nom dans l'URL. Ne vends pas l'EV comme « confiance visible dans la barre ».
 - Let's Encrypt ne garantit pas la sécurité de ton site. Il prouve seulement que tu contrôles le domaine. La sécurité applicative reste ta responsabilité.
 
 ---
@@ -148,7 +148,7 @@ _acme-challenge.example.com IN TXT "<valeur>"
 
 ### Durée de validité et renouvellement
 
-**Définition** : Les certificats Let's Encrypt ont une durée de validité de **90 jours**, contre 1 à 2 ans pour les certificats commerciaux. Ce choix encourage l'automatisation du renouvellement.
+**Définition** : Les certificats Let's Encrypt durent **90 jours** par défaut (profil 45 jours en option depuis 2026). Pour les CA publiques, le plafond CA/B Forum est **200 jours** depuis le 15 mars 2026, plus « 1 à 2 ans ».
 
 **Pourquoi 90 jours ?** :
 

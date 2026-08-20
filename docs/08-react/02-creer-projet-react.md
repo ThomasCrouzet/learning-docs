@@ -64,7 +64,7 @@ Sans Vite, voici les problèmes rencontrés :
 | HMR en millisecondes | HMR en secondes |
 | Configuration minimale | Configuration détaillée nécessaire |
 | Utilise les modules ES natifs | Compile tout en un bundle |
-| Rollup pour le build de production | Webpack pour le build de production |
+| Build prod : Rollup (Vite 7) ou Rolldown (Vite 8, mars 2026) | Webpack pour le build de production |
 
 ---
 

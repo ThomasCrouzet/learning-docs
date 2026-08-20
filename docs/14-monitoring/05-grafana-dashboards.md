@@ -431,7 +431,7 @@ Le fichier JSON téléchargé contient la définition complète du dashboard. Tu
 cd ~/monitoring-cursus/grafana-dashboards && docker compose down
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Grafana, Prometheus). Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement les dashboards et configurations sauvegardés dans Grafana.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Grafana, Prometheus). Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement les dashboards et configurations sauvegardés dans Grafana.
 
 ---
 

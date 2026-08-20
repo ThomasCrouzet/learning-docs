@@ -433,7 +433,7 @@ c'est un indicateur d'attaque.
 | `tcpdump -i eth0 port 20000 -w dnp3.pcap` | Capturer le trafic DNP3 |
 | `tcpdump -i eth0 port 102 -w s7comm.pcap` | Capturer le trafic S7comm (Siemens) |
 | `tshark -r capture.pcap -Y modbus` | Filtrer les trames Modbus dans une capture |
-| `nmap --script modbus-discover -p 502 10.3.0.0/24` | Découvrir les équipements Modbus (attention : scan actif) |
+| `nmap --script modbus-discover -p 502 127.0.0.1` | Découvrir Modbus **uniquement sur un labo que tu possèdes** (jamais un /24 tiers) |
 | `zeek -r capture.pcap local.zeek` | Analyser une capture hors ligne avec Zeek |
 | `cat conn.log \| zeek-cut ts id.orig_h id.resp_h id.resp_p` | Lire les connexions Zeek |
 

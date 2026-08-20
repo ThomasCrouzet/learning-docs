@@ -79,7 +79,7 @@ function additionner(int $a, int $b): int
 
 echo additionner(5, 3);       // 8 (OK)
 echo additionner("5", "3");   // 8 (PHP convertit "5" en 5 et "3" en 3)
-echo additionner(5.7, 3.2);   // 8 (PHP convertit 5.7 en 5 et 3.2 en 3)
+echo additionner(5.7, 3.2);   // dépréciation PHP 8.1+ (conversion float -> int avec perte) ; TypeError prévue en PHP 9
 echo additionner(true, false); // 1 (PHP convertit true en 1 et false en 0)
 ```
 

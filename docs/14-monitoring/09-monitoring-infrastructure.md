@@ -678,7 +678,7 @@ curl -s http://localhost:9090/api/v1/alerts | python3 -m json.tool
 cd ~/monitoring-cursus/infra-monitoring && docker compose down
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker. Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement les données Prometheus et Grafana.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker. Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement les données Prometheus et Grafana.
 
 ---
 

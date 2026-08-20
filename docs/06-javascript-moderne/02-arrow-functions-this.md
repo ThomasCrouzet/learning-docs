@@ -185,7 +185,7 @@ const minuteur = {
   demarrer: function () {
     // ❌ Fonction classique : this ne pointe plus vers "minuteur"
     setInterval(function () {
-      this.secondes++; // this = undefined ou window, pas minuteur
+      this.secondes++; // navigateur : undefined (strict) ; Node : souvent un Timeout, pas minuteur
       console.log(this.secondes); // NaN
     }, 1000);
   },

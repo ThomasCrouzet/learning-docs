@@ -73,7 +73,7 @@ Sans API Platform, voici les problèmes rencontrés :
 
 ### L'attribut ApiResource
 
-**Définition** : L'attribut `#[ApiResource]` est placé sur une entité Doctrine pour l'exposer comme ressource API. Par défaut, il génère 5 opérations : GET collection, GET item, POST, PUT/PATCH, DELETE.
+**Définition** : L'attribut `#[ApiResource]` est placé sur une entité Doctrine pour l'exposer comme ressource API. Par défaut (API Platform 3), les opérations sont GET collection, GET item, POST, **PATCH** et DELETE. PUT n'est plus une opération par défaut.
 
 **Les opérations par défaut** :
 

@@ -371,7 +371,7 @@ Lance les tests :
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x.x by Sebastian Bergmann and contributors.
 
 ....                                                                4 / 4 (100%)
 

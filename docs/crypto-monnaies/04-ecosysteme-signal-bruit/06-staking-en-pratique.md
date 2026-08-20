@@ -82,7 +82,7 @@ Le diagramme suivant résume le flux de staking, du dépôt des tokens jusqu'aux
 ```text
 Exigences pour valider sur Ethereum :
 
-1. Capital : déposer exactement 32 ETH dans le contrat de staking
+1. Capital : **minimum 32 ETH** pour activer un validateur solo. Depuis Pectra (EIP-7251, mai 2025) le solde effectif maximal d'un validateur est 2048 ETH : on ne dépose plus « exactement 32 ETH ».
    (environ 50 000 - 100 000 euros selon le cours)
 
 2. Matériel :

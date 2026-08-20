@@ -217,7 +217,7 @@ services:
       - loki-data:/loki
     command: -config.file=/etc/loki/local-config.yaml
 
-  # Promtail : collecte les logs Docker
+  # Promtail : historique Loki (EOL 2 mars 2026). Pour un lab 2026, préfère Grafana Alloy.
   promtail:
     image: grafana/promtail:3.1.0
     volumes:
@@ -963,7 +963,7 @@ rate(container_cpu_usage_seconds_total{name=~".*symfony.*"}[1m]) * 100
 cd ~/monitoring-cursus/projet-integrateur && docker compose down
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (métriques, logs, traces, Grafana). Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement toutes les données d'observabilité stockées dans les volumes.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (métriques, logs, traces, Grafana). Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement toutes les données d'observabilité stockées dans les volumes.
 
 ---
 

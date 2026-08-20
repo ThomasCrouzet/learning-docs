@@ -140,7 +140,7 @@ class Product
 
 // Utilisation : Product a maintenant les méthodes du trait
 $product = new Product('Clavier');
-echo $product->getCreatedAt()->format('Y-m-d'); // 2025-12-15
+echo $product->getCreatedAt()->format('Y-m-d'); // 2026-08-20
 ```
 
 ---

@@ -447,7 +447,7 @@ Lance les tests de fumée :
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x.x by Sebastian Bergmann and contributors.
 
 .....                                                               5 / 5 (100%)
 
@@ -513,7 +513,7 @@ Lance une suite spécifique :
 **Résultat attendu** :
 
 ```text
-PHPUnit 11.x.x by Sebastian Bergmann and contributors.
+PHPUnit 12.x.x by Sebastian Bergmann and contributors.
 
 Testsuite: Unit
 ....................                                               20 / 20 (100%)

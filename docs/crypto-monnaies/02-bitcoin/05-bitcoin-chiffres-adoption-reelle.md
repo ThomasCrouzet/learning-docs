@@ -46,7 +46,7 @@ Sans limite d'offre, voici les problèmes rencontrès dans les monnaies traditio
 
 | Métrique | Valeur |
 | --- | --- |
-| Nombre maximum de BTC | 21 000 000 (exactement) |
+| Nombre maximum de BTC | Plafond protocolaire d'environ 21 millions (21e14 satoshis). Arrondis et poussière (dust) font que l'offre dépensable n'atteint pas chaque satoshi de ce plafond. |
 | BTC déjà minés (août 2026) | Environ 20,06 millions (~95,5%) |
 | BTC restant a miner | Environ 1,1 million (~5%) |
 | Date estimée du dernier BTC | Vers 2140 |

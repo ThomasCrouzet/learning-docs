@@ -292,7 +292,7 @@ Pour les stablecoins fiat-backed, les réserves sont la clé. Si l'émetteur n'a
 
 | Réglementation | Impact |
 | --- | --- |
-| MiCA (Europe, 2024) | Les stablecoins doivent obtenir une licence, maintenir des réserves liquides, publier un livre blanc. Tether (USDT) n'a pas obtenu l'agrement dans plusieurs pays europeens. |
+| MiCA (Europe) | EMT/ART : application depuis le 30 juin 2024 ; le reste de MiCA depuis le 30 décembre 2024. Vérifie le registre CASP ESMA/AMF plutôt qu'une formule figée sur Tether. |
 | Réglementation US (en discussion) | Plusieurs projets de loi visent a encadrer les stablecoins, imposer des audits et des réserves |
 | Sanctions internationales | Les émetteurs de stablecoins peuvent geler les fonds des adresses sanctionnees (Tether et Circle l'ont déjà fait) |
 

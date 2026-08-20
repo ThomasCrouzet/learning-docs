@@ -15,7 +15,7 @@ cursus: "Fiches de référence"
 
 Fiche de référence rapide pour TypeScript : types, interfaces, generics, utility types et configuration.
 
-**Version** : TypeScript 5.x / Node.js 22 LTS
+**Version** : TypeScript 6.x / 7.x / Node.js 22 LTS
 
 ---
 

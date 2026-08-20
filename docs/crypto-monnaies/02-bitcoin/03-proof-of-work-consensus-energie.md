@@ -187,7 +187,7 @@ L'argument économique est le suivant : il est plus rentable d'utiliser cette pu
 
 | Métrique | Estimation |
 | --- | --- |
-| Consommation annuelle du réseau Bitcoin | Environ 100-150 TWh par an (2024-2025) |
+| Consommation annuelle du réseau Bitcoin | Snapshot CBECI : 138,2 TWh annualisés au 30 juin 2024 (Cambridge Digital Mining Industry Report, avril 2025). L'ordre de grandeur 2024-2025 reste ~100-150 TWh ; le chiffre exact bouge chaque semaine. |
 | Equivalent pays | Comparable à la consommation de la Pologne ou des Pays-Bas |
 | Nombre de transactions par seconde | Environ 7 (couche de base) |
 | Consommation par transaction (couche de base) | Environ 700-1 000 kWh |

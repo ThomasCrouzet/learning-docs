@@ -461,7 +461,7 @@ jobs:
   secrets-detection:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0  # Historique complet pour scanner tous les commits
 
@@ -474,7 +474,7 @@ jobs:
   sast:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Analyse SAST avec Semgrep
         uses: semgrep/semgrep-action@v1
@@ -488,7 +488,7 @@ jobs:
   sca:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -502,7 +502,7 @@ jobs:
         run: pip-audit -r requirements.txt --format json --output sca-report.json
 
       - name: Sauvegarder le rapport
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: sca-report
           path: sca-report.json
@@ -511,7 +511,7 @@ jobs:
   container-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Build de l'image Docker
         run: docker build -t mon-app:${{ github.sha }} .
@@ -529,7 +529,7 @@ jobs:
   sbom:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Générer le SBOM avec Syft
         uses: anchore/sbom-action@v0
@@ -538,7 +538,7 @@ jobs:
           output-file: sbom.json
 
       - name: Sauvegarder le SBOM
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: sbom
           path: sbom.json
@@ -785,7 +785,7 @@ query = f"SELECT * FROM users WHERE id = {user_id}"
 
 ```yaml
 # Mauvaise pratique : utiliser un tag (peut être modifié par l'auteur)
-- uses: actions/checkout@v4
+- uses: actions/checkout@v5
 
 # Bonne pratique : épingler par hash SHA (immuable)
 - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1

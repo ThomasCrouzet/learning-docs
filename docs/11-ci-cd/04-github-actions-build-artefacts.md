@@ -228,7 +228,7 @@ jobs:
     steps:
       # Étape 1 : récupérer le code
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Étape 2 : configurer Docker Buildx
       # Buildx est une version améliorée de docker build
@@ -285,7 +285,7 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -369,7 +369,7 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -437,7 +437,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Crée un fichier de build (simulation)
       - name: Créer le build
@@ -450,7 +450,7 @@ jobs:
 
       # Sauvegarde le dossier dist/ comme artefact
       - name: Sauvegarder l'artefact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           # Nom de l'artefact
           name: build-output
@@ -528,7 +528,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -554,7 +554,7 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -753,7 +753,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -774,7 +774,7 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -815,7 +815,7 @@ jobs:
           echo "Image: ghcr.io/${{ github.repository }}" >> build-info/info.txt
 
       - name: Sauvegarder l'artefact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: build-info
           path: build-info/

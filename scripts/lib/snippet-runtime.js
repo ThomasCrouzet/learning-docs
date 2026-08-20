@@ -397,6 +397,83 @@ function fragmentSkipReason(lang, body) {
   if (l === 'php') {
     // fragments without <?php often still lintable if we wrap : leave to runner
     if (/^\s*\?>/m.test(t)) return 'php_close_only';
+    const hasType = /(?:^|\n)\s*(?:(?:abstract|final|readonly)\s+)*(?:class|interface|trait|enum)\s+(\w|\{)/.test(
+      t
+    );
+    // Propriétés / méthodes isolées, y compris `private ?int $id` après un attribut.
+    if (/^\s*(public|private|protected)\b/m.test(t) && !hasType) {
+      return 'fragment_method_with_modifier_without_class';
+    }
+    if (/^\s*->/m.test(t) && !hasType) {
+      return 'php_method_chain_fragment';
+    }
+    if (/\byield\b/.test(t) && !/\bfunction\b/.test(t)) {
+      return 'php_yield_outside_function';
+    }
+    if (/erreur volontaire|Conflit !/i.test(t)) return 'intentional_error_marker';
+    if (/\.\.\.|\[\.+\.\.\.\]|return\s+\[\.\.\.\]/.test(t)) return 'ellipsis_placeholder';
+    if (/^\s*new\s+[A-Z]\w+\s*\(/m.test(t) && /,\s*$/.test(t) && !hasType) {
+      return 'php_array_item_fragment';
+    }
+    if (
+      /^\s*\w+\s*\(\s*$/m.test(t) &&
+      /\$\w+/.test(t) &&
+      !/\bfunction\b/.test(t) &&
+      !hasType
+    ) {
+      return 'php_signature_fragment';
+    }
+    const attrLines = t
+      .split('\n')
+      .map((line) => line.trim())
+      .filter((line) => line && !line.startsWith('//') && !line.startsWith('/*') && line !== '<?php');
+    if (
+      attrLines.length > 0 &&
+      attrLines.every((line) => /^#\[/.test(line) || line.startsWith('use ') || line === '//' || line.startsWith('//'))
+    ) {
+      return 'php_attribute_fragment';
+    }
+    if (/Au lieu de :/.test(t) && /Utilise :/.test(t)) {
+      return 'incorrect_correct_multi_demo';
+    }
+    const phpFns = [...t.matchAll(/\bfunction\s+([A-Za-z_]\w*)/g)].map((m) => m[1]);
+    const seenFn = new Set();
+    for (const n of phpFns) {
+      if (seenFn.has(n)) return 'duplicate_decl_before_after_demo';
+      seenFn.add(n);
+    }
+    if (
+      /function\s+\w+\s*\([^)]*\)\s*(?::\s*\??[\w\\]+)?\s*$/m.test(t) &&
+      !/function\s+\w+\s*\([^)]*\)\s*(?::\s*\??[\w\\]+)?\s*\{/m.test(t)
+    ) {
+      return 'php_method_signature_without_body';
+    }
+    if (
+      /#\[/.test(t) &&
+      !hasType &&
+      !/\bfunction\b/.test(t) &&
+      !/\becho\b/.test(t)
+    ) {
+      return 'php_attribute_fragment';
+    }
+    if (/^\s*\w+\s*:\s*\[/m.test(t) && !hasType && !/\bfunction\b/.test(t)) {
+      return 'php_array_item_fragment';
+    }
+    const opens = (t.match(/\{/g) || []).length;
+    const closes = (t.match(/\}/g) || []).length;
+    if (opens > closes) return 'php_incomplete_block';
+    const lastCode = [...t.split('\n')]
+      .map((line) => line.trim())
+      .filter((line) => line && !line.startsWith('//') && line !== '<?php')
+      .pop();
+    if (
+      lastCode &&
+      !/[;}]\s*$/.test(lastCode) &&
+      !/\{$/.test(lastCode) &&
+      !/^(namespace|use|class|enum|interface|trait)\b/.test(lastCode)
+    ) {
+      return 'php_missing_terminator';
+    }
   }
 
   return null;

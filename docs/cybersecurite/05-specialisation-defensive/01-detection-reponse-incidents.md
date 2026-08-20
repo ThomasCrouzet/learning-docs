@@ -14,6 +14,8 @@ cursus: "Phase 5 - Spécialisation Défensive"
 
 > **En bref** : À la fin de cette fiche, tu sauras mener une investigation forensique complète : de la détection d'un incident à la production d'un rapport, en utilisant les méthodologies NIST et PICERL, les outils de forensique mémoire (Volatility 3), disque (Autopsy) et réseau (Wireshark/tshark). Lecture estimée : 55 min.
 
+⚠️ **Cadre légal** : extraire des hashes (`windows.hashdump.Hashdump`) ou analyser un dump hors labo autorisé peut constituer un accès frauduleux (art. 323-1 du Code pénal). Limite-toi à tes propres machines ou à un environnement pédagogique dédié.
+
 
 ## Prérequis
 
@@ -39,7 +41,7 @@ cursus: "Phase 5 - Spécialisation Défensive"
 
 Sans DFIR, voici les problèmes rencontrés :
 
-1. **Attaques non détectées** : sans méthodologie, les intrusions passent inaperçues pendant des semaines ou des mois (le temps moyen de détection est de 207 jours selon IBM)
+1. **Attaques non détectées** : sans méthodologie, les intrusions passent inaperçues pendant des semaines ou des mois. Le chiffre « 207 jours » (IBM Cost of a Data Breach, millésime ~2020) n'est plus le délai d'identification des rapports 2024-2025 ; cite toujours l'année du rapport.
 2. **Preuves détruites** : sans procédure forensique, les analystes modifient ou détruisent involontairement les preuves en intervenant sur le système compromis
 3. **Récupération chaotique** : sans plan structuré, la remise en service est désorganisée et risque de laisser des portes dérobées en place
 4. **Récidive garantie** : sans analyse des causes racines, le même vecteur d'attaque sera réexploité
@@ -445,7 +447,7 @@ Chain of custody créée
 | `python3 vol.py -f dump.raw windows.cmdline.CmdLine` | Lignes de commande des processus |
 | `python3 vol.py -f dump.raw windows.filescan.FileScan` | Scanner les fichiers en mémoire |
 | `python3 vol.py -f dump.raw windows.registry.hivelist.HiveList` | Lister les ruches registre |
-| `python3 vol.py -f dump.raw windows.hashdump.Hashdump` | Extraire les hashes de mots de passe |
+| `python3 vol.py -f dump.raw windows.hashdump.Hashdump` | Extraire les hashes (labo autorisé seulement ; art. 323-1 du Code pénal) |
 | `tshark -r capture.pcap -q -z conv,tcp` | Conversations TCP |
 | `tshark -r capture.pcap -Y "dns" -T fields -e dns.qry.name` | Requêtes DNS |
 | `sha256sum fichier` | Calculer le hash SHA-256 |

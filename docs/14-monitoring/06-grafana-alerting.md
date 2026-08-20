@@ -424,7 +424,7 @@ cd ~/monitoring-cursus/grafana-alerting && docker compose down
 docker rm -f webhook-receiver 2>/dev/null
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker. Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement les alertes et configurations Grafana stockées dans les volumes.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker. Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement les alertes et configurations Grafana stockées dans les volumes.
 
 ---
 

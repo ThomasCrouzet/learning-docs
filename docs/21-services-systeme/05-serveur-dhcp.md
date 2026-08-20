@@ -12,7 +12,7 @@ cursus: "Services système"
 
 # 05 - Serveur DHCP
 
-> **En bref** : Tu apprendras a configurer un serveur DHCP avec ISC DHCP et dnsmasq pour distribuer automatiquement des adresses IP, définir des plages d'adresses, créer des réservations statiques et analyser les logs DHCP. Lecture estimée : 60 min.
+> **En bref** : Configurer un serveur DHCP. ISC DHCP est en fin de vie depuis 2022 (dernier 4.4.3-P1) : le lab l'utilise pour la syntaxe, mais un déploiement 2026 doit évaluer Kea. Lecture estimée : 60 min.
 
 ## Prérequis
 

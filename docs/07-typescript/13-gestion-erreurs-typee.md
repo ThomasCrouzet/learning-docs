@@ -687,7 +687,7 @@ npx tsc && node dist/assertions.js
 | -------- | ------ |
 | `npx tsc && node dist/fichier.js` | Compile puis exécute |
 | `npx tsc --noEmit` | Vérifie les types sans compiler |
-| `npx ts-node src/fichier.ts` | Compile et exécute directement |
+| `node src/fichier.ts` ou `npx tsx src/fichier.ts` | Node 22.18+ : TS effaçable ; tsx pour enums/namespaces |
 
 ---
 

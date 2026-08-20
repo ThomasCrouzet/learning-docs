@@ -209,7 +209,7 @@ docker network create lab-mail-net
 docker run -d \
   --name lab-postfix \
   --network lab-mail-net \
-  -p 2525:25 \
+  -p 127.0.0.1:2525:25 \
   -e HOSTNAME=mail.lab.local \
   -e DOMAIN=lab.local \
   -v ~/lab-mail/postfix:/etc/postfix \

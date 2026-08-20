@@ -260,7 +260,7 @@ Pour utiliser Polygon :
 
 | Critère | Sidechain (Polygon PoS) | Rollup (Arbitrum) |
 | --- | --- | --- |
-| Sécurité | Propre consensus (100 validateurs) | Hérite de la sécurité d'Ethereum (~1 000 000 validateurs) |
+| Sécurité | Propre consensus (ensemble limité de validateurs) | Hérite de la sécurité d'Ethereum (centaines de milliers de validateurs ; le chiffre exact change, ne fige pas 1 000 000) |
 | Si les validateurs trichent | Les fonds sur la sidechain sont en danger | Les preuves de fraude protègent les utilisateurs |
 | Décentralisation | Dépend de la sidechain (souvent moindre) | Celle d'Ethereum |
 | Coûts | Très faibles (~0,01 USD) | Faibles (~0,10-0,50 USD) |

@@ -601,7 +601,7 @@ node_memory_MemAvailable_bytes / 1024 / 1024 / 1024
 cd ~/monitoring-cursus/prometheus-intro && docker compose down
 ```
 
-> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Prometheus). Pour un environnement pédagogique temporaire dont tu veux tout supprimer, tu peux ajouter `-v` : `docker compose down -v`. Attention : cela supprime définitivement l'historique des métriques stocké dans le volume.
+> **Note** : `docker compose down` sans `-v` conserve les volumes Docker (données Prometheus). Ne l'utilise pas comme nettoyage habituel : le drapeau volumes détruit les données. Réserve-le à un reset volontaire et documenté. Attention : cela supprime définitivement l'historique des métriques stocké dans le volume.
 
 **Résultat attendu** :
 

@@ -269,7 +269,7 @@ noire n'est pas forcément fiable. Vérifie aussi la liste blanche PSCA.
 
 ## Checklist de Validation
 
-- [ ] Je sais ce qu'est un PSAN et pourquoi l'enregistrement est obligatoire en France
+- [ ] Je distingue le PSAN historique du PSCA/CASP MiCA vivant depuis le 1er juillet 2026
 - [ ] Je sais comment vérifier si une plateforme est enregistrée auprès de l'AMF
 - [ ] Je connais la liste noire de l'AMF et je sais la consulter
 - [ ] Je sais ce qu'est MiCA et les principales obligations qu'il impose

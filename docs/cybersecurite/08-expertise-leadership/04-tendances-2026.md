@@ -202,6 +202,8 @@ Le CRA impose des obligations de cybersécurité à tous les produits contenant 
 
 **L'AI Act en détail** :
 
+Texte : règlement (UE) [2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj). Amendement : règlement (UE) [2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) (Digital Omnibus on AI, 8 juillet 2026). Les dates (art. 113) et les amendes (art. 99) se lisent dans EUR-Lex.
+
 L'AI Act classifie les systèmes d'IA par niveau de risque :
 
 | Niveau de risque | Exemples | Obligations |

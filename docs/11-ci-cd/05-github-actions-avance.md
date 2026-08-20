@@ -32,15 +32,15 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce qu'un matrix build ?
 
-**Définition** : Un matrix build est un mécanisme qui exécute le même job avec plusieurs combinaisons de paramètres. Par exemple : tester un projet sur PHP 8.2 et PHP 8.3, ou sur Ubuntu et macOS.
+**Définition** : Un matrix build est un mécanisme qui exécute le même job avec plusieurs combinaisons de paramètres. Par exemple : tester un projet sur PHP 8.3 et PHP 8.4, ou sur Ubuntu et macOS.
 
 **Le problème que les matrix builds résolvent** :
 
 Sans matrix builds, voici les problèmes rencontrés :
 
-1. **Duplication de code** : Tu crées un job pour PHP 8.2 et un autre pour PHP 8.3. Les deux jobs sont identiques sauf la version de PHP. Le fichier YAML est verbeux et difficile à maintenir.
+1. **Duplication de code** : Tu crées un job pour PHP 8.3 et un autre pour PHP 8.4. Les deux jobs sont identiques sauf la version de PHP. Le fichier YAML est verbeux et difficile à maintenir.
 
-2. **Oubli de version** : L'équipe supporte PHP 8.2 et 8.3. Un développeur ajoute un test pour 8.3 mais oublie 8.2. Le code fonctionne sur 8.3 mais casse sur 8.2.
+2. **Oubli de version** : L'équipe supporte PHP 8.3 et 8.4. Un développeur ajoute un test pour 8.4 mais oublie 8.3. Le code fonctionne sur 8.4 mais casse sur 8.3.
 
 **Comment les matrix builds résolvent ces problèmes** :
 
@@ -176,7 +176,7 @@ jobs:
           - ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
@@ -198,7 +198,7 @@ jobs:
 
 ```text
 Le workflow crée 2 jobs :
-- PHP 8.2 - ubuntu-latest
+- PHP 8.3 - ubuntu-latest
 - PHP 8.3 - ubuntu-latest
 
 Chaque job exécute les mêmes étapes avec sa version de PHP.
@@ -234,7 +234,7 @@ jobs:
           - "highest"
         # Exclure certaines combinaisons
         exclude:
-          # Ne pas tester PHP 8.2 avec les dépendances les plus basses
+          # Ne pas tester PHP 8.3 avec les dépendances les plus basses
           - php: "8.2"
             dependency: "lowest"
         # Ajouter des combinaisons spécifiques
@@ -249,7 +249,7 @@ jobs:
     continue-on-error: ${{ matrix.experimental || false }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
@@ -273,13 +273,13 @@ jobs:
 
 ```text
 Jobs créés :
-1. PHP 8.2 / highest
+1. PHP 8.3 / highest
 2. PHP 8.3 / lowest
 3. PHP 8.3 / highest
 4. PHP 8.4 / highest (expérimental, peut échouer)
 
 Jobs exclus :
-- PHP 8.2 / lowest (exclu par la règle exclude)
+- PHP 8.3 / lowest (exclu par la règle exclude)
 ```
 
 ---
@@ -323,7 +323,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Les secrets sont accessibles via ${{ secrets.NOM }}
       - name: Configurer la base de données
@@ -394,7 +394,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: echo "Tests passés"
 
   deploy-staging:
@@ -408,7 +408,7 @@ jobs:
       url: https://staging.mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Déployer sur staging
         run: |
           echo "Déploiement sur staging..."
@@ -426,7 +426,7 @@ jobs:
       url: https://mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Déployer en production
         run: |
           echo "Déploiement en production..."
@@ -467,7 +467,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # S'exécute uniquement sur la branche main
       - name: Build production
@@ -542,7 +542,7 @@ jobs:
     name: Tests PHP ${{ inputs.php-version }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -583,7 +583,7 @@ on:
       - main
 
 jobs:
-  # Appelle le workflow réutilisable avec PHP 8.2
+  # Appelle le workflow réutilisable avec PHP 8.3
   test-82:
     uses: ./.github/workflows/reusable-test.yml
     with:
@@ -604,7 +604,7 @@ jobs:
 
 ```text
 Le workflow CI crée 2 jobs :
-- test-82 : exécute les tests sur PHP 8.2 sans couverture
+- test-83 : exécute les tests sur PHP 8.3 sans couverture
 - test-83 : exécute les tests sur PHP 8.3 avec couverture
 Les deux jobs utilisent le même workflow réutilisable.
 ```
@@ -634,7 +634,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Déployer
         run: echo "Déploiement de ${{ github.sha }}"
 ```
@@ -762,7 +762,7 @@ concurrency:
 **Énoncé** : Crée un fichier de workflow `advanced-ci.yml` qui :
 
 1. Se déclenche sur push vers `main` et sur pull request vers `main`
-2. Utilise un matrix build pour tester sur PHP 8.2 et 8.3
+2. Utilise un matrix build pour tester sur PHP 8.3 et 8.4
 3. Après les tests, un job `deploy-staging` déploie sur l'environment `staging` (uniquement sur push vers main, pas sur PR)
 4. Après staging, un job `deploy-production` déploie sur l'environment `production` (uniquement sur push vers main)
 5. Le workflow utilise la concurrence pour annuler les runs précédents sur les PR
@@ -818,7 +818,7 @@ jobs:
           - "8.3"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Installer PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
@@ -827,7 +827,7 @@ jobs:
           tools: composer:v2
 
       - name: Cache Composer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: vendor
           key: ${{ runner.os }}-php${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}
@@ -850,7 +850,7 @@ jobs:
       url: https://staging.mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Déployer sur staging
         run: echo "Déploiement sur staging réussi"
         env:
@@ -870,7 +870,7 @@ jobs:
       url: https://mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Déployer en production
         run: echo "Déploiement en production réussi"
         env:
@@ -880,8 +880,8 @@ jobs:
 
 **Explication** :
 
-- La matrice teste PHP 8.2 et 8.3 en parallèle
-- `fail-fast: false` : si PHP 8.2 échoue, PHP 8.3 continue
+- La matrice teste PHP 8.3 et 8.4 en parallèle
+- `fail-fast: false` : si PHP 8.3 échoue, PHP 8.4 continue
 - `if: github.event_name != 'pull_request'` : les déploiements sont ignorés sur les PR
 - La concurrence annule les runs précédents sur la même branche/PR
 - Le deploy production attend le deploy staging (grâce à `needs`)

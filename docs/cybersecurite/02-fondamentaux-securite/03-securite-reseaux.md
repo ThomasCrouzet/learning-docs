@@ -509,8 +509,9 @@ cat << 'EOF' > /tmp/sshd_config_hardened
 # Écouter uniquement sur le port 2222 (changer le port par défaut)
 Port 2222
 
-# Écouter uniquement sur l'adresse IPv4 locale
-ListenAddress 0.0.0.0
+# Écouter uniquement sur la boucle locale (127.0.0.1).
+# 0.0.0.0 n'est PAS une adresse locale : c'est toutes les interfaces IPv4.
+ListenAddress 127.0.0.1
 
 # Protocole SSH version 2 uniquement
 Protocol 2
