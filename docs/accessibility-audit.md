@@ -94,7 +94,7 @@ Commandes :
 ```bash
 npm test                    # 377 passed
 npm run lint                # OK
-docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.6 build
+docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build
 npx serve site -l 4173
 node e2e/axe-baseline.mjs
 ```
@@ -158,7 +158,7 @@ Journal :
 
 | Commande | Résultat |
 | -------- | -------- |
-| `docker ... mkdocs-material:9.7.6 build` | OK (~26 s) |
+| `docker ... mkdocs-material:9.7.7 build` | pin courant (la campagne OSS a mesuré 9.7.6) |
 | `npx serve site -l 4173` | OK |
 | `node e2e/axe-baseline.mjs` (post-fix) | **0 violations** sur 18 vues (clair, sombre, mobile, 404) |
 
@@ -225,7 +225,7 @@ Journal :
 
 ```bash
 npm install
-docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.6 build
+docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build
 npx serve site -l 4173   # terminal séparé
 npm test
 npm run test:e2e:a11y
