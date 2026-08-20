@@ -309,13 +309,15 @@
 /* Zones défilables focusables (JS ajoute tabindex=0 si overflow réel) */
 .md-typeset pre > code[data-a11y-scroll-region="true"],
 .md-typeset__scrollwrap[data-a11y-scroll-region="true"],
-.md-typeset pre[data-a11y-scroll-region="true"] {
+.md-typeset pre[data-a11y-scroll-region="true"],
+.md-typeset .arithmatex[data-a11y-scroll-region="true"] {
   outline-offset: 2px;
 }
 
 .md-typeset pre > code[data-a11y-scroll-region="true"]:focus-visible,
 .md-typeset__scrollwrap[data-a11y-scroll-region="true"]:focus-visible,
-.md-typeset pre[data-a11y-scroll-region="true"]:focus-visible {
+.md-typeset pre[data-a11y-scroll-region="true"]:focus-visible,
+.md-typeset .arithmatex[data-a11y-scroll-region="true"]:focus-visible {
   outline: 3px solid var(--md-accent-fg-color);
 }
 
@@ -386,6 +388,13 @@
 /* Indicateur de section active plus visible */
 .md-nav__item--active > .md-nav__link {
   font-weight: 600;
+}
+
+/* Fond opaque : la TOC sticky ne doit pas se superposer au footer sombre
+   (teal #00695c sur #212121 = 2.43:1). */
+.md-sidebar--primary,
+.md-sidebar--secondary {
+  background-color: var(--md-default-bg-color);
 }
 
 /* Espacement entre les items de nav */
@@ -617,6 +626,20 @@
   margin: 1.2em 0;
 }
 
+/* Texte des blocs : le gris Material des blockquotes (opacite 0.54)
+   sur fond teinte tombe sous 4.5:1 (warning 4.48, note 4.39). */
+.md-typeset .pedagogical-block--definition,
+.md-typeset .pedagogical-block--analogy,
+.md-typeset .pedagogical-block--warning,
+.md-typeset .pedagogical-block--solution,
+.md-typeset .pedagogical-block--note,
+.md-typeset .pedagogical-block--result,
+.md-typeset blockquote.pedagogical-block--note,
+.md-typeset blockquote.pedagogical-block--note p,
+.md-typeset blockquote .pedagogical-block--warning {
+  color: #212121;
+}
+
 /* --------------------------------------------------------------------------
    15. BLOCS VISUELS : MODE SOMBRE
    -------------------------------------------------------------------------- */
@@ -649,6 +672,18 @@
 [data-md-color-scheme="slate"] .pedagogical-block--result {
   background-color: rgba(117, 117, 117, 0.12);
   border-left-color: #9e9e9e;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .pedagogical-block--definition,
+[data-md-color-scheme="slate"] .md-typeset .pedagogical-block--analogy,
+[data-md-color-scheme="slate"] .md-typeset .pedagogical-block--warning,
+[data-md-color-scheme="slate"] .md-typeset .pedagogical-block--solution,
+[data-md-color-scheme="slate"] .md-typeset .pedagogical-block--note,
+[data-md-color-scheme="slate"] .md-typeset .pedagogical-block--result,
+[data-md-color-scheme="slate"] .md-typeset blockquote.pedagogical-block--note,
+[data-md-color-scheme="slate"] .md-typeset blockquote.pedagogical-block--note p,
+[data-md-color-scheme="slate"] .md-typeset blockquote .pedagogical-block--warning {
+  color: #f5f5f5;
 }
 
 /* --------------------------------------------------------------------------

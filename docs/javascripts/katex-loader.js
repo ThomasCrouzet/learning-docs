@@ -54,12 +54,21 @@
     { left: "\\[", right: "\\]", display: true },
   ];
 
+  function notifyKatexRendered() {
+    try {
+      window.dispatchEvent(new Event("learning-docs:katex-rendered"));
+    } catch (e) {
+      /* Event non critique : extra.js reessaie au load / fonts.ready */
+    }
+  }
+
   function renderKaTeX() {
     if (typeof renderMathInElement === "function") {
       renderMathInElement(document.body, {
         delimiters: KATEX_DELIMITERS,
         throwOnError: false,
       });
+      notifyKatexRendered();
     }
   }
 
