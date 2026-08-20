@@ -9,7 +9,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { validateCampaignFinal } = require('./lib/campaign-final');
+const { validateCampaignFinal, collectSecondReviewArtifacts } = require('./lib/campaign-final');
 const { sha256 } = require('./lib/campaign-inventory');
 
 const ROOT = path.join(__dirname, '..');
@@ -71,6 +71,31 @@ for (const e of pagesFinales) {
   if (fs.existsSync(abs)) hashes[rel] = sha256(fs.readFileSync(abs, 'utf8'));
 }
 
+const dossiers = {};
+const reviewsDir = path.join(stateDir, 'page-reviews');
+if (fs.existsSync(reviewsDir)) {
+  for (const name of fs.readdirSync(reviewsDir)) {
+    if (!name.endsWith('.json')) continue;
+    try {
+      const d = readJson(path.join(reviewsDir, name));
+      const rel = String(d.page_id || name.replace(/__/g, '/').replace(/\.json$/, ''));
+      if (rel) dossiers[rel] = d;
+    } catch {
+      // ignore unreadable dossiers; missing proof still fails below
+    }
+  }
+}
+
+const findingsDir = path.join(stateDir, 'findings');
+const findingDocs = [];
+if (fs.existsSync(findingsDir)) {
+  for (const name of fs.readdirSync(findingsDir)) {
+    if (!/^second-[A-D]\.json$/i.test(name)) continue;
+    findingDocs.push(readJson(path.join(findingsDir, name)));
+  }
+}
+const secondReviewArtifacts = collectSecondReviewArtifacts(findingDocs);
+
 const result = validateCampaignFinal({
   inventoryPaths,
   pagesFinales,
@@ -83,6 +108,8 @@ const result = validateCampaignFinal({
   hashes,
   closure,
   requireClosure: Boolean(closure) || process.argv.includes('--require-closure'),
+  dossiers,
+  secondReviewArtifacts,
 });
 
 if (jsonOut) {

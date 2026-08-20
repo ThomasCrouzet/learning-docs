@@ -3,7 +3,7 @@
   "campaign": "monumental-deepsearch-2026-08",
   "docs_edited": true,
   "not_a_human_expert_certification": true,
-  "note": "Content findings from hostile lots A-D applied to docs/. Source-stamp dossier issues are not rewritten here. hashes in manifest.json were refreshed for the 74 edited Markdown files.",
+  "note": "Content findings from hostile lots A-D applied to docs/. Source-stamp dossier issues are not rewritten here. Compact manifest no longer stamps pages verified; page-owned second reviews remain incomplete.",
   "finding_ids": [
     "HA-PHPUNIT11-PIN",
     "HA-PHPUNIT11-BANNER",

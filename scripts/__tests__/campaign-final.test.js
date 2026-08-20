@@ -4,10 +4,18 @@ import os from 'os';
 import path from 'path';
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-import { validateCampaignFinal } from '../lib/campaign-final.js';
+import {
+  validateCampaignFinal,
+  collectSecondReviewArtifacts,
+  secondReviewIsSubstantive,
+  dossierBlocksVerified,
+  applyHonestSecondReviewToDossier,
+  SEAL_HOSTILE_BAND,
+} from '../lib/campaign-final.js';
 import { processExitCode } from '../lib/snippet-runtime.js';
 import {
   isGenericHomepage,
+  isLocatorStampExcerpt,
   sourceIsSufficientProof,
   sourcesQualifyAsProof,
 } from '../lib/campaign-sources.js';
@@ -72,6 +80,20 @@ describe('campaign-sources', () => {
     expect(sourcesQualifyAsProof('15-python/01.md', [{ url: 'https://docs.python.org/3/', scope: 'path:15-python/' }])).toBe(
       false
     );
+  });
+
+  it('rejects [locator for path] excerpts even when the URL is deep and the text is long', () => {
+    const stamped = {
+      url: 'https://docs.aws.amazon.com/cdk/v2/guide/home.html',
+      section: 'What is the AWS CDK?',
+      excerpt:
+        'The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework. [locator for 22-cloud/index.md]',
+      claim_id: 'c-h1',
+    };
+    expect(isLocatorStampExcerpt(stamped.excerpt)).toBe(true);
+    expect(sourceIsSufficientProof(stamped)).toBe(false);
+    expect(sourcesQualifyAsProof('22-cloud/index.md', [stamped])).toBe(false);
+    expect(sourceIsSufficientProof(proofSource())).toBe(true);
   });
 });
 
@@ -169,6 +191,180 @@ describe('validateCampaignFinal', () => {
         finalPageIds: paths,
       }).ok
     ).toBe(true);
+  });
+
+  it('fails verified pages whose dossiers are never_verified or pedagogical_verdict.verified=false', () => {
+    const r = validateCampaignFinal({
+      inventoryPaths: paths,
+      pagesFinales: paths.map((p) => sufficientEntry(p, { content_hash: 'h' })),
+      primaryPartition: primary,
+      counterPartition: counter,
+      manifest: { pages: paths.map((p) => sufficientEntry(p)) },
+      hashes: { [paths[0]]: 'h', [paths[1]]: 'h' },
+      dossiers: {
+        [paths[0]]: {
+          never_verified: true,
+          pedagogical_verdict: { verified: false },
+        },
+      },
+    });
+    expect(r.ok).toBe(false);
+    expect(r.errors.some((e) => /never_verified dossier/.test(e))).toBe(true);
+  });
+
+  it('fails seal-assigned hostileBand run_ids without a per-page second-review artifact', () => {
+    const r = validateCampaignFinal({
+      inventoryPaths: paths,
+      pagesFinales: paths.map((p) =>
+        sufficientEntry(p, {
+          content_hash: 'h',
+          second_review_run_id: 'hostile-2026-08-20-A',
+          second_reviewer: 'hostile-agent-A',
+        })
+      ),
+      primaryPartition: primary,
+      counterPartition: counter,
+      manifest: { pages: paths.map((p) => sufficientEntry(p)) },
+      hashes: { [paths[0]]: 'h', [paths[1]]: 'h' },
+      secondReviewArtifacts: {},
+    });
+    expect(r.ok).toBe(false);
+    expect(r.errors.some((e) => /hostileBand run_id without per-page second-review artifact/.test(e))).toBe(
+      true
+    );
+  });
+
+  it('fails pages whose sources still contain [locator for stamps', () => {
+    const r = validateCampaignFinal({
+      inventoryPaths: paths,
+      pagesFinales: paths.map((p) =>
+        sufficientEntry(p, {
+          content_hash: 'h',
+          sources: [
+            {
+              url: 'https://docs.python.org/3/tutorial/appetite.html',
+              excerpt: 'Whetting Your Appetite. [locator for 15-python/01.md]',
+              claim_id: `c-${p}`,
+            },
+          ],
+        })
+      ),
+      primaryPartition: primary,
+      counterPartition: counter,
+      manifest: { pages: paths.map((p) => sufficientEntry(p)) },
+      hashes: { [paths[0]]: 'h', [paths[1]]: 'h' },
+    });
+    expect(r.ok).toBe(false);
+    expect(r.errors.some((e) => /locator for/.test(e))).toBe(true);
+  });
+
+  it('accepts hostileBand when a finding artifact covers the path and the dossier is not blocked', () => {
+    const artifacts = collectSecondReviewArtifacts([
+      {
+        second_review_run_id: 'hostile-2026-08-20-A',
+        second_reviewer: 'hostile-agent-A',
+        findings: [{ id: 'HA-X', pages: paths }],
+      },
+    ]);
+    const r = validateCampaignFinal({
+      inventoryPaths: paths,
+      pagesFinales: paths.map((p) =>
+        sufficientEntry(p, {
+          content_hash: 'h',
+          second_review_run_id: 'hostile-2026-08-20-A',
+          second_reviewer: 'hostile-agent-A',
+        })
+      ),
+      primaryPartition: primary,
+      counterPartition: counter,
+      manifest: { pages: paths.map((p) => sufficientEntry(p)) },
+      hashes: { [paths[0]]: 'h', [paths[1]]: 'h' },
+      secondReviewArtifacts: artifacts,
+    });
+    expect(r.ok).toBe(true);
+  });
+});
+
+describe('second-review artifacts and honest reset (shipped)', () => {
+  it('does not treat a pages[] roster with empty finding_ids as coverage', () => {
+    const artifacts = collectSecondReviewArtifacts([
+      {
+        second_review_run_id: 'hostile-2026-08-20-C',
+        second_reviewer: 'hostile-agent-C',
+        never_verified: true,
+        pages: [{ path: '10-architecture/11-anti-patterns.md', finding_ids: [], verified: false }],
+      },
+    ]);
+    expect(artifacts['10-architecture/11-anti-patterns.md']).toBeUndefined();
+    expect(
+      secondReviewIsSubstantive(
+        {
+          path: '10-architecture/11-anti-patterns.md',
+          second_review_done: true,
+          second_review_run_id: 'hostile-2026-08-20-C',
+          second_reviewer: 'hostile-agent-C',
+        },
+        { artifacts }
+      )
+    ).toBe(false);
+  });
+
+  it('clears seal-assigned second review unless a finding file lists the path', () => {
+    expect(SEAL_HOSTILE_BAND.test('hostile-2026-08-20-A')).toBe(true);
+    const cleared = applyHonestSecondReviewToDossier(
+      {
+        second_review_done: true,
+        second_review_run_id: 'hostile-2026-08-20-A',
+        second_reviewer: 'hostile-agent-A',
+      },
+      '22-cloud/index.md',
+      {}
+    );
+    expect(cleared.second_review_done).toBe(false);
+    expect(cleared.second_review_run_id).toBeUndefined();
+
+    const artifacts = collectSecondReviewArtifacts([
+      {
+        second_review_run_id: 'hostile-2026-08-20-A',
+        second_reviewer: 'hostile-agent-A',
+        never_verified: true,
+        findings: [{ id: 'HA-PHPUNIT11-PIN', pages: ['11-ci-cd/10-projet-integrateur.md'] }],
+      },
+    ]);
+    const kept = applyHonestSecondReviewToDossier(
+      {
+        second_review_done: false,
+        second_review_run_id: 'hostile-2026-08-20-B',
+        second_reviewer: 'hostile-agent-B',
+      },
+      '11-ci-cd/10-projet-integrateur.md',
+      artifacts
+    );
+    expect(kept.second_review_done).toBe(true);
+    expect(kept.second_review_run_id).toBe('hostile-2026-08-20-A');
+    expect(
+      dossierBlocksVerified({ pedagogical_verdict: { verified: false } }, artifacts['11-ci-cd/10-projet-integrateur.md'])
+    ).toBe(true);
+  });
+});
+
+describe('seal and compact-manifest writers (shipped)', () => {
+  it('repair-and-seal does not stamp verified or second_review_done and does not write the compact manifest', () => {
+    const seal = fs.readFileSync(path.join(ROOT, 'scripts/repair-and-seal-campaign.js'), 'utf8');
+    expect(seal).not.toMatch(/status:\s*['"]verified['"]/);
+    expect(seal).not.toMatch(/second_review_done:\s*true/);
+    expect(seal).not.toMatch(/OUT_MANIFEST/);
+    expect(seal).not.toMatch(/pagesFinales\.push/);
+    expect(seal).toMatch(/generate-compact-manifest\.js/);
+  });
+
+  it('generate-compact-manifest is the only verified emitter and skips locator / incomplete second review', () => {
+    const gen = fs.readFileSync(path.join(ROOT, 'scripts/generate-compact-manifest.js'), 'utf8');
+    expect(gen).toMatch(/secondReviewIsSubstantive/);
+    expect(gen).toMatch(/sourceIsSufficientProof/);
+    expect(gen).toMatch(/dossierBlocksVerified/);
+    expect(gen).not.toMatch(/kind === 'confirmed'/);
+    expect(gen).toMatch(/Seul émetteur de `verified`/);
   });
 });
 

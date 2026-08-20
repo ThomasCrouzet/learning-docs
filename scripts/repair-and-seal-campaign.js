@@ -1,26 +1,22 @@
 #!/usr/bin/env node
 /**
- * Répare les dossiers de campagne (ISO 404, sources file://, tampons copiés)
- * puis écrit review-evidence/manifest.json + closure.json.
+ * Repairs campaign dossiers (ISO 404 URLs, file:// sources).
+ * Does not assign a compact verified status.
+ * Does not set the second-review completion flag.
+ * Compact public evidence is emitted only by generate-compact-manifest.js.
  */
 
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const { sha256, freezeInventory } = require('./lib/campaign-inventory');
-const {
-  sourceIsSufficientProof,
-  sourceFingerprint,
-} = require('./lib/campaign-sources');
+const { sourceFingerprint } = require('./lib/campaign-sources');
 const { inventaireMarkdown } = require('./lib/doc-audit');
-const { validateCampaignFinal } = require('./lib/campaign-final');
 
 const ROOT = path.join(__dirname, '..');
 const STATE = path.join(ROOT, 'research-audit', 'campaign-2026-08');
 const DOCS = path.join(ROOT, 'docs');
 const REVIEWS = path.join(STATE, 'page-reviews');
-const OUT_MANIFEST = path.join(ROOT, 'review-evidence', 'manifest.json');
-const OUT_CLOSURE = path.join(ROOT, 'review-evidence', 'closure.json');
 
 const ISO_URLS = {
   'https://www.iso.org/standard/iso-iec-27001': 'https://www.iso.org/standard/82875.html',
@@ -103,15 +99,6 @@ function write(p, obj) {
   fs.writeFileSync(p, JSON.stringify(obj, null, 2) + '\n');
 }
 
-function hostileBand(lotId) {
-  const m = String(lotId).match(/counter:(\d+)/);
-  const n = m ? parseInt(m[1], 10) : 0;
-  if (n <= 7) return { run: 'hostile-2026-08-20-A', reviewer: 'hostile-agent-A' };
-  if (n <= 15) return { run: 'hostile-2026-08-20-B', reviewer: 'hostile-agent-B' };
-  if (n <= 23) return { run: 'hostile-2026-08-20-C', reviewer: 'hostile-agent-C' };
-  return { run: 'hostile-2026-08-20-D', reviewer: 'hostile-agent-D' };
-}
-
 function repairSource(s, rel) {
   if (!s || typeof s !== 'object') return s;
   let url = s.url;
@@ -178,31 +165,16 @@ const inventory = freezeInventory({
 write(path.join(STATE, 'final-inventory.json'), inventory);
 
 const primary = load(path.join(STATE, 'primary-partition.json'));
-const counter = load(path.join(STATE, 'counter-partition.json'));
-
 const primaryMap = {};
 for (const lot of primary.lots) {
   for (const p of lot.paths) {
     primaryMap[p] = { lot: lot.id, reviewer: lot.reviewer, run: `primary:${lot.id}` };
   }
 }
-const counterMap = {};
-for (const lot of counter.lots) {
-  const band = hostileBand(lot.id);
-  for (const p of lot.paths) {
-    counterMap[p] = { lot: lot.id, reviewer: band.reviewer, run: band.run };
-  }
-}
-
-const created = inventory.docs_pages
-  .map((p) => p.docs_rel)
-  .filter((p) => p.startsWith('30-analyse-reseau/'));
-const initial = inventory.docs_pages
-  .map((p) => p.docs_rel)
-  .filter((p) => !p.startsWith('30-analyse-reseau/'));
 
 let repaired = 0;
-const pagesFinales = [];
+let stillThin = 0;
+const fingerprints = [];
 
 for (const page of inventory.docs_pages) {
   const rel = page.docs_rel;
@@ -225,63 +197,39 @@ for (const page of inventory.docs_pages) {
         claim_id: 'c-ai-act-99',
       });
     }
-    sources.unshift({
-      url: 'https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng',
-      section: 'Regulation (EU) 2026/1744 Digital Omnibus on AI',
-      excerpt:
-        'Regulation (EU) 2026/1744 of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230.',
-      claim_id: 'c-ai-act-omnibus',
-    });
-  }
-  if (!sources.some((s) => sourceIsSufficientProof(s))) {
-    throw new Error(`still insufficient sources after repair: ${rel}`);
+    if (!sources.some((s) => s.url === 'https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng')) {
+      sources.unshift({
+        url: 'https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng',
+        section: 'Regulation (EU) 2026/1744 Digital Omnibus on AI',
+        excerpt:
+          'Regulation (EU) 2026/1744 of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230.',
+        claim_id: 'c-ai-act-omnibus',
+      });
+    }
   }
   const pr = primaryMap[rel];
-  const ho = counterMap[rel];
   const abs = path.join(DOCS, rel);
   const hash = sha256(fs.readFileSync(abs, 'utf8'));
   const next = {
     ...d,
     page_id: rel,
     content_hash: hash,
-    status: 'reviewed',
     sources,
-    primary_run_id: d.primary_run_id || (pr && pr.run),
-    primary_reviewer: d.primary_reviewer || (pr && pr.reviewer),
-    second_review_run_id: d.second_review_run_id || (ho && ho.run),
-    second_reviewer: d.second_reviewer || (ho && ho.reviewer),
-    second_review_required: true,
-    second_review_done: true,
   };
+  if (!next.primary_run_id && pr) next.primary_run_id = pr.run;
+  if (!next.primary_reviewer && pr) next.primary_reviewer = pr.reviewer;
   write(file, next);
   repaired += 1;
-
-  pagesFinales.push({
-    page_id: rel,
-    path: rel,
-    kind: page.kind,
-    hash,
-    status: 'verified',
-    date: '2026-08-20',
-    primary_run_id: next.primary_run_id,
-    second_review_run_id: next.second_review_run_id,
-    primary_reviewer: next.primary_reviewer,
-    second_reviewer: next.second_reviewer,
-    second_review_required: true,
-    second_review_done: true,
-    claim_ids: (next.claims || []).map((c) => c.id).filter(Boolean),
-    sources: next.sources.filter((s) => sourceIsSufficientProof(s)),
-    snippet_verdict: next.snippet_verdict || null,
-    revalidation: '2027-02-20',
-    dossier_digest: sha256(JSON.stringify(next)),
-  });
+  fingerprints.push(sourceFingerprint(sources));
+  if (sources.length === 0) stillThin += 1;
 }
 
 const fps = new Map();
-for (const e of pagesFinales) {
-  const fp = sourceFingerprint(e.sources);
+for (let i = 0; i < fingerprints.length; i += 1) {
+  const fp = fingerprints[i];
+  if (!fp) continue;
   if (!fps.has(fp)) fps.set(fp, []);
-  fps.get(fp).push(e.path);
+  fps.get(fp).push(inventory.docs_pages[i].docs_rel);
 }
 const copied = [...fps.entries()].filter(([, p]) => p.length >= 8);
 if (copied.length) {
@@ -289,67 +237,6 @@ if (copied.length) {
   process.exit(1);
 }
 
-const head = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).stdout.trim();
-const manifest = {
-  schema_version: 1,
-  campaign: 'monumental-deepsearch-2026-08',
-  base_sha: head,
-  generated_at: new Date().toISOString(),
-  not_a_human_expert_certification: true,
-  initial_page_ids: initial,
-  created_page_ids: created,
-  transitions: [],
-  pages: pagesFinales,
-  pages_finales: pagesFinales,
-  primary_partition: primary.lots,
-  counter_partition: counter.lots,
-};
-
-const hashes = Object.fromEntries(pagesFinales.map((p) => [p.path, p.hash]));
-const check = validateCampaignFinal({
-  inventoryPaths: inventory.docs_pages.map((p) => p.docs_rel),
-  pagesFinales,
-  transitions: [],
-  initialPageIds: initial,
-  createdPageIds: created,
-  primaryPartition: primary.lots,
-  counterPartition: counter.lots,
-  manifest,
-  hashes,
-  closure: {
-    derived_from: 'registers',
-    criteria: {
-      inventory_match: true,
-      two_run_ids: true,
-      sources_sufficient: true,
-      second_reviews: true,
-    },
-  },
-  requireClosure: true,
-});
-
-const closure = {
-  derived_from: 'registers',
-  generated_at: new Date().toISOString(),
-  base_sha: head,
-  not_a_human_expert_certification: true,
-  criteria: {
-    inventory_match: check.ok,
-    two_run_ids: check.ok,
-    sources_sufficient: check.ok,
-    second_reviews: check.ok,
-    identity_equation: check.ok,
-    no_copied_stamp: copied.length === 0,
-  },
-};
-
-write(OUT_MANIFEST, manifest);
-write(OUT_CLOSURE, closure);
-
 console.log(
-  `seal: repaired=${repaired} pages=${pagesFinales.length} created=${created.length} campaign_final_ok=${check.ok}`
+  `repair: dossiers=${repaired} thin_sources=${stillThin} copied_groups=${copied.length} (compact manifest not written)`
 );
-if (!check.ok) {
-  for (const e of check.errors.slice(0, 40)) console.error(' -', e);
-  process.exit(1);
-}

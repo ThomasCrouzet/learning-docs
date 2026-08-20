@@ -46,8 +46,20 @@ function locatorText(source) {
 }
 
 /**
+ * Batch stamp of the form `[locator for path]` glued onto an excerpt.
+ * Length >= 8 is not proof; the bracketed path is a scope stamp.
+ * @param {unknown} text
+ * @returns {boolean}
+ */
+function isLocatorStampExcerpt(text) {
+  if (typeof text !== 'string') return false;
+  return /\[locator for\b/i.test(text);
+}
+
+/**
  * A source is sufficient proof only when it has a deep URL, a precise locator,
- * and a claim_id. Homepages and path-scope stamps never qualify.
+ * and a claim_id. Homepages, path-scope stamps, and `[locator for` excerpts
+ * never qualify.
  * @param {object} source
  * @returns {boolean}
  */
@@ -58,6 +70,10 @@ function sourceIsSufficientProof(source) {
   if (isGenericHomepage(url)) return false;
   const loc = locatorText(source);
   if (loc.length < 8) return false;
+  if (isLocatorStampExcerpt(loc)) return false;
+  if (isLocatorStampExcerpt(source.excerpt) || isLocatorStampExcerpt(source.locator)) {
+    return false;
+  }
   const claimId = source.claim_id;
   if (claimId == null || String(claimId).trim() === '') return false;
   // scope:path may exist as metadata but is never the proof
@@ -95,6 +111,7 @@ module.exports = {
   GENERIC_PATH_RE,
   isGenericHomepage,
   isScopePathStamp,
+  isLocatorStampExcerpt,
   locatorText,
   sourceIsSufficientProof,
   sourcesQualifyAsProof,
