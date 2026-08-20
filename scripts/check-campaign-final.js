@@ -40,6 +40,20 @@ if (!fs.existsSync(manifestPath)) {
 
 const manifest = readJson(manifestPath);
 const closure = loadOptional(closurePath);
+const { inventaireMarkdown } = require('./lib/doc-audit');
+const DOCS = path.join(ROOT, 'docs');
+const diskInventory = inventaireMarkdown(DOCS, {
+  readFile: (p) => fs.readFileSync(p, 'utf8'),
+  listDir: (p) => fs.readdirSync(p),
+  isDir: (p) => {
+    try {
+      return fs.statSync(p).isDirectory();
+    } catch {
+      return false;
+    }
+  },
+  exists: (p) => fs.existsSync(p),
+});
 const inventory = loadOptional(path.join(stateDir, 'final-inventory.json'))
   || loadOptional(path.join(stateDir, 'initial-inventory.json'));
 const partitions = {
@@ -48,9 +62,7 @@ const partitions = {
 };
 
 const pagesFinales = manifest.pages_finales || manifest.pages || manifest.entries || [];
-const inventoryPaths = inventory
-  ? (inventory.docs_pages || []).map((p) => p.docs_rel || p.page_id)
-  : pagesFinales.map((p) => p.path || p.page_id);
+const inventoryPaths = diskInventory;
 
 const hashes = {};
 for (const e of pagesFinales) {

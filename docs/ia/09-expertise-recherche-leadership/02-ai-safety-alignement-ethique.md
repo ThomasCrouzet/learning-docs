@@ -273,7 +273,7 @@ Sans alignement, voici les problèmes rencontrés :
 
 ### Qu'est-ce que l'EU AI Act ?
 
-**Définition** : L'EU AI Act est le règlement européen sur l'intelligence artificielle, adopté en 2024 et dont l'application progressive s'étend de 2025 à 2027. Il classe les systèmes d'IA en quatre niveaux de risque et impose des obligations proportionnelles à chaque niveau.
+**Définition** : L'EU AI Act est le [règlement (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj) sur l'intelligence artificielle. Un amendement ([règlement (UE) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng), « Digital Omnibus on AI », 8 juillet 2026) le complète. Il classe les systèmes d'IA en niveaux de risque et impose des obligations proportionnelles. Le cadre NIST AI RMF est un guide volontaire américain : il ne fixe ni les dates ni les amendes européennes.
 
 **Le problème que l'EU AI Act résout** :
 
@@ -289,7 +289,7 @@ Sans réglementation, voici les problèmes rencontrés :
 | -------- | -------- |
 | Pas de cadre juridique | Classification par niveaux de risque avec obligations proportionnées |
 | Pas de recours | Droit à l'explication et obligation de transparence pour les systèmes à haut risque |
-| Course au déploiement | Sanctions financières dissuasives (jusqu'à 35 millions d'euros ou 7% du CA mondial) |
+| Course au déploiement | Amendes administratives : le plafond de 35 millions d'euros ou 7 % du CA mondial (art. 99, paragraphe 3) vise les interdictions de l'article 5 ; d'autres plafonds existent pour d'autres manquements |
 
 **Analogie concrète** : L'EU AI Act fonctionne comme la réglementation des médicaments. Un bonbon vitaminé (risque minimal) est vendu librement. Un médicament courant (risque limité) nécessite une notice. Un médicament puissant (haut risque) nécessite une ordonnance et des tests cliniques. Un poison (risque inacceptable) est interdit.
 
@@ -302,14 +302,16 @@ Sans réglementation, voici les problèmes rencontrés :
 | Risque limité | Chatbots, deepfakes, systèmes de recommandation | Obligation de transparence (l'utilisateur doit savoir qu'il interagit avec une IA) |
 | Risque minimal | Filtres spam, jeux vidéo, autocorrection | Aucune obligation spécifique |
 
-#### Calendrier d'application (2025-2027)
+#### Calendrier d'application (art. 113 du règlement 2024/1689)
 
-| Date | Obligation |
-| ---- | ---------- |
-| Février 2025 | Interdiction des systèmes à risque inacceptable |
+Les dates ci-dessous sont celles du texte initial. Vérifie le [règlement 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) avant de les traiter comme encore applicables telles quelles.
+
+| Date | Obligation (texte 2024/1689) |
+| ---- | ---------------------------- |
+| Février 2025 | Interdictions de l'article 5 |
 | Août 2025 | Obligations pour les modèles d'IA à usage général (GPAI) |
-| Août 2026 | Obligations complètes pour les systèmes à haut risque |
-| Août 2027 | Obligations pour les systèmes à haut risque intégrés dans des produits réglementés |
+| 2 août 2026 | Application générale (art. 113), dont une partie des obligations haut risque |
+| Août 2027 | Certaines obligations haut risque liées à des produits déjà réglementés |
 
 ---
 

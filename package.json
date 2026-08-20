@@ -41,7 +41,7 @@
     "audit:crypto-accents:fix": "node scripts/scan-crypto-accent-residual.js --fix",
     "audit:sync-final-report": "node scripts/sync-final-report-from-coverage.js",
     "audit:check-final-report": "node scripts/check-final-report-claims.js",
-    "lint:ci": "npm run lint && npm run lint:check-names && npm run lint:emdash && npm run lint:accents && npm run lint:prereq-links && npm run lint:frontmatter && npm run lint:structure && npm run lint:consistency && npm run lint:cursus-map && npm run lint:vendored-assets",
+    "lint:ci": "npm run lint && npm run lint:check-names && npm run lint:emdash && npm run lint:accents && npm run lint:prereq-links && npm run lint:frontmatter && npm run lint:structure && npm run lint:consistency && npm run lint:cursus-map && npm run lint:vendored-assets && npm run lint:campaign-final",
     "a11y:reading-time": "node scripts/add-reading-time.js",
     "a11y:navigation": "node scripts/add-navigation-metadata.js",
     "a11y:en-bref": "node scripts/generate-en-bref.js",
