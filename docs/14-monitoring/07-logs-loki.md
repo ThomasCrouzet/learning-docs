@@ -179,6 +179,9 @@ services:
     command: -config.file=/etc/loki/local-config.yaml
 
   # Promtail : collecte les logs et les envoie à Loki
+  # Note 2026 : Grafana a annoncé la fin de vie de Promtail (2 mars 2026).
+  # L'agent successeur est Grafana Alloy. Ici Promtail 3.1.0 reste l'exemple
+  # de labo du curseur Loki 3.1 ; ne pas le copier en production neuve.
   promtail:
     image: grafana/promtail:3.1.0
     volumes:
