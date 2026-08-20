@@ -1,18 +1,37 @@
 # Configuration gitleaks pour learning-docs.
 #
-# Les extraits pédagogiques dans docs/ peuvent ressembler à des secrets
-# (clés d'exemple, PEM de démo). On ne masque plus tout le corpus Markdown :
-# seuls les motifs explicitement factices et les rapports d'audit locaux
-# sont en allowlist. Un secret réel dans une fiche doit faire échouer le scan.
+# On ne masque plus tout docs/**/*.md. Seuls :
+# - les extraits pédagogiques de secrets (fichiers listés, contenus d'exemple) ;
+# - les rapports d'audit locaux.
+# Un secret réel dans une fiche hors liste ou dans scripts/ CI doit échouer.
 
 [extend]
 useDefault = true
 
 [allowlist]
-description = "Placeholders pédagogiques clairement factices et rapports d'audit locaux"
+description = "Exemples pédagogiques de secrets (fichiers ciblés) et rapports d'audit"
 paths = [
   '''audit-reports/.*''',
+  '''docs/12-api-design/08-authentification-api\.md$''',
+  '''docs/14-monitoring/05-grafana-dashboards\.md$''',
+  '''docs/14-monitoring/06-grafana-alerting\.md$''',
+  '''docs/21-services-systeme/03-serveur-mail\.md$''',
+  '''docs/21-services-systeme/06-proxy-reverse-proxy\.md$''',
+  '''docs/ansible/01-ansible/12-ansible-vault\.md$''',
+  '''docs/ansible/01-ansible/13-gestion-multi-environnement\.md$''',
+  '''docs/cybersecurite/02-fondamentaux-securite/02-cryptographie\.md$''',
+  '''docs/cybersecurite/03-competences-intermediaires/02-securite-web-applicative\.md$''',
+  '''docs/cybersecurite/04-specialisation-offensive/03-active-directory\.md$''',
+  '''docs/cybersecurite/04-specialisation-offensive/04-securite-web-avancee\.md$''',
+  '''docs/cybersecurite/06-domaines-avances/04-securite-mobile-iot\.md$''',
+  '''docs/cybersecurite/07-red-team-avance/04-active-directory-avance\.md$''',
+  '''docs/devops/03-kubernetes/06-configmaps-secrets\.md$''',
+  '''docs/devops/03-kubernetes/11-deployer-symfony-kubernetes\.md$''',
+  '''docs/devops/03-kubernetes/12-projet-integrateur\.md$''',
+  '''docs/ia/02-programmation-outils/02-environnement-developpement-infrastructure\.md$''',
+  '''docs/00-blocs-competences/BC03-cloud-computing/05-kubernetes-bases\.md$''',
+  '''docs/epitech/07-nodejs/07-middleware-routes\.md$''',
 ]
 regexes = [
-  '''(?i)(exemple|example[-_ ]?(key|secret|token)|changeme|placeholder|dummy[-_]?secret|your[-_]?api[-_]?key|votre[_-]?cle|AKIAIOSFODNN7EXAMPLE)''',
+  '''(?i)(exemple|example[-_ ]?(key|secret|token)|changeme|placeholder|dummy[-_]?secret|your[-_]?api[-_]?key|votre[_-]?cle|AKIAIOSFODNN7EXAMPLE|admin:admin|ak_live_abc123)''',
 ]
