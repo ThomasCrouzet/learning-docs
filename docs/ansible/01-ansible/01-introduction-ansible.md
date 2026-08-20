@@ -310,7 +310,7 @@ python3 --version
 Python 3.10.12
 ```
 
-Le numéro de version peut être différent. L'important est que Python 3.8 ou supérieur est installé. Si tu obtiens `command not found`, installe Python 3 avec le gestionnaire de paquets de ta distribution.
+Le numéro de version peut être différent. Sur le nœud de contrôle, ansible-core 2.21 exige Python 3.12 ou supérieur. Si tu obtiens `command not found`, installe Python 3.12+ avec le gestionnaire de paquets de ta distribution. Les nœuds gérés peuvent rester sur Python 3.9 à 3.14.
 
 **Vérifier la version de SSH** :
 

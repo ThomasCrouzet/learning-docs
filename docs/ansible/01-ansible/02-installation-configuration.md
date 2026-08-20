@@ -310,7 +310,7 @@ Maintenant que l'environnement virtuel est actif, installe Ansible :
 
 ```bash
 # Installe Ansible 14.x (ansible-core 2.21) dans l'environnement virtuel
-# Epingle la serie 13.x pour coller aux versions de reference de ce cursus.
+# Epingle la serie 14.x pour coller aux versions de reference de ce cursus.
 # Sans borne, pip installe la derniere version majeure (comportements et Python
 # minimum peuvent differer de ceux documentes ici).
 pip install 'ansible>=14.0,<15.0'
@@ -355,7 +355,7 @@ Les points à vérifier :
 | Installé globalement sur le système | Isolé dans l'environnement virtuel |
 | Mise à jour liée à la distribution | Mise à jour contrôlée avec une borne de version |
 
-Recommandation : Utilise **toujours** pip pour installer Ansible, avec une **borne de version** (`>=10.0,<11.0` pour ce cursus). La version disponible via apt est souvent en retard de plusieurs versions majeures. Sans borne, `pip install ansible` prend la dernière majeure, qui peut exiger un Python plus recent et differer des exemples de ce cours.
+Recommandation : Utilise **toujours** pip pour installer Ansible, avec une **borne de version** (`>=14.0,<15.0` pour ce cursus). La version disponible via apt est souvent en retard de plusieurs versions majeures. Sans borne, `pip install ansible` prend la dernière majeure, qui peut exiger un Python plus recent et differer des exemples de ce cours.
 
 ---
 

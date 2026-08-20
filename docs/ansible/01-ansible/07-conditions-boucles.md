@@ -134,7 +134,7 @@ Sans boucles, voici les problèmes rencontrés :
 **Ce qu'une boucle n'est PAS** :
 
 - Une boucle `loop` n'est pas un `for` imbriqué. Ansible ne supporte pas nativement les boucles dans les boucles.
-- `loop` remplace l'ancienne syntaxe `with_items` (dépréciée depuis Ansible 2.5). Pour tout nouveau code, utilise `loop`.
+- `loop` est la syntaxe recommandée depuis Ansible 2.5 pour tout nouveau code. `with_items` reste valide (ce n'est pas une dépréciation officielle) mais `loop` est plus uniforme.
 
 ---
 
@@ -758,12 +758,12 @@ when: ansible_facts['distribution_major_version'] | int >= 12
 
 ### Piège 4 : Utiliser `with_items` au lieu de `loop`
 
-**Problème** : `with_items` est dépréciée depuis Ansible 2.5 (2018).
+**Problème** : `with_items` mélange plusieurs lookups historiques. Le nouveau code devient plus difficile à relire à côté de `loop`.
 
-**Solution** : Toujours utiliser `loop` pour tout nouveau code.
+**Solution** : Utiliser `loop` pour tout nouveau playbook. `with_items` n'est pas retiré, mais ce n'est plus le modèle enseigné ici.
 
 ```yaml
-# Déprécié
+# Ancienne syntaxe, à ne plus écrire dans un nouveau playbook
 with_items:
   - nginx
   - curl
