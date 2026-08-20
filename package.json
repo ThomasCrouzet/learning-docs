@@ -1,9 +1,11 @@
 {
   "name": "learning-docs",
   "version": "1.0.0",
-  "description": "Documentation pédagogique francophone structurée et explicite (Learning Docs)",
+  "description": "Documentation pédagogique francophone structurée et explicite (Learning Docs). Contenu pédagogique: CC BY 4.0 (LICENSE). Outillage Node/scripts/CI: MIT (LICENSE-CODE).",
   "private": true,
   "license": "SEE LICENSE IN LICENSE",
+  "contentLicense": "CC-BY-4.0",
+  "codeLicense": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ThomasCrouzet/learning-docs.git"
@@ -27,10 +29,14 @@
     "lint:consistency": "node scripts/check-consistency.js",
     "lint:cursus-map": "node scripts/generate-cursus-map.js --check",
     "lint:review-registry": "node scripts/check-review-registry.js",
+    "lint:campaign-final": "node scripts/check-campaign-final.js",
     "registry:realign": "node scripts/realign-review-registry.js",
     "lint:vendored-assets": "node scripts/check-vendored-assets.js",
     "audit:docs": "node scripts/doc-audit.js",
-    "audit:snippets": "node scripts/run-snippet-runtime.js",
+    "audit:snippets": "node scripts/run-snippet-runtime.js --strict",
+    "audit:routes": "node scripts/audit-routes.js",
+    "audit:a11y:all": "node scripts/audit-a11y-all.js",
+    "audit:links": "node scripts/audit-links.js",
     "audit:crypto-accents": "node scripts/scan-crypto-accent-residual.js",
     "audit:crypto-accents:fix": "node scripts/scan-crypto-accent-residual.js --fix",
     "audit:sync-final-report": "node scripts/sync-final-report-from-coverage.js",

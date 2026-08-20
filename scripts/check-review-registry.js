@@ -27,9 +27,16 @@ const {
 } = require('./lib/review-registry-sources');
 const { isPageOwnedEntry } = require('./lib/review-registry-page-owned');
 
+function argValue(flag) {
+  const i = process.argv.indexOf(flag);
+  return i >= 0 ? process.argv[i + 1] : null;
+}
+
 const ROOT = path.join(__dirname, '..');
-const DOCS = path.join(ROOT, 'docs');
-const REGISTRY = path.join(ROOT, 'audit-reports', 'review-registry', 'registry.json');
+const DOCS = path.resolve(argValue('--docs-dir') || path.join(ROOT, 'docs'));
+const REGISTRY = path.resolve(
+  argValue('--registry') || path.join(ROOT, 'audit-reports', 'review-registry', 'registry.json')
+);
 
 const TERMINAL = new Set(['ok', 'corrected', 'merged', 'moved', 'removed', 'blocked']);
 const ALLOWED = new Set([...TERMINAL, 'pending', 'audited']);
@@ -130,7 +137,11 @@ for (const e of entries) {
   }
   if (e.second_review_required && !e.second_review_done) {
     incompleteSecond += 1;
-    // Incomplete seconds stay visible. --strict must not force a rubber stamp.
+    if (strict) {
+      errors.push(
+        `${key}: second_review_required but incomplete (blocking under --strict)`
+      );
+    }
   }
 
   // Reserves must not contain Object stringification bugs

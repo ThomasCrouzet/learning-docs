@@ -28,7 +28,7 @@ Créer une documentation de programmation structurée et explicite pour l'appren
 | Wiki MkDocs démarrer | `docker compose up -d` |
 | Wiki MkDocs arrêter | `docker compose down` |
 | Wiki MkDocs build | `docker compose run --rm mkdocs build` |
-| Wiki MkDocs build strict | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.6 build --strict` |
+| Wiki MkDocs build strict | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build --strict` |
 | Ajouter temps lecture | `npm run a11y:reading-time` |
 | Ajouter navigation | `npm run a11y:navigation` |
 | Générer "En Bref" | `npm run a11y:en-bref` |
@@ -48,7 +48,7 @@ Un pre-commit hook (Husky + lint-staged) exécute `fix-accents.js`, `fix-emdash.
 | --------- | -------- |
 | Avant commit | Automatique (Husky : accents + em dashes + markdownlint) |
 | Validation complète | `npm run validate` (tests + lint + nommage + em dashes + frontmatter) |
-| Build MkDocs strict | `docker run --rm -v $(pwd):/docs squidfunk/mkdocs-material:latest build --strict` |
+| Build MkDocs strict | `docker run --rm -v $(pwd):/docs squidfunk/mkdocs-material:9.7.7 build --strict` |
 | Avant push | `/pre-push` (validation complète + build MkDocs) |
 
 ## Architecture du Projet
@@ -119,7 +119,7 @@ Le projet contient **603 fiches réparties sur 64 cursus** (chiffres à recalcul
 
 ### Wiki MkDocs
 
-Le wiki utilise **MkDocs Material 9.7.6** (image Docker épinglée dans `docker-compose.yml` et `requirements.txt`). En local : `docker compose up -d` puis `http://localhost:8100`.
+Le wiki utilise **MkDocs Material 9.7.7** (image Docker épinglée dans `docker-compose.yml` et `requirements.txt`). En local : `docker compose up -d` puis `http://localhost:8100`.
 
 - **`mkdocs.yml`** : configuration MkDocs avec navigation complète de toutes les fiches
 - **`docker-compose.yml`** : service MkDocs Material (port 8100)
@@ -184,7 +184,7 @@ Le suivi de progression (planning, tableaux de bord) est hors de ce dépôt publ
 
 ### CI/CD (`.github/workflows/deploy.yml`)
 
-Pipeline GitHub Actions (push sur master ou workflow_dispatch) :
+Pipeline GitHub Actions (push sur main ou workflow_dispatch) :
 
 1. Lint Markdown (`npm run lint`)
 2. Validation noms de fichiers (`npm run lint:check-names`)
@@ -219,13 +219,13 @@ Ce tableau définit les versions utilisées dans toute la documentation. Ces ver
 | Twig | 3.x | - |
 | EasyAdmin | 4.x | - |
 | Nginx | 1.26 | - |
-| MkDocs Material | 9.7.6 | projet Material : maintenance limitée annoncée jusqu'à fin 2026 (suivre le changelog) |
+| MkDocs Material | 9.7.7 | projet Material : maintenance limitée annoncée jusqu'à fin 2026 (suivre le changelog) |
 | Java | 21 LTS | Septembre 2031 |
 | Node.js | 22 LTS | Avril 2027 |
 | Podman | 4.x | - |
 | OpenShift | 4.14+ | - |
 | CRC | 2.x | - |
-| Ansible | 10.x (ansible-core 2.17) | - |
+| Ansible | 14.x (ansible-core 2.21) | - |
 
 **Note** : Les exemples de code et configurations de cette documentation utilisent ces versions. Si tu utilises des versions différentes, certaines syntaxes peuvent varier.
 
@@ -713,5 +713,5 @@ Après des changements structurants (nouveaux cursus, CI, licence), mettre à jo
 Build strict de validation :
 
 ```bash
-docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.6 build --strict
+docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build --strict
 ```

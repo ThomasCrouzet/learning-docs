@@ -8,9 +8,6 @@ docs_dir: docs
 exclude_docs: |
   includes/
   ansible/01-ansible/index.md
-  a-propos.md
-  politique-fraicheur.md
-  accessibility-audit.md
   tags.md
 
 theme:
@@ -1058,6 +1055,9 @@ nav:
 
   - Références:
       - fiches-reference/index.md
+      - À propos: a-propos.md
+      - Politique de fraîcheur: politique-fraicheur.md
+      - Audit d'accessibilité: accessibility-audit.md
       - Carte des cursus: carte-cursus.md
       - Aide-mémoire Docker: fiches-reference/01-aide-memoire-docker.md
       - Aide-mémoire Symfony: fiches-reference/02-aide-memoire-symfony.md

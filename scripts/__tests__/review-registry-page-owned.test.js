@@ -27,7 +27,16 @@ describe('page-owned review rows', () => {
     expect(
       isPageOwnedEntry(rel, {
         review_depth: 'content_page',
-        sources: [{ url: 'https://docs.python.org/3/', scope: `path:${rel}` }],
+        sources: [
+          {
+            url: 'https://docs.python.org/3/tutorial/appetite.html',
+            scope: `path:${rel}`,
+            section: '1. Whetting Your Appetite',
+            excerpt:
+              'If you do much work on computers, eventually you find that you want to automate some task.',
+            claim_id: 'c-h1',
+          },
+        ],
         claims_verified: [{ claim: 'En bref: installer Python 3.12 et écrire un premier script' }],
         perishable_claims: [{ claim: 'Python 3.12', status: 'unchecked', note: rel }],
         examples_executed: [{ status: 'static', reason: '3 blocs dans ' + rel }],

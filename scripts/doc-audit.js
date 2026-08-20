@@ -20,18 +20,19 @@ const {
   inventaireMarkdown,
   runDocAudit,
   formatReportMarkdown,
+  findingsExceedThreshold,
 } = require('./lib/doc-audit');
 
 const ROOT = path.join(__dirname, '..');
-const DOCS_DIR = path.join(ROOT, 'docs');
-const REPORTS_DIR = path.join(ROOT, 'audit-reports');
-const MKDOCS = path.join(ROOT, 'mkdocs.yml');
-
 const args = process.argv.slice(2);
 const wantStdout = args.includes('--stdout');
 const wantJson = args.includes('--json');
 const failOnIdx = args.indexOf('--fail-on');
 const failOn = failOnIdx >= 0 ? args[failOnIdx + 1] : 'never';
+const docsDirIdx = args.indexOf('--docs-dir');
+const DOCS_DIR = path.resolve(docsDirIdx >= 0 ? args[docsDirIdx + 1] : path.join(ROOT, 'docs'));
+const REPORTS_DIR = path.join(ROOT, 'audit-reports');
+const MKDOCS = path.join(ROOT, 'mkdocs.yml');
 
 function listDir(p) {
   return fs.readdirSync(p);
@@ -85,7 +86,7 @@ const md = formatReportMarkdown(report, {
   remaining:
     '- Exactitude technique profonde (exécution des exemples) : relecture éditoriale par cursus.\n' +
     '- Liens externes : non vérifiés par défaut (utiliser --check-external si implémenté).\n' +
-    '- Actualité juillet 2026 des stacks hors heuristiques de versions : vérification manuelle / web.',
+    '- Actualité août 2026 des stacks hors heuristiques de versions : vérification manuelle / web.',
 });
 
 if (!fs.existsSync(REPORTS_DIR)) {
@@ -135,14 +136,9 @@ if (wantJson) {
   console.log(`  Rapports : ${path.relative(ROOT, mdPath)}, ${path.relative(ROOT, jsonPath)}`);
 }
 
-const severityRank = { high: 3, medium: 2, low: 1, never: 99 };
-const threshold = severityRank[failOn] ?? 99;
-if (threshold < 99) {
-  const bad = report.findings.some((f) => (severityRank[f.severity] || 0) >= threshold);
-  if (bad) {
-    console.error(`\nÉchec : findings de sévérité >= ${failOn} détectés.`);
-    process.exit(1);
-  }
+if (findingsExceedThreshold(report.findings, failOn)) {
+  console.error(`\nÉchec : findings de sévérité >= ${failOn} détectés.`);
+  process.exit(1);
 }
 
 process.exit(0);

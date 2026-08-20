@@ -1,19 +1,18 @@
 # Configuration gitleaks pour learning-docs.
 #
-# Ce dépôt est un support de cours (docs/**.md) : les "secrets" que gitleaks
-# détecte dans les fichiers markdown sont des exemples pédagogiques (Ansible
-# Vault, clés API d'illustration, JWT de démo, clés privées d'exemple, en-têtes
-# curl d'authentification). Ce ne sont pas de vrais secrets.
-#
-# On étend le ruleset par défaut et on neutralise l'ensemble de la
-# documentation markdown, tout en gardant le scan actif sur le code, les
-# configs, les scripts et la CI où une fuite réelle pourrait survenir.
+# Les extraits pédagogiques dans docs/ peuvent ressembler à des secrets
+# (clés d'exemple, PEM de démo). On ne masque plus tout le corpus Markdown :
+# seuls les motifs explicitement factices et les rapports d'audit locaux
+# sont en allowlist. Un secret réel dans une fiche doit faire échouer le scan.
+
 [extend]
 useDefault = true
 
 [allowlist]
-description = "Exemples pédagogiques dans la documentation et rapports d'audit (citations de fixes docs)"
+description = "Placeholders pédagogiques clairement factices et rapports d'audit locaux"
 paths = [
-  '''docs/.*\.md$''',
-  '''audit-reports/.*\.md$''',
+  '''audit-reports/.*''',
+]
+regexes = [
+  '''(?i)(exemple|example[-_ ]?(key|secret|token)|changeme|placeholder|dummy[-_]?secret|your[-_]?api[-_]?key|votre[_-]?cle|AKIAIOSFODNN7EXAMPLE)''',
 ]

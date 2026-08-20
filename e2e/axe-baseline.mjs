@@ -20,7 +20,6 @@ const pages = [
   '/fiches-reference/',
   '/cybersecurite/',
   '/crypto-monnaies/',
-  '/epitech/',
 ];
 
 const browser = await chromium.launch();
@@ -53,7 +52,11 @@ function summarize(axe) {
 async function auditPage(context, pagePath, label = pagePath) {
   const page = await context.newPage();
   try {
-    await page.goto(BASE + pagePath, { waitUntil: 'networkidle', timeout: 60000 });
+    const resp = await page.goto(BASE + pagePath, { waitUntil: 'networkidle', timeout: 60000 });
+    const status = resp ? resp.status() : 0;
+    if (status !== 200) {
+      throw new Error(`HTTP ${status} for ${pagePath}`);
+    }
     await page.waitForTimeout(1500);
     const axe = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])

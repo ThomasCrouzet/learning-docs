@@ -21,6 +21,8 @@ const {
   classifySnippet,
   buildValidationJob,
   runInlineJob,
+  processExitCode,
+  resolveSnippetTargetFile,
 } = require('./lib/snippet-runtime');
 
 const ROOT = path.join(__dirname, '..');
@@ -33,6 +35,7 @@ const limitIdx = args.indexOf('--limit');
 const limit = limitIdx >= 0 ? parseInt(args[limitIdx + 1], 10) : 0;
 const fileIdx = args.indexOf('--file');
 const onlyFile = fileIdx >= 0 ? args[fileIdx + 1] : null;
+const strict = args.includes('--strict');
 
 function walkMd(dir, base = '') {
   const out = [];
@@ -127,15 +130,17 @@ if (fs.existsSync(WORK)) {
 ensureDir(WORK);
 
 const files = onlyFile
-  ? [onlyFile.replace(/^docs\//, '')]
+  ? [onlyFile]
   : walkMd(DOCS).sort();
 
 const results = [];
 let inventory = 0;
 
 for (const rel of files) {
-  const full = path.join(DOCS, rel);
-  if (!fs.existsSync(full)) continue;
+  const full = onlyFile
+    ? resolveSnippetTargetFile(rel, { root: ROOT, docs: DOCS })
+    : path.join(DOCS, rel);
+  if (!full || !fs.existsSync(full)) continue;
   const content = fs.readFileSync(full, 'utf8');
   const snippets = extractSnippets(content, rel);
   for (const snip of snippets) {
@@ -319,6 +324,7 @@ const summary = {
   fail: results.filter((r) => r.status === 'fail').length,
   skipped: results.filter((r) => r.status === 'skipped').length,
   unclassified: results.filter((r) => !['pass', 'fail', 'skipped'].includes(r.status)).length,
+  skipped_without_reason: results.filter((r) => r.status === 'skipped' && !r.reason).length,
   by_lang: {},
   by_status: { pass: 0, fail: 0, skipped: 0 },
 };
@@ -383,6 +389,4 @@ console.log(
 );
 console.log(`Report: ${path.relative(ROOT, jsonPath)}`);
 
-if (summary.unclassified > 0) process.exit(2);
-// fail does not exit 1 by default : mission may fix fails in a second pass
-process.exit(0);
+process.exit(processExitCode(summary, { strict }));

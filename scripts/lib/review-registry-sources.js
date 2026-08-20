@@ -4,7 +4,8 @@
  * topic mismatch (e.g. Python pages citing MongoDB aggregation).
  */
 
-const DATE = '2026-07-28';
+const DATE = '2026-08-20';
+const { sourceIsSufficientProof } = require('./campaign-sources');
 
 /** @typedef {{ url: string, topic: string, date: string, scope?: string }} ReviewSource */
 
@@ -193,10 +194,10 @@ function sourcesForPath(rel) {
 }
 
 /**
- * True if at least one source looks path-bound (scope starts with path:)
- * or URL host is not a known cross-lot mismatch for this path.
+ * Preuve de pertinence : une URL profonde + locateur, jamais un tampon
+ * `scope: path:...` ni une homepage de documentation.
  * @param {string} rel
- * @param {Array<{url?: string, topic?: string, scope?: string}>} sources
+ * @param {Array<{url?: string, topic?: string, scope?: string, section?: string, excerpt?: string, claim_id?: string}>} sources
  */
 function sourcesMatchPath(rel, sources) {
   if (!Array.isArray(sources) || sources.length === 0) return false;
@@ -211,17 +212,7 @@ function sourcesMatchPath(rel, sources) {
       }
     }).filter(Boolean)
   );
-  // Accept if any source host matches expected path hosts, or scope is path:
-  for (const s of sources) {
-    if (s && typeof s.scope === 'string' && s.scope.startsWith('path:')) return true;
-    try {
-      const host = new URL(s.url).hostname;
-      if (expectedHosts.has(host)) return true;
-    } catch {
-      /* ignore */
-    }
-  }
-  // Known mismatch fingerprints (historical theater)
+
   const blob = JSON.stringify(sources);
   if (p.startsWith('15-python') || p.startsWith('16-python-data')) {
     if (blob.includes('mongodb.com') && !blob.includes('python.org') && !blob.includes('pandas') && !blob.includes('numpy')) {
@@ -237,9 +228,24 @@ function sourcesMatchPath(rel, sources) {
   if (p.startsWith('00-outils-ia') && blob.includes('arxiv.org') && !blob.includes('nist.gov')) {
     return false;
   }
-  // If scope is only domain: and we have no path match, still accept multi-source domain lots
-  // when at least one host is plausible for the lot (caller may be lenient).
-  return expectedHosts.size === 0;
+
+  for (const s of sources) {
+    if (!sourceIsSufficientProof(s)) continue;
+    try {
+      const host = new URL(s.url).hostname;
+      if (expectedHosts.size === 0) return true;
+      if (expectedHosts.has(host)) return true;
+      for (const h of expectedHosts) {
+        const root = String(h).replace(/^www\./, '');
+        if (host === h || host.endsWith(`.${root}`) || host.replace(/^www\./, '') === root) {
+          return true;
+        }
+      }
+    } catch {
+      /* ignore invalid URL already rejected by sourceIsSufficientProof */
+    }
+  }
+  return false;
 }
 
 function isGenericPerishableOnly(perishableClaims) {
