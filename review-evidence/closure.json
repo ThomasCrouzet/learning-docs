@@ -1,0 +1,14 @@
+{
+  "derived_from": "registers",
+  "generated_at": "2026-08-20T20:25:28.928Z",
+  "base_sha": "86a88bda78cc77dc5bcf4efe3d8c3280b2bf7673",
+  "not_a_human_expert_certification": true,
+  "criteria": {
+    "inventory_match": true,
+    "two_run_ids": true,
+    "sources_sufficient": true,
+    "second_reviews": true,
+    "identity_equation": true,
+    "no_copied_stamp": true
+  }
+}

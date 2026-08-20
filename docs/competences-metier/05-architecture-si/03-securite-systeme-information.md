@@ -127,6 +127,8 @@ cursus: "Architecture SI"
 
 **Note** : la version ISO 27001:2013 comptait 114 mesures réparties en 14 domaines. La révision **ISO 27001:2022** a restructuré l'Annexe A en 93 contrôles regroupés en 4 thèmes. La période de transition des certificats 2013 vers la version 2022 s'est terminée le **31 octobre 2025** : seuls les certificats ISO/IEC 27001:2022 restent valides après cette date (référence IAF / organismes d'accréditation).
 
+Le catalogue officiel est **ISO/IEC 27001:2022**, numéro **82875** : [iso.org/standard/82875.html](https://www.iso.org/standard/82875.html). Les URLs du type `iso.org/standard/iso-iec-27001` ou `iso.org/standard/27001.html` ne sont pas des notices catalogue.
+
 ---
 
 ## Étapes Pratiques
