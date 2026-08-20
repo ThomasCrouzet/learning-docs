@@ -219,11 +219,52 @@ describe('HTTP pretty-404 and axe gates (shipped)', () => {
     expect(assertHttpDocumentOk(404, '<h1>Not found</h1>').ok).toBe(false);
     expect(assertHttpDocumentOk(200, '<h1>Page non trouvée</h1>').ok).toBe(false);
     expect(assertHttpDocumentOk(200, '<title>Intro PHP</title><h1>PHP</h1>', 'text/html').ok).toBe(true);
+    expect(
+      assertHttpDocumentOk(
+        200,
+        '<title>Learning Docs</title><h1>Accueil</h1><path d="M1.034-.404-.601"></path>',
+        'text/html'
+      ).ok
+    ).toBe(true);
   });
 
   it('fails on axe violations', () => {
     expect(forbiddenAxeViolations({ violations: [{ id: 'color-contrast' }] }).fail).toBe(true);
     expect(forbiddenAxeViolations({ violations: [] }).fail).toBe(false);
+  });
+});
+
+describe('a11y shipped CSS/JS (contrast and scroll regions)', () => {
+  const extraCss = fs.readFileSync(path.join(ROOT, 'docs/stylesheets/extra.css'), 'utf8');
+  const extraJs = fs.readFileSync(path.join(ROOT, 'docs/javascripts/extra.js'), 'utf8');
+  const katexLoader = fs.readFileSync(path.join(ROOT, 'docs/javascripts/katex-loader.js'), 'utf8');
+  const a11yAll = fs.readFileSync(path.join(ROOT, 'scripts/audit-a11y-all.js'), 'utf8');
+
+  it('forces pedagogical block text above 4.5:1 on tinted backgrounds', () => {
+    expect(extraCss).toMatch(/blockquote\.pedagogical-block--note[\s\S]*color:\s*#212121/);
+    expect(extraCss).toMatch(/blockquote \.pedagogical-block--warning[\s\S]*color:\s*#212121/);
+  });
+
+  it('gives sidebars an opaque background so TOC does not contrast against the footer', () => {
+    expect(extraCss).toMatch(/\.md-sidebar--secondary\s*\{[\s\S]*background-color:\s*var\(--md-default-bg-color\)/);
+  });
+
+  it('marks overflowing KaTeX display math as a keyboard scroll region', () => {
+    expect(extraJs).toMatch(/div\.arithmatex/);
+    expect(extraJs).toMatch(/elementOverflows/);
+    expect(extraJs).toMatch(/learning-docs:katex-rendered/);
+    expect(katexLoader).toMatch(/learning-docs:katex-rendered/);
+  });
+
+  it('scrolls the sidebar wrap without document scrollIntoView', () => {
+    expect(extraJs).toMatch(/wrap\.scrollTop/);
+    expect(extraJs).not.toMatch(/active\.scrollIntoView/);
+  });
+
+  it('audit:a11y:all waits for shipped extra.js/KaTeX instead of injecting ARIA', () => {
+    expect(a11yAll).toMatch(/arithmatex/);
+    expect(a11yAll).toMatch(/document\.fonts/);
+    expect(a11yAll).not.toMatch(/setAttribute\(['"]tabindex['"]/);
   });
 });
 

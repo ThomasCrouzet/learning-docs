@@ -3,12 +3,9 @@
  * Une 404 joliment rendue n'est pas un succès.
  */
 
+/** Uniquement titre / H1 : un `\b404\b` dans un path SVG n'est pas une page d'erreur. */
 const PRETTY_404 = [
-  /page non trouv/i,
-  /page not found/i,
-  /\b404\b/,
-  /cette page n['']existe pas/i,
-  /document not found/i,
+  /<(?:title|h1)\b[^>]*>[^<]*(page non trouv|page not found|document not found|cette page n['']existe pas|\b404\b)/i,
 ];
 
 function siteFileToRoute(relFromSite) {

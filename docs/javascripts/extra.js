@@ -476,13 +476,23 @@
    * les zones overflow (code, tableaux) doivent être focusables au clavier
    * lorsqu'elles débordent réellement (surtout mobile).
    */
+  function elementOverflows(el) {
+    if (!el) return false;
+    if (el.scrollWidth > el.clientWidth || el.scrollHeight > el.clientHeight) {
+      return true;
+    }
+    var inner =
+      el.querySelector &&
+      el.querySelector(".md-typeset__table table, .md-typeset__table, .katex-display");
+    if (inner && inner.scrollWidth > el.clientWidth) return true;
+    return false;
+  }
+
   function makeScrollRegionFocusable(el, label) {
     if (!el) return;
-    var overflows =
-      el.scrollWidth > el.clientWidth + 2 ||
-      el.scrollHeight > el.clientHeight + 2;
+    var overflows = elementOverflows(el);
     if (!overflows) {
-      // Nettoyer si le reflow a supprimé le besoin
+      // Nettoyer si le reflow a supprime le besoin
       if (el.getAttribute("data-a11y-scroll-region") === "true") {
         el.removeAttribute("tabindex");
         el.removeAttribute("role");
@@ -550,6 +560,14 @@
       hint.textContent = "Faire défiler \u2192";
       wrap.parentNode.insertBefore(hint, wrap.nextSibling);
     });
+
+    var mathBlocks = document.querySelectorAll(".md-typeset div.arithmatex");
+    mathBlocks.forEach(function (el) {
+      makeScrollRegionFocusable(
+        el,
+        "Formule mathématique défilable horizontalement",
+      );
+    });
   }
 
   // ===================================================================
@@ -561,13 +579,15 @@
     var active = document.querySelector(
       ".md-sidebar--primary .md-nav__link--active",
     );
-    if (!active || typeof active.scrollIntoView !== "function") return;
-    // nearest : ne déplace le scrollwrap que si nécessaire
-    try {
-      active.scrollIntoView({ block: "nearest", inline: "nearest" });
-    } catch (e) {
-      active.scrollIntoView(false);
-    }
+    if (!active) return;
+    // Scroller uniquement le wrap de sidebar, jamais le document
+    // (scrollIntoView sur le lien superpose la TOC au footer sombre).
+    var wrap = active.closest(".md-sidebar__scrollwrap");
+    if (!wrap) return;
+    var a = active.getBoundingClientRect();
+    var w = wrap.getBoundingClientRect();
+    if (a.top >= w.top && a.bottom <= w.bottom) return;
+    wrap.scrollTop += a.top - w.top - (w.height - a.height) / 2;
   }
 
   // ===================================================================
@@ -595,6 +615,17 @@
         initScrollIndicators();
       }, 150);
     });
+    window.addEventListener("load", function () {
+      initScrollIndicators();
+    });
+    window.addEventListener("learning-docs:katex-rendered", function () {
+      initScrollIndicators();
+    });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        initScrollIndicators();
+      });
+    }
 
     // document$ est disponible apres DOMContentLoaded (le JS du theme a deja execute)
     if (typeof document$ !== "undefined") {

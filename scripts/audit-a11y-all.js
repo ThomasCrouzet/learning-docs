@@ -28,8 +28,10 @@ function walkHtml(dir, base = '') {
     if (e.name.startsWith('.')) continue;
     const rel = base ? `${base}/${e.name}` : e.name;
     const full = path.join(dir, e.name);
-    if (e.isDirectory()) out.push(...walkHtml(full, rel));
-    else if (e.name.endsWith('.html')) out.push(rel);
+    if (e.isDirectory()) {
+      if (e.name === 'overrides' && !base) continue;
+      out.push(...walkHtml(full, rel));
+    } else if (e.name.endsWith('.html')) out.push(rel);
   }
   return out;
 }
@@ -92,6 +94,29 @@ async function main() {
           report.pages.push({ route, status, ok: false });
           continue;
         }
+        // Attendre le JS livre (extra.js, KaTeX) sans injecter d'ARIA.
+        await page.waitForFunction(() => document.readyState === 'complete', { timeout: 15000 }).catch(() => {});
+        await page.evaluate(async () => {
+          await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+          if (document.fonts && document.fonts.ready) {
+            try {
+              await document.fonts.ready;
+            } catch (e) {
+              /* polices optionnelles */
+            }
+          }
+          if (document.querySelector('.arithmatex')) {
+            const start = Date.now();
+            await new Promise((resolve) => {
+              const tick = () => {
+                if (document.querySelector('.katex') || Date.now() - start > 8000) resolve();
+                else setTimeout(tick, 50);
+              };
+              tick();
+            });
+            await new Promise((r) => setTimeout(r, 50));
+          }
+        });
         const axe = await new AxeBuilder({ page })
           .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
           .analyze();

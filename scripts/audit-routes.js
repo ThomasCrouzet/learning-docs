@@ -30,8 +30,10 @@ function walkHtml(dir, base = '') {
     if (e.name.startsWith('.')) continue;
     const rel = base ? `${base}/${e.name}` : e.name;
     const full = path.join(dir, e.name);
-    if (e.isDirectory()) out.push(...walkHtml(full, rel));
-    else if (e.name.endsWith('.html')) out.push(rel);
+    if (e.isDirectory()) {
+      if (e.name === 'overrides' && !base) continue;
+      out.push(...walkHtml(full, rel));
+    } else if (e.name.endsWith('.html')) out.push(rel);
   }
   return out;
 }
