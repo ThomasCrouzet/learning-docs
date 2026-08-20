@@ -83,7 +83,7 @@ echo additionner(5.7, 3.2);   // 8 (PHP convertit 5.7 en 5 et 3.2 en 3)
 echo additionner(true, false); // 1 (PHP convertit true en 1 et false en 0)
 ```
 
-Tous ces appels fonctionnent sans erreur. PHP fait les conversions automatiquement.
+Sans `strict_types`, PHP convertit ces valeurs. Depuis PHP 8.1, passer un `float` à un paramètre `int` (ici `5.7` et `3.2`) déclenche une dépréciation, car la conversion perd la partie décimale. En PHP 9 cette conversion sera une `TypeError`. Les conversions `string` numérique et `bool` restent silencieuses sans `strict_types`.
 
 ---
 

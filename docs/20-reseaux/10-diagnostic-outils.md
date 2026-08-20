@@ -570,7 +570,7 @@ dig example.com @1.1.1.1          # DNS Cloudflare
 1. Verifie que `example.com` est joignable (ping)
 2. Trace le chemin réseau vers `example.com` (traceroute)
 3. Resous le nom `example.com` avec dig et note l'adresse IP
-4. Scanne les ports 80 et 443 de `example.com` avec nmap
+4. Scanne les ports 80 et 443 de `127.0.0.1` avec nmap (pas `example.com`)
 5. Capture 10 paquets du trafic HTTP vers `example.com` avec tcpdump
 6. Liste tous les ports en écoute sur ta machine locale avec ss
 7. Produis un rapport de diagnostic avec tes observations
@@ -611,7 +611,7 @@ dig example.com MX
 # Resultat attendu : pas d'enregistrement MX (ou 0 mail.example.com)
 
 # 4. Scan de ports
-nmap -p 80,443 example.com
+nmap -p 80,443 127.0.0.1
 # Resultat attendu : 80/tcp open http, 443/tcp open https
 
 # 5. Capture de trafic
