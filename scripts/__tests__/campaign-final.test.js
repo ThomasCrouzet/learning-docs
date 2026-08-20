@@ -10,12 +10,16 @@ import {
   secondReviewIsSubstantive,
   dossierBlocksVerified,
   applyHonestSecondReviewToDossier,
+  applyPageOwnedSecondReview,
+  pageOwnedNotesLookCopied,
   SEAL_HOSTILE_BAND,
 } from '../lib/campaign-final.js';
 import { processExitCode } from '../lib/snippet-runtime.js';
 import {
   isGenericHomepage,
   isLocatorStampExcerpt,
+  stripLocatorStamp,
+  stripLocatorStampFromSource,
   sourceIsSufficientProof,
   sourcesQualifyAsProof,
 } from '../lib/campaign-sources.js';
@@ -93,6 +97,10 @@ describe('campaign-sources', () => {
     expect(isLocatorStampExcerpt(stamped.excerpt)).toBe(true);
     expect(sourceIsSufficientProof(stamped)).toBe(false);
     expect(sourcesQualifyAsProof('22-cloud/index.md', [stamped])).toBe(false);
+    const cleaned = stripLocatorStampFromSource(stamped);
+    expect(isLocatorStampExcerpt(cleaned.excerpt)).toBe(false);
+    expect(sourceIsSufficientProof(cleaned)).toBe(true);
+    expect(stripLocatorStamp(stamped.excerpt)).not.toMatch(/locator for/);
     expect(sourceIsSufficientProof(proofSource())).toBe(true);
   });
 });
@@ -345,6 +353,64 @@ describe('second-review artifacts and honest reset (shipped)', () => {
     expect(
       dossierBlocksVerified({ pedagogical_verdict: { verified: false } }, artifacts['11-ci-cd/10-projet-integrateur.md'])
     ).toBe(true);
+    expect(
+      dossierBlocksVerified({ pedagogical_verdict: { verified: true } }, artifacts['11-ci-cd/10-projet-integrateur.md'])
+    ).toBe(false);
+  });
+
+  it('applyPageOwnedSecondReview requires deep sources and notes, and rejects copied notes', () => {
+    const dossier = {
+      page_id: '15-python/01-introduction-python.md',
+      primary_reviewer: 'primary-agent-python',
+      pedagogical_verdict: { verified: false, reviewer: 'primary-agent-python' },
+    };
+    expect(() =>
+      applyPageOwnedSecondReview(dossier, { path: dossier.page_id, verified: true, notes: 'short', sources_checked: [] }, {
+        runId: 'pageowned-second-2026-08-21',
+        reviewer: 'hostile-pageowned-00',
+      })
+    ).toThrow(/notes too short/);
+    expect(() =>
+      applyPageOwnedSecondReview(
+        dossier,
+        {
+          path: dossier.page_id,
+          verified: true,
+          notes: 'Checked the page against the official tutorial appetite chapter in depth.',
+          sources_checked: ['https://docs.python.org/3/'],
+        },
+        { runId: 'pageowned-second-2026-08-21', reviewer: 'hostile-pageowned-00' }
+      )
+    ).toThrow(/deep https/);
+    const next = applyPageOwnedSecondReview(
+      dossier,
+      {
+        path: dossier.page_id,
+        verified: true,
+        notes: 'Checked Python 3.12/3.13 pins against docs.python.org/3/tutorial/appetite.html and the version switcher.',
+        sources_checked: ['https://docs.python.org/3/tutorial/appetite.html'],
+      },
+      { runId: 'pageowned-second-2026-08-21', reviewer: 'hostile-pageowned-00' }
+    );
+    expect(next.pedagogical_verdict.verified).toBe(true);
+    expect(next.never_verified).toBe(false);
+    expect(next.second_review_run_id).toBe('pageowned-second-2026-08-21');
+    expect(next.second_reviewer).not.toBe(dossier.primary_reviewer);
+    const copied = [
+      { notes: 'Same stamp used on every page of this lot without a page-specific check.' },
+      { notes: 'Same stamp used on every page of this lot without a page-specific check.' },
+      { notes: 'Same stamp used on every page of this lot without a page-specific check.' },
+      { notes: 'Same stamp used on every page of this lot without a page-specific check.' },
+    ];
+    expect(pageOwnedNotesLookCopied(copied)).toBe(true);
+    expect(
+      pageOwnedNotesLookCopied([
+        { notes: 'Checked appetite.html for the automate-a-task paragraph.' },
+        { notes: 'Checked venv docs for Python 3.3 namespace packages.' },
+        { notes: 'Checked datetime docs for aware vs naive clocks.' },
+        { notes: 'Checked json module docs for dumps default=.' },
+      ])
+    ).toBe(false);
   });
 });
 

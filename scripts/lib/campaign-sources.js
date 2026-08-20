@@ -57,6 +57,31 @@ function isLocatorStampExcerpt(text) {
 }
 
 /**
+ * Remove a glued `[locator for path]` stamp; the remaining excerpt may still
+ * be used only if it is otherwise sufficient proof.
+ * @param {unknown} text
+ * @returns {string}
+ */
+function stripLocatorStamp(text) {
+  if (typeof text !== 'string') return '';
+  return text
+    .replace(/\s*\[locator for[^\]]*\]\s*/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function stripLocatorStampFromSource(source) {
+  if (!source || typeof source !== 'object') return source;
+  const next = { ...source };
+  for (const key of ['excerpt', 'locator', 'section', 'passage']) {
+    if (typeof next[key] === 'string' && isLocatorStampExcerpt(next[key])) {
+      next[key] = stripLocatorStamp(next[key]);
+    }
+  }
+  return next;
+}
+
+/**
  * A source is sufficient proof only when it has a deep URL, a precise locator,
  * and a claim_id. Homepages, path-scope stamps, and `[locator for` excerpts
  * never qualify.
@@ -112,6 +137,8 @@ module.exports = {
   isGenericHomepage,
   isScopePathStamp,
   isLocatorStampExcerpt,
+  stripLocatorStamp,
+  stripLocatorStampFromSource,
   locatorText,
   sourceIsSufficientProof,
   sourcesQualifyAsProof,

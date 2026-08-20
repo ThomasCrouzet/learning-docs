@@ -20,6 +20,7 @@ const {
   isScopePathStamp,
   isLocatorStampExcerpt,
   sourceIsSufficientProof,
+  isGenericHomepage,
 } = require('./campaign-sources');
 
 const FINAL_STATUSES = new Set(['verified']);
@@ -198,9 +199,12 @@ function dossierBlocksVerified(dossier, artifact) {
   if (dossier && dossier.pedagogical_verdict && dossier.pedagogical_verdict.verified === false) {
     return true;
   }
-  if (artifact && (artifact.never_verified === true || artifact.file_never_verified === true)) {
-    return true;
+  // A later honest verified verdict supersedes a historical lot-file never_verified.
+  if (dossier && dossier.pedagogical_verdict && dossier.pedagogical_verdict.verified === true) {
+    return false;
   }
+  if (artifact && artifact.never_verified === true && artifact.confirmed_ok !== true) return true;
+  if (artifact && artifact.file_never_verified === true) return true;
   if (artifact && artifact.verified === false) return true;
   return false;
 }
@@ -246,6 +250,60 @@ function applyHonestSecondReviewToDossier(dossier, rel, artifacts) {
   if (fields.second_reviewer) next.second_reviewer = fields.second_reviewer;
   else delete next.second_reviewer;
   return next;
+}
+
+/**
+ * Apply one page-owned second-review report. Verified requires notes and at
+ * least one deep https source that was actually checked.
+ * @param {object} dossier
+ * @param {object} reportPage
+ * @param {{ runId: string, reviewer: string }} meta
+ */
+function applyPageOwnedSecondReview(dossier, reportPage, meta) {
+  if (!reportPage || typeof reportPage !== 'object') {
+    throw new Error('missing page report');
+  }
+  const notes = String(reportPage.notes || '').trim();
+  if (notes.length < 40) {
+    throw new Error(`${reportPage.path || dossier.page_id}: notes too short for a page-owned second review`);
+  }
+  const checked = (reportPage.sources_checked || []).filter(
+    (u) => typeof u === 'string' && /^https:\/\//i.test(u) && !isGenericHomepage(u)
+  );
+  if (checked.length === 0) {
+    throw new Error(`${reportPage.path || dossier.page_id}: need at least one deep https source_checked`);
+  }
+  const verified = reportPage.verified === true;
+  const runId = meta.runId;
+  const reviewer = meta.reviewer;
+  if (!runId || !reviewer) throw new Error('runId and reviewer required');
+  const primary = dossier.primary_reviewer || (dossier.pedagogical_verdict && dossier.pedagogical_verdict.reviewer);
+  if (primary && primary === reviewer) {
+    throw new Error(`${reportPage.path || dossier.page_id}: second reviewer must differ from primary`);
+  }
+  const next = { ...dossier };
+  next.second_review_required = true;
+  next.second_review_done = true;
+  next.second_review_run_id = runId;
+  next.second_reviewer = reviewer;
+  next.never_verified = !verified;
+  next.pedagogical_verdict = {
+    ...(next.pedagogical_verdict || {}),
+    result: verified ? 'verified' : 'reviewed',
+    verified,
+    reviewed_at: reportPage.reviewed_at || '2026-08-21',
+    reviewer,
+    second_run_id: runId,
+    notes,
+    sources_checked: checked,
+  };
+  return next;
+}
+
+function pageOwnedNotesLookCopied(pages) {
+  const notes = (pages || []).map((p) => String((p && p.notes) || '').trim()).filter((n) => n.length > 0);
+  if (notes.length < 4) return false;
+  return new Set(notes).size === 1;
 }
 
 function pageSourcesHaveLocatorStamp(sources) {
@@ -459,5 +517,7 @@ module.exports = {
   dossierBlocksVerified,
   honestSecondReviewFields,
   applyHonestSecondReviewToDossier,
+  applyPageOwnedSecondReview,
+  pageOwnedNotesLookCopied,
   pageSourcesHaveLocatorStamp,
 };
