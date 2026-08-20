@@ -22,6 +22,7 @@ import { assertHttpDocumentOk, forbiddenAxeViolations } from '../lib/campaign-ht
 import { buildPageDossier, questionsLookGeneric } from '../lib/page-dossier.js';
 import { sourcesMatchPath } from '../lib/review-registry-sources.js';
 import { buildCursusMatrix, extractConceptHeadings } from '../lib/curriculum-matrix.js';
+import { candidateSourcesForPage } from '../lib/official-deep-sources.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const CHECKER = path.join(ROOT, 'scripts', 'check-campaign-final.js');
@@ -278,6 +279,18 @@ describe('check-review-registry --strict incomplete second review', () => {
     );
     expect(r.status, r.stderr || r.stdout).not.toBe(0);
     expect(`${r.stdout}\n${r.stderr}`).toMatch(/incomplete/);
+  });
+});
+
+describe('official deep source candidates (shipped)', () => {
+  it('maps RFC and PHP tokens to deep URLs, not homepages', () => {
+    const srcs = candidateSourcesForPage(
+      '02-php/06-fonctions.md',
+      'Utilise array_map() et RFC 8259 pour JSON. password_hash($p, PASSWORD_DEFAULT);'
+    );
+    expect(srcs.some((s) => s.url.includes('function.array-map.php'))).toBe(true);
+    expect(srcs.some((s) => s.url.includes('rfc8259'))).toBe(true);
+    expect(srcs.every((s) => !isGenericHomepage(s.url))).toBe(true);
   });
 });
 
