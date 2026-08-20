@@ -61,13 +61,40 @@ const proof = partitionProof(primary.lots, counter.lots, pageIds);
 const dossiersDir = path.join(OUT, 'page-reviews');
 fs.mkdirSync(dossiersDir, { recursive: true });
 const questionLists = [];
+let created = 0;
+let kept = 0;
+let reopened = 0;
 for (const page of inventory.docs_pages) {
   const abs = path.join(DOCS, page.docs_rel);
   const body = fs.readFileSync(abs, 'utf8');
   const dossier = buildPageDossier(page.docs_rel, body);
   const safe = page.docs_rel.replace(/[\\/]/g, '__');
-  writeAtomic(path.join(dossiersDir, `${safe}.json`), dossier);
+  const dest = path.join(dossiersDir, `${safe}.json`);
+  if (fs.existsSync(dest)) {
+    const prev = JSON.parse(fs.readFileSync(dest, 'utf8'));
+    if (prev.content_hash === dossier.content_hash && prev.status && prev.status !== 'unstarted') {
+      questionLists.push(prev.questions || dossier.questions);
+      kept += 1;
+      continue;
+    }
+    const merged = {
+      ...dossier,
+      sources: prev.sources && prev.sources.length ? prev.sources : dossier.sources,
+      claim_source_matrix: prev.claim_source_matrix || [],
+      pedagogical_verdict: prev.pedagogical_verdict,
+      confirmed_errors: prev.confirmed_errors,
+      primary_run_id: prev.primary_run_id,
+      second_review_run_id: prev.second_review_run_id,
+      status: prev.content_hash === dossier.content_hash ? prev.status : 'researching',
+    };
+    if (prev.content_hash !== dossier.content_hash) reopened += 1;
+    writeAtomic(dest, merged);
+    questionLists.push(merged.questions);
+    continue;
+  }
+  writeAtomic(dest, dossier);
   questionLists.push(dossier.questions);
+  created += 1;
 }
 
 const queue = {
@@ -98,7 +125,7 @@ writeAtomic(path.join(OUT, 'work-queue.json'), queue);
 writeAtomic(path.join(OUT, 'campaign-state.json'), state);
 
 console.log(
-  `campaign freeze: docs=${inventory.counts.docs_markdown} fiches=${inventory.counts.pedagogical_fiche} lots=${queue.lots.length} partitions_ok=${proof.ok} generic_questions=${state.stamp_questions}`
+  `campaign freeze: docs=${inventory.counts.docs_markdown} fiches=${inventory.counts.pedagogical_fiche} lots=${queue.lots.length} partitions_ok=${proof.ok} generic_questions=${state.stamp_questions} dossiers created=${created} kept=${kept} reopened=${reopened}`
 );
 if (!proof.ok) {
   for (const e of proof.errors.slice(0, 20)) console.error(' -', e);

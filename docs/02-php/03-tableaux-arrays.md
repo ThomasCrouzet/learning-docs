@@ -294,7 +294,8 @@ PHP fournit de nombreuses fonctions pour manipuler les tableaux :
 | `in_array($val, $array)` | Vérifie si une valeur existe | `in_array("pomme", $fruits)` → true |
 | `array_keys($array)` | Retourne toutes les clés | `array_keys($personne)` → `["prenom", "nom", "age"]` |
 | `array_values($array)` | Retourne toutes les valeurs | `array_values($personne)` → ["Clara", "Martin", 23] |
-| `isset($array[$key])` | Vérifie si une clé existe | `isset($personne["prenom"])` → true |
+| `isset($array[$key])` | Vrai si la clé existe et la valeur n'est pas `null` | `isset($personne["prenom"])` → true |
+| `array_key_exists($key, $array)` | Vrai si la clé existe, même si la valeur est `null` | `array_key_exists("prenom", $personne)` |
 | `unset($array[$key])` | Supprime un élément | `unset($fruits[0])` |
 | `sort($array)` | Trie par valeur (croissant) | `sort($fruits)` |
 | `array_merge($a, $b)` | Fusionne deux tableaux | `array_merge($fruits, $legumes)` |

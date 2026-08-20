@@ -692,6 +692,16 @@ nav:
           - Projet intégrateur: 20-reseaux/12-projet-integrateur.md
           - IPv6 et coexistence IPv4/IPv6: 20-reseaux/13-ipv6-coexistence.md
           - "BGP : le routage entre opérateurs": 20-reseaux/14-bgp-routage-internet.md
+      - Analyse réseau:
+          - 30-analyse-reseau/index.md
+          - Analyseur et limites: 30-analyse-reseau/01-analyseur-limites.md
+          - Installation et capture sûre: 30-analyse-reseau/02-installation-capture-sure.md
+          - Filtres BPF et affichage: 30-analyse-reseau/03-filtres-bpf-et-affichage.md
+          - Ethernet à TLS: 30-analyse-reseau/04-lire-couches-ethernet-tls.md
+          - Flux TCP et retransmissions: 30-analyse-reseau/05-flux-tcp-retransmissions.md
+          - tshark: 30-analyse-reseau/06-tshark-automatisation.md
+          - tcpdump, ss, ip, dig, mtr, Nmap: 30-analyse-reseau/07-articulation-tcpdump-ss-ip-dig-mtr-nmap.md
+          - Confidentialité et exercice: 30-analyse-reseau/08-confidentialite-pcap-et-exercice.md
       - Services Système:
           - 21-services-systeme/index.md
           - Serveur web avancé: 21-services-systeme/01-serveur-web-avance.md
