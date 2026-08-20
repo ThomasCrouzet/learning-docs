@@ -71,7 +71,7 @@ Le diagramme suivant montre comment les namespaces organisent les classes en arb
 
 **Déclarer un namespace** :
 
-La déclaration de namespace doit être la première instruction du fichier (après `<?php` et les commentaires).
+La déclaration de namespace doit être la première instruction du fichier, après `<?php` et les commentaires. Seul `declare` (par exemple `declare(strict_types=1);`) peut précéder `namespace`.
 
 ```php
 <?php

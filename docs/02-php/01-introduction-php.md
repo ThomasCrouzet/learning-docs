@@ -128,10 +128,11 @@ Cette balise indique : "Le code PHP s'arrête ici".
 
 **Règle importante** : Dans un fichier qui contient uniquement du PHP (pas de HTML après), tu ne dois **pas** mettre la balise de fermeture `?>`. C'est une convention de PHP pour éviter des problèmes.
 
-| Type de fichier                 | Balise de fermeture `?>` |
-| ------------------------------- | ------------------------ |
-| Fichier PHP pur (classes, etc.) | Non, ne pas la mettre    |
-| Fichier PHP mélangé avec HTML   | Oui, obligatoire         |
+| Type de fichier | Balise de fermeture `?>` |
+| --------------- | ------------------------ |
+| Fichier PHP pur (classes, etc.) | Non, ne pas la mettre |
+| Fichier qui se termine en HTML | Oui, pour quitter le mode PHP avant le HTML qui suit |
+| Fichier qui se termine en PHP | Non (même s'il y a du HTML plus haut) |
 
 **Exemple de fichier PHP pur** (comme les fichiers Symfony) :
 

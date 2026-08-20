@@ -2,14 +2,14 @@
 hide:
   - navigation
   - toc
-description: "Vue d'ensemble des 603 fiches réparties sur 64 cursus."
+description: "Vue d'ensemble des 611 fiches réparties sur 65 cursus."
 ---
 
 # Carte des cursus
 
 > **En bref** : Vue d'ensemble de tous les cursus disponibles, avec le nombre de fiches et le temps estimé.
 
-**603 fiches** au total, réparties sur **64 cursus**.
+**611 fiches** au total, réparties sur **65 cursus**.
 
 ## Dépendances entre cursus
 
@@ -68,6 +68,7 @@ Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis
 | **[Kubernetes](devops/03-kubernetes/index.md)** | 12 | 16h 45min | Débutant → Intermédiaire → Avancé |
 | **[Monitoring et Observabilité](14-monitoring/index.md)** | 10 | 13h 15min | Débutant → Intermédiaire → Avancé |
 | **[Réseaux](20-reseaux/index.md)** | 14 | 16h 50min | Débutant → Intermédiaire → Avancé |
+| **[Analyse réseau](30-analyse-reseau/index.md)** | 8 | 9h 10min | Intermédiaire |
 | **[Services Système](21-services-systeme/index.md)** | 9 | 12h 30min | Intermédiaire → Avancé |
 | **[Cloud](22-cloud/index.md)** | 13 | 16h 45min | Débutant → Intermédiaire → Avancé |
 | **[Virtualisation](24-virtualisation/index.md)** | 6 | 8h 30min | Débutant → Intermédiaire → Avancé |

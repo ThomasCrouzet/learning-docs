@@ -39,3 +39,7 @@ description: "Cursus Réseaux : des fondamentaux du modèle OSI aux architecture
 ## Durée totale estimée
 
 ~17 heures de lecture et pratique (somme des durées des 14 fiches).
+
+## Suite
+
+Après ce cursus, le mini-cursus [Analyse réseau](../30-analyse-reseau/index.md) (8 fiches) traite Wireshark, tshark, les filtres BPF et d'affichage, et le cadre légal des fichiers pcap.

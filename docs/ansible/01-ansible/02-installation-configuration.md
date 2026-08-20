@@ -761,7 +761,7 @@ Les points à vérifier :
 
 ### Piège 1 : Installer Ansible avec apt au lieu de pip
 
-**Problème** : La commande `sudo apt install ansible` installe une version souvent ancienne d'Ansible. Par exemple, Ubuntu 22.04 fournit encore une version datée, alors que le paquet communautaire actuel (maintenu) est Ansible 14.x (ansible-core 2.21). Vérifié le 13 août 2026 : PyPI publie `ansible` 14.3.0 (`ansible-core~=2.21.3`). La table « Releases and maintenance » de docs.ansible.com peut rester en retard sur PyPI.
+**Problème** : La commande `sudo apt install ansible` installe une version souvent ancienne d'Ansible. Par exemple, Ubuntu 22.04 fournit encore une version datée, alors que le paquet communautaire actuel (maintenu) est Ansible 14.x (ansible-core 2.21). Vérifié le 20 août 2026 : PyPI publie `ansible` 14.3.1 (`ansible-core~=2.21.3`). La table « Releases and maintenance » de docs.ansible.com peut rester en retard sur PyPI.
 
 **Solution** : Installe toujours Ansible avec `pip install 'ansible>=14.0,<15.0'` dans un environnement virtuel Python, comme décrit dans les étapes 2 et 3.
 

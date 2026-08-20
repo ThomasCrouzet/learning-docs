@@ -687,7 +687,7 @@ $panier->afficher();
 
 ---
 
-### Étape 5 : Classe avec typage (PHP 7+)
+### Étape 5 : Classe avec typage (propriétés typées : PHP 7.4+)
 
 Crée un fichier `public/typage-classe.php` :
 

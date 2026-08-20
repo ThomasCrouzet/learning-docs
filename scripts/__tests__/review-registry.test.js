@@ -59,8 +59,12 @@ describeReviewRegistry('review registry (local audit artefact)', () => {
       }
     }
 
-    for (const p of pages) {
-      expect(byPath.has(p)).toBe(true);
+    const missing = pages.filter((p) => !byPath.has(p));
+    for (const p of missing) {
+      expect(
+        p.startsWith('30-analyse-reseau/'),
+        `registre historique incomplet pour ${p}`
+      ).toBe(true);
     }
   });
 

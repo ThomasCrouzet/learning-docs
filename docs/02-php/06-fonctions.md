@@ -118,7 +118,7 @@ direBonjour();  // Affiche : Bonjour !
 direBonjour();  // Affiche : Bonjour ! (peut être appelée plusieurs fois)
 ```
 
-**Règle** : Une fonction doit être déclarée avant d'être appelée dans le même fichier (ou dans un fichier inclus).
+**Règle** : Une fonction globale peut être appelée avant sa déclaration dans le même fichier. Exception : si elle est définie dans un `if` ou à l'intérieur d'une autre fonction, elle n'existe qu'après l'exécution de ce bloc (manuel PHP : une fonction n'a pas besoin d'être définie avant d'être référencée, sauf définition conditionnelle).
 
 ---
 

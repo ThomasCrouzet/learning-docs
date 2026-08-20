@@ -234,8 +234,8 @@ Sans modèle en couches, voici les problèmes rencontres :
 | --- | --- | --- | --- |
 | Application | Couches 5, 6, 7 | Protocoles de haut niveau | HTTP, DNS, SMTP, FTP, SSH |
 | Transport | Couche 4 | Livraison fiable ou rapide | TCP, UDP |
-| Internet | Couche 3 | Adressage et routage | IP, ICMP, ARP |
-| Accès réseau | Couches 1, 2 | Transmission physique | Ethernet, Wi-Fi |
+| Internet | Couche 3 | Adressage et routage | IP, ICMP |
+| Accès réseau | Couches 1-2 | Transmission locale | Ethernet, Wi-Fi, ARP |
 
 **Comparaison OSI vs TCP/IP** :
 

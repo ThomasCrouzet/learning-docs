@@ -231,7 +231,7 @@ $texte = "42";   // Ceci est un string (même si ça ressemble à un nombre)
 | Addition | `+` | `5 + 3` | `8` |
 | Soustraction | `-` | `5 - 3` | `2` |
 | Multiplication | `*` | `5 * 3` | `15` |
-| Division | `/` | `6 / 3` | `2` |
+| Division | `/` | `6 / 3` | `float(2)` (le `/` PHP produit un float ; quotient entier : `intdiv(6, 3)`) |
 | Modulo (reste) | `%` | `7 % 3` | `1` |
 
 ---
@@ -305,7 +305,7 @@ $valeur = null;  // La variable existe mais n'a pas de valeur
 
 | Valeur | Type | Signification |
 | ------ | ---- | ------------- |
-| `null` | null | Absence de valeur (variable non définie) |
+| `null` | null | Variable définie dont la valeur est `null` (ce n'est pas la même chose qu'une variable jamais assignée) |
 | `""` | string | Chaîne vide (texte sans caractères) |
 | `0` | integer | Le nombre zéro |
 | `false` | boolean | Valeur fausse |

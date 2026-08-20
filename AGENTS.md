@@ -57,7 +57,7 @@ Ce projet est un **repo de documentation uniquement** (pas d'application). Le co
 
 ### Contenu pédagogique (`docs/`)
 
-Le projet contient **603 fiches réparties sur 64 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
+Le projet contient **611 fiches réparties sur 65 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
 
 **Développement Web** :
 
@@ -90,6 +90,7 @@ Le projet contient **603 fiches réparties sur 64 cursus** (chiffres à recalcul
 - **Monitoring** (`14-monitoring/`) : Prometheus, Grafana, Loki, traces distribuées (10 fiches)
 - **Langage C** (`19-langage-c/`) : programmation système (10 fiches)
 - **Réseaux** (`20-reseaux/`) : TCP/IP, protocoles, services (14 fiches)
+- **Analyse réseau** (`30-analyse-reseau/`) : Wireshark, tshark, filtres BPF et d'affichage (8 fiches)
 - **Services Système** (`21-services-systeme/`) : systemd, daemons (9 fiches)
 - **Cloud** (`22-cloud/`) : AWS, GCP, Azure (13 fiches)
 - **Virtualisation** (`24-virtualisation/`) : VMs, hyperviseurs (6 fiches)

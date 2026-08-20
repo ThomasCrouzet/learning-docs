@@ -132,6 +132,8 @@ Sans tcpdump, voici les problèmes rencontres :
 - Wireshark n'est pas un outil offensif. Il capture le trafic sur l'interface locale. Il ne peut pas intercepter le trafic entre deux autres machines (sauf configuration spécifique : port mirroring, ARP spoofing).
 - Wireshark n'est pas un outil temps réel pour la production. Pour la capture en production, utilise tcpdump (plus léger) et analyse les fichiers `.pcap` avec Wireshark ensuite.
 
+La progression dédiée (filtres BPF et d'affichage, flux TCP, tshark, cadre légal des pcap) est dans le cursus [Analyse réseau](../30-analyse-reseau/index.md).
+
 ---
 
 ### Qu'est-ce que nmap ?
@@ -326,17 +328,19 @@ sudo tcpdump -i eth0 -c 10 'tcp[tcpflags] & tcp-syn != 0'
 
 ### Étape 5 : Utiliser nmap
 
+**Cadre** : tu ne scannes que `127.0.0.1` ou une machine que tu possèdes, avec autorisation. Un scan vers un tiers (y compris `example.com`) peut être illégal et vu comme une attaque.
+
 ```bash
-# Scanne les ports communs d'une machine
-nmap 192.168.1.1
+# Scanne les ports communs de la machine locale (laboratoire)
+nmap 127.0.0.1
 ```
 
 **Résultat attendu** :
 
 ```text
-Starting Nmap 7.94 ( https://nmap.org ) at 2025-03-10 14:30 CET
-Nmap scan report for 192.168.1.1
-Host is up (0.0012s latency).
+Starting Nmap 7.94 ( https://nmap.org ) at 2026-08-20 14:30 CET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00012s latency).
 Not shown: 997 closed tcp ports (conn-refused)
 PORT    STATE SERVICE
 22/tcp  open  ssh
@@ -347,38 +351,22 @@ Nmap done: 1 IP address (1 host up) scanned in 0.23 seconds
 ```
 
 ```bash
-# Scanne tous les ports (1-65535)
-nmap -p- 192.168.1.1
+# Scanne tous les ports (1-65535) de la machine locale
+nmap -p- 127.0.0.1
 
 # Scanne avec detection de version des services
-nmap -sV 192.168.1.1
+nmap -sV 127.0.0.1
 
-# Scanne avec detection du systeme d'exploitation
-sudo nmap -O 192.168.1.1
-
-# Decouvre toutes les machines actives sur un sous-reseau
-nmap -sn 192.168.1.0/24
-
-# Scan rapide des 100 ports les plus courants
-nmap -F 192.168.1.0/24
+# Scanne avec detection du systeme d'exploitation (laboratoire uniquement)
+sudo nmap -O 127.0.0.1
 ```
 
-**Résultat attendu** (scan réseau) :
-
-```text
-Nmap scan report for 192.168.1.1
-Host is up (0.0010s latency).
-Nmap scan report for 192.168.1.10
-Host is up (0.00050s latency).
-Nmap scan report for 192.168.1.25
-Host is up (0.0020s latency).
-
-Nmap done: 256 IP addresses (3 hosts up) scanned in 2.45 seconds
-```
+**Résultat attendu** : Nmap liste les ports ouverts de `127.0.0.1`. Un scan de sous-réseau (`-sn 192.168.1.0/24`) n'est légitime que sur un LAN que tu administres.
 
 ```bash
 # Scan de vulnerabilites basique avec les scripts NSE
-nmap --script vuln 192.168.1.1
+# Scripts "vuln" : uniquement 127.0.0.1, jamais un tiers
+nmap --script vuln 127.0.0.1
 ```
 
 ---
@@ -462,7 +450,7 @@ traceroute "$EXAMPLE_IP"
 # Identifie ou le trafic est bloque
 
 # Etape 4 : Verifier le port du service
-nmap -p 80,443 "$EXAMPLE_IP"
+nmap -p 80,443 127.0.0.1
 # Si port ferme : service arrete ou firewall
 
 # Etape 5 : Tester le service HTTP
@@ -507,7 +495,7 @@ curl "http://${EXAMPLE_IP}"
 
 ```bash
 # Si le ping ne repond pas, teste directement le port du service
-nmap -p 22,80,443 192.168.1.10
+nmap -p 22,80,443 127.0.0.1
 
 # Ou utilise un traceroute TCP
 sudo traceroute -T -p 443 192.168.1.10
@@ -523,10 +511,10 @@ sudo traceroute -T -p 443 192.168.1.10
 
 ```bash
 # Scan discret (plus lent mais moins detecte)
-nmap -T2 -sV 192.168.1.1
+nmap -T2 -sV 127.0.0.1
 
 # Scan d'un seul port specifique
-nmap -p 80 192.168.1.1
+nmap -p 80 127.0.0.1
 ```
 
 ---
