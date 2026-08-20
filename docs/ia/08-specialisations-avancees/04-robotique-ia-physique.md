@@ -281,12 +281,14 @@ Sans simulateurs, voici les problèmes rencontrés :
 
 ```python
 import gymnasium as gym
+import gymnasium_robotics
 
 # Gymnasium Robotics fournit des environnements de manipulation
 # Exemple avec FetchReach (bras robotique qui atteint un point cible)
 # Installation : pip install gymnasium-robotics
+# Les IDs Fetch ne sont pas dans gymnasium de base : il faut les enregistrer.
 
-# Créer l'environnement
+gym.register_envs(gymnasium_robotics)
 env = gym.make("FetchReach-v3")
 
 # Observer l'espace d'observation
@@ -625,12 +627,12 @@ Steps moyen    : 200
 | Commande | Action |
 | -------- | ------ |
 | `pip install gymnasium` | Installe Gymnasium |
-| `pip install gymnasium-robotics` | Installe les environnements robotiques |
+| `pip install gymnasium-robotics` | Installe les environnements robotiques (puis `gym.register_envs(gymnasium_robotics)`) |
 | `pip install mujoco` | Installe le simulateur MuJoCo |
 | `pip install pybullet` | Installe le simulateur PyBullet |
 | `pip install stable-baselines3` | Installe une bibliothèque RL prête à l'emploi |
 | `env = gym.make("Pendulum-v1")` | Crée un environnement de contrôle continu |
-| `env = gym.make("FetchReach-v3")` | Crée un environnement de manipulation robotique |
+| `gym.register_envs(gymnasium_robotics)` puis `gym.make("FetchReach-v3")` | Enregistre puis crée un environnement de manipulation robotique |
 | `env.action_space.sample()` | Échantillonne une action aléatoire |
 | `obs, info = env.reset()` | Réinitialise l'environnement |
 

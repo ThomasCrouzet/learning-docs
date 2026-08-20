@@ -259,8 +259,8 @@ echo traiterCollection(new Panier(['pommes', 'pain'])); // Taille : 2 - pommes, 
 | | Union `A\|B` | Intersection `A&B` |
 | - | ------------ | ------------------ |
 | Signification | A **ou** B (l'un ou l'autre suffit) | A **et** B (les deux sont requis) |
-| Types autorisés | Classes, interfaces, scalaires | Interfaces uniquement |
-| Usage courant | Paramètres polyvalents | Contraintes multi-interfaces |
+| Types autorisés | Classes, interfaces, scalaires | Classes et interfaces (pas de scalaires) |
+| Usage courant | Paramètres polyvalents | Contraintes multi-types (souvent des interfaces) |
 
 **Usage dans Symfony 7.x** : tu rencontreras les types intersection dans des services qui implémentent plusieurs interfaces de contrat (par exemple un service à la fois `LoggerAwareInterface` et `EventSubscriberInterface`).
 

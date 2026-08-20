@@ -57,7 +57,7 @@ Sans références, voici les problèmes rencontrés :
 | Clones coûteux | Une référence ne copie qu'un pointeur (8 octets) |
 | Code verbeux | On passe des références au lieu de retourner des valeurs |
 
-**Analogie concrète** : Une référence est comme prêter un livre. Tu prêtes ton livre à un ami, mais il te le rendra. Pendant le prêt, tu ne peux pas le lire, mais tu en restes le propriétaire.
+**Analogie concrète** : Une référence immutable (`&T`) est comme laisser plusieurs personnes lire le même livre en même temps : le propriétaire peut encore le lire. Une référence mutable (`&mut T`) est comme prêter le livre à une seule personne qui a le droit d'annoter : personne d'autre ne doit y toucher pendant ce temps. Tu en restes le propriétaire dans les deux cas.
 
 ---
 

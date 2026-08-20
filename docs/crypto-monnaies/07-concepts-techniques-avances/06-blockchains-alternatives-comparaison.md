@@ -339,7 +339,7 @@ Sous-réseaux (Subnets) :
 | Indicateur | Valeur approximative |
 | --- | --- |
 | TVL (principalement C-Chain) | Plusieurs milliards de dollars |
-| dApps notables | Trader Joe (DEX), Benqi (lending), Platypus, GMX (sur Avalanche) |
+| dApps notables | Trader Joe / LFJ (DEX), Benqi (lending), GMX (également présent sur Avalanche) |
 | Sous-réseaux notables | défi Kingdoms (gaming), Beam (gaming) |
 | Compatibilite EVM | Oui - migration facile depuis Ethereum |
 

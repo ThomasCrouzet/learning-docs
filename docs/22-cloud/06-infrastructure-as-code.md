@@ -180,10 +180,10 @@ sudo apt update && sudo apt install terraform
 terraform version
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (la version mineure évolue ; en août 2026 le binaire HashiCorp courant est 1.15.x) :
 
 ```text
-Terraform v1.9.x
+Terraform v1.15.x
 on darwin_arm64
 ```
 
@@ -191,7 +191,7 @@ on darwin_arm64
 
 ### Étape 2 : Creer le premier projet Terraform
 
-> **Note - provider AWS v6** : La contrainte `~> 5.0` ci-dessous cible le provider AWS v5. Le provider v6.0 est disponible depuis mai 2026 et introduit des breaking changes (l'attribut `region` est désormais obligatoire sur chaque ressource, au lieu d'être hérité du bloc `provider`). Si tu obtiens une erreur mentionnant `region`, tu utilises probablement le provider v6 : mets à jour la contrainte en `~> 6.0` et ajoute `region = "eu-west-3"` à chaque ressource concernée.
+> **Note - provider AWS v6** : Le provider AWS v6.0 est généralement disponible depuis juin 2025 (annonce HashiCorp du 18 juin 2025). En v6, l'argument `region` est _optionnel_ sur la plupart des ressources : s'il est omis, Terraform reprend la région du bloc `provider`. Il n'est pas obligatoire de le répéter sur chaque ressource. La contrainte `~> 6.0` ci-dessous cible cette série. Si tu dois rester sur v5, utilise `version = "~> 5.0"`.
 
 ```bash
 # Creer un dossier pour le projet
@@ -206,7 +206,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.0"
     }
   }
   required_version = ">= 1.9.0"
@@ -252,9 +252,9 @@ terraform init
 ```text
 Initializing the backend...
 Initializing provider plugins...
-- Finding hashicorp/aws versions matching "~> 5.0"...
-- Installing hashicorp/aws v5.x.x...
-- Installed hashicorp/aws v5.x.x (signed by HashiCorp)
+- Finding hashicorp/aws versions matching "~> 6.0"...
+- Installing hashicorp/aws v6.x.x...
+- Installed hashicorp/aws v6.x.x (signed by HashiCorp)
 
 Terraform has been successfully initialized!
 ```
@@ -599,7 +599,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.0"
     }
   }
   required_version = ">= 1.9.0"

@@ -393,10 +393,12 @@ print(f"2025 bissextile ? {Date.est_annee_bissextile(2025)}")
 ```text
 Classique : 15/03/2025
 Depuis chaîne : 25/12/2025
-Aujourd'hui : 07/04/2026
+Aujourd'hui : JJ/MM/AAAA
 2024 bissextile ? True
 2025 bissextile ? False
 ```
+
+La ligne `Aujourd'hui` affiche la date du jour renvoyée par `datetime.date.today()` (par exemple `21/08/2026` si tu lances le script le 21 août 2026). Ce n'est pas une valeur fixe.
 
 ---
 

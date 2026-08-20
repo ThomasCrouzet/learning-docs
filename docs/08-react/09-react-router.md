@@ -568,20 +568,20 @@ import { Tableau, VueGenerale, Statistiques, Parametres } from "./pages/Tableau"
 
 ---
 
-### Piège 3 : Route catch-all mal placée
+### Piège 3 : Croire que l'ordre des `<Route>` décide du match
 
-**Problème** : Placer la route `path="*"` avant les autres routes. Elle capture toutes les URL et les routes suivantes ne sont jamais atteintes.
+**Problème** : Penser que placer `path="*"` en premier "vole" toutes les URL, comme le faisait React Router v5 (match de haut en bas). Depuis v6 (donc aussi en v8), le routeur **classe** les routes par spécificité : un chemin statique (`/contact`) gagne toujours face au splat `*`, même si `*` est déclaré avant.
 
-**Solution** : Place la route `path="*"` en dernier.
+**Solution** : Place quand même `path="*"` en dernier, par convention lisible. Ne compte pas sur l'ordre pour départager deux routes de même rang (par exemple deux chemins dynamiques). Vérifie le classement dans la doc [declarative routing](https://reactrouter.com/start/declarative/routing).
 
 ```tsx
-// ❌ La route * capture tout
+// Les deux fonctionnent en v8 (classement par spécificité)
 <Routes>
   <Route path="*" element={<NotFound />} />
   <Route path="/contact" element={<Contact />} />
 </Routes>
 
-// ✅ La route * est en dernier
+// Convention recommandée : le splat en dernier, plus lisible
 <Routes>
   <Route path="/contact" element={<Contact />} />
   <Route path="*" element={<NotFound />} />

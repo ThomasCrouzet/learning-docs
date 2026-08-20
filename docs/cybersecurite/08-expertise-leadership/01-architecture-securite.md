@@ -488,7 +488,7 @@ Processus principaux :
 | Composant | Vulnérabilité | CVE/Référence |
 | --------- | ------------- | ------------- |
 | Node.js | Prototype pollution | CVE-2022-21824 (exemple) |
-| PostgreSQL | Escalade de privilèges | CVE-2023-5868 (exemple) |
+| PostgreSQL | Divulgation mémoire (appels d'agrégats) | CVE-2023-5868 (exemple, pas une escalade de privilèges) |
 | Dépendances npm | Supply chain attack | Cas event-stream (2018) |
 
 ## Étape 6 : Arbres d'attaque (exemple : vol de données de paiement)
@@ -665,7 +665,7 @@ Standards d'architecture documentés
 - Commence par le DFD de l'application métier
 - Pour le Zéro Trust, prends en compte la coexistence cloud/on-premise (hybride)
 - Le budget doit couvrir les licences, l'infrastructure et la formation
-- NIS2 impose des obligations de notification d'incident sous 24h
+- NIS2 (directive UE 2022/2555, art. 23) impose un early warning sous 24h, une notification d'incident sous 72h, et un rapport final sous un mois
 
 **Résultat attendu** :
 
@@ -771,7 +771,7 @@ SEC-STD-01 : MFA obligatoire pour tout accès (aucune exception)
 SEC-STD-02 : Chiffrement TLS 1.3 pour tout flux réseau (interne et externe)
 SEC-STD-03 : Least privilege sur tous les rôles IAM (revue trimestrielle)
 SEC-STD-04 : Logging centralisé avec rétention 12 mois (CloudTrail + application)
-SEC-STD-05 : Notification d'incident sous 24h (conformité NIS2)
+SEC-STD-05 : Early warning NIS2 sous 24h, notification d'incident sous 72h, rapport final sous un mois (art. 23)
 ```
 
 ---

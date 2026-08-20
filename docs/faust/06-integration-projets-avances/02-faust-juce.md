@@ -91,10 +91,10 @@ Sans faust2juce, voici les problèmes rencontrés :
 
 | Option | Effet |
 | --- | --- |
-| `--midi` | Active le support MIDI (réception de notes, CC) |
-| `--nvoices N` | Active la polyphonie avec N voix simultanées |
-| `--effect fichier.dsp` | Ajoute un effet global après le synthétiseur polyphonique |
-| `--poly2` | Mode polyphonique avec effet intégré |
+| `-midi` | Active le support MIDI (réception de notes, CC) |
+| `-nvoices N` | Active la polyphonie avec N voix simultanées |
+| `-effect fichier.dsp` | Ajoute un effet global après le synthétiseur polyphonique |
+| `-poly2` | Mode polyphonique avec effet intégré |
 
 ---
 
@@ -219,7 +219,7 @@ Sans support MIDI, voici les problèmes rencontrés :
 | Problème | Solution |
 | --- | --- |
 | Pas de jeu au clavier | Les messages note on/off pilotent `freq`, `gain` et `gate` |
-| Pas de polyphonie | `--nvoices N` crée N instances du DSP |
+| Pas de polyphonie | `-nvoices N` crée N instances du DSP |
 
 **Analogie concrète** : Le MIDI est comme une partition musicale. Le clavier MIDI est le musicien qui envoie les instructions. JUCE est le chef d'orchestre qui les transmet aux voix polyphoniques Faust.
 
@@ -317,8 +317,8 @@ process = osc : fi.resonlp(cutoff, resonance * 5, 1) * envelope * gain;
 Génère le projet JUCE :
 
 ```bash
-# --midi : support MIDI, --nvoices 8 : 8 voix polyphoniques
-faust2juce --midi --nvoices 8 mon-synth.dsp
+# -midi : support MIDI, -nvoices 8 : 8 voix polyphoniques
+faust2juce -midi -nvoices 8 mon-synth.dsp
 ```
 
 **Résultat attendu** :
@@ -537,8 +537,8 @@ if (oscilloscope != nullptr)
 | Commande | Action |
 | --- | --- |
 | `faust2juce fichier.dsp` | Génère un projet JUCE |
-| `faust2juce --midi --nvoices 8 fichier.dsp` | Projet JUCE polyphonique 8 voix |
-| `faust2juce --midi --nvoices 8 --effect effet.dsp synth.dsp` | Polyphonie + effet global |
+| `faust2juce -midi -nvoices 8 fichier.dsp` | Projet JUCE polyphonique 8 voix |
+| `faust2juce -midi -nvoices 8 -effect effet.dsp synth.dsp` | Polyphonie + effet global |
 | `faust -lang cpp -cn NomClasse -o sortie.h fichier.dsp` | Code C++ pour intégration manuelle |
 | `cmake .. -DCMAKE_BUILD_TYPE=Release` | Configure le build CMake |
 | `cmake --build . --config Release` | Compile le projet JUCE |
@@ -672,7 +672,7 @@ Le synthétiseur doit avoir :
 - Filtre : `fi.resonlp(cutoff, resonance * 5, 1)`
 - ADSR : `en.adsr(attack, decay, sustain, release, gate)`
 - Reverb : `re.mono_freeverb(roomSize, 0.5, 0.5, 0)` dans un fichier séparé (signature : fb1, fb2, damp, spread)
-- Utilise `--effect` pour séparer le synthé de la reverb
+- Utilise `-effect` pour séparer le synthé de la reverb
 - UI JUCE : utilise `juce::GroupComponent` pour les groupes visuels
 
 **Résultat attendu** :
@@ -746,7 +746,7 @@ Génère et compile :
 
 ```bash
 # Générer le projet avec reverb séparée
-faust2juce --midi --nvoices 8 --effect fm-reverb.dsp fm-synth.dsp
+faust2juce -midi -nvoices 8 -effect fm-reverb.dsp fm-synth.dsp
 
 # Compiler
 cd fm-synth && mkdir build && cd build

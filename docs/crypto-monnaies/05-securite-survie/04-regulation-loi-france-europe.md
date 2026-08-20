@@ -245,7 +245,7 @@ noire n'est pas forcément fiable. Vérifie aussi la liste blanche PSCA.
 
 | Obligation | Description | Conséquence en cas de non-respect |
 | ---------- | ----------- | --------------------------------- |
-| Déclarer les comptes à l'étranger | Si tu utilisés une plateforme basée hors de France (Binance, Coinbase, Kraken), tu dois déclarer ce compte (formulaire 3916-bis) | Amende de 750 euros par compte non déclaré (1 500 euros si le compte est dans un État non coopératif) |
+| Déclarer les comptes à l'étranger | Si tu utilises une plateforme basée hors de France (Binance, Coinbase, Kraken), tu dois déclarer ce compte (formulaire 3916-bis) | Amende de 750 € par portefeuille non déclaré, ou 125 € par omission, dans la limite de 10 000 € par déclaration ; 1 500 € / 250 € si la valeur dépasse 50 000 € (CGI art. 1736 X, pas le régime "État non coopératif" des comptes bancaires) |
 | Déclarer les plus-values | Les gains réalisés lors de la vente de crypto-monnaies contre des euros doivent être déclarés | Redressement fiscal + pénalités + intérêts de retard |
 | Conserver les justificatifs | Tu dois pouvoir justifier l'origine de tes fonds et tes transactions | Difficulté à prouver ta bonne foi en cas de contrôle fiscal |
 

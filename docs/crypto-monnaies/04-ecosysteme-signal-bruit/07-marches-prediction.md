@@ -94,8 +94,9 @@ Historique :
   (Intercontinental Exchange, propriétaire de la Bourse de New York)
   Valorisation d'environ 8 milliards $ pre-investissement
   (9 milliards $ post-investissement)
-- Novembre 2025 : autorisation de la CFTC (régulateur américain des
-  marches derives) pour operer aux États-Unis comme exchange régulée
+- Novembre 2025 : la CFTC publie un Amended Order of Designation pour
+  QCX LLC (Polymarket US), pas pour la plateforme Polygon mondiale
+  (KYC et intermédiation FCM aux États-Unis)
 
 Chiffres 2025-2026 :
 - Volume annuel 2025 : environ 22 milliards $
@@ -145,11 +146,11 @@ Domination du marche :
 | --- | --- | --- |
 | Fondation | 2020 | 2018 (lancement public 2021) |
 | Infrastructure | Blockchain (Polygon) | Serveurs centralisés |
-| Régulation | CFTC depuis novembre 2025 | CFTC des le lancement |
+| Régulation | CFTC pour Polymarket US (QCX, nov. 2025) ; globale = crypto | CFTC dès le lancement |
 | Devise de règlement | USDC (stablecoin) | Dollar américain |
-| KYC (vérification d'identité) | Oui (depuis la régulation) | Oui |
+| KYC (vérification d'identité) | US : oui (QCX). Globale : wallet crypto (historiquement) | Oui |
 | Part de marché (2025) | ~35% | ~60% |
-| Accès international | Large (historiquement sans KYC) | Principalement États-Unis |
+| Accès international | Large hors pays geobloqués | 140+ pays depuis oct. 2025, sauf exceptions |
 
 ---
 
@@ -270,10 +271,10 @@ Limites :
 
 | Aspect | Kalshi | Polymarket |
 | ------ | ------ | ---------- |
-| Juridiction | USA (régulée CFTC) | Offshore (Polygon/crypto) |
-| KYC obligatoire | Oui | Non (wallet crypto suffit) |
+| Juridiction | USA (CFTC) | Globale : Polygon/crypto. USA : QCX (CFTC, nov. 2025) |
+| KYC obligatoire | Oui | US (QCX) : oui. Plateforme globale : wallet crypto |
 | Accès Europe | Oui (140+ pays depuis octobre 2025, sauf France, UK et quelques autres) | Geobloquee dans plusieurs pays |
-| Recours légal | Oui (tribunaux USA) | Non (smart contracts, pas de recours) |
+| Recours légal | Oui (tribunaux USA) | Globale : smart contracts. US (QCX) : cadre CFTC |
 
 ---
 
@@ -281,7 +282,7 @@ Limites :
 
 - [ ] Je sais qu'un marché de prédiction permet de parier sur l'issue d'événements futurs
 - [ ] Je comprends comment lire le prix d'un contrat (0,65 dollar = 65% de probabilité estimée)
-- [ ] Je connais Polymarket (blockchain, 22 milliards de dollars de volume 2025, investi par ICE)
+- [ ] Je connais Polymarket (blockchain, ~22 milliards de dollars de volume 2025, investi par ICE ; US via QCX/CFTC)
 - [ ] Je connais Kalshi (régulée CFTC, 60%+ de part de marche, 50 milliards de dollars annualises)
 - [ ] Je sais que Polymarket + Kalshi = 97,5% du marché mondial
 - [ ] Je connais l'histoire d'Augur (pionnier décentralisé, échec par UX mauvaise)

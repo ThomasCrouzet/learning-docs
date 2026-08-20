@@ -273,7 +273,7 @@ Sans compilation depuis les sources, voici les problèmes rencontrés :
 
 | Dépendance | Obligatoire | Rôle |
 | ---------- | ----------- | ---- |
-| CMake (>= 3.4) | Oui | Système de build |
+| CMake (>= 3.5) | Oui | Système de build |
 | GCC ou Clang | Oui | Compilateur C++ |
 | LLVM (>= 15.0) | Non | Backend LLVM (compilation JIT) |
 | libmicrohttpd | Non | Serveur HTTP embarqué (faust -httpd) |

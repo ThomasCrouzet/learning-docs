@@ -7,7 +7,7 @@ description: "Cursus Python fondamentaux : apprendre Python de zéro, des variab
 
 # Python fondamentaux
 
-> **En bref** : Un cursus complet pour apprendre Python 3 en partant de zéro, couvrant les types de données, les structures de controle, les fonctions, la POO, la gestion des erreurs et les outils de qualité. 12 fiches, environ 15 heures de lecture et pratique.
+> **En bref** : Un cursus complet pour apprendre Python 3 en partant de zéro, couvrant les types de données, les structures de contrôle, les fonctions, la POO, la gestion des erreurs et les outils de qualité. 12 fiches, environ 15 heures de lecture et pratique.
 
 ---
 
@@ -21,7 +21,7 @@ description: "Cursus Python fondamentaux : apprendre Python de zéro, des variab
 | 4 | [Conditions et boucles](04-conditions-boucles.md) | 60 min |
 | 5 | [Fonctions](05-fonctions.md) | 75 min |
 | 6 | [Modules et packages](06-modules-packages.md) | 60 min |
-| 7 | [Programmation orientee objet](07-poo-python.md) | 90 min |
+| 7 | [Programmation orientée objet](07-poo-python.md) | 90 min |
 | 8 | [POO avancée](08-poo-avancee.md) | 90 min |
 | 9 | [Gestion des erreurs](09-gestion-erreurs.md) | 60 min |
 | 10 | [Fichiers et entrées/sorties](10-fichiers-io.md) | 75 min |
@@ -32,7 +32,7 @@ description: "Cursus Python fondamentaux : apprendre Python de zéro, des variab
 
 ## Prérequis
 
-- Aucune connaissance prealable en programmation n'est requise (tout est explique depuis zéro)
+- Aucune connaissance préalable en programmation n'est requise (tout est expliqué depuis zéro)
 
 ## Durée totale estimée
 

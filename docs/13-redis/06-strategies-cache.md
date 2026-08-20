@@ -424,21 +424,20 @@ class CacheService
 
 #### 2. Early expiration (expiration anticipée)
 
-Le cache est rafraîchi avant l'expiration réelle du TTL. Un processus aléatoire (basé sur une probabilité) recalcule la donnée avant qu'elle expire.
+Le cache est rafraîchi avant l'expiration réelle du TTL. Symfony Cache applique une expiration anticipée probabiliste via le 3e argument de `get()` (paramètre `beta`, défaut `1.0`). Un processus est parfois élu pour recalculer pendant que les autres reçoivent encore la valeur en cache.
 
 ```php
-// Symfony supporte l'early expiration nativement via la beta du cache item
+// Symfony Cache : locking + expiration anticipée via le contrat CacheInterface
+// Le 3e argument ($beta) contrôle l'early expiration (défaut 1.0).
+// beta = 0 : désactive le recalcul anticipé
+// beta plus élevé : recalcul plus tôt
+// beta = INF : force un recalcul immédiat
 $products = $cache->get('all_products', function (ItemInterface $item) use ($repo) {
     $item->expiresAfter(3600);
-
-    // Active l'early expiration
-    // Le cache sera recalculé de manière probabiliste avant le TTL réel
-    // La valeur 1.0 signifie : probabilité de recalcul augmente
-    // quand on approche de l'expiration
     $item->tag(['products']);
 
     return $repo->findAll();
-});
+}, 1.0);
 ```
 
 #### 3. Cache warming (préchauffage)

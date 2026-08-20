@@ -7,7 +7,7 @@ description: "Phase 5 du cursus cybersécurité - Spécialisation Défensive (Bl
 
 # Phase 5 - Spécialisation Défensive (Blue Team / DFIR)
 
-Durée estimée : 4-6 mois
+> **En bref** : Cette phase présente les compétences défensives avancées : réponse aux incidents, forensique, analyse de malware, threat hunting et sécurité des endpoints. Durée estimée : 4-6 mois.
 
 Cette phase présente les compétences défensives avancées : réponse aux incidents, forensique numérique, analyse de malware, threat hunting et sécurité des endpoints. Ce sont les thèmes du métier d'analyste SOC (niveaux 2-3), d'analyste DFIR et de threat hunter ; la maîtrise opérationnelle demande une pratique prolongée au-delà de ces fiches.
 

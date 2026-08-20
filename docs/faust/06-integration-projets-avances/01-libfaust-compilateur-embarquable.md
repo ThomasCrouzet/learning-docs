@@ -802,8 +802,10 @@ int main(int argc, char* argv[]) {
     std::thread surveillant(thread_surveillance, chemin_dsp);
 
     // Simuler la boucle audio principale
+    // Allouer les buffers HORS de la boucle : new/delete sont interdits dans le thread audio
     int buffer_size = 256;
     float* sortie = new float[buffer_size];
+    float* input_buf = new float[buffer_size]();
 
     std::cout << "Surveillance de " << chemin_dsp << " en cours..." << std::endl;
     std::cout << "Modifie le fichier pour déclencher la recompilation." << std::endl;
@@ -814,27 +816,22 @@ int main(int argc, char* argv[]) {
         dsp* instance = dsp_actif.load();
 
         if (instance && instance->getNumOutputs() > 0) {
-            // Préparer les buffers
             float* outputs_ptr[1] = {sortie};
             float* inputs_ptr[1] = {nullptr};
 
-            int num_inputs = instance->getNumInputs();
-            float* input_buf = nullptr;
-            if (num_inputs > 0) {
-                input_buf = new float[buffer_size]();  // Alloué et mis à zéro
+            if (instance->getNumInputs() > 0) {
                 inputs_ptr[0] = input_buf;
             }
 
-            // Calculer les échantillons
+            // Calculer les échantillons (pas d'allocation ici)
             instance->compute(buffer_size, inputs_ptr, outputs_ptr);
-
-            if (input_buf) delete[] input_buf;
         }
 
         // Simuler le rythme du callback audio (~5.8 ms pour 256 samples @ 44100 Hz)
         std::this_thread::sleep_for(std::chrono::microseconds(5800));
     }
 
+    delete[] input_buf;
     delete[] sortie;
     surveillant.join();
     return 0;

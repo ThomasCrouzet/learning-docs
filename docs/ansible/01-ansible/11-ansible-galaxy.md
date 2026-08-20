@@ -436,9 +436,9 @@ ansible-galaxy collection install community.general
 Starting galaxy collection install process
 Process install dependency map
 Starting collection install process
-Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/community-general-8.5.0.tar.gz to /home/user/.ansible/tmp/...
-Installing 'community.general:8.5.0' to '/home/user/.ansible/collections/ansible_collections/community/general'
-community.general:8.5.0 was installed successfully
+Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/community-general-13.3.0.tar.gz to /home/user/.ansible/tmp/...
+Installing 'community.general:13.3.0' to '/home/user/.ansible/collections/ansible_collections/community/general'
+community.general:13.3.0 was installed successfully
 ```
 
 **Installation dans le dossier du projet** :
@@ -454,8 +454,8 @@ ansible-galaxy collection install community.general -p ./collections/
 Starting galaxy collection install process
 Process install dependency map
 Starting collection install process
-Installing 'community.general:8.5.0' to '/home/user/mon-projet/collections/ansible_collections/community/general'
-community.general:8.5.0 was installed successfully
+Installing 'community.general:13.3.0' to '/home/user/mon-projet/collections/ansible_collections/community/general'
+community.general:13.3.0 was installed successfully
 ```
 
 **Lister les collections installées** :
@@ -473,7 +473,7 @@ Collection               Version
 amazon.aws               7.2.0
 ansible.builtin          (built-in)
 ansible.posix            1.5.4
-community.general        8.5.0
+community.general        13.3.0
 community.postgresql     3.3.0
 ...
 ```
@@ -593,8 +593,8 @@ ansible-galaxy collection install -r requirements.yml
 Starting galaxy collection install process
 Process install dependency map
 Starting collection install process
-Downloading https://galaxy.ansible.com/.../community-general-8.5.0.tar.gz
-Installing 'community.general:8.5.0' to '/home/user/.ansible/collections/ansible_collections/community/general'
+Downloading https://galaxy.ansible.com/.../community-general-13.3.0.tar.gz
+Installing 'community.general:13.3.0' to '/home/user/.ansible/collections/ansible_collections/community/general'
 Downloading https://galaxy.ansible.com/.../ansible-posix-1.5.4.tar.gz
 Installing 'ansible.posix:1.5.4' to '/home/user/.ansible/collections/ansible_collections/ansible/posix'
 Downloading https://galaxy.ansible.com/.../community-postgresql-3.3.0.tar.gz
@@ -836,7 +836,7 @@ ls ~/collections-offline/
 **Résultat attendu** :
 
 ```text
-community-general-8.5.0.tar.gz
+community-general-13.3.0.tar.gz
 ansible-posix-1.5.4.tar.gz
 community-postgresql-3.3.0.tar.gz
 requirements.yml
@@ -853,7 +853,7 @@ Transfert et installation sur la machine offline :
 ansible-galaxy collection install -r ~/collections-offline/requirements.yml -p ./collections/
 
 # Alternative : installe une collection depuis un fichier tar.gz directement
-ansible-galaxy collection install ~/collections-offline/community-general-8.5.0.tar.gz -p ./collections/
+ansible-galaxy collection install ~/collections-offline/community-general-13.3.0.tar.gz -p ./collections/
 ```
 
 **Méthode C : Stocker les rôles directement dans Git**
@@ -1362,7 +1362,7 @@ ansible-galaxy collection install -r requirements.yml
 Starting galaxy collection install process
 Process install dependency map
 Starting collection install process
-Installing 'community.general:8.5.0' to '/home/user/.ansible/collections/ansible_collections/community/general'
+Installing 'community.general:13.3.0' to '/home/user/.ansible/collections/ansible_collections/community/general'
 Installing 'community.postgresql:3.3.0' to '/home/user/.ansible/collections/ansible_collections/community/postgresql'
 ```
 
@@ -1389,7 +1389,7 @@ ansible-galaxy collection list | grep -E "community.general|community.postgresql
 **Résultat attendu** :
 
 ```text
-community.general        8.5.0
+community.general        13.3.0
 community.postgresql     3.3.0
 ```
 

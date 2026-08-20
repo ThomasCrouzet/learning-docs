@@ -111,8 +111,9 @@ Sans filtre Doctrine, voici les problèmes rencontrés :
 | Action | API |
 | --- | --- |
 | Activer un filtre | `$em->getFilters()->enable('soft_delete')` |
-| Désactiver | `$em->getFilters()->disable('soft_delete')` |
-| Lire un paramètre | `$filter->getParameter('tenant')` |
+| Désactiver | `$em->getFilters()->disable('soft_delete')` (détruit l'instance et perd les paramètres) |
+| Suspendre / restaurer | `$em->getFilters()->suspend('soft_delete')` puis `restore('soft_delete')` (Doctrine 3.6 : garde les paramètres) |
+| Lire un paramètre | `$filter->getParameter('tenant')` (quoting SQL automatique) |
 | Définir un paramètre | `$filter->setParameter('tenant', $tenant)` |
 
 **Analogie concrète** : Pense à un interrupteur de lumière. Tu peux l'allumer (enable), l'éteindre (disable), et il y a un variateur (setParameter) qui règle l'intensité. L'interrupteur reste en place ; tu agis dessus quand le contexte l'exige.
@@ -484,7 +485,8 @@ try {
 
 public function load(ObjectManager $manager): void
 {
-    $manager->getConnection()->getConfiguration()->setSQLLogger(null);
+    // Doctrine 3 / DBAL 4 : setSQLLogger() n'existe plus.
+    // Ici on désactive uniquement le filtre tenant pour charger toutes les lignes.
 
     if ($manager->getFilters()->isEnabled('tenant')) {
         $manager->getFilters()->disable('tenant');

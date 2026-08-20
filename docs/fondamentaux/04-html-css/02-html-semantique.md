@@ -260,9 +260,9 @@ cursus: "HTML/CSS"
 
 ### Piège 1 : Plusieurs `<main>` dans une page
 
-⚠️ **Problème** : Un seul `<main>` est autorisé.
+⚠️ **Problème** : Un document ne doit pas avoir plus d'un `<main>` **visible**. MDN / HTML : un seul `<main>` sans attribut `hidden`.
 
-✅ **Solution** : Utiliser `<section>` pour les autres parties.
+✅ **Solution** : Un seul `<main>` visible. Utiliser `<section>` pour les autres parties. Ne pas empiler plusieurs `<main>` « pour la sémantique ».
 
 ### Piège 2 : Sauter des niveaux de titre
 

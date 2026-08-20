@@ -280,7 +280,8 @@ class ProductCrudController extends AbstractCrudController
         yield ImageField::new('imageFilename')
             ->setBasePath('uploads/images/products')
             ->setUploadDir('public/uploads/images/products')
-            ->setUploadedFileNamePattern('[year]-[month]-[day]-[contenthash].[extension]');
+            ->setUploadedFileNamePattern('[year]-[month]-[day]-[contenthash].[extension]')
+            ->setFileConstraints(new Image(maxSize: '5M'));
         // ...
     }
 

@@ -25,7 +25,7 @@ cursus: "Podman"
 
 | Technologie | Version |
 | ----------- | ------- |
-| Podman | 5.x (exemples compatibles 4.x+) |
+| Podman | 6.x (exemples compatibles 4.x+) |
 | PHP | 8.3 |
 
 ## Objectif de cette fiche

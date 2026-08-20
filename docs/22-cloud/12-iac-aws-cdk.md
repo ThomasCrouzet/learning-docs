@@ -209,7 +209,7 @@ CloudFormation crée les ressources AWS
 
 ### Étape 1 : Installer et initialiser un projet CDK
 
-Le CDK s'installe via npm. CDK v2 requiert Node.js >= 18 ; Node.js 22 LTS est recommandé en 2026 (Node.js 20 LTS est passé en End-of-Life en avril 2026).
+Le CDK s'installe via npm. Les prérequis officiels du CDK v2 exigent Node.js 22.x ou plus récent. Node.js 22 LTS est la version recommandée. Node.js 20 a atteint l'EOL communautaire le 30 avril 2026 ; le support CDK de Node.js 20.x se termine le 30 octobre 2026.
 
 ```bash
 # Installer la CLI du CDK globalement
@@ -221,7 +221,7 @@ npm install -g aws-cdk
 cdk --version
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (le numéro exact dépend de la version installée, ici un exemple CDK v2) :
 
 ```text
 2.150.0 (build abc1234)

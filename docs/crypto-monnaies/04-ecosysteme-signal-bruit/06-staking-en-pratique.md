@@ -101,7 +101,7 @@ Exigences pour valider sur Ethereum :
    - Savoir gérer les mises à jour et les incidents
    - Comprendre les risques de slashing
 
-Rendement : environ 3-5% APR (taux annuel) en ETH
+Rendement : environ 2-3% APR (taux annuel) en ETH (ethereum.org affichait ~2,6 % en août 2026)
 Risque : perte partielle ou totale des 32 ETH en cas de slashing
 ```
 
@@ -155,23 +155,25 @@ Important :
 
 | Pool | Token reçu | Part de l'ETH stake | Seuil minimum | Décentralisation |
 | --- | --- | --- | --- | --- |
-| Lido | stETH | ~30% | Aucun (quelques fractions d'ETH) | Faible (un petit nombre d'opérateurs de nœuds) |
-| Rocket Pool | rETH | ~3% | 0,01 ETH pour les stakers, 8 ETH pour les opérateurs | Moderee (opérateurs permissionless) |
-| Coinbase | cbETH | ~10% | Aucun | Faible (Coinbase est l'unique opérateur) |
+| Lido | stETH | ~19% | Aucun (quelques fractions d'ETH) | Faible (un petit nombre d'opérateurs de nœuds) |
+| Rocket Pool | rETH | ~1-2% | 0,01 ETH pour les stakers, 8 ETH pour les opérateurs | Moderee (opérateurs permissionless) |
+| Coinbase | cbETH | ~8-12% | Aucun | Faible (Coinbase est l'unique opérateur) |
 
 **Le problème de centralisation de Lido** :
 
 ```text
-Chiffres (2025-2026) :
-- Lido contrôle environ 30% de tout l'ETH stake
-- Cela signifie que les opérateurs de nœuds de Lido valident
-  environ 30% de tous les blocs Ethereum
+Chiffres (août 2026, beaconcha.in entities) :
+- Lido pèse environ 19% de tout l'ETH stake (plus ~30% des
+  années 2023-2024)
+- Les opérateurs de nœuds de Lido valident donc environ
+  19% des attestations, pas un tiers du réseau
 
-Pourquoi c'est un problème :
-- Si Lido (ou ses opérateurs) subit un bug, un hack ou une
-  pression réglementaire, 30% du réseau est affecte
-- Le seuil critique est 33% : au-delà, un seul acteur peut
-  bloquer la finalisation des blocs
+Pourquoi c'est encore un problème :
+- Lido reste le plus gros acteur unique. Un bug, un hack
+  ou une pression réglementaire toucherait une part majeure
+  du staking liquide
+- Le seuil critique de finalisation est 33% : au-delà, un
+  seul acteur peut bloquer la finalisation des blocs
 - Lido est un protocole DeFi gouverne par une DAO, pas une
   infrastructure décentralisée au niveau des validateurs
 
@@ -215,7 +217,7 @@ Comparaison :
 | --- | --- |
 | Pas de période de lock-up (vendre stETH à tout moment) | Le prix de stETH peut devier du prix d'ETH (depeg) |
 | Composabilite défi (utiliser stETH comme collatéral) | Smart contract risk : un bug dans Lido peut entrainer la perte des fonds |
-| Accès au staking sans minimum élevé | Centralisation (Lido contrôle ~30% de l'ETH stake) |
+| Accès au staking sans minimum élevé | Centralisation (Lido reste le 1er acteur, ~19% de l'ETH stake) |
 | Récompenses de staking + rendements défi combines | Risque de liquidation en cascade si stETH depeg fortement |
 
 **L'incident de depeg de stETH (juin 2022)** :
@@ -251,13 +253,13 @@ stake. Son prix peut devier, surtout en période de panique.
 
 ```text
 Staking classique :
-Alice depose 32 ETH -> sécurisé Ethereum -> reçoit ~4% APR
+Alice depose 32 ETH -> sécurisé Ethereum -> reçoit ~2-3% APR
 
 Restaking :
-Alice depose 32 ETH -> sécurisé Ethereum (~4% APR)
+Alice depose 32 ETH -> sécurisé Ethereum (~2-3% APR)
                      -> sécurisé aussi le Service A (+1% APR)
                      -> sécurisé aussi le Service B (+0,5% APR)
-Total : ~5,5% APR
+Total : ~3,5-4,5% APR
 
 Les "services" (AVS - Actively Validated Services) peuvent être :
 - Des oracles (flux de données)
@@ -287,7 +289,7 @@ Les "services" (AVS - Actively Validated Services) peuvent être :
 
 ```text
 Exemple 1 : Ethereum (ETH)
-- Rendement nominal du staking : ~4% APR
+- Rendement nominal du staking : ~2-3% APR
 - Inflation annuelle de l'ETH : variable, souvent proche de 0%
   (grâce au mécanisme de burn EIP-1559, l'ETH peut être déflationniste)
 - Rendement réel approximatif : ~4% (le rendement nominal est proche du réel)
@@ -309,7 +311,7 @@ Exemple 3 : Un token hypothetique avec 100% APR
 
 | Réseau | Rendement nominal (APR) | Inflation annuelle estimée | Rendement réel approximatif |
 | --- | --- | --- | --- |
-| Ethereum (ETH) | 3-5% | ~0% (variable) | ~3-5% |
+| Ethereum (ETH) | 2-3% | ~0% (variable) | ~2-3% |
 | Cosmos (ATOM) | 15-20% | 10-15% | ~5% |
 | Polkadot (DOT) | 12-15% | ~7-8% | ~5-7% |
 | Cardano (ADA) | 4-5% | ~3% | ~1-2% |
@@ -368,7 +370,7 @@ Les récompenses de staking sont généralement imposables. En France, le traite
 - [ ] Je connais la différence entre staking natif (exécuter un nœud) et staking delegue (confier à un validateur)
 - [ ] Je sais que devenir validateur Ethereum exige 32 ETH et un serveur 24h/24
 - [ ] Je comprends le fonctionnement des pools de staking (Lido, Rocket Pool)
-- [ ] Je sais que Lido contrôle ~30% de l'ETH stake et pourquoi c'est un problème de centralisation
+- [ ] Je sais que Lido reste le 1er acteur (~19% de l'ETH stake en 2026) et pourquoi la centralisation reste un risque
 - [ ] Je comprends le liquid staking (stETH) et ses risques (depeg, smart contract)
 - [ ] Je connais le concept de restaking (EigenLayer) et son caractère expérimental
 - [ ] Je sais calculer un rendement réel (rendement nominal - inflation du token)

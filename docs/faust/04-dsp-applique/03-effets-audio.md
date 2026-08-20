@@ -22,7 +22,7 @@ cursus: "Phase 4 - DSP appliqué"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras implémenter les effets audio classiques en Faust : distorsion, delay, modulation, reverb et dynamique.
+À la fin de cette fiche, tu sauras implémenter les effets audio classiques en Faust : distorsion, delay, modulation, reverb et dynamique.
 
 ---
 
@@ -303,7 +303,7 @@ Sous -20 dB : signal inchangé. Au-dessus : 4 dB d'excès -> 1 dB en sortie.
 | Linéaire | $L = 1 - \text{pan}$, $R = \text{pan}$ | Perte de volume (-6 dB) |
 | Puissance constante | $L = \cos(\text{pan} \cdot \pi/2)$, $R = \sin(\text{pan} \cdot \pi/2)$ | Volume constant |
 
-En Faust, `sp.panner(pan)` utilise la loi de puissance constante (pan de 0 à 1).
+En Faust, `sp.panner(pan)` est un panoramique **linéaire** (mono vers stéréo, pan de 0 à 1). La loi de puissance constante est fournie par `sp.constantPowerPan(pan)` (stéréo vers stéréo). Source : [spats.lib](https://faustlibraries.grame.fr/libs/spats/).
 
 ---
 
@@ -513,7 +513,8 @@ faust2jaqt compressor.dsp
 | `fi.allpass_comb(maxd, d, fb)` | Filtre allpass |
 | `re.mono_freeverb(fb1, fb2, damp, spread)` | Reverb mono |
 | `co.compressor_mono(ratio, th, att, rel)` | Compresseur mono |
-| `sp.panner(pan)` | Panoramique stéréo |
+| `sp.panner(pan)` | Panoramique stéréo linéaire (0 = gauche, 1 = droite) |
+| `sp.constantPowerPan(pan)` | Panoramique stéréo à puissance constante (entrée stéréo) |
 | `ba.db2linear` | dB vers gain linéaire |
 
 ---

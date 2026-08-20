@@ -283,7 +283,7 @@ Sans `faust2supercollider`, voici les problèmes rencontrés :
 | `faust2jaqt` | Linux, macOS | JACK | Qt | JACK, Qt |
 | `faust2caqt` | macOS | CoreAudio | Qt | Qt |
 | `faust2jack` | Linux, macOS | JACK | Aucune (headless) | JACK |
-| `faust2alsa` | Linux | ALSA | Gtk (optionnel) | ALSA (noyau Linux) |
+| `faust2alsa` | Linux | ALSA | Gtk | ALSA, Gtk |
 
 **Externals pour environnements tiers** :
 

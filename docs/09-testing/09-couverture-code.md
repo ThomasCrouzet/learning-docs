@@ -78,7 +78,9 @@ Chaque niveau donne une vision plus complète de la sécurité de l'immeuble.
 | Couverture de lignes (Line) | Cette ligne a-t-elle été exécutée ? | `return $a + $b;` a été exécutée |
 | Couverture de fonctions (Function) | Cette fonction a-t-elle été appelée ? | `add()` a été appelée au moins une fois |
 | Couverture de branches (Branch) | Chaque branche du if/else a-t-elle été prise ? | Le `if` ET le `else` ont été exécutés |
-| Couverture de conditions (Statement) | Chaque instruction a-t-elle été exécutée ? | Chaque `return`, `echo`, `$x = ...` a été exécuté |
+| Couverture d'instructions (Statement) | Chaque instruction a-t-elle été exécutée ? | Chaque `return`, `echo`, `$x = ...` a été exécuté |
+
+**Ne pas confondre statement et condition** : la couverture de conditions (souvent appelée _condition/décision coverage_) demande que chaque sous-expression booléenne d'un `if` ait été vraie **et** fausse. Ce n'est pas la même chose que la couverture d'instructions. PHPUnit et Jest rapportent surtout lignes, fonctions et branches ; ils n'affichent pas une colonne "conditions" au sens MC/DC.
 
 **Le problème que la couverture de branches résout** :
 

@@ -655,15 +655,14 @@ final class OrderNotifierCallCountTest extends TestCase
         $notifier->notify($order);
     }
 
-    public function testNotifyLogsTwoMessagesPerCall(): void
+    public function testNotifyLogsExactlyOnceWhenMailerSucceeds(): void
     {
         $mailer = $this->createMock(MailerInterface::class);
         $logger = $this->createMock(LoggerInterface::class);
 
         $mailer->method('send')->willReturn(true);
 
-        // Attente : log doit être appelée exactement 2 fois
-        // (une fois dans notify, une fois indirectement, selon ton code)
+        // Attente : log est appelée exactement 1 fois (branche succès de notify())
         $logger->expects(static::exactly(1))
             ->method('log');
 

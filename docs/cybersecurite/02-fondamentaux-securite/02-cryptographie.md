@@ -181,7 +181,7 @@ Sans chiffrement asymétrique, voici les problèmes rencontrés :
 | Taille | Niveau de sécurité | Recommandation |
 | ------ | ------------------- | -------------- |
 | 1024 bits | Cassé | Ne plus utiliser |
-| 2048 bits | Acceptable | Minimum en 2025 |
+| 2048 bits | Acceptable jusqu'en 2030 (NIST SP 800-131A) | Minimum en 2026 |
 | 3072 bits | Bon | Recommandé pour les nouvelles clés |
 | 4096 bits | Très bon | Pour les données à protéger longtemps |
 
@@ -450,20 +450,23 @@ openssl s_client -connect example.com:443 -servername example.com </dev/null 2>/
   openssl x509 -text -noout | head -30
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (les dates, l'émetteur et l'algorithme **changent** à chaque renouvellement du certificat ; ne mémorise pas un snapshot) :
 
 ```text
 Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number: ...
-    Signature Algorithm: sha256WithRSAEncryption
-        Issuer: C = US, O = DigiCert Inc, CN = DigiCert Global G2 TLS RSA SHA256 2020 CA1
+    Signature Algorithm: ...
+        Issuer: ...
         Validity
-            Not Before: Jan 13 00:00:00 2025 GMT
-            Not After : Feb 13 23:59:59 2027 GMT
-        Subject: C = US, ST = California, L = Los Angeles, O = Internet Corporation for Assigned Names and Numbers, CN = www.example.org
+            Not Before: ... GMT
+            Not After : ... GMT
+        Subject: CN = example.com
+                 (parfois www.example.org selon le SAN)
 ```
+
+Vérifie surtout : `Not After` est dans le futur, la chaîne d'émetteurs est présente, et le `Subject` / SAN couvre le nom demandé. En août 2026, `example.com` était émis par Cloudflare TLS Issuing ECC CA 3 (courbe, pas RSA), valable jusqu'à fin octobre 2026.
 
 ### Étape 6 : Calculer un HMAC
 

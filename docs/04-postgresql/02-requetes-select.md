@@ -567,16 +567,21 @@ GROUP BY category_id;
 
 ---
 
-### Piège 5 : HAVING sans GROUP BY
+### Piège 5 : Utiliser HAVING à la place de WHERE
 
-**Problème** : HAVING n'a de sens qu'avec GROUP BY.
+**Problème** : `HAVING price > 50` sans agrégat ni `GROUP BY` échoue : `price` n'est pas une colonne de groupe. `WHERE` filtre les lignes _avant_ le groupement. `HAVING` filtre les groupes _après_.
+
+`HAVING` sans `GROUP BY` est toutefois valide en PostgreSQL 16 : la requête devient un groupe unique (toutes les lignes). Tu peux alors filtrer un agrégat, par exemple `SELECT COUNT(*) FROM product HAVING COUNT(*) > 5`.
 
 ```sql
--- ❌ HAVING sans GROUP BY (utilise WHERE à la place)
+-- ❌ Incorrect : price n'est pas un agrégat, pas de GROUP BY
 SELECT * FROM product HAVING price > 50;
 
--- ✅ Correct
+-- ✅ Filtrer des lignes individuelles : WHERE
 SELECT * FROM product WHERE price > 50;
+
+-- ✅ Filtrer un agrégat sur toute la table : HAVING sans GROUP BY
+SELECT COUNT(*) FROM product HAVING COUNT(*) > 5;
 ```
 
 ---

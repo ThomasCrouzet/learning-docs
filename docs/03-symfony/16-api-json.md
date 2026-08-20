@@ -762,7 +762,7 @@ function deleteArticle(id) {
 
 | Commande | Action |
 | -------- | ------ |
-| `php bin/console debug:router --path=/api` | Lister les routes API |
+| `php bin/console debug:router` | Lister les routes (filtre le chemin `/api` dans la sortie ; pas d'option `--path` en 7.4) |
 | `curl -X GET http://localhost:8080/api/articles` | Tester un endpoint GET |
 | `curl -X POST url -H "Content-Type: application/json" -d '{...}'` | Tester un endpoint POST |
 

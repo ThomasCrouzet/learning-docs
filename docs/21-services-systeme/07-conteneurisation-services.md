@@ -12,7 +12,7 @@ cursus: "Services système"
 
 # 07 - Conteneurisation des services
 
-> **En bref** : Tu apprendras a déployer les services réseau etudies dans les fiches précédentes avec Docker Compose, a gérer les volumes persistants, les réseaux Docker et les dépendances entre services. Lecture estimée : 90 min.
+> **En bref** : Tu apprendras à déployer les services réseau étudiés dans les fiches précédentes avec Docker Compose, à gérer les volumes persistants, les réseaux Docker et les dépendances entre services. Lecture estimée : 90 min.
 
 ## Prérequis
 
@@ -21,7 +21,7 @@ cursus: "Services système"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras structurer un fichier `docker-compose.yml` multi-services, configurer les réseaux Docker pour isoler les services, utiliser les volumes pour persister les données, gérer les dépendances et l'ordre de démarrage entre services, et déployer une stack complete DNS + Web + Reverse Proxy.
+À la fin de cette fiche, tu sauras structurer un fichier `docker-compose.yml` multi-services, configurer les réseaux Docker pour isoler les services, utiliser les volumes pour persister les données, gérer les dépendances et l'ordre de démarrage entre services, et déployer une stack complète DNS + Web + Reverse Proxy.
 
 ---
 
@@ -358,7 +358,9 @@ services:
     dns:
       - 172.30.0.10
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
+      # L'image officielle nginx n'inclut pas curl ni wget.
+      # nginx -t vérifie que le binaire répond et que la config est valide.
+      test: ["CMD-SHELL", "nginx -t"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -787,7 +789,8 @@ services:
       dns:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
+      # L'image officielle nginx n'inclut pas curl ni wget.
+      test: ["CMD-SHELL", "nginx -t"]
       interval: 10s
       timeout: 5s
       retries: 3

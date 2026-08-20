@@ -268,8 +268,9 @@ EasyAdmin permet de grouper les actions dans un menu déroulant.
             ->update(Crud::PAGE_INDEX, Action::EDIT, fn (Action $action) => $action->setIcon('fa fa-pencil-alt'))
             ->update(Crud::PAGE_INDEX, Action::DELETE, fn (Action $action) => $action->setIcon('fa fa-trash'))
             
-            // Cette méthode magique ne groupe pas automatiquement, 
+            // Cette méthode magique ne groupe pas automatiquement,
             // il faut souvent jouer avec l'ordre d'affichage ou utiliser ->displayAsLink() vs ->displayAsButton()
+            // (EasyAdmin 4 ; EasyAdmin 5 renomme en renderAsLink / renderAsButton)
             
             // reorder() ne fait que définir l'ordre d'affichage des actions, il ne crée pas de dropdown ;
             ->reorder(Crud::PAGE_INDEX, [Action::EDIT, 'duplicate', 'viewWebsite', Action::DELETE]);
@@ -415,6 +416,22 @@ return $actions
 ```
 
 N'oublie pas de vider le cache : `php bin/console cache:clear`.
+
+### Piège 5 : Action personnalisée sans attribut `#[AdminRoute]` (pretty URLs)
+
+⚠️ **Problème** : À partir d'EasyAdmin 4.29.5, avec les pretty URLs, une action CRUD personnalisée sans attribut `#[AdminRoute]` est dépréciée. En EasyAdmin 5.x, `linkToCrudAction('duplicateProduct')` ignore la méthode si l'attribut est absent.
+
+✅ **Solution** : Annote la méthode d'action avec `#[AdminRoute]` (voir le fichier `UPGRADE.md` d'EasyAdmin 4.x) :
+
+```php
+use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminRoute;
+
+#[AdminRoute('/{entityId}/duplicate')]
+public function duplicateProduct(AdminContext $context, AdminUrlGenerator $adminUrlGenerator, EntityManagerInterface $entityManager)
+{
+    // ...
+}
+```
 
 ---
 

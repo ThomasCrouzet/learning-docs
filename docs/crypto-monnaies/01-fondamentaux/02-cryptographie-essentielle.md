@@ -46,7 +46,7 @@ Sans cryptographie, voici les problèmes rencontrés :
 | -------- | ------------------------- | -------- |
 | Confidentialité | Chiffrement (symétrique ou asymétrique) | Seul le destinataire peut lire le message |
 | Intégrité | Fonctions de hachage | Toute modification est détectée immédiatement |
-| Authenticite | Signatures numériques | L'expéditeur est identifié de manière certaine |
+| Authenticité | Signatures numériques | L'expéditeur est identifié de manière certaine |
 
 **Analogie concrète** : Pense à un courrier postal. La cryptographie, c'est trois choses : une enveloppe opaque (chiffrement - personne ne peut lire), un sceau de cire (hachage - on voit si quelqu'un a ouvert), et ta signature manuscrite (signature numérique - on sait que c'est toi).
 
@@ -232,16 +232,19 @@ Alice veut envoyer un message signe à Bob.
 Étape 1 - Alice calcule le hash du message :
    "Je transfère 10 euros à Bob" -> hash : "a3f8..."
 
-Étape 2 - Alice chiffre le hash avec SA CLE PRIVEE :
+Étape 2 - Alice signe le hash avec SA CLE PRIVEE :
    hash "a3f8..." + clé privée d'Alice -> signature "7x9k..."
+   (Bitcoin utilise ECDSA ou Schnorr : ce n'est pas un chiffrement RSA.
+   La clé privée produit une signature ; on ne "déchiffre" pas le hash.)
 
 Étape 3 - Alice envoie le message + la signature :
    "Je transfère 10 euros à Bob" + signature "7x9k..."
 
 Étape 4 - Bob vérifie avec LA CLE PUBLIQUE d'Alice :
-   a) Bob déchiffre la signature avec la clé publique d'Alice -> hash "a3f8..."
+   a) Bob vérifie la signature avec la clé publique d'Alice
    b) Bob calcule lui-même le hash du message -> hash "a3f8..."
-   c) Les deux hash sont identiques -> le message est authentique et intact
+   c) La vérification réussit et les hash correspondent
+      -> le message est authentique et intact
 ```
 
 **Analogie concrète** : Un sceau personnel unique. Au Moyen Âge, chaque seigneur avait un sceau gravé avec un motif unique. Il pressait ce sceau dans la cire chaude pour fermer une lettre. N'importe qui pouvait voir le motif du sceau (clé publique) et vérifier que la lettre venait bien du seigneur. Mais seul le seigneur possédait le sceau physique (clé privée) pour créer cette empreinte.
@@ -272,9 +275,11 @@ Les quatre concepts ci-dessus sont les briques de base des crypto-monnaies. Voic
    Un nombre aleatoire de 256 bits, qui s'écrit en 64 caractères hexadecimaux.
    Exemple (forme hexadecimale brute) :
    1e99423a4 ... 8c54d7c2da53e6f8b1c0a... (64 caractères 0-9 a-f)
-   Pour faciliter la sauvegarde, ce même nombre est souvent encode au
-   format WIF (Base58), qui commence par un 5 : 5HueCGU8rMjxEXxiPuD5BDk...
-   Hexadecimal et WIF représentent la même clé, sous deux écritures.
+   Pour faciliter la sauvegarde, ce même nombre est souvent encodé au
+   format WIF (Base58Check). Un WIF non compressé commence par 5
+   (exemple historique : 5HueCGU8rMjxEXxiPuD5BDk...). Les portefeuilles
+   modernes utilisent des clés compressées : le WIF commence alors par
+   K ou L. Hexadécimal et WIF représentent la même clé, sous deux écritures.
 
 Étape 2 : Calcul de la clé publique
    On applique une opération mathématique (courbe elliptique)

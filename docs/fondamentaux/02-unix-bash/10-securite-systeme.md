@@ -267,15 +267,17 @@ sudo cat /etc/ssh/sshd_config | grep -v "^#" | grep -v "^$"
 sudo sshd -T | grep -E "permitrootlogin|passwordauthentication|pubkeyauthentication|maxauthtries|port"
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (valeurs effectives ; `sshd -T` affiche la config compilée, pas seulement le fichier commenté) :
 
 ```text
 port 22
-permitrootlogin yes
+permitrootlogin prohibit-password
 passwordauthentication yes
 pubkeyauthentication yes
 maxauthtries 6
 ```
+
+Sur Ubuntu 24.04 / OpenSSH récent, `PermitRootLogin` vaut `prohibit-password` par défaut (connexion root uniquement par clé, pas par mot de passe). Certaines installations plus anciennes affichent encore `permitrootlogin yes`. Le durcissement de l'étape suivante force `no`.
 
 ---
 

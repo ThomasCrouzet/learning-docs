@@ -170,7 +170,7 @@ Cas d'usage typique : une banque stocke les données sensibles des clients sur u
 
 **Amazon Web Services (AWS)** :
 
-Leader du marché avec environ 28% de parts de marché (Q1 2026, source : Synergy Research Group). AWS propose plus de 200 services, des machines virtuelles (EC2) aux services d'intelligence artificielle (SageMaker).
+Leader du marché avec 28% de parts de marché (Q1 2026, source : Synergy Research Group). AWS propose plus de 200 services, des machines virtuelles (EC2) aux services d'intelligence artificielle (SageMaker).
 
 Services clés :
 
@@ -182,7 +182,7 @@ Services clés :
 
 **Microsoft Azure** :
 
-Deuxième fournisseur mondial (~22% de parts de marché, Q1 2026, Synergy Research Group). Fort de l'intégration avec l'écosystème Microsoft (Active Directory, Windows Server, .NET).
+Deuxième fournisseur mondial (21% de parts de marché, Q1 2026, Synergy Research Group). Fort de l'intégration avec l'écosystème Microsoft (Active Directory, Windows Server, .NET).
 
 Services clés :
 
@@ -194,7 +194,7 @@ Services clés :
 
 **Google Cloud Platform (GCP)** :
 
-Troisième fournisseur mondial (~13% de parts de marché, Q1 2026, Synergy Research Group). Reconnu pour ses services de données, de machine learning et de conteneurs (Kubernetes a été créé par Google).
+Troisième fournisseur mondial (14% de parts de marché, Q1 2026, Synergy Research Group). Reconnu pour ses services de données, de machine learning et de conteneurs (Kubernetes a été créé par Google).
 
 Services clés :
 

@@ -19,7 +19,7 @@ cursus: "OpenShift"
 
 - Avoir lu la fiche **[01 - Introduction à OpenShift](01-introduction-openshift.md)**
 - 35 Go d'espace disque libre minimum sur ton ordinateur
-- 9 Go de RAM disponible minimum (de préférence 12 Go)
+- 10,5 Go de mémoire libre minimum (OpenShift Container Platform ; 4 coeurs CPU physiques). De préférence 16 Go de RAM totale
 - Processeur avec support de la virtualisation matérielle (VT-x sur Intel, AMD-V sur AMD, ou Apple Silicon)
 - Un compte gratuit sur console.redhat.com (création en ligne nécessaire avant de passer en offline)
 
@@ -89,7 +89,7 @@ Le diagramme suivant résume les étapes d'installation et de démarrage de CRC.
 | --- | --- | --- |
 | Plateforme | OpenShift (Kubernetes + outils Red Hat) | Kubernetes vanilla (sans ajout) |
 | Console web | Console OpenShift complète incluse | Pas de console web par défaut |
-| Ressources requises | 9 Go RAM, 35 Go disque | 2 Go RAM, 20 Go disque |
+| Ressources requises | 10,5 Go de mémoire libre, 35 Go disque | 2 Go RAM, 20 Go disque |
 | Registre d'images | Registre interne OpenShift inclus | Pas de registre par défaut |
 | Cas d'usage | Apprendre et développer pour OpenShift | Apprendre Kubernetes de base |
 | Complexité | Plus lourd mais plus complet | Plus léger mais plus basique |
@@ -574,7 +574,7 @@ oc login -u developer -p developer https://api.crc.testing:6443
 
 **Problème** : CRC refuse de démarrer ou le cluster est instable.
 
-**Solution** : CRC nécessite 9 Go de RAM au minimum. Avant de lancer `crc start`, ferme les applications gourmandes en mémoire (navigateur avec beaucoup d'onglets, IDE, autres machines virtuelles). Pour éviter les crashs et les ralentissements, ta machine doit avoir au moins 16 Go de RAM.
+**Solution** : CRC (OpenShift Container Platform) nécessite 10,5 Go de mémoire libre et 4 coeurs CPU physiques (documentation crc.dev). Avant de lancer `crc start`, ferme les applications gourmandes en mémoire (navigateur avec beaucoup d'onglets, IDE, autres machines virtuelles). Pour éviter les crashs et les ralentissements, ta machine doit avoir au moins 16 Go de RAM.
 
 ---
 

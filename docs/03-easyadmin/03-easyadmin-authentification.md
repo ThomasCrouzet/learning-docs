@@ -157,38 +157,24 @@ Appuie sur Entrée pour accepter `yes`.
 
 ### Partie 3 : Créer le système de connexion
 
-Symfony peut générer tout le code nécessaire pour la page de connexion (formulaire, contrôleur, template).
+Symfony peut générer le contrôleur, le template et la configuration `form_login` nécessaires pour la page de connexion.
 
-#### Étape 3.1 : Lancer make:auth
+> **Note** : La commande historique `make:auth` est **dépréciée** depuis MakerBundle 1.59. La commande officielle actuelle (documentation Symfony Security) est `make:security:form-login`. Elle configure l'authenticator intégré `form_login` : elle ne crée plus de classe `AppAuthenticator.php`.
+
+#### Étape 3.1 : Lancer make:security:form-login
 
 ```bash
-php bin/console make:auth
+php bin/console make:security:form-login
 ```
 
 #### Étape 3.2 : Répondre aux questions
-
-```text
-What style of authentication do you want? [Empty authenticator]:
-  [0] Empty authenticator
-  [1] Login form authenticator
-> 1
-```
-
-Tape `1` et appuie sur Entrée.
-
-```text
-The class name of the authenticator to create (e.g. AppCustomAuthenticator):
-> AppAuthenticator
-```
-
-Tape `AppAuthenticator` (ou appuie sur Entrée si c'est déjà le défaut).
 
 ```text
 Choose a name for the controller class (e.g. SecurityController) [SecurityController]:
 > 
 ```
 
-Appuie sur Entrée.
+Appuie sur Entrée pour accepter `SecurityController`.
 
 ```text
 Do you want to generate a '/logout' URL? (yes/no) [yes]:
@@ -197,14 +183,17 @@ Do you want to generate a '/logout' URL? (yes/no) [yes]:
 
 Appuie sur Entrée.
 
+Le wizard peut aussi te proposer de générer des tests. Réponds `no` si tu n'as pas encore le `symfony/test-pack`.
+
 **Résultat attendu** :
 
 ```text
- created: src/Security/AppAuthenticator.php
  created: src/Controller/SecurityController.php
  created: templates/security/login.html.twig
  updated: config/packages/security.yaml
 ```
+
+La configuration `security.yaml` contient maintenant un bloc `form_login` (chemins `app_login`) et, si tu as accepté, un bloc `logout`.
 
 ---
 
@@ -385,22 +374,20 @@ exit
 
 ### Partie 8 : Redirection après login
 
-Par défaut, Symfony redirige vers la page d'accueil après le login. Pour rediriger directement vers l'admin, modifions l'authenticator `AppAuthenticator`.
+Par défaut, Symfony redirige vers la page d'accueil après le login. Avec `form_login`, la redirection se configure dans `security.yaml` (pas dans une classe authenticator personnalisée).
 
-Ouvre `src/Security/AppAuthenticator.php`.
+Ouvre `config/packages/security.yaml`.
 
-Cherche la méthode `onAuthenticationSuccess`.
-Modifie la ligne de redirection :
+Dans le firewall `main`, sous `form_login`, ajoute `default_target_path` :
 
-```php
-// Remplace :
-// return new RedirectResponse($this->urlGenerator->generate('some_route'));
-
-// Par :
-return new RedirectResponse($this->urlGenerator->generate('admin'));
+```yaml
+            form_login:
+                login_path: app_login
+                check_path: app_login
+                default_target_path: admin
 ```
 
-_Note : Assure-toi que la route de ton Dashboard s'appelle bien `admin` (vérifie dans `DashboardController.php`)._
+`admin` est le nom de route du Dashboard EasyAdmin (valeur par défaut). Vérifie-le dans `DashboardController.php` si tu l'as changé.
 
 ---
 
@@ -409,7 +396,7 @@ _Note : Assure-toi que la route de ton Dashboard s'appelle bien `admin` (vérifi
 Tu as sécurisé ton application :
 
 1. **Entité User** : La structure pour stocker les utilisateurs.
-2. **Authenticator** : Le système qui vérifie le mot de passe haché.
+2. **form_login** : L'authenticator intégré qui vérifie le mot de passe haché.
 3. **Command** : Un outil pour créer le premier admin "par la porte de service".
 4. **Access Control** : Le vigile qui empêche l'accès à `/admin` aux non-admins.
 
@@ -430,7 +417,7 @@ Tu as sécurisé ton application :
 | Commande | Action |
 | -------- | ------ |
 | `php bin/console make:user` | Générer l'entité User avec l'interface de sécurité |
-| `php bin/console make:auth` | Générer le formulaire de login et l'authenticator |
+| `php bin/console make:security:form-login` | Générer le formulaire de login et configurer `form_login` |
 | `php bin/console security:hash-password` | Hacher un mot de passe manuellement (utile pour vérifier) |
 | `php bin/console debug:router` | Lister toutes les routes (vérifier que `/login` et `/logout` existent) |
 | `php bin/console debug:config security` | Afficher la configuration de sécurité active |
@@ -469,16 +456,19 @@ access_control:
 
 ⚠️ **Problème** : Tu vas sur `/login` et tu obtiens une page blanche ou une erreur Twig.
 
-✅ **Solution** : Vérifie que le fichier `templates/security/login.html.twig` existe bien. Si tu l'as supprimé par erreur, relance `php bin/console make:auth` (choix 1) pour le régénérer.
+✅ **Solution** : Vérifie que le fichier `templates/security/login.html.twig` existe bien. Si tu l'as supprimé par erreur, relance `php bin/console make:security:form-login` pour le régénérer (réponds aux questions du wizard).
 
 ### Piège 4 : La redirection après login ne fonctionne pas
 
 ⚠️ **Problème** : Après connexion, tu es redirigé vers la page d'accueil `/` au lieu de `/admin`.
 
-✅ **Solution** : Modifie la méthode `onAuthenticationSuccess` dans `src/Security/AppAuthenticator.php` pour rediriger vers la route `admin` :
+✅ **Solution** : Ajoute `default_target_path: admin` sous `form_login` dans `config/packages/security.yaml` :
 
-```php
-return new RedirectResponse($this->urlGenerator->generate('admin'));
+```yaml
+form_login:
+    login_path: app_login
+    check_path: app_login
+    default_target_path: admin
 ```
 
 ---

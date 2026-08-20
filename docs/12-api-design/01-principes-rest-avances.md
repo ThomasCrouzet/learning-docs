@@ -522,8 +522,8 @@ class ArticleController extends AbstractController
         $em->remove($article);
         $em->flush();
 
-        // 204 No Content : la suppression a réussi, pas de contenu à retourner
-        return $this->json(null, Response::HTTP_NO_CONTENT);
+        // 204 No Content : pas de corps. json(null) enverrait le texte "null"
+        return new JsonResponse(status: Response::HTTP_NO_CONTENT);
     }
 }
 ```
@@ -546,6 +546,7 @@ use App\Entity\Article;
 use App\Entity\Comment;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -577,9 +578,10 @@ class CommentController extends AbstractController
     }
 
     // POST /api/articles/5/comments → Ajoute un commentaire à l'article 5
+    // {articleId} ne correspond pas au nom $article : MapEntity lie le paramètre de route à l'entité
     #[Route('', methods: ['POST'])]
     public function create(
-        Article $article,
+        #[MapEntity(id: 'articleId')] Article $article,
         Request $request,
         EntityManagerInterface $em
     ): JsonResponse {
@@ -1029,8 +1031,8 @@ class BookController extends AbstractController
         $em->remove($book);
         $em->flush();
 
-        // 204 No Content
-        return $this->json(null, Response::HTTP_NO_CONTENT);
+        // 204 No Content : pas de corps. json(null) enverrait le texte "null"
+        return new JsonResponse(status: Response::HTTP_NO_CONTENT);
     }
 }
 ```
@@ -1045,6 +1047,7 @@ use App\Entity\Book;
 use App\Entity\Review;
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -1074,9 +1077,10 @@ class BookReviewController extends AbstractController
     }
 
     // POST /api/books/5/reviews → Ajoute un avis au livre 5
+    // {bookId} ne correspond pas au nom $book : MapEntity lie le paramètre de route à l'entité
     #[Route('', methods: ['POST'])]
     public function create(
-        Book $book,
+        #[MapEntity(id: 'bookId')] Book $book,
         Request $request,
         EntityManagerInterface $em
     ): JsonResponse {

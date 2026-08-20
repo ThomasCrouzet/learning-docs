@@ -542,8 +542,7 @@ Plan d'audit interne créé
 
 | Commande | Action |
 | -------- | ------ |
-| `pip install fairquant` | Installer l'outil de calcul FAIR en Python |
-| `python3 -c "from fairquant import FairModel; m = FairModel(); print(m)"` | Vérifier l'installation de fairquant |
+| `python3 -c "lef=0.5; plm=225000; slm=1500000; print(lef*(plm+slm))"` | Calculer un ALE FAIR simple (LEF × (PLM + SLM)) |
 | `openscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml` | Évaluer la conformité CIS d'un serveur RHEL |
 | `lynis audit system` | Auditer la configuration de sécurité d'un système Linux |
 | `docker run --rm -v $(pwd):/data aquasec/trivy fs /data` | Scanner les vulnérabilités d'un projet |

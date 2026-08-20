@@ -38,7 +38,7 @@ A la fin de cette fiche, tu sauras définir ce qu'est une CBDC, expliquer les di
 Les systèmes de paiement actuels ont des limitations concrètes :
 
 1. **Lenteur des paiements internationaux** : un virement SWIFT prend 1 a 5 jours ouvrables et coûte cher.
-2. **Exclusion financière** : environ 1,4 milliard de personnes dans le monde n'ont pas de compte bancaire.
+2. **Exclusion financière** : environ 1,3 milliard d'adultes dans le monde n'ont pas de compte bancaire (Global Findex 2025).
 3. **Dépendance aux intermédiaires prives** : les paiements passent par des banques commerciales, des processeurs de paiement (Visa, Mastercard) qui prélevént des frais.
 4. **Perte de contrôle monétaire** : les banques centrales ont moins de contrôle sur la monnaie quand les paiements passent par des acteurs prives.
 
@@ -63,14 +63,14 @@ Les systèmes de paiement actuels ont des limitations concrètes :
 
 ### Les projets CBDC dans le monde : où en est-on ?
 
-**Définition** : Plus de 130 pays explorent les CBDC à des stades divers. Voici les projets les plus avancés.
+**Définition** : Plus de 140 pays et unions monétaires explorent les CBDC à des stades divers (Atlantic Council CBDC Tracker, mai 2026 : 146). Voici les projets les plus avancés.
 
 **Les projets majeurs** :
 
 | Projet | Pays | Stade | Détails |
 | --- | --- | --- | --- |
 | e-CNY (yuan numérique) | Chine | Pilote avance | Teste sur des centaines de millions de personnes dans plusieurs villes. Integre aux applications de paiement. Expiration programmable testee |
-| Euro numérique | Zone euro (BCE) | Phase de preparation | Design en cours. Décision sur le lancement prévue vers 2025-2026. Plafond de detention envisage (~3 000 euros) |
+| Euro numérique | Zone euro (BCE) | Préparation technique | Phase de préparation close en octobre 2025. Première émission visée en 2029 si le règlement est adopté d'ici fin 2026. Plafond de détention encore hypothétique (analyses jusqu'à ~3 000 euros par personne) |
 | Digital dollar | USA | Recherche | Pas de projet concret. Débat politique intense (opposition forte au Congres) |
 | Sand Dollar | Bahamas | Lance | Première CBDC operationnelle au monde (2020). Adoption limitée |
 | eNaira | Nigeria | Lance | Lance en 2021. Adoption très faible malgré les efforts du gouvernement |

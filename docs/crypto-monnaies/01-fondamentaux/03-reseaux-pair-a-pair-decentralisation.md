@@ -37,7 +37,7 @@ Sans serveur central, voici les problèmes rencontrés :
 
 1. **Pas de source unique de vérité** : chaque participant pourrait avoir des données différentes, sans moyen simple de savoir laquelle est correcte.
 2. **Difficulté de coordination** : si 1000 personnes veulent échanger des informations, chacune devrait contacter les 999 autres.
-3. **Pas de contrôle d'accès** : sans point central, difficile de gérer qui à le droit de faire quoi.
+3. **Pas de contrôle d'accès** : sans point central, difficile de gérer qui a le droit de faire quoi.
 
 **Comment le modèle client-serveur résout ces problèmes** :
 
@@ -100,7 +100,7 @@ Sans réseau pair-à-pair, voici les problèmes rencontrés :
       ↕     Nœud D ←─┘
     Nœud C ←───→ Nœud D
 
-Chaque nœud est connecte a plusieurs autres.
+Chaque nœud est connecté à plusieurs autres.
 Si un nœud disparaît, le réseau continue de fonctionner.
 ```
 
@@ -207,7 +207,7 @@ Voici les coûts concrets :
 
 - **Lenteur** : pour qu'un réseau décentralisé se mette d'accord (atteigne un "consensus"), chaque nœud doit vérifier et valider les informations. Sur Bitcoin, une transaction prend en moyenne 10 minutes à être confirmée. Un virement bancaire SEPA instantané prend quelques secondes.
 
-- **Redondance massive** : chaque nœud du réseau stocke une copie complète de toutes les données. La blockchain Bitcoin pèse plus de 600 Go. Des milliers de nœuds stockent ces mêmes 600 Go. C'est comme si chaque habitant d'une ville devait garder chez lui une copie de tous les registrès de la mairie.
+- **Redondance massive** : chaque nœud du réseau stocke une copie complète de toutes les données. La blockchain Bitcoin pèse plus de 750 Go (ordre de grandeur 2026 : environ 760 Go selon Blockchair, plus de 850 Go sur un nœud local non élagué). Des milliers de nœuds stockent ces mêmes données. C'est comme si chaque habitant d'une ville devait garder chez lui une copie de tous les registres de la mairie.
 
 - **Difficulté de mise à jour** : pour modifier les règles d'un système décentralisé, il faut que la majorité des participants acceptent le changement. Cela prend des mois ou des années de débats, et peut provoquer des "forks" (scissions du réseau). Sur un système centralisé, l'opérateur déploie la mise à jour en quelques heures.
 

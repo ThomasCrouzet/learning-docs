@@ -559,7 +559,7 @@ et 1 lead technique. Le projet doit être maintenable sur le long terme.
 - Inconvénients : écosystème plus petit, moins de ressources pour les
   juniors, marché de l'emploi plus restreint
 
-### Option 3 : Angular 18
+### Option 3 : Angular 22
 - Avantages : framework complet (routing, formulaires, HTTP), TypeScript
   natif, conventions strictes
 - Inconvénients : courbe d'apprentissage très raide pour des juniors,

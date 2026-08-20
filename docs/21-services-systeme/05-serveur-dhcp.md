@@ -250,7 +250,7 @@ Lance un conteneur client qui demande une adresse DHCP :
 docker run -d \
   --name lab-dhcp-client \
   --network lab-dhcp-net \
-  alpine:3.19 sleep 3600
+  alpine:3.22 sleep 3600
 
 # Verifie l'adresse IP obtenue par le client
 docker exec lab-dhcp-client ip addr show eth0
@@ -264,6 +264,11 @@ docker exec lab-dhcp-client ip addr show eth0
 ```
 
 Le client a reçu une adresse dans la plage dynamique (172.20.0.100-200).
+
+> **Limite du lab Docker** : un réseau bridge Docker (`docker network create --subnet=...`) attribue les IP via **l'IPAM de Docker**, pas via dhcpd.
+> Un conteneur Alpine joint avec `--network lab-dhcp-net` reçoit donc souvent `.3`, `.4`, etc. de Docker, pas forcément `.100` de ISC DHCP.
+> Les fichiers `dhcpd.conf` / `dnsmasq.conf` restent le bon support pour apprendre la syntaxe.
+> Pour observer un vrai échange DORA, il faut un réseau sans IPAM Docker (macvlan/ipvlan, ou `--network none` avec une interface dédiée).
 
 ---
 
@@ -310,7 +315,7 @@ docker run -d \
   --network lab-dhcp-net \
   --ip 172.20.0.3 \
   --cap-add NET_ADMIN \
-  alpine:3.19 sh -c "
+  alpine:3.22 sh -c "
     apk add --no-cache dnsmasq &&
     cat > /etc/dnsmasq.conf << 'DNSCONF'
 # Interface d'ecoute
@@ -383,7 +388,7 @@ docker exec lab-dhcp-client sh -c "
 **Résultat attendu** :
 
 ```text
-udhcpc: started, v1.36.1
+udhcpc: started, v1.37.0
 udhcpc: broadcasting discover
 udhcpc: broadcasting select for 172.20.0.100
 udhcpc: lease of 172.20.0.100 obtained from 172.20.0.3, lease time 43200
@@ -550,8 +555,8 @@ docker run -d --name lab-dhcp-ex \
   networkboot/dhcpd:latest eth0
 
 # Lance deux clients
-docker run -d --name client1 --network lab-dhcp-ex-net alpine:3.19 sleep 3600
-docker run -d --name client2 --network lab-dhcp-ex-net alpine:3.19 sleep 3600
+docker run -d --name client1 --network lab-dhcp-ex-net alpine:3.22 sleep 3600
+docker run -d --name client2 --network lab-dhcp-ex-net alpine:3.22 sleep 3600
 
 # Verifie les adresses
 docker exec client1 ip addr show eth0

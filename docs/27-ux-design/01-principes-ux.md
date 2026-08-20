@@ -126,7 +126,7 @@ La version de référence technique actuelle est **WCAG 2.2** (recommandation W3
 
 Sans accessibilité, voici les problèmes rencontrès :
 
-1. **Exclusion d'utilisateurs** : 15% de la population mondiale vit avec un handicap. Un site inaccessible exclut potentiellement des millions de personnes.
+1. **Exclusion d'utilisateurs** : selon l'OMS, environ 16 % de la population mondiale (1,3 milliard de personnes) vit avec un handicap significatif. Un site inaccessible exclut potentiellement des millions de personnes.
 2. **Non-conformité légale** : En France, la loi impose l'accessibilité pour les sites publics (RGAA). Ne pas s'y conformer expose à des sanctions.
 3. **Mauvaise expérience pour tous** : Les bonnes pratiques d'accessibilité ameliorent l'expérience pour tous les utilisateurs (sous-titrès utiles dans un environnement bruyant, contraste suffisant en plein soleil).
 

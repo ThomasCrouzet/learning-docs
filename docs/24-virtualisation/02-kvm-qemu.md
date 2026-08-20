@@ -262,21 +262,22 @@ Bridge:         virbr0
 
 ### Étape 5 : Telecharger une image ISO
 
-Pour créer une VM, tu as besoin d'une image ISO d'un système d'exploitation. On utilisera Debian 12 :
+Pour créer une VM, tu as besoin d'une image ISO d'un système d'exploitation. On utilisera Debian 12 (oldstable). Le répertoire `debian-cd/current/` pointe désormais vers Debian 13 : pour Bookworm, prends `cdimage/archive/latest-oldstable/`.
 
 ```bash
 # Creer un dossier pour les images ISO
 mkdir -p /var/lib/libvirt/images/iso
 
-# Telecharger l'ISO Debian 12 (netinst, ~600 Mo)
+# Telecharger l'ISO Debian 12 (netinst). Le numéro de point release change
+# (12.15.0 en juillet 2026) : vérifie le nom exact dans le répertoire.
 sudo wget -P /var/lib/libvirt/images/iso/ \
-  https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso
+  https://cdimage.debian.org/cdimage/archive/latest-oldstable/amd64/iso-cd/debian-12.15.0-amd64-netinst.iso
 ```
 
 **Résultat attendu** :
 
 ```text
-Le fichier debian-12.9.0-amd64-netinst.iso est telecharge dans /var/lib/libvirt/images/iso/.
+Le fichier debian-12.15.0-amd64-netinst.iso est telecharge dans /var/lib/libvirt/images/iso/.
 ```
 
 ---
@@ -287,17 +288,17 @@ Le fichier debian-12.9.0-amd64-netinst.iso est telecharge dans /var/lib/libvirt/
 # Creer une VM Debian 12 avec virt-install
 virt-install \
   --name debian-test \
-  --ram 2048 \
+  --memory 2048 \
   --vcpus 2 \
   --disk path=/var/lib/libvirt/images/debian-test.qcow2,size=20,format=qcow2 \
   --os-variant debian12 \
   --network network=default \
   --graphics vnc,listen=0.0.0.0 \
-  --cdrom /var/lib/libvirt/images/iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom /var/lib/libvirt/images/iso/debian-12.15.0-amd64-netinst.iso \
   --boot cdrom
 
 # --name : nom de la VM
-# --ram : memoire en Mo (2 Go)
+# --memory : mémoire en Mo (2 Go). --ram est l'ancienne option, dépréciée.
 # --vcpus : nombre de processeurs virtuels
 # --disk : image disque qcow2 de 20 Go (creee automatiquement)
 # --os-variant : optimisations specifiques a Debian 12
@@ -463,7 +464,7 @@ virsh net-list --all
 | `virsh autostart <vm>` | Activer le démarrage automatique |
 | `virsh net-list --all` | Lister les réseaux virtuels |
 | `virsh net-info <reseau>` | Informations sur un réseau |
-| `virt-install --os-variant list` | Lister les variantes d'OS supportees |
+| `virt-install --osinfo list` | Lister les variantes d'OS (alias : `--os-variant`) |
 | `qemu-img create -f qcow2 <fichier> <taille>` | Creer une image disque |
 
 ---
@@ -520,8 +521,8 @@ ls -la /var/lib/libvirt/images/iso/
 **Solution** : Specifie toujours `--os-variant`. Pour trouver la valeur correcte :
 
 ```bash
-# Lister les variantes disponibles
-virt-install --os-variant list | grep debian
+# Lister les variantes disponibles (commande actuelle : --osinfo list)
+virt-install --osinfo list | grep debian
 ```
 
 ---
@@ -575,13 +576,13 @@ Après l'installation, configure le démarrage automatique de la VM et créé un
 ```bash
 virt-install \
   --name web-server \
-  --ram 1024 \
+  --memory 1024 \
   --vcpus 1 \
   --disk path=/var/lib/libvirt/images/web-server.qcow2,size=10,format=qcow2 \
   --os-variant debian12 \
   --network network=default \
   --graphics vnc,listen=0.0.0.0 \
-  --cdrom /var/lib/libvirt/images/iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom /var/lib/libvirt/images/iso/debian-12.15.0-amd64-netinst.iso \
   --boot cdrom
 ```
 

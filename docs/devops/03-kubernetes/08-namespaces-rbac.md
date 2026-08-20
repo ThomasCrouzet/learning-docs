@@ -572,7 +572,7 @@ spec:
   serviceAccountName: app-sa
   containers:
     - name: kubectl
-      image: bitnami/kubectl:1.34
+      image: registry.k8s.io/kubectl:v1.34.0
       command: ["sh", "-c", "kubectl get pods -n dev && echo '---' && kubectl get nodes && sleep 3600"]
 ```
 

@@ -194,15 +194,20 @@ Ce résultat est difficile à lire. ROUND() le formate proprement.
 **Syntaxe** :
 
 ```sql
-ROUND(valeur, nombre_de_décimales)
+-- En PostgreSQL, la forme à 2 arguments exige le type numeric
+-- (pas double precision). Docs : https://www.postgresql.org/docs/current/functions-math.html
+ROUND(valeur_numeric, nombre_de_décimales)
 ```
 
 **Exemples** :
 
 ```sql
-SELECT ROUND(46.6633, 2);   -- Résultat : 46.66
+SELECT ROUND(46.6633, 2);   -- Résultat : 46.66 (littéral numeric)
 SELECT ROUND(46.6633, 0);   -- Résultat : 47
 SELECT ROUND(46.6633, 1);   -- Résultat : 46.7
+
+-- AVG() sur un float/double : il faut caster
+SELECT ROUND(AVG(price)::numeric, 2);
 ```
 
 ---
@@ -372,7 +377,7 @@ GROUP BY category_id;
 **Prix moyen de tous les produits** :
 
 ```sql
-SELECT ROUND(AVG(price), 2) AS prix_moyen
+SELECT ROUND(AVG(price)::numeric, 2) AS prix_moyen
 FROM product;
 ```
 
@@ -387,7 +392,7 @@ FROM product;
 **Prix moyen par catégorie** :
 
 ```sql
-SELECT category_id, ROUND(AVG(price), 2) AS prix_moyen
+SELECT category_id, ROUND(AVG(price)::numeric, 2) AS prix_moyen
 FROM product
 WHERE category_id IS NOT NULL
 GROUP BY category_id
@@ -479,7 +484,7 @@ ORDER BY nombre_produits DESC;
 SELECT
     category_id,
     COUNT(*) AS nombre,
-    ROUND(AVG(price), 2) AS prix_moyen,
+    ROUND(AVG(price)::numeric, 2) AS prix_moyen,
     SUM(stock) AS stock_total,
     MIN(price) AS prix_min,
     MAX(price) AS prix_max
@@ -533,7 +538,7 @@ HAVING COUNT(*) > 2;
 **Catégories dont le prix moyen dépasse 100€** :
 
 ```sql
-SELECT category_id, ROUND(AVG(price), 2) AS prix_moyen
+SELECT category_id, ROUND(AVG(price)::numeric, 2) AS prix_moyen
 FROM product
 WHERE category_id IS NOT NULL
 GROUP BY category_id
@@ -556,7 +561,7 @@ ORDER BY prix_moyen DESC;
 SELECT
     category_id,
     COUNT(*) AS nombre,
-    ROUND(AVG(price), 2) AS prix_moyen
+    ROUND(AVG(price)::numeric, 2) AS prix_moyen
 FROM product
 WHERE stock > 0 AND category_id IS NOT NULL
 GROUP BY category_id
@@ -615,7 +620,7 @@ On utilise LEFT JOIN pour afficher aussi les catégories qui n'ont aucun produit
 SELECT
     c.name AS categorie,
     COUNT(p.id) AS nombre,
-    ROUND(AVG(p.price), 2) AS prix_moyen,
+    ROUND(AVG(p.price)::numeric, 2) AS prix_moyen,
     SUM(p.stock) AS stock_total
 FROM category c
 LEFT JOIN product p ON c.id = p.category_id
@@ -694,7 +699,7 @@ SELECT
     COUNT(DISTINCT oi.order_id) AS nb_commandes,
     SUM(oi.quantity) AS articles_vendus,
     ROUND(SUM(oi.quantity * p.price), 2) AS chiffre_affaires,
-    ROUND(AVG(p.price), 2) AS prix_moyen_produit
+    ROUND(AVG(p.price)::numeric, 2) AS prix_moyen_produit
 FROM category c
 INNER JOIN product p ON c.id = p.category_id
 INNER JOIN order_item oi ON p.id = oi.product_id
@@ -746,7 +751,7 @@ $count = $this->createQueryBuilder('p')
 SQL :
 
 ```sql
-SELECT c.name, ROUND(AVG(p.price), 2)
+SELECT c.name, ROUND(AVG(p.price)::numeric, 2)
 FROM product p
 INNER JOIN category c ON p.category_id = c.id
 GROUP BY c.name;
@@ -757,7 +762,7 @@ Doctrine :
 ```php
 // Dans ProductRepository
 $results = $this->createQueryBuilder('p')
-    ->select('c.name AS categorie', 'ROUND(AVG(p.price), 2) AS prix_moyen')
+    ->select('c.name AS categorie', 'ROUND(AVG(p.price), 2) AS prix_moyen')  // DQL : numeric côté SQL
     ->innerJoin('p.category', 'c')    // Jointure via la relation Doctrine
     ->groupBy('c.name')
     ->getQuery()
@@ -812,7 +817,7 @@ $results = $this->createQueryBuilder('p')
 | `SELECT COUNT(colonne) FROM table` | Compter les valeurs non NULL |
 | `SELECT COUNT(DISTINCT colonne) FROM table` | Compter les valeurs uniques |
 | `SELECT SUM(colonne) FROM table` | Additionner une colonne |
-| `SELECT ROUND(AVG(colonne), 2) FROM table` | Moyenne arrondie à 2 décimales |
+| `SELECT ROUND(AVG(colonne)::numeric, 2) FROM table` | Moyenne arrondie à 2 décimales |
 | `SELECT MIN(colonne), MAX(colonne) FROM table` | Valeurs extrêmes |
 | `SELECT col, COUNT(*) FROM table GROUP BY col` | Compter par groupe |
 | `SELECT col, COUNT(*) FROM table GROUP BY col HAVING COUNT(*) > n` | Filtrer les groupes |
@@ -913,16 +918,20 @@ SELECT COUNT(category_id) FROM product;   -- Résultat : 8
 
 ---
 
-### Piège 5 : Oublier ROUND() avec AVG()
+### Piège 5 : Oublier ROUND() avec AVG() (et le type numeric)
 
-**Problème** : Le résultat a trop de décimales et n'est pas lisible.
+**Problème** : Le résultat a trop de décimales, ou PostgreSQL refuse `round(double precision, integer)`.
 
 ```sql
 -- ❌ Résultat illisible : 46.6633333333333
 SELECT AVG(price) FROM product;
 
--- ✅ Résultat propre : 46.66
-SELECT ROUND(AVG(price), 2) AS prix_moyen FROM product;
+-- ❌ Erreur si AVG renvoie du double precision :
+-- function round(double precision, integer) does not exist
+SELECT ROUND(AVG(price), 2);
+
+-- ✅ Caster en numeric, puis 2 décimales
+SELECT ROUND(AVG(price)::numeric, 2) AS prix_moyen FROM product;
 ```
 
 ---
@@ -1016,7 +1025,7 @@ FROM product;
 **2. Prix moyen arrondi** :
 
 ```sql
-SELECT ROUND(AVG(price), 2) AS prix_moyen
+SELECT ROUND(AVG(price)::numeric, 2) AS prix_moyen
 FROM product;
 ```
 

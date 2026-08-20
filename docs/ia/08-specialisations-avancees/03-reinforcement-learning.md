@@ -641,8 +641,8 @@ for episode in range(n_episodes):
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
 
-        # Stocker la transition
-        agent.buffer.push(state, action, reward, next_state, float(done))
+        # Stocker terminated (pas truncated) pour le bootstrap du DQN
+        agent.buffer.push(state, action, reward, next_state, float(terminated))
 
         # Entraîner
         agent.train_step()
@@ -883,7 +883,7 @@ for episode in range(N_EPISODES):
         next_state, reward, terminated, truncated, info = env.step(action)
         done = terminated or truncated
 
-        # Stocker dans le buffer
+        # Stocker terminated (pas truncated) pour le bootstrap
         buffer.push((state, action, reward, next_state, float(terminated)))
 
         # Entraîner si assez de transitions

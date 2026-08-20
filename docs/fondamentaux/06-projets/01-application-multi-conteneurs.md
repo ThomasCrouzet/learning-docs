@@ -184,16 +184,19 @@ volumes:
 ```text
 voteapp/
 ├── docker-compose.yml
-├── web/
+├── poll/
+│   ├── Dockerfile
+│   └── app.py
+├── worker/
+│   └── Dockerfile
+├── result/
 │   ├── Dockerfile
 │   └── src/
 │       └── index.php
 ├── database/
 │   └── init.sql
-└── result/
-    ├── Dockerfile
-    └── src/
-        └── index.php
+└── nginx/
+    └── nginx.conf
 ```
 
 ### Fichier docker-compose.yml
@@ -303,9 +306,9 @@ CREATE TABLE IF NOT EXISTS votes (
 | `docker compose down` | Arrête et supprime les conteneurs |
 | `docker compose build` | Reconstruit les images |
 | `docker compose logs` | Affiche les logs |
-| `docker compose logs -f web` | Suit les logs d'un service |
+| `docker compose logs -f poll` | Suit les logs d'un service |
 | `docker compose ps` | Liste les conteneurs |
-| `docker compose exec web bash` | Ouvre un shell dans un conteneur |
+| `docker compose exec poll bash` | Ouvre un shell dans un conteneur |
 
 ---
 
@@ -366,7 +369,7 @@ web:
 - Crée un fichier `nginx/nginx.conf` avec une directive `proxy_pass` vers le service `poll`
 - Ajoute un service `nginx` dans le `docker-compose.yml` qui monte le fichier de configuration
 - Le service Nginx doit dépendre du service `poll`
-- Utilise `curl -f http://localhost` comme commande de healthcheck
+- Utilise `nginx -t` comme commande de healthcheck (l'image officielle `nginx:1.26` n'inclut pas `curl`)
 
 **Résultat attendu** : L'application poll est accessible via `http://localhost:80` au lieu de `http://localhost:5000`. Le healthcheck est visible avec `docker compose ps`.
 
@@ -418,8 +421,8 @@ Service à ajouter dans `docker-compose.yml` (dans la section `services`) :
     networks:
       - voteapp_network
     healthcheck:
-      # Vérifier que Nginx répond sur le port 80
-      test: ["CMD", "curl", "-f", "http://localhost"]
+      # L'image officielle nginx:1.26 n'inclut pas curl
+      test: ["CMD-SHELL", "nginx -t"]
       interval: 10s
       timeout: 5s
       retries: 3

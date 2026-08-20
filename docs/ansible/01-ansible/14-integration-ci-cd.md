@@ -520,7 +520,7 @@ pip install molecule molecule-plugins[docker]
 **Résultat attendu** :
 
 ```text
-Successfully installed molecule-24.x.x molecule-plugins-24.x.x
+Successfully installed molecule-26.x.x molecule-plugins-26.x.x
 ```
 
 **Vérification** :
@@ -533,10 +533,10 @@ molecule --version
 **Résultat attendu** :
 
 ```text
-molecule 24.x.x using python 3.x
+molecule 26.x.x using python 3.x
     ansible:2.x.x
-    default:24.x.x from molecule
-    docker:24.x.x from molecule_plugins
+    default:26.x.x from molecule
+    docker:26.x.x from molecule_plugins
 ```
 
 **Remarque offline** : Si tu es en environnement offline, télécharge les paquets suivants depuis une machine connectée et installe-les manuellement :
@@ -988,7 +988,7 @@ Tu dois configurer ces variables dans GitLab (Settings > CI/CD > Variables). Ces
 | Variable          | Type     | Masquée | Description                                    |
 | ----------------- | -------- | ------- | ---------------------------------------------- |
 | `VAULT_PASSWORD`  | Variable | Oui     | Mot de passe Ansible Vault                      |
-| `SSH_PRIVATE_KEY` | File     | Oui     | Clé privée SSH pour se connecter aux serveurs   |
+| `SSH_PRIVATE_KEY` | Variable | Oui     | Clé privée SSH pour se connecter aux serveurs   |
 
 **Comment configurer les variables dans GitLab** :
 
@@ -1832,7 +1832,7 @@ deploy-production:
     name: production
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-  when: manual
+      when: manual
 ```
 
 ---

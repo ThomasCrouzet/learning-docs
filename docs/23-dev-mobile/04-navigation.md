@@ -350,6 +350,7 @@ Combine le Stack Navigator avec un Tab Navigator :
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 
 // Créer les navigateurs

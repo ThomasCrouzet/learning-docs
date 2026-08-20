@@ -460,7 +460,9 @@ Java.perform(function() {
 
 ```bash
 # Lancer le script Frida contre l'application
-frida -U -f com.example.application -l bypass-ssl-root.js --no-pause
+# -f spawn l'application. Depuis Frida 14, le processus n'est plus
+# mis en pause par défaut. L'option --no-pause a été retirée (Frida 17).
+frida -U -f com.example.application -l bypass-ssl-root.js
 ```
 
 **Résultat attendu** :

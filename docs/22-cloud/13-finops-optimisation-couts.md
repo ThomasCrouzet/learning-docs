@@ -121,7 +121,7 @@ Sans tags, la facture cloud est un total global indifférencié. On voit qu'on a
 | Modèle | Principe | Réduction typique | Cas d'usage |
 | --- | --- | --- | --- |
 | À la demande (On-Demand) | Paiement à l'heure/seconde, sans engagement | 0 % (prix de référence) | Charges imprévisibles, courte durée, tests |
-| Reserved Instances (RI) | Engagement 1 ou 3 ans sur un type d'instance précis | jusqu'à ~75 % (3 ans All Upfront) | Charges stables et prévisibles |
+| Reserved Instances (RI) | Engagement 1 ou 3 ans sur un type d'instance précis | jusqu'à ~72 % (Standard RI, 3 ans All Upfront) | Charges stables et prévisibles |
 | Savings Plans | Engagement 1 ou 3 ans sur un montant horaire de dépense | jusqu'à ~72 % | Charges stables, mais plus flexible que les RI |
 | Spot | Capacité inutilisée d'AWS, prix variable, interruptible | jusqu'à ~90 % | Charges tolérantes aux interruptions |
 

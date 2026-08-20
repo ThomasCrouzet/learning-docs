@@ -25,8 +25,8 @@ cursus: "Kubernetes"
 
 | Technologie | Version |
 | ----------- | ------- |
-| Minikube    | 1.34+   |
-| kubectl     | 1.34+   |
+| Minikube    | 1.38+   |
+| kubectl     | 1.36+   |
 | Docker      | 24+     |
 
 ## Objectif de cette fiche
@@ -205,7 +205,7 @@ kubectl version --client
 **Résultat attendu** :
 
 ```text
-Client Version: v1.34.x
+Client Version: v1.36.x
 Kustomize Version: v5.x.x
 ```
 
@@ -223,14 +223,11 @@ brew install minikube
 **Sur Linux (Ubuntu/Debian)** :
 
 ```bash
-# Télécharge le binaire Minikube
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+# Télécharge le binaire Minikube (URL officielle GitHub Releases)
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
 
-# Installe Minikube dans /usr/local/bin
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
-
-# Supprime le fichier téléchargé (il n'est plus nécessaire)
-rm minikube-linux-amd64
+# Installe Minikube dans /usr/local/bin puis supprime le fichier téléchargé
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
 ```
 
 **Vérification** :
@@ -243,7 +240,7 @@ minikube version
 **Résultat attendu** :
 
 ```text
-minikube version: v1.34.x
+minikube version: v1.38.x
 commit: xxxxxxx
 ```
 
@@ -262,13 +259,13 @@ minikube start --driver=docker --cpus=2 --memory=4096
 **Résultat attendu** :
 
 ```text
-😄  minikube v1.34.x on Darwin arm64
+😄  minikube v1.38.x on Darwin arm64
 ✨  Using the docker driver based on user configuration
 📌  Using Docker Desktop driver with root privileges
 👍  Starting "minikube" primary control-plane node in "minikube" cluster
 🚜  Pulling base image v0.0.45 ...
 🔥  Creating docker container (CPUs=2, Memory=4096MB) ...
-🐳  Preparing Kubernetes v1.34.x on Docker 27.x.x ...
+🐳  Preparing Kubernetes v1.35.x on Docker 27.x.x ...
     ▪ Generating certificates and keys ...
     ▪ Booting up control plane ...
     ▪ Configuring RBAC rules ...
@@ -308,7 +305,7 @@ kubectl get nodes
 
 ```text
 NAME       STATUS   ROLES           AGE   VERSION
-minikube   Ready    control-plane   2m    v1.34.x
+minikube   Ready    control-plane   2m    v1.35.x
 ```
 
 Tu vois un seul node appelé `minikube` avec le rôle `control-plane`. Ce node joue à la fois le rôle de control plane et de worker node.

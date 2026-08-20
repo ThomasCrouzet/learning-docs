@@ -174,10 +174,10 @@ python --version
 **Résultat attendu** :
 
 ```text
-Python 3.12.x
+Python 3.14.x
 ```
 
-Le numéro exact peut varier (3.12, 3.13, 3.14…), mais il doit commencer par `3.`. Python 3.12+ est recommandé pour ce cursus.
+Le numéro exact peut varier (3.12, 3.13, 3.14…), mais il doit commencer par `3.`. Python 3.12+ est recommandé pour ce cursus. La version stable actuelle sur python.org est la branche 3.14 (bugfix) ; 3.13 est aussi en bugfix et 3.12 en corrections de sécurité jusqu'en octobre 2028.
 
 ---
 
@@ -191,7 +191,7 @@ python3
 **Résultat attendu** :
 
 ```text
-Python 3.12.x (main, ...)
+Python 3.14.x (main, ...)
 [GCC ...] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>>

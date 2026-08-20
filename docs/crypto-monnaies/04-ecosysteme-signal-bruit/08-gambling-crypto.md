@@ -56,7 +56,7 @@ Le gambling crypto ne résout pas un problème pour le joueur. Il résout un pro
 
 **Ce que le gambling crypto n'est PAS** :
 
-- Le gambling crypto n'est pas de l'investissement. Même si l'interface ressemble parfois à une plateforme de trading, les jeux de casino restent des jeux de hasard'où la maison a toujours l'avantage.
+- Le gambling crypto n'est pas de l'investissement. Même si l'interface ressemble parfois à une plateforme de trading, les jeux de casino restent des jeux de hasard où la maison a toujours l'avantage.
 - Le gambling crypto n'est pas "plus equitable" que le gambling traditionnel. L'avantage de la maison (house edge) est le même (1-15% selon les jeux : blackjack environ 1%, roulette environ 2,7%, machines à sous 2-15%). La seule différence est le mode de paiement.
 
 ---
@@ -124,7 +124,7 @@ Pourquoi c'est un problème :
 
 ---
 
-### Autrès acteurs majeurs
+### Autres acteurs majeurs
 
 **BC.Game** : casino crypto avec plus de 8 000 jeux, licence de Curaçao. Sponsor de Leicester City (football anglais).
 

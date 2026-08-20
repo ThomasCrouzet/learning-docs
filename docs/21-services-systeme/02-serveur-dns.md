@@ -415,7 +415,7 @@ docker run -d \
   -p 5353:53/udp \
   -p 5353:53/tcp \
   --cap-add NET_ADMIN \
-  alpine:3.19 sh -c "
+  alpine:3.24 sh -c "
     apk add --no-cache dnsmasq &&
     echo 'address=/web.lab.local/192.168.1.10' > /etc/dnsmasq.d/lab.conf &&
     echo 'address=/mail.lab.local/192.168.1.20' >> /etc/dnsmasq.d/lab.conf &&

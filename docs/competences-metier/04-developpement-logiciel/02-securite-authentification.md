@@ -147,20 +147,20 @@ xxxxx.yyyyy.zzzzz
 
 ### Quelles sont les vulnérabilités OWASP Top 10 ?
 
-**OWASP** (Open Web Application Security Project) publie les 10 vulnérabilités web les plus critiques :
+**OWASP** (Open Web Application Security Project) publie les 10 vulnérabilités web les plus critiques. Le classement ci-dessous est celui du **Top 10:2025** (pas celui de 2021) :
 
 | Rang | Vulnérabilité | Description |
 | ---- | ------------- | ----------- |
-| A01 | Broken Access Control | Accès à des ressources non autorisées |
-| A02 | Cryptographic Failures | Données sensibles non chiffrées |
-| A03 | Injection | SQL injection, XSS, etc. |
-| A04 | Insecure Design | Architecture non sécurisée |
-| A05 | Security Misconfiguration | Config par défaut, headers manquants |
-| A06 | Vulnerable Components | Dépendances obsolètes |
+| A01 | Broken Access Control | Accès à des ressources non autorisées (inclut CSRF et SSRF) |
+| A02 | Security Misconfiguration | Config par défaut, headers manquants, XXE |
+| A03 | Software Supply Chain Failures | Chaîne d'approvisionnement et composants vulnérables |
+| A04 | Cryptographic Failures | Données sensibles non chiffrées |
+| A05 | Injection | SQL injection, XSS, command injection, etc. |
+| A06 | Insecure Design | Architecture non sécurisée |
 | A07 | Authentication Failures | Mots de passe faibles, pas de 2FA |
-| A08 | Software Integrity Failures | Code non vérifié |
-| A09 | Logging Failures | Pas de logs pour détecter les attaques |
-| A10 | SSRF | Le serveur fait des requêtes vers des URL malveillantes |
+| A08 | Software or Data Integrity Failures | Code ou données non vérifiés |
+| A09 | Security Logging and Alerting Failures | Pas de logs ni d'alertes pour détecter les attaques |
+| A10 | Mishandling of Exceptional Conditions | Erreurs mal gérées, messages trop verbeux, fail-open |
 
 ---
 

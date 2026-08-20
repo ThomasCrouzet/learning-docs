@@ -16,7 +16,7 @@ cursus: "Phase 6 - Analyse critique et due diligence"
 
 ## Prérequis
 
-- [Phase 6 complete](index.md) (fiches 01 a 04) :
+- [Phase 6 complète](index.md) (fiches 01 à 04) :
   - [Fiche 01 - Lire un whitepaper : méthode et red flags](01-lire-whitepaper-red-flags.md)
   - [Fiche 02 - Tokenomics : séparer les projets viables du vent](02-tokenomics-projets-viables.md)
   - [Fiche 03 - Analyse on-chain : les données ne mentent pas](03-analyse-on-chain-donnees.md)
@@ -78,8 +78,8 @@ Sans due diligence, les décisions reposent sur :
 
 | Situation | Verdict |
 | --- | --- |
-| Équipe anonyme d'un projet qui leve des millions | Red flag majeur |
-| Développeur anonyme d'un protocole open source audite et fonctionnel (ex: Bitcoin) | Acceptable si le code est vérifiable |
+| Équipe anonyme d'un projet qui lève des millions | Red flag majeur |
+| Développeur anonyme d'un protocole open source audité et fonctionnel (ex: Bitcoin) | Acceptable si le code est vérifiable |
 | Équipe "pseudo-anonyme" avec des profils créés une semaine avant le lancement | Red flag majeur |
 
 **Règle** : l'anonymat peut être justifié par des raisons de sécurité personnelle (dans certains pays, créer une crypto-monnaie peut être dangereux). Mais si l'équipe est anonyme ET que le code n'est pas open source ET qu'il n'y a pas d'audit, la combinaison est un signal d'alerte maximal.
@@ -96,7 +96,7 @@ Sans due diligence, les décisions reposent sur :
 | --- | --- | --- | --- |
 | Code open source | Vérifier sur GitHub | Code public, commenté, avec documentation | Code fermé ou "bientôt publié" (depuis des mois) |
 | Activité GitHub | Nombre de commits, fréquence, contributeurs | Activité régulière (hebdomadaire au minimum) | Pas de commits depuis des semaines/mois |
-| Audits de sécurité | Rapports publies par des auditeurs reconnus | Audits par Trail of Bits, OpenZeppelin, Certora, Consensys Diligence | Pas d'audit, ou audit par une société inconnue |
+| Audits de sécurité | Rapports publiés par des auditeurs reconnus | Audits par Trail of Bits, OpenZeppelin, Certora, Consensys Diligence | Pas d'audit, ou audit par une société inconnue |
 | Testnets / Mainnets | Réseau de test ou de production fonctionnel | Testnet public avec documentation pour les développeurs | Aucun réseau fonctionnel ("mainnet en 2025" depuis 2022) |
 | Innovations réelles | Comparaison avec les solutions existantes | Amélioration technique mesurable et documentée | Mêmes fonctionnalités que les concurrents mais "en mieux" sans preuve |
 
@@ -105,10 +105,10 @@ Sans due diligence, les décisions reposent sur :
 ```text
 Sur la page GitHub du projet :
 
-1. Nombre de commits recents
+1. Nombre de commits récents
    - Regarde l'onglet "Insights" > "Contributors"
-   - Si personne n'a commite depuis 3 mois, le développement est
-     peut-être arrête
+   - Si personne n'a commité depuis 3 mois, le développement est
+     peut-être arrêté
 
 2. Nombre de contributeurs
    - Un seul contributeur = risque de "bus factor"
@@ -117,9 +117,9 @@ Sur la page GitHub du projet :
 
 3. Issues et Pull Requests
    - Des issues ouvertes et des discussions actives = communauté
-     de développeurs engagee
+     de développeurs engagée
    - Zéro issues = soit personne n'utilise le code, soit les issues
-     sont desactivees (ce qui est un red flag)
+     sont désactivées (ce qui est un red flag)
 
 4. Licence
    - MIT, Apache 2.0, GPL = licences open source reconnues
@@ -128,14 +128,14 @@ Sur la page GitHub du projet :
 
 **Les audits de sécurité en détail** :
 
-| Auditeur | Reputation | Projets audites notables |
+| Auditeur | Réputation | Projets audités notables |
 | --- | --- | --- |
 | Trail of Bits | Très élevée | Ethereum 2.0, Uniswap, Compound |
 | OpenZeppelin | Très élevée | Aave, Chainlink, Coinbase |
 | Certora | Élevée (vérification formelle) | Aave, Maker, Lido |
 | Consensys Diligence | Élevée | Protocoles de l'écosystème Ethereum |
 
-**Attention** : un audit ne garantit pas l'absence de bugs. Il réduit le risque. Un projet non audite qui gère des fonds importants est un risque majeur.
+**Attention** : un audit ne garantit pas l'absence de bugs. Il réduit le risque. Un projet non audité qui gère des fonds importants est un risque majeur.
 
 ---
 
@@ -143,7 +143,7 @@ Sur la page GitHub du projet :
 
 **Définition** : Cette catégorie reprend les concepts de la fiche 02 et les intègre dans la checklist de due diligence.
 
-**Resume des points a vérifier** :
+**Résumé des points à vérifier** :
 
 | Élément | Ce qu'il faut vérifier | Seuil d'alerte |
 | --- | --- | --- |
@@ -173,7 +173,7 @@ Sur la page GitHub du projet :
 **Comment détecter une echo chamber** :
 
 ```text
-Une echo chamber est un espace ou seules les opinions positives
+Une echo chamber est un espace où seules les opinions positives
 sont tolerees. Les signes :
 
 1. Toute critique est accueillie par "FUD" (Fear, Uncertainty, Doubt)
@@ -195,15 +195,15 @@ communauté d'un projet sans être banni ou insulte, c'est un red flag.
 
 **Définition** : Le business model répond à une question simple : d'où vient l'argent ? Si la seule source de revenus est la spéculation sur le token, le projet ne survivra pas à un marché baissier prolongé.
 
-**Questions a poser** :
+**Questions à poser** :
 
-| Question | Réponse saine | Réponse problematique |
+| Question | Réponse saine | Réponse problématique |
 | --- | --- | --- |
-| D'ou viennent les revenus du projet ? | Frais de service, abonnements, commissions mesurables | "Le token prendra de la valeur" |
+| D'où viennent les revenus du projet ? | Frais de service, abonnements, commissions mesurables | "Le token prendra de la valeur" |
 | Les revenus couvrent-ils les dépenses ? | Oui, ou trajectoire claire vers la rentabilité | Trésorerie qui fond sans revenus |
 | Le projet survivrait-il si le token valait zéro ? | Oui, le service à une valeur propre | Non, tout dépend de la valeur du token |
-| Les revenus sont-ils vérifiables on-chain ? | Oui, via les frais de protocole mesurables | Non, chiffres annonces sans preuve |
-| Le modèle dépend-il de la croissance perpetuelle ? | Non, le service est viable avec une base stable | Oui, il faut toujours de nouveaux utilisateurs (schéma de Ponzi potentiel) |
+| Les revenus sont-ils vérifiables on-chain ? | Oui, via les frais de protocole mesurables | Non, chiffres annoncés sans preuve |
+| Le modèle dépend-il de la croissance perpétuelle ? | Non, le service est viable avec une base stable | Oui, il faut toujours de nouveaux utilisateurs (schéma de Ponzi potentiel) |
 
 **Le test du marché baissier** :
 
@@ -214,10 +214,10 @@ pendant 2 ans. Que se passe-t-il ?
 Projet sain :
 - Les développeurs continuent de travailler (finances par les revenus du protocole)
 - Le service fonctionne toujours
-- Les utilisateurs utilisent le service pour son utilité, pas pour specurer
+- Les utilisateurs utilisent le service pour son utilité, pas pour spéculer
 
 Projet fragile :
-- L'équipe ne peut plus se payér (les salaires étaient en tokens)
+- L'équipe ne peut plus se payer (les salaires étaient en tokens)
 - Les utilisateurs partent (ils étaient la pour les rendements spéculatifs)
 - Le développement s'arrête
 ```
@@ -230,7 +230,7 @@ Projet fragile :
 
 **Les types de risques a évaluer** :
 
-| Type de risque | Questions a poser | Exemple |
+| Type de risque | Questions à poser | Exemple |
 | --- | --- | --- |
 | Concurrence | Quels sont les concurrents directs ? Quelle est l'avance du projet ? | Un DEX qui arrive après Uniswap, Sushiswap, Curve, etc. |
 | Dépendances | Le projet dépend-il d'un autre projet ? Si cette dépendance échoue ? | Un protocole DeFi sur Ethereum dépend de la stabilité d'Ethereum |
@@ -249,12 +249,12 @@ Projet fragile :
 
 **Les red flags absolus** :
 
-| Red flag | Pourquoi c'est eliminatoire | Exemple réel |
+| Red flag | Pourquoi c'est éliminatoire | Exemple réel |
 | --- | --- | --- |
 | Rendements garantis | Aucun investissement ne peut garantir un rendement. C'est le marqueur numéro un d'un schéma de Ponzi | Bitconnect (365% par an), Celsius (17% "garanti") |
 | Urgence artificielle | "Achetez maintenant avant qu'il soit trop tard" est une technique de manipulation psychologique | ICOs avec "dernière chance", countdown timers |
 | Équipe anonyme sans justification + code ferme | Si on ne sait pas qui a écrit le code ET qu'on ne peut pas vérifier le code, c'est un acte de foi aveugle | Memecoins lances par des inconnus |
-| Pas de code source | Un projet crypto sans code vérifiable n'est pas un projet crypto, c'est une promesse | Projets qui annoncent un mainnet "bientot" depuis des années |
+| Pas de code source | Un projet crypto sans code vérifiable n'est pas un projet crypto, c'est une promesse | Projets qui annoncent un mainnet "bientôt" depuis des années |
 | Whitepaper vague | Si le document fondateur ne contient pas de détails techniques, le projet n'a probablement pas de technologie | Whitepapers de 5 pages remplis de buzzwords |
 | Schéma de parrainage | Les récompenses pour recruter de nouveaux investisseurs sont le mécanisme central des pyramides de Ponzi | Bitconnect, OneCoin, SafeMoon (schéma de referral agressif) |
 | Mint illimité par le déployeur | Si le créateur peut créer des tokens à l'infini, il peut diluer les détenteurs à volonté | Tokens sans cap sur la fonction mint |
@@ -282,7 +282,7 @@ Projet fragile :
 | --- | --- | --- |
 | 5 | Le code source est-il public et open source ? | |
 | 6 | L'activité GitHub est-elle régulière (commits hebdomadaires au minimum) ? | |
-| 7 | Le projet a-t-il été audite par un auditeur reconnu ? | |
+| 7 | Le projet a-t-il été audité par un auditeur reconnu ? | |
 | 8 | Un réseau de test ou de production est-il fonctionnel ? | |
 
 **Tokenomics** :
@@ -294,7 +294,7 @@ Projet fragile :
 | 11 | Les tokens de l'équipe sont-ils soumis à un vesting avec cliff d'au moins 1 an ? | |
 | 12 | Le token a-t-il une utilité concrète au-delà de la gouvernance ? | |
 
-**Communaute** :
+**Communauté** :
 
 | # | Question | Oui/Non |
 | --- | --- | --- |
@@ -329,9 +329,9 @@ Projet fragile :
 
 **Comment interpréter les résultats** :
 
-| Score (questions 1-20) | Interpretation |
+| Score (questions 1-20) | Interprétation |
 | --- | --- |
-| 18-20 "oui" | Projet solide selon ces critères (reste a évaluer d'autres facteurs) |
+| 18-20 "oui" | Projet solide selon ces critères (reste à évaluer d'autres facteurs) |
 | 14-17 "oui" | Projet avec des faiblesses identifiées. Analyser les "non" en profondeur |
 | 10-13 "oui" | Risque élevé. Plusieurs critères importants ne sont pas remplis |
 | < 10 "oui" | Très haut risque. La majorité des critères de base ne sont pas remplis |
@@ -352,22 +352,22 @@ Projet fragile :
 | Ouvert à être convaincu par des faits | Fermé aux faits positifs |
 | Évalue objectivement les forces ET les faiblesses | Ne voit que les faiblesses |
 
-**Le sceptique eclaire** :
+**Le sceptique éclairé** :
 
 - Il ne rejette pas la crypto par principe. Il rejette les projets qui ne passent pas l'examen.
 - Il reconnaît que Bitcoin, Ethereum et quelques autres projets ont une valeur technique réelle et prouvée.
-- Il sait que pour chaque projet viable, il existe des dizaines de projets frauduleux ou incompetents.
+- Il sait que pour chaque projet viable, il existe des dizaines de projets frauduleux ou incompétents.
 - Il accepte de "rater" des opportunités plutôt que de tomber dans un piège.
 
 **Le coût de la prudence vs le coût de l'imprudence** :
 
 | Scénario | Coût de la prudence | Coût de l'imprudence |
 | --- | --- | --- |
-| Le projet réussit (tu n'as pas investi) | Tu as "rate" un gain potentiel | Tu n'as rien perdu |
+| Le projet réussit (tu n'as pas investi) | Tu as "raté" un gain potentiel | Tu n'as rien perdu |
 | Le projet échoue (tu as investi) | Ce scénario ne se produit pas | Tu perds ton investissement (potentiellement 100%) |
 | Le projet échoue (tu n'as pas investi) | Tu n'as rien perdu | Ce scénario ne se produit pas |
 
-**Fait** : dans l'histoire de la crypto, la majorité des projets qui ont existé ont fini à zéro ou proche de zéro. Selon les données de CoinGecko, plus de 14 000 tokens ont été listés et délistés depuis 2014. La prudence protège contre la majorité des cas, pas contre une minorité.
+**Fait** : dans l'histoire de la crypto, la majorité des projets qui ont existé ont fini à zéro ou proche de zéro. Selon la recherche CoinGecko d'avril 2026, plus de 13 millions de cryptomonnaies listées sur GeckoTerminal ont cessé d'être échangées (sur plus de 25 millions listées). La prudence protège contre la majorité des cas, pas contre une minorité.
 
 ---
 
@@ -382,7 +382,7 @@ Projet fragile :
 - [ ] Je sais identifier les risques spécifiques d'un projet (concurrence, dépendances, régulation)
 - [ ] Je connais les 7 red flags absolus et je sais qu'un seul suffit pour fuir
 - [ ] Je sais utiliser la checklist en 25 questions pour évaluer un projet
-- [ ] Je comprends que le scepticisme est une méthode, pas une emotion
+- [ ] Je comprends que le scepticisme est une méthode, pas une émotion
 
 ---
 

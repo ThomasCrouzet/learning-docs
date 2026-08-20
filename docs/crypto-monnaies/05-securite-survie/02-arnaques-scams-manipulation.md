@@ -38,7 +38,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 | Année | Montant perdu en arnaques crypto (estimation) | Source |
 | ----- | ---------------------------------------------- | ------ |
-| 2021 | 7,7 milliards USD | Chainalysis |
+| 2021 | 7,8 milliards USD | Chainalysis |
 | 2022 | 3,8 milliards USD (hacks) + 5,9 milliards USD (arnaques) | Chainalysis, FTC |
 | 2023 | 1,7 milliard USD (hacks DeFi) | Chainalysis |
 
@@ -54,7 +54,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Catégorie 1 : schémas de Ponzi et pyramidaux
 
-**Définition** : Un schéma de Ponzi est un système où les rendements versés aux anciens investisseurs proviennent de l'argent apporté par les nouveaux investisseurs. Il n'y a aucune création de valeur réelle. Le système s'effondre mathématiquement quand les nouveaux entrants ne suffisent plus à payér les anciens.
+**Définition** : Un schéma de Ponzi est un système où les rendements versés aux anciens investisseurs proviennent de l'argent apporté par les nouveaux investisseurs. Il n'y a aucune création de valeur réelle. Le système s'effondre mathématiquement quand les nouveaux entrants ne suffisent plus à payer les anciens.
 
 **Le problème que les schémas de Ponzi exploitent** :
 
@@ -183,7 +183,7 @@ Phase 3 - Dump (chute) :
 8. Disparition : l'escroc coupe tout contact
 ```
 
-**Ampleur** : Le FBI estime que les pertes liées au pig butchering ont dépassé 3,3 milliards de dollars en 2022 aux seuls États-Unis. Ce type d'arnaque est souvent opéré par des réseaux criminels organisés.
+**Ampleur** : Le rapport IC3 2022 du FBI recense 3,31 milliards USD de pertes pour les arnaques d'investissement aux États-Unis (catégorie qui inclut le pig butchering). Les arnaques d'investissement en crypto-monnaies représentent 2,57 milliards USD de ce total. Ce type d'arnaque est souvent opéré par des réseaux criminels organisés.
 
 ---
 

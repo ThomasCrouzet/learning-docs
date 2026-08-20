@@ -141,7 +141,7 @@ GET /api/articles?limit=20&after=abc123
 
 ---
 
-## Format d'erreur (RFC 7807)
+## Format d'erreur (RFC 9457, anciennement RFC 7807)
 
 ```json
 {
@@ -279,7 +279,7 @@ mutation {
 | Exposer tous les champs sans groupes de sérialisation | Toujours définir `normalizationContext` |
 | Chercher un controller dans API Platform | Utiliser les State Processors |
 | Versionner pour un changement mineur | Réserver le versioning aux breaking changes |
-| Oublier le `errors` dans les réponses GraphQL | GraphQL retourne toujours HTTP 200 |
+| Oublier le `errors` dans les réponses GraphQL | Les erreurs d'exécution restent souvent en HTTP 200 ; parse/validation : typiquement 400 (GraphQL over HTTP) |
 | Utiliser des entiers au lieu d'IRI en GraphQL | Format : `"/api/books/1"` pas `1` |
 
 ---

@@ -245,13 +245,18 @@ category_id INTEGER NOT NULL REFERENCES category(id) ON DELETE CASCADE
 -- ON DELETE SET NULL : supprimer la catégorie met category_id à NULL
 category_id INTEGER REFERENCES category(id) ON DELETE SET NULL
 
--- ON DELETE RESTRICT (par défaut) : interdit la suppression de la catégorie
+-- ON DELETE NO ACTION (défaut PostgreSQL) : refuse si des enfants existent
+-- (le contrôle peut être différé jusqu'à la fin de la transaction)
+category_id INTEGER NOT NULL REFERENCES category(id) ON DELETE NO ACTION
+
+-- ON DELETE RESTRICT : même refus, mais le contrôle n'est pas différable
 category_id INTEGER NOT NULL REFERENCES category(id) ON DELETE RESTRICT
 ```
 
 | Comportement | Effet | Cas d'usage |
 | ------------ | ----- | ----------- |
-| `RESTRICT` (défaut) | Interdit la suppression du parent | Sécurité maximale |
+| `NO ACTION` (défaut) | Refuse la suppression du parent (contrôle différable) | Comportement SQL standard |
+| `RESTRICT` | Refuse immédiatement, non différable | Sécurité maximale dans la transaction |
 | `CASCADE` | Supprime aussi les enfants | Suppression en chaîne voulue |
 | `SET NULL` | Met la clé étrangère à NULL | L'enfant peut exister sans parent |
 
@@ -686,7 +691,7 @@ class Product
 | `#[ORM\Column]` (sans nullable) | `NOT NULL` |
 | `#[ORM\Column(nullable: true)]` | Pas de NOT NULL |
 | `#[ORM\Column(unique: true)]` | `UNIQUE` |
-| `#[ORM\ManyToOne]` + `#[JoinColumn(nullable: false)]` | `FOREIGN KEY ... NOT NULL` |
+| `#[ORM\ManyToOne]` + `#[ORM\JoinColumn(nullable: false)]` | `FOREIGN KEY ... NOT NULL` |
 | `#[ORM\ManyToOne]` (sans JoinColumn) | `FOREIGN KEY ... NULL autorisé` |
 
 **Générer la migration Doctrine** :
@@ -766,8 +771,8 @@ DROP TABLE IF EXISTS category;
 | Commande | Action |
 | -------- | ------ |
 | `\d nom_table` | Affiche la structure d'une table avec ses contraintes |
-| `\di` | Liste tous les index de la base |
-| `\di nom_table` | Liste les index d'une table spécifique |
+| `\di` | Liste tous les index de la base (le motif optionnel filtre les **noms d'index**, pas les tables) |
+| `\d nom_table` | Affiche la table, y compris ses index et contraintes |
 | `EXPLAIN SELECT ...` | Montre comment PostgreSQL exécute la requête |
 | `ALTER TABLE t ADD CONSTRAINT ...` | Ajoute une contrainte sur une table existante |
 | `ALTER TABLE t DROP CONSTRAINT nom` | Supprime une contrainte par son nom |

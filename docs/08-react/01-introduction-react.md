@@ -354,7 +354,7 @@ npm run dev
 **Résultat attendu** :
 
 ```text
-  VITE v7.x.x  ready in XXX ms
+  VITE v8.x.x  ready in XXX ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose

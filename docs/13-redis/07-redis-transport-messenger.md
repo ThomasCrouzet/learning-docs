@@ -231,8 +231,9 @@ framework:
                     stream: 'symfony_messenger'
                     # Nom du groupe de consommateurs
                     group: 'app'
-                    # Nom du consommateur (unique par worker)
-                    consumer: 'consumer_1'
+                    # Nom du consommateur : unique par worker Redis
+                    # En local : consumer_1. En production (Supervisor) : variable d'environnement
+                    consumer: '%env(MESSENGER_CONSUMER_NAME)%'
                 retry_strategy:
                     max_retries: 3
                     delay: 1000       # 1 seconde
@@ -261,6 +262,8 @@ Ajoute la variable d'environnement :
 ```env
 # .env
 MESSENGER_TRANSPORT_DSN=redis://redis:6379/messages
+# Un seul worker local. En production, Supervisor surcharge cette valeur par processus
+MESSENGER_CONSUMER_NAME=consumer_1
 ```
 
 ---
@@ -453,8 +456,8 @@ php bin/console messenger:consume async --limit=100
 # Lance avec une durée maximale (en secondes)
 php bin/console messenger:consume async --time-limit=3600
 
-# Lance avec une limite de mémoire (en Mo)
-php bin/console messenger:consume async --memory-limit=128
+# Lance avec une limite de mémoire (suffixe obligatoire : K, M ou G)
+php bin/console messenger:consume async --memory-limit=128M
 
 # Lance en mode verbeux pour voir les détails
 php bin/console messenger:consume async -vv
@@ -630,11 +633,14 @@ En production, les workers doivent tourner en permanence. Supervisor est un outi
 
 [program:messenger-consume]
 # Commande à exécuter
-command=php /var/www/html/bin/console messenger:consume async --time-limit=3600 --memory-limit=128
+command=php /var/www/html/bin/console messenger:consume async --time-limit=3600 --memory-limit=128M
 # Nombre de workers simultanés
 numprocs=2
 # Chaque worker a un nom unique
 process_name=%(program_name)s_%(process_num)02d
+# Redis Streams : chaque worker doit avoir un consumer name distinct
+# (sinon le même message peut être livré à plusieurs processus)
+environment=MESSENGER_CONSUMER_NAME=%(program_name)s_%(process_num)02d
 # Redémarre automatiquement si le worker s'arrête
 autorestart=true
 # Attend 10 secondes avant de considérer le worker comme démarré
@@ -654,10 +660,10 @@ user=www-data
 
 | Paramètre | Rôle |
 | --------- | ---- |
-| `numprocs=2` | Lance 2 workers en parallèle pour traiter plus de messages |
+| `numprocs=2` | Lance 2 workers en parallèle. Chaque processus doit avoir un `MESSENGER_CONSUMER_NAME` unique (Redis Streams) |
 | `autorestart=true` | Si un worker crash, Supervisor le relance automatiquement |
 | `--time-limit=3600` | Le worker s'arrête après 1 heure pour libérer la mémoire |
-| `--memory-limit=128` | Le worker s'arrête s'il utilise plus de 128 Mo de RAM |
+| `--memory-limit=128M` | Le worker s'arrête s'il utilise plus de 128 Mo de RAM (suffixe `M` obligatoire) |
 | `stopsignal=SIGTERM` | Arrêt propre : le worker finit le message en cours avant de s'arrêter |
 
 **Commandes Supervisor** :
@@ -767,7 +773,7 @@ public function __invoke(GeneratePdfMessage $message): void
 
 ```bash
 # Le worker s'arrête après 1 heure OU s'il dépasse 128 Mo
-php bin/console messenger:consume async --time-limit=3600 --memory-limit=128
+php bin/console messenger:consume async --time-limit=3600 --memory-limit=128M
 ```
 
 ---

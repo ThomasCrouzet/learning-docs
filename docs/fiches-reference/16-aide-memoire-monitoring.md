@@ -126,8 +126,8 @@ rule_files:
 | -------- | ------ |
 | `curl localhost:9090/api/v1/targets` | Lister les cibles |
 | `curl localhost:9090/api/v1/query?query=up` | Exécuter une requête |
-| `curl -X POST localhost:9090/-/reload` | Recharger la configuration |
-| `curl localhost:9090/ready` | Vérifier la santé |
+| `curl -X POST localhost:9090/-/reload` | Recharger la config (exige `--web.enable-lifecycle`) |
+| `curl localhost:9090/-/ready` | Vérifier que Prometheus est prêt (management API) |
 
 ---
 

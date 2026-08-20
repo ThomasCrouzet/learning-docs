@@ -282,7 +282,8 @@ class Order
     }
 
     // Setter requis par le marking_store de type 'method'
-    public function setStatus(string $status): void
+    // Symfony passe toujours un 2e argument $context (PHP 8 refuse un extra argument)
+    public function setStatus(string $status, array $context = []): void
     {
         $this->status = $status;
     }
@@ -521,9 +522,9 @@ Si $order->hasAllItemsInStock() retourne false :
 
 ### Piège 2 : Marking store sur une propriété sans setter
 
-⚠️ **Problème** : Avec `type: method` et `property: status`, Symfony attend un getter `getStatus()` et un setter `setStatus()`. Si le setter est absent ou non public, Symfony ne peut pas modifier l'état et lève une exception.
+⚠️ **Problème** : Avec `type: method` et `property: status`, Symfony attend un getter `getStatus()` et un setter `setStatus()`. Le `MethodMarkingStore` appelle `setStatus($places, $context)` avec **deux** arguments. Un setter qui n'accepte qu'un argument lève `ArgumentCountError` en PHP 8.
 
-✅ **Solution** : Vérifie que ton entité expose bien `getStatus()` et `setStatus()` en public. Si tu préfères ne pas exposer de setter public, utilise un setter dédié comme `setMarking()` et configure le marking store en conséquence.
+✅ **Solution** : Déclare `setStatus(string $status, array $context = []): void`. Le second paramètre peut rester inutilisé. Si tu préfères ne pas exposer de setter public, utilise un setter dédié comme `setMarking()` et configure le marking store en conséquence.
 
 ```php
 <?php
@@ -537,8 +538,8 @@ class Order
         return $this->status;
     }
 
-    // Sans ce setter, le workflow ne peut pas appliquer de transition
-    public function setStatus(string $status): void
+    // Sans ce setter (avec $context), le workflow ne peut pas appliquer de transition
+    public function setStatus(string $status, array $context = []): void
     {
         $this->status = $status;
     }
@@ -699,7 +700,7 @@ class LeaveRequest
         return $this->status;
     }
 
-    public function setStatus(string $status): void
+    public function setStatus(string $status, array $context = []): void
     {
         $this->status = $status;
     }

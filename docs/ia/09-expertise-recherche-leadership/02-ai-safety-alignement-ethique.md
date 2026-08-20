@@ -302,16 +302,17 @@ Sans réglementation, voici les problèmes rencontrés :
 | Risque limité | Chatbots, deepfakes, systèmes de recommandation | Obligation de transparence (l'utilisateur doit savoir qu'il interagit avec une IA) |
 | Risque minimal | Filtres spam, jeux vidéo, autocorrection | Aucune obligation spécifique |
 
-#### Calendrier d'application (art. 113 du règlement 2024/1689)
+#### Calendrier d'application (art. 113, tel que modifié par le règlement 2026/1744)
 
-Les dates ci-dessous sont celles du texte initial. Vérifie le [règlement 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) avant de les traiter comme encore applicables telles quelles.
+Le [règlement (UE) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) (Digital Omnibus on AI, signé le 8 juillet 2026, JO du 24 juillet 2026, en vigueur le 27 juillet 2026) reporte les obligations **haut risque**. Les interdictions de l'article 5 et les obligations GPAI déjà en vigueur ne sont pas annulées.
 
-| Date | Obligation (texte 2024/1689) |
-| ---- | ---------------------------- |
-| Février 2025 | Interdictions de l'article 5 |
+| Date | Obligation |
+| ---- | ---------- |
+| Février 2025 | Interdictions de l'article 5 (texte 2024/1689) |
 | Août 2025 | Obligations pour les modèles d'IA à usage général (GPAI) |
-| 2 août 2026 | Application générale (art. 113), dont une partie des obligations haut risque |
-| Août 2027 | Certaines obligations haut risque liées à des produits déjà réglementés |
+| 2 août 2026 | Application générale du reste de l'AI Act, **hors** Sections 1 à 3 du chapitre III (haut risque) |
+| 2 décembre 2027 | Obligations haut risque pour les systèmes de l'article 6(2) et de l'annexe III (recrutement, crédit, etc.) |
+| 2 août 2028 | Obligations haut risque pour les systèmes de l'article 6(1) et de l'annexe I (produits déjà réglementés) |
 
 ---
 
@@ -652,9 +653,9 @@ RAPPORT D'AUDIT - MODÈLE DE DÉCISION DE CRÉDIT
 
 ### Piège 4 : Ignorer le calendrier de l'EU AI Act
 
-⚠️ **Problème** : Ne pas se préparer aux obligations réglementaires en pensant que c'est loin. Les premières obligations (interdictions) sont en vigueur depuis février 2025.
+⚠️ **Problème** : Ne pas se préparer aux obligations réglementaires en pensant que le report Omnibus (décembre 2027 / août 2028 pour le haut risque) annule le calendrier. Les interdictions de l'article 5 sont en vigueur depuis février 2025. L'application générale du 2 août 2026 reste applicable hors haut risque.
 
-✅ **Solution** : Classifier immédiatement tous les systèmes d'IA par niveau de risque. Commencer la documentation technique et les audits pour les systèmes à haut risque dès maintenant.
+✅ **Solution** : Classifier immédiatement tous les systèmes d'IA par niveau de risque. Utiliser le délai jusqu'au 2 décembre 2027 (annexe III) pour la documentation technique et les audits, pas pour reporter le travail.
 
 ---
 

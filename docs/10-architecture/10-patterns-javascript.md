@@ -1049,7 +1049,8 @@ console.log(result2.errors);
 | Commande | Action |
 | --- | --- |
 | `node script.js` | Exécuter un fichier JavaScript avec Node.js |
-| `node --experimental-vm-modules script.js` | Exécuter avec le support des modules ES |
+| `node fichier.mjs` | Exécuter un module ES (extension `.mjs` ou `"type": "module"` dans `package.json`) |
+| `node --experimental-vm-modules script.js` | Active le support expérimental des modules ES dans `node:vm` uniquement (inutile pour un `import`/`export` standard sous Node.js 22) |
 | `console.dir(obj, { depth: null })` | Afficher un objet en profondeur dans Node.js |
 | `typeof variable` | Vérifier le type d'une variable |
 

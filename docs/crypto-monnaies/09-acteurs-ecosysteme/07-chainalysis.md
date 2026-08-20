@@ -100,9 +100,11 @@ En 2014, Bitcoin était régulièrement associe aux activités illégales, princ
 
 Après la fermeture de Silk Road en 2013, les autorités américaines ont continue pendant des années a identifier des vendeurs grâce au traçage des transactions. En 2020, le DOJ a saisi plus de 69 000 BTC (valant plus d'un milliard de dollars à l'époque) lies a Silk Road, grâce à l'analyse de transactions datant de 2012-2013.
 
-**Cas 3 : suivi des fonds Mt. Gox**
+**Cas 3 : faillite de Mt. Gox**
 
-Chainalysis a aide a tracer les 850 000 BTC perdus lors de la faillite de Mt. Gox (2014). L'analyse a permis de retrouver environ 200 000 BTC et de comprendre comment les fonds avaient été siphonnes sur plusieurs années.
+En février 2014, Mt. Gox a annoncé la disparition d'environ 850 000 BTC. Le 7 mars 2014, l'exchange a déclaré avoir retrouvé environ 200 000 BTC dans un ancien portefeuille oublié (format antérieur à juin 2011), ce qui a ramené le manque à environ 650 000 BTC.
+
+Cette découverte a été faite par Mt. Gox elle-même, pas par un outil de blockchain analytics. Des analyses ultérieures (notamment WizSec en 2015) ont conclu que la plus grande partie des fonds restants avait été volée progressivement. Des sociétés d'analytics, dont Chainalysis, ont ensuite retracé certains mouvements publics de ces fonds.
 
 **Cas 4 : sanctions et blanchiment**
 

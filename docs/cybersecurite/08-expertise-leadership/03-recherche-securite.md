@@ -128,7 +128,7 @@ Sans identifiants CVE :
 | Étape | Action | Détail |
 | ----- | ------ | ------ |
 | 1 | Identifier le CNA approprié | Le vendeur du logiciel est souvent CNA (CVE Numbering Authority). Sinon, contacter MITRE |
-| 2 | Soumettre la demande | Via le formulaire du CNA ou via cveform.mitre.org |
+| 2 | Soumettre la demande | Via le formulaire du CNA ou via [cve.org/ResourcesSupport/ReportRequest](https://www.cve.org/ResourcesSupport/ReportRequest) (le formulaire historique cveform.mitre.org redirige vers le programme CVE actuel) |
 | 3 | Fournir les informations | Description, produit affecté, versions, impact, PoC |
 | 4 | Recevoir le CVE ID | Identifiant réservé (statut RESERVED) |
 | 5 | Publication | Le CVE passe en statut PUBLISHED après la divulgation coordonnée |

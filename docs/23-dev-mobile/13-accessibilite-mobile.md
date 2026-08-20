@@ -335,7 +335,7 @@ accessibilityLabel serait annoncé "bouton" sans plus de précision : c'est
 le test qui révèle les éléments muets à corriger.
 ```
 
-> **Note** : le simulateur iOS (Xcode 14+) supporte VoiceOver et permet de tester la plupart des comportements d'accessibilité. Pour les tests de production ou la validation des gestes complexes (balayages, rotors), un appareil réel reste préférable car certains gestes tactiles sont difficiles à reproduire avec la souris.
+> **Note** : VoiceOver n'est **pas** disponible dans le simulateur iOS. La documentation React Native indique d'utiliser l'inspecteur d'accessibilité d'Xcode (VoiceOver macOS à travers l'application) pour un premier test, puis un **appareil réel** pour les gestes (balayages, rotor). Sur Android, les émulateurs n'ont pas TalkBack installé par défaut : installe-le via le Play Store (image avec Play Store).
 
 ---
 

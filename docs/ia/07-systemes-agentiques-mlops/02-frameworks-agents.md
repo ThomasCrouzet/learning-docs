@@ -252,7 +252,7 @@ Sans MCP, voici les problèmes rencontrés :
 **Ce que MCP n'est PAS** :
 
 - MCP n'est pas un framework d'agents. C'est un protocole de communication. LangChain, CrewAI et PydanticAI sont des frameworks. MCP est la couche de transport qui les connecte aux sources de données.
-- MCP n'est pas une API REST. MCP utilise JSON-RPC sur des transports variés (stdio, SSE). Le serveur MCP tourne localement ou à distance.
+- MCP n'est pas une API REST. MCP utilise JSON-RPC sur des transports variés : stdio (local) et Streamable HTTP (distant). Le transport HTTP+SSE de la spec 2024-11-05 est déprécié (rétrocompatibilité seulement).
 
 ---
 

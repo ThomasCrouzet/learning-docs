@@ -102,7 +102,7 @@ Si tu achetes 1 ETH :
 
 **Qui fournit la liquidité ?**
 
-Des utilisateurs appelés "liquidity providers" (LP) deposent des paires de tokens dans le pool. En échange, ils reçoivent une part des frais de trading (généralement 0,3% par transaction sur Uniswap v2).
+Des utilisateurs appelés "liquidity providers" (LP) deposent des paires de tokens dans le pool. En échange, ils reçoivent une part des frais de trading. Sur Uniswap v2, le trader paie 0,30 %. Si le protocole a activé `feeTo` (cas documenté en 2026 pour les pools v2), 0,05 % va au protocole et 0,25 % aux LP ; sinon les LP reçoivent les 0,30 %.
 
 **Comparaison DEX vs exchange centralisé** :
 
@@ -184,7 +184,7 @@ C'est LA question a poser systematiquement. Voici les sources possibles :
 
 | Investissement | Rendement annuel typique | Risque |
 | --- | --- | --- |
-| Livret A (France, 2024) | 3% | Garanti par l'État |
+| Livret A (France, depuis août 2026) | 1,7% | Garanti par l'État (taux révisé tous les 6 mois) |
 | Obligations d'État (10 ans) | 3-4% | Très faible |
 | Actions (indice mondial, historique) | 7-10% | Moyen (volatilité) |
 | Lending DeFi (stablecoins) | 2-8% | Smart contract, depegging, protocole |
@@ -431,7 +431,7 @@ Pour récupérer son BTC :
 **Changement de garde en 2024** : Historiquement, BitGo était le custodien unique de WBTC. En août 2024, la custody a changé de mains, ce qui a déclenché une controverse sur la centralisation :
 
 - BitGo a transféré la custody vers une coentreprise (BitGo / BiT Global) dont une partie est liée à Justin Sun (fondateur de Tron), avec une répartition des clés entre les États-Unis, Singapour et Hong Kong.
-- MakerDAO a retiré WBTC du collatéral de son stablecoin DAI.
+- Sky (ex-MakerDAO) a voté le retrait de WBTC du collatéral de DAI en 2024.
 - Coinbase a délisté WBTC en décembre 2024.
 
 Cet épisode illustre que la confiance dans un wrapped token dépend entièrement de qui contrôle les clés - une information qui peut changer du jour au lendemain.

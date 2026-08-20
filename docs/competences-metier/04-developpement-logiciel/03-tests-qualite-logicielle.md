@@ -366,7 +366,7 @@ class ArticleRepositoryTest extends KernelTestCase
         </testsuite>
     </testsuites>
 
-    <coverage>
+    <source>
         <include>
             <directory suffix=".php">src</directory>
         </include>
@@ -374,11 +374,7 @@ class ArticleRepositoryTest extends KernelTestCase
             <directory>src/DataFixtures</directory>
             <file>src/Kernel.php</file>
         </exclude>
-        <report>
-            <html outputDirectory="var/coverage"/>
-            <text outputFile="php://stdout"/>
-        </report>
-    </coverage>
+    </source>
 </phpunit>
 ```
 

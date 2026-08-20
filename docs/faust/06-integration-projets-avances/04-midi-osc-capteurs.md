@@ -66,7 +66,7 @@ Sans contrôle MIDI, voici les problèmes rencontrés :
 | `[midi:keyoff M]` | Note Off sur la note M | 0-127 (vélocité de relâchement) | Fin de note |
 | `[midi:key M]` | Note On/Off sur la note M | 0 ou 1 | Gate on/off |
 | `[midi:keypress M]` | Aftertouch polyphonique note M | 0-127 | Pression par note |
-| `[midi:pitchwheel]` | Pitch Bend | -8192 à 8191 (mappé sur min-max) | Variation de hauteur |
+| `[midi:pitchwheel]` | Pitch Bend | 0 à 16383 (centre 8192, mappé sur min-max du slider) | Variation de hauteur |
 | `[midi:chanpress]` | Channel Aftertouch | 0-127 | Pression globale du clavier |
 | `[midi:pgm]` | Program Change | 0-127 | Changement de preset |
 

@@ -487,7 +487,7 @@ Liste les signaux d'alerte présents dans cette situation, et indique la démarc
 **Indications** :
 
 - Pense à la vérification d'identité obligatoire sur une plateforme conforme
-- Pense à la source qui fait foi pour l'enregistrement PSAN
+- Pense à la source qui fait foi pour l'agrément PSCA
 - Pense à la manière dont les frais légitimes sont prélevés
 - Relie chaque signal à un concept des fiches 02, 04 ou de cette fiche
 

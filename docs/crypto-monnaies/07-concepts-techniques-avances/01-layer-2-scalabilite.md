@@ -84,7 +84,7 @@ Sans scalabilité, les blockchains ne peuvent pas être utilisées à grande éc
 
 | Blockchain | Sécurité | Décentralisation | Scalabilité | Choix fait |
 | --- | --- | --- | --- | --- |
-| Bitcoin | Très élevée | Élevée (~17 000 nœuds) | Très faible (~7 tx/s) | Priorité sécurité + décentralisation |
+| Bitcoin | Très élevée | Élevée (ordre 15 000-27 000 nœuds joignables selon bitnodes.io) | Très faible (~7 tx/s) | Priorité sécurité + décentralisation |
 | Ethereum L1 | Très élevée | Élevée (~8 000 nœuds) | Faible (~15-30 tx/s) | Priorité sécurité + décentralisation |
 | Solana | Modérée | Faible (~1 900 validateurs, hardware coûteux) | Élevée (~400 tx/s réelles) | Priorité scalabilité, compromis sur la décentralisation |
 | BSC (BNB Chain) | Modérée | Très faible (21 validateurs) | Élevée | Priorité scalabilité, compromis majeur sur la décentralisation |
@@ -158,14 +158,16 @@ C'est comme un réseau de tuyaux : l'argent circule de proche en proche.
 | Pas adapté aux smart contracts complexes | Principalement utile pour les paiements simples |
 | Capacité limitée | Un canal ne peut pas transmettre plus que ce qu'il contient |
 
-**Chiffres du Lightning Network (ordre de grandeur, 2024)** :
+**Chiffres du Lightning Network (ordre de grandeur, août 2026, [1ML](https://1ml.com/statistics))** :
 
 | Métrique | Valeur approximative |
 | --- | --- |
-| Capacité du réseau | ~5 000 BTC (~150 millions de dollars) |
-| Nombre de nœuds | ~15 000 |
-| Nombre de canaux | ~50 000 |
+| Capacité du réseau | ~2 600 BTC (autour de 190 millions de dollars selon le cours) |
+| Nombre de nœuds | ~6 000 |
+| Nombre de canaux | ~20 000 |
 | Frais moyens par transaction | < 0,01 USD |
+
+Les pics autour de 5 000 BTC / ~15 000 nœuds / ~50 000 canaux correspondent à 2023-2024. La capacité publique a depuis reculé. Ces chiffres changent chaque mois : relis 1ML plutôt que de mémoriser une valeur exacte.
 
 ---
 

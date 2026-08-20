@@ -14,7 +14,7 @@ cursus: "Phase 5 - Spécialisation Défensive"
 
 > **En bref** : À la fin de cette fiche, tu sauras mener une investigation forensique complète : de la détection d'un incident à la production d'un rapport, en utilisant les méthodologies NIST et PICERL, les outils de forensique mémoire (Volatility 3), disque (Autopsy) et réseau (Wireshark/tshark). Lecture estimée : 55 min.
 
-⚠️ **Cadre légal** : extraire des hashes (`windows.hashdump.Hashdump`) ou analyser un dump hors labo autorisé peut constituer un accès frauduleux (art. 323-1 du Code pénal). Limite-toi à tes propres machines ou à un environnement pédagogique dédié.
+⚠️ **Cadre légal** : extraire des hashes (`windows.registry.hashdump.Hashdump`) ou analyser un dump hors labo autorisé peut constituer un accès frauduleux (art. 323-1 du Code pénal). Limite-toi à tes propres machines ou à un environnement pédagogique dédié.
 
 
 ## Prérequis
@@ -184,8 +184,8 @@ sha256sum memdump.raw > memdump.raw.sha256
 [INFO] 100% complete
 [INFO] Memory image written to memdump.raw
 
-# Le hash SHA-256 produit une empreinte unique
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  memdump.raw
+# Le hash SHA-256 produit une empreinte unique (exemple fictif, pas le hash du fichier vide)
+9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08  memdump.raw
 ```
 
 ### Étape 3 : Analyser les processus avec Volatility 3
@@ -257,10 +257,10 @@ L'injection de code est une technique où un malware insère du code malveillant
 python3 vol.py -f memdump.raw windows.dlllist.DllList --pid 3456
 
 # Détecter les injections de code (malinject)
-python3 vol.py -f memdump.raw windows.malfind.Malfind
+python3 vol.py -f memdump.raw windows.malware.malfind.Malfind
 
 # Extraire les régions mémoire suspectes
-python3 vol.py -f memdump.raw windows.malfind.Malfind --pid 3456 --dump
+python3 vol.py -f memdump.raw windows.malware.malfind.Malfind --pid 3456 --dump
 ```
 
 **Résultat attendu** :
@@ -280,7 +280,9 @@ PID     Process         Start VPN       End VPN         Tag     Protection      
 
 ### Étape 6 : Forensique disque - Analyser la timeline avec Autopsy
 
-Autopsy est un outil graphique de forensique disque. Il analyse les images disque (E01, dd, raw) pour reconstruire l'activité du système.
+Autopsy 4 (Sleuth Kit) est l'outil graphique actuel pour la forensique disque. Il analyse les images (E01, dd, raw) via une application de bureau, pas un serveur web. Télécharge-le depuis [autopsy.com/download](https://www.autopsy.com/download/) (ZIP Linux / MSI Windows).
+
+Le paquet Debian `autopsy` est encore l'ancienne interface Perl 2.24, qui ouvre `http://localhost:9999/autopsy`. Ce n'est pas Autopsy 4.
 
 ```bash
 # Créer une image disque avec dd (Linux)
@@ -289,8 +291,8 @@ sudo dd if=/dev/sda of=/evidence/disk.raw bs=4M status=progress
 # Calculer le hash pour la chain of custody
 sha256sum /evidence/disk.raw > /evidence/disk.raw.sha256
 
-# Lancer Autopsy (interface web)
-autopsy
+# Autopsy 4 : lancer l'application de bureau, puis New Case > Add Data Source
+# (ne pas confondre avec la commande `autopsy` du paquet Debian 2.24)
 ```
 
 **Résultat attendu** :
@@ -299,9 +301,7 @@ autopsy
 # dd affiche la progression
 4294967296 bytes (4.3 GB, 4.0 GiB) copied, 45 s, 95.4 MB/s
 
-# Autopsy démarre le serveur web
-Autopsy Forensic Browser
-http://localhost:9999/autopsy
+# Autopsy 4 ouvre une fenêtre graphique (pas un navigateur sur le port 9999)
 ```
 
 ### Étape 7 : Forensique Windows - Analyser les artefacts
@@ -410,7 +410,7 @@ Case Name: Compromission serveur web PROD-WEB-01
 Evidence #1:
   Description: Dump mémoire RAM du serveur PROD-WEB-01
   Filename: memdump.raw
-  SHA-256: e3b0c44298fc1c149afbf4c8996fb924...
+  SHA-256: 9f86d081884c7d659a2feaa0c55ad015...
   Size: 16 GB
   Acquired by: [Nom de l'analyste]
   Date/Time: 2026-03-19 14:30 UTC
@@ -442,12 +442,12 @@ Chain of custody créée
 | `python3 vol.py -f dump.raw windows.pstree.PsTree` | Arborescence des processus |
 | `python3 vol.py -f dump.raw windows.psscan.PsScan` | Détecter les processus cachés |
 | `python3 vol.py -f dump.raw windows.netscan.NetScan` | Connexions réseau |
-| `python3 vol.py -f dump.raw windows.malfind.Malfind` | Détecter l'injection de code |
+| `python3 vol.py -f dump.raw windows.malware.malfind.Malfind` | Détecter l'injection de code |
 | `python3 vol.py -f dump.raw windows.dlllist.DllList --pid X` | DLLs d'un processus |
 | `python3 vol.py -f dump.raw windows.cmdline.CmdLine` | Lignes de commande des processus |
 | `python3 vol.py -f dump.raw windows.filescan.FileScan` | Scanner les fichiers en mémoire |
 | `python3 vol.py -f dump.raw windows.registry.hivelist.HiveList` | Lister les ruches registre |
-| `python3 vol.py -f dump.raw windows.hashdump.Hashdump` | Extraire les hashes (labo autorisé seulement ; art. 323-1 du Code pénal) |
+| `python3 vol.py -f dump.raw windows.registry.hashdump.Hashdump` | Extraire les hashes (labo autorisé seulement ; art. 323-1 du Code pénal) |
 | `tshark -r capture.pcap -q -z conv,tcp` | Conversations TCP |
 | `tshark -r capture.pcap -Y "dns" -T fields -e dns.qry.name` | Requêtes DNS |
 | `sha256sum fichier` | Calculer le hash SHA-256 |
@@ -556,7 +556,7 @@ python3 vol.py -f incident.raw windows.netscan.NetScan | grep "185.220.101.45"
 # Son parent est svchost.exe (PID 1204), ce qui confirme la compromission
 
 # Étape 5 : Vérifier l'injection de code
-python3 vol.py -f incident.raw windows.malfind.Malfind --pid 3456
+python3 vol.py -f incident.raw windows.malware.malfind.Malfind --pid 3456
 
 # Résultat : Région RWX détectée avec magic byte MZ → exécutable PE injecté
 

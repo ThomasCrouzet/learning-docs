@@ -552,9 +552,9 @@ print(f"PE position 1, dims 0-5: {x_with_pos[0, 1, :6].tolist()}")
 
 ```text
 Avant PE - somme: 0.0000
-Après PE - somme: 256.0000
+Après PE - somme: 1549.1528
 PE position 0, dims 0-5: [0.0, 1.0, 0.0, 1.0, 0.0, 1.0]
-PE position 1, dims 0-5: [0.8415, 0.5403, 0.0100, 0.9999, 0.0001, 1.0]
+PE position 1, dims 0-5: [0.8415, 0.5403, 0.8219, 0.5697, 0.8020, 0.5974]
 ```
 
 ---

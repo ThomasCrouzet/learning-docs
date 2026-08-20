@@ -534,6 +534,8 @@ int main(int argc, char *argv[])
 
 Crée le fichier `Makefile` :
 
+**Important** : les lignes de commande dans un Makefile **doivent** commencer par une tabulation (touche Tab), pas des espaces. L'exemple ci-dessous utilise des espaces pour l'affichage (contrainte Markdown), mais tu dois utiliser des tabulations dans ton fichier réel, sinon `make` échoue avec `missing separator`.
+
 ```makefile
 CC = gcc
 CFLAGS = -std=c17 -Wall -Wextra -Werror

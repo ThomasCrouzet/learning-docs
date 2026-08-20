@@ -194,8 +194,8 @@ Région : eu-central-1 (Francfort)
 # Avec AWS CLI
 
 # 1. Lister les AMIs (images) Amazon Linux 2023
-# Amazon Linux 2 a atteint la fin de support standard le 30 juin 2026 :
-# utiliser AL2023 (support jusqu'en 2029).
+# Amazon Linux 2 a atteint la fin de support le 30 juin 2026 :
+# utiliser AL2023 (support jusqu'au 30 juin 2029).
 aws ec2 describe-images \
     --owners amazon \
     --filters "Name=name,Values=al2023-ami-*-x86_64" \
@@ -269,8 +269,11 @@ aws s3 rb s3://mon-bucket-unique-12345
 ### Étape 5 : Configurer les alertes de facturation
 
 ```bash
-# Créer une alerte quand le coût dépasse 10$
+# Les métriques de facturation n'existent que dans us-east-1 (charges mondiales).
+# Sans --region us-east-1, la commande échoue si ta région par défaut est eu-west-3.
+# Active d'abord les alertes de facturation dans la console Billing.
 aws cloudwatch put-metric-alarm \
+    --region us-east-1 \
     --alarm-name "BillingAlarm-10USD" \
     --alarm-description "Alerte si coût > 10$" \
     --metric-name EstimatedCharges \

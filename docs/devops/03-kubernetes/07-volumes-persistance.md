@@ -105,9 +105,10 @@ Sans PV/PVC :
 
 | Mode | Abréviation | Description |
 | ---- | ----------- | ----------- |
-| ReadWriteOnce | RWO | Lecture-écriture par un seul node à la fois |
+| ReadWriteOnce | RWO | Lecture-écriture par un seul node à la fois (plusieurs pods du même node peuvent monter le volume) |
 | ReadOnlyMany | ROX | Lecture seule par plusieurs nodes |
 | ReadWriteMany | RWX | Lecture-écriture par plusieurs nodes |
+| ReadWriteOncePod | RWOP | Lecture-écriture par un seul pod dans tout le cluster (stable depuis Kubernetes 1.29, volumes CSI). Distinct de RWO, qui est limité au node, pas au pod |
 
 ---
 

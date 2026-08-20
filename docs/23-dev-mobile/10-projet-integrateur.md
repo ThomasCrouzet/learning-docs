@@ -1220,7 +1220,9 @@ import LoginScreen from "./screens/LoginScreen";
 // Configurer les notifications au premier plan
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    shouldShowAlert: true,
+    // SDK 53+ : shouldShowAlert est remplacé par shouldShowBanner + shouldShowList
+    shouldShowBanner: true,
+    shouldShowList: true,
     shouldPlaySound: true,
     shouldSetBadge: true,
   }),

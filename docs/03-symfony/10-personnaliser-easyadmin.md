@@ -183,22 +183,27 @@ Ouvre le fichier `src/Controller/Admin/DashboardController.php` :
 
 namespace App\Controller\Admin;
 
+use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
 
+// #[AdminDashboard] est la façon recommandée depuis EasyAdmin 4.24
+// (#[Route] sur index() fonctionne encore en 4.x mais est déprécié)
+#[AdminDashboard(routePath: '/admin', routeName: 'admin')]
 class DashboardController extends AbstractDashboardController
 {
-    #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        // Redirige vers la liste des produits par défaut
-        return $this->redirectToRoute('admin', [
-            'crudAction' => 'index',
-            'crudControllerFqcn' => ProductCrudController::class,
-        ]);
+        // index() ne peut pas recevoir d'arguments : on récupère le générateur d'URL
+        $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
+
+        // Pretty URLs (EasyAdmin 4.14+) : pas de query string crudAction/crudControllerFqcn
+        return $this->redirect($adminUrlGenerator
+            ->setController(ProductCrudController::class)
+            ->generateUrl());
 
         // Ou affiche le dashboard par défaut
         // return parent::index();
@@ -216,6 +221,15 @@ class DashboardController extends AbstractDashboardController
         // Les autres éléments de menu seront ajoutés ici
     }
 }
+```
+
+Si les pretty URLs ne sont pas encore actives, crée `config/routes/easyadmin.yaml` (chargeur de routes EasyAdmin 4.14+) :
+
+```yaml
+# config/routes/easyadmin.yaml
+easyadmin:
+    resource: .
+    type: easyadmin.routes
 ```
 
 ---
@@ -756,21 +770,23 @@ namespace App\Controller\Admin;
 use App\Entity\Article;
 use App\Entity\Category;
 use App\Entity\Tag;
+use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
 
+#[AdminDashboard(routePath: '/admin', routeName: 'admin')]
 class DashboardController extends AbstractDashboardController
 {
-    #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return $this->redirectToRoute('admin', [
-            'crudAction' => 'index',
-            'crudControllerFqcn' => ArticleCrudController::class,
-        ]);
+        $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
+
+        return $this->redirect($adminUrlGenerator
+            ->setController(ArticleCrudController::class)
+            ->generateUrl());
     }
 
     public function configureDashboard(): Dashboard

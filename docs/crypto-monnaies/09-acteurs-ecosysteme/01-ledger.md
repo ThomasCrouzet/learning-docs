@@ -126,7 +126,7 @@ Sans Secure Élément, un attaquant qui a accès physique à l'appareil peut ten
 
 **Chiffres connus** :
 
-- Plus de 6 millions de hardware wallets vendus (chiffre communique par Ledger en 2023)
+- Plus de 7 millions de hardware wallets vendus (chiffre communiqué par Ledger sur ledger.com/the-company)
 - Valorisation de 1,5 milliard de dollars après la levee de fonds de 2021
 - Levees de fonds totales : plus de 500 millions de dollars auprès d'investisseurs comme 10T Holdings, Cathay Innovation et d'autres
 

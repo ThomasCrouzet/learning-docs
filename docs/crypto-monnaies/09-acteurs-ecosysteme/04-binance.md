@@ -56,7 +56,7 @@ Avant Binance, CZ avait travaille chez Blockchain.info (wallet Bitcoin) et OKCoi
 
 ### BNB : le token de l'exchange
 
-**Définition** : BNB (initialement "Binance Coin") est le token natif de l'écosystème Binance. Lance via une ICO en juillet 2017 a 0,15 dollar par token, il a atteint un sommet historique de plus de 690 dollars en 2021.
+**Définition** : BNB (initialement "Binance Coin") est le token natif de l'écosystème Binance. Lancé via une ICO en juillet 2017 à 0,15 dollar par token, il a d'abord connu un pic autour de 690 dollars en 2021, puis un sommet historique autour de 1 370 dollars en octobre 2025.
 
 **Fonctions de BNB** :
 
@@ -84,18 +84,18 @@ Binance s'est engagé à brûler des BNB régulièrement jusqu'à ce qu'il ne re
 | Caractéristique | BSC | Ethereum (pour comparaison) |
 | --------------- | --- | --------------------------- |
 | Consensus | Proof of Staked Authority (PoSA) | Proof of Stake |
-| Nombre de validateurs | 21 validateurs actifs (sur ~40 candidats) | 900 000+ validateurs |
-| Temps de bloc | ~3 secondes | ~12 secondes |
+| Nombre de validateurs | 45 validateurs actifs (21 Cabinet + 24 Candidates) | 900 000+ validateurs |
+| Temps de bloc | ~0,45 seconde (réduit depuis 3 s par les hardforks Lorentz, Maxwell et Fermi) | ~12 secondes |
 | Frais par transaction | ~0,05-0,30 USD | ~1-50 USD (selon la congestion) |
 | Compatibilite | EVM compatible (même code Solidity) | EVM natif |
 
 **Le problème de la centralisation** :
 
-21 validateurs, c'est très peu. Pour comparaison, Ethereum en a plus de 900 000. Cela signifie que :
+45 validateurs actifs, c'est très peu. Pour comparaison, Ethereum en a plus de 900 000. Cela signifie que :
 
-1. **Les validateurs sont controles par Binance** : ils sont elus par les détenteurs de BNB, mais en pratique, Binance et ses allies contrôlent suffisamment de BNB pour influencer l'election.
-2. **Censure possible** : avec seulement 21 validateurs, une coordination pour censurer des transactions est beaucoup plus facile qu'avec 900 000.
-3. **Point de défaillance** : si un nombre suffisant de validateurs sont compromis ou contraints par un gouvernement, le réseau peut être arrête ou censure.
+1. **Les validateurs sont contrôlés par Binance** : ils sont élus par les détenteurs de BNB, mais en pratique, Binance et ses alliés contrôlent suffisamment de BNB pour influencer l'élection.
+2. **Censure possible** : avec seulement 45 validateurs, une coordination pour censurer des transactions est beaucoup plus facile qu'avec 900 000.
+3. **Point de défaillance** : si un nombre suffisant de validateurs sont compromis ou contraints par un gouvernement, le réseau peut être arrêté ou censuré.
 
 **Succès d'adoption** : malgré cette centralisation, BSC a attire des millions d'utilisateurs, principalement parce que les frais d'Ethereum étaient prohibitifs en 2020-2021 (parfois 50-100 dollars par transaction). BSC offrait la même fonctionnalité pour quelques centimes.
 
@@ -202,7 +202,7 @@ L'amende de 4,3 milliards de dollars et la condamnation de CZ ne sont pas des ac
 
 - [ ] Je connais l'histoire de Binance (2017, CZ, premier exchange mondial en 6 mois)
 - [ ] Je comprends le rôle de BNB (frais réduits, gas sur BSC, burns, launchpad)
-- [ ] Je sais ce qu'est BSC (blockchain EVM compatible, 21 validateurs, centralisation)
+- [ ] Je sais ce qu'est BSC (blockchain EVM compatible, 45 validateurs actifs, centralisation)
 - [ ] Je peux citer les principales controverses (pas de siege, wash trading, 10+ conflits régulatoires)
 - [ ] Je connais les détails de l'amende DOJ de 4,3 milliards de dollars (AML, sanctions, demission de CZ)
 - [ ] Je sais que BUSD a été arrête sous pression régulatoire

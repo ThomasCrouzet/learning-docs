@@ -61,13 +61,13 @@ Sans base de données managée, voici les problèmes rencontres :
 
 ### Qu'est-ce que Amazon RDS ?
 
-**Définition** : Amazon RDS (Relational Database Service) est un service manage qui permet de déployer, operer et faire évoluer une base de données relationnelle dans le cloud. RDS supporte six moteurs : PostgreSQL, MySQL, MariaDB, Oracle, SQL Server et Amazon Aurora.
+**Définition** : Amazon RDS (Relational Database Service) est un service managé qui permet de déployer, opérer et faire évoluer une base de données relationnelle dans le cloud. Le guide RDS (hors Aurora) liste six moteurs : IBM Db2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database et PostgreSQL. Amazon Aurora (compatible MySQL ou PostgreSQL) est un service voisin, documenté dans le guide Aurora, pas comme un septième moteur RDS classique.
 
 **Caractéristiques principales** :
 
 | Caractéristique | Description |
 | --- | --- |
-| **Moteurs supportes** | PostgreSQL, MySQL, MariaDB, Oracle, SQL Server, Aurora |
+| **Moteurs supportés (RDS)** | IBM Db2, MariaDB, SQL Server, MySQL, Oracle, PostgreSQL (Aurora : service séparé) |
 | **Sauvegardes automatiques** | Sauvegarde quotidienne avec retention configurable (1 a 35 jours) |
 | **Multi-AZ** | Replique synchrone dans une autre zone de disponibilité pour la haute disponibilité |
 | **Replicas en lecture** | Jusqu'a 15 replicas pour repartir la charge de lecture |
@@ -123,7 +123,7 @@ Sans DynamoDB, voici les problèmes rencontres :
 
 ### Qu'est-ce que Amazon ElastiCache ?
 
-**Définition** : ElastiCache est un service de cache en mémoire entièrement manage. Il supporte deux moteurs : Redis et Memcached. Il stocke les données les plus fréquemment consultees en mémoire vive pour réduire le temps de réponse.
+**Définition** : ElastiCache est un service de cache en mémoire entièrement managé. Il supporte trois moteurs : Valkey, Redis OSS et Memcached. Il stocke les données les plus fréquemment consultées en mémoire vive pour réduire le temps de réponse. Valkey est le successeur open source de Redis promu par AWS pour les nouveaux clusters ; Redis OSS reste disponible.
 
 **Le problème que ElastiCache résout** :
 
@@ -143,9 +143,9 @@ Sans cache, voici les problèmes rencontres :
 
 **Analogie concrète** : ElastiCache, c'est comme le comptoir d'un bar. Les bouteilles les plus demandees sont sur le comptoir (le cache), a portée de main. Le barman n'a pas besoin d'aller les chercher dans la réserve (la base de données) a chaque commande. Les bouteilles rarement commandees restent dans la réserve. Si une bouteille du comptoir est vide, le barman va la chercher dans la réserve et la remet sur le comptoir.
 
-**Redis vs Memcached** :
+**Valkey / Redis OSS vs Memcached** :
 
-| Critère | Redis | Memcached |
+| Critère | Valkey ou Redis OSS | Memcached |
 | --- | --- | --- |
 | Structures de données | Strings, listes, sets, hashes, sorted sets | Strings uniquement |
 | Persistance | Oui (sauvegarde sur disque) | Non (mémoire uniquement) |

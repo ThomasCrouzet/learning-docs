@@ -95,10 +95,12 @@ Mécanisme :
    - Plus les gens vendent, plus le prix baisse
    - C'est un mécanisme purement mecanique, pas un marche libre
 
-3. Migration vers un DEX
+3. Migration vers un DEX (graduation)
    - Quand le token atteint une certaine capitalisation
-     (environ 69 000 $), la liquidité migre automatiquement
-     vers Raydium (DEX sur Solana)
+     (environ 69 000 $), la courbe se ferme et la liquidité
+     migre automatiquement vers PumpSwap (AMM de Pump.fun,
+     documenté sur pump.fun/docs/bonding-curve). D'autres
+     launchpads migrent encore vers Raydium.
    - A partir de ce moment, le token se négocie comme n'importe
      quel autre token sur le marche ouvert
 

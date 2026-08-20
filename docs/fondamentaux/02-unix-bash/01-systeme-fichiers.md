@@ -85,7 +85,7 @@ Sans organisation hiérarchique, voici les problèmes rencontrés :
 | `/home/utilisateur` | Ton dossier personnel (aussi noté `~`) |
 | `/etc` | Fichiers de configuration |
 | `/var` | Données variables (logs, caches) |
-| `/tmp` | Fichiers temporaires (vidé au redémarrage) |
+| `/tmp` | Fichiers temporaires (nettoyage périodique par âge via systemd-tmpfiles, souvent 10 jours ; vidé au boot seulement si `/tmp` est un tmpfs) |
 | `/usr` | Programmes installés |
 | `/bin` | Commandes essentielles |
 

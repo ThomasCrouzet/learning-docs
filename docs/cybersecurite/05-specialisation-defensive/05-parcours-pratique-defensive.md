@@ -100,7 +100,7 @@ Sans certifications, voici les problèmes rencontrés :
 | Langue | Anglais (et autres) |
 | Validité | 3 ans (renouvellement par CEUs) |
 | Prix | ~370-400 EUR (indicatif, évolutif) |
-| Retrait V3 | examen anglais CS0-003 prévu en retrait fin 2026 (dates officielles CompTIA) |
+| Retrait V3 | examen anglais CS0-003 : 22 décembre 2026 (produits d'apprentissage anglais : 22 novembre 2026 ; traductions : 23 mars 2027) |
 
 **Domaines couverts** :
 

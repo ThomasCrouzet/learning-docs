@@ -74,8 +74,9 @@ L'option `-vec` demande au compilateur Faust de générer du code C++ organisé 
 | ------ | ----- |
 | `-vec` | Active la vectorisation (traitement par blocs) |
 | `-vs N` | Définit la taille du vecteur (par défaut 32). Valeurs typiques : 32, 64, 128 |
-| `-lv 0` | Boucle vectorisée la plus simple (une seule boucle) |
-| `-lv 1` | Sépare la boucle en boucle principale vectorisée + boucle de reste |
+| `-lv 0` | Variante de boucle la plus rapide (défaut) : taille de vecteur fixe + boucle de reste |
+| `-lv 1` | Variante simple : taille de vecteur variable |
+| `-lv 2` | Taille de vecteur fixe, sans boucle de reste |
 
 ---
 
@@ -383,16 +384,16 @@ Sans optimisation mémoire, voici les problèmes rencontrés :
 
 | Option | Description |
 | ------ | ----------- |
-| `-ct N` | Compile-time check - limite le temps de compilation à N secondes. Utile pour détecter les programmes qui génèrent une explosion combinatoire |
+| `-ct 0/1` | Check-table : vérifie les index `rtable`/`rwtable` et génère un accès sûr (1 par défaut). Ce n'est pas un timeout de compilation |
 | `-cn name` | Class name - définit le nom de la classe C++ générée (par défaut `mydsp`). Utile quand tu intègres plusieurs programmes Faust dans un même projet C++ |
 | `-o file` | Output - écrit le code généré dans un fichier au lieu de stdout |
 | `-a arch` | Architecture - utilise un fichier d'architecture spécifique |
-| `-t N` | Timeout - arrête la compilation après N secondes (protection contre les boucles infinies du compilateur) |
+| `-t N` | Timeout - arrête la compilation après N secondes (protection contre les explosions combinatoires du compilateur) |
 | `-e` | Export - génère un fichier C++ autonome avec toutes les dépendances incluses |
 
 ```bash
 # Compiler avec un nom de classe personnalisé et un timeout de 30 secondes
-faust -cn MonReverb -ct 30 -o mon_reverb.cpp reverb.dsp
+faust -cn MonReverb -t 30 -o mon_reverb.cpp reverb.dsp
 ```
 
 ---
@@ -802,7 +803,7 @@ Gain total: ~50-70% de CPU en moins par rapport à la version initiale
 | `faust -vec -vs 64 prog.dsp -o prog.cpp` | Vectorisation avec blocs de 64 échantillons |
 | `faust -mcd 0 prog.dsp -o prog.cpp` | Désactive la copie des delay lines |
 | `faust -cn MonDSP prog.dsp -o prog.cpp` | Nomme la classe C++ générée `MonDSP` |
-| `faust -ct 30 prog.dsp -o prog.cpp` | Limite le temps de compilation à 30 secondes |
+| `faust -t 30 prog.dsp -o prog.cpp` | Limite le temps de compilation à 30 secondes |
 | `faust2bench prog.dsp` | Benchmarke le programme |
 | `faust2bench -vec prog.dsp` | Benchmarke avec vectorisation |
 | `faust2bench -double prog.dsp` | Benchmarke en double précision |
@@ -922,7 +923,7 @@ faust2bench programme_optimise.dsp
 - [ ] Je connais les techniques d'optimisation algorithmique (lookup tables, approximations, réduction d'ordre)
 - [ ] Je sais optimiser l'utilisation mémoire (taille des tables, puissances de 2, `-single`)
 - [ ] Je connais les différences de performance entre les backends (C++, LLVM JIT, Wasm, Interpreter)
-- [ ] Je sais utiliser `-cn` et `-ct` pour contrôler la compilation
+- [ ] Je sais utiliser `-cn` et `-t` pour contrôler le nom de classe et le timeout de compilation
 
 ---
 

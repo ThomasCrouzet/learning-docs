@@ -431,7 +431,7 @@ Niche identifiée : Auto-hébergement + conformité RGPD
 | --- | --- | ----------- | ------------ | -------------- |
 | Bankin' | bankin.com | Agrégateur bancaire + budget | Connexion bancaire automatique, Catégorisation IA | Dépendance aux banques, Données hébergées chez eux |
 | Linxo | linxo.com | Agrégation et budget | Interface claire, Alertes personnalisées | Version gratuite limitée, Pas d'export |
-| YNAB | ynab.com | Budget prévisionnel | Méthode éprouvée, Formation incluse | Prix élevé (99$/an), En anglais |
+| YNAB | ynab.com | Budget prévisionnel | Méthode éprouvée, Formation incluse | Prix élevé (109 USD/an d'après [ynab.com/pricing](https://www.ynab.com/pricing)), En anglais |
 
 ## 2. Concurrents indirects
 

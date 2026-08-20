@@ -119,7 +119,7 @@ Un compte externe peut envoyer des transactions. Un compte de contrat ne peut qu
 
 ### Ether : le carburant du réseau
 
-**Définition** : Ether (ETH) est la crypto-monnaie native d'Ethereum. Il sert à payér les frais d'exécution des transactions et des smart contracts sur le réseau. Son rôle principal est celui de "carburant" : sans ETH, impossible d'utiliser Ethereum.
+**Définition** : Ether (ETH) est la crypto-monnaie native d'Ethereum. Il sert à payer les frais d'exécution des transactions et des smart contracts sur le réseau. Son rôle principal est celui de "carburant" : sans ETH, impossible d'utiliser Ethereum.
 
 **Le problème que l'Ether résout** :
 
@@ -145,7 +145,7 @@ Sans mécanisme de paiement pour les opérations :
 | --- | --- |
 | Conçu comme monnaie et réserve de valeur | Conçu comme carburant d'une plateforme |
 | Offre fixe : 21 millions maximum | Pas de limite fixe, mais mécanisme de burn (destruction) |
-| Utilisé principalement pour les transferts | Utilisé principalement pour payér les frais de gas |
+| Utilisé principalement pour les transferts | Utilisé principalement pour payer les frais de gas |
 
 ---
 
@@ -157,7 +157,7 @@ Sans mécanisme de paiement pour les opérations :
 
 Avant The Merge, Ethereum fonctionnait comme Bitcoin : des mineurs depensaient de l'énergie pour trouver des blocs. Cela posait trois problèmes :
 
-1. **Consommation énergétique massive** : Ethereum en Proof of Work consommait environ 78 TWh par an - comparable à la consommation électrique du Chili.
+1. **Consommation énergétique massive** : Ethereum en Proof of Work consommait de l'ordre de dizaines de TWh par an (les index publics divergeaient ; la page énergie d'ethereum.org cite 21 TWh pour le PoW Ethereum dans son tableau comparatif).
 2. **Centralisation du minage** : le minage favorisait ceux qui avaient accès à de l'électricité bon marché et à du matériel spécialisé.
 3. **Barrieres à la participation** : devenir mineur necessitait un investissement important en matériel.
 
@@ -171,7 +171,7 @@ Au lieu de dépenser de l'énergie (Proof of Work), les validateurs deposent 32 
 | Coût : électricité et matériel | Coût : 32 ETH immobilises |
 | Récompense pour le premier qui trouve le nonce | Récompense pour le validateur selectionne aleatoirement |
 | Si tu triches : tu as gaspille de l'électricité | Si tu triches : tu perds tes ETH (slashing) |
-| Consommation : environ 78 TWh/an | Consommation : environ 0,01 TWh/an (reduction de 99,95%) |
+| Consommation : de l'ordre de dizaines de TWh/an en PoW | Consommation : environ 0,0026 TWh/an (ethereum.org / CCRI ; réduction ~99,95 %) |
 
 **Chiffres factuels de The Merge** :
 
@@ -179,9 +179,8 @@ Au lieu de dépenser de l'énergie (Proof of Work), les validateurs deposent 32 
 | --- | --- |
 | Date | 15 septembre 2022, 06:42:42 UTC |
 | Bloc de la transition | 15 537 393 |
-| Reduction de consommation énergétique | Environ 99,95% |
-| Nombre de validateurs actifs (mars 2026) | Environ 1 000 000 |
-| Enjeu total depose | Environ 34 millions d'ETH |
+| Réduction de consommation | ~99,95 % (page Merge) / >99,988 % (page énergie CCRI) |
+| ETH staké (août 2026, ethereum.org) | Environ 42 millions d'ETH |
 
 **Ce que The Merge n'est PAS** :
 
@@ -208,9 +207,9 @@ Au lieu de dépenser de l'énergie (Proof of Work), les validateurs deposent 32 
 | Consensus actuel | Proof of Work | Proof of Stake (depuis sept. 2022) |
 | Temps entre blocs | Environ 10 minutes | Environ 12 secondes |
 | Offre maximale | 21 millions BTC | Pas de limite fixe |
-| Consommation énergétique | Environ 100-150 TWh/an | Environ 0,01 TWh/an |
+| Consommation énergétique | Environ 149 TWh/an (comparatif ethereum.org / Cambridge) | Environ 0,0026 TWh/an |
 | Transactions par seconde (couche de base) | Environ 7 | Environ 15-30 |
-| Cas d'usage principal réel | Réserve de valeur, transferts internationaux | défi, tokens, NFTs, applications décentralisées |
+| Cas d'usage principal réel | Réserve de valeur, transferts internationaux | DeFi, tokens, NFTs, applications décentralisées |
 
 **Point important** : ce tableau n'est pas un classement. Bitcoin et Ethereum ont des objectifs différents. Les comparer en termes de "meilleur" ou "moins bon" n'a pas de sens sans préciser le critère d'évaluation.
 

@@ -21,7 +21,7 @@ cursus: "Services système"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu auras deploye une infrastructure complete pour l'entreprise fictive "TechLab" avec un serveur DNS autoritaire, un serveur web avec deux sites, un annuaire LDAP avec des utilisateurs et des groupes, un serveur de messagerie, un reverse proxy avec terminaison SSL et un système de monitoring. Tous les services seront conteneurises et orchestres avec Docker Compose.
+À la fin de cette fiche, tu auras déployé une infrastructure complète pour l'entreprise fictive "TechLab" avec un serveur DNS autoritaire, un serveur web avec deux sites, un annuaire LDAP avec des utilisateurs et des groupes, un serveur de messagerie, un reverse proxy HTTP (port hôte 8080, sans TLS dans ce lab) et un système de monitoring. Tous les services seront conteneurisés et orchestrés avec Docker Compose.
 
 ---
 

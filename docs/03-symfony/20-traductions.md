@@ -70,11 +70,15 @@ L'application doit savoir dans quelle langue répondre à chaque requête. La lo
 
 **Comment Symfony détermine la locale** :
 
+La locale vit sur la requête HTTP. Le mécanisme recommandé est le paramètre `_locale` dans la route. La persistance en session (sticky locale) n'est **pas** automatique : tu dois l'activer explicitement.
+
 ```text
-1. Le paramètre _locale dans la route (ex : /fr/articles)
-2. Sinon, la locale stockée en session (si activée)
+1. Le paramètre _locale dans la route (ex : /fr/articles) - mécanisme recommandé
+2. Sinon, la locale déjà posée sur le Request
 3. Sinon, la locale par défaut (default_locale dans la configuration)
 ```
+
+Pour garder la langue d'une visite à l'autre via la session, vois la doc Symfony « How to Work with the User's Locale » (sticky session) : ce n'est pas le comportement par défaut.
 
 **Analogie concrète** : La locale est comme le drapeau que tu choisis au début d'un distributeur de billets : tout l'écran s'adapte à ce choix. Tant que tu ne changes pas de drapeau, l'appareil te parle dans la même langue.
 

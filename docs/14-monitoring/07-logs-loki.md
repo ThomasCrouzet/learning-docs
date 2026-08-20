@@ -24,9 +24,9 @@ cursus: "Monitoring et Observabilité"
 
 | Technologie | Version |
 | --- | --- |
-| Loki | 3.1.x |
-| Promtail | 3.1.x |
-| Grafana | 11.x |
+| Loki | 3.1.x (labo de cette fiche ; la ligne courante Grafana Labs est 3.7.x) |
+| Promtail | 3.1.x (EOL le 2 mars 2026 ; successeur : Grafana Alloy) |
+| Grafana | 13.1.x (image `grafana/grafana:13.1.3` dans le compose) |
 
 ## Objectif de cette fiche
 

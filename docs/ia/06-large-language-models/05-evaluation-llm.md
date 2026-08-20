@@ -22,7 +22,7 @@ cursus: "Phase 6 - Large Language Models"
 - [Fiche 03 - RAG - Retrieval-Augmented Generation](03-rag-retrieval-augmented-generation.md) (retrieval, augmentation)
 - [Fiche 04 - Fine-tuning et adaptation de modèles](04-fine-tuning-adaptation-modeles.md) (LoRA, QLoRA, datasets d'instruction)
 - Python 3 installé sur ta machine
-- `pip install openai datasets numpy`
+- `pip install openai datasets numpy torch transformers`
 
 ## Objectif de cette fiche
 
@@ -681,7 +681,7 @@ red_team_results = run_red_team()
 
 | Commande | Action |
 | -------- | ------ |
-| `pip install openai datasets numpy` | Installe les dépendances d'évaluation |
+| `pip install openai datasets numpy torch transformers` | Installe les dépendances d'évaluation |
 | `json.dump(data, f, ensure_ascii=False)` | Sauvegarde un golden set en JSON (supporte les accents) |
 | `response_format={"type": "json_object"}` | Force la sortie JSON structurée du LLM |
 | `np.mean(scores)` | Calcule la moyenne des scores |
@@ -889,3 +889,5 @@ for category, prompt in red_prompts:
 ## Navigation
 
 ← Fiche précédente : **[04 - Fine-tuning et adaptation de modèles](04-fine-tuning-adaptation-modeles.md)**
+
+→ Phase suivante : **[Phase 7 - Systèmes agentiques et MLOps](../07-systemes-agentiques-mlops/index.md)**

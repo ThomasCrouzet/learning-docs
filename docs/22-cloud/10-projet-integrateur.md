@@ -45,7 +45,7 @@ Le projet deploie une application de gestion de taches (API REST) avec l'archite
 | Composant | Service AWS | Role |
 | --- | --- | --- |
 | Réseau | VPC + sous-réseaux | Isolation et segmentation réseau |
-| Load Balancer | Application Load Balancer | Répartition du trafic et terminaison SSL |
+| Load Balancer | Application Load Balancer | Répartition du trafic HTTP (port 80 ; pas de TLS dans ce lab) |
 | Application | ECS Fargate (2 tasks) | Exécution des conteneurs sans serveur |
 | Base de données | RDS PostgreSQL | Stockage persistant des données |
 | Cache | ElastiCache Redis | Cache des requêtes frequentes |
@@ -444,6 +444,14 @@ resource "aws_db_instance" "main" {
     Name = "${var.project_name}-db"
   }
 }
+
+# Paramètre SSM lu par la task ECS (secrets.valueFrom). Sans cette ressource,
+# le conteneur échoue au démarrage (parameter not found).
+resource "aws_ssm_parameter" "db_password" {
+  name  = "/${var.project_name}/db-password"
+  type  = "SecureString"
+  value = var.db_password
+}
 ```
 
 Créé le fichier `elasticache.tf` :
@@ -520,6 +528,24 @@ resource "aws_iam_role" "ecs_execution" {
 resource "aws_iam_role_policy_attachment" "ecs_execution" {
   role       = aws_iam_role.ecs_execution.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+# AmazonECSTaskExecutionRolePolicy ne contient PAS ssm:GetParameters.
+# Sans cette politique, Fargate ne peut pas injecter DATABASE_PASSWORD.
+resource "aws_iam_role_policy" "ecs_execution_ssm" {
+  name = "${var.project_name}-ecs-execution-ssm"
+  role = aws_iam_role.ecs_execution.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect   = "Allow"
+        Action   = ["ssm:GetParameters"]
+        Resource = aws_ssm_parameter.db_password.arn
+      }
+    ]
+  })
 }
 
 # Role de tache ECS (permissions de l'application)
@@ -680,7 +706,7 @@ resource "aws_ecs_task_definition" "app" {
       secrets = [
         {
           name      = "DATABASE_PASSWORD"
-          valueFrom = "arn:aws:ssm:${var.region}:${data.aws_caller_identity.current.account_id}:parameter/${var.project_name}/db-password"
+          valueFrom = aws_ssm_parameter.db_password.arn
         }
       ]
 
@@ -709,9 +735,6 @@ resource "aws_ecs_task_definition" "app" {
     Name = "${var.project_name}-task-definition"
   }
 }
-
-# Data source pour l'ID du compte AWS
-data "aws_caller_identity" "current" {}
 
 # Service ECS
 resource "aws_ecs_service" "app" {
@@ -1162,9 +1185,8 @@ terraform.tfvars
 
 **Enonce** : Ameliore l'architecture du projet intégrateur en ajoutant les éléments suivants :
 
-1. **Auto-scaling ECS** : Configure une politique d'auto-scaling qui :
-   - Ajoute des tasks quand le CPU dépasse 70%
-   - Retire des tasks quand le CPU passe sous 30%
+1. **Auto-scaling ECS** : Configure une politique _target tracking_ qui :
+   - Vise une utilisation CPU moyenne de 70 % (AWS ajoute ou retire des tasks autour de cette cible unique ; il n'y a pas de seuil de scale-in séparé à 30 %)
    - Minimum : 2 tasks, maximum : 6 tasks
 
 2. **Multi-AZ RDS** : Active la haute disponibilité sur l'instance RDS avec une replique dans une autre zone de disponibilité

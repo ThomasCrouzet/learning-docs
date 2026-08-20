@@ -113,7 +113,7 @@ Sans DNS, voici les problèmes rencontres :
 | Type | Nom | Role | Exemple |
 | --- | --- | --- | --- |
 | A | Address | Associe un nom a une adresse IPv4 | `example.com → 104.20.23.154` |
-| AAAA | IPv6 Address | Associe un nom a une adresse IPv6 | `example.com → 2606:2800:220:1:248:1893:25c8:1946` |
+| AAAA | IPv6 Address | Associe un nom a une adresse IPv6 | `example.com → 2606:4700:10::6814:179a` (valeur réelle variable) |
 | CNAME | Canonical Name | Créé un alias vers un autre nom | `www.example.com → example.com` |
 | MX | Mail Exchange | Indique le serveur de messagerie | `example.com → mail.example.com (priorite 10)` |
 | NS | Name Server | Indique les serveurs DNS autoritaires | `example.com → ns1.example.com` |
@@ -160,8 +160,8 @@ $TTL 3600                          ; TTL par defaut : 1 heure
 www     IN  A     104.20.23.154
 mail    IN  A     93.184.216.50
 
-; Enregistrement AAAA
-@       IN  AAAA  2606:2800:220:1:248:1893:25c8:1946
+; Enregistrement AAAA (exemple IPv6 ; la valeur réelle de example.com change)
+@       IN  AAAA  2606:4700:10::6814:179a
 
 ; Alias
 blog    IN  CNAME www.example.com.
@@ -350,11 +350,11 @@ dig example.com MX +short
 dig example.com NS +short
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (les serveurs de noms de `example.com` ont changé ; en 2026 ils pointent vers Cloudflare) :
 
 ```text
-a.iana-servers.net.
-b.iana-servers.net.
+elliott.ns.cloudflare.com.
+hera.ns.cloudflare.com.
 ```
 
 ```bash
@@ -384,8 +384,8 @@ dig +trace example.com
 ```text
 .                   IN  NS  a.root-servers.net.    (serveur racine)
 com.                IN  NS  a.gtld-servers.net.    (serveur TLD .com)
-example.com.        IN  NS  a.iana-servers.net.    (serveur autoritaire)
-example.com.        IN  A   104.20.23.154          (reponse finale)
+example.com.        IN  NS  elliott.ns.cloudflare.com.  (serveur autoritaire, 2026)
+example.com.        IN  A   104.20.23.154          (une des réponses A ; peut varier)
 ```
 
 Tu vois les 4 étapes de la resolution : racine → TLD → autoritaire → réponse.

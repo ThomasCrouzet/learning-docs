@@ -638,19 +638,23 @@ ORDER BY nombre DESC;
 
 **Modifier une vue** avec `CREATE OR REPLACE VIEW` :
 
+`CREATE OR REPLACE VIEW` peut changer le calcul des colonnes existantes et **ajouter des colonnes à la fin**. Il ne peut pas renommer, réordonner ni supprimer une colonne (erreur du type `cannot change name of view column`). La vue actuelle a les colonnes `id`, `article`, `price`, `categorie`, `auteur`. On ajoute `prix_ttc` à la fin, sans renommer `price` :
+
 ```sql
 CREATE OR REPLACE VIEW vue_articles_complets AS
 SELECT
     a.id,
     a.name AS article,
-    a.price AS prix_ht,
-    ROUND(a.price * 1.20, 2) AS prix_ttc,
+    a.price,
     c.name AS categorie,
-    u.name AS auteur
+    u.name AS auteur,
+    ROUND(a.price * 1.20, 2) AS prix_ttc
 FROM article a
 INNER JOIN category c ON a.category_id = c.id
 INNER JOIN users u ON a.user_id = u.id;
 ```
+
+Pour renommer une colonne (par exemple `price` en `prix_ht`), il faut d'abord `DROP VIEW` puis recréer la vue.
 
 **Supprimer une vue** :
 

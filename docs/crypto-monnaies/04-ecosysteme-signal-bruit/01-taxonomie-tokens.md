@@ -39,7 +39,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 Sans cette distinction, on confond des choses fondamentalement différentes :
 
 1. **Confusion technique** : un coin fait fonctionner une blockchain entière, un token est un programme sur une blockchain existante
-2. **Confusion de valeur** : la valeur d'un coin est liee à la sécurité et au fonctionnement d'un réseau, la valeur d'un token dépend du projet qui l'a créé
+2. **Confusion de valeur** : la valeur d'un coin est liée à la sécurité et au fonctionnement d'un réseau, la valeur d'un token dépend du projet qui l'a créé
 3. **Confusion de risque** : supprimer Bitcoin impliquerait de détruire tout son réseau, supprimer un token nécessite juste d'abandonner un smart contract
 
 **Analogie concrète** : un coin, c'est comme l'euro - la monnaie officielle d'un pays, geree par une banque centrale. Un token, c'est comme un bon d'achat émis par un magasin - il a de la valeur tant que le magasin existe et l'accepte, mais il dépend de l'infrastructure monétaire existante (l'euro) pour fonctionner.
@@ -49,7 +49,7 @@ Sans cette distinction, on confond des choses fondamentalement différentes :
 | Critère | Coin | Token |
 | --- | --- | --- |
 | Exemple | BTC, ETH, SOL | UNI, LINK, USDC |
-| Blockchain | Possede sa propre blockchain | Créé sur une blockchain existante |
+| Blockchain | Possède sa propre blockchain | Créé sur une blockchain existante |
 | Rôle | Fait fonctionner le réseau (frais, récompenses) | Sert un projet spécifique (ou rien) |
 | Création | Nécessite de lancer une blockchain entière | Nécessite de déployer un smart contract |
 | Nombre existant | Quelques dizaines | Des millions |
@@ -60,7 +60,7 @@ Sans cette distinction, on confond des choses fondamentalement différentes :
 
 ### Utility tokens : accès à un service
 
-**Définition** : Un utility token donne accès à un service ou une fonctionnalité dans un écosystème spécifique. Il à une fonction utilitaire concrete : sans lui, tu ne peux pas utiliser le service.
+**Définition** : Un utility token donne accès à un service ou une fonctionnalité dans un écosystème spécifique. Il a une fonction utilitaire concrète : sans lui, tu ne peux pas utiliser le service.
 
 **Exemples concrets** :
 
@@ -156,7 +156,7 @@ Les protocoles décentralisés n'ont pas de PDG ni de conseil d'administration. 
 | --- | --- | --- | --- |
 | USDT | Tether | Adossé à des réserves (dollars, obligations) | > 100 milliards de dollars |
 | USDC | Circle | Adossé à des réserves (dollars, bons du Trésor) | > 30 milliards de dollars |
-| DAI | MakerDAO | Surcolateralisé en crypto | > 5 milliards de dollars |
+| DAI | MakerDAO | Surcollatéralisé en crypto | environ 4 à 5 milliards de dollars |
 
 **Point important** : les stablecoins sont traites en détail dans la fiche 05 de cette phase.
 

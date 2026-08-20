@@ -223,7 +223,7 @@ Redis crée un snapshot (photo instantanée) de toutes les données à intervall
 **Inconvénients** :
 
 - Les données entre deux snapshots sont perdues en cas de crash
-- Par défaut, Redis sauvegarde toutes les 60 secondes si au moins 1 000 clés ont changé
+- Par défaut (`redis.conf`) : `save 3600 1`, `save 300 100` et `save 60 10000` (1 h / 1 clé, 5 min / 100 clés, 60 s / 10 000 clés). L'exemple `save 60 1000` de la doc persistence n'est pas la valeur par défaut.
 
 #### AOF (Append Only File)
 
@@ -298,7 +298,7 @@ docker --version
 **Résultat attendu** :
 
 ```text
-Docker version 24.0.x, build xxxxxxx
+Docker version 24.x ou plus récent, build xxxxxxx
 ```
 
 Si tu obtiens une erreur, revois la fiche Docker d'installation.

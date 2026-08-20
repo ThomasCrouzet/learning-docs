@@ -202,7 +202,7 @@ certbot --version
 **Résultat attendu** :
 
 ```text
-certbot 2.x.x
+certbot 5.x.x
 ```
 
 **Alternative via apt** (version des dépôts Debian, fonctionnelle sur Debian 12) :
@@ -477,13 +477,13 @@ openssl s_client -connect example.com:443 -servername example.com < /dev/null 2>
 **Résultat attendu** :
 
 ```text
-            Issuer: C=US, O=Let's Encrypt, CN=R10
+            Issuer: C=US, O=Let's Encrypt, CN=YR1
             Subject: CN=example.com
-            Not Before: Jun 16 12:00:00 2025 GMT
-            Not After : Sep 14 12:00:00 2025 GMT
+            Not Before: Jun 16 12:00:00 2026 GMT
+            Not After : Sep 14 12:00:00 2026 GMT
 ```
 
-L'émetteur (`Issuer`) doit être "Let's Encrypt" et non ton propre nom (ce qui indiquerait un certificat auto-signé).
+L'émetteur (`Issuer`) doit être "Let's Encrypt" et non ton propre nom (ce qui indiquerait un certificat auto-signé). Le `CN` de l'intermédiaire change selon le profil et la date : en 2026 les intermédiaires actifs sont YE1/YE2 (ECDSA) et YR1/YR2 (RSA) ; R10/R11/R12/R13 sont retirés de l'émission.
 
 ---
 
@@ -640,7 +640,7 @@ ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
 - Si tu n'as pas de serveur accessible depuis Internet, utilise le flag `--staging` pour tester sans dépenser tes quotas
 - Pour vérifier le certificat depuis la ligne de commande : `openssl s_client -connect ton-domaine.com:443 < /dev/null | head -20`
 
-**Résultat attendu** : Ton site répond en HTTPS avec un cadenas vert dans le navigateur et le certificat est signé par "Let's Encrypt".
+**Résultat attendu** : Ton site répond en HTTPS sans avertissement de certificat (icône de cadenas, plus de "cadenas vert" depuis plusieurs années) et le certificat est signé par "Let's Encrypt".
 
 ---
 

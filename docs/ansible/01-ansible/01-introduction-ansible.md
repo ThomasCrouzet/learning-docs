@@ -135,7 +135,7 @@ Sans architecture agentless (c'est-à-dire avec des agents), voici les problème
 | Connexion                 | SSH (déjà disponible)                            | Agent connecté en permanence au serveur central       |
 | Consommation de ressources | Uniquement pendant l'exécution                  | Permanente (agent en arrière-plan)                    |
 | Maintenance               | Seul le nœud de contrôle à maintenir            | Agent + serveur central à maintenir                   |
-| Langage de configuration  | YAML (lisible sans formation)                    | DSL dédié (Ruby pour Puppet, Ruby pour Chef)          |
+| Langage de configuration  | YAML (lisible sans formation)                    | DSL dédié (langage Puppet pour Puppet, Ruby pour Chef) |
 | Courbe d'apprentissage    | Faible (YAML + SSH)                              | Moyenne à élevée (DSL + architecture client/serveur)  |
 
 Le schéma suivant illustre l'architecture agentless push-based d'Ansible :

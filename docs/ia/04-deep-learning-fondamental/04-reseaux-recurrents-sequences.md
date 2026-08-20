@@ -458,7 +458,7 @@ LSTMPredictor(
   )
 )
 
-Nombre de paramètres : 36,138
+Nombre de paramètres : 52,842
 
 Entrée shape : torch.Size([4, 50, 1])
 Sortie shape : torch.Size([4, 10])
@@ -663,9 +663,9 @@ for name, arch_model in architectures.items():
 ```text
 Architecture | Paramètres  | Temps/époque
 ---------------------------------------------
-RNN          |       5,610 |         0.42s
-LSTM         |      36,138 |         0.67s
-GRU          |      27,434 |         0.58s
+RNN          |      15,018 |         0.42s
+LSTM         |      52,842 |         0.67s
+GRU          |      40,234 |         0.58s
 ```
 
 Le RNN a moins de paramètres et est plus rapide, mais il est moins performant sur les séquences longues. Le LSTM a le plus de paramètres. Le GRU est un bon compromis.
@@ -766,7 +766,7 @@ X_test_norm = (X_test - train_min) / (train_max - train_min)  # Utilise les stat
 - Affiche le MSE final sur le test pour chaque architecture
 - Visualise les prédictions du meilleur modèle sur 4 exemples
 
-**Résultat attendu** : Le LSTM et le GRU atteignent un MSE test inférieur a 0.005. Le RNN vanilla est moins performant.
+**Résultat attendu** : Le LSTM et le GRU atteignent un MSE test inférieur à 0.005. Le RNN vanilla est moins performant.
 
 ---
 
@@ -925,9 +925,9 @@ plt.show()
 **Résultat attendu** :
 
 ```text
-RNN   | Params:    5,610 | Test MSE: 0.023456 | Temps: 12.3s
-LSTM  | Params:   36,138 | Test MSE: 0.001234 | Temps: 19.8s
-GRU   | Params:   27,434 | Test MSE: 0.001567 | Temps: 17.2s
+RNN   | Params:   15,018 | Test MSE: 0.023456 | Temps: 12.3s
+LSTM  | Params:   52,842 | Test MSE: 0.001234 | Temps: 19.8s
+GRU   | Params:   40,234 | Test MSE: 0.001567 | Temps: 17.2s
 
 Meilleur modèle : LSTM
 ```

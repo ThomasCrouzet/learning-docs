@@ -489,7 +489,7 @@ Test de montage
 | `sudo umount /mnt/point` | Démonter |
 | `sudo mkfs.ext4 /dev/xxx` | Créer un système ext4 |
 | `cat /etc/fstab` | Configuration des montages |
-| `sudo pvs / vgs / lvs` | Informations LVM |
+| `sudo pvs` / `sudo vgs` / `sudo lvs` | Informations LVM (trois commandes distinctes) |
 
 ---
 

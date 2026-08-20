@@ -673,24 +673,27 @@ Le champ `hostname` change entre les requêtes car Kubernetes distribue le trafi
 
 ```bash
 # Vérifie que PHP-FPM peut atteindre PostgreSQL
-kubectl exec -it deploy/symfony -c php-fpm -- sh -c "nc -zv postgres-svc 5432"
+# php:8.3-fpm-alpine n'embarque pas netcat (nc) : on ouvre le port avec PHP
+kubectl exec -it deploy/symfony -c php-fpm -- php -r \
+  'echo @fsockopen("postgres-svc", 5432) ? "postgres-svc:5432 open\n" : "fail\n";'
 ```
 
 **Résultat attendu** :
 
 ```text
-postgres-svc (10.x.x.x:5432) open
+postgres-svc:5432 open
 ```
 
 ```bash
 # Vérifie que PHP-FPM peut atteindre Redis
-kubectl exec -it deploy/symfony -c php-fpm -- sh -c "nc -zv redis-svc 6379"
+kubectl exec -it deploy/symfony -c php-fpm -- php -r \
+  'echo @fsockopen("redis-svc", 6379) ? "redis-svc:6379 open\n" : "fail\n";'
 ```
 
 **Résultat attendu** :
 
 ```text
-redis-svc (10.x.x.x:6379) open
+redis-svc:6379 open
 ```
 
 ```bash

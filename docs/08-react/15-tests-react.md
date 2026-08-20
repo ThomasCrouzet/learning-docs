@@ -162,7 +162,7 @@ Ajoute la configuration dans `vite.config.ts` :
 
 ```tsx
 // vite.config.ts
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
@@ -182,8 +182,8 @@ Crée `src/test/setup.ts` :
 
 ```tsx
 // src/test/setup.ts
-// Ajoute les assertions DOM à chaque test
-import "@testing-library/jest-dom";
+// Ajoute les assertions DOM à chaque test (entrée Vitest officielle)
+import "@testing-library/jest-dom/vitest";
 ```
 
 Ajoute le script de test dans `package.json` :
@@ -512,6 +512,63 @@ describe("FormulaireContact", () => {
 ---
 
 ### Étape 5 : Mocker les appels API
+
+Crée d'abord le composant `src/components/ListeUtilisateurs.tsx` (les tests ci-dessous l'importent) :
+
+```tsx
+// src/components/ListeUtilisateurs.tsx
+import { useEffect, useState } from "react";
+
+interface Utilisateur {
+  id: number;
+  nom: string;
+  email: string;
+}
+
+function ListeUtilisateurs() {
+  const [utilisateurs, setUtilisateurs] = useState<Utilisateur[]>([]);
+  const [chargement, setChargement] = useState(true);
+  const [erreur, setErreur] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/api/utilisateurs")
+      .then((reponse) => {
+        if (!reponse.ok) {
+          throw new Error("Erreur");
+        }
+        return reponse.json();
+      })
+      .then((donnees: Utilisateur[]) => {
+        setUtilisateurs(donnees);
+        setChargement(false);
+      })
+      .catch(() => {
+        setErreur("Erreur");
+        setChargement(false);
+      });
+  }, []);
+
+  if (chargement) {
+    return <p>Chargement...</p>;
+  }
+
+  if (erreur) {
+    return <p>{erreur}</p>;
+  }
+
+  return (
+    <ul>
+      {utilisateurs.map((utilisateur) => (
+        <li key={utilisateur.id}>
+          {utilisateur.nom} ({utilisateur.email})
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default ListeUtilisateurs;
+```
 
 Crée `src/components/ListeUtilisateurs.test.tsx` :
 

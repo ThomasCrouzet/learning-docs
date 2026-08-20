@@ -403,7 +403,7 @@ axes[1, 0].set_xlabel("CA")
 # Graphique 4 : Boite a moustaches (bas droit)
 nord = df[df["Region"] == "Nord"]["CA"]
 sud = df[df["Region"] == "Sud"]["CA"]
-axes[1, 1].boxplot([nord, sud], labels=["Nord", "Sud"],
+axes[1, 1].boxplot([nord, sud], tick_labels=["Nord", "Sud"],
                    patch_artist=True,
                    boxprops=dict(facecolor="#1976D2", alpha=0.5))
 axes[1, 1].set_title("Distribution CA par region")

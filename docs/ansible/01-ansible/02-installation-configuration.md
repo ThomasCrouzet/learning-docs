@@ -29,7 +29,7 @@ cursus: "Ansible"
 | ----------- | ------- |
 | Ansible | 14.x (ansible-core 2.21) |
 | Python | 3.12+ |
-| Ubuntu | 22.04 ou 24.04 LTS |
+| Ubuntu | 24.04 LTS (Python 3.12 par défaut). Ubuntu 22.04 livre Python 3.10 : installer Python 3.12 à part si tu restes sur 22.04 |
 | Multipass | dernière version stable |
 
 ## Objectif de cette fiche
@@ -233,7 +233,9 @@ Python 3.12.3
 
 Le numéro exact peut varier. L'important est d'avoir Python **3.12** ou supérieur (3.**12**, 3.**13**, 3.**14**...).
 
-Si Python n'est pas installé ou si la version est trop ancienne, installe-le :
+Si Python n'est pas installé ou si la version est trop ancienne, installe-le.
+
+Sur **Ubuntu 24.04 LTS**, `python3` est déjà en 3.12 :
 
 ```bash
 # Met à jour la liste des paquets disponibles
@@ -242,6 +244,8 @@ sudo apt update
 # Installe Python 3, pip (gestionnaire de paquets Python) et venv (environnements virtuels)
 sudo apt install -y python3 python3-pip python3-venv
 ```
+
+Sur **Ubuntu 22.04 LTS**, `apt install python3` installe Python **3.10**, trop ancien pour ansible-core 2.21. Installe Python 3.12 (paquet `python3.12` / PPA deadsnakes, ou passe à Ubuntu 24.04), puis crée le venv avec `python3.12 -m venv ~/ansible-env`.
 
 **Sur macOS**, Python 3 est inclus avec les outils en ligne de commande Xcode :
 

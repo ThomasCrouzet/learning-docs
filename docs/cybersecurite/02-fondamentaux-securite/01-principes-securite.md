@@ -320,9 +320,9 @@ La Cyber Kill Chain, développée par Lockheed Martin, décompose une attaque en
 | Obligatoire pour la certification | Complémentaire à ISO 27001 |
 | 93 contrôles dans l'Annexe A | Détaille chacun des 93 contrôles |
 
-#### CIS Controls v8
+#### CIS Controls v8 / v8.1
 
-**Définition** : Les CIS Controls sont une liste de 18 contrôles de sécurité prioritaires, classés par ordre d'importance, publiés par le Center for Internet Security.
+**Définition** : Les CIS Controls sont une liste de 18 contrôles de sécurité prioritaires, classés par ordre d'importance, publiés par le Center for Internet Security. La version actuelle est **v8.1** (même numérotation 1-18 que v8, avec un alignement Governance / CSF).
 
 Les 6 premiers contrôles (les plus critiques) :
 

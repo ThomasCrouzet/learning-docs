@@ -186,10 +186,10 @@ Sans OpenTelemetry, voici les problèmes rencontrés :
 
 | Tempo | Jaeger |
 | --- | --- |
-| Indexe uniquement les Trace IDs | Indexe les attributs des spans |
-| Stockage économique (objet store) | Nécessite Elasticsearch ou Cassandra |
+| Stockage économique (objet store, blocs Parquet) | Nécessite Elasticsearch ou Cassandra pour l'index |
+| Pas d'index inversé de tous les attributs | Indexe les attributs des spans |
+| Recherche par Trace ID et par TraceQL (service, durée, attributs) | Recherche par attributs (service, opération, durée) |
 | Intégré nativement à Grafana | Interface Jaeger UI séparée |
-| Recherche par Trace ID uniquement | Recherche par attributs (service, opération, durée) |
 
 ---
 
@@ -289,10 +289,10 @@ storage:
     wal:
       path: /var/tempo/wal
 
-# Compaction
-compactor:
-  compaction:
-    block_retention: 48h
+# Rétention des blocs (Tempo 3.0 : le composant `compactor` n'existe plus)
+# Un bloc YAML `compactor:` fait échouer le parse : "field compactor not found"
+compaction:
+  block_retention: 48h
 ```
 
 ---

@@ -524,6 +524,7 @@ Utiliser l'instance Axios :
 // screens/PostsScreen.tsx
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, View, FlatList, ActivityIndicator } from "react-native";
+import axios from "axios";
 import api from "../api/client";
 
 type Post = {
@@ -630,6 +631,7 @@ export function useCachedFetch<T>(
   const [isFromCache, setIsFromCache] = useState(false);
 
   const fetchData = async () => {
+    let hasCache = false;
     try {
       setLoading(true);
       setError(null);
@@ -638,8 +640,9 @@ export function useCachedFetch<T>(
       const cached = await AsyncStorage.getItem(cacheKey);
       if (cached) {
         // Afficher les données en cache immédiatement
-        setData(JSON.parse(cached));
+        setData(JSON.parse(cached) as T);
         setIsFromCache(true);
+        hasCache = true;
       }
 
       // Étape 2 : Tenter de charger les données depuis l'API
@@ -652,8 +655,8 @@ export function useCachedFetch<T>(
       setIsFromCache(false);
       await AsyncStorage.setItem(cacheKey, JSON.stringify(freshData));
     } catch (err) {
-      // Si on a des données en cache, on les garde et on affiche un avertissement
-      if (data) {
+      // Ne pas lire `data` du state (fermeture périmée) : utiliser hasCache local
+      if (hasCache) {
         setError("Données hors ligne (dernière synchronisation)");
       } else {
         setError(

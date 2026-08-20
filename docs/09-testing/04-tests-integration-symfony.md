@@ -937,15 +937,15 @@ DATABASE_URL="postgresql://app:app@127.0.0.1:5432/myapp_test"
 
 **Problème** : `self::getContainer()->get(MonService::class)` lève une exception `Service not found`.
 
-**Solution** : En environnement de test, le conteneur est plus restrictif. Vérifie que ton service est bien public dans `config/services_test.yaml` :
+**Solution** : Dans Symfony 7.4, `static::getContainer()` retourne un conteneur de test spécial. Il donne accès aux services publics **et** aux services privés **non supprimés** (ceux encore utilisés par au moins un autre service). Tu n'as pas besoin de les rendre publics pour un service métier injecté comme `ProductService`.
+
+Tu dois déclarer un service comme public dans `config/services_test.yaml` **uniquement** s'il est privé **et** supprimé du conteneur compilé (aucun autre service ne l'utilise) :
 
 ```yaml
 # config/services_test.yaml
+# Uniquement pour un service privé jamais injecté ailleurs (donc retiré du conteneur)
 services:
-    # Rendre les services accessibles dans les tests
-    App\Service\ProductService:
-        public: true
-    App\Repository\ProductRepository:
+    App\Service\ServicePriveInutilise:
         public: true
 ```
 

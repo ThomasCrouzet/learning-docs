@@ -149,7 +149,7 @@ Token de sortie
 | Modèle | Total paramètres | Paramètres actifs | Nombre d'experts | Top-k |
 | ------ | ---------------- | ----------------- | ----------------- | ----- |
 | Mixtral 8x7B | 46.7B | ~12.9B | 8 | 2 |
-| Mixtral 8x22B | 176B | ~44B | 8 | 2 |
+| Mixtral 8x22B | 141B | ~39B | 8 | 2 |
 | GPT-4 (rumeur non confirmée) | chiffres non officiels | non confirmé | non confirmé | non confirmé |
 | DeepSeek-V3 | 671B | ~37B | 256 | 8 |
 

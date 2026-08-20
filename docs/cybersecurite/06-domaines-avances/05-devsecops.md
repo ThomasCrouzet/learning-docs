@@ -175,7 +175,7 @@ cursus: "Phase 6 - Domaines Avancés"
 **Le problème que le SBOM résout** :
 
 1. **Réponse aux vulnérabilités** : quand une nouvelle CVE est publiée (comme Log4Shell), le SBOM permet de savoir en quelques minutes si le logiciel est affecté
-2. **Conformité** : les réglementations (Executive Order US 14028, NIS2 en Europe) exigent des SBOM pour les logiciels vendus aux gouvernements
+2. **Conformité** : L'Executive Order US 14028 a poussé le SBOM côté administrations américaines. En Europe, le Cyber Resilience Act (CRA) impose un SBOM pour les produits numériques concernés ; NIS2 exige une gestion des risques de la chaîne d'approvisionnement, sans imposer à lui seul un format SBOM
 3. **Transparence** : les clients peuvent vérifier les composants utilisés et évaluer les risques
 
 **Formats de SBOM** :

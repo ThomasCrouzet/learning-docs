@@ -75,15 +75,15 @@ Sans standard, chaque API invente son propre format :
 
 Le client doit gérer chaque format différemment.
 
-**Structure RFC 7807** :
+**Structure RFC 9457** (le format actuel, successeur de RFC 7807) :
 
-| Champ | Type | Obligatoire | Description |
-| ----- | ---- | ----------- | ----------- |
-| `type` | string (URI) | Oui | URI identifiant le type d'erreur. Pointe vers une documentation. |
-| `title` | string | Oui | Titre court et lisible par un humain. Ne change pas d'un appel à l'autre. |
-| `status` | integer | Recommandé | Le code de statut HTTP (ex: 422). |
-| `detail` | string | Recommandé | Explication détaillée de cette occurrence spécifique. |
-| `instance` | string (URI) | Optionnel | URI identifiant cette occurrence spécifique (utile pour le support). |
+| Champ | Type | Obligatoire (RFC 9457) | Description |
+| ----- | ---- | ---------------------- | ----------- |
+| `type` | string (URI) | Non (absent = `about:blank`) | URI identifiant le type d'erreur. Pointe vers une documentation. |
+| `title` | string | Non (recommandé) | Titre court et lisible par un humain. Ne change pas d'un appel à l'autre. |
+| `status` | integer | Non (recommandé) | Le code de statut HTTP (ex: 422). |
+| `detail` | string | Non (recommandé) | Explication détaillée de cette occurrence spécifique. |
+| `instance` | string (URI) | Non | URI identifiant cette occurrence spécifique (utile pour le support). |
 
 **Exemple complet** :
 
@@ -852,7 +852,7 @@ $response->headers->set('Content-Type', 'application/problem+json');
 
 ## Checklist de Validation
 
-- [ ] Mes erreurs API suivent le format RFC 7807 (type, title, status, détail)
+- [ ] Mes erreurs API suivent le format RFC 9457 / Problem Details (`type`, `title`, `status`, `detail`)
 - [ ] Le Content-Type des réponses d'erreur est `application/problem+json`
 - [ ] Les erreurs de validation retournent 422 avec un tableau `violations`
 - [ ] Chaque violation contient `field`, `message` et `code`

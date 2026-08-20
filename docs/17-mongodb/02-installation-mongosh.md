@@ -24,7 +24,7 @@ cursus: "MongoDB"
 | Technologie | Version |
 | ----------- | ------- |
 | MongoDB | 8.x |
-| Docker | 24+ |
+| Docker | 24+ (moteur courant : 29.x en 2026) |
 | mongosh | 2.x |
 
 ## Objectif de cette fiche
@@ -158,13 +158,13 @@ Avant de travailler avec MongoDB, vérifie que Docker est installé et fonctionn
 docker --version
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (le numéro exact varie ; Docker Engine 29.x est courant en 2026) :
 
 ```text
-Docker version 24.0.x, build xxxxxxx
+Docker version 29.x.x, build xxxxxxx
 ```
 
-Si tu obtiens une erreur, revois le cursus Docker.
+Toute version **24 ou plus récente** convient. Si tu obtiens une erreur, revois le cursus Docker.
 
 ---
 
@@ -225,7 +225,7 @@ docker exec -it mongo-test mongosh
 ```text
 Current Mongosh Log ID: 661234567890abcdef012345
 Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000
-Using MongoDB:          8.0.x
+Using MongoDB:          8.x.x
 Using Mongosh:          2.x.x
 
 test>

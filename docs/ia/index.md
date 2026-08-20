@@ -141,7 +141,7 @@ Lecture de papers, safety/alignement, frontières de la recherche et contributio
 | fast.ai | Débutant → Intermédiaire | Cours pratiques gratuits |
 | DeepLearning.AI | Tous niveaux | Cours structurés (Coursera) |
 | LeetCode | Tous niveaux | Algorithmes et structures de données |
-| Gymnasium (OpenAI) | Intermédiaire | Environnements RL |
+| Gymnasium (Farama, fork d'OpenAI Gym) | Intermédiaire | Environnements RL |
 | LangChain Academy | Intermédiaire | Agents et RAG |
 | MLflow | Intermédiaire | MLOps et tracking d'expériences |
 

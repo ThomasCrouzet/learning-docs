@@ -442,11 +442,15 @@ Crée un fichier `handler-chain-demo.yml` :
 
   handlers:
     # Handler 1 : valide la configuration avant de redémarrer
+    # command rapporte "changed" à chaque exécution : c'est voulu ici,
+    # pour que notify déclenche le handler suivant (handlers = déjà notifiés).
     - name: Valider la configuration nginx
       ansible.builtin.command:
         cmd: nginx -t
+      register: nginx_test
+      failed_when: nginx_test.rc != 0
+      changed_when: true
       notify: Redémarrer nginx
-      # Si la validation réussit (statut "changed"), le handler suivant est notifié
 
     # Handler 2 : redémarre nginx uniquement si la validation a réussi
     - name: Redémarrer nginx

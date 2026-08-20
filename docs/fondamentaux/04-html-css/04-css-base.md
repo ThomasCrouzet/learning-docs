@@ -194,13 +194,17 @@ border-radius: 5px;       /* Coins arrondis */
 
 **Spécificité des sélecteurs** :
 
-| Sélecteur | Spécificité |
-| --------- | ----------- |
-| `*` | 0 |
-| `element` | 1 |
-| `.classe` | 10 |
-| `#id` | 100 |
-| `style=""` | 1000 |
+La spécificité se compare en **trois colonnes** (ID - CLASSE - TYPE), pas comme un nombre en base 10. Un ID gagne toujours face à n'importe quel nombre de classes.
+
+| Sélecteur | Poids (ID-CLASSE-TYPE) |
+| --------- | ---------------------- |
+| `*` | 0-0-0 (aucun poids) |
+| `element` | 0-0-1 |
+| `.classe`, `[attr]`, `:hover` | 0-1-0 |
+| `#id` | 1-0-0 |
+| `style=""` (inline) | gagne sur les sélecteurs, sauf `!important` |
+
+Exemple : `#titre` (1-0-0) bat `.a .b .c .d` (0-4-0). Le modèle "100 / 10 / 1" est un mémo incorrect dès que tu as 11 classes.
 
 ---
 

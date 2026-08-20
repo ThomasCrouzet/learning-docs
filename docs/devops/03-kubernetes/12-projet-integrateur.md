@@ -29,11 +29,11 @@ cursus: "Kubernetes"
 | Kubernetes  | 1.34+ (supportées août 2026 : 1.34, 1.35, 1.36) |
 | kubectl     | 1.34+   |
 | Minikube    | 1.34+   |
-| Helm        | 3.x     |
+| Helm        | 3.x encore corrigé jusqu'en février 2027 ([EOL Helm 3](https://helm.sh/blog/helm-v3-end-of-life/)) ; Helm 4 est la version courante depuis novembre 2025 |
 | PHP         | 8.3     |
 | Symfony     | 7.4 LTS |
 | PostgreSQL  | 16      |
-| Redis       | 7.x     |
+| Redis       | 8.x     |
 | Nginx       | 1.26    |
 | Node.js     | 22 LTS  |
 
@@ -359,7 +359,7 @@ spec:
     spec:
       containers:
         - name: redis
-          image: redis:7-alpine
+          image: redis:8-alpine
           ports:
             - containerPort: 6379
           # Lance Redis avec un mot de passe et une limite mémoire

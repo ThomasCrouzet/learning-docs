@@ -17,12 +17,12 @@ cursus: "Réseaux"
 ## Prérequis
 
 - Avoir lu la fiche [08 - Services réseau](08-services-reseau.md)
-- Connaitre les bases de TCP/IP (adresses IP, adresses MAC)
+- Connaître les bases de TCP/IP (adresses IP, adresses MAC)
 - Comprendre les notions de chiffrement (clé, algorithme)
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le fonctionnement du Wi-Fi, choisir le bon protocole de sécurité, analyser les canaux et les fréquences disponibles, et configurer un réseau sans fil sécurisé.
+À la fin de cette fiche, tu sauras expliquer le fonctionnement du Wi-Fi, choisir le bon protocole de sécurité, analyser les canaux et les fréquences disponibles, et configurer un réseau sans fil sécurisé.
 
 ---
 
@@ -140,7 +140,7 @@ Sans chiffrement Wi-Fi, voici les problèmes rencontres :
 | WEP | RC4 (64 ou 128 bits) | 1999 | Casse en quelques minutes - ne jamais utiliser |
 | WPA | TKIP (RC4 ameliore) | 2003 | Vulnérable - ne plus utiliser |
 | WPA2 | AES-CCMP (128 bits) | 2004 | Sécurisé avec un mot de passe fort |
-| WPA3 | AES-GCMP (128 ou 256 bits) | 2018 | Plus sécurisé, protection contre les attaques par dictionnaire |
+| WPA3 | SAE + AES-CCMP-128 (minimum) ; GCMP-256 en WPA3-Enterprise 192-bit | 2018 | Plus sécurisé, protection contre les attaques par dictionnaire hors-ligne |
 
 **Comparaison WPA2 vs WPA3** :
 
@@ -381,7 +381,7 @@ sudo systemctl status hostapd
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Canal Wi-Fi sature
 
@@ -447,7 +447,7 @@ Securite recommandee (du meilleur au pire) :
 
 ## Exercice Pratique
 
-**Enonce** : Realise un audit de sécurité du réseau Wi-Fi de ton environnement. Tu dois :
+**Énoncé** : Réalise un audit de sécurité du réseau Wi-Fi de ton environnement. Tu dois :
 
 1. Scanner tous les réseaux Wi-Fi a portée
 2. Pour chaque réseau, noter : SSID, canal, fréquence, signal, protocole de sécurité

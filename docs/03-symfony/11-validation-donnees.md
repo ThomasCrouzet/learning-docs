@@ -119,7 +119,7 @@ Voici les contraintes que tu utiliseras le plus souvent :
 
 | Contrainte | Vérifie que... | Valeurs rejetées |
 | ---------- | -------------- | ---------------- |
-| `#[Assert\NotBlank]` | La valeur n'est pas vide | `null`, `""`, `"  "` (espaces seuls) |
+| `#[Assert\NotBlank]` | La valeur n'est pas vide | `null`, `""`, `[]`. Les espaces seuls (`"  "`) restent valides sauf avec `normalizer: 'trim'` |
 | `#[Assert\NotNull]` | La valeur n'est pas null | `null` uniquement |
 
 **Contraintes de texte** :
@@ -729,17 +729,21 @@ $errors = $validator->validate($article, null, ['Default', 'create']);
 | Contrainte | Accepte `null` | Accepte `""` | Accepte `"  "` |
 | ---------- | -------------- | ------------ | --------------- |
 | `NotNull` | Non | Oui | Oui |
-| `NotBlank` | Non | Non | Non |
+| `NotBlank` | Non | Non | Oui (sauf `normalizer: 'trim'`) |
 
-**Solution** : Utilise `NotBlank` pour les champs texte de formulaire. `NotBlank` est plus strict : il rejette `null`, les chaînes vides et les chaînes contenant uniquement des espaces.
+**Solution** : Utilise `NotBlank` pour les champs texte de formulaire. Par défaut, `NotBlank` rejette `null` et `""`, mais **accepte** une chaîne d'espaces (`"  "`). Pour traiter les espaces seuls comme vides, ajoute `normalizer: 'trim'`.
 
 ```php
 // ❌ Accepte une chaîne vide ""
 #[Assert\NotNull]
 private ?string $title = null;
 
-// ✅ Rejette null, "" et "   "
+// ✅ Rejette null et ""
 #[Assert\NotBlank]
+private ?string $title = null;
+
+// ✅ Rejette aussi les espaces seuls après trim
+#[Assert\NotBlank(normalizer: 'trim')]
 private ?string $title = null;
 ```
 

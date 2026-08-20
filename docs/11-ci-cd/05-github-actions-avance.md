@@ -176,7 +176,7 @@ jobs:
           - ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
@@ -198,7 +198,7 @@ jobs:
 
 ```text
 Le workflow crée 2 jobs :
-- PHP 8.3 - ubuntu-latest
+- PHP 8.2 - ubuntu-latest
 - PHP 8.3 - ubuntu-latest
 
 Chaque job exécute les mêmes étapes avec sa version de PHP.
@@ -234,7 +234,7 @@ jobs:
           - "highest"
         # Exclure certaines combinaisons
         exclude:
-          # Ne pas tester PHP 8.3 avec les dépendances les plus basses
+          # Ne pas tester PHP 8.2 avec les dépendances les plus basses
           - php: "8.2"
             dependency: "lowest"
         # Ajouter des combinaisons spécifiques
@@ -249,7 +249,7 @@ jobs:
     continue-on-error: ${{ matrix.experimental || false }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
@@ -273,13 +273,13 @@ jobs:
 
 ```text
 Jobs créés :
-1. PHP 8.3 / highest
+1. PHP 8.2 / highest
 2. PHP 8.3 / lowest
 3. PHP 8.3 / highest
 4. PHP 8.4 / highest (expérimental, peut échouer)
 
 Jobs exclus :
-- PHP 8.3 / lowest (exclu par la règle exclude)
+- PHP 8.2 / lowest (exclu par la règle exclude)
 ```
 
 ---
@@ -323,7 +323,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       # Les secrets sont accessibles via ${{ secrets.NOM }}
       - name: Configurer la base de données
@@ -394,7 +394,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - run: echo "Tests passés"
 
   deploy-staging:
@@ -408,7 +408,7 @@ jobs:
       url: https://staging.mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Déployer sur staging
         run: |
           echo "Déploiement sur staging..."
@@ -426,7 +426,7 @@ jobs:
       url: https://mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Déployer en production
         run: |
           echo "Déploiement en production..."
@@ -467,7 +467,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       # S'exécute uniquement sur la branche main
       - name: Build production
@@ -542,7 +542,7 @@ jobs:
     name: Tests PHP ${{ inputs.php-version }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -604,7 +604,7 @@ jobs:
 
 ```text
 Le workflow CI crée 2 jobs :
-- test-83 : exécute les tests sur PHP 8.3 sans couverture
+- test-82 : exécute les tests sur PHP 8.2 sans couverture
 - test-83 : exécute les tests sur PHP 8.3 avec couverture
 Les deux jobs utilisent le même workflow réutilisable.
 ```
@@ -634,7 +634,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Déployer
         run: echo "Déploiement de ${{ github.sha }}"
 ```
@@ -814,11 +814,11 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
-          - "8.2"
           - "8.3"
+          - "8.4"
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@v2
@@ -850,7 +850,7 @@ jobs:
       url: https://staging.mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Déployer sur staging
         run: echo "Déploiement sur staging réussi"
         env:
@@ -870,7 +870,7 @@ jobs:
       url: https://mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Déployer en production
         run: echo "Déploiement en production réussi"
         env:

@@ -3,16 +3,16 @@ tags:
   - Virtualisation
   - Intermédiaire
   - Pratique
-description: "Réseau virtualise : bridges, NAT, VLANs dans les VMs, Open vSwitch bases."
+description: "Réseau virtualisé : bridges, NAT, VLANs dans les VMs, Open vSwitch bases."
 estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "Virtualisation"
 ---
 
-# 05 - Réseau virtualise
+# 05 - Réseau virtualisé
 
-> **En bref** : Tu apprendras a configurer les réseaux virtuels pour tes VMs, créer des bridges, configurer le NAT et les VLANs, et découvrir Open vSwitch pour des architectures réseau avancées. Lecture estimée : 75 min.
+> **En bref** : Tu apprendras à configurer les réseaux virtuels pour tes VMs, créer des bridges, configurer le NAT et les VLANs, et découvrir Open vSwitch pour des architectures réseau avancées. Lecture estimée : 75 min.
 
 ## Prérequis
 
@@ -230,7 +230,7 @@ virt-install \
   --os-variant debian12 \
   --network bridge=br0,model=virtio \
   --graphics vnc \
-  --cdrom /var/lib/libvirt/images/iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom /var/lib/libvirt/images/iso/debian-12.15.0-amd64-netinst.iso \
   --boot cdrom
 ```
 

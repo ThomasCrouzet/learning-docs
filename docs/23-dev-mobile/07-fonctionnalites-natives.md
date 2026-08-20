@@ -514,8 +514,9 @@ import Constants from "expo-constants";
 // Configurer le comportement des notifications quand l'app est au premier plan
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    // Afficher la notification même si l'app est ouverte
-    shouldShowAlert: true,
+    // SDK 53+ : shouldShowAlert est remplacé par bannière + liste
+    shouldShowBanner: true,
+    shouldShowList: true,
     // Jouer un son
     shouldPlaySound: true,
     // Afficher le badge sur l'icône
@@ -540,13 +541,9 @@ export default function NotificationsScreen() {
         setLastNotification(notification);
       });
 
-    // Nettoyage au démontage
+    // Nettoyage au démontage (SDK actuel : EventSubscription.remove())
     return () => {
-      if (notificationListener.current) {
-        Notifications.removeNotificationSubscription(
-          notificationListener.current
-        );
-      }
+      notificationListener.current?.remove();
     };
   }, []);
 
@@ -844,11 +841,11 @@ function MyComponent() {
 
 ## Pièges fréquents
 
-### Piège 1 : Tester les notifications sur le simulateur
+### Piège 1 : Tester les notifications push dans Expo Go
 
-**Problème** : Les notifications push (distantes) ne fonctionnent pas sur le simulateur iOS ou l'émulateur Android. Le token push ne peut pas être obtenu.
+**Problème** : Les notifications push distantes ne sont plus disponibles dans Expo Go sur Android depuis le SDK 53 (un _development build_ est requis). Sur simulateur iOS / émulateur Android sans Play Services, le token push n'est pas obtenu non plus.
 
-**Solution** : Utilise un appareil physique avec Expo Go pour tester les notifications push. Les notifications locales fonctionnent sur le simulateur.
+**Solution** : Pour les push distants, utilise un _development build_ (ou un appareil physique avec les credentials FCM/APNs). Les notifications **locales** (`scheduleNotificationAsync`) fonctionnent dans Expo Go et sur simulateur.
 
 ### Piège 2 : Oublier de gérer le refus de permission
 

@@ -235,7 +235,7 @@ L'ancrage au prix d'achat empêche cette analyse objective.
 
 | Terme | Signification | Ce qu'il révèle |
 | --- | --- | --- |
-| HODL | "Hold On for Dear Life" - garder ses crypto sans vendre, quoi qu'il arrive | Encourage à ne jamais vendre, même quand les fondamentaux changent |
+| HODL | À l'origine une faute de frappe de "HOLD" (Bitcointalk, décembre 2013) ; le rétro-acronyme "Hold On for Dear Life" est venu ensuite. Signifie garder ses crypto sans vendre | Encourage à ne jamais vendre, même quand les fondamentaux changent |
 | WAGMI | "We're All Gonna Make It" - "on va tous réussir" | Optimisme de groupe, crée un faux sentiment de certitude |
 | NGMI | "Not Gonna Make It" - moquerie envers ceux qui doutent ou vendent | Pression sociale pour décourager la prudence |
 | Diamond hands | Garder ses positions malgré une forte baisse | Présente la prise de risque extrême comme une vertu |

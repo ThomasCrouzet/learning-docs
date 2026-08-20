@@ -84,11 +84,16 @@ Pseudonyme = on PEUT faire le lien, il suffit d'un seul point de fuite.
 
 ```text
 Problème de la confidentialité optionnelle (Zcash) :
-- La plupart des utilisateurs n'activent pas le mode prive
-  (vu en fiche 03 : ~15-25% des transactions Zcash sont blindées)
-- Les rares transactions privées ressortent comme inhabituelles
-- Le faible volume de transactions privées réduit la taille de
-  "l'ensemble d'anonymat" (le groupe dans lequel se cachér)
+- La confidentialité n'est pas obligatoire : l'utilisateur choisit
+  une transaction transparente ou blindée
+- Pendant des années, seule une minorité des transactions était
+  vraiment blindée (ordre de grandeur souvent cité : 15-25 % avant 2025)
+- En 2025-2026 la part a fortement augmenté selon les tableaux de bord
+  (offre en pool blindé autour de 30 %, part de transactions variable
+  selon la métrique : pool impliqué vs entièrement blindé)
+- Tant que des transactions restent transparentes, les flux privés
+  peuvent encore se distinguer, et l'ensemble d'anonymat reste plus
+  petit que si tout le réseau était privé par défaut
 
 Avantage de la confidentialité par défaut (Monero) :
 - TOUTES les transactions sont privées, donc se ressembler est la norme
@@ -259,7 +264,7 @@ Ensemble, ces quatre techniques rendent une transaction Monero opaque par défau
 | --- | --- | --- | --- |
 | Confidentialité | Aucune (tout public) | Optionnelle (au choix) | Par défaut (toujours) |
 | Technologie principale | Aucune (transparence) | ZK-SNARKs | Ring signatures + RingCT + stealth addresses |
-| Trusted setup requis | Non | Oui (pour les transactions blindées) | Non |
+| Trusted setup requis | Non | Sprout/Sapling (Groth16) : oui ; Orchard (Halo 2, NU5 2022) : non | Non |
 | Montants visibles | Oui | Non (si blindé) | Non |
 | Auditabilité de la supply totale | Triviale (tout public) | Vérifiable cryptographiquement | Vérifiable cryptographiquement (RingCT) |
 | Maturité de la confidentialité | Sans objet | Depuis 2016 | Depuis 2014, renforcée en continu |
@@ -305,8 +310,8 @@ elles répondent a des besoins et des contraintes différents.
 Plusieurs plateformes d'échange ont retire Monero, principalement
 sous la pression réglementaire dans certaines juridictions :
 
-- Binance a annonce le delistage de Monero (XMR) en février 2024,
-  effectif courant 2024
+- Binance a annoncé le délistage de Monero (XMR) le 6 février 2024,
+  effectif le 20 février 2024 (cessation de trading de toutes les paires XMR)
 - Kraken a retire Monero pour les utilisateurs de certaines zones
   (par exemple l'Espace économique europeen, la Belgique, l'Irlande)
 - D'autres plateformes (OKX, Huobi selon les regions) ont pris des

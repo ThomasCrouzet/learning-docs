@@ -315,8 +315,9 @@ Compile et déploie :
 # Compiler le programme pour Bela
 faust2bela effet-bela.dsp
 
-# Déployer sur une carte Bela connectée en USB
-faust2bela effet-bela.dsp -b 192.168.7.2
+# Envoyer le C++ généré sur la carte Bela et l'exécuter
+# (option officielle : -tobela, pas une adresse IP)
+faust2bela -tobela effet-bela.dsp
 ```
 
 **Résultat attendu** :
@@ -479,7 +480,7 @@ faust -single -scal -tg 1024 reverb-esp32.dsp -o reverb-esp32.cpp
 | Commande | Action |
 | -------- | ------ |
 | `faust2bela effet.dsp` | Compiler pour Bela |
-| `faust2bela -b 192.168.7.2 effet.dsp` | Compiler et déployer sur Bela |
+| `faust2bela -tobela effet.dsp` | Envoyer le C++ sur la carte Bela et l'exécuter |
 | `faust2jack effet.dsp` | Compiler pour JACK (Raspberry Pi ou desktop) |
 | `faust2alsa effet.dsp` | Compiler pour ALSA (Linux sans JACK) |
 | `faust2esp32 -lib effet.dsp` | Générer un projet ESP-IDF |

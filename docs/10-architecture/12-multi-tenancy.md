@@ -400,7 +400,9 @@ class CurrentTenantProvider
         }
 
         // Le slug est extrait des attributs de la route
-        // Exemple : route '/{tenant_slug}/documents' => $tenant_slug
+        // Exemple pedagogique : route '/{tenant_slug}/documents'
+        // En production, ne pas faire confiance a un parametre d'URL seul :
+        // lier le tenant a la session, au sous-domaine ou a un token (voir Piege 2)
         $slug = $request->attributes->get('tenant_slug');
 
         if ($slug === null) {

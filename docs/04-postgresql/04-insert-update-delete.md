@@ -184,9 +184,9 @@ RETURNING id;
 | Supprime toutes les lignes d'un coup | Supprime ligne par ligne |
 | Pas de clause WHERE possible | Peut filtrer avec WHERE |
 | Très rapide (même sur des millions de lignes) | Lent sur de grandes tables |
-| Réinitialise les compteurs auto-incrément | Ne réinitialise pas les compteurs |
-| Ne déclenche pas les triggers DELETE | Déclenche les triggers DELETE |
-| Non annulable (hors transaction) | Non annulable (hors transaction) |
+| Ne réinitialise les séquences que avec `RESTART IDENTITY` (`CONTINUE IDENTITY` est le défaut PostgreSQL) | Ne réinitialise pas les compteurs |
+| Ne déclenche pas les triggers DELETE (déclenche `ON TRUNCATE`) | Déclenche les triggers DELETE |
+| Annulable **dans** une transaction (auto-commit hors transaction) | Annulable **dans** une transaction (auto-commit hors transaction) |
 
 **Quand utiliser TRUNCATE** : Pour vider complètement une table (par exemple, réinitialiser des données de test).
 
@@ -248,8 +248,10 @@ docker compose exec database psql -U symfony_user -d symfony_db
 psql (16.x)
 Type "help" for help.
 
-app=#
+symfony_db=#
 ```
+
+Le prompt affiche le nom de la base passée à `-d` (`symfony_db`). Le caractère `#` apparaît parce que `POSTGRES_USER` (ici `symfony_user`) est le superutilisateur créé par l'image PostgreSQL. Un rôle non superutilisateur afficherait `=>` à la place.
 
 ---
 

@@ -164,7 +164,7 @@ Nouvelle mesure : "weight units" (WU)
 
 **Pourquoi SegWit est important** : au-delà de l'augmentation de capacité, SegWit a corrigé le bug de malléabilité. Cette correction était un prérequis technique indispensable pour construire le Lightning Network, la couche 2 de Bitcoin qui permet des transactions quasi instantanées et bon marché.
 
-**Adoption** : en 2025-2026, environ 80% des transactions Bitcoin utilisent SegWit. Les adresses bc1q... sont devenues le format standard.
+**Adoption** : en 2025-2026, environ 85-90% des transactions Bitcoin dépensent au moins une entrée SegWit. Les adresses bc1q... sont devenues le format standard.
 
 ---
 

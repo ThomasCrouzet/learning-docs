@@ -446,7 +446,7 @@ print("-" * 38)
 for bits in bit_depths:
     # Nombre de niveaux = 2 élevé à la puissance bits
     niveaux = 2 ** bits
-    # SNR théorique pour un signal PCM entier
+    # SNR théorique pour un signal PCM entier (pas pour le 32-bit float)
     snr = 6.02 * bits + 1.76
     print(f"{bits:>6} | {niveaux:>14,} | {snr:>10.2f}")
 ```

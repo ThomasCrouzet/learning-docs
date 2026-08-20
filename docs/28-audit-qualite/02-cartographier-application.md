@@ -189,7 +189,7 @@ Alternative côté Symfony (plus structurée, mais nécessite que l'application 
 php bin/console debug:router
 ```
 
-Cette commande affiche un tableau avec nom de route, méthode HTTP, schéma et chemin. Elle a l'avantage de couvrir les routes générées par les bundles (EasyAdmin, FOSUserBundle), invisibles dans un simple `grep`.
+Cette commande affiche un tableau avec nom de route, méthode HTTP, schéma et chemin. Elle a l'avantage de couvrir les routes générées par les bundles (EasyAdmin, API Platform), invisibles dans un simple `grep`. **FOSUserBundle** n'est plus maintenu et n'est pas un bundle Symfony 7 : ne l'attends pas sur un projet récent.
 
 **Résultat attendu** :
 
@@ -250,7 +250,7 @@ Pour chaque route, une mention :
 Pour chaque route, lis le corps de la méthode et identifie les entités lues ou écrites. Trois indices te servent :
 
 - Paramètres injectés dans le constructeur du contrôleur (`UserRepository`, `EntityManagerInterface`)
-- Arguments typés directement sur la méthode (`Order $order` : déclenche un ParamConverter)
+- Arguments typés directement sur la méthode (`Order $order` : résolution d'entité, `MapEntity` depuis Symfony 6.2, anciennement ParamConverter)
 - Appels explicites dans le corps (`$this->em->find(User::class, $id)`, `$repository->findOneBy(...)`)
 
 Exemple à lire pour deviner les entités :
@@ -391,7 +391,7 @@ Pour chaque route critique, 1 a 3 invariants ecrits sous forme :
 
 ### Piège 3 : Oublier les routes héritées d'un bundle
 
-⚠️ **Problème** : Tu listes uniquement ce que tu trouves dans `src/`, mais EasyAdmin, FOSUserBundle ou un bundle d'API génèrent des routes invisibles. Ton audit passe à côté du back-office complet.
+⚠️ **Problème** : Tu listes uniquement ce que tu trouves dans `src/`, mais EasyAdmin, API Platform ou un autre bundle génèrent des routes invisibles. Ton audit passe à côté du back-office complet.
 
 ✅ **Solution** : Toujours croiser `grep` et `php bin/console debug:router`. Le routeur Symfony connaît toutes les routes, y compris celles définies par les bundles tiers.
 

@@ -63,10 +63,10 @@ Des le départ, Brian Armstrong a fait un pari : être l'exchange le plus régul
 | ------- | ----------- | ------------ |
 | Coinbase (exchange) | Achat/vente de crypto-monnaies avec interface simplifiée | Grand public |
 | Coinbase Advanced | Interface de trading avec orderbook, graphiques, ordres limites | Traders actifs |
-| Coinbase Wallet | Wallet non-custodial (l'utilisateur contrôle ses clés) | Utilisateurs défi |
+| Coinbase Wallet | Wallet non-custodial (l'utilisateur contrôle ses clés) | Utilisateurs DeFi |
 | Coinbase Prime | Plateforme de trading et de custody pour les institutions | Fonds d'investissement, entreprises |
-| Base | Layer 2 Ethereum (rollup optimistic, base sur OP Stack) | Développeurs, utilisateurs défi |
-| USDC | Stablecoin co-émis avec Circle (via le Centre Consortium) | Tout l'écosystème |
+| Base | Layer 2 Ethereum (rollup optimistic, basé sur OP Stack) | Développeurs, utilisateurs DeFi |
+| USDC | Stablecoin lancé avec Circle via le Centre Consortium (2018) ; depuis août 2023, Circle est l'émetteur unique, Coinbase reste partenaire commercial | Tout l'écosystème |
 | Coinbase Earn | Programme educatif : regarder des videos, répondre a des quiz, gagner de la crypto | Débutants |
 
 **Base - le Layer 2 de Coinbase** :
@@ -138,7 +138,7 @@ Coinbase a toujours cherche a se conformer aux lois. En 2021, Coinbase a même s
 **État de la procédure** :
 
 - Pendant l'instruction, le juge Katherine Polk Failla (district sud de New York) avait refuse de rejeter la majorité des accusations de la SEC, tout en acceptant certains arguments de Coinbase.
-- La SEC a finalement abandonne son action contre Coinbase le 27 février 2025 (abandon avec preuves : l'affaire ne peut pas être rouverte sur les mêmes faits).
+- La SEC a finalement abandonné son action contre Coinbase le 27 février 2025 (stipulation de rejet définitif : l'affaire ne peut pas être rouverte sur les mêmes faits).
 - Cet abandon s'inscrit dans un revirement plus large de la SEC en 2025, qui a clos ou règle plusieurs dossiers crypto majeurs (Kraken, Ripple, Consensys).
 
 L'affaire n'a donc pas tranche la question de fond : le cadre réglementaire des crypto-monnaies aux États-Unis reste a définir par la loi plutôt que par ce contentieux.
@@ -151,7 +151,7 @@ L'affaire n'a donc pas tranche la question de fond : le cadre réglementaire des
 
 - **Accessibilite** : Coinbase a rendu l'achat de crypto-monnaies aussi simple qu'un achat en ligne. Pour des millions de personnes, Coinbase est la porte d'entrée dans l'écosystème.
 - **Legitimite institutionnelle** : l'introduction en bourse a donne une légitimité à l'industrie crypto auprès des investisseurs traditionnels.
-- **USDC** : la co-création d'USDC a fourni une alternative transparente a Tether (USDT).
+- **USDC** : la co-création d'USDC (Centre Consortium, 2018) a fourni une alternative transparente à Tether (USDT) ; depuis août 2023, Circle est l'émetteur unique.
 - **Base** : un Layer 2 Ethereum sans token spéculatif, focalise sur l'usage.
 - **Education** : Coinbase Earn a introduit des millions de personnes aux concepts crypto (même si c'est aussi un outil marketing).
 

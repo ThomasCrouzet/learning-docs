@@ -189,7 +189,7 @@ test:functional:
 # Analyse de sécurité
 security:sast:
   stage: security
-  image: returntocorp/semgrep
+  image: semgrep/semgrep
   script:
     - semgrep --config=auto --error src/
   allow_failure: true
@@ -300,7 +300,7 @@ jobs:
           coverage: xdebug
 
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: build
 
@@ -450,10 +450,13 @@ CMD ["php-fpm"]
         </testsuite>
     </testsuites>
 
-    <coverage>
+    <source>
         <include>
             <directory suffix=".php">src</directory>
         </include>
+    </source>
+
+    <coverage>
         <report>
             <clover outputFile="coverage.xml"/>
             <text outputFile="php://stdout"/>
@@ -571,7 +574,7 @@ notify:failure:
 
 | Commande | Action |
 | -------- | ------ |
-| `gitlab-runner exec docker job_name` | Tester un job GitLab CI localement |
+| `gitlab-ci-local` | Tester un job GitLab CI localement (`gitlab-runner exec` a été retiré dans GitLab Runner 16) |
 | `act` | Tester GitHub Actions localement |
 | `docker build -t app:test .` | Builder l'image Docker |
 | `docker compose up -d` | Démarrer les services |

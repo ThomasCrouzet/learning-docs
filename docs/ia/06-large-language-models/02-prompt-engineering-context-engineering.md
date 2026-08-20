@@ -623,7 +623,8 @@ import tiktoken
 from openai import OpenAI
 
 client = OpenAI()
-enc = tiktoken.get_encoding("cl100k_base")
+# o200k_base : tokenizer de gpt-4o / gpt-4o-mini (pas cl100k_base, réservé à gpt-4 / gpt-3.5)
+enc = tiktoken.get_encoding("o200k_base")
 
 def count_tokens(messages: list) -> int:
     """Compte le nombre total de tokens dans une liste de messages."""

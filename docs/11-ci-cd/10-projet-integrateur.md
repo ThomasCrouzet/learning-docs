@@ -23,7 +23,7 @@ cursus: "CI/CD Pipelines"
 
 ## Objectif de cette fiche
 
-À la fin de cette fiche, tu auras créé un pipeline CI/CD complet avec : lint et analyse statique du code PHP et JavaScript, tests unitaires backend (PHPUnit) et frontend (Jest), build d'images Docker backend et frontend, déploiement multi-environnement (staging puis production), stratégie de déploiement blue-green, et exécution locale avec `act`.
+À la fin de cette fiche, tu auras créé un pipeline CI/CD complet avec : lint et analyse statique du code PHP et JavaScript, tests unitaires backend (PHPUnit) et frontend (Vitest), build d'images Docker backend et frontend, déploiement multi-environnement (staging puis production), stratégie de déploiement blue-green, et exécution locale avec `act`.
 
 ---
 
@@ -42,7 +42,7 @@ Cette section explique les concepts spécifiques au projet intégrateur. Les con
 Un pipeline CI/CD complet pour un projet Symfony + React qui automatise :
 
 1. **Lint et analyse statique** : PHP CS Fixer pour le backend, ESLint pour le frontend (fiches 03 et 04)
-2. **Tests automatisés** : PHPUnit pour le backend, Jest pour le frontend (fiche 03)
+2. **Tests automatisés** : PHPUnit pour le backend, Vitest pour le frontend (fiche 03)
 3. **Build Docker** : images Docker pour le backend et le frontend (fiche 04)
 4. **Déploiement multi-environnement** : staging puis production avec approbation (fiche 05)
 5. **Stratégie blue-green** : basculement sans downtime (fiche 09)
@@ -607,10 +607,10 @@ jobs:
         run: npm run lint
 
   # ──────────────────────────────────────
-  # Frontend : Tests Jest
+  # Frontend : Tests Vitest
   # ──────────────────────────────────────
   test-frontend:
-    name: Tests Frontend (Jest)
+    name: Tests Frontend (Vitest)
     runs-on: ubuntu-latest
     needs: lint-frontend
     defaults:
@@ -689,7 +689,7 @@ Le pipeline CI exécute 5 jobs :
 1. lint-backend → vérifie le formatage PHP
 2. lint-frontend → vérifie le formatage JavaScript
 3. test-backend → exécute les tests PHPUnit (attend lint-backend)
-4. test-frontend → exécute les tests Jest (attend lint-frontend)
+4. test-frontend → exécute les tests Vitest (attend lint-frontend)
 5. build → construit les images Docker (attend test-backend ET test-frontend)
 
 Sur une PR : les images ne sont pas poussées (push: false)
@@ -1149,7 +1149,7 @@ Stage  Job ID          Job name                  Workflow name  Workflow file  E
 0      lint-backend    Lint Backend (PHP)        CI             ci.yml         push
 0      lint-frontend   Lint Frontend (ESLint)    CI             ci.yml         push
 1      test-backend    Tests Backend (PHPUnit)   CI             ci.yml         push
-1      test-frontend   Tests Frontend (Jest)     CI             ci.yml         push
+1      test-frontend   Tests Frontend (Vitest)   CI             ci.yml         push
 2      build           Build Docker Images       CI             ci.yml         push
 ```
 
@@ -1175,8 +1175,8 @@ frontend/node_modules/
 .secrets
 .env.local
 
-# Build
-frontend/build/
+# Build (Vite écrit dans dist/, pas build/)
+frontend/dist/
 
 # IDE
 .idea/
@@ -1226,8 +1226,8 @@ find . -type f -not -path './.git/*' | sort
 ./frontend/Dockerfile
 ./frontend/nginx.conf
 ./frontend/package.json
-./frontend/src/App.js
-./frontend/tests/App.test.js
+./frontend/src/App.tsx
+./frontend/src/App.test.tsx
 ./nginx-prod.conf
 ```
 
@@ -1450,7 +1450,7 @@ Job `lighthouse` (simulé) à ajouter dans `.github/workflows/ci.yml` :
         run: |
           # Vérifie que le build ne dépasse pas 5 Mo
           MAX_SIZE_KB=5120
-          BUILD_SIZE_KB=$(du -sk build/ | cut -f1)
+          BUILD_SIZE_KB=$(du -sk dist/ | cut -f1)
 
           echo "Taille du build : ${BUILD_SIZE_KB} Ko"
           echo "Taille maximale : ${MAX_SIZE_KB} Ko"
@@ -1511,10 +1511,10 @@ services:
       - ./frontend:/app
       - frontend-node-modules:/app/node_modules
     ports:
-      - "3000:3000"
+      - "5173:5173"
     environment:
       NODE_ENV: development
-    command: sh -c "npm install && npm start"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
 
   # Base de données PostgreSQL
   database:
@@ -1540,7 +1540,7 @@ volumes:
 docker compose up -d
 
 # Backend accessible sur http://localhost:8000
-# Frontend accessible sur http://localhost:3000
+# Frontend accessible sur http://localhost:5173
 # PostgreSQL accessible sur localhost:5432
 ```
 

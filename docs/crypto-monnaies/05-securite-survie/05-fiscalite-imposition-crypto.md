@@ -219,8 +219,8 @@ Exemples de comptes qui n'ont PAS besoin d'être déclarés au 3916-bis
 
 | Infraction | Sanction |
 | ---------- | -------- |
-| Non-déclaration d'un compte à l'étranger | 750 euros par compte et par année (1 500 euros si dans un État non coopératif) |
-| Non-déclaration d'un compte d'actifs numériques à l'étranger (3916-bis) | 750 euros par compte et par année (1 500 euros si le montant des avoirs dépasse 50 000 euros) - barème spécifique aux comptes d'actifs numériques, distinct des comptes bancaires |
+| Non-déclaration d'un compte bancaire à l'étranger (formulaire 3916, CGI art. 1649 A) | 1 500 euros par compte et par année (10 000 euros si le compte est dans un État ou territoire non coopératif) |
+| Non-déclaration d'un compte d'actifs numériques à l'étranger (formulaire 3916-bis, CGI art. 1649 bis C et 1736 X) | 750 euros par portefeuille non déclaré, ou 125 euros par omission ou inexactitude, dans la limite de 10 000 euros par déclaration. Les montants de 750 euros et 125 euros sont portés à 1 500 euros et 250 euros si la valeur des crypto-actifs dépasse 50 000 euros à un moment de l'année. Barème distinct des comptes bancaires |
 | Non-déclaration de plus-values | Redressement fiscal + majorations de 10% à 80% selon la situation + intérêts de retard |
 
 ---
@@ -229,11 +229,11 @@ Exemples de comptes qui n'ont PAS besoin d'être déclarés au 3916-bis
 
 **Définition** : Le minage de crypto-monnaies est considéré comme une activité de production en France. Les revenus du minage sont imposés différemment des plus-values.
 
-**Regime fiscal du minage** :
+**Régime fiscal du minage** :
 
 | Critère | Détail |
 | ------- | ------ |
-| Catégorie fiscale | BNC (Benefices Non Commerciaux) |
+| Catégorie fiscale | BNC (Bénéfices Non Commerciaux) |
 | Fait générateur | La réception des crypto-monnaies minées (pas leur vente) |
 | Base imposable | Valeur en euros des crypto-monnaies au moment de leur réception |
 | Régime | Micro-BNC si recettes annuelles inférieures à 83 600 euros HT (seuil 2026, abattement de 34%), ou régime réel |
@@ -246,7 +246,7 @@ Le cours du Bitcoin le 15 mars est de 50 000 euros.
 
 Revenu a déclarer = 0,01 x 50 000 = 500 euros
 
-Ce montant est impose comme un BNC, en plus de tes autres revenus.
+Ce montant est imposé comme un BNC, en plus de tes autres revenus.
 Si tu vends ensuite ce Bitcoin avec une plus-value,
 cette plus-value supplémentaire est également imposable.
 ```
@@ -259,10 +259,10 @@ cette plus-value supplémentaire est également imposable.
 
 **État des lieux** :
 
-| Situation | Regime fiscal probable | Niveau de certitude |
+| Situation | Régime fiscal probable | Niveau de certitude |
 | --------- | ---------------------- | ------------------- |
 | Staking | BNC (comme le minage), selon `impots.gouv.fr` (FAQ 17/07/2026) | Élevé - texte officiel, pas une exonération |
-| Airdrops | BNC au moment de la reception | Incertain - pas de texte spécifique |
+| Airdrops | BNC au moment de la réception | Incertain - pas de texte spécifique |
 | Rewards de défi (yield farming) | BNC ou plus-values selon le mécanisme | Très incertain |
 
 **Recommandation** : En l'absence de règles claires, la prudence consiste à :
@@ -305,7 +305,7 @@ cette plus-value supplémentaire est également imposable.
 | Échange crypto-crypto (sans soulte) | Sursis d'imposition (pas d'imposition immédiate) |
 | Taux d'imposition | 31,4% (flat tax) ou barème progressif sur option |
 | Formulaire plus-values | 2086 |
-| Formulaire comptes etrangers | 3916-bis |
+| Formulaire comptes étrangers | 3916-bis |
 | Minage | BNC (bénéfices non commerciaux) |
 | Moins-values | Compensables avec les plus-values de la même année. Non reportables |
 | Seuil d'exonération | 305 € de prix de cession totaux par an (art. 150 VH bis) : en dessous, plus-values exonérées ; au-delà, totalité imposable |
@@ -319,7 +319,7 @@ cette plus-value supplémentaire est également imposable.
 - [ ] Je connais le taux de la flat tax (31,4% = 12,8% IR + 18,6% prélèvements sociaux depuis le 1er janvier 2026)
 - [ ] Je sais calculer une plus-value avec la formule officielle (prix de cession - prix d'acquisition x proportion cédée)
 - [ ] Je sais quand le barème progressif est plus avantageux que la flat tax
-- [ ] Je connais le formulaire 2086 (plus-values) et le formulaire 3916-bis (comptes etrangers)
+- [ ] Je connais le formulaire 2086 (plus-values) et le formulaire 3916-bis (comptes étrangers)
 - [ ] Je sais que les comptes sur des plateformes étrangères doivent être déclarés (amende de 750 euros par compte)
 - [ ] Je comprends que les moins-values ne sont pas reportables d'une année sur l'autre
 - [ ] Je sais que le minage est imposé comme BNC, pas comme plus-value

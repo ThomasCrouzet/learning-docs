@@ -66,8 +66,8 @@ Sans tokenization, voici les problèmes rencontrés :
 **BPE (Byte Pair Encoding)** :
 
 - Algorithme itératif qui fusionne les paires de caractères les plus fréquentes
-- Utilisé par GPT-2, GPT-3, GPT-4, LLaMA
-- Vocabulaire typique : 30 000 à 50 000 tokens
+- Utilisé par GPT-2, GPT-3, GPT-4, et LLaMA 3 (tiktoken)
+- Vocabulaire typique : 30 000 à 50 000 tokens (GPT-2 : 50 257)
 - Exemple : `"lower"` -> `["low", "er"]`
 
 Fonctionnement de BPE :
@@ -82,12 +82,12 @@ Fonctionnement de BPE :
 - Similaire à BPE mais utilise la vraisemblance au lieu de la fréquence
 - Utilisé par BERT
 - Préfixe `##` pour les sous-mots qui ne sont pas en début de mot
-- Exemple : `"unbelievable"` -> `["un", "##believe", "##able"]`
+- Exemple (`bert-base-uncased`) : `"unbelievable"` -> `["un", "##bel", "##ie", "##va", "##ble"]`
 
 **SentencePiece** :
 
 - Traite le texte brut comme une séquence de caractères Unicode (sans pré-tokenization)
-- Utilisé par T5, ALBERT, LLaMA
+- Utilisé par T5, ALBERT, LLaMA 1 et LLaMA 2 (pas LLaMA 3)
 - Fonctionne sur n'importe quelle langue sans règles spécifiques
 - Utilise BPE ou Unigram comme algorithme de base
 
@@ -95,9 +95,9 @@ Fonctionnement de BPE :
 
 | Tokenizer | Utilisé par | Base | Gestion des espaces |
 | --------- | ----------- | ---- | ------------------- |
-| BPE | GPT-2/3/4, LLaMA | Fréquence des paires | Espace = caractère spécial (Ġ) |
+| BPE | GPT-2/3/4, LLaMA 3 | Fréquence des paires | Espace = caractère spécial (Ġ) |
 | WordPiece | BERT, DistilBERT | Vraisemblance | Préfixe ## pour continuation |
-| SentencePiece | T5, LLaMA, ALBERT | BPE ou Unigram | Unicode brut, espace = ▁ |
+| SentencePiece | T5, ALBERT, LLaMA 1/2 | BPE ou Unigram | Unicode brut, espace = ▁ |
 
 ---
 

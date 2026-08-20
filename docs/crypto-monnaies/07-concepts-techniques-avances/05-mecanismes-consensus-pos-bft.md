@@ -53,7 +53,7 @@ Sans mécanisme de consensus, un réseau décentralisé ne peut pas fonctionner 
 | --- | --- |
 | Principe | Les mineurs résolvent un puzzle computationnel coûteux. Le premier à trouver la solution propose le bloc. |
 | Sécurité | Attaquer le réseau nécessite >50% de la puissance de calcul totale |
-| Consommation énergétique | Très élevée (~100 TWh/an pour Bitcoin, comparable à la consommation de certains pays) |
+| Consommation énergétique | Très élevée (~140 TWh/an pour Bitcoin selon le Cambridge Bitcoin Electricity Consumption Index, comparable à la consommation de certains pays) |
 | Utilisé par | Bitcoin, Dogecoin, Litecoin |
 | Finalité | Probabiliste (plus de blocs confirment une transaction, plus elle est sûre) |
 
@@ -120,8 +120,9 @@ Contre-argument :
 - Les pools de staking (Lido, Rocket Pool) permettent aux petits
   détenteurs de participer
 
-Fait : en 2024, Lido contrôle environ 30% de l'ETH stake.
-Cette concentration inquiete une partie de la communauté.
+Fait : en 2024, Lido contrôlait environ 30% de l'ETH stake.
+En août 2026, sa part est plus proche de 19% (beaconcha.in).
+Cette concentration reste un sujet de débat dans la communauté.
 ```
 
 **Critique 2 : Nothing-at-stake problem**
@@ -205,7 +206,7 @@ Fonctionnement (exemple : EOS, 21 block producers) :
 3. Ces 21 producteurs se relaient pour créer les blocs
 4. Les détenteurs peuvent changer leur vote à tout moment
 
-Avantage : très rapide (21 nœuds qui se coordonnent vs ~1 000 000 validateurs)
+Avantage : très rapide (21 nœuds qui se coordonnent vs ~880 000 validateurs)
 Inconvénient : très centralisé (21 entités contrôlent le réseau)
 ```
 
@@ -213,7 +214,7 @@ Inconvénient : très centralisé (21 entités contrôlent le réseau)
 
 | Critère | PoS (Ethereum) | DPoS (EOS, Tron) |
 | --- | --- | --- |
-| Nombre de validateurs | ~1 000 000 | 21-101 (selon le réseau) |
+| Nombre de validateurs | ~880 000 (mi-2026) | 21-101 (selon le réseau) |
 | Décentralisation | Élevée | Faible a modérée |
 | Vitesse | ~12 secondes par bloc | ~0,5-3 secondes par bloc |
 | Barrier d'entrée pour valider | 32 ETH | Vote des détenteurs de tokens |
@@ -387,9 +388,9 @@ Le diagramme suivant illustre les trois grandes familles de mécanismes de conse
 | Mécanisme | Exemples | Validateurs | Débit | Consommation | Finalite | Décentralisation |
 | --- | --- | --- | --- | --- | --- | --- |
 | PoW | Bitcoin, Dogecoin | Mineurs (illimité) | ~7 tx/s (BTC) | Très élevée | Probabiliste (~60 min) | Élevée |
-| PoS | Ethereum, Cardano | Stakers (~1 000 000 sur ETH) | ~15-30 tx/s (ETH L1) | Très faible | Hybride (instantanée via Casper FFG) | Élevée |
+| PoS | Ethereum, Cardano | Stakers (~880 000 sur ETH, mi-2026) | ~15-30 tx/s (ETH L1) | Très faible | Hybride (instantanée via Casper FFG) | Élevée |
 | DPoS | EOS, Tron | Delegues (21-101) | ~1 000+ tx/s | Faible | Quasi-instantanée | Faible |
-| BFT (Tendermint) | Cosmos, BNB Beacon Chain | Validateurs (100-200) | ~1 000+ tx/s | Faible | Instantanee | Moderee |
+| BFT (Tendermint) | Cosmos | Validateurs (100-200) | ~1 000+ tx/s | Faible | Instantanee | Moderee |
 | PoA | VeChain, blockchains privées | Autorités identifiees (5-25) | Très élevé | Negligeable | Instantanee | Très faible |
 | PoH + PoS | Solana | Validateurs (~2 000) | ~400 tx/s | Faible a modérée | ~400 ms | Moderee (hardware coûteux) |
 

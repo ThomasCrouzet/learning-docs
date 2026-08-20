@@ -176,8 +176,8 @@ Sans conférences, voici les problèmes rencontrés :
 **IFC (International Faust Conférence)** :
 
 ```text
-Organisateur : GRAME-CNCM
-Fréquence : irrégulière (2018, 2020, 2024...)
+Organisateur : GRAME-CNCM et institutions hôtes
+Fréquence : tous les deux ans (2018, 2020, 2022, 2024, 2026)
 Focus : exclusivement Faust
 
 Ce qu'on y trouve :
@@ -716,10 +716,10 @@ On va localiser un article scientifique sur Faust, le télécharger et le lire s
 
 ```text
 1. Page publications de GRAME :
-   https://www.grame.fr/music-research/music-research-music-representations/music-representations-publications
+   https://www.grame.fr/recherche/publications
 
-2. Archives de l'International Faust Conference :
-   https://ifc.music-research.fr
+2. International Faust Conference (éditions et actes) :
+   https://faust.grame.fr/community/ifc/
 
 3. Archives NIME :
    https://www.nime.org/archives/
@@ -1346,7 +1346,7 @@ Quelle idée de suite te vient ?]
 
 **Indications** :
 
-- Utilise les archives IFC (<https://ifc.music-research.fr>) ou DAFx (<https://www.dafx.de/>) pour trouver un article
+- Utilise les pages IFC (<https://faust.grame.fr/community/ifc/>) ou DAFx (<https://www.dafx.de/>) pour trouver un article
 - Choisis un article dont le titre t'intéresse (synthèse, effets, FPGA, instruments, etc.)
 - Lis d'abord l'abstract et la conclusion, puis les figures, puis la méthode
 - Ton résumé doit faire entre 25 et 40 lignes
@@ -1373,7 +1373,7 @@ Quelle idée de suite te vient ?]
 - Titre : Syfala: Real-Time Audio Processing on FPGA with Faust
 - Auteurs : Music Technology Research Team, GRAME-CNCM / INSA Lyon
 - Conférence : IFC (International Faust Conference)
-- URL : https://ifc.music-research.fr (consulter les proceedings)
+- URL : https://faust.grame.fr/community/ifc/ (consulter les proceedings)
 
 ## Problème adressé
 Le traitement audio logiciel sur CPU impose une latence minimale

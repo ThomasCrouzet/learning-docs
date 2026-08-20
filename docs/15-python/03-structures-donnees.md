@@ -38,7 +38,7 @@ Sans listes, voici les problèmes rencontrés :
 
 1. **Multiplication des variables** : pour stocker 100 noms d'étudiants, il faudrait créer 100 variables (`etudiant1`, `etudiant2`, ..., `etudiant100`).
 2. **Pas de traitement en lot** : impossible de parcourir tous les étudiants avec une boucle sans une structure regroupée.
-3. **Taille fixe** : sans collection dynamique, il faut connaître a l'avance le nombre exact d'éléments.
+3. **Taille fixe** : sans collection dynamique, il faut connaître à l'avance le nombre exact d'éléments.
 
 **Comment les listes résolvent ces problèmes** :
 
@@ -48,7 +48,7 @@ Sans listes, voici les problèmes rencontrés :
 | Pas de traitement en lot | On peut parcourir la liste avec une boucle `for` |
 | Taille fixe | La liste grandit et rétrécit dynamiquement |
 
-**Analogie concrète** : Une liste est comme un tiroir a compartiments numérotés. Chaque compartiment (index) contient un objet. Tu peux ajouter un compartiment a la fin, retirer un objet d'un compartiment précis, ou réorganiser les compartiments.
+**Analogie concrète** : Une liste est comme un tiroir à compartiments numérotés. Chaque compartiment (index) contient un objet. Tu peux ajouter un compartiment à la fin, retirer un objet d'un compartiment précis, ou réorganiser les compartiments.
 
 **Ce qu'une liste n'est PAS** :
 
@@ -84,13 +84,13 @@ Sans tuples, voici les problèmes rencontrés :
 | Crochets `[1, 2, 3]` | Parenthèses `(1, 2, 3)` |
 | Modifiable (mutable) | Non modifiable (immutable) |
 | `append()`, `pop()`, etc. | Aucune méthode de modification |
-| Plus lente (flexibilité a un coût) | Plus rapide (optimisée car figée) |
+| Plus lente (flexibilité à un coût) | Plus rapide (optimisée car figée) |
 
 ---
 
 ### Qu'est-ce qu'un dictionnaire ?
 
-**Définition** : Un dictionnaire est une collection non ordonnée (depuis Python 3.7, l'ordre d'insertion est préservé) de paires clé-valeur. Chaque clé est unique et permet d'accéder directement a sa valeur associée.
+**Définition** : Un dictionnaire est une collection non ordonnée (depuis Python 3.7, l'ordre d'insertion est préservé) de paires clé-valeur. Chaque clé est unique et permet d'accéder directement à sa valeur associée.
 
 **Le problème que les dictionnaires résolvent** :
 
@@ -98,7 +98,7 @@ Sans dictionnaires, voici les problèmes rencontrés :
 
 1. **Accès par index peu lisible** : avec une liste, `etudiant[0]` ne dit rien sur ce que représente cet élément (nom ? âge ? note ?).
 2. **Recherche lente** : pour trouver un élément dans une liste, il faut parcourir tous les éléments un par un.
-3. **Pas d'association naturelle** : on ne peut pas associer un nom a un numéro de téléphone de façon explicite avec une liste.
+3. **Pas d'association naturelle** : on ne peut pas associer un nom à un numéro de téléphone de façon explicite avec une liste.
 
 **Comment les dictionnaires résolvent ces problèmes** :
 
@@ -106,7 +106,7 @@ Sans dictionnaires, voici les problèmes rencontrés :
 | --- | --- |
 | Accès par index peu lisible | `etudiant["nom"]` est explicite et compréhensible |
 | Recherche lente | Accès direct par clé en temps constant (O(1)) |
-| Pas d'association naturelle | Chaque clé est explicitement liée a sa valeur |
+| Pas d'association naturelle | Chaque clé est explicitement liée à sa valeur |
 
 **Analogie concrète** : Un dictionnaire est comme un vrai dictionnaire papier. Tu cherches un mot (la clé) et tu trouves directement sa définition (la valeur). Tu n'as pas besoin de lire toutes les pages pour trouver le mot qui t'intéresse.
 
@@ -135,7 +135,7 @@ Sans sets, voici les problèmes rencontrés :
 | Doublons dans les données | Les sets éliminent automatiquement les doublons |
 | Test d'appartenance lent | Vérification en temps constant (O(1)), comme les dictionnaires |
 
-**Analogie concrète** : Un set est comme un tampon encreur. Tu peux tamponner "présent" a coté du nom d'un élève, mais tamponner deux fois le même nom ne crée pas de doublon : l'élève est soit présent, soit absent.
+**Analogie concrète** : Un set est comme un tampon encreur. Tu peux tamponner "présent" à côté du nom d'un élève, mais tamponner deux fois le même nom ne crée pas de doublon : l'élève est soit présent, soit absent.
 
 ---
 
@@ -147,7 +147,7 @@ Sans sets, voici les problèmes rencontrés :
 
 Sans list compréhensions, voici les problèmes rencontrés :
 
-1. **Code verbeux** : créer une liste filtrée nécessite 3 a 4 lignes (initialisation, boucle, condition, append).
+1. **Code verbeux** : créer une liste filtrée nécessite 3 à 4 lignes (initialisation, boucle, condition, append).
 2. **Répétition du pattern** : le même schéma "créer une liste vide, boucler, ajouter" se répète constamment.
 
 **Comment les list compréhensions résolvent ces problèmes** :
@@ -430,7 +430,7 @@ Crée un fichier `sets_comprehensions.py` :
 # --- Sets ---
 # Créer un set (les doublons sont automatiquement éliminés)
 nombres = {1, 2, 3, 2, 1, 4, 5, 4}
-print("Set :", nombres)  # {1, 2, 3, 4, 5} (sans doublons)
+print("Set :", nombres)  # éléments uniques ; l'ordre d'affichage n'est pas garanti
 
 # Ajouter et supprimer
 nombres.add(6)
@@ -494,14 +494,16 @@ Même résultat : ['ALICE', 'BOB', 'CHARLIE']
 Dict carrés : {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 ```
 
+L'ordre d'affichage d'un `set` n'est pas contractuel. CPython affiche souvent les petits entiers dans cet ordre, mais un autre ordre reste valide.
+
 ---
 
 ## Commandes Utiles
 
 | Commande | Action |
 | --- | --- |
-| `liste.append(x)` | Ajoute `x` a la fin de la liste |
-| `liste.insert(i, x)` | Insère `x` a l'index `i` |
+| `liste.append(x)` | Ajoute `x` à la fin de la liste |
+| `liste.insert(i, x)` | Insère `x` à l'index `i` |
 | `liste.pop()` | Retire et retourne le dernier élément |
 | `liste.remove(x)` | Retire la première occurrence de `x` |
 | `liste.sort()` | Trie la liste en place |
@@ -558,11 +560,11 @@ print(personne.get("email", "N/A"))   # N/A
 
 ---
 
-### Piège 3 : Oublier la virgule dans un tuple a un élément
+### Piège 3 : Oublier la virgule dans un tuple à un élément
 
 **Problème** : `(42)` n'est pas un tuple, c'est l'entier `42` entre parenthèses. Sans la virgule, Python ne crée pas de tuple.
 
-**Solution** : Toujours ajouter une virgule pour un tuple a un seul élément : `(42,)`.
+**Solution** : Toujours ajouter une virgule pour un tuple à un seul élément : `(42,)`.
 
 ```python
 pas_tuple = (42)    # int
@@ -651,7 +653,7 @@ while True:
 
     elif choix == "2":
         # Supprimer un produit
-        nom = input("Nom du produit a supprimer : ")
+        nom = input("Nom du produit à supprimer : ")
         if nom in inventaire:
             del inventaire[nom]
             print(f"{nom} supprimé.")
@@ -669,7 +671,7 @@ while True:
 
     elif choix == "4":
         # Rechercher un produit
-        nom = input("Nom du produit a rechercher : ")
+        nom = input("Nom du produit à rechercher : ")
         if nom in inventaire:
             print(f"{nom} : {inventaire[nom]} en stock.")
         else:
@@ -693,7 +695,7 @@ python3 inventaire.py
 
 1. `inventaire = {}` crée un dictionnaire vide qui va stocker les produits.
 2. `while True` crée une boucle infinie qui s'arrête uniquement quand l'utilisateur tape `5` (le `break` sort de la boucle).
-3. `inventaire[nom] = quantite` ajoute ou met a jour un produit dans le dictionnaire.
+3. `inventaire[nom] = quantite` ajoute ou met à jour un produit dans le dictionnaire.
 4. `del inventaire[nom]` supprime un produit par sa clé.
 5. `inventaire.items()` retourne toutes les paires (nom, quantité) pour l'affichage.
 6. `nom in inventaire` vérifie si la clé existe dans le dictionnaire.

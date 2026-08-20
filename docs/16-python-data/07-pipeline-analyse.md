@@ -13,7 +13,7 @@ cursus: "Python Data"
 
 # 07 - Pipeline d'analyse complet
 
-> **En bref** : Enchainer toutes les étapes d'une analyse de données dans un pipeline structure : chargement, nettoyage, exploration, analyse et export des résultats. Lecture estimée : 90 min.
+> **En bref** : Enchaîner toutes les étapes d'une analyse de données dans un pipeline structuré : chargement, nettoyage, exploration, analyse et export des résultats. Lecture estimée : 90 min.
 
 ## Prérequis
 
@@ -94,7 +94,8 @@ Créé un fichier CSV réaliste pour servir de base au pipeline.
 import pandas as pd
 import numpy as np
 
-# Fixer le generateur aleatoire pour la reproductibilite
+# Graine globale (API legacy). Pour du code neuf, préfère
+# rng = np.random.default_rng(42) puis rng.choice / rng.integers (voir Piège 2).
 np.random.seed(42)
 
 # Generer 200 lignes de donnees de ventes
@@ -498,7 +499,7 @@ ca_mensuel.to_csv("output/ca_mensuel.csv")
 print(f"\n3. CA mensuel sauvegarde : output/ca_mensuel.csv")
 
 # 4. Resume textuel
-with open("output/rapport.txt", "w") as f:
+with open("output/rapport.txt", "w", encoding="utf-8") as f:
     f.write("RAPPORT D'ANALYSE DES VENTES 2024\n")
     f.write("=" * 40 + "\n\n")
     f.write(f"Periode : {df['date'].min().strftime('%d/%m/%Y')} - {df['date'].max().strftime('%d/%m/%Y')}\n")

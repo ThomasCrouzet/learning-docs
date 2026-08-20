@@ -101,14 +101,16 @@ Sans typage statique, voici les problèmes rencontrés :
 
 Sans compilation, voici les problèmes rencontrés :
 
-1. **Incompatibilité** : Ni Node.js ni les navigateurs ne comprennent directement le TypeScript. Ils ne comprennent que le JavaScript.
-2. **Ciblage de versions** : Différents environnements prennent en charge différentes versions de JavaScript (ES5, ES6, ES2020, etc.). Il faut adapter le code à l'environnement cible.
+1. **Incompatibilité navigateur** : Les navigateurs n'exécutent pas le TypeScript. Ils n'exécutent que le JavaScript.
+2. **Node.js et types** : Depuis Node.js 22.18, `node fichier.ts` exécute du TypeScript **effaçable** (annotations, `interface`) par type stripping. Node ne vérifie **pas** les types. Les syntaxes qui génèrent du JavaScript (`enum`, namespaces avec du code, propriétés de constructeur) restent à transpiler (`tsx` ou `tsc`).
+3. **Ciblage de versions** : Différents environnements prennent en charge différentes versions de JavaScript (ES5, ES6, ES2020, etc.). Il faut adapter le code à l'environnement cible.
 
 **Comment la compilation résout ces problèmes** :
 
 | Problème | Solution apportée par la compilation |
 | -------- | ------------------------------------ |
-| Incompatibilité | Le compilateur produit du JavaScript standard exécutable partout |
+| Incompatibilité navigateur | Le compilateur produit du JavaScript standard exécutable partout |
+| Syntaxe TypeScript non effaçable | `tsc` (ou `tsx`) transforme `enum`, namespaces, etc. que Node ne strippe pas |
 | Ciblage de versions | Le compilateur peut cibler n'importe quelle version de JavaScript |
 
 **Analogie concrète** : La compilation TypeScript fonctionne comme un traducteur. Tu écris un livre en français (TypeScript), et le traducteur le transforme en anglais (JavaScript) pour que le public anglophone (Node.js, navigateurs) puisse le lire. Le livre traduit contient exactement les mêmes idées, mais dans un langage compréhensible par le lecteur.
@@ -128,11 +130,13 @@ Sans compilation, voici les problèmes rencontrés :
 
 | Composant | Rôle | Exemple |
 | --------- | ---- | ------- |
-| `tsc` | Compilateur officiel | Transforme `.ts` en `.js` |
+| `tsc` | Compilateur officiel | Transforme `.ts` en `.js` et vérifie les types |
 | `tsconfig.json` | Configuration du projet | Définit les options de compilation |
 | DefinitelyTyped | Dépôt de définitions de types | Fournit les types pour les bibliothèques JS existantes |
 | `@types/*` | Packages de types | `@types/node`, `@types/express` |
-| `ts-node` | Exécution directe | Exécute du TypeScript sans étape de compilation manuelle |
+| Node.js 22.18+ | Type stripping natif | `node fichier.ts` pour la syntaxe TypeScript effaçable (sans contrôle de types) |
+| `tsx` | Exécuteur (esbuild) | Prise en charge complète de la syntaxe TypeScript, recommandé par la doc Node |
+| `ts-node` | Exécuteur (compilateur TS) | Alternative plus ancienne, plus lente que `tsx` |
 | VS Code | Éditeur recommandé | Support TypeScript intégré nativement |
 
 **L'adoption de TypeScript** :
@@ -338,24 +342,30 @@ function saluer(personne) {
 
 ## Pièges Fréquents
 
-### Piège 1 : Croire que TypeScript s'exécute directement
+### Piège 1 : Croire que `node fichier.ts` remplace `tsc`
 
-**Problème** : Essayer d'exécuter un fichier `.ts` avec `node` directement.
+**Problème** : Croire que Node.js exécute tout TypeScript et vérifie les types.
+
+Depuis Node.js 22.18, `node fichier.ts` fonctionne **si** le fichier ne contient que de la syntaxe TypeScript effaçable (annotations, `interface`, `type`). Node remplace ces types par des espaces. Il ne lit pas `tsconfig.json` et **ne signale aucune erreur de type**.
 
 ```bash
-# Ceci ne fonctionne pas
+# Fonctionne sur Node.js 22.18+ pour du TypeScript effaçable uniquement
+# Aucune vérification de types
 node fichier.ts
 ```
 
-**Solution** : Tu dois d'abord compiler le fichier en JavaScript, puis exécuter le JavaScript. Ou utiliser `ts-node` qui fait les deux étapes en une.
+**Solution** : Distingue exécution et vérification. Pour la vérification des types, lance `tsc --noEmit`. Pour la syntaxe non effaçable (`enum`, namespaces avec du code), utilise `tsx` ou compile avec `tsc`.
 
 ```bash
-# Option 1 : compiler puis exécuter
-tsc fichier.ts
+# Vérifier les types (obligatoire, Node ne le fait pas)
+npx tsc --noEmit
+
+# Option 1 : compiler puis exécuter (production, navigateurs)
+npx tsc fichier.ts
 node fichier.js
 
-# Option 2 : utiliser ts-node
-npx ts-node fichier.ts
+# Option 2 : exécuteur complet (recommandé par la doc Node pour tout TypeScript)
+npx tsx fichier.ts
 ```
 
 ---

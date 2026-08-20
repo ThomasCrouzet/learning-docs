@@ -80,7 +80,7 @@ function App() {
 
 **Ce que JSX n'est PAS** :
 
-- JSX n'est pas du HTML. JSX ressemble à du HTML mais c'est du JavaScript. Il est transformé en appels `React.createElement()` par le compilateur.
+- JSX n'est pas du HTML. JSX ressemble à du HTML mais c'est du JavaScript. Depuis React 17, le compilateur le transforme en appels `jsx()` / `jsxs()` du module `react/jsx-runtime` (tu n'as plus besoin d'`import React` pour du JSX). L'API `createElement` reste l'équivalent si tu écris les éléments à la main, sans JSX.
 - JSX n'est pas un langage de template (comme Twig ou Handlebars). JSX est du JavaScript valide avec des extensions, pas un langage séparé.
 
 ---
@@ -109,7 +109,7 @@ Sans composants fonctionnels, voici les problèmes rencontrés :
 
 **Ce qu'un composant fonctionnel n'est PAS** :
 
-- Un composant fonctionnel n'est pas un composant de classe. Les composants de classe (avec `class App extends React.Component`) existent encore mais sont considérés comme obsolètes pour les nouveaux projets.
+- Un composant fonctionnel n'est pas un composant de classe. Les composants de classe (avec `class App extends React.Component`) existent encore et restent supportés, mais la documentation React recommande les fonctions pour les nouveaux projets.
 - Un composant fonctionnel n'est pas une fonction utilitaire classique. Un composant retourne du JSX et peut utiliser des hooks. Une fonction utilitaire retourne une valeur et ne peut pas utiliser de hooks.
 
 ---

@@ -107,7 +107,7 @@ A l'installation, Proxmox créé deux stockages :
 
 Proxmox VE s'installe comme un système d'exploitation complet. Telecharge l'ISO depuis le site officiel.
 
-1. Telecharge l'ISO Proxmox VE depuis `https://www.proxmox.com/en/downloads` (version courante en 2026 : Proxmox VE 9.x, basée sur Debian 13)
+1. Telecharge l'ISO Proxmox VE depuis `https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso/proxmox-ve-9-2-iso-installer` (version courante en 2026 : Proxmox VE 9.x, basée sur Debian 13). Le fichier s'appelle par exemple `proxmox-ve_9.2-1.iso` : verifie le nom exact sur la page de telechargement avant de lancer `dd`.
 2. Crée une clé USB bootable avec `dd` (Linux), Rufus (Windows) ou balenaEtcher (multi-plateforme). Adapte le nom de fichier a l'ISO telechargee, par exemple : `sudo dd if=proxmox-ve_9.2-1.iso of=/dev/sdX bs=4M status=progress oflag=sync`
 
    ⚠️ **Danger** : `dd` ecrase integralement le peripherique cible. Un mauvais `of=` (par exemple le disque système au lieu de la clé USB) détruit les données sans confirmation. Avant d'exécuter `dd` :
@@ -164,15 +164,30 @@ Proxmox affiche un message "No valid subscription" a chaque connexion. Ce messag
 # Se connecter en SSH au serveur Proxmox
 ssh root@<ip-du-serveur>
 
-# Configurer le depot gratuit (no-subscription)
-# Sur Proxmox VE 9 (Debian 13) le codename est trixie.
-# Sur Proxmox VE 8 (Debian 12) utilise bookworm a la place de trixie.
-cat > /etc/apt/sources.list.d/pve-no-subscription.list << 'EOF'
-deb http://download.proxmox.com/debian/pve trixie pve-no-subscription
+# Sur Proxmox VE 9 (Debian 13 / trixie) les depots utilisent le format deb822
+# (.sources), pas l'ancien format une ligne (.list). Sur VE 8 (bookworm)
+# tu peux encore voir des fichiers .list.
+
+# Desactiver le depot entreprise (necessite un abonnement).
+# Le fichier par defaut est pve-enterprise.sources, pas pve-enterprise.list.
+# Recopie le bloc ci-dessous (Enabled: no) pour eviter les erreurs 401.
+cat > /etc/apt/sources.list.d/pve-enterprise.sources << 'EOF'
+Types: deb
+URIs: https://enterprise.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-enterprise
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+Enabled: no
 EOF
 
-# Desactiver le depot entreprise (necessite un abonnement)
-mv /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.disabled
+# Configurer le depot gratuit (no-subscription), format officiel VE 9 :
+cat > /etc/apt/sources.list.d/proxmox.sources << 'EOF'
+Types: deb
+URIs: http://download.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
 
 # Mettre a jour les paquets
 apt update && apt full-upgrade -y
@@ -199,11 +214,12 @@ Avant de créer un conteneur LXC, tu as besoin d'un template (image de base).
 En ligne de commande :
 
 ```bash
-# Lister les templates disponibles
+# Lister les templates disponibles (le suffixe de version change)
 pveam available --section system
 
-# Telecharger le template Debian 12
-pveam download local debian-12-standard_12.7-1_amd64.tar.zst
+# Telecharger le template Debian 12 : recopie le nom exact affiche
+# par pveam available (exemple courant : debian-12-standard_12.12-1_amd64.tar.zst)
+pveam download local debian-12-standard_12.12-1_amd64.tar.zst
 ```
 
 **Résultat attendu** :
@@ -243,7 +259,7 @@ Le template Debian 12 est telecharge dans le stockage local.
 
 ```bash
 # Creer un conteneur LXC
-pct create 100 local:vztmpl/debian-12-standard_12.7-1_amd64.tar.zst \
+pct create 100 local:vztmpl/debian-12-standard_12.12-1_amd64.tar.zst \
   --hostname ct-debian \
   --password "MotDePasseSecure123" \
   --storage local-lvm \
@@ -298,7 +314,8 @@ exit
 
 1. Telecharge d'abord une image ISO :
    - Clique sur **local** (stockage) puis **ISO Images** puis **Upload**
-   - Selectionne l'ISO Debian 12 (telechargee sur ton poste)
+   - Selectionne l'ISO Debian 12 (telechargee sur ton poste). Le nom
+     de fichier suit le point release Debian (exemple 2026 : `debian-12.15.0-amd64-netinst.iso` sur [debian.org/releases/bookworm](https://www.debian.org/releases/bookworm/))
 2. Clique sur **Create VM** (en haut a droite)
 3. Onglet **Général** :
    - **VM ID** : 200
@@ -335,7 +352,7 @@ qm create 200 \
   --cpu cputype=host \
   --scsihw virtio-scsi-single \
   --scsi0 local-lvm:20,format=raw \
-  --cdrom local:iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom local:iso/debian-12.15.0-amd64-netinst.iso \
   --net0 virtio,bridge=vmbr0 \
   --boot order=ide2 \
   --agent enabled=1
@@ -506,7 +523,7 @@ pct set 100 --features nesting=1
 
 ```bash
 # Creer le conteneur web-frontend
-pct create 101 local:vztmpl/debian-12-standard_12.7-1_amd64.tar.zst \
+pct create 101 local:vztmpl/debian-12-standard_12.12-1_amd64.tar.zst \
   --hostname web-frontend \
   --password "MotDePasseSecure123" \
   --storage local-lvm \
@@ -572,7 +589,7 @@ onboot: 1
 La VM `db-server` est a l'état `stopped` car on n'a pas attache d'ISO pour installer un système d'exploitation. Pour l'installer, attache une ISO et demarre la VM :
 
 ```bash
-qm set 201 --cdrom local:iso/debian-12.9.0-amd64-netinst.iso
+qm set 201 --cdrom local:iso/debian-12.15.0-amd64-netinst.iso
 qm set 201 --boot order=ide2
 qm start 201
 ```

@@ -89,7 +89,9 @@ Marek Palatinus est une figure importante de l'écosystème Bitcoin. Avant de cr
 
 Les modèles Safe 3 et Safe 5 de 2024 incluent enfin un Secure Élément tout en restant open source. Ce compromis a été rendu possible par de nouveaux composants disponibles sur le marche.
 
-**Trezor Suite** : équivalent de Ledger Live chez Trezor. Application de bureau (pas mobile) pour gérer ses crypto-monnaies, envoyer des transactions et accéder a des fonctionnalités comme le coin control (choisir quels UTXOs utiliser dans une transaction Bitcoin) ou la connexion à un nœud Tor pour plus de confidentialité.
+**Trezor Suite** : équivalent de Ledger Live chez Trezor. Application officielle pour gérer ses crypto-monnaies, envoyer des transactions et accéder à des fonctionnalités comme le coin control (choisir quels UTXOs utiliser dans une transaction Bitcoin) ou la connexion à un nœud Tor pour plus de confidentialité.
+
+Trezor Suite existe en version bureau (Windows, macOS, Linux) et en version mobile (Android et iOS). Sur iOS, la compatibilité matérielle est plus limitée que sur Android : le Trezor Safe 7 se connecte en Bluetooth, les autres modèles ont une compatibilité restreinte.
 
 ---
 
@@ -146,7 +148,7 @@ En 2020, des chercheurs en sécurité (Kraken Security Labs et Wallet.fail) ont 
 | Certification | CC EAL5+/6+ | CC EAL6+ (modèles Safe uniquement) |
 | Vulnérabilité physique connue | Pas de voltage glitching documente (Secure Élément protège) | Voltage glitching documente sur les anciens modèles |
 | Controverse majeure | Fuite de données 2020 + Ledger Recover 2023 | Vulnérabilité physique des anciens modèles |
-| Application compagnon | Ledger Live (desktop + mobile) | Trezor Suite (desktop uniquement) |
+| Application compagnon | Ledger Live (desktop + mobile) | Trezor Suite (desktop + mobile Android/iOS ; iOS plus limité selon le modèle) |
 | Bluetooth | Oui (Nano X, Stax, Flex) | Non |
 | Prix d'entrée | ~80 euros (Nano S Plus) | ~60 euros (Trezor One) / ~80 euros (Safe 3) |
 | Crypto-monnaies supportees | 5 500+ | 8 000+ |
@@ -172,7 +174,7 @@ En 2020, des chercheurs en sécurité (Kraken Security Labs et Wallet.fail) ont 
 **Les limites** :
 
 - **Vulnérabilité physique historique** : l'absence de Secure Élément pendant 10 ans (2014-2024) était un risque réel pour les utilisateurs qui n'utilisaient pas de passphrase.
-- **Écosystème moins complet** : pas d'application mobile, pas de Bluetooth, moins de partenariats avec des services DeFi.
+- **Écosystème moins complet** : Bluetooth limité aux modèles récents (Safe 7), moins de partenariats avec des services DeFi, et l'application mobile iOS reste plus limitée que Ledger Live.
 - **Communication moins visible** : SatoshiLabs communique moins que Ledger, ce qui limite la portée de la marque.
 
 **Verdict factuel** : Trezor est le pionnier des hardware wallets et le champion de l'approche open source. Cette transparence à un coût (vulnérabilités physiques documentees sur les anciens modèles) et un bénéfice (tout est vérifiable). Les modèles 2024 combinent enfin Secure Élément et open source, offrant le meilleur des deux mondes. Le choix entre Trezor et Ledger est un compromis entre philosophies, pas entre niveaux de sécurité.

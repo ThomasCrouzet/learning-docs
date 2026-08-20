@@ -696,11 +696,11 @@ done | sort | uniq -c
 **Résultat attendu** :
 
 ```text
-   4 "version":"1.0"
-   8 "version":"2.0"
+   8 "version":"1.0"
+   4 "version":"2.0"
 ```
 
-Environ un tiers des requêtes va vers la v2.0 (1 instance sur 3).
+Environ un tiers des requêtes va vers la v2.0 (1 instance sur 3). Les nombres exacts peuvent varier légèrement selon l'algorithme de répartition de Nginx.
 
 Continue avec les instances 2 et 3 :
 

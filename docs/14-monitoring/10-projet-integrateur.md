@@ -25,7 +25,7 @@ cursus: "Monitoring et Observabilité"
 | Technologie | Version |
 | --- | --- |
 | Prometheus | 3.13.x |
-| Grafana | 11.x |
+| Grafana | 13.x |
 | Loki | 3.1.x |
 | Promtail | 3.1.x |
 | Grafana Tempo | 2.5.x |

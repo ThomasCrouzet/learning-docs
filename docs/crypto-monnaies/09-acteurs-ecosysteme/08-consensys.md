@@ -108,9 +108,9 @@ Faire tourner un nœud Ethereum complet nécessite :
 
 | Ressource | Exigence |
 | --------- | -------- |
-| Espace disque | 1-2 To (et en augmentation) |
-| RAM | 16 Go minimum |
-| Bande passante | Connexion stable et rapide |
+| Espace disque | SSD NVMe 2 To minimum (4 To recommandé, EIP-7870) |
+| RAM | 16 Go minimum (32 Go recommandé pour la stabilité) |
+| Bande passante | Connexion stable et rapide (25+ Mbit/s) |
 | Temps de synchronisation | Plusieurs heures a plusieurs jours |
 | Maintenance | Mises a jour régulières, surveillance |
 
@@ -168,7 +168,7 @@ Si Infura tombe en panne, une grande partie de l'écosystème Ethereum devient i
 | Source | Description |
 | ------ | ----------- |
 | MetaMask Swaps | 0,875% de commission sur chaque swap effectue via MetaMask. Avec 30 millions d'utilisateurs mensuels, même un petit pourcentage d'utilisation génère des revenus significatifs |
-| Infura | Abonnements API. Le plan gratuit a des limites (100 000 requêtes par jour). Au-delà, les développeurs paient des abonnements allant de 50 a plusieurs milliers de dollars par mois |
+| Infura | Abonnements API. Le plan gratuit alloue 3 000 000 crédits par jour (et 500 crédits par seconde), pas un quota de 100 000 requêtes. Chaque méthode RPC consomme un nombre de crédits différent. Au-delà, les développeurs paient des abonnements allant de quelques dizaines à plusieurs milliers de dollars par mois |
 | Linea | Frais de transaction sur le Layer 2 (marge entre les frais payés par les utilisateurs et le coût de publication des preuves sur L1) |
 
 **Financements** :
@@ -213,9 +213,9 @@ Si Infura tombe en panne, une grande partie de l'écosystème Ethereum devient i
 | Le pouvoir est dans les défauts (defaults) | Quand MetaMask est installe, Infura est preconfigure. Le défaut détermine le comportement de la majorité |
 | Forker MetaMask ne suffit pas | La base d'utilisateurs et l'intégration dans les dApps ne se forkent pas |
 
-**Conflit avec la SEC (2024)** :
+**Conflit avec la SEC (2024-2025)** :
 
-En 2024, la SEC a notifie Consensys d'une action en justice potentielle (Wells Notice). La SEC considere que MetaMask Swaps fonctionne comme un courtier (broker) non enregistre, puisqu'il facilite l'échange de tokens qui pourraient être des securities.
+En avril 2024, la SEC a notifié Consensys d'une action en justice potentielle (Wells Notice). Le 28 juin 2024, elle a déposé une plainte : la SEC considérait que MetaMask Swaps et MetaMask Staking fonctionnaient comme un courtier (broker) non enregistré, et que le staking était une offre de securities non enregistrée. Le 27 février 2025, Consensys a annoncé un accord de principe : la SEC retirait toutes ses accusations concernant MetaMask. Le conflit 2024 n'est plus un procès en cours.
 
 ---
 

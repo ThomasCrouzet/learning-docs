@@ -84,7 +84,9 @@ Constantes fondamentales et fonctions de conversion entre unités audio.
 | `ma.BS` | Taille du buffer audio courant |
 | `ma.T` | Période d'échantillonnage (1/SR, durée d'un sample en secondes) |
 
-**Fonctions de conversion** :
+Ces conversions d'unités audio **ne sont pas** dans `maths.lib` : elles vivent dans `basics.lib` (préfixe `ba.`). Tu les as quand même après `import("stdfaust.lib");`.
+
+**Fonctions de conversion (`ba.`, basics.lib)** :
 
 | Fonction | Description |
 | -------- | ----------- |
@@ -418,7 +420,7 @@ fi.resonlp → fi (filters.lib) + reson (résonant) + lp (lowpass)
 | Lire le code source | Éditeur de texte | Signature, implémentation, commentaires |
 | Rechercher par mot-clé | `grep` dans les fichiers `.lib` | Trouver une fonction par nom partiel |
 | Visualiser le diagramme | `faust2svg` | Schéma-bloc de la fonction |
-| Documentation en ligne | documentation.faust.dev | Descriptions, exemples, paramètres |
+| Documentation en ligne | [faustlibraries.grame.fr](https://faustlibraries.grame.fr/) | Descriptions, exemples, paramètres |
 
 ---
 
@@ -512,7 +514,7 @@ Compilation OK
 
 Vérifications :
 - MIDI 69 → 440 Hz (La4)
-- MIDI 60 → 261.63 Hz (Do3)
+- MIDI 60 → 261.63 Hz (Do4, Do central ; MIDI 60 n'est pas Do3)
 - -6 dB → gain ≈ 0.501
 - 0 dB → gain = 1.0
 ```
@@ -529,7 +531,7 @@ import("stdfaust.lib");
 // Paramètres (si = signals.lib pour le lissage)
 freq = hslider("freq", 440, 50, 2000, 1) : si.smoo;
 gate = button("gate");
-gain = ba.db2linear(hslider("volume [unit:dB]", -12, -96, 0, 0.1));  // ma
+gain = ba.db2linear(hslider("volume [unit:dB]", -12, -96, 0, 0.1));  // ba (basics.lib)
 
 // Source : oscillateur + bruit (os + no)
 noise_amount = hslider("noise", 0.05, 0, 0.5, 0.01);

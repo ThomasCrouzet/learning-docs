@@ -276,7 +276,7 @@ Le protocole SMTP est un protocole texte. Tu peux envoyer un mail manuellement a
 
 ```bash
 # Installe telnet si necessaire (dans un conteneur Alpine)
-docker run --rm -it --network lab-mail-net alpine:3.19 sh -c "
+docker run --rm -it --network lab-mail-net alpine:3.22 sh -c "
   apk add --no-cache busybox-extras &&
   echo -e 'HELO test\nMAIL FROM:<test@lab.local>\nRCPT TO:<user@lab.local>\nDATA\nSubject: Test\n\nCeci est un mail de test.\n.\nQUIT' |
   telnet lab-postfix 25
@@ -317,7 +317,7 @@ docker run -d \
   -p 1143:143 \
   -v ~/lab-mail/dovecot:/etc/dovecot \
   -v ~/lab-mail/mail:/var/mail \
-  dovecot/dovecot:latest
+  dovecot/dovecot:2.3-latest
 
 # Verifie le demarrage
 docker logs lab-dovecot 2>&1 | tail -5
@@ -328,6 +328,8 @@ docker logs lab-dovecot 2>&1 | tail -5
 ```text
 dovecot: master: Dovecot v2.3.x starting up
 ```
+
+> **Note - tag Dovecot** : `dovecot/dovecot:latest` pointe vers Dovecot 2.4. La configuration 2.3 de cette fiche n'est **pas** compatible avec 2.4 (auth, chemins, image rootless). Le tag `2.3-latest` conserve le lab tel quel. Voir [Running with Docker](https://doc.dovecot.org/latest/installation/docker.html) et la note 2.3 vers 2.4 sur [doc.dovecot.org](https://doc.dovecot.org/latest/installation/upgrade/2.3-to-2.4.html).
 
 ---
 
@@ -589,13 +591,13 @@ docker run -d --name lab-postfix-ex --network lab-mail-ex-net \
 docker run -d --name lab-dovecot-ex --network lab-mail-ex-net \
   -p 1144:143 -v ~/lab-mail-ex/dovecot:/etc/dovecot \
   -v ~/lab-mail-ex/mail:/var/mail \
-  dovecot/dovecot:latest
+  dovecot/dovecot:2.3-latest
 ```
 
 Envoi d'un mail d'Alice a Bob :
 
 ```bash
-docker run --rm -it --network lab-mail-ex-net alpine:3.19 sh -c "
+docker run --rm -it --network lab-mail-ex-net alpine:3.22 sh -c "
   apk add --no-cache busybox-extras &&
   echo -e 'HELO test\nMAIL FROM:<alice@entreprise.local>\nRCPT TO:<bob@entreprise.local>\nDATA\nSubject: Salut Bob\n\nCeci est un message d Alice.\n.\nQUIT' |
   telnet lab-postfix-ex 25

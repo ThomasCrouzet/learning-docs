@@ -533,22 +533,24 @@ export default DetailArticle;
 
 ---
 
-### Piège 2 : Une clé de requête instable
+### Piège 2 : Confondre l'identité d'objet React et le hachage de clé TanStack Query
 
-⚠️ **Problème** : Le vrai problème n'est pas qu'un objet soit présent dans la clé, mais qu'il soit **recréé à chaque rendu**. TanStack Query compare les clés par valeur sérialisée et relance la requête si la clé change entre deux rendus. Un objet littéral `{ page: 1 }` écrit inline dans le JSX est recréé à chaque rendu, ce qui donne l'impression à TanStack Query qu'il s'agit d'une nouvelle clé.
+⚠️ **Problème** : On croit souvent qu'un objet littéral `{ page: currentPage }` recréé à chaque rendu est une "nouvelle clé" et relance la requête en boucle. Ce raisonnement vaut pour un tableau de dépendances React (`useEffect`), pas pour TanStack Query.
 
-✅ **Solution** : Si tu inclus un objet dans une clé, assure-toi qu'il est **stable** entre les rendus (variable constante hors du composant, ou valeur dérivée d'une variable d'état stable). La forme la plus sûre reste d'utiliser des primitives.
+TanStack Query **hache les clés de façon déterministe** (sérialisation JSON, l'ordre des propriétés d'un objet ne compte pas). Deux rendus qui passent `{ page: 1 }` produisent le **même** hash. Recréer l'objet n'est donc pas, à lui seul, une cause de refetch.
+
+✅ **Solution** : Inclus dans la clé toute variable dont dépend `queryFn`. La requête ne se relance que si la **valeur** hachée change (nouveau `currentPage`, nouveau filtre), selon `staleTime`. Les primitives restent plus lisibles, mais un objet de filtres inline est valide.
 
 ```tsx
-// ❌ Incorrect : l'objet est recréé à chaque rendu -> requête relancée en boucle
+// ✅ Valide : l'objet est recréé, le hash reste identique tant que currentPage ne change pas
 useQuery({ queryKey: ["articles", { page: currentPage }], queryFn });
 
-// ✅ Correct : valeur primitive directement dans la clé
+// ✅ Également valide : primitive, souvent plus simple à lire
 useQuery({ queryKey: ["articles", currentPage], queryFn });
 
-// ✅ Correct aussi : objet stable, défini hors du composant (valeur fixe)
-const FILTRE_ACTIF = { categorie: "react" };
-useQuery({ queryKey: ["articles", FILTRE_ACTIF], queryFn });
+// ❌ Incorrect : currentPage n'est pas dans la clé, mais queryFn l'utilise
+// -> cache partagé à tort entre les pages, pas de refetch quand currentPage change
+useQuery({ queryKey: ["articles"], queryFn: () => fetchArticles(currentPage) });
 ```
 
 ---

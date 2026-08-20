@@ -82,15 +82,18 @@ cursus: "HTML/CSS"
 
 ### La validation HTML5
 
+Ces attributs participent à la validation de contraintes du navigateur (le formulaire peut être bloqué à l'envoi) :
+
 | Attribut | Effet |
 | -------- | ----- |
 | `required` | Champ obligatoire |
 | `minlength` | Longueur minimale |
 | `maxlength` | Longueur maximale |
-| `min` | Valeur minimale (nombres) |
-| `max` | Valeur maximale (nombres) |
+| `min` | Valeur minimale (nombres et dates) |
+| `max` | Valeur maximale (nombres et dates) |
 | `pattern` | Expression régulière |
-| `placeholder` | Texte indicatif |
+
+**Ce que la validation HTML5 n'est PAS** : `placeholder` n'est pas un attribut de validation. C'est un texte d'exemple affiché tant que le champ est vide. Il disparaît dès que l'utilisateur saisit une valeur et ne remplace pas un `<label>`.
 
 **Exemple** :
 

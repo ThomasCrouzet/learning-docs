@@ -12,7 +12,7 @@ cursus: "Cloud"
 
 # 04 - Réseau cloud
 
-> **En bref** : Tu découvriras comment créer un réseau virtuel (VPC) dans le cloud, configurer des sous-réseaux publics et prives, protéger tes ressources avec les security groups, distribuer le trafic avec un load balancer et accelerer la diffusion avec un CDN. Lecture estimée : 75 min.
+> **En bref** : Tu découvriras comment créer un réseau virtuel (VPC) dans le cloud, configurer des sous-réseaux publics et privés, protéger tes ressources avec les security groups, distribuer le trafic avec un load balancer et accélérer la diffusion avec un CDN. Lecture estimée : 75 min.
 
 ## Prérequis
 
@@ -21,7 +21,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras créer un VPC avec des sous-réseaux publics et prives, configurer des security groups, mettre en place un load balancer et comprendre le rôle d'un CDN et du DNS manage.
+À la fin de cette fiche, tu sauras créer un VPC avec des sous-réseaux publics et privés, configurer des security groups, mettre en place un load balancer et comprendre le rôle d'un CDN et du DNS managé.
 
 ---
 
@@ -31,36 +31,36 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce qu'un VPC ?
 
-**Définition** : Un VPC (Virtual Private Cloud) est un réseau virtuel isole dans le cloud. C'est ton propre espace réseau prive, complètement separe des autres clients du fournisseur cloud. Tu decides de la plage d'adresses IP, tu créés des sous-réseaux, tu configures les règles de routage et de sécurité.
+**Définition** : Un VPC (Virtual Private Cloud) est un réseau virtuel isolé dans le cloud. C'est ton propre espace réseau privé, complètement séparé des autres clients du fournisseur cloud. Tu décides de la plage d'adresses IP, tu crées des sous-réseaux, tu configures les règles de routage et de sécurité.
 
 **Le problème que le VPC résout** :
 
-Sans VPC, voici les problèmes rencontres :
+Sans VPC, voici les problèmes rencontrés :
 
-1. **Pas d'isolation** : Toutes tes ressources cloud sont sur le meme réseau partage avec d'autres clients. N'importe quelle machine pourrait théoriquement communiquer avec la tienne.
-2. **Pas de controle réseau** : Tu ne peux pas définir tes propres plages d'adresses IP, tes règles de routage ou tes politiques de sécurité réseau.
+1. **Pas d'isolation** : Toutes tes ressources cloud sont sur le même réseau partagé avec d'autres clients. N'importe quelle machine pourrait théoriquement communiquer avec la tienne.
+2. **Pas de contrôle réseau** : Tu ne peux pas définir tes propres plages d'adresses IP, tes règles de routage ou tes politiques de sécurité réseau.
 3. **Architecture plate** : Impossible de séparer les serveurs web (accessibles au public) des bases de données (qui ne doivent pas être accessibles depuis Internet).
 
 **Comment le VPC résout ces problèmes** :
 
 | Problème | Solution apportée par le VPC |
 | --- | --- |
-| Pas d'isolation | Le VPC est un réseau isole. Les autres clients ne voient pas tes ressources |
-| Pas de controle réseau | Tu définis tes plages IP (CIDR), tes tables de routage et tes règles de sécurité |
-| Architecture plate | Tu créés des sous-réseaux publics (web) et prives (BDD) avec des règles d'accès distinctes |
+| Pas d'isolation | Le VPC est un réseau isolé. Les autres clients ne voient pas tes ressources |
+| Pas de contrôle réseau | Tu définis tes plages IP (CIDR), tes tables de routage et tes règles de sécurité |
+| Architecture plate | Tu crées des sous-réseaux publics (web) et privés (BDD) avec des règles d'accès distinctes |
 
-**Analogie concrète** : Un VPC, c'est comme un terrain cloture. Tu possedes un terrain dans un lotissement (le cloud). La cloture (l'isolation du VPC) empêche les voisins d'entrer. A l'intérieur, tu organises ton terrain comme tu veux : la maison a l'avant avec un accès depuis la rue (sous-réseau public), le jardin prive a l'arriere sans accès direct (sous-réseau prive), et un portail avec un gardien qui controle les entrées (security group).
+**Analogie concrète** : Un VPC, c'est comme un terrain clôturé. Tu possèdes un terrain dans un lotissement (le cloud). La clôture (l'isolation du VPC) empêche les voisins d'entrer. À l'intérieur, tu organises ton terrain comme tu veux : la maison à l'avant avec un accès depuis la rue (sous-réseau public), le jardin privé à l'arrière sans accès direct (sous-réseau privé), et un portail avec un gardien qui contrôle les entrées (security group).
 
 **Ce qu'un VPC n'est PAS** :
 
-- Un VPC n'est pas un VPN. Un VPN est un tunnel chiffre pour connecter deux réseaux. Un VPC est un réseau virtuel dans le cloud. Tu peux connecter un VPN a un VPC, mais ce sont deux choses différentes.
-- Un VPC n'est pas un sous-réseau. Le VPC est le conteneur. Les sous-réseaux sont des divisions a l'intérieur du VPC.
+- Un VPC n'est pas un VPN. Un VPN est un tunnel chiffré pour connecter deux réseaux. Un VPC est un réseau virtuel dans le cloud. Tu peux connecter un VPN à un VPC, mais ce sont deux choses différentes.
+- Un VPC n'est pas un sous-réseau. Le VPC est le conteneur. Les sous-réseaux sont des divisions à l'intérieur du VPC.
 
 ---
 
-### Sous-réseaux publics et prives
+### Sous-réseaux publics et privés
 
-**Définition** : Un sous-réseau (subnet) est une subdivision d'un VPC. Chaque sous-réseau occupe une plage d'adresses IP a l'intérieur du CIDR du VPC et est associe a une zone de disponibilité.
+**Définition** : Un sous-réseau (subnet) est une subdivision d'un VPC. Chaque sous-réseau occupe une plage d'adresses IP à l'intérieur du CIDR du VPC et est associé à une zone de disponibilité.
 
 **Sous-réseau public** :
 
@@ -68,15 +68,15 @@ Un sous-réseau est public quand sa table de routage contient une route vers une
 
 Cas d'usage : serveurs web, load balancers, bastions SSH.
 
-**Sous-réseau prive** :
+**Sous-réseau privé** :
 
-Un sous-réseau est prive quand il n'a pas de route directe vers Internet. Les ressources dans un sous-réseau prive ne sont pas accessibles depuis Internet.
+Un sous-réseau est privé quand il n'a pas de route directe vers Internet. Les ressources dans un sous-réseau privé ne sont pas accessibles depuis Internet.
 
 Cas d'usage : bases de données, serveurs d'applications internes, caches.
 
 **NAT Gateway** :
 
-Pour qu'une ressource dans un sous-réseau prive puisse accéder a Internet (par exemple pour telecharger des mises à jour), tu utilises une NAT Gateway placee dans un sous-réseau public. La ressource prive envoie son trafic a la NAT Gateway, qui transmet la requête a Internet. La réponse revient par le meme chemin.
+Pour qu'une ressource dans un sous-réseau privé puisse accéder à Internet (par exemple pour télécharger des mises à jour), tu utilises une NAT Gateway placée dans un sous-réseau public. La ressource privée envoie son trafic à la NAT Gateway, qui transmet la requête à Internet. La réponse revient par le même chemin.
 
 ```text
 Internet
@@ -94,7 +94,7 @@ Sous-reseau prive (10.0.2.0/24)
 
 **Zones de disponibilité** :
 
-Chaque region cloud est divisee en plusieurs zones de disponibilité (AZ). Chaque AZ est un datacenter physiquement separe des autres. Pour la haute disponibilité, tu deploies tes sous-réseaux dans au moins deux AZ différentes.
+Chaque région cloud est divisée en plusieurs zones de disponibilité (AZ). Chaque AZ est un datacenter physiquement séparé des autres. Pour la haute disponibilité, tu déploies tes sous-réseaux dans au moins deux AZ différentes.
 
 | Region | Zones de disponibilité |
 | --- | --- |
@@ -107,7 +107,7 @@ Chaque region cloud est divisee en plusieurs zones de disponibilité (AZ). Chaqu
 
 **Security Group** :
 
-Un security group est un pare-feu virtuel qui controle le trafic entrant (inbound) et sortant (outbound) d'une ressource. Il fonctionne au niveau de l'instance (de la machine virtuelle ou du service).
+Un security group est un pare-feu virtuel qui contrôle le trafic entrant (inbound) et sortant (outbound) d'une ressource. Il fonctionne au niveau de l'instance (de la machine virtuelle ou du service).
 
 Règles par défaut :
 
@@ -118,20 +118,20 @@ Caractéristiques :
 
 - **Stateful** : si tu autorises le trafic entrant sur le port 80, les réponses sont automatiquement autorisées en sortie (pas besoin de règle outbound supplémentaire)
 - Tu autorises uniquement (pas de règle de refus explicite)
-- Tu peux referencer un autre security group comme source (au lieu d'une adresse IP)
+- Tu peux référencer un autre security group comme source (au lieu d'une adresse IP)
 
 Exemple de règles pour un serveur web :
 
 | Direction | Protocole | Port | Source | Description |
 | --- | --- | --- | --- | --- |
-| Inbound | TCP | 80 | 0.0.0.0/0 | HTTP depuis n'importe ou |
-| Inbound | TCP | 443 | 0.0.0.0/0 | HTTPS depuis n'importe ou |
+| Inbound | TCP | 80 | 0.0.0.0/0 | HTTP depuis n'importe où |
+| Inbound | TCP | 443 | 0.0.0.0/0 | HTTPS depuis n'importe où |
 | Inbound | TCP | 22 | 10.0.0.0/16 | SSH depuis le VPC uniquement |
 | Outbound | Tout | Tout | 0.0.0.0/0 | Tout le trafic sortant |
 
 **Network ACL** :
 
-Une Network ACL (Access Control List) est un pare-feu au niveau du sous-réseau. A la difference d'un security group, une Network ACL est **stateless** (tu dois définir les règles inbound ET outbound) et elle supporte les règles de refus explicite.
+Une Network ACL (Access Control List) est un pare-feu au niveau du sous-réseau. À la différence d'un security group, une Network ACL est **stateless** (tu dois définir les règles inbound ET outbound) et elle supporte les règles de refus explicite.
 
 **Comparaison Security Group vs Network ACL** :
 
@@ -147,7 +147,7 @@ Une Network ACL (Access Control List) est un pare-feu au niveau du sous-réseau.
 
 ### Load Balancers
 
-**Définition** : Un load balancer (equilibreur de charge) distribue le trafic entrant entre plusieurs instances backend. Il garantit la haute disponibilité (si une instance tombe, le trafic est redirige vers les autres) et ameliore les performances (la charge est repartie).
+**Définition** : Un load balancer (équilibreur de charge) distribue le trafic entrant entre plusieurs instances backend. Il garantit la haute disponibilité (si une instance tombe, le trafic est redirigé vers les autres) et améliore les performances (la charge est répartie).
 
 **Types de load balancers AWS** :
 
@@ -157,7 +157,7 @@ Une Network ACL (Access Control List) est un pare-feu au niveau du sous-réseau.
 | Network Load Balancer (NLB) | Couche 4 (TCP/UDP) | Performances extrêmes, trafic non-HTTP |
 | Gateway Load Balancer (GWLB) | Couche 3 | Appliances réseau (firewall, IDS) |
 
-L'ALB est le plus utilise. Il permet le routage base sur l'URL, les en-tetes HTTP, les cookies et le hostname.
+L'ALB est le plus utilisé. Il permet le routage basé sur l'URL, les en-têtes HTTP, les cookies et le hostname.
 
 ```text
 Client
@@ -175,7 +175,7 @@ ALB (port 443, HTTPS)
 
 **CDN (Content Delivery Network)** :
 
-Un CDN distribue tes fichiers statiques (images, CSS, JS) sur des serveurs repartis dans le monde entier (points de presence). Quand un utilisateur accede a ton site, il reçoit les fichiers depuis le serveur le plus proche, ce qui réduit la latence.
+Un CDN distribue tes fichiers statiques (images, CSS, JS) sur des serveurs répartis dans le monde entier (points de présence). Quand un utilisateur accède à ton site, il reçoit les fichiers depuis le serveur le plus proche, ce qui réduit la latence.
 
 | Fournisseur | Service CDN |
 | --- | --- |
@@ -185,7 +185,7 @@ Un CDN distribue tes fichiers statiques (images, CSS, JS) sur des serveurs repar
 
 **DNS manage** :
 
-Un service DNS manage heberge tes zones DNS avec une haute disponibilité et de faibles latences. Il est integre aux autres services cloud pour le routage automatique.
+Un service DNS managé héberge tes zones DNS avec une haute disponibilité et de faibles latences. Il est intégré aux autres services cloud pour le routage automatique.
 
 | Fournisseur | Service DNS |
 | --- | --- |
@@ -197,7 +197,7 @@ Un service DNS manage heberge tes zones DNS avec une haute disponibilité et de 
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer un VPC
+### Étape 1 : Créer un VPC
 
 ```bash
 # Creer un VPC avec le CIDR 10.0.0.0/16 (65 536 adresses)
@@ -228,7 +228,7 @@ Note la valeur de `VpcId`, tu en auras besoin dans les étapes suivantes.
 
 ---
 
-### Étape 2 : Creer des sous-réseaux
+### Étape 2 : Créer des sous-réseaux
 
 ```bash
 # Sous-reseau public dans la zone eu-west-3a
@@ -273,7 +273,7 @@ aws ec2 create-subnet \
 
 ---
 
-### Étape 3 : Creer une Internet Gateway
+### Étape 3 : Créer une Internet Gateway
 
 ```bash
 # Creer une Internet Gateway
@@ -334,7 +334,7 @@ aws ec2 associate-route-table \
 
 ---
 
-### Étape 5 : Creer un Security Group
+### Étape 5 : Créer un Security Group
 
 ```bash
 # Creer un security group pour un serveur web
@@ -433,25 +433,25 @@ Le VPC n'apparait plus dans la liste des VPCs.
 
 | Commande | Action |
 | --- | --- |
-| `aws ec2 create-vpc` | Creer un VPC |
+| `aws ec2 create-vpc` | Créer un VPC |
 | `aws ec2 describe-vpcs` | Lister les VPCs |
-| `aws ec2 create-subnet` | Creer un sous-réseau |
-| `aws ec2 create-internet-gateway` | Creer une Internet Gateway |
-| `aws ec2 create-security-group` | Creer un security group |
+| `aws ec2 create-subnet` | Créer un sous-réseau |
+| `aws ec2 create-internet-gateway` | Créer une Internet Gateway |
+| `aws ec2 create-security-group` | Créer un security group |
 | `aws ec2 authorize-security-group-ingress` | Ajouter une règle inbound |
 | `aws ec2 describe-security-groups` | Lister les règles d'un security group |
-| `aws ec2 create-route-table` | Creer une table de routage |
+| `aws ec2 create-route-table` | Créer une table de routage |
 | `aws ec2 create-route` | Ajouter une route |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Ouvrir le port 22 (SSH) au monde entier
 
-**Problème** : Tu autorises le SSH depuis `0.0.0.0/0` (toutes les adresses IP). Des robots tentent en permanence des connexions SSH par brute-force sur toutes les machines exposees.
+**Problème** : Tu autorises le SSH depuis `0.0.0.0/0` (toutes les adresses IP). Des robots tentent en permanence des connexions SSH par brute-force sur toutes les machines exposées.
 
-**Solution** : Restreins le SSH a ton adresse IP ou au CIDR de ton VPC. Utilise un bastion host dans un sous-réseau public pour accéder aux machines dans les sous-réseaux prives.
+**Solution** : Restreins le SSH à ton adresse IP ou au CIDR de ton VPC. Utilise un bastion host dans un sous-réseau public pour accéder aux machines dans les sous-réseaux privés.
 
 ```bash
 # Autoriser le SSH uniquement depuis ton IP
@@ -462,25 +462,25 @@ aws ec2 authorize-security-group-ingress \
   --cidr $(curl -s https://checkip.amazonaws.com)/32
 ```
 
-### Piège 2 : Oublier la NAT Gateway pour les sous-réseaux prives
+### Piège 2 : Oublier la NAT Gateway pour les sous-réseaux privés
 
-**Problème** : Tes instances dans le sous-réseau prive ne peuvent pas accéder a Internet. Les mises à jour système echouent, les telechargements de paquets bloquent.
+**Problème** : Tes instances dans le sous-réseau privé ne peuvent pas accéder à Internet. Les mises à jour système échouent, les téléchargements de paquets bloquent.
 
-**Solution** : Créé une NAT Gateway dans un sous-réseau public et ajoute une route dans la table de routage du sous-réseau prive pointant vers cette NAT Gateway. Attention : la NAT Gateway est facturee (~0,045 USD/heure + trafic).
+**Solution** : Crée une NAT Gateway dans un sous-réseau public et ajoute une route dans la table de routage du sous-réseau privé pointant vers cette NAT Gateway. Attention : la NAT Gateway est facturée (~0,045 USD/heure + trafic en `us-east-1` ; environ 0,048 USD/heure en `eu-west-3`).
 
 ### Piège 3 : Un seul sous-réseau dans une seule AZ
 
 **Problème** : Toutes tes ressources sont dans une seule zone de disponibilité. Si cette AZ tombe en panne (rare mais possible), toute ton application est hors ligne.
 
-**Solution** : Deploie tes sous-réseaux dans au moins deux zones de disponibilité. Utilise un load balancer pour distribuer le trafic entre les AZ.
+**Solution** : Déploie tes sous-réseaux dans au moins deux zones de disponibilité. Utilise un load balancer pour distribuer le trafic entre les AZ.
 
 ---
 
 ## Checklist de Validation
 
 - [ ] Je sais ce qu'est un VPC et pourquoi il est nécessaire
-- [ ] Je distingue sous-réseau public et sous-réseau prive
-- [ ] Je sais configurer un security group avec des règles appropriees
+- [ ] Je distingue sous-réseau public et sous-réseau privé
+- [ ] Je sais configurer un security group avec des règles appropriées
 - [ ] Je comprends le rôle de l'Internet Gateway et de la NAT Gateway
 - [ ] Je connais la difference entre security group et Network ACL
 - [ ] Je comprends le rôle d'un load balancer et d'un CDN
@@ -489,19 +489,19 @@ aws ec2 authorize-security-group-ingress \
 
 ## Exercice Pratique
 
-**Enonce** : Dessine l'architecture réseau d'une application web classique avec les composants suivants :
+**Énoncé** : Dessine l'architecture réseau d'une application web classique avec les composants suivants :
 
 - Un VPC avec le CIDR `10.0.0.0/16`
 - Deux zones de disponibilité
-- Dans chaque AZ : un sous-réseau public et un sous-réseau prive
+- Dans chaque AZ : un sous-réseau public et un sous-réseau privé
 - Un Application Load Balancer dans les sous-réseaux publics
 - Deux instances web dans les sous-réseaux publics
-- Une base de données dans un sous-réseau prive
+- Une base de données dans un sous-réseau privé
 - Les security groups nécessaires
 
 Pour chaque composant, indique :
 
-- Son sous-réseau (public ou prive)
+- Son sous-réseau (public ou privé)
 - Son security group (quels ports ouverts, depuis quelle source)
 
 **Indications** :
@@ -516,7 +516,7 @@ Pour chaque composant, indique :
 
 ## Solution de l'Exercice
 
-> **Note** : Cette section contient la solution complete. Essaie d'abord de résoudre l'exercice par toi-meme avant de consulter cette solution.
+> **Note** : Cette section contient la solution complète. Essaie d'abord de résoudre l'exercice par toi-même avant de consulter cette solution.
 
 ---
 
@@ -555,7 +555,7 @@ Tableau des security groups :
 Explications :
 
 - **sg-alb** : Le load balancer accepte le HTTPS depuis Internet. C'est le seul point d'entrée public.
-- **sg-web** : Les instances web acceptent le HTTP uniquement depuis le load balancer (référence au security group sg-alb, pas a une IP). Le SSH est restreint au VPC pour l'administration.
+- **sg-web** : Les instances web acceptent le HTTP uniquement depuis le load balancer (référence au security group sg-alb, pas à une IP). Le SSH est restreint au VPC pour l'administration.
 - **sg-bdd** : La base de données accepte les connexions PostgreSQL uniquement depuis les instances web (référence au security group sg-web). Aucun accès depuis Internet.
 
 ---

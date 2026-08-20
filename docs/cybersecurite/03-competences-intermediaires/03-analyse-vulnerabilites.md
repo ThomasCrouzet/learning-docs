@@ -613,7 +613,7 @@ gvm-cli --gmp-username admin --gmp-password MOTDEPASSE \
 ```text
 Vulnerability                          | Severity | CVSS  | Host
 ---------------------------------------|----------|-------|------------------
-Apache HTTP Server < 2.4.58 - Multiple | High     | 8.1   | 192.168.1.100
+Apache HTTP Server < 2.4.58 - Multiple | High     | 7.5   | 192.168.1.100
 MySQL 8.0.x < 8.0.37 - Auth Bypass    | High     | 7.5   | 192.168.1.100
 OpenSSH < 9.6 - Terrapin Attack       | Medium   | 5.9   | 192.168.1.100
 SSL/TLS: Certificate Expired           | Medium   | 5.0   | 192.168.1.100
@@ -631,7 +631,7 @@ Un rapport de vulnérabilités doit contenir les éléments suivants pour chaque
 
 ### Vulnérabilité 1 : Apache HTTP Server < 2.4.58
 
-- **Sévérité** : High (CVSS 8.1)
+- **Sévérité** : High (CVSS 7.5)
 - **CVE** : CVE-2023-44487
 - **Service affecté** : Apache/2.4.57 sur le port 80/443
 - **Description** : Le serveur Apache est vulnérable à l'attaque HTTP/2 Rapid Reset

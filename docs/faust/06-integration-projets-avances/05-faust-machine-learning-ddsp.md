@@ -206,7 +206,7 @@ Sans faust2pytorch, voici les problèmes rencontrés :
 **Ce que faust2pytorch n'est PAS** :
 
 - `faust2pytorch` n'est pas un convertisseur de code Faust en Python. Le code Faust reste compilé en C++ natif. Seule l'interface est exposée à Python/PyTorch.
-- `faust2pytorch` n'est pas un outil de production stable (en 2025). C'est un outil de recherche en développement actif. L'API et les fonctionnalités peuvent évoluer.
+- `faust2pytorch` n'est pas un outil de production stable (en 2026). C'est un outil de recherche en développement actif. L'API et les fonctionnalités peuvent évoluer.
 
 ---
 
@@ -889,7 +889,7 @@ soft_clipper(x) = ma.tanh(x);
 
 ## Exercice Pratique
 
-**Enonce** : Concevoir (sur papier) un système DDSP pour la modélisation d'un ampli guitare vintage.
+**Énoncé** : Concevoir (sur papier) un système DDSP pour la modélisation d'un ampli guitare vintage.
 
 **Cahier des charges** :
 

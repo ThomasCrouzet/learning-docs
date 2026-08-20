@@ -707,28 +707,26 @@ Premier succès: Serveur 2
 
 ## Pièges Fréquents
 
-### Piège 1 : await hors d'une fonction async
+### Piège 1 : await hors d'une fonction async (CommonJS)
 
-⚠️ **Problème** : `await` utilisé en dehors d'une fonction async.
+⚠️ **Problème** : Dans un fichier CommonJS (sans `"type": "module"`), `await` au niveau supérieur lève une erreur de syntaxe.
 
 ```javascript
-// ❌ Erreur
+// ❌ Erreur en CommonJS (scripts .cjs ou package.json sans "type": "module")
 const data = await fetchData();
 ```
 
-✅ **Solution** : Encapsuler dans une fonction async ou utiliser une IIFE.
+✅ **Solution** : Encapsuler dans une fonction async, ou passer en module ES.
 
 ```javascript
-// ✅ Fonction async
+// ✅ Fonction async (fonctionne partout)
 async function main() {
     const data = await fetchData();
 }
 main();
 
-// ✅ Ou IIFE (Immediately Invoked Function Expression)
-(async () => {
-    const data = await fetchData();
-})();
+// ✅ Top-level await : autorisé dans les modules ES (cette fiche utilise "type": "module")
+const data = await fetchData();
 ```
 
 ---

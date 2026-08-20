@@ -51,6 +51,7 @@ Sans ts-node, voici les problèmes rencontrés :
 
 - ts-node n'est pas pour la production. En production, on compile avec `tsc` et on exécute le JavaScript compilé pour de meilleures performances.
 - ts-node n'est pas un bundler. Il ne regroupe pas les fichiers ni ne les optimise.
+- ts-node n'est pas le seul moyen d'exécuter du `.ts`. Depuis Node.js 22.18, `node fichier.ts` strippe la syntaxe TypeScript effaçable. La documentation Node.js présente `tsx` comme exemple d'exécuteur pour une prise en charge complète (enums, namespaces, `tsconfig.json`).
 
 ---
 
@@ -83,7 +84,7 @@ Sans tsx, voici les problèmes rencontrés :
 | Compilateur TypeScript standard | Compilateur esbuild (plus rapide) |
 | Vérifie les types à l'exécution (optionnel) | Ne vérifie pas les types (vitesse) |
 | Configuration plus complexe | Fonctionne sans configuration |
-| Plus ancien, très utilisé | Plus récent, en adoption croissante |
+| Plus ancien, très utilisé | Plus récent ; exemple officiel Node pour le TypeScript complet |
 
 ---
 
@@ -358,11 +359,13 @@ mkdir -p src/models
 
 ### Étape 5 : Exécuter et compiler
 
-Exécute en mode développement avec tsx :
+Exécute en mode développement avec tsx (rechargement automatique) :
 
 ```bash
-npm run dev:ts-node
+npm run dev
 ```
+
+Pour une exécution unique sans watch, `npm run dev:ts-node` lance `ts-node`. Sur Node.js 22.18+, `node src/index.ts` suffit si le code n'utilise que de la syntaxe TypeScript effaçable (pas d'`enum` ni de namespace avec du code).
 
 **Résultat attendu** :
 
@@ -445,6 +448,7 @@ src/index.ts(5,10): error TS2322: Type 'string' is not assignable to type 'numbe
 | `npm run dev:ts-node` | Exécution directe avec ts-node |
 | `npm run lint` | Vérifie les types sans compiler |
 | `npx tsc --showConfig` | Affiche la configuration TypeScript complète |
+| `node src/index.ts` | Type stripping natif (Node.js 22.18+, syntaxe effaçable uniquement) |
 
 ---
 

@@ -59,7 +59,7 @@ Sans interfaces, voici les problèmes rencontrés :
 **Ce qu'une interface n'est PAS** :
 
 - Une interface n'est pas une classe. Elle ne peut pas être instanciée (`new MonInterface()` provoque une erreur).
-- Une interface ne contenait historiquement pas de code. Depuis PHP 8.1 elle peut avoir des constantes, et depuis PHP 8.4 des méthodes avec corps par défaut. Ne dis pas « jamais de code » sans borner la version.
+- Une interface n'a pas de corps de méthode. Les constantes d'interface existent depuis PHP 5. Depuis PHP 8.1, une classe peut redéfinir une constante héritée d'une interface. Depuis PHP 8.4, une interface peut déclarer des propriétés (hooks `get`/`set`). La RFC « Interface Default Methods » (corps de méthode) a été déclinée : ce n'est pas une fonctionnalité de PHP 8.4.
 
 ---
 
@@ -327,9 +327,9 @@ $sms->send('Code : 1234');
 | Caractéristique | Interface | Classe abstraite |
 | --------------- | --------- | ---------------- |
 | Mot-clé | `interface` | `abstract class` |
-| Code dans les méthodes | Non (jamais) | Oui (méthodes concrètes) |
-| Propriétés | Non (sauf constantes) | Oui |
-| Constructeur | Non | Oui |
+| Code dans les méthodes | Non (jamais : RFC default methods déclinée) | Oui (méthodes concrètes) |
+| Propriétés | Constantes ; depuis PHP 8.4 aussi des propriétés (`get`/`set`) | Oui |
+| Constructeur | Possible mais fortement déconseillé (manuel PHP) | Oui |
 | Héritage multiple | Oui (`implements A, B, C`) | Non (un seul `extends`) |
 | Instanciation | Non | Non |
 | Utilisation | Définir un contrat | Partager du code + forcer des méthodes |

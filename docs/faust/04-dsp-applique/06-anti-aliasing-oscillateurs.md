@@ -115,7 +115,7 @@ $$f_{alias} = f_{e} - f \quad \text{(pour } f_{Nyquist} < f < f_e\text{)}$$
 
 ### Qu'est-ce qu'un oscillateur band-limited ?
 
-**Définition** : Un oscillateur band-limited (à bande limitée) est un oscillateur conçu pour ne produire aucune harmonique au-dessus de la fréquence de Nyquist. Il "lisse" les transitions brutales pour supprimer les fréquences qui causeraient de l'aliasing. En Faust, `os.sawtooth`, `os.square` et `os.triangle` sont band-limited.
+**Définition** : Un oscillateur band-limited (à bande limitée) est un oscillateur conçu pour ne produire aucune harmonique au-dessus de la fréquence de Nyquist. Il "lisse" les transitions brutales pour supprimer les fréquences qui causeraient de l'aliasing. En Faust, `os.sawtooth`, `os.square` et `os.triangle` sont band-limited (famille DPW : `saw2`, `squareN(2)`, `triangleN(2)`).
 
 **Le problème que les oscillateurs band-limited résolvent** :
 
@@ -142,33 +142,32 @@ $$f_{alias} = f_{e} - f \quad \text{(pour } f_{Nyquist} < f < f_e\text{)}$$
 
 ### Quelles techniques rendent un oscillateur band-limited ?
 
-**Définition** : Deux familles de techniques permettent de limiter la bande d'un oscillateur : la synthèse additive bandlimitée (`sawN`, somme contrôlée d'harmoniques) et la correction de discontinuité par PolyBLEP (Polynomial Band-Limited Step).
+**Définition** : Faust propose deux familles d'oscillateurs audio à bande limitée : la famille DPW (`sawN`, `sawtooth`, `square`, `triangle`) et la famille PolyBLEP (`polyblep_saw`, `polyblep_square`, `polyblep_triangle`). Ce ne sont pas les mêmes fonctions.
 
-**La famille `sawN` (synthèse additive bandlimitée)** :
+**La famille DPW (`sawN`, `sawtooth`)** :
 
-`os.sawN(N, freq)` construit une dent de scie en additionnant exactement `N` harmoniques. Comme on contrôle le nombre d'harmoniques, on s'arrête avant Nyquist.
+`os.sawN(N, freq)` construit une dent de scie anti-aliasée par la méthode DPW (Differentiated Polynomial Waveform). `N` n'est **pas** un nombre d'harmoniques : c'est l'ordre polynomial, une constante de compilation comprise entre 1 et 4. `os.sawtooth(freq)` est un alias de `os.saw2` (donc `sawN` d'ordre 2). `os.square` et `os.triangle` sont des `squareN(2)` et `triangleN(2)`.
 
 | Paramètre | Rôle |
 | --------- | ---- |
-| `N` | Nombre d'harmoniques additionnées (constante connue à la compilation) |
+| `N` | Ordre polynomial DPW (constante 1, 2, 3 ou 4) |
 | `freq` | Fréquence fondamentale en Hz |
 
-Plus `N` est grand, plus la forme d'onde est riche et fidèle, mais plus le calcul est coûteux.
+Plus `N` est grand (jusqu'à 4), plus l'anti-aliasing est fort, mais plus le calcul est coûteux. Un appel `os.sawN(16, freq)` ou `os.sawN(32, freq)` ne compile pas.
 
 **La technique PolyBLEP (Polynomial Band-Limited Step)** :
 
-PolyBLEP corrige les discontinuités de la forme d'onde. À chaque saut brutal (le retour à zéro de la dent de scie, par exemple), PolyBLEP ajoute une petite correction polynomiale qui adoucit le saut juste assez pour supprimer l'aliasing. C'est la technique utilisée en interne par `os.sawtooth`, `os.square` et `os.triangle`.
+PolyBLEP corrige les discontinuités de la forme d'onde. À chaque saut brutal, elle ajoute une petite correction polynomiale. En Faust, cela correspond aux fonctions `os.polyblep_saw`, `os.polyblep_square` et `os.polyblep_triangle`. Ce n'est **pas** l'implémentation interne de `os.sawtooth`.
 
 **Comparaison des deux techniques** :
 
-| Synthèse additive (`sawN`) | PolyBLEP (`os.sawtooth`) |
-| -------------------------- | ------------------------ |
-| Additionne N harmoniques explicites | Corrige les discontinuités localement |
-| Coût proportionnel à N | Coût quasi constant |
-| Spectre exactement contrôlé | Spectre très proche de l'idéal |
-| Utile en pédagogie et cas spéciaux | Choix par défaut recommandé |
+| DPW (`os.sawtooth` = `saw2`) | PolyBLEP (`os.polyblep_saw`) |
+| ---------------------------- | ---------------------------- |
+| Polynôme différencié d'ordre 1 à 4 | Corrige les discontinuités localement |
+| `os.sawN(N, freq)` avec N ∈ {1,2,3,4} | Coût quasi constant |
+| Choix par défaut (`os.sawtooth`) | Variante alternative, fonctions séparées |
 
-**Analogie concrète** : La synthèse additive `sawN` est comme construire une vague en empilant des planches de tailles décroissantes : tu décides combien de planches tu poses (le nombre d'harmoniques). PolyBLEP est comme poncer uniquement les coins qui dépassent : tu ne touches qu'aux endroits problématiques (les discontinuités), ce qui est plus économique.
+**Analogie concrète** : DPW `sawN` est comme adoucir toute la rampe avec un outil d'ordre choisi (1 à 4). PolyBLEP est comme poncer uniquement les coins qui dépassent : tu ne touches qu'aux discontinuités. Les deux réduisent l'aliasing, mais ce sont deux outils distincts dans `oscillators.lib`.
 
 ---
 
@@ -186,7 +185,7 @@ PolyBLEP corrige les discontinuités de la forme d'onde. À chaque saut brutal (
 
 | Catégorie | Fonctions | Band-limited | Plage d'usage | Sortie |
 | --------- | --------- | ------------ | ------------- | ------ |
-| Audio | `os.sawtooth`, `os.square`, `os.triangle` | Oui (PolyBLEP) | 20 à 20000 Hz | -1 à +1 |
+| Audio | `os.sawtooth`, `os.square`, `os.triangle` | Oui (DPW / `saw2`, `squareN(2)`, `triangleN(2)`) | 20 à 20000 Hz | -1 à +1 |
 | LFO | `os.lf_saw`, `os.lf_squarewave`, `os.lf_triangle` | Non | 0.01 à 20 Hz | -1 à +1 (bipolaire) |
 | Table sinus | `os.osc` | Sans objet (pas d'harmonique) | Toute fréquence | -1 à +1 |
 
@@ -220,8 +219,9 @@ Conversion d'un LFO bipolaire (-1 à +1) vers unipolaire (0 à 1) :
 | ----------- | ---------------- | -------- | ---------------- |
 | `os.lf_saw`, `os.lf_squarewave`, `os.lf_triangle` | Très faible | Présent (inaudible sous 20 Hz) | Modulation (LFO) uniquement |
 | `os.osc` (table sinus) | Faible | Aucun | Sinusoïdes, LFO sinus, sous-oscillateur |
-| `os.sawtooth`, `os.square`, `os.triangle` (PolyBLEP) | Modéré | Quasi nul | Oscillateurs audio (choix par défaut) |
-| `os.sawN(N, freq)` avec N élevé | Élevé (croît avec N) | Aucun jusqu'à N harmoniques | Cas spéciaux, spectre contrôlé |
+| `os.sawtooth`, `os.square`, `os.triangle` (DPW ordre 2) | Modéré | Quasi nul | Oscillateurs audio (choix par défaut) |
+| `os.polyblep_saw`, `os.polyblep_square`, `os.polyblep_triangle` | Modéré | Quasi nul | Variante PolyBLEP (fonctions séparées) |
+| `os.sawN(N, freq)` avec N = 1 à 4 | Croît avec N | Meilleur anti-aliasing si N augmente | Réglage de l'ordre DPW (pas un nombre d'harmoniques) |
 
 **Règles de décision** :
 
@@ -233,10 +233,11 @@ Conversion d'un LFO bipolaire (-1 à +1) vers unipolaire (0 à 1) :
    → OUI : os.osc (pas d'aliasing, peu coûteux)
 
 3. Le signal est-il un oscillateur audio riche (scie, carré, triangle) ?
-   → OUI : os.sawtooth / os.square / os.triangle (band-limited par défaut)
+   → OUI : os.sawtooth / os.square / os.triangle (DPW ordre 2, choix par défaut)
 
-4. As-tu besoin d'un contrôle exact du nombre d'harmoniques ?
-   → OUI : os.sawN(N, freq) en ajustant N
+4. As-tu besoin d'un ordre DPW différent, ou d'une variante PolyBLEP ?
+   → os.sawN(N, freq) avec N = 1, 2, 3 ou 4
+   → ou os.polyblep_saw / os.polyblep_square / os.polyblep_triangle
 ```
 
 **Analogie concrète** : Le compromis CPU/qualité est comme le choix de la résolution d'une photo. Une photo en très haute résolution (oscillateur précis) est magnifique mais occupe beaucoup d'espace (CPU). Pour une vignette d'aperçu (un LFO), une basse résolution suffit largement. Tu adaptes la qualité à l'usage réel.
@@ -331,9 +332,9 @@ faust2jaqt oscillateurs_bandlimited.dsp
 
 ---
 
-### Étape 3 : Utiliser sawN pour contrôler le nombre d'harmoniques
+### Étape 3 : Comparer les ordres DPW de sawN
 
-On utilise `os.sawN` pour entendre l'effet du nombre d'harmoniques sur le timbre.
+On utilise `os.sawN` pour entendre l'effet de l'ordre polynomial (1 à 4), pas un nombre d'harmoniques.
 
 ```faust
 // Fichier : sawN_demo.dsp
@@ -342,15 +343,14 @@ import("stdfaust.lib");
 freq = hslider("freq [unit:Hz]", 220, 50, 2000, 0.1);
 gain = hslider("gain", 0.3, 0, 1, 0.01);
 
-// os.sawN(N, freq) additionne exactement N harmoniques.
-// N doit etre une constante connue a la compilation : on definit
-// donc plusieurs versions et on bascule entre elles.
-saw_4   = os.sawN(4, freq);    // 4 harmoniques : son pauvre, proche du sinus
-saw_16  = os.sawN(16, freq);   // 16 harmoniques : son plus riche
-saw_64  = os.sawN(64, freq);   // 64 harmoniques : son tres brillant
+// os.sawN(N, freq) : N = ordre DPW (constante 1, 2, 3 ou 4).
+// N=1 est proche d'une scie naive ; N=2 est os.sawtooth ; N=4 anti-aliase plus fort.
+saw_1 = os.sawN(1, freq);
+saw_2 = os.sawN(2, freq);
+saw_4 = os.sawN(4, freq);
 
-choix = nentry("harmoniques [style:menu{'4':0;'16':1;'64':2}]", 1, 0, 2, 1);
-oscillateur = select3(choix, saw_4, saw_16, saw_64);
+choix = nentry("ordre DPW [style:menu{'1':0;'2':1;'4':2}]", 1, 0, 2, 1);
+oscillateur = select3(choix, saw_1, saw_2, saw_4);
 
 process = oscillateur * gain;
 
@@ -368,10 +368,10 @@ faust2jaqt sawN_demo.dsp
 **Résultat attendu** :
 
 ```text
-- 4 harmoniques : son doux, presque une sinusoide enrichie
-- 16 harmoniques : son plus brillant, on entend le caractere "scie"
-- 64 harmoniques : son tres brillant et riche
-- A 220 Hz, 64 harmoniques montent jusqu'a 14080 Hz (sous Nyquist) : pas d'aliasing
+- Ordre 1 : anti-aliasing faible, plus d'artefacts dans les aigus
+- Ordre 2 (= os.sawtooth) : compromis par defaut
+- Ordre 4 : anti-aliasing plus fort, un peu plus de CPU
+- Un N hors {1,2,3,4} (par exemple 16 ou 32) ne compile pas
 ```
 
 ---
@@ -435,7 +435,7 @@ process = (os.phasor(1, 440) * 2 - 1) * 0.3;
 ```faust
 // Fichier : cout_bandlimited.dsp
 import("stdfaust.lib");
-// Version band-limited : PolyBLEP integre
+// Version band-limited : DPW (os.sawtooth = saw2)
 process = os.sawtooth(440) * 0.3;
 ```
 
@@ -450,7 +450,7 @@ wc -l naive.cpp bandlimited.cpp
 
 ```text
 - naive.cpp        : code court (peu d'operations par echantillon)
-- bandlimited.cpp  : code plus long (PolyBLEP ajoute des calculs)
+- bandlimited.cpp  : code plus long (DPW ajoute des calculs)
 
 La version band-limited genere davantage de code et consomme plus de CPU,
 mais elle supprime l'aliasing. Pour un oscillateur audio, ce surcout est justifie.
@@ -464,10 +464,11 @@ Pour un LFO, il ne l'est pas.
 | Commande / Expression Faust | Action |
 | --------------------------- | ------ |
 | `os.osc(freq)` | Oscillateur sinusoïdal (table sinus, aucun aliasing) |
-| `os.sawtooth(freq)` | Dent de scie band-limited (PolyBLEP) |
-| `os.square(freq)` | Carré band-limited (PolyBLEP) |
-| `os.triangle(freq)` | Triangle band-limited (PolyBLEP) |
-| `os.sawN(N, freq)` | Dent de scie additive à N harmoniques exactes |
+| `os.sawtooth(freq)` | Dent de scie band-limited (alias de `saw2`, DPW) |
+| `os.square(freq)` | Carré band-limited (`squareN(2)`) |
+| `os.triangle(freq)` | Triangle band-limited (`triangleN(2)`) |
+| `os.sawN(N, freq)` | Dent de scie DPW d'ordre N (N = 1, 2, 3 ou 4) |
+| `os.polyblep_saw(freq)` | Dent de scie anti-aliasée par PolyBLEP |
 | `os.lf_saw(freq)` | Dent de scie LFO non band-limited (bipolaire -1/+1) |
 | `os.lf_squarewave(freq)` | Carré LFO non band-limited (bipolaire -1/+1) |
 | `os.lf_triangle(freq)` | Triangle LFO non band-limited (bipolaire -1/+1) |
@@ -543,20 +544,20 @@ process = os.sawtooth(6000) : fi.lowpass(4, 10000);
 
 ---
 
-### Piège 5 : Passer une variable comme N à os.sawN
+### Piège 5 : Passer une variable ou un N > 4 à os.sawN
 
-⚠️ **Problème** : `os.sawN(N, freq)` exige que `N` soit une constante connue à la compilation. Passer un `hslider` comme `N` provoque une erreur de compilation.
+⚠️ **Problème** : `os.sawN(N, freq)` exige que `N` soit une constante de compilation égale à 1, 2, 3 ou 4. Un `hslider` comme `N`, ou un N du type 16 / 32 / 64, provoque une erreur de compilation. `N` n'est pas un nombre d'harmoniques.
 
-✅ **Solution** : Définir plusieurs versions avec des `N` constants et basculer entre elles avec `select2` / `select3`.
+✅ **Solution** : Utiliser uniquement les ordres 1 à 4, et basculer entre versions constantes avec `select2` / `select3`.
 
 ```faust
-// Probleme : N variable interdit
-n = hslider("harmoniques", 16, 1, 64, 1);
+// Probleme : N variable, et hors de 1..4
+n = hslider("ordre", 16, 1, 64, 1);
 process = os.sawN(n, 220);   // erreur de compilation
 
-// Solution : N constants + selection
-choix = nentry("h [style:menu{'8':0;'32':1}]", 0, 0, 1, 1);
-process = select2(choix, os.sawN(8, 220), os.sawN(32, 220)) * 0.3;
+// Solution : N constants dans {1,2,3,4} + selection
+choix = nentry("h [style:menu{'2':0;'4':1}]", 0, 0, 1, 1);
+process = select2(choix, os.sawN(2, 220), os.sawN(4, 220)) * 0.3;
 ```
 
 ---
@@ -574,11 +575,12 @@ process = select2(choix, os.sawN(8, 220), os.sawN(32, 220)) * 0.3;
 - [ ] Je sais que la fréquence de Nyquist vaut la moitié de la fréquence d'échantillonnage
 - [ ] Je sais expliquer le repliement spectral (aliasing) avec la formule `f_alias = f_e - f`
 - [ ] Je comprends pourquoi une dent de scie naïve produit de l'aliasing (discontinuité brutale)
-- [ ] Je sais que `os.sawtooth`, `os.square`, `os.triangle` sont band-limited (PolyBLEP)
+- [ ] Je sais que `os.sawtooth`, `os.square`, `os.triangle` sont band-limited (DPW / `saw2`, `squareN(2)`, `triangleN(2)`)
 - [ ] Je sais que `os.lf_saw`, `os.lf_squarewave`, `os.lf_triangle` sont des LFO non band-limited et bipolaires (-1 à +1)
 - [ ] Je sais que `os.osc` ne produit jamais d'aliasing (pas d'harmonique à replier)
 - [ ] Je sais convertir un LFO bipolaire en unipolaire avec `* 0.5 + 0.5`
-- [ ] Je connais la famille `os.sawN(N, freq)` et le fait que `N` doit être une constante
+- [ ] Je connais `os.sawN(N, freq)` : `N` est l'ordre DPW (constante 1 à 4), pas un nombre d'harmoniques
+- [ ] Je sais que PolyBLEP correspond à `os.polyblep_saw` (et non à `os.sawtooth`)
 - [ ] Je sais choisir l'oscillateur adapté selon le compromis CPU/qualité
 - [ ] Je comprends qu'un filtre après coup ne supprime pas l'aliasing déjà replié
 
@@ -589,8 +591,8 @@ process = select2(choix, os.sawN(8, 220), os.sawN(32, 220)) * 0.3;
 **Énoncé** : Crée un programme Faust qui démontre l'effet de l'aliasing en montant progressivement en fréquence, et qui propose un comparatif A/B entre trois sources :
 
 1. Une dent de scie naïve (construite avec `os.phasor`)
-2. Une dent de scie band-limited (`os.sawtooth`)
-3. Une dent de scie additive à 32 harmoniques (`os.sawN`)
+2. Une dent de scie band-limited DPW (`os.sawtooth`)
+3. Une dent de scie PolyBLEP (`os.polyblep_saw`)
 
 Le programme doit permettre de basculer entre les trois sources et de balayer la fréquence de 1000 Hz à 12000 Hz.
 
@@ -620,7 +622,7 @@ import("stdfaust.lib");
 // === Parametres d'interface ===
 freq = hslider("[0]freq [unit:Hz]", 1000, 1000, 12000, 1) : si.smoo;
 gain = hslider("[1]gain", 0.2, 0, 1, 0.01) : si.smoo;
-source = nentry("[2]source [style:menu{'naive':0;'band-limited':1;'additive 32':2}]",
+source = nentry("[2]source [style:menu{'naive':0;'DPW sawtooth':1;'PolyBLEP':2}]",
     1, 0, 2, 1);
 
 // === Source 1 : dent de scie NAIVE ===
@@ -628,15 +630,15 @@ source = nentry("[2]source [style:menu{'naive':0;'band-limited':1;'additive 32':
 // Le retour brutal de 1 a 0 cree une discontinuite : aliasing garanti.
 naive_saw = os.phasor(1, freq) * 2 - 1;
 
-// === Source 2 : dent de scie band-limited (PolyBLEP) ===
+// === Source 2 : dent de scie band-limited DPW (os.sawtooth = saw2) ===
 bl_saw = os.sawtooth(freq);
 
-// === Source 3 : dent de scie additive a 32 harmoniques ===
-// N = 32 est une constante connue a la compilation.
-additive_saw = os.sawN(32, freq);
+// === Source 3 : dent de scie PolyBLEP ===
+// os.polyblep_saw est une fonction distincte de os.sawtooth (DPW).
+polyblep_saw = os.polyblep_saw(freq);
 
 // === Selection entre les trois sources ===
-chosen = select3(source, naive_saw, bl_saw, additive_saw);
+chosen = select3(source, naive_saw, bl_saw, polyblep_saw);
 
 process = chosen * gain;
 
@@ -660,12 +662,9 @@ faust2jaqt comparatif_aliasing.dsp
     des frequences parasites apparaissent et descendent quand la note monte
     (effet "metallique" caracteristique de l'aliasing)
 
-- Source "band-limited" : son propre sur toute la plage, brillant mais musical
+- Source "DPW sawtooth" : son propre sur toute la plage, brillant mais musical
 
-- Source "additive 32" : son propre tant que 32 harmoniques restent sous Nyquist.
-    A 1000 Hz, la 32e harmonique vaut 32000 Hz : au-dela de Nyquist (24000 Hz),
-    quelques harmoniques hautes sont coupees, mais sans aliasing
-    (os.sawN s'arrete proprement, il ne replie pas)
+- Source "PolyBLEP" : son propre sur toute la plage (correction locale des sauts)
 
 Conclusion : la version naive est la seule a produire de l'aliasing audible.
 Les deux autres sont propres, avec un cout CPU plus eleve.
@@ -674,7 +673,7 @@ Les deux autres sont propres, avec un cout CPU plus eleve.
 **Points à observer dans la solution** :
 
 - La source naïve utilise `os.phasor` comme brique de base, ce qui montre concrètement d'où vient l'aliasing (la discontinuité du retour à zéro).
-- `os.sawN(32, freq)` utilise une constante `32` : on ne peut pas y passer un slider.
+- `os.polyblep_saw` est la variante PolyBLEP ; `os.sawtooth` reste du DPW (`saw2`). `os.sawN` n'accepte que N = 1, 2, 3 ou 4.
 - Le gain démarre bas (0.2) et est lissé avec `si.smoo` pour éviter les clics au changement de valeur.
 - L'effet est le plus spectaculaire dans les aigus : à 1000 Hz la différence est subtile, à 12000 Hz elle est évidente.
 

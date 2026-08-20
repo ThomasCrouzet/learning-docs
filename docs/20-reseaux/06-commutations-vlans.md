@@ -83,7 +83,7 @@ Sans commutation, voici les problèmes rencontres :
 (fabricant) (identifiant unique)
 ```
 
-- **OUI (Organizationally Unique Identifier)** : les 3 premiers octets identifient le fabricant. `08:00:27` = Oracle (VirtualBox).
+- **OUI (Organizationally Unique Identifier)** : les 3 premiers octets identifient le titulaire IEEE du préfixe. `08:00:27` est le préfixe utilisé par VirtualBox ; le registre IEEE MA-L l'assigne à PCS Systemtechnik GmbH, pas à Oracle.
 - **NIC (Network Interface Controller)** : les 3 derniers octets sont un identifiant unique attribue par le fabricant.
 
 **Adresses MAC speciales** :
@@ -594,7 +594,7 @@ ip link show
 2: eth0: link/ether 08:00:27:ab:cd:ef
 ```
 
-Réponse : L'interface `lo` a l'adresse `00:00:00:00:00:00` (loopback, pas de vraie MAC). L'interface `eth0` a l'adresse `08:00:27:ab:cd:ef` (tes valeurs seront différentes). Les 3 premiers octets (`08:00:27`) identifient le fabricant.
+Réponse : L'interface `lo` a l'adresse `00:00:00:00:00:00` (loopback, pas de vraie MAC). L'interface `eth0` a l'adresse `08:00:27:ab:cd:ef` (tes valeurs seront différentes). Les 3 premiers octets (`08:00:27`) sont l'OUI : ici le préfixe VirtualBox, enregistré chez IEEE sous PCS Systemtechnik GmbH.
 
 **Question 2 : Cache ARP**
 

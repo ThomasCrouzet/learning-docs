@@ -23,7 +23,7 @@ cursus: "API Design et Documentation"
 
 ## Objectif de cette fiche
 
-À la fin de ce projet, tu auras construit une API REST complète de gestion de bibliothèque avec : 3 entités liées (Book, Author, Review), des opérations CRUD sécurisées par JWT, une documentation OpenAPI générée automatiquement, des filtres et de la pagination, une gestion des erreurs conforme à la RFC 7807, et des tests fonctionnels.
+À la fin de ce projet, tu auras construit une API REST complète de gestion de bibliothèque avec : 3 entités liées (Book, Author, Review), des opérations CRUD sécurisées par JWT, une documentation OpenAPI générée automatiquement, des filtres et de la pagination, une gestion des erreurs conforme à la RFC 9457 (successeur de la RFC 7807), et des tests fonctionnels.
 
 ---
 
@@ -52,11 +52,11 @@ Author (1) ───── (N) Book (1) ───── (N) Review
 | -------------- | ------- |
 | CRUD Author | Créer, lire, modifier, supprimer un auteur |
 | CRUD Book | Créer, lire, modifier, supprimer un livre |
-| CRUD Review | Créer, lire un avis (modification et suppression réservées à l'auteur de l'avis ou à un admin) |
+| CRUD Review | Créer, lire un avis (suppression réservée à un admin ; pas d'opération PATCH dans le code de cette fiche) |
 | Authentification | JWT avec deux rôles : `ROLE_USER` (lecture + créer des avis) et `ROLE_ADMIN` (tout) |
 | Pagination | 20 éléments par page, max 100 |
 | Filtres | Recherche par titre, auteur, genre, année |
-| Tri | Par titre, année de publication, note moyenne |
+| Tri | Par titre, année de publication, date de création (`createdAt`) |
 | Documentation | OpenAPI 3.1 générée automatiquement via API Platform |
 | Erreurs | RFC 9457 Problem Details (successeur de RFC 7807) |
 | Tests | Tests fonctionnels pour chaque endpoint |
@@ -774,8 +774,9 @@ Ouvre Swagger UI à `http://localhost:8000/api/docs` pour vérifier visuellement
 Crée des tests fonctionnels pour vérifier le comportement de l'API.
 
 ```bash
-# Installer le composant de test d'API Platform
-composer require --dev api-platform/test-pack
+# Installer les outils de test (pack Symfony + client HTTP)
+# Source : https://api-platform.com/docs/symfony/testing/
+composer require --dev symfony/test-pack symfony/http-client
 ```
 
 ```php
@@ -942,9 +943,9 @@ class BookTest extends ApiTestCase
         );
 
         $this->assertResponseIsSuccessful();
-        // Vérifier que tous les livres retournés ont le genre demandé
+        // API Platform 4 : hydra_prefix=false par défaut, donc "member" (pas "hydra:member")
         $data = $response->toArray();
-        foreach ($data['hydra:member'] as $book) {
+        foreach ($data['member'] as $book) {
             $this->assertSame('Programmation', $book['genre']);
         }
     }
@@ -1015,7 +1016,7 @@ echo "Token obtenu : ${TOKEN:0:20}..."
 curl -s http://localhost:8000/api/authors \
   -H "Authorization: Bearer $TOKEN" | php -r '
     $data = json_decode(file_get_contents("php://stdin"), true);
-    foreach ($data["hydra:member"] as $author) {
+    foreach ($data["member"] as $author) {
         echo $author["firstName"] . " " . $author["lastName"] . PHP_EOL;
     }
 '
@@ -1047,7 +1048,7 @@ curl -s -X POST http://localhost:8000/api/authors \
 curl -s "http://localhost:8000/api/books?genre=Programmation&order[publishedYear]=desc" \
   -H "Authorization: Bearer $TOKEN" | php -r '
     $data = json_decode(file_get_contents("php://stdin"), true);
-    foreach ($data["hydra:member"] as $book) {
+    foreach ($data["member"] as $book) {
         echo $book["title"] . " (" . $book["publishedYear"] . ")" . PHP_EOL;
     }
 '
@@ -1188,7 +1189,7 @@ private Collection $books;   // Pas inclus quand on sérialise un livre
 - [ ] La documentation OpenAPI est accessible et complète dans Swagger UI
 - [ ] La note moyenne est calculée correctement
 - [ ] Les tests fonctionnels passent (7 tests minimum)
-- [ ] Les erreurs sont au format RFC 7807
+- [ ] Les erreurs sont au format RFC 9457 (Problem Details, successeur de RFC 7807)
 
 ---
 

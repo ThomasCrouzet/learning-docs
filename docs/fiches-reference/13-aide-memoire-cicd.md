@@ -74,7 +74,7 @@ on:
 | `shivammathur/setup-php@v2` | Installer PHP |
 | `actions/cache@v5` | Mettre en cache des fichiers |
 | `actions/upload-artifact@v5` | Sauvegarder des artefacts |
-| `actions/download-artifact@v4` | Récupérer des artefacts |
+| `actions/download-artifact@v5` | Récupérer des artefacts |
 | `docker/build-push-action@v6` | Build et push image Docker |
 | `docker/login-action@v3` | Connexion au registry Docker |
 

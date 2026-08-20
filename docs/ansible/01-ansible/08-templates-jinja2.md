@@ -705,7 +705,8 @@ server {
 }
 
 server {
-    listen {{ https_port | default(443) }} ssl http2;
+    listen {{ https_port | default(443) }} ssl;
+    http2 on;
     server_name {{ server_name }};
 
     # Configuration SSL
@@ -861,10 +862,13 @@ Le paramètre `validate` du module `template` permet d'exécuter une commande de
     owner: root
     group: root
     mode: '0644'
-    validate: 'nginx -t'
-    # nginx -t teste la syntaxe de la configuration complète de Nginx
-    # (le fichier principal et tous les fichiers inclus)
-    # Si le test échoue, Ansible annule le déploiement
+    validate: 'nginx -t -c %s'
+    # %s est remplacé par le fichier temporaire généré (obligatoire
+    # pour que Ansible valide CE fichier, pas la config déjà en place).
+    # nginx -t -c %s convient à un nginx.conf COMPLET.
+    # Pour un simple virtual host (snippet), ne pas utiliser -c %s :
+    # déploie d'abord le fichier, puis teste avec une tâche
+    # ansible.builtin.command: nginx -t (voir l'exercice).
 ```
 
 ---
@@ -1197,7 +1201,8 @@ server {
 }
 
 server {
-    listen {{ https_port | default(443) }} ssl http2;
+    listen {{ https_port | default(443) }} ssl;
+    http2 on;
     server_name {{ server_name }};
 
     # Configuration SSL
@@ -1379,7 +1384,8 @@ server {
 }
 
 server {
-    listen 443 ssl http2;
+    listen 443 ssl;
+    http2 on;
     server_name www.production.example.com;
 
     # Configuration SSL

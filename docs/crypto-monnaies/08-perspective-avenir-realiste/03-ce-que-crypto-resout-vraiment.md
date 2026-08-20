@@ -65,7 +65,7 @@ A la fin de cette fiche, tu sauras distinguer les problèmes réellement résolu
 
 | Aspect | Détail |
 | --- | --- |
-| Nombre de non-bancarises dans le monde | ~1,4 milliard de personnes (Banque mondiale) |
+| Nombre de non-bancarises dans le monde | ~1,3 milliard de personnes (Global Findex 2025, Banque mondiale) |
 | Ce que la crypto offre | Un portefeuille numérique sans conditions (pas de revenu minimum, pas de documents) |
 | Preuves d'usage | Adoption significative au Nigeria, en Argentine, en Turquie, au Vietnam |
 

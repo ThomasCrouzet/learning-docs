@@ -302,9 +302,8 @@ tree ~/ansible-roles-exercice/roles/nginx
 ├── tests
 │   ├── inventory
 │   └── test.yml
-├── vars
-│   └── main.yml
-└── README.md
+└── vars
+    └── main.yml
 ```
 
 Ansible a créé tous les répertoires et fichiers principaux. Les fichiers `main.yml` sont vides (ils contiennent uniquement des commentaires). Le répertoire `tests/` contient un inventaire et un playbook de test minimal.

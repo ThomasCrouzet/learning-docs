@@ -165,10 +165,12 @@ Le problème :
 3. Il faut donc s'assurer que le dechet est détruit
 
 Solution : ceremonies multi-parties (MPC)
-- Des centaines ou milliers de participants contribuent à la ceremonie
-- Il suffit qu'UN SEUL participant soit honnete et detruise sa part
-  du dechet toxique pour que le système soit sur
-- Zcash a realise une ceremonie avec plus de 80 000 participants
+- Des dizaines à des milliers de participants contribuent à la cérémonie
+- Il suffit qu'UN SEUL participant soit honnête et détruise sa part
+  du déchet toxique pour que le système soit sûr
+- Zcash Sapling (2018) a réuni environ 90 participants après une phase
+  Powers of Tau de 87 contributions. Le chiffre ~80 000 correspond à
+  d'autres cérémonies (pas à Zcash)
 
 Risque residuel : le trusted setup est un point de confiance.
 Si le processus est compromis, tout le système l'est.

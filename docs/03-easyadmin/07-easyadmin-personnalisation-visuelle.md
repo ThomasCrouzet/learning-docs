@@ -118,9 +118,9 @@ Ajoute ce contenu CSS :
 
 /* Change la couleur de fond du menu latéral */
 :root {
-    /* EasyAdmin utilise des variables CSS, c'est très facile à surcharger ! */
+    /* Noms pris dans variables-theme.css d'EasyAdmin 4.x */
     --sidebar-bg: #1a237e; /* Bleu nuit */
-    --sidebar-color: #ffffff;
+    --sidebar-menu-color: #ffffff;
     --sidebar-logo-color: #ffeb3b; /* Jaune */
 }
 
@@ -347,12 +347,14 @@ $assets->addCssFile('css/admin.css');
 ```css
 :root {
     --sidebar-bg: #1a237e;
-    --sidebar-link-color: #ffffff;
-    --sidebar-active-item-bg: rgba(255, 255, 255, 0.1);
+    --sidebar-menu-color: #ffffff;
+    --sidebar-menu-active-item-bg: rgba(255, 255, 255, 0.1);
 }
 ```
 
-Si ces noms ne fonctionnent pas, utilise l'inspecteur pour trouver les bons sélecteurs CSS et cible-les directement.
+Les noms exacts dans `vendor/easycorp/easyadmin-bundle/assets/css/easyadmin-theme/variables-theme.css` (branche 4.x) sont `--sidebar-bg`, `--sidebar-menu-color`, `--sidebar-menu-active-item-bg` et `--sidebar-logo-color`. Il n'existe pas de `--sidebar-color` ni de `--sidebar-link-color`.
+
+Si ces noms ne fonctionnent pas dans ta version, utilise l'inspecteur pour trouver les bons sélecteurs CSS et cible-les directement.
 
 ---
 
@@ -391,9 +393,9 @@ Ouvre (ou crée) le fichier `public/css/admin.css` :
 
 /* Couleurs personnalisées de la sidebar */
 :root {
-    --sidebar-bg: #2c3e50;           /* Gris-bleu foncé */
-    --sidebar-link-color: #ecf0f1;   /* Blanc cassé */
-    --sidebar-active-item-bg: rgba(255, 255, 255, 0.15);
+    --sidebar-bg: #2c3e50;                    /* Gris-bleu foncé */
+    --sidebar-menu-color: #ecf0f1;            /* Blanc cassé */
+    --sidebar-menu-active-item-bg: rgba(255, 255, 255, 0.15);
 }
 
 /* Couleur primaire des boutons et liens */
@@ -435,17 +437,20 @@ Crée le fichier `templates/admin/field/price_badge.html.twig` :
 
 ```twig
 {# templates/admin/field/price_badge.html.twig #}
+{# MoneyField stocke les montants en centimes par défaut (setStoredAsCents). #}
+{# 50 euros = 5000 centimes. On convertit pour l'affichage. #}
 
 {% if field.value is not null %}
-    {% if field.value < 50 %}
+    {% set prix_euros = field.value / 100 %}
+    {% if prix_euros < 50 %}
         {# Badge vert pour les prix inférieurs à 50 euros #}
         <span class="badge" style="background-color: #27ae60; color: white; font-size: 1em; padding: 0.4em 0.8em;">
-            {{ field.value|number_format(2, ',', ' ') }} €
+            {{ prix_euros|number_format(2, ',', ' ') }} €
         </span>
     {% else %}
         {# Badge rouge pour les prix de 50 euros et plus #}
         <span class="badge" style="background-color: #e74c3c; color: white; font-size: 1em; padding: 0.4em 0.8em;">
-            {{ field.value|number_format(2, ',', ' ') }} €
+            {{ prix_euros|number_format(2, ',', ' ') }} €
         </span>
     {% endif %}
 {% else %}

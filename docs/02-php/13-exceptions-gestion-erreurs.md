@@ -172,7 +172,7 @@ try {
 
 **Règle importante** : Place les exceptions les plus spécifiques en premier, les plus générales en dernier. PHP teste les `catch` dans l'ordre. Si tu mets `\Exception` en premier, les autres `catch` ne seront jamais atteints.
 
-**Depuis PHP 8.0**, tu peux aussi combiner des types dans un seul catch :
+**Depuis PHP 7.1**, tu peux aussi combiner des types dans un seul catch :
 
 ```php
 <?php

@@ -180,16 +180,16 @@ docker run -d \
   -v ~/lab-nginx/sites:/etc/nginx/conf.d \
   -v ~/lab-nginx/ssl:/etc/nginx/ssl \
   -v ~/lab-nginx/html:/usr/share/nginx/html \
-  nginx:1.26
+  nginx:1.30
 ```
 
 **Résultat attendu** :
 
 ```text
-Unable to find image 'nginx:1.26' locally
-1.26: Pulling from library/nginx
+Unable to find image 'nginx:1.30' locally
+1.30: Pulling from library/nginx
 ...
-Status: Downloaded newer image for nginx:1.26
+Status: Downloaded newer image for nginx:1.30
 a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
 ```
 
@@ -204,7 +204,7 @@ docker ps --filter name=lab-nginx
 
 ```text
 CONTAINER ID   IMAGE       STATUS          PORTS                                      NAMES
-a1b2c3d4e5f6   nginx:1.26  Up 10 seconds   0.0.0.0:8080->80/tcp, 0.0.0.0:8443->443/tcp   lab-nginx
+a1b2c3d4e5f6   nginx:1.30  Up 10 seconds   0.0.0.0:8080->80/tcp, 0.0.0.0:8443->443/tcp   lab-nginx
 ```
 
 ---
@@ -520,7 +520,7 @@ curl -I -H "Host: site1.local" http://localhost:8080
 
 ```text
 HTTP/1.1 200 OK
-Server: nginx/1.26
+Server: nginx/1.30
 Content-Type: text/html
 X-Frame-Options: SAMEORIGIN
 X-Content-Type-Options: nosniff

@@ -209,14 +209,15 @@ for ent in doc.ents:
     print(f"{ent.text:30s} | {ent.label_:10s} | {ent.start_char}-{ent.end_char}")
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (labels du modèle français : `PER`, `LOC`, `ORG`, `MISC` - pas `DATE` comme en anglais) :
 
 ```text
 Marie Curie                    | PER        | 0-11
 Paris                          | LOC        | 29-34
-1903                           | DATE       | 38-42
 Université de Paris            | ORG        | 52-71
 ```
+
+Le modèle `fr_core_news_sm` n'a pas le label `DATE` (schéma OntoNotes anglais). Une date comme `1903` est souvent `MISC` ou non annotée.
 
 ---
 
@@ -403,7 +404,6 @@ for entite in resultats:
   Emmanuel Macron                | PER
   Angela Merkel                  | PER
   Berlin                         | LOC
-  15 mars 2026                   | DATE
   Commission européenne          | ORG
   Google                         | ORG
   Microsoft                      | ORG
@@ -416,6 +416,8 @@ for entite in resultats:
   Google                         | ORG        | score: 0.963
   Microsoft                      | ORG        | score: 0.958
 ```
+
+Les dates (`15 mars 2026`) ne sont pas un type `DATE` dans `fr_core_news_sm` (PER/LOC/ORG/MISC seulement).
 
 ---
 

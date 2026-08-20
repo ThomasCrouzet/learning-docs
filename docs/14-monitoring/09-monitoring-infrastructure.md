@@ -28,7 +28,7 @@ cursus: "Monitoring et Observabilité"
 | node_exporter | 1.8.x |
 | cAdvisor | 0.49.x |
 | Prometheus | 3.13.x |
-| Grafana | 11.x |
+| Grafana | 13.x |
 
 ## Objectif de cette fiche
 

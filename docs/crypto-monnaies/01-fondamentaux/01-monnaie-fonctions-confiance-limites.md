@@ -224,7 +224,7 @@ Les limites listées ci-dessous sont des faits observables. Elles existent indé
 
 #### Limite 3 : exclusion bancaire
 
-**Fait** : Selon la Banque mondiale (Global Findex **2021**), environ 1,4 milliard d'adultes n'avaient pas de compte bancaire. Le Findex **2025** actualise ce stock : cite toujours le millésime, ne présente pas 1,4 milliard comme un chiffre 2026.
+**Fait** : Selon la Banque mondiale (Global Findex **2025**, enquêtes 2024), environ 1,3 milliard d'adultes n'ont pas de compte financier, alors que 79 % des adultes en ont un. Le Findex **2021** donnait 1,4 milliard. Cite toujours le millésime : 1,3 milliard n'est pas le chiffre 2021.
 
 **Causes principales** :
 
@@ -249,7 +249,7 @@ Les limites listées ci-dessous sont des faits observables. Elles existent indé
 | ------ | --------------- | ------- |
 | Inflation | Tous les détenteurs de monnaie | Perte d'environ 2% par an (objectif BCE) |
 | Dépendance institutionnelle | Tous les citoyens | Décisions unilatérales possibles en cas de crise |
-| Exclusion bancaire | 1,4 milliard d'adultes dans le monde | Principalement dans les pays en développement |
+| Exclusion bancaire | 1,3 milliard d'adultes (Findex 2025) | Principalement dans les pays en développement |
 | Transferts internationaux | Travailleurs immigrés, entreprises internationales | 2-5 jours, 3-7% de frais |
 
 ---

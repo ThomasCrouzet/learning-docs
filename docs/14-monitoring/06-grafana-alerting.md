@@ -24,7 +24,7 @@ cursus: "Monitoring et Observabilité"
 
 | Technologie | Version |
 | --- | --- |
-| Grafana | 11.x |
+| Grafana | 13.x |
 | Prometheus | 3.13.x |
 
 ## Objectif de cette fiche
@@ -226,7 +226,7 @@ cd ~/monitoring-cursus/grafana-alerting && docker compose up -d
 Un contact point webhook est le plus simple à tester sans serveur email.
 
 1. Connecte-toi à Grafana (`http://localhost:3000`, admin/admin)
-2. Dans le menu latéral, va dans **Alerting** > **Contact points**
+2. Dans le menu latéral, va dans **Alerts & IRM** > **Alerting** > **Contact points** (Grafana 13.x)
 3. Clique sur **Add contact point**
 4. Configure :
    - **Name** : `Webhook Test`
@@ -252,7 +252,7 @@ docker run -d --name webhook-receiver -p 5001:80 \
 
 Crée une alerte qui se déclenche quand une target Prometheus est inaccessible.
 
-1. Dans le menu **Alerting** > **Alert rules**
+1. Dans le menu **Alerts & IRM** > **Alert rules**
 2. Clique sur **New alert rule**
 3. Configure l'alerte :
 
@@ -277,8 +277,8 @@ Cette requête retourne les targets dont la métrique `up` vaut 0 (inaccessible)
 
 - **Folder** : `Infrastructure` (crée-le si nécessaire)
 - **Evaluation group** : `targets` (crée-le si nécessaire)
-- **Evaluate every** : `1m` (évalue toutes les minutes)
-- **For** : `2m` (déclenche l'alerte si la condition dure depuis 2 minutes)
+- **Evaluate every** : `1m` (évalue toutes les minutes ; intervalle du groupe d'évaluation)
+- **Pending period** : `2m` (équivalent Grafana 13 du `for` Prometheus : l'alerte ne passe en Firing que si la condition dure 2 minutes)
 
 **Section 4 - Configure labels and notifications** :
 
@@ -309,7 +309,7 @@ Cette requête retourne les targets dont la métrique `up` vaut 0 (inaccessible)
 
 - **Condition** : `IS ABOVE 85`
 - **Evaluate every** : `1m`
-- **For** : `5m`
+- **Pending period** : `5m`
 - **Label** : `severity` = `warning`
 - **Summary** : `Utilisation mémoire élevée : {{ $value }}% sur {{ $labels.instance }}`
 
@@ -343,7 +343,7 @@ $B / $A * 100
 
 - **Condition** : `C IS ABOVE 5` (plus de 5% d'erreurs)
 - **Evaluate every** : `1m`
-- **For** : `5m`
+- **Pending period** : `5m`
 - **Label** : `severity` = `critical`
 - **Summary** : `Taux d'erreurs HTTP élevé : {{ $value }}%`
 
@@ -355,7 +355,7 @@ $B / $A * 100
 
 Les notification policies définissent comment les alertes sont routées vers les contact points.
 
-1. Va dans **Alerting** > **Notification policies**
+1. Va dans **Alerts & IRM** > **Alerting** > **Notification policies**
 2. Tu verras la **Default policy** qui envoie toutes les alertes vers le contact point par défaut
 3. Clique sur **New nested policy** pour créer une règle de routage :
 
@@ -376,7 +376,7 @@ Les notification policies définissent comment les alertes sont routées vers le
 
 Les silences permettent de désactiver temporairement des alertes (pendant une maintenance planifiée par exemple).
 
-1. Va dans **Alerting** > **Silences**
+1. Va dans **Alerts & IRM** > **Alerting** > **Silences**
 2. Clique sur **New silence**
 3. Configure :
    - **Start** : maintenant
@@ -399,9 +399,9 @@ Pour tester l'alerte "Target Down", arrête Node Exporter :
 cd ~/monitoring-cursus/grafana-alerting && docker compose stop node-exporter
 ```
 
-Observe l'évolution de l'alerte dans **Alerting** > **Alert rules** :
+Observe l'évolution de l'alerte dans **Alerts & IRM** > **Alert rules** :
 
-1. Après ~1 minute : l'alerte passe en **Pending** (la condition est remplie mais le timer `for: 2m` n'est pas écoulé)
+1. Après ~1 minute : l'alerte passe en **Pending** (la condition est remplie mais le pending period de 2 minutes n'est pas écoulé)
 2. Après ~3 minutes : l'alerte passe en **Firing** (la condition dure depuis plus de 2 minutes)
 3. La notification est envoyée au contact point
 
@@ -449,10 +449,10 @@ docker rm -f webhook-receiver 2>/dev/null
 
 ```text
 # ❌ Mauvais : se déclenche au moindre pic
-For: 0s
+Pending period: 0s
 
 # ✅ Bon : attend 5 minutes de condition remplie
-For: 5m
+Pending period: 5m
 ```
 
 ---
@@ -540,7 +540,7 @@ Teste en arrêtant Node Exporter.
 - Query : `up == 0`
 - Condition : IS ABOVE 0
 - Evaluate every : 1m
-- For : 2m
+- Pending period : 2m
 - Label : severity = critical
 - Summary : `Target {{ $labels.instance }} ({{ $labels.job }}) is DOWN`
 
@@ -549,7 +549,7 @@ Teste en arrêtant Node Exporter.
 - Query : `(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100`
 - Condition : IS ABOVE 85
 - Evaluate every : 1m
-- For : 5m
+- Pending period : 5m
 - Label : severity = warning
 - Summary : `Memory usage is {{ $value }}% on {{ $labels.instance }}`
 
@@ -558,7 +558,7 @@ Teste en arrêtant Node Exporter.
 - Query : `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)`
 - Condition : IS ABOVE 80
 - Evaluate every : 1m
-- For : 5m
+- Pending period : 5m
 - Label : severity = warning
 - Summary : `CPU usage is {{ $value }}% on {{ $labels.instance }}`
 
@@ -567,7 +567,7 @@ Teste en arrêtant Node Exporter.
 - Query : `100 - (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"} * 100)`
 - Condition : IS ABOVE 90
 - Evaluate every : 1m
-- For : 10m
+- Pending period : 10m
 - Label : severity = critical
 - Summary : `Disk usage is {{ $value }}% on {{ $labels.instance }}`
 

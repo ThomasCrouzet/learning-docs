@@ -510,9 +510,9 @@ oc get routes
 **Résultat attendu** :
 
 ```text
-NAME               HOST/PORT                                       PATH   SERVICES    PORT    TERMINATION   WILDCARD
-mon-nginx          mon-nginx-demo-routes.apps-crc.testing                  mon-nginx   80-tcp                None
-mon-nginx-secure   mon-nginx-secure-demo-routes.apps-crc.testing           mon-nginx   80-tcp  edge          None
+NAME               HOST/PORT                                       PATH   SERVICES    PORT      TERMINATION   WILDCARD
+mon-nginx          mon-nginx-demo-routes.apps-crc.testing                  mon-nginx   8080-tcp                None
+mon-nginx-secure   mon-nginx-secure-demo-routes.apps-crc.testing           mon-nginx   8080-tcp  edge          None
 ```
 
 La colonne **TERMINATION** affiche `edge` pour la Route sécurisée.
@@ -557,11 +557,11 @@ Requested Host:   mon-nginx-secure-demo-routes.apps-crc.testing
 Path:             <none>
 TLS Termination:  edge
 Insecure Policy:  <none>
-Endpoint Port:    80-tcp
+Endpoint Port:    8080-tcp
 
 Service:  mon-nginx
 Weight:   100 (100%)
-Endpoints: 10.217.0.45:80
+Endpoints: 10.217.0.45:8080
 ```
 
 Les informations importantes :
@@ -910,8 +910,8 @@ oc get services
 **Résultat attendu** :
 
 ```text
-NAME       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-web-test   ClusterIP   10.217.4.200    <none>        80/TCP    1m
+NAME       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+web-test   ClusterIP   10.217.4.200    <none>        8080/TCP   1m
 ```
 
 Le Service `web-test` de type ClusterIP est créé automatiquement.
@@ -958,9 +958,9 @@ oc get routes
 **Résultat attendu** :
 
 ```text
-NAME             HOST/PORT                                          PATH   SERVICES   PORT    TERMINATION   WILDCARD
-web-test-http    web-test-http-exercice-routes.apps-crc.testing            web-test   80-tcp                None
-web-test-https   web-test-https-exercice-routes.apps-crc.testing           web-test   80-tcp  edge          None
+NAME             HOST/PORT                                          PATH   SERVICES   PORT      TERMINATION   WILDCARD
+web-test-http    web-test-http-exercice-routes.apps-crc.testing            web-test   8080-tcp                None
+web-test-https   web-test-https-exercice-routes.apps-crc.testing           web-test   8080-tcp  edge          None
 ```
 
 Les deux Routes sont créées. La Route HTTP n'a pas de terminaison TLS. La Route HTTPS a la terminaison `edge`.

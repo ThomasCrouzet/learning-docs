@@ -170,6 +170,8 @@ $notification->send('Code de verification : 1234');
 // Affiche : "SMS envoye : Code de verification : 1234"
 ```
 
+Cette implémentation PHP est une **factory paramétrée** (souvent appelée Simple Factory) : une seule classe choisit le type via `match`. Le Factory Method du GoF, lui, laisse une **sous-classe** redéfinir la méthode de création. Les deux isolent le `new`. `createForm()` de Symfony se rapproche de la factory paramétrée, pas d'une hiérarchie de Creator.
+
 **Factory Method dans Symfony : FormFactory**
 
 ```php

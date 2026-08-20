@@ -86,7 +86,7 @@ Les fournisseurs cloud proposent différents types d'instances optimises pour de
 
 Le nom d'une instance suit le format `[famille][generation].[taille]` :
 
-- `t3.micro` : famille **t** (général purpose, burstable), génération **3**, taille **micro** (1 vCPU, 1 Go RAM)
+- `t3.micro` : famille **t** (général purpose, burstable), génération **3**, taille **micro** (2 vCPU, 1 Gio RAM)
 - `m6i.large` : famille **m** (général purpose), génération **6**, processeur **Intel**, taille **large** (2 vCPU, 8 Go RAM)
 - `c6i.xlarge` : famille **c** (compute optimized), génération **6**, processeur **Intel**, taille **xlarge** (4 vCPU, 8 Go RAM)
 

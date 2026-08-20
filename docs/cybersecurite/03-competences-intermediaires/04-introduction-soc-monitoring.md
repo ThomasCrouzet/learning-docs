@@ -210,7 +210,7 @@ Sans YARA, voici les problèmes rencontrés :
 
 ### Qu'est-ce que MITRE ATT&CK ?
 
-**Définition** : MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) est une base de connaissances publique qui catalogue les tactiques et techniques utilisées par les attaquants dans le monde réel. Elle est organisée en 14 tactiques (les objectifs de l'attaquant) et des centaines de techniques (les méthodes pour atteindre ces objectifs).
+**Définition** : MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) est une base de connaissances publique qui catalogue les tactiques et techniques utilisées par les attaquants dans le monde réel. La matrice Enterprise compte **15 tactiques** (les objectifs de l'attaquant) et des centaines de techniques (les méthodes pour atteindre ces objectifs). La liste officielle est sur [attack.mitre.org/tactics/enterprise](https://attack.mitre.org/tactics/enterprise/).
 
 **Le problème que MITRE ATT&CK résout** :
 
@@ -228,24 +228,25 @@ Sans MITRE ATT&CK, voici les problèmes rencontrés :
 | Couverture inconnue | La matrice ATT&CK permet de visualiser quelles techniques sont couvertes par les détections en place |
 | Threat intelligence fragmentée | Chaque groupe d'attaquants (APT) est documenté avec les techniques qu'il utilise |
 
-**Les 14 tactiques MITRE ATT&CK** :
+**Les 15 tactiques MITRE ATT&CK Enterprise** :
 
-| # | Tactique | Description |
+| # | Tactique (ID) | Description |
 | --- | --- | --- |
-| 1 | Reconnaissance | Collecte d'informations sur la cible |
-| 2 | Resource Development | Préparation de l'infrastructure d'attaque |
-| 3 | Initial Access | Point d'entrée initial (phishing, exploit) |
-| 4 | Exécution | Exécution de code malveillant |
-| 5 | Persistence | Maintien de l'accès après reboot |
-| 6 | Privilege Escalation | Obtention de droits supérieurs |
-| 7 | Defense Evasion | Contournement des défenses |
-| 8 | Credential Access | Vol d'identifiants |
-| 9 | Discovery | Exploration de l'environnement compromis |
-| 10 | Lateral Movement | Déplacement vers d'autres machines |
-| 11 | Collection | Collecte des données cibles |
-| 12 | Command and Control | Communication avec le serveur de l'attaquant |
-| 13 | Exfiltration | Extraction des données volées |
-| 14 | Impact | Destruction, chiffrement, déni de service |
+| 1 | Reconnaissance (TA0043) | Collecte d'informations sur la cible |
+| 2 | Resource Development (TA0042) | Préparation de l'infrastructure d'attaque |
+| 3 | Initial Access (TA0001) | Point d'entrée initial (phishing, exploit) |
+| 4 | Exécution (TA0002) | Exécution de code malveillant |
+| 5 | Persistence (TA0003) | Maintien de l'accès après reboot |
+| 6 | Privilege Escalation (TA0004) | Obtention de droits supérieurs |
+| 7 | Stealth (TA0005) | Dissimulation des actions pour paraître normales (ex-Defense Evasion) |
+| 8 | Defense Impairment (TA0112) | Casser les mécanismes, pipelines et outils de défense |
+| 9 | Credential Access (TA0006) | Vol d'identifiants |
+| 10 | Discovery (TA0007) | Exploration de l'environnement compromis |
+| 11 | Lateral Movement (TA0008) | Déplacement vers d'autres machines |
+| 12 | Collection (TA0009) | Collecte des données cibles |
+| 13 | Command and Control (TA0011) | Communication avec le serveur de l'attaquant |
+| 14 | Exfiltration (TA0010) | Extraction des données volées |
+| 15 | Impact (TA0040) | Destruction, chiffrement, déni de service |
 
 ### Qu'est-ce que les IoC et STIX/TAXII ?
 
@@ -272,9 +273,13 @@ Sans MITRE ATT&CK, voici les problèmes rencontrés :
 # Installer Wazuh All-in-One avec Docker Compose
 # Prérequis : Docker et Docker Compose installés
 
-# Cloner le dépôt Wazuh Docker
-git clone https://github.com/wazuh/wazuh-docker.git -b v4.9.0
+# Cloner le dépôt Wazuh Docker (branche documentée : v4.14.7)
+# Docs : https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.14.7
 cd wazuh-docker/single-node
+
+# Prérequis noyau (indexer) : augmenter le nombre de mappings mémoire
+sudo sysctl -w vm.max_map_count=262144
 
 # Générer les certificats SSL
 docker compose -f generate-indexer-certs.yml run --rm generator
@@ -322,7 +327,7 @@ single-node-wazuh.manager-1        Up (healthy)    0.0.0.0:1514->1514/tcp, 0.0.0
 # Installer l'agent Wazuh sur une machine Linux
 # Remplacer WAZUH_MANAGER_IP par l'IP du serveur Wazuh
 
-curl -so wazuh-agent.deb https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.9.0-1_amd64.deb
+curl -so wazuh-agent.deb https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.7-1_amd64.deb
 sudo WAZUH_MANAGER='WAZUH_MANAGER_IP' dpkg -i wazuh-agent.deb
 sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
@@ -346,7 +351,7 @@ sudo systemctl status wazuh-agent
 
 ```bash
 # Sur Windows, installer l'agent via PowerShell (en administrateur)
-# Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.9.0-1.msi -OutFile wazuh-agent.msi
+# Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.14.7-1.msi -OutFile wazuh-agent.msi
 # msiexec.exe /i wazuh-agent.msi /q WAZUH_MANAGER="WAZUH_MANAGER_IP"
 # net start WazuhSvc
 ```
@@ -427,17 +432,17 @@ level: critical
 ```
 
 ```bash
-# Installer sigma-cli pour convertir les règles
+# Installer sigma-cli, puis le backend SIEM (plugin obligatoire)
+# Docs : https://sigmahq.io/docs/guide/getting-started.html
 pip3 install sigma-cli
+sigma plugin install splunk
 
-# Convertir la règle Sigma en format Wazuh
-sigma convert -t wazuh -p sysmon detect-mimikatz.yml
+# Convertir en Splunk SPL (backend officiel + pipeline Windows)
+sigma convert -t splunk -p splunk_windows detect-mimikatz.yml
 
-# Convertir en format Splunk SPL
-sigma convert -t splunk detect-mimikatz.yml
-
-# Convertir en format Elastic/OpenSearch
-sigma convert -t opensearch detect-mimikatz.yml
+# Lister les backends disponibles : sigma plugin list -t backend
+# Wazuh n'est pas un backend officiel de sigma-cli : pour Wazuh,
+# traduis la règle en XML (local_rules.xml) ou utilise un convertisseur tiers.
 ```
 
 **Résultat attendu** (conversion Splunk) :
@@ -743,8 +748,8 @@ curl -s https://rules.emergingthreats.net/blockrules/compromised-ips.txt \
 | `docker compose up -d` (dans wazuh-docker/) | Démarrer Wazuh |
 | `docker compose ps` | Vérifier l'état des conteneurs Wazuh |
 | `sudo systemctl status wazuh-agent` | Vérifier l'état de l'agent Wazuh |
-| `sigma convert -t wazuh fichier.yml` | Convertir une règle Sigma en format Wazuh |
-| `sigma convert -t splunk fichier.yml` | Convertir une règle Sigma en Splunk SPL |
+| `sigma plugin install splunk` | Installer le backend Splunk de sigma-cli |
+| `sigma convert -t splunk -p splunk_windows fichier.yml` | Convertir une règle Sigma en Splunk SPL |
 | `yara regles.yar fichier` | Scanner un fichier avec une règle YARA |
 | `yara -r regles/ repertoire/` | Scanner un répertoire récursivement avec YARA |
 | `echo "base64" \| base64 -d` | Décoder du base64 (commandes PowerShell encodées) |
@@ -794,7 +799,7 @@ curl -s https://rules.emergingthreats.net/blockrules/compromised-ips.txt \
 - [ ] Je sais configurer la collecte de logs via syslog
 - [ ] Je sais écrire une règle Sigma et la convertir pour différents SIEM
 - [ ] Je sais écrire une règle YARA pour détecter un fichier malveillant
-- [ ] Je connais les 14 tactiques MITRE ATT&CK et je sais naviguer dans la matrice
+- [ ] Je connais les 15 tactiques MITRE ATT&CK Enterprise et je sais naviguer dans la matrice
 - [ ] Je sais effectuer un triage d'alerte L1 (décoder, analyser, classifier, escalader)
 - [ ] Je comprends les IoC et les formats STIX/TAXII
 - [ ] Je sais créer une règle de détection dans Wazuh

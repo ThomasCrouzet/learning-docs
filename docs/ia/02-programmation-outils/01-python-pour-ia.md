@@ -267,10 +267,12 @@ python3 -c "import numpy; import pandas; import matplotlib; print(f'NumPy {numpy
 **Résultat attendu** :
 
 ```text
-NumPy 1.26.4
-Pandas 2.2.1
-Matplotlib 3.8.3
+NumPy 2.5.2
+Pandas 3.0.5
+Matplotlib 3.10.x
 ```
+
+Les numéros exacts évoluent. En 2026, `pip install numpy pandas matplotlib` installe **NumPy 2.x** (pas 1.26), **Pandas 3.x** et Matplotlib 3.10+. L'important est que les trois imports réussissent.
 
 ---
 

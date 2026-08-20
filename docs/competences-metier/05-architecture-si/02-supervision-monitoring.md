@@ -63,7 +63,9 @@ Le diagramme suivant présente les trois piliers de l'observabilité et la quest
 
 ### Quels sont les types de métriques à surveiller ?
 
-**Les 4 piliers de la supervision (méthode USE/RED)** :
+**Métriques d'infrastructure (ressources)** :
+
+USE (Brendan Gregg) mesure **Utilization, Saturation, Errors** pour une ressource (CPU, mémoire, disque, réseau). RED (Tom Wilkie) mesure **Rate, Errors, Duration** pour un service. Les deux se complètent : USE pour la machine, RED pour l'application.
 
 | Type | Métriques | Exemple de problème |
 | ---- | --------- | ------------------- |
@@ -240,7 +242,7 @@ docker compose up -d
 ### Étape 4 : Créer un dashboard Grafana
 
 1. Accéder à Grafana (`http://localhost:3000`)
-2. Aller dans Configuration → Data Sources
+2. Aller dans **Connections** → **Data sources** (Grafana 10+ ; ce n'est plus Configuration)
 3. Ajouter Prometheus :
 
    | Champ | Valeur |
@@ -283,20 +285,20 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 
 ### Étape 6 : Configurer une alerte
 
-Dans Grafana :
+Dans Grafana 10+, les alertes ne se créent plus dans l'onglet Alert d'un panel (alerting historique retiré). Utilise Grafana Alerting :
 
-1. Éditer un panel
-2. Onglet "Alert"
-3. Configurer :
+1. Menu **Alerts & IRM** → **Alert rules** → **New alert rule**
+2. Configurer :
 
     | Champ | Valeur |
     | ----- | ------ |
     | Name | CPU élevé |
-    | Condition | WHEN avg() OF query(A) IS ABOVE 80 |
+    | Query | `100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` |
+    | Condition | IS ABOVE 80 |
     | Evaluate every | 1m |
-    | For | 5m |
+    | Pending period | 5m |
 
-4. Configurer une notification (email, Slack, etc.)
+3. Configurer un contact point (email, Slack, webhook) puis sauvegarder la règle
 
 ---
 

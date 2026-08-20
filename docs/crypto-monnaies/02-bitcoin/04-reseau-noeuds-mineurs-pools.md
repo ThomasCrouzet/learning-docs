@@ -45,8 +45,8 @@ Sans nœuds repartis dans le monde, voici les problèmes rencontrès :
 
 | Type de nœud | Ce qu'il fait | Ce qu'il stocke | Qui le fait tourner |
 | --- | --- | --- | --- |
-| Full node (nœud complet) | Telechargement et vérification de chaque bloc et chaque transaction depuis le bloc genesis | La blockchain complete (~600 Go en 2025-2026) | N'importe qui avec un ordinateur et un disque dur suffisant |
-| Light node (SPV) | Vérification simplifiée - ne telecharge que les en-tetes de blocs | Seulement les en-tetes de blocs (~60 Mo) | La plupart des wallets sur smartphone |
+| Full node (nœud complet) | Telechargement et vérification de chaque bloc et chaque transaction depuis le bloc genesis | La blockchain complete (~760 Go en août 2026) | N'importe qui avec un ordinateur et un disque dur suffisant |
+| Light node (SPV) | Vérification simplifiée - ne telecharge que les en-tetes de blocs | Seulement les en-tetes de blocs (~80 Mo) | La plupart des wallets sur smartphone |
 | Mining node (nœud mineur) | Full node + participation active au minage (calcul de hashes) | La blockchain complete + logiciel de minage | Les mineurs professionnels ou les membres de pools |
 
 Le diagramme suivant illustre les types de nœuds et ce qu'ils stockent :
@@ -77,7 +77,7 @@ Un light node ne vérifie pas chaque transaction. Il fait confiance aux full nod
 | Full node | Light node (SPV) |
 | --- | --- |
 | Vérifie tout lui-même | Fait confiance aux full nodes pour la vérification |
-| Stocke ~600 Go | Stocke ~60 Mo |
+| Stocke ~760 Go | Stocke ~80 Mo |
 | Nécessite un ordinateur dedie ou un serveur | Fonctionne sur un smartphone |
 | Maximum de sécurité | Sécurité réduite (dépend de la fiabilité des full nodes) |
 
@@ -93,7 +93,7 @@ Un light node ne vérifie pas chaque transaction. Il fait confiance aux full nod
 
 | Métrique | Estimation (2025-2026) |
 | --- | --- |
-| Full nodes accessibles publiquement | Environ 15 000 a 20 000 |
+| Full nodes accessibles publiquement | Environ 25 000 a 27 000 |
 | Full nodes totaux estimes (y compris ceux derrière un pare-feu) | Potentiellement 50 000 a 100 000 |
 | Répartition géographique | Principalement Amerique du Nord et Europe |
 | Pays avec le plus de nœuds | États-Unis, Allemagne, France, Pays-Bas, Canada |
@@ -102,13 +102,13 @@ Un light node ne vérifie pas chaque transaction. Il fait confiance aux full nod
 
 **Arguments pour** :
 
-- 15 000 nœuds repartis dans des dizaines de pays rendent le réseau extrêmement difficile a arrêter. Il faudrait coordonner une action simultanee dans de nombreuses juridictions.
+- 25 000 nœuds publics repartis dans des dizaines de pays rendent le réseau extrêmement difficile a arrêter. Il faudrait coordonner une action simultanee dans de nombreuses juridictions.
 - N'importe qui peut lancer un full node à tout moment. Le logiciel est gratuit et open-source. Un Raspberry Pi a 50 euros suffit (avec un disque dur externe).
 - La redondance est massive : même si 90% des nœuds disparaissaient, le réseau continuerait de fonctionner.
 
 **Arguments contre** :
 
-- La taille de la blockchain (~600 Go et en croissance) constitue une barriere. Plus elle grossit, moins de personnes peuvent faire tourner un full node.
+- La taille de la blockchain (~760 Go et en croissance) constitue une barriere. Plus elle grossit, moins de personnes peuvent faire tourner un full node.
 - La majorité des nœuds est concentree dans les pays developpes. Cette répartition géographique desequilibree pourrait poser problème.
 - La plupart des utilisateurs utilisent des light nodes (smartphones) et font confiance aux full nodes sans les vérifier eux-mêmes.
 
@@ -233,7 +233,7 @@ Sans pools de minage, voici les problèmes rencontrès :
 
 | Pool | Part estimée du hashrate |
 | --- | --- |
-| Foundry USA | ~28-32% |
+| Foundry USA | ~24-32% |
 | AntPool | ~18-22% |
 | ViaBTC | ~12-15% |
 | F2Pool | ~10-13% |
@@ -300,7 +300,7 @@ Sans pools de minage, voici les problèmes rencontrès :
 ## Checklist de Validation
 
 - [ ] Je sais décrire les trois types de nœuds (full node, light node, mining node) et leur rôle
-- [ ] Je connais la taille approximative de la blockchain (~600 Go) et le nombre de full nodes (~15 000-20 000 publics)
+- [ ] Je connais la taille approximative de la blockchain (~760 Go) et le nombre de full nodes (~25 000-27 000 publics)
 - [ ] Je sais expliquer la différence entre un full node (vérifie tout) et un light node (fait confiance)
 - [ ] Je sais décrire le rôle de chaque acteur : les nœuds valident, les mineurs securisent, les utilisateurs transactent
 - [ ] Je sais expliquer le processus de propagation d'un bloc dans le réseau

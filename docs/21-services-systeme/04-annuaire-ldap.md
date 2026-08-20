@@ -12,7 +12,7 @@ cursus: "Services système"
 
 # 04 - Annuaire LDAP
 
-> **En bref** : Tu apprendras a comprendre et configurer un annuaire LDAP avec OpenLDAP, a créer une arborescence DIT, a gérer les entrées et attributs, et a mettre en place une authentification centralisée. Lecture estimée : 75 min.
+> **En bref** : Tu apprendras à comprendre et configurer un annuaire LDAP avec OpenLDAP, à créer une arborescence DIT, à gérer les entrées et attributs, et à mettre en place une authentification centralisée. Lecture estimée : 75 min.
 
 ## Prérequis
 
@@ -20,7 +20,7 @@ cursus: "Services système"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer ce qu'est un annuaire LDAP et son utilité, configurer OpenLDAP dans un conteneur Docker, créer une arborescence (DIT) avec des unités organisationnelles et des utilisateurs, effectuer des recherches LDAP avec `ldapsearch`, et comprendre comment les applications utilisent LDAP pour l'authentification centralisée.
+À la fin de cette fiche, tu sauras expliquer ce qu'est un annuaire LDAP et son utilité, configurer OpenLDAP dans un conteneur Docker, créer une arborescence (DIT) avec des unités organisationnelles et des utilisateurs, effectuer des recherches LDAP avec `ldapsearch`, et comprendre comment les applications utilisent LDAP pour l'authentification centralisée.
 
 ---
 
@@ -296,7 +296,7 @@ adding new entry "ou=machines,dc=lab,dc=local"
 
 ### Étape 4 : Ajouter des utilisateurs
 
-> **Bonne pratique - Hachage des mots de passe** : Les mots de passe LDIF doivent toujours être stockés sous forme hachée, jamais en clair. Le format SSHA (Salted SHA-1) est supporté par OpenLDAP. Pour générer un hash SSHA, utilise `slappasswd` :
+> **Bonne pratique - Hachage des mots de passe** : Les mots de passe LDIF doivent toujours être stockés sous forme hachée, jamais en clair. Sur l'image de démo OpenLDAP 2.4, `slappasswd` produit `{SSHA}` (SHA-1 salé) par défaut. SHA-1 n'est plus un choix moderne : OpenLDAP 2.5+ peut utiliser `{ARGON2}` via le module argon2. Pour ce labo 2.4, `{SSHA}` reste le schéma disponible sans module supplémentaire. Pour générer un hash SSHA, utilise `slappasswd` :
 >
 > ```bash
 > # Genere un hash SSHA pour un mot de passe
@@ -587,7 +587,7 @@ dn: uid=alice,ou=personnes,dc=lab,dc=local
 
 ⚠️ **Problème** : Tu stockes les mots de passe avec `userPassword: monmotdepasse` en texte clair dans le LDIF. Quiconque a accès a l'annuaire peut lire les mots de passe.
 
-✅ **Solution** : Utilise un algorithme de hachage. OpenLDAP supporte `{SSHA}` (Salted SHA) qui est recommande :
+✅ **Solution** : Utilise un algorithme de hachage. Sur cette image 2.4, `{SSHA}` (SHA-1 salé) est le défaut de `slappasswd`. Ne le présente pas comme un hash moderne : en production récente, préfère `{ARGON2}` (OpenLDAP 2.5+) :
 
 ```bash
 # Genere un hash SSHA pour un mot de passe
@@ -626,6 +626,7 @@ docker exec lab-ldap slappasswd -s "mon_mot_de_passe"
 - Utilise les objectClass `inetOrgPerson` et `posixAccount`
 - Utilise `groupOfNames` pour le groupe
 - Le filtre de recherche pour "contient" est `(sn=*e*)`
+- Hache les `userPassword` avec `slappasswd` comme à l'étape 4 (la solution ci-dessous montre des mots de passe en clair uniquement pour simplifier le bind de test ; ne les laisse pas ainsi en dehors du labo)
 
 **Résultat attendu** : L'arborescence est créée, les utilisateurs s'authentifient correctement, et la recherche retourne les élevés correspondants.
 

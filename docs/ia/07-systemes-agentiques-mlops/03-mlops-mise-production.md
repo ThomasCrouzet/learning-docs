@@ -462,7 +462,7 @@ Crée le fichier `requirements.txt` :
 ```text
 fastapi==0.115.0
 uvicorn==0.30.0
-mlflow==2.16.0
+mlflow>=2.16.0
 scikit-learn==1.5.0
 numpy==1.26.0
 ```

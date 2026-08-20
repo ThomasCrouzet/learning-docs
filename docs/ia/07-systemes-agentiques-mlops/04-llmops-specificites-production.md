@@ -536,7 +536,7 @@ class ModelRouter:
         response = client.chat.completions.create(
             model=model_config["name"],
             messages=[{"role": "user", "content": question}],
-            température=0
+            temperature=0
         )
 
         # Calculer le coût estimé
@@ -725,7 +725,7 @@ for q in questions:
         return client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": question}],
-            température=0
+            temperature=0
         )
 
     answer, trace = observer.trace_call("gpt-4o-mini", q, make_call)
@@ -795,7 +795,7 @@ def llmops_pipeline(question):
         return client.chat.completions.create(
             model=model,
             messages=[{"role": "user", "content": question}],
-            température=0
+            temperature=0
         )
 
     answer, trace = observer.trace_call(model, question, make_call)
@@ -1084,7 +1084,7 @@ def chat(req: ChatRequest):
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": req.question}],
-        température=0
+        temperature=0
     )
 
     answer = response.choices[0].message.content

@@ -280,10 +280,10 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 final class LoginAuthenticator
 {
-    // Hash bcrypt valide d'un mot de passe inutilisable
-    // Généré une seule fois et stocké en constante
-    // Coût équivalent au coût des hashes réels (cost=13)
-    private const DUMMY_PASSWORD_HASH = '$2y$13$dummyHashForTimingAttackPrevention.........';
+    // Hash bcrypt cost=13 d'un mot de passe jamais utilisé en production
+    // Généré une fois avec password_hash() : 60 caractères, alphabet bcrypt valide
+    // Un placeholder tronqué n'égalise PAS le timing (password_verify court-circuite)
+    private const DUMMY_PASSWORD_HASH = '$2y$13$FqDauFQ4phD3NunncBFEa.M6KShgMKX4ZPtja20OE1/63dSkWUNTO';
 
     public function __construct(
         private UserPasswordHasherInterface $passwordHasher,
@@ -670,9 +670,8 @@ if (!$globalLimiter->consume(1)->isAccepted()) {
 
 ```php
 // Dans le contrôleur de login, après chaque échec
-$this->metrics->increment('auth.login.failure', [
-    'reason' => $user === null ? 'unknown_account' : 'wrong_password',
-]);
+// Pas de label "unknown_account" vs "wrong_password" : ce serait de l'énumération via les métriques
+$this->metrics->increment('auth.login.failure');
 
 // Une alerte est déclenchée si auth.login.failure > 100/min
 ```
@@ -774,9 +773,9 @@ use Symfony\Component\RateLimiter\RateLimiterFactory;
 
 final class LoginController extends AbstractController
 {
-    // Hash bcrypt valide d'un mot de passe inutilisable
-    // Coût identique à celui des hashes réels en base (cost=13)
-    private const DUMMY_PASSWORD_HASH = '$2y$13$dummyHashForTimingAttackPrevention.........';
+    // Hash bcrypt cost=13 d'un mot de passe jamais utilisé en production
+    // Généré une fois avec password_hash() : 60 caractères, alphabet bcrypt valide
+    private const DUMMY_PASSWORD_HASH = '$2y$13$FqDauFQ4phD3NunncBFEa.M6KShgMKX4ZPtja20OE1/63dSkWUNTO';
 
     public function __construct(
         private UserRepository $users,

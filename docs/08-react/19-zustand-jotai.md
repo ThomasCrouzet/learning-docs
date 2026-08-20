@@ -474,14 +474,13 @@ export default CompteurJotai;
 
 ⚠️ **Problème** : Écrire `const state = useStore()` sans sélecteur. Le composant se re-rend alors à **chaque** changement du store, même sur des valeurs qu'il n'utilise pas. Sur un gros store, cela annule l'avantage de Zustand sur Context.
 
-En Zustand v5 (version installée par défaut depuis 2025), appeler le hook sans sélecteur retourne l'intégralité de l'état du store et cause des re-rendus à chaque mutation, quel qu'en soit l'auteur. La documentation officielle Zustand v5 déconseille explicitement cet usage et recommande de toujours passer un sélecteur.
+En Zustand v5, appeler le hook sans sélecteur reste une API valide (le README officiel montre encore `useBearStore()`), mais retourne tout l'état et re-rend le composant à chaque mutation. Le guide de migration v5 exige surtout des sorties de sélecteur stables : un objet ou un tableau recréé à chaque appel peut boucler (égalité `Object.is`). Pour plusieurs champs, utilise un sélecteur par valeur, ou `useShallow` ([migration v5](https://zustand.docs.pmnd.rs/reference/migrations/migrating-to-v5)).
 
 ✅ **Solution** : Passe toujours un sélecteur qui retourne uniquement la valeur nécessaire.
 
 ```tsx
 // ❌ Incorrect : re-rendu à chaque changement du store
-// En Zustand v5, cet usage provoque des re-rendus excessifs
-// et est déconseillé par la documentation officielle
+// API encore valide, mais re-rendu à chaque changement du store
 const { compteur } = useCompteurStore();
 
 // ✅ Correct : re-rendu uniquement si "compteur" change

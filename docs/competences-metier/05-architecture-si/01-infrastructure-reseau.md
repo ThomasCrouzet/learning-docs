@@ -182,7 +182,7 @@ PC1      PC2     Serveur   Imprimante
 
 ### Étape 1 : Afficher la configuration réseau de ton ordinateur
 
-**Sur Linux/Mac** :
+**Sur Linux** (`ip` et `ss` viennent du paquet `iproute2`, absent par défaut sur macOS) :
 
 ```bash
 # Afficher toutes les interfaces réseau
@@ -211,13 +211,28 @@ ip -c addr
 | `inet 192.168.1.50/24` | Adresse IP et masque |
 | `brd 192.168.1.255` | Adresse de broadcast |
 
+**Sur macOS** (pas de commande `ip` ni `ss` dans le système de base) :
+
+```bash
+# Adresse IPv4 de l'interface Wi-Fi (en0) ou Ethernet (en1 selon la machine)
+ipconfig getifaddr en0
+
+# Liste des interfaces (équivalent approximatif de ip addr)
+ifconfig
+```
+
+Si tu tiens absolument à la syntaxe Linux, Homebrew fournit un wrapper : `brew install iproute2mac`. Ce n'est pas `iproute2` complet.
+
 ---
 
 ### Étape 2 : Afficher la table de routage
 
 ```bash
-# Afficher les routes
+# Linux : table de routage
 ip route
+
+# macOS : table de routage
+netstat -rn
 ```
 
 **Résultat attendu** :
@@ -296,8 +311,11 @@ Chaque ligne est un "saut" (hop) = un routeur traversé.
 ### Étape 5 : Analyser les ports ouverts
 
 ```bash
-# Voir les ports en écoute sur ta machine
+# Linux : ports en écoute
 ss -tuln
+
+# macOS : ports TCP en écoute (ss n'existe pas par défaut)
+lsof -nP -iTCP -sTCP:LISTEN
 ```
 
 **Résultat attendu** :
@@ -325,11 +343,12 @@ tcp    LISTEN  127.0.0.1:5432
 
 | Commande | Action |
 | -------- | ------ |
-| `ip addr` | Afficher les interfaces et adresses IP |
-| `ip route` | Afficher la table de routage |
+| `ip addr` (Linux) | Afficher les interfaces et adresses IP |
+| `ipconfig getifaddr en0` / `ifconfig` (macOS) | Afficher l'adresse IPv4 / les interfaces |
+| `ip route` (Linux) / `netstat -rn` (macOS) | Afficher la table de routage |
 | `ping <ip>` | Tester la connectivité |
 | `traceroute <ip>` | Voir le chemin réseau |
-| `ss -tuln` | Voir les ports en écoute |
+| `ss -tuln` (Linux) / `lsof -nP -iTCP -sTCP:LISTEN` (macOS) | Voir les ports en écoute |
 | `nslookup <domaine>` | Résoudre un nom de domaine en IP |
 | `curl ifconfig.me` | Afficher ton IP publique |
 

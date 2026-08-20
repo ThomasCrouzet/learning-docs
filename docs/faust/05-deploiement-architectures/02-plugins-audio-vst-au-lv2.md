@@ -171,7 +171,7 @@ Sans `faust2juce`, voici les problèmes rencontrés :
 **Ce que faust2juce n'est PAS** :
 
 - `faust2juce` ne compile pas directement le plugin final. Il génère un projet JUCE que tu dois ensuite compiler avec CMake.
-- `faust2juce` n'est pas une alternative à `faust2lv2` pour le format LV2. JUCE ne supporte pas nativement LV2.
+- `faust2juce` n'est pas le chemin le plus simple pour LV2. JUCE 8 a ajouté un backend LV2, mais le script Faust `faust2juce` cible surtout VST3, AU et standalone. Pour un bundle LV2, utilise `faust2lv2`.
 
 **Options principales de faust2juce** :
 

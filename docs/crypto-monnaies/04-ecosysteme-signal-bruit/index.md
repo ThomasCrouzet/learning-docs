@@ -21,6 +21,6 @@ Des milliers de projets crypto existent. Cette phase apprend à les classifier e
 | 04 | [DAOs : gouvernance décentralisée](04-daos-gouvernance-decentralisee.md) | Comment fonctionnent les DAOs en pratique |
 | 05 | [Stablecoins : l'innovation utile](05-stablecoins-innovation-utile.md) | Les différents types et leur utilité réelle |
 | 06 | [Staking en pratique](06-staking-en-pratique.md) | Rendements, risques et réalités du staking |
-| 07 | [Marches de prédiction](07-marches-prediction.md) | Polymarket, Kalshi et les paris sur l'avenir |
+| 07 | [Marchés de prédiction](07-marches-prediction.md) | Polymarket, Kalshi et les paris sur l'avenir |
 | 08 | [Gambling crypto](08-gambling-crypto.md) | Casinos en ligne, paris sportifs et GambleFi |
 | 09 | [Memecoins et launchpads](09-memecoins-launchpads-loterie.md) | Pump.fun et la loterie déguisée en investissement |

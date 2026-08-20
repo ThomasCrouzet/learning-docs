@@ -156,7 +156,7 @@ Sans dépréciation :
 
 | Méthode | Description | Exemple |
 | ------- | ----------- | ------- |
-| Header `Deprecation` | Header HTTP standard (RFC 9745, mars 2025) | `Deprecation: true` |
+| Header `Deprecation` | Header HTTP standard (RFC 9745, mars 2025) : Date RFC 9651, pas un booléen | `Deprecation: @1772323200` |
 | Header `Sunset` | Date de retrait prévue (RFC 8594) | `Sunset: Sat, 01 Jan 2027 00:00:00 GMT` |
 | Documentation OpenAPI | Attribut `deprecated: true` | Dans la spécification OpenAPI |
 | Champ dans la réponse | Message d'avertissement | `"_deprecated": "Utilisez /v2/books"` |
@@ -203,8 +203,8 @@ class BookController extends AbstractController
 
         $response = $this->json($data, Response::HTTP_OK);
 
-        // Header Deprecation : cette version est dépréciée
-        $response->headers->set('Deprecation', 'true');
+        // Header Deprecation (RFC 9745) : Date RFC 9651 = 1er mars 2026 00:00:00 UTC
+        $response->headers->set('Deprecation', '@1772323200');
         // Header Sunset : date de retrait prévue
         $response->headers->set('Sunset', 'Sat, 01 Jan 2027 00:00:00 GMT');
 
@@ -225,7 +225,7 @@ class BookController extends AbstractController
         ], $books);
 
         $response = $this->json($data, Response::HTTP_OK);
-        $response->headers->set('Deprecation', 'true');
+        $response->headers->set('Deprecation', '@1772323200');
         $response->headers->set('Sunset', 'Sat, 01 Jan 2027 00:00:00 GMT');
 
         return $response;
@@ -309,7 +309,7 @@ curl -i http://localhost:8000/api/v1/books/1
 
 ```text
 HTTP/1.1 200 OK
-Deprecation: true
+Deprecation: @1772323200
 Sunset: Sat, 01 Jan 2027 00:00:00 GMT
 
 {"id":1,"title":"Clean Code","author":"Robert C. Martin","publishedYear":2008}
@@ -436,7 +436,7 @@ class BookController extends AbstractController
 
         // Si le client utilise la v1, on ajoute les headers de dépréciation
         if ($version === '1') {
-            $response->headers->set('Deprecation', 'true');
+            $response->headers->set('Deprecation', '@1772323200');
             $response->headers->set('Sunset', 'Sat, 01 Jan 2027 00:00:00 GMT');
         }
 
@@ -685,7 +685,7 @@ Content-Type: application/json
 
 ⚠️ **Problème** : La v1 est dépréciée mais rien ne l'indique dans les réponses HTTP. Les clients ne sont pas avertis.
 
-✅ **Solution** : Ajoute les headers `Deprecation: true` et `Sunset: <date>` sur tous les endpoints de la version dépréciée.
+✅ **Solution** : Ajoute les headers `Deprecation: @<timestamp>` (RFC 9745, Date RFC 9651) et `Sunset: <date HTTP>` (RFC 8594) sur tous les endpoints de la version dépréciée. Le booléen `true` n'est pas la valeur définie par RFC 9745.
 
 ---
 
@@ -695,7 +695,7 @@ Content-Type: application/json
 - [ ] Je connais les trois stratégies de versioning (URL, header, media type)
 - [ ] J'ai implémenté le versioning par URL avec deux contrôleurs séparés
 - [ ] J'ai implémenté le versioning par header avec un EventListener
-- [ ] Les endpoints dépréciés ont les headers `Deprecation` et `Sunset`
+- [ ] Les endpoints dépréciés ont les headers `Deprecation` (Date RFC 9745) et `Sunset`
 - [ ] Les endpoints dépréciés sont marqués `deprecated: true` dans OpenAPI
 - [ ] Je sais retirer une version avec le code 410 Gone
 - [ ] J'ai un guide de migration documenté
@@ -712,7 +712,7 @@ Content-Type: application/json
 - Version 2 (actuelle) : format enrichi `{"author": {"name": "Nom"}, "publication": {"year": 2008}, "createdAt": "2026-..."}`
 - Stratégie URL : `/api/v1/books` et `/api/v2/books`
 - Stratégie header : `Accept-Version: 1` ou `Accept-Version: 2` sur `/api/books`
-- La v1 doit avoir les headers `Deprecation: true` et `Sunset`
+- La v1 doit avoir les headers `Deprecation: @<timestamp>` (RFC 9745) et `Sunset`
 - La spec OpenAPI doit marquer les endpoints v1 comme `deprecated`
 - Si `Accept-Version` n'est pas fourni, la version par défaut est 2
 

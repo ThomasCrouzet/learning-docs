@@ -23,7 +23,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le rôle d'une DMZ, la difference entre un proxy et un reverse proxy, le fonctionnement d'un load balancer et les stratégies de haute disponibilité. Tu sauras aussi dessiner une architecture réseau d'entreprise complete.
+À la fin de cette fiche, tu sauras expliquer le rôle d'une DMZ, la différence entre un proxy et un reverse proxy, le fonctionnement d'un load balancer et les stratégies de haute disponibilité. Tu sauras aussi dessiner une architecture réseau d'entreprise complète.
 
 ---
 
@@ -277,8 +277,7 @@ upstream backend {
 
     server 192.168.1.11:3000;  # Serveur 1
     server 192.168.1.12:3000;  # Serveur 2
-    server 192.168.1.13:3000;  # Serveur 3 (backup)
-    server 192.168.1.13:3000 backup;
+    server 192.168.1.13:3000 backup;  # Serveur 3 (uniquement si 1 et 2 sont indisponibles)
 }
 
 server {

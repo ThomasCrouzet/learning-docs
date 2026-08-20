@@ -20,13 +20,13 @@ cursus: "OpenShift"
 - Fiche **[05 - Builds et ImageStreams](05-builds-imagestreams.md)** (`05-builds-imagestreams.md`)
 - Toutes les fiches précédentes du [cursus Podman](../01-podman/index.md)
 - Toutes les fiches précédentes du [cursus OpenShift](index.md)
-- CRC (CodeReady Containers) installé et démarré sur ta machine
+- CRC (OpenShift Local, ancien nom CodeReady Containers) installé et démarré sur ta machine
 
 ## Versions utilisées dans cette fiche
 
 | Technologie | Version |
 | ----------- | ------- |
-| OpenShift   | 4.14+   |
+| OpenShift   | 4.14+ (pin pédagogique du wiki ; le EUS 4.14 s'est terminé le 31 octobre 2025) |
 | PHP         | 8.3     |
 | PostgreSQL  | 16      |
 

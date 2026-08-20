@@ -149,7 +149,7 @@ Sans consulter la documentation officielle, voici les problèmes rencontrés :
 | ----------- | ---------------------------------------- | ------------------------------------------ |
 | PHP         | php.net/manual/fr/                       | Barre de recherche en haut à droite        |
 | Symfony     | symfony.com/doc/7.4/                     | Menu latéral ou barre de recherche         |
-| Doctrine    | doctrine-project.org/projects/orm/en/3.3 | Menu "Documentation" puis recherche        |
+| Doctrine    | doctrine-project.org/projects/orm/en/3.6 | Menu "Documentation" puis recherche        |
 | PostgreSQL  | postgresql.org/docs/16/                  | Table des matières ou recherche            |
 | Twig        | twig.symfony.com/doc/3.x/                | Menu latéral par catégorie                 |
 

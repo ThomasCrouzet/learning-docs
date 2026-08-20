@@ -72,11 +72,13 @@ Caractéristiques :
 
 Services par fournisseur :
 
-| Fournisseur | Service | Capacite max par objet |
+| Fournisseur | Service | Capacité max par objet |
 | --- | --- | --- |
-| AWS | S3 (Simple Storage Service) | 5 To |
-| Azure | Blob Storage | 4.75 To |
-| GCP | Cloud Storage | 5 To |
+| AWS | S3 (Simple Storage Service) | 50 To |
+| Azure | Blob Storage (block blob) | ~190,7 Tio |
+| GCP | Cloud Storage | 5 Tio |
+
+> **Note - plafonds d'objet** : Amazon S3 a relevé la taille maximale d'un objet de 5 To à 50 To le 2 décembre 2025 (annonce AWS, valable dans toutes les régions). Azure Block Blob : 50 000 blocs x 4 000 Mio ≈ 190,7 Tio depuis l'API `2019-12-12` (la limite 4,75 Tio correspondait aux blocs de 100 Mio des versions 2016-2019). Google Cloud Storage reste à 5 Tio ([quotas objets](https://cloud.google.com/storage/docs/quotas)).
 
 **Block storage (stockage bloc)** :
 

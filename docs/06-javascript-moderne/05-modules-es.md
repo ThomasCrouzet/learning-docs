@@ -742,7 +742,7 @@ import config from "./config.json" with { type: "json" };
 import styles from "./styles.css" with { type: "css" };
 ```
 
-> **Disponibilité** : Les import attributes sont stables dans Node.js 22+ et les navigateurs modernes. Ce cursus utilise Node.js 22 LTS, donc cette syntaxe est disponible sans configuration supplémentaire.
+> **Disponibilité** : Node.js 22.12+ a rendu les import attributes stables, et **seul** `type: "json"` est supporté côté Node (voir `esm.html` Import attributes). `type: "css"` est une API navigateur, pas Node. Node 22.0.0 a retiré les import assertions (`assert`), remplacées par `with`.
 
 ---
 

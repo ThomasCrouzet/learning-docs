@@ -96,7 +96,7 @@ Sans stages, tous les jobs s'exécutent en parallèle. Tu ne peux pas garantir q
 
 | Type | Hébergement | Avantage | Inconvénient |
 | --- | --- | --- | --- |
-| Shared runner | GitLab.com | Aucune installation, prêt à l'emploi | Limité en minutes (400/mois gratuit) |
+| Shared runner | GitLab.com | Aucune installation, prêt à l'emploi | Quota de 400 compute minutes/mois (Free) |
 | Self-hosted runner | Ta machine ou ton serveur | Pas de limite, accès au réseau local | Installation et maintenance nécessaires |
 | Group runner | Partagé dans un groupe GitLab | Mutualisé entre projets | Configuration au niveau du groupe |
 

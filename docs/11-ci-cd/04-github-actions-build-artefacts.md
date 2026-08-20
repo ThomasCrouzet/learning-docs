@@ -96,7 +96,7 @@ ghcr.io/jdupont/mon-app:abc123 (SHA du commit)
 **Ce que GHCR n'est PAS** :
 
 - GHCR n'est pas Docker Hub. Docker Hub est un registry public géré par Docker Inc. GHCR est un registry géré par GitHub.
-- GHCR n'est pas gratuit sans limite. Les dépôts privés ont un quota de stockage et de bande passante (500 Mo pour les comptes gratuits).
+- GHCR n'est pas un registry sans politique de facturation. Le stockage et la bande passante des **images du Container Registry** sont actuellement gratuits (GitHub prévient au moins un mois à l'avance en cas de changement). Les autres types de GitHub Packages restent soumis au quota du plan (500 Mo de stockage inclus pour GitHub Free, partagé avec les artefacts Actions).
 
 ---
 
@@ -135,7 +135,7 @@ Sans cache : les 5 couches sont reconstruites (plusieurs minutes)
 | Résultat du pipeline (produit fini) | Données temporaires pour accélérer le pipeline |
 | Téléchargeable par les utilisateurs | Invisible pour les utilisateurs |
 | Transférable entre jobs | Partagé entre exécutions du même workflow |
-| Durée de vie configurable (1 à 90 jours) | Durée de vie de 7 jours sans utilisation |
+| Durée de vie configurable (défaut 90 jours ; jusqu'à 400 jours en dépôt privé selon les réglages) | Durée de vie de 7 jours sans utilisation |
 
 ---
 
@@ -468,7 +468,7 @@ jobs:
     steps:
       # Récupère l'artefact sauvegardé par le job "build"
       - name: Récupérer l'artefact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           # Même nom que dans upload-artifact
           name: build-output

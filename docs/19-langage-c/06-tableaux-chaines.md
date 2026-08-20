@@ -483,8 +483,10 @@ snprintf : "J'ai 25 ans"
 **Solution** : Toujours prévoir un octet de plus que la longueur du texte.
 
 ```c
-// Incorrect - 5 caractères dans un tableau de 5, pas de place pour '\0'
-char nom[5] = "Hello"; // Comportement indéfini
+// Incorrect pour une chaîne C : 5 caractères dans un tableau de 5.
+// L'initialisation est autorisée (le '\0' n'entre pas). Utiliser
+// nom avec %s, strlen, etc. est un comportement indéfini.
+char nom[5] = "Hello";
 
 // Correct - 6 octets pour 5 caractères + '\0'
 char nom[6] = "Hello";

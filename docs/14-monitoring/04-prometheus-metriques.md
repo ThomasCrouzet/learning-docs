@@ -155,7 +155,7 @@ composer require promphp/prometheus_client_php
 ./composer.json has been updated
 Loading composer repositories with package information
 Updating dependencies
-  - Installing promphp/prometheus_client_php (v2.9.1)
+  - Installing promphp/prometheus_client_php (v2.15.1)
 ```
 
 ---

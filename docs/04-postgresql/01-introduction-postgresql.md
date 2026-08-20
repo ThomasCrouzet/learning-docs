@@ -200,7 +200,7 @@ docker compose exec database psql -U symfony_user -d symfony_db
 | `database` | Nom du service (défini dans docker-compose.yml) |
 | `psql` | Client PostgreSQL |
 | `-U symfony_user` | Utilisateur défini dans le `docker-compose.yml` du cursus Docker |
-| `-d app` | Base de données "app" |
+| `-d symfony_db` | Base de données `symfony_db` (définie par `POSTGRES_DB` dans le même fichier) |
 
 **Résultat attendu** :
 
@@ -208,10 +208,10 @@ docker compose exec database psql -U symfony_user -d symfony_db
 psql (16.x)
 Type "help" for help.
 
-app=#
+symfony_db=>
 ```
 
-Tu es maintenant connecté. Le prompt `app=#` indique que tu es dans la base "app".
+Tu es maintenant connecté. Le prompt `symfony_db=>` indique que tu es dans la base `symfony_db` avec un utilisateur non superutilisateur (`=#` n'apparaît que pour un superutilisateur).
 
 ---
 
@@ -229,10 +229,10 @@ Une fois connecté, tape :
              List of relations
  Schema |         Name          | Type  | Owner
 --------+-----------------------+-------+-------
- public | category              | table | app
- public | doctrine_migration_versions | table | app
- public | product               | table | app
- public | user                  | table | app
+ public | category              | table | symfony_user
+ public | doctrine_migration_versions | table | symfony_user
+ public | product               | table | symfony_user
+ public | user                  | table | symfony_user
 (4 rows)
 ```
 

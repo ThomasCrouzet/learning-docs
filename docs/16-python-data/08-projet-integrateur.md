@@ -24,7 +24,7 @@ cursus: "Python Data"
 
 ## Objectif de cette fiche
 
-À la fin de cette fiche, tu auras construit un projet d'analyse complet et autonome qui charge un jeu de données réaliste, le nettoie, répond a des questions metier et produit un dashboard de 6 graphiques avec un rapport exporte.
+À la fin de cette fiche, tu auras construit un projet d'analyse complet et autonome qui charge un jeu de données réaliste, le nettoie, répond à des questions métier et produit un dashboard de 6 graphiques avec un rapport exporté.
 
 ---
 

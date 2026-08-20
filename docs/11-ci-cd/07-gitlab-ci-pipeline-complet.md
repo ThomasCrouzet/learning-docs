@@ -111,8 +111,8 @@ Sans cache avancé, voici les problèmes rencontrés :
 | Cache | Artefact |
 | --- | --- |
 | Accélère les jobs (dépendances) | Transmet des résultats entre jobs |
-| Partagé entre exécutions du même pipeline | Transmis aux jobs du même pipeline |
-| Non garanti (peut disparaître) | Garanti (toujours disponible dans le pipeline) |
+| Réutilisable par les pipelines suivants (et les jobs du même pipeline si la clé est identique) | Transmis aux jobs des stages suivants du même pipeline |
+| Non garanti (peut disparaître) | Conservé selon `expire_in` (défaut GitLab : 30 jours) |
 | Défini par `cache:` | Défini par `artifacts:` |
 
 ---
@@ -189,7 +189,7 @@ test-integration:
   before_script:
     # Installer les extensions PHP nécessaires
     - apt-get update -qq
-    - apt-get install -y -qq libpq-dev unzip git
+    - apt-get install -y -qq libpq-dev postgresql-client unzip git
     - docker-php-ext-install pdo pdo_pgsql
     # Installer Composer
     - curl -sS https://getcomposer.org/installer | php
@@ -210,7 +210,7 @@ test-integration:
 
   script:
     # Vérifier la connexion à PostgreSQL
-    - php -r "new PDO('$DATABASE_URL');" && echo "Connexion OK"
+    - php -r "new PDO('pgsql:host=postgres;dbname=test_db', 'test_user', 'test_password');" && echo "Connexion OK"
     # Exécuter les migrations
     - php bin/console doctrine:migrations:migrate --no-interaction || true
     # Exécuter les tests
@@ -697,10 +697,11 @@ Sur la branche main :
 
 ⚠️ **Problème** : Le job commence à exécuter les tests avant que PostgreSQL soit complètement démarré. Les tests échouent avec "connection refused".
 
-✅ **Solution** : Ajoute une boucle d'attente dans `before_script` :
+✅ **Solution** : Installe `postgresql-client` (pour `pg_isready`) et ajoute une boucle d'attente dans `before_script` :
 
 ```yaml
 before_script:
+  - apt-get update -qq && apt-get install -y -qq postgresql-client
   # Attendre que PostgreSQL soit prêt (max 30 secondes)
   - |
     for i in $(seq 1 30); do

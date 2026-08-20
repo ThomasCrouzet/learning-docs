@@ -28,7 +28,7 @@ cursus: "Kubernetes"
 | Kubernetes  | 1.34+ (supportées août 2026 : 1.34, 1.35, 1.36) |
 | kubectl     | 1.34+   |
 | Minikube    | 1.34+   |
-| Helm        | 3.x (sécurité jusqu'au 10 fév. 2027) ou 4.x (courant : 4.2.3 en août 2026) |
+| Helm        | 3.x (sécurité jusqu'au 10 fév. 2027) ou 4.x (courant : 4.2.4 en août 2026) |
 
 ## Objectif de cette fiche
 
@@ -100,7 +100,7 @@ Tu peux installer le même chart plusieurs fois avec des noms de release différ
 
 #### Repository (dépôt)
 
-**Définition** : Un repository est un serveur qui héberge des charts Helm. Le plus connu est **ArtifactHub** (artifact-hub.io), qui référence des milliers de charts maintenus par la communauté.
+**Définition** : Un repository est un serveur qui héberge des charts Helm. Le plus connu est **Artifact Hub** (`https://artifacthub.io`), qui référence des milliers de charts maintenus par la communauté.
 
 ---
 

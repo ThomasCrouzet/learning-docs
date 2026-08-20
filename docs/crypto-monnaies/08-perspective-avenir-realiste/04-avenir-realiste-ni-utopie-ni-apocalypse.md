@@ -107,7 +107,7 @@ A la fin de cette fiche, tu sauras identifier les tendances vérifiables de l'é
 
 | Métrique | Détail |
 | --- | --- |
-| Capitalisation totale des stablecoins | Plus de 150 milliards de dollars |
+| Capitalisation totale des stablecoins | Plus de 250 milliards de dollars (août 2026 : USDC seul ~72 milliards d'après Circle) |
 | Volume de transactions annuel | Des milliers de milliards de dollars |
 | Cas d'usage dominant | Trading, remittances, couverture contre l'inflation, défi |
 | Croissance | Tendance haussiere constante depuis 2020, même pendant les bear markets |
@@ -295,7 +295,7 @@ L'EIP-4337 a été déployé sur Ethereum mainnet en mars 2023. Il ne modifie pa
 
 **L'adoption reste lente** : malgré le déploiement technique, l'adoption réelle est encore limitée. Les raisons :
 
-- Les wallets existants (MetaMask) ne supportent pas encore nativement l'account abstraction
+- L'adoption reste inégale : MetaMask a ajouté les smart accounts (ERC-4337 / EIP-7702) dans l'extension depuis mai 2025, mais beaucoup d'utilisateurs restent sur des EOA classiques
 - Les utilisateurs actuels sont habitues aux EOA classiques
 - Le coût de déploiement d'un smart contract wallet est supérieur a celui d'un EOA classique
 - L'écosystème d'outils et de documentation est encore en construction

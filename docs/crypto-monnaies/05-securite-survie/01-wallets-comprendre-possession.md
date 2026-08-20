@@ -173,13 +173,13 @@ Calcul des adresses (Bitcoin, Ethereum, etc.)
 6. La transaction signee est renvoyee à l'ordinateur
 7. L'ordinateur diffuse la transaction signee sur le réseau
 
-A aucun moment la clé privée ne quitte le hardware wallet.
-Même si ton ordinateur est infecte par un malware, la clé reste protégée.
+À aucun moment la clé privée ne quitte le hardware wallet.
+Même si ton ordinateur est infecté par un malware, la clé reste protégée.
 ```
 
 **Ce qu'un hardware wallet n'est PAS** :
 
-- Un hardware wallet n'est pas inviolable. Si quelqu'un à un accès physique à l'appareil ET connaît ton code PIN, il peut signer des transactions. Certains appareils ont aussi eu des vulnérabilités matérielles (ex : attaque par canal auxiliaire sur certains modèles de Ledger en 2023)
+- Un hardware wallet n'est pas inviolable. Si quelqu'un a un accès physique à l'appareil ET connaît ton code PIN, il peut signer des transactions. Certains appareils ont aussi eu des vulnérabilités matérielles (ex : attaque par canal auxiliaire sur certains modèles de Ledger en 2023)
 - Un hardware wallet n'est pas utile sans la seed phrase. Si ton appareil est cassé ou perdu, tu restaures tes clés sur un nouvel appareil grâce à la seed phrase
 
 ---
@@ -292,7 +292,7 @@ Tu peux maintenant utiliser le wallet avec confiance dans ta sauvegarde.
 | ------ | ------------- |
 | Vérifier le solde d'une adresse Ethereum | Aller sur `etherscan.io` et entrer l'adresse |
 | Vérifier le solde d'une adresse Bitcoin | Aller sur `mempool.space` et entrer l'adresse |
-| Vérifier si une plateforme est régulée en France | Consulter le registre PSAN sur le site de l'AMF (`amf-france.org`) |
+| Vérifier si une plateforme est régulée en France | Consulter la liste blanche PSCA (prestataires de services sur crypto-actifs, agrément MiCA) sur le site de l'AMF (`amf-france.org`) |
 
 ---
 
@@ -302,13 +302,13 @@ Tu peux maintenant utiliser le wallet avec confiance dans ta sauvegarde.
 
 **Problème** : Tu prends une photo de ta seed phrase ou tu la mets dans un fichier texte sur ton ordinateur.
 
-**Conséquence** : Un malware, un piratage de ton cloud'où un vol de téléphone donne accès à ta seed phrase. Tes fonds sont volés.
+**Conséquence** : Un malware, un piratage de ton cloud ou un vol de téléphone donne accès à ta seed phrase. Tes fonds sont volés.
 
 **Solution** : Uniquement des copies physiques (papier ou métal), stockées dans des lieux sécurisés.
 
 ### Piège 2 : saisir la seed phrase sur un faux site
 
-**Problème** : Tu reçois un email ou tu vois une popup qui te demandé de "vérifier" ou "synchroniser" ton wallet en entrant ta seed phrase.
+**Problème** : Tu reçois un email ou tu vois une popup qui te demande de "vérifier" ou "synchroniser" ton wallet en entrant ta seed phrase.
 
 **Conséquence** : C'est une arnaque dans 100% des cas. Tu perds tout.
 
@@ -318,9 +318,9 @@ Tu peux maintenant utiliser le wallet avec confiance dans ta sauvegarde.
 
 **Problème** : Le mot de passe (ou PIN) protège l'accès au wallet sur un appareil spécifique. La seed phrase permet de restaurer le wallet sur N'IMPORTE quel appareil.
 
-**Conséquence** : Changer le mot de passe ne protège pas la seed phrase. Si quelqu'un à la seed phrase, ton mot de passe est inutile.
+**Conséquence** : Changer le mot de passe ne protège pas la seed phrase. Si quelqu'un a la seed phrase, ton mot de passe est inutile.
 
-**Solution** : Protège le mot de passé ET la seed phrase comme deux éléments distincts et critiques.
+**Solution** : Protège le mot de passe ET la seed phrase comme deux éléments distincts et critiques.
 
 ---
 

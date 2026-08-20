@@ -481,7 +481,8 @@ class SessionStatsCommand extends Command
 
         // Utilise SCAN pour parcourir les clés sans bloquer Redis
         do {
-            // SCAN retourne un tableau [curseur, [clés]]
+            // phpredis : scan() met à jour $cursor par référence et
+            // retourne un tableau de clés (false si aucune clé)
             $result = $this->redis->scan($cursor, 'sf_session:*', 100);
 
             if ($result !== false) {

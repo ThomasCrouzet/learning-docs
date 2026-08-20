@@ -454,6 +454,8 @@ process = pm.idealString(stringLength, pluckPosition, excitation);
 - pluck position 0.1 → son brillant (type guitare près du chevalet)
 ```
 
+La documentation officielle de `physmodels.lib` précise que `pm.idealString` a des terminaisons rigides : la corde ne s'amortit pas toute seule (elle "ring forever"). Coupe le son avec `gate` ou passe à `pm.ks` / `pm.nylonString` si tu veux un amortissement naturel.
+
 ---
 
 ### Étape 4 : Créer un instrument à vent simple avec pm

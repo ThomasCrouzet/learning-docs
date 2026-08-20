@@ -304,7 +304,7 @@ console.log(x === 5);  // Comparaison stricte : true (type et valeur identiques)
 - Utilise `isNaN()` pour vérifier si la conversion a échoué
 - Utilise `new Date().getFullYear()` pour obtenir l'année actuelle
 
-**Résultat attendu** : Si l'utilisateur entre "25", la console et le paragraphe HTML affichent "Vous êtes probablement né(e) en 2001". Si l'utilisateur entre "abc", un message d'erreur s'affiche.
+**Résultat attendu** : Si l'utilisateur entre "25", la console et le paragraphe HTML affichent "Tu es probablement né(e) en 2001" (année = 2026 - 25). Si l'utilisateur entre "abc", un message d'erreur s'affiche.
 
 ---
 

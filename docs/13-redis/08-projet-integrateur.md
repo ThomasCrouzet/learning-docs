@@ -180,7 +180,7 @@ services:
       context: .
       dockerfile: docker/php/Dockerfile
     # Le worker tourne en continu et consomme les messages
-    command: php bin/console messenger:consume async --time-limit=3600 --memory-limit=128
+    command: php bin/console messenger:consume async --time-limit=3600 --memory-limit=128M
     volumes:
       - ./:/var/www/html
     depends_on:
@@ -1269,7 +1269,7 @@ worker:
             echo 'Waiting for database...'
             sleep 2
         done
-        php bin/console messenger:consume async --time-limit=3600 --memory-limit=128
+        php bin/console messenger:consume async --time-limit=3600 --memory-limit=128M
         "
 ```
 

@@ -81,14 +81,14 @@ Sans tests fonctionnels, voici les problèmes rencontrés :
 
 **Installation** : Symfony fournit un "test-pack" qui installe PHPUnit et tous les outils nécessaires en une seule commande.
 
-**Fichier de configuration** : Le fichier `phpunit.xml.dist` à la racine du projet configure PHPUnit. Il est créé automatiquement lors de l'installation.
+**Fichier de configuration** : Avec PHPUnit 10 et versions suivantes (dont PHPUnit 12 fourni par Symfony 7.4), le fichier s'appelle `phpunit.dist.xml` à la racine du projet. Il est créé automatiquement par Symfony Flex. Les versions de PHPUnit antérieures à 10 utilisaient le nom `phpunit.xml.dist`.
 
-**Structure du fichier `phpunit.xml.dist`** :
+**Structure du fichier `phpunit.dist.xml`** :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- phpunit.xml.dist -->
+<!-- phpunit.dist.xml (PHPUnit 10+) -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="tests/bootstrap.php"
@@ -331,7 +331,7 @@ docker compose exec php composer require --dev symfony/test-pack
 Using version ^1.0 for symfony/test-pack
 ./composer.json has been updated
 ...
- * Creating phpunit.xml.dist
+ * Creating phpunit.dist.xml
  * Creating tests/bootstrap.php
 ```
 
@@ -343,7 +343,7 @@ Vérifie que le dossier `tests/` existe :
 projet-symfony/
 ├── tests/
 │   └── bootstrap.php
-├── phpunit.xml.dist
+├── phpunit.dist.xml
 └── ...
 ```
 

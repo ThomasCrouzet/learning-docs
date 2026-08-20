@@ -481,7 +481,7 @@ Fichier `Makefile` :
 
 ```makefile
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -std=c17 -Wall -Wextra -Werror
 TARGET = presentation
 
 all: $(TARGET)

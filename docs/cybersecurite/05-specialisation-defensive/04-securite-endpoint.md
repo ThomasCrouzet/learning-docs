@@ -148,7 +148,7 @@ Wazuh est un EDR/SIEM open source qui combine la détection d'intrusion, le moni
 
 ```bash
 # Déployer Wazuh avec Docker (all-in-one)
-git clone https://github.com/wazuh/wazuh-docker.git -b v4.9.0
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.14.7
 cd wazuh-docker/single-node
 
 # Générer les certificats
@@ -206,13 +206,13 @@ systemctl enable wazuh-agent
 systemctl start wazuh-agent
 
 # Vérifier la connexion
-/var/ossec/bin/agent-control -l
+/var/ossec/bin/agent_control -l
 ```
 
 **Résultat attendu** :
 
 ```text
-Wazuh agent-control. List of available agents:
+Wazuh agent_control. List of available agents:
    ID: 000, Name: wazuh-manager (server), IP: 127.0.0.1, Active
    ID: 001, Name: ubuntu-web-01, IP: 192.168.1.20, Active
 ```
@@ -243,7 +243,7 @@ sc query sysmon64
 
 ```text
 SERVICE_NAME: Sysmon64
-        TYPE               : 2  FILE_SYSTEM_DRIVER
+        TYPE               : 10  WIN32_OWN_PROCESS
         STATE              : 4  RUNNING
         WIN32_EXIT_CODE    : 0  (0x0)
 ```
@@ -613,7 +613,7 @@ Module stomping              ETW + Sysmon               7
 | Commande | Action |
 | -------- | ------ |
 | `docker compose up -d` (dans wazuh-docker) | Démarrer Wazuh |
-| `/var/ossec/bin/agent-control -l` | Lister les agents Wazuh connectés |
+| `/var/ossec/bin/agent_control -l` | Lister les agents Wazuh connectés |
 | `/var/ossec/bin/wazuh-analysisd -t` | Vérifier la syntaxe des règles |
 | `sysmon64.exe -i config.xml` | Installer Sysmon avec une configuration |
 | `sysmon64.exe -u` | Désinstaller Sysmon |
@@ -702,7 +702,7 @@ Réalise les tâches suivantes :
 
 ```bash
 # Étape 1 : Déployer Wazuh
-git clone https://github.com/wazuh/wazuh-docker.git -b v4.9.0
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.14.7
 cd wazuh-docker/single-node
 docker compose -f generate-indexer-certs.yml run --rm generator
 docker compose up -d

@@ -183,7 +183,7 @@ Le redirecteur est un serveur intermédiaire qui reçoit le trafic de la victime
 
 **Domain fronting** :
 
-Le domain fronting utilise un CDN (Content Delivery Network) pour masquer la destination réelle du trafic. La connexion HTTPS montre un domaine légitime (par exemple `cdn.microsoft.com`) dans le SNI (Server Name Indication), mais le header HTTP `Host` pointe vers le domaine C2. Le CDN route le trafic vers le bon serveur.
+Le domain fronting utilisait un CDN pour masquer la destination réelle du trafic : le SNI HTTPS affichait un domaine légitime (par exemple un hôte Microsoft ou AWS) alors que le header HTTP `Host` pointait vers le domaine C2. **Ce n'est plus une technique fiable** : AWS CloudFront, Google et Cloudflare ont bloqué le domain fronting (2018-2021). Ne le présente pas comme un canal C2 actuel. Les exercices de cette fiche s'appuient sur un redirecteur `socat`, pas sur du domain fronting.
 
 **Malleable C2 profiles** (Cobalt Strike) :
 

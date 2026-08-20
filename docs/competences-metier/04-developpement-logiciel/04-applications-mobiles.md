@@ -82,11 +82,13 @@ Sans responsive, voici les problèmes rencontrés :
 
 **Critères d'une PWA** :
 
+Chrome n'exige plus de service worker pour l'**installation** (critères `beforeinstallprompt` : HTTPS, manifest avec `name`/`short_name`, icônes 192 et 512, `start_url`, `display`). Le service worker reste nécessaire pour le **hors-ligne**, le cache et les notifications push.
+
 | Critère | Description | Comment l'atteindre |
 | ------- | ----------- | ------------------- |
-| HTTPS | Site sécurisé | Certificat SSL |
-| Manifest | Fichier de configuration | `manifest.json` |
-| Service Worker | Script pour le cache et hors-ligne | `sw.js` |
+| HTTPS | Site sécurisé (obligatoire pour installer) | Certificat SSL |
+| Manifest | Fichier de configuration (obligatoire pour installer) | `manifest.json` |
+| Service Worker | Cache et hors-ligne (recommandé ; n'est plus obligatoire pour installer dans Chrome) | `sw.js` |
 | Responsive | Adapté à tous les écrans | CSS media queries |
 | Fast | Chargement rapide | Optimisations |
 
@@ -336,18 +338,18 @@ if ('serviceWorker' in navigator) {
 # Cliquer "Generate report"
 ```
 
-**Critères vérifiés** :
+**Critères vérifiés** (Lighthouse a déprécié la catégorie PWA dédiée ; l'audit d'installabilité porte surtout sur le manifest) :
 
-| Critère | Requis pour PWA |
-| ------- | --------------- |
+| Critère | Requis pour installer (Chrome) |
+| ------- | ------------------------------ |
 | HTTPS | Oui |
 | Manifest valide | Oui |
-| Service Worker | Oui |
+| Service Worker | Non (recommandé pour le hors-ligne) |
 | Icône 192x192 | Oui |
 | Icône 512x512 | Oui |
 | Splash screen | Recommandé |
 | Responsive | Recommandé |
-| Offline fallback | Recommandé |
+| Offline fallback | Recommandé (via service worker) |
 
 ---
 
@@ -375,7 +377,7 @@ if ('serviceWorker' in navigator) {
 
 ⚠️ **Problème** : Boutons de 20px impossibles à toucher sur mobile.
 
-✅ **Solution** : Cibles tactiles de 44x44px minimum (recommandation Apple/Google).
+✅ **Solution** : Cibles tactiles d'au moins **44×44 pt** (Human Interface Guidelines Apple) ; Material Design recommande **48×48 dp**. En CSS, vise au minimum 44px, idéalement 48px.
 
 ```css
 .button {

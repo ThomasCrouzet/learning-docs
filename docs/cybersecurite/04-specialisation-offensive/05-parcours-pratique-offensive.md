@@ -118,9 +118,9 @@ Niveau 4 (Expert)
 | Durée | 23 heures 45 minutes de pratique + 24 heures pour le rapport |
 | Environnement | Réseau de machines virtuelles (Windows et Linux) |
 | Objectif | Obtenir au moins 70 points sur 100 |
-| Machines standalone | 3 machines indépendantes (20 points chacune : 10 pour l'accès initial, 10 pour l'élévation de privilèges) |
-| Ensemble Active Directory | 1 set AD complet (40 points : tout ou rien) |
-| Points bonus | 10 points bonus possibles via les exercices du cours et 30 machines du lab |
+| Machines standalone | 3 machines indépendantes (60 points au total : 20 chacune, 10 pour l'accès initial, 10 pour l'élévation de privilèges) |
+| Ensemble Active Directory | 1 set AD de 3 machines (40 points : 10 + 10 + 20). Points partiels possibles depuis le 1er novembre 2024. Compromission assumée : OffSec fournit un nom d'utilisateur et un mot de passe de départ |
+| Points bonus | Aucun depuis le 1er novembre 2024. Les exercices du cours et les 30 machines du lab restent recommandés pour l'entraînement, mais ils n'ajoutent plus de points à l'examen |
 | Rapport | Obligatoire, documenter chaque étape avec captures d'écran |
 | Outils autorisés | Tous sauf les outils d'exploitation automatique commerciaux (pas de Cobalt Strike, pas de sqlmap en mode automatique sur l'AD) |
 | Interdictions | Pas de spoilers, pas d'outils automatisés de scan d'AD (BloodHound autorisé), pas de métasploit/meterpreter sauf sur 1 machine |
@@ -142,7 +142,7 @@ Niveau 4 (Expert)
 | Phase | Durée | Activités |
 | ----- | ----- | --------- |
 | Mois 1 | 4 semaines | Lire le cours PEN-200, faire les exercices, commencer les labs |
-| Mois 2 | 4 semaines | Compléter 30+ machines du lab OffSec (nécessaire pour les points bonus) |
+| Mois 2 | 4 semaines | Compléter 30+ machines du lab OffSec (entraînement recommandé ; plus de points bonus à l'examen depuis novembre 2024) |
 | Mois 3 | 4 semaines | Hack The Box : machines "Easy" et "Medium" (20+ machines) |
 | Mois 4 | 4 semaines | Proving Grounds Practice : machines OSCP-like (20+ machines) |
 | Mois 5 | 4 semaines | Révision des techniques faibles, pratique du buffer overflow, machines AD |
@@ -320,7 +320,7 @@ Interprétation du score :
 MOIS 1 : COURS ET EXERCICES
 Semaine 1-2 : Modules 1-8 (reconnaissance, web, système)
 - Lire chaque module du cours PEN-200
-- Faire TOUS les exercices (nécessaire pour les 10 points bonus)
+- Faire TOUS les exercices (entraînement recommandé ; plus de points bonus à l'examen depuis novembre 2024)
 - Prendre des notes structurées (CherryTree ou Obsidian)
 
 Semaine 3-4 : Modules 9-16 (exploitation, privesc, AD)
@@ -329,7 +329,7 @@ Semaine 3-4 : Modules 9-16 (exploitation, privesc, AD)
 
 MOIS 2 : LAB OFFSEC
 Semaine 5-8 : Machines du lab
-- Objectif : 30+ machines (nécessaire pour les 10 points bonus)
+- Objectif : 30+ machines (entraînement recommandé ; plus de points bonus à l'examen depuis novembre 2024)
 - Commencer par les machines "Easy" puis "Medium"
 - Documenter chaque machine avec la méthodologie complète
 - Si bloqué > 2h sur une machine, consulter les forums OffSec
@@ -467,7 +467,7 @@ Tu dois pouvoir trouver n'importe quelle commande en < 30 secondes.
 # === Chronométrage ===
 # Démarrer un timer de 24h (23h45 exactement)
 # Allocation recommandée :
-# - Set AD : 6-8h (40 points, tout ou rien)
+# - Set AD : 6-8h (40 points partiels : 10 + 10 + 20 ; identifiants de départ fournis)
 # - Machine 1 : 3-4h (20 points)
 # - Machine 2 : 3-4h (20 points)
 # - Machine 3 : 3-4h (20 points)

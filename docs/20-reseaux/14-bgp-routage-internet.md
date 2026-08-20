@@ -197,7 +197,7 @@ AS64500 annonce 203.0.113.0/24
     -> AS64502 reçoit, AS_PATH = 64501 64500
 ```
 
-**Agrégation de préfixes** : Un AS peut regrouper plusieurs petits blocs contigus en un seul préfixe plus large (par exemple annoncer `203.0.113.0/24` et `203.0.114.0/24` sous la forme... non, ces deux-là ne s'agrègent pas car non alignés). L'agrégation réduit la taille de la table de routage mondiale, qui dépasse aujourd'hui le million de routes IPv4.
+**Agrégation de préfixes** : Un AS peut regrouper plusieurs petits blocs contigus en un seul préfixe plus large (par exemple annoncer `203.0.113.0/24` et `203.0.114.0/24` sous la forme... non, ces deux-là ne s'agrègent pas car non alignés). L'agrégation réduit la taille de la table de routage mondiale : le [CIDR Report](https://www.cidr-report.org/as2.0/) compte environ 1,07 million de préfixes IPv4 actifs en août 2026.
 
 **Filtrage des annonces** : Un AS ne réannonce pas forcément tout ce qu'il reçoit. Il applique des filtres selon ses politiques : par exemple, ne réannoncer à ses clients que les routes utiles, ou ne pas propager des préfixes trop petits (plus spécifiques que `/24` en IPv4 sont souvent filtrés).
 
@@ -407,15 +407,15 @@ La taille de la table de routage BGP mondiale illustre l'échelle d'Internet. On
 # show ip bgp summary | include entries
 ```
 
-**Résultat attendu** (ordre de grandeur en 2025) :
+**Résultat attendu** (ordre de grandeur, [CIDR Report](https://www.cidr-report.org/as2.0/) du 20 août 2026) :
 
 ```text
 BGP routing table entries using ... bytes of memory
-~ 970000 entries IPv4
-~ 200000 entries IPv6
+~ 1070000 entries IPv4
+~ 257000 entries IPv6
 ```
 
-Ce que tu retiens : la table de routage mondiale dépasse aujourd'hui le million de préfixes IPv4. C'est précisément pour contenir cette croissance que l'agrégation de préfixes et le filtrage des annonces sont essentiels.
+Ce que tu retiens : la table IPv4 dépasse le million de préfixes (environ 1,07 million d'entrées actives) ; l'IPv6 est autour de 257 000 préfixes. C'est précisément pour contenir cette croissance que l'agrégation de préfixes et le filtrage des annonces sont essentiels.
 
 ---
 

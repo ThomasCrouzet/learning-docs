@@ -24,7 +24,7 @@ cursus: "Monitoring et Observabilité"
 
 | Technologie | Version |
 | --- | --- |
-| Grafana | 11.x |
+| Grafana | 13.x |
 | Prometheus | 3.13.x |
 | Docker | 27.x |
 
@@ -149,7 +149,7 @@ services:
 
   # Node Exporter pour avoir des métriques système
   node-exporter:
-    image: prom/node-exporter:v1.8.1
+    image: prom/node-exporter:v1.12.1
     ports:
       - "9100:9100"
 

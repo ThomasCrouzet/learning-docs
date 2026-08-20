@@ -129,7 +129,7 @@ v22.x.x
 10.x.x
 ```
 
-Les numéros exacts peuvent varier, mais Node.js doit être en version **22 LTS**. Node.js 20 (Iron) est en fin de support depuis mars 2026 : ne l'utilise pas comme minimum pour ce cursus.
+Les numéros exacts peuvent varier, mais Node.js doit être en version **22 LTS**. Node.js 20 (Iron) a reçu sa dernière mise à jour le 24 mars 2026 et est officiellement en fin de support depuis le 30 avril 2026 ([calendrier Node.js](https://github.com/nodejs/Release#release-schedule)) : ne l'utilise pas comme minimum pour ce cursus.
 
 ---
 
@@ -467,13 +467,13 @@ Alice a 25 ans et habite à Lyon.
 
 ### Étape 10 : Installer et utiliser `ts-node`
 
-Depuis Node.js 22.18, `node fichier.ts` exécute le TypeScript **effaçable** (sans enum, namespace runtime, ni propriétés de constructeur). Pour le TypeScript complet, Node documente `tsx`. `ts-node` reste un runner communautaire, utile à connaître, plus le chemin officiel.
+Depuis Node.js 22.18, `node fichier.ts` exécute le TypeScript **effaçable** (sans enum, namespace runtime, ni propriétés de constructeur). Pour le TypeScript complet (enums, `tsconfig.json`, etc.), la documentation officielle Node.js prend `tsx` comme exemple de runner tiers.
 
-Installe `tsx` (recommandé) ; `ts-node` est optionnel :
+Installe `tsx` (recommandé par [nodejs.org/api/typescript.html](https://nodejs.org/api/typescript.html)) :
 
 ```bash
-# Installe ts-node comme dépendance de développement
-npm install --save-dev ts-node
+# Installe tsx comme dépendance de développement
+npm install --save-dev tsx
 ```
 
 **Résultat attendu** :
@@ -488,7 +488,7 @@ Exécute directement le fichier TypeScript :
 
 ```bash
 # Exécute le TypeScript directement, sans compilation manuelle
-npx ts-node src/index.ts
+npx tsx src/index.ts
 ```
 
 **Résultat attendu** :
@@ -514,12 +514,12 @@ Modifie le fichier `package.json` pour ajouter des scripts pratiques :
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
+    "dev": "tsx src/index.ts",
     "watch": "tsc --watch"
   },
   "devDependencies": {
     "typescript": "^6.0.0",
-    "ts-node": "^10.0.0"
+    "tsx": "^4.0.0"
   }
 }
 ```
@@ -602,7 +602,7 @@ rm src/erreur-test.ts
 | `npx tsc --watch` | Recompile automatiquement à chaque modification |
 | `npx tsc --noEmit` | Vérifie les types sans générer de fichier |
 | `npx tsc fichier.ts` | Compile un seul fichier (ignore `tsconfig.json`) |
-| `npx ts-node fichier.ts` | Exécute un fichier TypeScript directement |
+| `npx tsx fichier.ts` | Exécute un fichier TypeScript directement (runner documenté par Node.js) |
 | `npm run build` | Exécute le script `build` de `package.json` |
 
 ---
@@ -688,7 +688,7 @@ import { readFileSync } from "fs";
 - [ ] Je comprends les options principales : `target`, `module`, `strict`, `rootDir`, `outDir`
 - [ ] Je sais compiler avec `npx tsc`
 - [ ] Je sais exécuter le JavaScript compilé avec `node dist/index.js`
-- [ ] `ts-node` est installé et je sais l'utiliser avec `npx ts-node src/index.ts`
+- [ ] `tsx` est installé et je sais l'utiliser avec `npx tsx src/index.ts`
 - [ ] Les scripts npm `build`, `start`, `dev` et `watch` sont configurés
 
 ---

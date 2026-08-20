@@ -188,7 +188,7 @@ Client ----[ACK]----> Serveur      # Le client confirme
 
 **DNS (Domain Name System)** :
 
-- Traduit les noms de domaine en adresses IP : `example.com` -> `93.184.216.34`
+- Traduit les noms de domaine en adresses IP : `example.com` vers une (ou plusieurs) adresse(s) IPv4, à vérifier avec `dig` (la valeur n'est pas fixe)
 - Hiérarchie : racine (`.`) -> TLD (`.com`) -> domaine (`example`) -> sous-domaine (`www`)
 - Types d'enregistrements : A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), NS (serveur de noms), TXT (texte)
 
@@ -412,7 +412,7 @@ Chaque ligne représente un routeur traversé. Le TTL (Time To Live) est décré
 nslookup example.com
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (les adresses IPv4 de `example.com` changent ; ne mémorise pas une IP unique) :
 
 ```text
 Server:   127.0.0.53
@@ -420,19 +420,21 @@ Address:  127.0.0.53#53
 
 Non-authoritative answer:
 Name:  example.com
-Address: 93.184.216.34
+Address: 104.20.23.154
 ```
+
+Tu peux voir une ou plusieurs adresses A (par exemple `104.20.23.154` et `172.66.147.243` via Google Public DNS en août 2026). L'ancienne adresse pédagogique `93.184.216.34` n'est plus la réponse actuelle.
 
 ```bash
 # Résolution DNS plus détaillée avec dig
 dig example.com
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (extrait ; TTL et IP varient) :
 
 ```text
 ;; ANSWER SECTION:
-example.com.    86400   IN  A   93.184.216.34
+example.com.    300   IN  A   104.20.23.154
 
 ;; Query time: 23 msec
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
@@ -490,9 +492,9 @@ sudo tcpdump -i eth0 -n -c 10
 **Résultat attendu** :
 
 ```text
-14:30:01.123456 IP 192.168.1.100.54321 > 93.184.216.34.443: Flags [S], seq 12345
-14:30:01.234567 IP 93.184.216.34.443 > 192.168.1.100.54321: Flags [S.], seq 67890
-14:30:01.234600 IP 192.168.1.100.54321 > 93.184.216.34.443: Flags [.], ack 1
+14:30:01.123456 IP 192.168.1.100.54321 > 104.20.23.154.443: Flags [S], seq 12345
+14:30:01.234567 IP 104.20.23.154.443 > 192.168.1.100.54321: Flags [S.], seq 67890
+14:30:01.234600 IP 192.168.1.100.54321 > 104.20.23.154.443: Flags [.], ack 1
 ```
 
 Les flags `[S]` = SYN, `[S.]` = SYN-ACK, `[.]` = ACK. Tu vois ici le Three-Way Handshake TCP.

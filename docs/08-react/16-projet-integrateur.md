@@ -1044,7 +1044,7 @@ import type { Categorie } from "../types";
 const schemaTache = z.object({
   titre: z.string().min(3, "Le titre doit contenir au moins 3 caractères").max(100, "Le titre ne doit pas dépasser 100 caractères"),
   description: z.string().min(10, "La description doit contenir au moins 10 caractères"),
-  categorieId: z.number({ invalid_type_error: "Sélectionne une catégorie" }).positive("Sélectionne une catégorie"),
+  categorieId: z.number({ error: "Sélectionne une catégorie" }).positive("Sélectionne une catégorie"),
   priorite: z.enum(["basse", "moyenne", "haute"]),
   dateEcheance: z.string().min(1, "La date d'échéance est obligatoire"),
 });
@@ -1463,7 +1463,7 @@ export const schemaTache = z.object({
     .string()
     .min(10, "La description doit contenir au moins 10 caractères"),
   categorieId: z
-    .number({ invalid_type_error: "Sélectionne une catégorie" })
+    .number({ error: "Sélectionne une catégorie" })
     .positive("Sélectionne une catégorie"),
   priorite: z.enum(["basse", "moyenne", "haute"]),
   dateEcheance: z.string().min(1, "La date d'échéance est obligatoire"),

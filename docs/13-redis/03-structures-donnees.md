@@ -556,7 +556,9 @@ ZRANGE leaderboard 1500 2500 BYSCORE WITHSCORES
 # 2) "1800"
 # 3) "alice"
 # 4) "2000"
-# (ordre croissant par score)
+# 5) "bob"
+# 6) "2300"
+# (ordre croissant par score ; bob à 2300 est inclus car 2300 <= 2500)
 
 # Nombre total de joueurs
 ZCARD leaderboard

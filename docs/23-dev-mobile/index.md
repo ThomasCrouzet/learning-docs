@@ -38,4 +38,4 @@ description: "Cursus Dev Mobile : créer des applications mobiles avec React Nat
 
 ## Durée totale estimée
 
-~14 heures de lecture et pratique.
+~16,5 heures de lecture et pratique (990 min).

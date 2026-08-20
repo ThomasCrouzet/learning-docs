@@ -96,7 +96,7 @@ tokens sur le marche fera probablement baisser le prix.
 
 | Projet | Circulating / Max Supply | Commentaire |
 | --- | --- | --- |
-| Bitcoin | ~95% (19,9M / 21M) | Presque tous les BTC sont en circulation. Dilution future minimale |
+| Bitcoin | ~95,6% (~20,07M / 21M, août 2026) | Presque tous les BTC sont en circulation. Dilution future minimale |
 | Ethereum | Pas de max supply | Inflationniste par design (mais le burn de gas peut rendre net déflationniste) |
 
 **Règle** : ne regarde jamais la market cap seule. Compare toujours avec la FDV. Si la FDV est 10 fois supérieure à la market cap, les 90% de tokens restants seront un jour liberes et exerceront une pression vendeuse.

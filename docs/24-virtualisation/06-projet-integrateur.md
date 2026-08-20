@@ -259,8 +259,12 @@ virt-install \
   --os-variant debian12 \
   --network network=dmz \
   --graphics vnc \
-  --cdrom /var/lib/libvirt/images/iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom /var/lib/libvirt/images/iso/debian-12.15.0-amd64-netinst.iso \
   --boot cdrom
+
+# Point Debian 12.15 : dernier point bookworm au 11 juillet 2026
+# (https://cdimage.debian.org/cdimage/archive/12.15.0/). Debian 13 est
+# la stable courante ; ce lab reste sur debian12 / bookworm.
 
 # VM 2 : db-server
 virt-install \
@@ -271,7 +275,7 @@ virt-install \
   --os-variant debian12 \
   --network network=backend \
   --graphics vnc \
-  --cdrom /var/lib/libvirt/images/iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom /var/lib/libvirt/images/iso/debian-12.15.0-amd64-netinst.iso \
   --boot cdrom
 
 # VM 3 : monitoring (connecte aux trois reseaux)
@@ -285,7 +289,7 @@ virt-install \
   --network network=dmz \
   --network network=backend \
   --graphics vnc \
-  --cdrom /var/lib/libvirt/images/iso/debian-12.9.0-amd64-netinst.iso \
+  --cdrom /var/lib/libvirt/images/iso/debian-12.15.0-amd64-netinst.iso \
   --boot cdrom
 ```
 
@@ -367,16 +371,17 @@ EOF
 
 systemctl restart networking
 
-# Installer PostgreSQL
+# Installer PostgreSQL (Debian 12 livre PostgreSQL 15 dans les dépôts par défaut :
+# paquet postgresql 15+248+deb12u1, voir packages.debian.org/bookworm/postgresql)
 apt update && apt install -y postgresql
 
 # Configurer PostgreSQL pour ecouter sur toutes les interfaces
 sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" \
-  /etc/postgresql/16/main/postgresql.conf
+  /etc/postgresql/15/main/postgresql.conf
 
 # Autoriser les connexions depuis le VLAN web (10.10.10.0/24)
 echo "host all all 10.10.10.0/24 scram-sha-256" >> \
-  /etc/postgresql/16/main/pg_hba.conf
+  /etc/postgresql/15/main/pg_hba.conf
 
 # Redemarrer PostgreSQL
 systemctl restart postgresql
@@ -717,7 +722,8 @@ Laisse toujours 20% de marge pour les pics de charge.
 **Creer le conteneur reverse proxy** :
 
 ```bash
-# Sur Proxmox
+# Sur Proxmox : le suffixe du template change. Liste d'abord :
+# pveam update && pveam available --section system | grep debian-12-standard
 pct create 310 local:vztmpl/debian-12-standard_12.7-1_amd64.tar.zst \
   --hostname reverse-proxy \
   --password "MotDePasseSecure123" \

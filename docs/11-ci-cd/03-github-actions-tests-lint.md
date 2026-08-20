@@ -83,8 +83,8 @@ Sans cache, voici les problèmes rencontrés :
 
 **Ce que le cache n'est PAS** :
 
-- Le cache n'est pas permanent. GitHub supprime les entrées de cache après 7 jours sans utilisation.
-- Le cache n'est pas partagé entre branches par défaut. La branche `feature-x` n'accède pas au cache de `main` (sauf configuration spécifique).
+- Le cache n'est pas permanent. Par défaut, GitHub supprime les entrées de cache après 7 jours sans utilisation (la rétention peut être allongée dans les paramètres Actions du dépôt).
+- Le cache n'est pas partagé entre toutes les branches. Une exécution sur `feature-x` peut restaurer un cache créé sur la branche par défaut (`main`). Un cache créé sur `feature-x` n'est pas accessible depuis `main` ni depuis une autre branche de feature.
 
 ---
 

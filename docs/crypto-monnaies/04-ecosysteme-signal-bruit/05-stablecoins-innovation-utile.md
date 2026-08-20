@@ -70,7 +70,7 @@ Sans stablecoins, l'écosystème crypto rencontre ces problèmes :
 | Aspect | Détail |
 | --- | --- |
 | Émetteur | Tether Limited (enregistrée aux Iles Vierges britanniques) |
-| Capitalisation | > 100 milliards de dollars (le plus gros stablecoin) |
+| Capitalisation | > 180 milliards de dollars (le plus gros stablecoin ; attestation Tether Q2 2026 ~ 184,6 milliards) |
 | Réserves déclarées | Dollars, bons du Trésor US, prêts, autres investissements |
 | Audits | Attestations trimestrielles (pas des audits complets) |
 | Controverse | Amendes de la CFTC (41 millions de dollars) pour declarations trompeuses sur les réserves. Pendant des années, Tether affirmait que chaque USDT était adosse a 1 dollar en banque. En réalité, les réserves comprenaient des prêts, du papier commercial et d'autres actifs moins liquides. |
@@ -80,7 +80,7 @@ Sans stablecoins, l'écosystème crypto rencontre ces problèmes :
 | Aspect | Détail |
 | --- | --- |
 | Émetteur | Circle (entreprise américaine) |
-| Capitalisation | > 30 milliards de dollars |
+| Capitalisation | > 70 milliards de dollars (77 milliards en circulation fin T1 2026, d'après Circle) |
 | Réserves déclarées | Dollars et bons du Trésor US a court terme |
 | Audits | Attestations mensuelles par un cabinet comptable (Deloitte) |
 | Incident notable | En mars 2023, USDC a brièvement perdu son peg (tombe a 0,87 dollar) car 3,3 milliards de dollars de réserves étaient déposés chez Silicon Valley Bank, qui a fait faillite. Le peg a été rétabli après l'intervention du gouvernement américain pour garantir les dépôts de SVB. |

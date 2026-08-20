@@ -502,7 +502,7 @@ kubectl get pods -l app=php-apache
 ```bash
 # Crée un HPA qui maintient l'utilisation CPU à 50%
 # Minimum 1 pod, maximum 10 pods
-kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+kubectl autoscale deployment php-apache --cpu=50% --min=1 --max=10
 ```
 
 Tu peux aussi le faire via un fichier YAML :
@@ -696,7 +696,7 @@ kubectl get all
 | `kubectl get pods -w` | Surveille les pods en temps réel |
 | `kubectl top nodes` | Affiche la consommation CPU/mémoire des nodes |
 | `kubectl top pods` | Affiche la consommation CPU/mémoire des pods |
-| `kubectl autoscale deployment <nom> --cpu-percent=50 --min=1 --max=10` | Crée un HPA |
+| `kubectl autoscale deployment <nom> --cpu=50% --min=1 --max=10` | Crée un HPA |
 | `kubectl get hpa` | Liste les HPAs |
 | `kubectl get hpa -w` | Surveille les HPAs en temps réel |
 | `kubectl describe hpa <nom>` | Affiche les détails d'un HPA |

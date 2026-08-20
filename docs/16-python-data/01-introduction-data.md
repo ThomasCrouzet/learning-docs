@@ -4,7 +4,7 @@ tags:
   - Data
   - Débutant
   - Concept
-description: "Comprendre pourquoi analyser des données, découvrir le cycle de vie des données et les outils Python dedies."
+description: "Comprendre pourquoi analyser des données, découvrir le cycle de vie des données et les outils Python dédiés."
 estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 8
@@ -13,16 +13,16 @@ cursus: "Python Data"
 
 # 01 - Introduction à l'analyse de données
 
-> **En bref** : Comprendre pourquoi l'analyse de données est essentielle, découvrir le cycle de vie des données et identifier les outils Python dedies. Lecture estimée : 60 min.
+> **En bref** : Comprendre pourquoi l'analyse de données est essentielle, découvrir le cycle de vie des données et identifier les outils Python dédiés. Lecture estimée : 60 min.
 
 ## Prérequis
 
-- Avoir termine le cursus [Python fondamentaux](../15-python/index.md) (variables, types, fonctions, fichiers, modules)
+- Avoir terminé le cursus [Python fondamentaux](../15-python/index.md) (variables, types, fonctions, fichiers, modules)
 - Savoir ouvrir un terminal et exécuter un script Python
 
 ## Objectif de cette fiche
 
-À la fin de cette fiche, tu sauras expliquer le cycle de vie des données, identifier les outils Python adaptes a chaque étape et installer un environnement d'analyse fonctionnel.
+À la fin de cette fiche, tu sauras expliquer le cycle de vie des données, identifier les outils Python adaptés à chaque étape et installer un environnement d'analyse fonctionnel.
 
 ---
 
@@ -32,30 +32,30 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce que l'analyse de données ?
 
-**Définition** : L'analyse de données est le processus qui consiste a collecter, nettoyer, transformer et explorer des données brutes pour en extraire des informations utiles et prendre des décisions eclairees.
+**Définition** : L'analyse de données est le processus qui consiste à collecter, nettoyer, transformer et explorer des données brutes pour en extraire des informations utiles et prendre des décisions éclairées.
 
 **Le problème que l'analyse de données résout** :
 
 Sans analyse de données, voici les problèmes rencontrés :
 
-1. **Décisions a l'aveugle** : on prend des décisions basées sur des intuitions ou des impressions, sans preuve concrete.
-2. **Volume incomprehensible** : un fichier de 100 000 lignes est impossible a comprendre en le lisant ligne par ligne.
-3. **Erreurs non détectées** : des anomalies dans les données (doublons, valeurs manquantes, erreurs de saisie) passent inapercues et faussent les conclusions.
+1. **Décisions à l'aveugle** : on prend des décisions basées sur des intuitions ou des impressions, sans preuve concrète.
+2. **Volume incompréhensible** : un fichier de 100 000 lignes est impossible à comprendre en le lisant ligne par ligne.
+3. **Erreurs non détectées** : des anomalies dans les données (doublons, valeurs manquantes, erreurs de saisie) passent inaperçues et faussent les conclusions.
 
 **Comment l'analyse de données résout ces problèmes** :
 
 | Problème | Solution apportée par l'analyse de données |
 | --- | --- |
-| Décisions a l'aveugle | Des statistiques et des graphiques fournissent des preuves objectives |
-| Volume incomprehensible | Des outils calculent des resumes (moyenne, médiane, répartition) en une ligne de code |
+| Décisions à l'aveugle | Des statistiques et des graphiques fournissent des preuves objectives |
+| Volume incompréhensible | Des outils calculent des résumés (moyenne, médiane, répartition) en une ligne de code |
 | Erreurs non détectées | Des techniques de nettoyage identifient et corrigent les anomalies automatiquement |
 
-**Analogie concrète** : Imagine que tu geres un magasin. Chaque jour, tu notes les ventes sur un cahier (les données brutes). À la fin du mois, tu as 30 pages de chiffres. Sans analyse, tu ne sais pas quel produit se vend le mieux, quel jour de la semaine est le plus rentable, ni si un produit est en perte. L'analyse de données, c'est le processus qui transforme ces 30 pages en un tableau de bord clair avec les réponses a ces questions.
+**Analogie concrète** : Imagine que tu gères un magasin. Chaque jour, tu notes les ventes sur un cahier (les données brutes). À la fin du mois, tu as 30 pages de chiffres. Sans analyse, tu ne sais pas quel produit se vend le mieux, quel jour de la semaine est le plus rentable, ni si un produit est en perte. L'analyse de données, c'est le processus qui transforme ces 30 pages en un tableau de bord clair avec les réponses à ces questions.
 
 **Ce que l'analyse de données n'est PAS** :
 
 - L'analyse de données n'est pas de l'intelligence artificielle. L'IA utilise les données pour faire des prédictions automatiques. L'analyse de données se concentre sur la compréhension et la description des données existantes.
-- L'analyse de données n'est pas reservee aux mathematiciens. Les outils Python modernes permettent de faire des analyses puissantes sans connaissance avancée en statistiques.
+- L'analyse de données n'est pas réservée aux mathématiciens. Les outils Python modernes permettent de faire des analyses puissantes sans connaissance avancée en statistiques.
 
 ---
 
@@ -68,7 +68,7 @@ Sans analyse de données, voici les problèmes rencontrés :
 Sans une méthode structuree, voici les problèmes rencontrés :
 
 1. **Desorganisation** : on commence a analyser des données sans les avoir nettoyees, ce qui produit des résultats faux.
-2. **Étapes oubliees** : on oublie de vérifier les valeurs manquantes ou de documenter les transformations appliquees.
+2. **Étapes oubliées** : on oublie de vérifier les valeurs manquantes ou de documenter les transformations appliquées.
 3. **Non-reproductibilité** : impossible de refaire la même analyse six mois plus tard parce que les étapes n'ont pas été enregistrées.
 
 **Comment le cycle de vie résout ces problèmes** :
@@ -76,8 +76,8 @@ Sans une méthode structuree, voici les problèmes rencontrés :
 | Problème | Solution apportée par le cycle de vie |
 | --- | --- |
 | Desorganisation | Un ordre précis d'étapes garantit que rien n'est fait dans le desordre |
-| Étapes oubliees | Chaque étape a un objectif clair et des vérifications associees |
-| Non-reproductibilité | Le pipeline (enchainement d'étapes) peut être rejoue a l'identique |
+| Étapes oubliées | Chaque étape a un objectif clair et des vérifications associées |
+| Non-reproductibilité | Le pipeline (enchaînement d'étapes) peut être rejoué à l'identique |
 
 **Les 5 étapes du cycle de vie** :
 
@@ -90,9 +90,9 @@ Sans une méthode structuree, voici les problèmes rencontrés :
 2. **Nettoyage** : corriger les erreurs, supprimer les doublons, gérer les valeurs manquantes
 3. **Exploration** : calculer des statistiques descriptives, visualiser les distributions
 4. **Analyse** : répondre aux questions précises, identifier des tendances et des correlations
-5. **Communication** : presenter les résultats avec des graphiques et des rapports
+5. **Communication** : présenter les résultats avec des graphiques et des rapports
 
-**Analogie concrète** : Pense a la preparation d'un repas. Tu achetes les ingrédients (collecte), tu les laves et les epluches (nettoyage), tu goutes pour vérifier la qualité (exploration), tu cuisines le plat (analyse), puis tu le présentes dans une assiette soignee (communication). Sauter l'étape du nettoyage, c'est cuisiner avec des legumes terreux.
+**Analogie concrète** : Pense à la préparation d'un repas. Tu achètes les ingrédients (collecte), tu les laves et les épluches (nettoyage), tu goûtes pour vérifier la qualité (exploration), tu cuisines le plat (analyse), puis tu le présentes dans une assiette soignée (communication). Sauter l'étape du nettoyage, c'est cuisiner avec des légumes terreux.
 
 ---
 
@@ -107,7 +107,7 @@ Sans une méthode structuree, voici les problèmes rencontrés :
 | **NumPy** | Calcul numérique rapide sur des tableaux | Analyse |
 | **Pandas** | Manipulation de données tabulaires (lignes/colonnes) | Collecte, Nettoyage, Exploration, Analyse |
 | **Matplotlib** | Création de graphiques de base | Communication |
-| **Seaborn** | Graphiques statistiques avances (base sur Matplotlib) | Communication |
+| **Seaborn** | Graphiques statistiques avancés (basé sur Matplotlib) | Communication |
 
 **Pourquoi ces quatre outils et pas d'autres ?** :
 
@@ -119,8 +119,8 @@ Sans une méthode structuree, voici les problèmes rencontrés :
 **Ce que ces outils ne sont PAS** :
 
 - NumPy n'est pas une base de données. Il stocke des données en mémoire vive, pas sur disque.
-- Pandas n'est pas fait pour le Big Data. Pour des fichiers de plusieurs Go, des outils comme Dask ou Polars sont plus adaptes.
-- Matplotlib n'est pas un outil interactif par défaut. Les graphiques sont statiques (images). Pour de l'interactivite, on utilise Plotly ou Bokeh.
+- Pandas n'est pas fait pour le Big Data. Pour des fichiers de plusieurs Go, des outils comme Dask ou Polars sont plus adaptés.
+- Matplotlib n'est pas un outil interactif par défaut. Les graphiques sont statiques (images). Pour de l'interactivité, on utilise Plotly ou Bokeh.
 
 ---
 
@@ -140,9 +140,9 @@ Sans environnement virtuel, voici les problèmes rencontrés :
 | Problème | Solution apportée par les environnements virtuels |
 | --- | --- |
 | Conflits de versions | Chaque projet a son propre environnement avec ses propres versions |
-| Pollution du système | Les bibliothèques sont installees dans un dossier isole, pas dans le Python système |
+| Pollution du système | Les bibliothèques sont installées dans un dossier isolé, pas dans le Python système |
 
-**Analogie concrète** : Imagine que tu as deux aquariums. Dans le premier, tu mets des poissons tropicaux (eau chaude). Dans le second, des poissons de riviere (eau froide). Chaque aquarium a ses propres conditions, sans interférences. Un environnement virtuel, c'est un aquarium dedie a ton projet.
+**Analogie concrète** : Imagine que tu as deux aquariums. Dans le premier, tu mets des poissons tropicaux (eau chaude). Dans le second, des poissons de rivière (eau froide). Chaque aquarium a ses propres conditions, sans interférences. Un environnement virtuel, c'est un aquarium dédié à ton projet.
 
 ---
 
@@ -355,9 +355,9 @@ Nombre de lignes : 10
 | --- | --- |
 | `python3 -m venv .venv` | Créer un environnement virtuel |
 | `source .venv/bin/activate` | Activer l'environnement virtuel |
-| `deactivate` | Desactiver l'environnement virtuel |
+| `deactivate` | Désactiver l'environnement virtuel |
 | `pip install numpy pandas matplotlib seaborn` | Installer les bibliothèques d'analyse |
-| `pip list` | Lister les bibliothèques installees |
+| `pip list` | Lister les bibliothèques installées |
 | `pip freeze > requirements.txt` | Sauvegarder la liste des dépendances |
 | `pip install -r requirements.txt` | Reinstaller les dépendances depuis le fichier |
 

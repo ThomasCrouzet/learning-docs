@@ -70,12 +70,14 @@ Circle n'a pas toujours été centree sur les stablecoins. L'entreprise a pivote
 
 **Composition des réserves** :
 
-Circle détient les réserves d'USDC dans deux types d'actifs :
+Circle détient les réserves d'USDC principalement dans le Circle Réserve Fund (USDXX), un fonds monétaire 2a-7 enregistré auprès de la SEC et géré par BlackRock. Le détail quotidien du portefeuille est public sur le site de BlackRock. La composition évolue :
 
 | Type d'actif | Description |
 | ------------ | ----------- |
-| Bons du Trésor américain a court terme | Environ 80% des réserves - les actifs les plus surs au monde (dette du gouvernement américain) |
-| Cash en dépôt bancaire | Environ 20% des réserves - dans des banques américaines règlementees |
+| Bons du Trésor US à court terme et pensions reverse overnight | Majorité des réserves, via le Circle Réserve Fund (USDXX) |
+| Cash en dépôt bancaire | Le reste, surtout chez des banques systémiques américaines règlementées |
+
+Le 10-K Circle au 31 décembre 2025 indiquait environ 88 % des réserves d'USDC dans le Circle Réserve Fund. Ne mémorise pas un ratio 80/20 comme une constante : consulte [circle.com/transparency](https://www.circle.com/transparency) pour le snapshot du jour.
 
 **Attestations mensuelles** : chaque mois, le cabinet comptable Deloitte publie une attestation (pas un audit complet, mais une vérification indépendante) confirmant que les réserves sont au moins egales aux USDC en circulation. Ces attestations sont publiques et consultables sur le site de Circle.
 
@@ -93,7 +95,7 @@ Circle détient les réserves d'USDC dans deux types d'actifs :
 | Composition des réserves | Detaillee (bons du Trésor, cash, pourcentages) | Moins détaillée (catégories larges, papier commercial historiquement) |
 | Domiciliation | États-Unis (réglementé) | Iles Vierges britanniques |
 | Historique de problèmes | Incident SVB (2023) | Amende CFTC 41 millions de dollars (2021) pour declarations inexactes sur les réserves |
-| Conformité MiCA | Obtenue (2024) | Problematique (non conforme a ce jour) |
+| Conformité MiCA | Obtenue (2024, EMI France) | Non conforme : Tether n'a pas demandé l'autorisation EMT ; les plateformes UE agréées ont retiré USDT (échéance juillet 2026) |
 
 **Ce que cette comparaison montre** :
 
@@ -176,7 +178,7 @@ Circle détient les réserves d'USDC dans deux types d'actifs :
 
 - [ ] Je connais l'histoire de Circle (2013, Jeremy Allaire, pivots vers les stablecoins)
 - [ ] Je comprends le mécanisme de parite d'USDC (émission, rachat, arbitrage)
-- [ ] Je sais en quoi consistent les réserves (bons du Trésor ~80%, cash ~20%)
+- [ ] Je sais en quoi consistent les réserves (majorité dans le Circle Réserve Fund USDXX, le reste en cash bancaire)
 - [ ] Je peux comparer la transparence d'USDC et de Tether (attestations, domiciliation, historique)
 - [ ] Je connais l'incident SVB (mars 2023, 3,3 milliards de dollars, depeg a 0,87 dollar, sauvetage FDIC)
 - [ ] Je comprends le modèle économique (rendement des réserves, prete a taux zéro par les détenteurs)

@@ -89,7 +89,7 @@ Le destinataire te renvoie un accusé de réception avec un code : "Bien reçu" 
 
 **Définition** : `fetch()` est une fonction native du navigateur et de Node.js qui permet d'effectuer des requêtes HTTP. Elle retourne une Promise qui se résout en un objet `Response`.
 
-> **Note Node.js** : `fetch()` a été introduit en Node.js 18 comme fonctionnalité expérimentale, activé sans option depuis Node.js 20.0, et marqué officiellement stable depuis Node.js 21. Dans le cadre de ce cursus (Node.js 22 LTS), `fetch()` est disponible sans configuration supplémentaire.
+> **Note Node.js** : `fetch()` a été introduit en Node.js 18 comme fonctionnalité expérimentale, **disponible par défaut dès 18.0** (désactivable avec `--no-experimental-fetch`). Il est resté expérimental sur les lignes 18 et 20, et a été marqué officiellement stable depuis Node.js 21. Dans le cadre de ce cursus (Node.js 22 LTS), `fetch()` est disponible sans configuration supplémentaire.
 
 **Le problème que `fetch()` résout** :
 

@@ -139,7 +139,7 @@ Sans transition vers la PQC, voici les problèmes à venir :
 | RSA-2048 (classique) | 256 octets | 256 octets | Cassé par QC |
 | ECDSA P-256 (classique) | 64 octets | 64 octets | Cassé par QC |
 | ML-KEM-768 (post-quantique) | 1 184 octets | N/A (KEM) | Résistant QC |
-| ML-DSA-65 (post-quantique) | 1 952 octets | 3 293 octets | Résistant QC |
+| ML-DSA-65 (post-quantique) | 1 952 octets | 3 309 octets | Résistant QC |
 | SLH-DSA-128s (post-quantique) | 32 octets | 7 856 octets | Résistant QC |
 
 **Ce que la cryptographie post-quantique n'est PAS** :

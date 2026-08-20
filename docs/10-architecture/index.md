@@ -42,4 +42,4 @@ description: "Cursus Architecture et Design Patterns : principes SOLID, patterns
 
 ## Durée totale estimée
 
-~20 heures de lecture et pratique.
+~21 heures de lecture et pratique.

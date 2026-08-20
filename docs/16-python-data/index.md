@@ -2,7 +2,7 @@
 hide:
   - navigation
   - toc
-description: "Cursus Python Data : analyse de données avec NumPy, Pandas, Matplotlib et Seaborn, du nettoyage a la visualisation."
+description: "Cursus Python Data : analyse de données avec NumPy, Pandas, Matplotlib et Seaborn, du nettoyage à la visualisation."
 ---
 
 # Python Data
@@ -28,7 +28,7 @@ description: "Cursus Python Data : analyse de données avec NumPy, Pandas, Matpl
 
 ## Prérequis
 
-- Avoir termine le cursus [Python fondamentaux](../15-python/index.md) (variables, fonctions, POO, fichiers)
+- Avoir terminé le cursus [Python fondamentaux](../15-python/index.md) (variables, fonctions, POO, fichiers)
 
 ## Durée totale estimée
 

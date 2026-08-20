@@ -311,11 +311,11 @@ Remplace la méthode `configureFields` et ajoute la méthode `hashPassword` corr
     }
 ```
 
-**Correction Finale Simplifiée (Celle à utiliser)** :
+**Correction finale (celle à utiliser)** :
 
-Tu vas utiliser la méthode standard : champ mappé, mais on gère le hachage intelligemment.
+Le formulaire EasyAdmin n'est **pas** nommé `crud`. Parser `$request->request->all()['crud']['password']` casse dès que le nom du formulaire change. La méthode stable (EasyAdmin 4) est un champ **non mappé** plus un listener `FormEvents::POST_SUBMIT`.
 
-Voici le code **DÉFINITIF** à mettre dans `UserCrudController.php`. C'est la version la plus stable pour apprendre.
+Voici le code **définitif** à mettre dans `UserCrudController.php`.
 
 ```php
 <?php
@@ -323,14 +323,19 @@ Voici le code **DÉFINITIF** à mettre dans `UserCrudController.php`. C'est la v
 namespace App\Controller\Admin;
 
 use App\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Config\KeyValueStore;
+use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserCrudController extends AbstractCrudController
@@ -346,68 +351,68 @@ class UserCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        $fields = [
-            IdField::new('id')->hideOnForm(),
-            EmailField::new('email'),
-            ChoiceField::new('roles')
-                ->setChoices(['Admin' => 'ROLE_ADMIN', 'User' => 'ROLE_USER'])
-                ->allowMultipleChoices()
-                ->renderAsBadges(),
-        ];
+        yield IdField::new('id')->hideOnForm();
+        yield EmailField::new('email');
+        yield ChoiceField::new('roles')
+            ->setChoices(['Admin' => 'ROLE_ADMIN', 'User' => 'ROLE_USER'])
+            ->allowMultipleChoices()
+            ->renderAsBadges();
 
-        // Configuration du champ mot de passe
-        $password = TextField::new('password')
+        // Champ non mappé : EasyAdmin n'écrit jamais null dans User::password
+        yield TextField::new('password')
             ->setLabel('Mot de passe')
             ->setFormType(PasswordType::class)
             ->onlyOnForms()
-            ->setRequired($pageName === Crud::PAGE_NEW);
-
-        // Si on est en édition, on le rend optionnel et non mappé
-        // pour ne pas écraser le mot de passe existant si laissé vide
-        if ($pageName === Crud::PAGE_EDIT) {
-             $password->setFormTypeOption('empty_data', '')
-                      ->setRequired(false)
-                      // Astuce : on utilise setMapped(false) en édition seulement
-                      // pour récupérer la valeur manuellement
-                      ->setMapped(false);
-        }
-
-        $fields[] = $password;
-
-        return $fields;
+            ->setRequired($pageName === Crud::PAGE_NEW)
+            ->setFormTypeOption('empty_data', '')
+            ->setMapped(false)
+            ->setHelp($pageName === Crud::PAGE_EDIT ? 'Laisse vide pour conserver le mot de passe actuel' : '');
     }
 
-    public function persistEntity(EntityManagerInterface $entityManager, $entityInstance): void
-    {
-        if (!$entityInstance instanceof User) return;
-        
-        // En création, le champ est mappé, donc $entityInstance->getPassword() contient le mot de passe clair
-        $entityInstance->setPassword(
-            $this->passwordHasher->hashPassword($entityInstance, $entityInstance->getPassword())
-        );
-        
-        parent::persistEntity($entityManager, $entityInstance);
+    public function createNewFormBuilder(
+        EntityDto $entityDto,
+        KeyValueStore $formOptions,
+        AdminContext $context
+    ): FormBuilderInterface {
+        $formBuilder = parent::createNewFormBuilder($entityDto, $formOptions, $context);
+
+        return $this->addPasswordHashListener($formBuilder);
     }
 
-    public function updateEntity(EntityManagerInterface $entityManager, $entityInstance): void
-    {
-        if (!$entityInstance instanceof User) return;
+    public function createEditFormBuilder(
+        EntityDto $entityDto,
+        KeyValueStore $formOptions,
+        AdminContext $context
+    ): FormBuilderInterface {
+        $formBuilder = parent::createEditFormBuilder($entityDto, $formOptions, $context);
 
-        // En édition, le champ n'est pas mappé (setMapped(false)).
-        // L'entité n'a donc PAS reçu la valeur du formulaire : le hash actuel est intact.
-        // Il faut récupérer la valeur saisie depuis la requête brute.
-        // EasyAdmin nomme son formulaire CRUD 'crud' (et non le nom de l'entité).
-        $formData = $this->getContext()->getRequest()->request->all();
-        $passwordInput = $formData['crud']['password'] ?? null;
-        
-        // Si un mot de passe a été saisi
-        if (!empty($passwordInput)) {
-            $entityInstance->setPassword(
-                $this->passwordHasher->hashPassword($entityInstance, $passwordInput)
+        return $this->addPasswordHashListener($formBuilder);
+    }
+
+    private function addPasswordHashListener(FormBuilderInterface $formBuilder): FormBuilderInterface
+    {
+        $formBuilder->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event): void {
+            $form = $event->getForm();
+            if (!$form->isValid()) {
+                return;
+            }
+
+            $user = $form->getData();
+            if (!$user instanceof User) {
+                return;
+            }
+
+            $plainPassword = $form->get('password')->getData();
+            if (!is_string($plainPassword) || $plainPassword === '') {
+                return;
+            }
+
+            $user->setPassword(
+                $this->passwordHasher->hashPassword($user, $plainPassword)
             );
-        }
-        
-        parent::updateEntity($entityManager, $entityInstance);
+        });
+
+        return $formBuilder;
     }
 }
 ```
@@ -488,50 +493,19 @@ exit
 
 ⚠️ **Problème** : Tu crées un utilisateur via EasyAdmin, mais quand tu essaies de te connecter avec ce compte, le login échoue. En vérifiant la base de données, tu vois que le mot de passe est stocké en clair (ex: `motdepasse123`) au lieu d'un hash (ex: `$2y$13$...`).
 
-✅ **Solution** : Vérifie que la méthode `persistEntity` dans `UserCrudController.php` appelle bien `hashPassword()` avant de sauvegarder. Le hachage doit se faire **avant** l'appel à `parent::persistEntity()`.
-
-```php
-public function persistEntity(EntityManagerInterface $entityManager, $entityInstance): void
-{
-    if (!$entityInstance instanceof User) return;
-
-    // Le hachage DOIT se faire AVANT la sauvegarde
-    $entityInstance->setPassword(
-        $this->passwordHasher->hashPassword($entityInstance, $entityInstance->getPassword())
-    );
-
-    parent::persistEntity($entityManager, $entityInstance);
-}
-```
+✅ **Solution** : Vérifie que le listener `FormEvents::POST_SUBMIT` (méthode `addPasswordHashListener` du code définitif) hache le mot de passe **avant** la persistance Doctrine. Si tu hashes dans `persistEntity` alors que le champ est non mappé, `getPassword()` contient encore l'ancien hash (création : souvent `null`) et le login échoue.
 
 ### Piège 2 : Le mot de passe existant est écrasé en édition
 
 ⚠️ **Problème** : Tu modifies l'email ou les rôles d'un utilisateur sans toucher au mot de passe. Après sauvegarde, l'utilisateur ne peut plus se connecter : son mot de passe a été remplacé par une chaîne vide ou par `null`.
 
-✅ **Solution** : En mode édition, le champ mot de passe doit être configuré comme **non mappé** (`setMapped(false)`) pour que EasyAdmin ne modifie pas automatiquement la propriété `password` de l'entité. La méthode `updateEntity` doit récupérer manuellement la valeur saisie et ne hacher que si un nouveau mot de passe a été saisi :
-
-```php
-// Dans configureFields, pour le mode EDIT uniquement :
-if ($pageName === Crud::PAGE_EDIT) {
-    $password->setFormTypeOption('empty_data', '')
-             ->setRequired(false)
-             ->setMapped(false); // Ne pas toucher au mot de passe automatiquement
-}
-```
+✅ **Solution** : Configure le champ mot de passe en **non mappé** (`setMapped(false)`) sur les formulaires, et hache uniquement dans un listener `FormEvents::POST_SUBMIT` (voir le code définitif). Ne lis pas `$request->request->all()['crud']['password']` : ce nom de formulaire n'est pas documenté par EasyAdmin 4 (la métadonnée interne s'appelle `ea`).
 
 ### Piège 3 : Conflit entre champ mappé et non mappé
 
 ⚠️ **Problème** : Tu configures le champ mot de passe avec `setMapped(false)` partout (création ET édition). À la création, le mot de passe n'est jamais enregistré car il n'est pas mappé sur l'entité.
 
-✅ **Solution** : Le champ doit être mappé (`setMapped(true)`, qui est le défaut) en **création** et non mappé (`setMapped(false)`) en **édition**. C'est pour cela que le code utilise une condition sur `$pageName` :
-
-```php
-// Mappé en création (le comportement par défaut fonctionne)
-// Non mappé en édition (on gère manuellement dans updateEntity)
-if ($pageName === Crud::PAGE_EDIT) {
-    $password->setMapped(false);
-}
-```
+✅ **Solution** : Laisse le champ **non mappé** en création **et** en édition. Le listener `POST_SUBMIT` lit `$form->get('password')->getData()` : si la valeur est vide, le hash existant n'est pas touché ; si elle est remplie, on hache avant la persistance.
 
 ---
 
@@ -619,13 +593,9 @@ public function configureFields(string $pageName): iterable
         ->setLabel('Mot de passe')
         ->setFormType(PasswordType::class)
         ->onlyOnForms()
-        ->setRequired($pageName === Crud::PAGE_NEW);
-
-    if ($pageName === Crud::PAGE_EDIT) {
-        $password->setFormTypeOption('empty_data', '')
-                 ->setRequired(false)
-                 ->setMapped(false);
-    }
+        ->setRequired($pageName === Crud::PAGE_NEW)
+        ->setFormTypeOption('empty_data', '')
+        ->setMapped(false);
 
     $fields[] = $password;
 

@@ -86,7 +86,7 @@ Exemples :
 
 - **VMware ESXi** : leader historique en entreprise
 - **Proxmox VE** : solution open source basée sur KVM et LXC
-- **Microsoft Hyper-V Server** : version standalone gratuite de Hyper-V
+- **Hyper-V (rôle Windows Server)** : hyperviseur Microsoft en production. La SKU autonome gratuite Hyper-V Server s'arrête à 2019 (support étendu jusqu'au 10 janvier 2029) ; il n'y a plus de Hyper-V Server 2022/2025 gratuit.
 - **Xen** : utilise par AWS pour ses premières instances EC2
 
 Cas d'usage : serveurs de production en datacenter, infrastructure cloud, environnements critiques.

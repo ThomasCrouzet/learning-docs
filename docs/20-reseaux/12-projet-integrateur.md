@@ -178,7 +178,7 @@ services:
     restart: unless-stopped
 
   grafana:
-    image: grafana/grafana:11.4.0
+    image: grafana/grafana:13.1.3
     environment:
       GF_SECURITY_ADMIN_PASSWORD: admin
     ports:

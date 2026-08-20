@@ -89,7 +89,9 @@ Sans MITRE ATT&CK, voici les problèmes rencontrés :
 | Sous-technique | PowerShell (T1059.001) | La variante spécifique |
 | Procédure | APT29 utilise PowerShell obfusqué | L'implémentation concrète par un groupe |
 
-**Les 14 tactiques MITRE ATT&CK (Enterprise)** :
+**Les 15 tactiques MITRE ATT&CK (Enterprise)** :
+
+La matrice Enterprise a 15 tactiques. TA0005 s'appelle **Stealth** (dissimulation, apparence de comportement normal). **Defense Impairment** (TA0112) est une tactique distincte : casser les mécanismes de sécurité, les pipelines et les outils de défense.
 
 | # | Tactique | ID | Objectif |
 | - | -------- | -- | -------- |
@@ -99,14 +101,15 @@ Sans MITRE ATT&CK, voici les problèmes rencontrés :
 | 4 | Exécution | TA0002 | Exécuter du code malveillant |
 | 5 | Persistence | TA0003 | Maintenir l'accès |
 | 6 | Privilege Escalation | TA0004 | Obtenir des privilèges supérieurs |
-| 7 | Defense Evasion | TA0005 | Éviter la détection |
-| 8 | Credential Access | TA0006 | Voler des identifiants |
-| 9 | Discovery | TA0007 | Explorer l'environnement |
-| 10 | Lateral Movement | TA0008 | Se déplacer dans le réseau |
-| 11 | Collection | TA0009 | Rassembler les données ciblées |
-| 12 | Command and Control | TA0011 | Communiquer avec les systèmes compromis |
-| 13 | Exfiltration | TA0010 | Extraire les données |
-| 14 | Impact | TA0040 | Détruire, chiffrer ou manipuler |
+| 7 | Stealth | TA0005 | Se cacher et paraître comme un comportement normal |
+| 8 | Defense Impairment | TA0112 | Casser les mécanismes de sécurité et les outils de défense |
+| 9 | Credential Access | TA0006 | Voler des identifiants |
+| 10 | Discovery | TA0007 | Explorer l'environnement |
+| 11 | Lateral Movement | TA0008 | Se déplacer dans le réseau |
+| 12 | Collection | TA0009 | Rassembler les données ciblées |
+| 13 | Command and Control | TA0011 | Communiquer avec les systèmes compromis |
+| 14 | Exfiltration | TA0010 | Extraire les données |
+| 15 | Impact | TA0040 | Détruire, chiffrer ou manipuler |
 
 ### Qu'est-ce que le Diamond Model ?
 
@@ -143,7 +146,7 @@ Sans MITRE ATT&CK, voici les problèmes rencontrés :
 
 | Cyber Kill Chain | MITRE ATT&CK |
 | ---------------- | ------------- |
-| 7 étapes linéaires | 14 tactiques non linéaires |
+| 7 étapes linéaires | 15 tactiques non linéaires |
 | Vue séquentielle de l'attaque | Vue matricielle des techniques |
 | Orientée prévention (rompre la chaîne) | Orientée détection (mapper les techniques) |
 | Moins détaillée | Très détaillée (sous-techniques, procédures) |
@@ -520,13 +523,14 @@ Après chaque hunt, mapper les techniques observées sur la matrice MITRE ATT&CK
 ```text
 # Matrice de couverture après le hunt :
 Tactique              Techniques couvertes / Total    Couverture
-Initial Access        2 / 9                           22%
-Execution             3 / 12                          25%
-Persistence           4 / 19                          21%
-Defense Evasion       2 / 42                          5%    ← PRIORITÉ
+Initial Access        2 / 11                          18%
+Execution             3 / 20                          15%
+Persistence           4 / 22                          18%
+Stealth               2 / 30                          7%    ← PRIORITÉ
+Defense Impairment    0 / 18                          0%    ← PRIORITÉ
 Credential Access     1 / 17                          6%    ← PRIORITÉ
 Lateral Movement      1 / 9                           11%
-C2                    3 / 16                          19%
+C2                    3 / 18                          17%
 ```
 
 ---
@@ -575,7 +579,7 @@ C2                    3 / 16                          19%
 ## Checklist de Validation
 
 - [ ] Je sais formuler une hypothèse de threat hunting basée sur MITRE ATT&CK
-- [ ] Je sais expliquer les 14 tactiques de la matrice MITRE ATT&CK
+- [ ] Je sais expliquer les 15 tactiques de la matrice MITRE ATT&CK Enterprise
 - [ ] Je sais utiliser le stack counting pour identifier les valeurs rares
 - [ ] Je sais utiliser la long-tail analysis pour détecter les anomalies réseau
 - [ ] Je sais expliquer la différence entre IoC et IoA avec des exemples concrets

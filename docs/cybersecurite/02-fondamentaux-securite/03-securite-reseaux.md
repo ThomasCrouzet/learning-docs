@@ -153,14 +153,14 @@ Sans IDS/IPS, voici les problèmes rencontrés :
 
 **Définition** : Suricata est un IDS/IPS/NSM (Network Security Monitoring) open source, développé par l'OISF. Il est multithreadé (plus performant que Snort sur les gros volumes de trafic) et compatible avec les règles Snort.
 
-**Avantages par rapport à Snort** :
+**Avantages par rapport à Snort 2** (Snort 3, documenté par Cisco, est multithreadé : un thread de contrôle et plusieurs threads de détection) :
 
-| Caractéristique | Snort | Suricata |
-| --------------- | ----- | -------- |
-| Threading | Single-thread | Multi-thread |
-| Protocoles | HTTP, DNS, FTP | HTTP, DNS, FTP, TLS, SMB, SSH, MQTT... |
-| Extraction de fichiers | Limitée | Native |
-| Logs JSON | Non natif | Natif (EVE JSON) |
+| Caractéristique | Snort 2 | Snort 3 | Suricata |
+| --------------- | ------- | ------- | -------- |
+| Threading | Un thread de paquets par processus | Plusieurs threads de paquets par processus | Multi-thread |
+| Protocoles | HTTP, DNS, FTP | Étendus via plugins | HTTP, DNS, FTP, TLS, SMB, SSH, MQTT... |
+| Extraction de fichiers | Limitée | Améliorée | Native |
+| Logs JSON | Non natif | Possible via plugins | Natif (EVE JSON) |
 
 ### Qu'est-ce qu'un VPN ?
 

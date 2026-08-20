@@ -527,12 +527,14 @@ INFO server
 
 ```text
 # Server
-redis_version:7.2.4
+redis_version:7.4.x
 redis_mode:standalone
 os:Linux 6.x.x-0-virt x86_64
 tcp_port:6379
 uptime_in_seconds:1234
 ```
+
+Le tag `redis:7-alpine` suit la ligne 7.4 (7.4.11 sur Docker Hub en août 2026). Le préfixe `7.` reste le pin de cette fiche.
 
 ```bash
 # Informations sur la mémoire

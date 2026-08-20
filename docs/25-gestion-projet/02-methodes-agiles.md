@@ -125,13 +125,13 @@ Sans Scrum, voici les problèmes rencontrés :
 | --- | --- | --- |
 | Product Owner (PO) | Définit ce qu'il faut construire et dans quel ordre. Il gère le backlog produit | Le client du restaurant qui passe commande |
 | Scrum Master (SM) | Facilite le processus Scrum, supprime les obstacles, protège l'équipe | Le maître d'hôtel qui s'assure que le service se déroule bien |
-| Équipe de développement | Réalise le travail (code, tests, documentation). Équipe auto-organisée de 3 à 9 personnes | Les cuisiniers qui préparent les plats |
+| Développeurs | Réalisent le travail (code, tests, documentation). Toute l'équipe Scrum (PO + Scrum Master + développeurs) compte typiquement 10 personnes ou moins (Scrum Guide 2020) | Les cuisiniers qui préparent les plats |
 
 **Ce que les rôles ne sont PAS** :
 
 - Le Product Owner n'est pas un chef de projet. Il ne gère pas l'équipe, il gère le produit (les priorités, la vision).
 - Le Scrum Master n'est pas un manager. Il ne donne pas d'ordres. Il facilite, coache et supprime les obstacles.
-- L'équipe de développement n'est pas composée uniquement de développeurs. Elle inclut testeurs, designers, DevOps : tous ceux qui contribuent à la livraison.
+- Les développeurs ne sont pas uniquement des codeurs. Le Scrum Guide 2020 utilise ce mot pour tous ceux qui créent l'incrément (testeurs, designers, DevOps inclus).
 
 ---
 

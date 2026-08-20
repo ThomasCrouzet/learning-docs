@@ -275,7 +275,9 @@ prowler aws --output-formats html json
 # Scanner uniquement les contrôles IAM
 prowler aws --service iam --output-formats html
 
-# Scanner avec le benchmark CIS AWS Foundations v1.5
+# Scanner avec le benchmark CIS AWS Foundations (identifiant historique encore
+# listé par Prowler). AWS Security Hub documente désormais CIS v3.0 et v5.0 :
+# adapte le flag (`cis_2.0_aws`, `cis_3.0_aws`, etc.) à la version que tu cibles.
 prowler aws --compliance cis_1.5_aws --output-formats html
 ```
 

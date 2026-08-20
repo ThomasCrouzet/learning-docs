@@ -263,14 +263,14 @@ pip freeze > requirements.txt
 cat requirements.txt
 ```
 
-**Résultat attendu** :
+**Résultat attendu** (numéros de version indicatifs ; `pip install` en 2026 peut poser NumPy 2.x et Pandas 3.x) :
 
 ```text
-matplotlib==3.8.3
-numpy==1.26.4
-pandas==2.2.1
-scikit-learn==1.4.1.post1
-jupyter==1.0.0
+matplotlib==3.x
+numpy==2.x
+pandas==2.x ou 3.x
+scikit-learn==1.x
+jupyter==1.x
 ...
 ```
 

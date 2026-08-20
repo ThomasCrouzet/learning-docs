@@ -17,7 +17,7 @@ description: "Cursus Langage C : programmation système, pointeurs, allocation d
 | - | ----- | ----- |
 | 1 | [Introduction au langage C](01-introduction-c.md) | 60 min |
 | 2 | [Variables et types](02-variables-types.md) | 60 min |
-| 3 | [Opérateurs et structures de controle](03-operateurs-controle.md) | 60 min |
+| 3 | [Opérateurs et structures de contrôle](03-operateurs-controle.md) | 60 min |
 | 4 | [Fonctions](04-fonctions.md) | 60 min |
 | 5 | [Pointeurs](05-pointeurs.md) | 90 min |
 | 6 | [Tableaux et chaînes de caractères](06-tableaux-chaines.md) | 75 min |
@@ -30,7 +30,7 @@ description: "Cursus Langage C : programmation système, pointeurs, allocation d
 
 ## Prérequis
 
-- Aucune connaissance prealable en programmation n'est requise (tout est explique depuis zéro)
+- Aucune connaissance préalable en programmation n'est requise (tout est expliqué depuis zéro)
 - Ce cursus est autonome. Pour aller plus loin sur les concepts de gestion mémoire, le [cursus Rust](../fondamentaux/08-rust/index.md) offre un approfondissement complémentaire
 
 ## Durée totale estimée

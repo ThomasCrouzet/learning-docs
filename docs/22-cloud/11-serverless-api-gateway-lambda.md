@@ -71,7 +71,7 @@ Sans serverless, voici les problèmes rencontrés :
 | Durée maximale d'exécution | 15 minutes |
 | Mémoire configurable | 128 Mo à 10 240 Mo |
 | CPU | Proportionnel à la mémoire allouée |
-| Espace disque temporaire | 512 Mo à 10 Go (dans `/tmp`) |
+| Espace disque temporaire | 512 Mo à 10 240 Mo (dans `/tmp`) |
 | Taille du package de déploiement | 50 Mo (zip upload direct), 250 Mo décompressé (zip + layers) ; jusqu'à **10 Go** en image conteneur |
 | Concurrence par défaut | 1 000 exécutions simultanées par compte et par région |
 

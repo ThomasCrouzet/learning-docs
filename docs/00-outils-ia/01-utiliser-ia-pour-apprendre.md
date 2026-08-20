@@ -147,7 +147,7 @@ Ce tableau présente des IA conversationnelles courantes. Les offres gratuites, 
 
 | IA      | URL d'accès       |
 | ------- | ----------------- |
-| ChatGPT | chat.openai.com   |
+| ChatGPT | chatgpt.com       |
 | Claude  | claude.ai         |
 | Gemini  | gemini.google.com |
 | Mistral | chat.mistral.ai   |

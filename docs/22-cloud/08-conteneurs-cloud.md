@@ -141,7 +141,7 @@ Sans registre cloud, voici les problèmes rencontres :
 
 | Critère | EKS (AWS) | GKE (Google) | AKS (Azure) |
 | --- | --- | --- | --- |
-| Coût du control plane | ~73 USD/mois | Gratuit (mode Autopilot) | Gratuit |
+| Coût du control plane | ~73 USD/mois (0,10 USD/heure) | 0,10 USD/heure par cluster (crédit Always Free ~74,40 USD/mois : 1 cluster Autopilot ou zonal) | Gratuit (tier Free, sans SLA) ; Standard ~0,10 USD/heure |
 | Intégration native | AWS (IAM, VPC, ALB) | GCP (IAM, VPC, Cloud Load Balancing) | Azure (AD, VNet, App Gateway) |
 | Mise a jour Kubernetes | Manuelle ou automatique | Automatique (Autopilot) | Automatique |
 | Particularite | Forte adoption en entreprise | Meilleure expérience Kubernetes native | Intégration Active Directory |
@@ -192,8 +192,9 @@ WORKDIR /app
 # Copier les fichiers de dependances
 COPY package*.json ./
 
-# Installer les dependances
-RUN npm ci --only=production
+# Installer les dependances (sans les devDependencies)
+# --only=production est deprecie : utiliser --omit=dev
+RUN npm ci --omit=dev
 
 # Copier le code source
 COPY . .
@@ -324,7 +325,7 @@ Créé un fichier `task-definition.json` :
         }
       },
       "healthCheck": {
-        "command": ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"],
+        "command": ["CMD-SHELL", "wget -q -O /dev/null http://localhost:3000/ || exit 1"],
         "interval": 30,
         "timeout": 5,
         "retries": 3,
@@ -336,11 +337,13 @@ Créé un fichier `task-definition.json` :
 }
 ```
 
+L'image `node:22-alpine` n'embarque pas `curl` (le binaire n'est installé que pendant le build, puis retiré). Alpine fournit `wget` via BusyBox, d'où le health check ci-dessus.
+
 Decomposition des champs importants :
 
 - `family` : nom logique de la task définition (les versions sont numerotees automatiquement)
 - `networkMode: awsvpc` : chaque task reçoit sa propre adresse IP dans le VPC
-- `cpu: 256` : 0.25 vCPU (256 unités = 0.25 CPU). Fargate supporte 256, 512, 1024, 2048, 4096
+- `cpu: 256` : 0.25 vCPU (256 unités = 0.25 CPU). Fargate Linux accepte 256, 512, 1024, 2048, 4096, et aussi 8192 (8 vCPU) et 16384 (16 vCPU) depuis la plateforme 1.4.0
 - `memory: 512` : 512 Mo de mémoire vive
 - `executionRoleArn` : rôle IAM qui permet a ECS de telecharger l'image et d'envoyer les logs
 - `logConfiguration` : envoie les logs du conteneur vers CloudWatch Logs
@@ -612,7 +615,7 @@ Créé le fichier `exercice-task-definition.json` :
         }
       },
       "healthCheck": {
-        "command": ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"],
+        "command": ["CMD-SHELL", "wget -q -O /dev/null http://localhost:3000/ || exit 1"],
         "interval": 30,
         "timeout": 5,
         "retries": 3,

@@ -243,7 +243,7 @@ jobs:
     # Étapes du job
     steps:
       # Étape 1 : récupérer le code du dépôt
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       # Étape 2 : installer les dépendances
       - run: composer install

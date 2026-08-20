@@ -18,7 +18,7 @@ Ce module couvre Red Hat OpenShift, la plateforme Kubernetes d'entreprise. Tu ap
 | # | Fiche | Description |
 | - | ----- | ----------- |
 | 01 | [Introduction à OpenShift](01-introduction-openshift.md) | Découvrir OpenShift et son écosystème |
-| 02 | [Installation CRC](02-installation-crc.md) | Installer CodeReady Containers pour un cluster local |
+| 02 | [Installation CRC](02-installation-crc.md) | Installer OpenShift Local (`crc`, anciennement CodeReady Containers) |
 | 03 | [Déployer une application](03-deploiement-application.md) | Déployer une première application sur OpenShift |
 | 04 | [Routes et services](04-routes-services.md) | Exposer des applications avec les routes et services |
 | 05 | [Builds et ImageStreams](05-builds-imagestreams.md) | Construire des images avec les stratégies de build |

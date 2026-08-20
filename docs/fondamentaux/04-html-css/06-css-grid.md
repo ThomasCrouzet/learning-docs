@@ -125,8 +125,8 @@ cursus: "HTML/CSS"
 
 ```css
 .item {
-    grid-column-start: 1;
-    grid-column-end: 3;     /* De la colonne 1 à 3 */
+    grid-column-start: 1;   /* Ligne de grille verticale n° 1 (début) */
+    grid-column-end: 3;     /* Ligne de grille n° 3 : occupe 2 colonnes (1 et 2) */
     grid-row-start: 1;
     grid-row-end: 2;
 }
@@ -136,8 +136,8 @@ cursus: "HTML/CSS"
 
 ```css
 .item {
-    grid-column: 1 / 3;     /* Colonnes 1 à 3 */
-    grid-row: 1 / 2;        /* Ligne 1 à 2 */
+    grid-column: 1 / 3;     /* De la ligne 1 à la ligne 3 = 2 pistes, pas 3 */
+    grid-row: 1 / 2;        /* De la ligne 1 à la ligne 2 = 1 piste */
 }
 ```
 
@@ -233,7 +233,6 @@ cursus: "HTML/CSS"
     <header class="header">Header</header>
     <nav class="nav">Navigation</nav>
     <main class="main">Contenu principal</main>
-    <aside class="aside">Sidebar</aside>
     <footer class="footer">Footer</footer>
 </div>
 ```
@@ -304,9 +303,9 @@ cursus: "HTML/CSS"
 
 ### Piège 2 : Oublier que les lignes commencent à 1
 
-⚠️ **Problème** : `grid-column: 0 / 2` ne fonctionne pas.
+⚠️ **Problème** : `grid-column: 0 / 2` ne fonctionne pas. Autre confusion : `grid-column: 1 / 3` n'occupe **pas** 3 colonnes.
 
-✅ **Solution** : Les lignes Grid commencent à 1, pas à 0.
+✅ **Solution** : Les lignes Grid commencent à 1, pas à 0. Les nombres sont des **lignes de grille**, pas des numéros de colonnes. `1 / 3` va de la ligne 1 à la ligne 3, donc **2 pistes**. Pour occuper 3 colonnes : `1 / 4` ou `span 3`. Docs : [MDN, line-based placement](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement).
 
 ### Piège 3 : Zones grid-template-areas mal formées
 

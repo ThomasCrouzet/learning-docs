@@ -423,15 +423,20 @@ class VolumeDiscountStrategy implements PricingStrategyInterface
 {
     public function calculateDiscount(float $subtotal, int $quantity): float
     {
-        $discount = 0.0;
+        // Même enchaînement que le contrôleur initial : les deux if
+        // s'appliquent (pas un elseif). Quantité >= 50 : 5 % puis 10 %
+        // supplémentaire, soit un facteur 0.95 * 0.90.
+        $price = $subtotal;
 
-        if ($quantity >= OrderRules::VOLUME_DISCOUNT_TIER_2_THRESHOLD) {
-            $discount = OrderRules::VOLUME_DISCOUNT_TIER_2_RATE;
-        } elseif ($quantity >= OrderRules::VOLUME_DISCOUNT_TIER_1_THRESHOLD) {
-            $discount = OrderRules::VOLUME_DISCOUNT_TIER_1_RATE;
+        if ($quantity >= OrderRules::VOLUME_DISCOUNT_TIER_1_THRESHOLD) {
+            $price *= (1 - OrderRules::VOLUME_DISCOUNT_TIER_1_RATE);
         }
 
-        return $subtotal * $discount;
+        if ($quantity >= OrderRules::VOLUME_DISCOUNT_TIER_2_THRESHOLD) {
+            $price *= (1 - OrderRules::VOLUME_DISCOUNT_TIER_2_RATE);
+        }
+
+        return $subtotal - $price;
     }
 
     public function getName(): string
@@ -1327,7 +1332,12 @@ Ce projet intégrateur conclut le cursus Architecture et Design Patterns. Voici 
 | 09 | DDD | Entités, value objects, agrégats |
 | 10 | Patterns JavaScript | Module, observer, pub/sub, middleware |
 | 11 | Anti-patterns | God class, spaghetti, magic numbers |
-| 12 | Projet intégrateur | Tout combiner sur un cas réel |
+| 12 | Multi-tenancy | Isoler les données par client |
+| 13 | Soft delete | Supprimer sans effacer |
+| 14 | Anti-énumération | Ne pas révéler qui existe |
+| 15 | URLs signées | Tokens d'accès anonyme |
+| 16 | Filtres Doctrine | Isolation transparente |
+| 17 | Projet intégrateur | Tout combiner sur un cas réel |
 
 ---
 

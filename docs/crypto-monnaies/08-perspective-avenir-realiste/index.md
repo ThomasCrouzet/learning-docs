@@ -9,7 +9,7 @@ description: "Phase 8 du cursus Crypto-monnaies - Perspective et avenir réalist
 
 Durée estimée : 1-2 mois
 
-Bilan factuel : ce que la crypto résout, ce qu'elle ne résout pas, et ou elle va probablement. Ni utopie ni apocalypse.
+Bilan factuel : ce que la crypto résout, ce qu'elle ne résout pas, et où elle va probablement. Ni utopie ni apocalypse.
 
 ## Fiches de cette phase
 

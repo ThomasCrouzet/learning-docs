@@ -76,7 +76,8 @@ Sans contribution open source, voici les problèmes rencontrés :
    └── Chercher les labels "good first issue" ou "help wanted"
 
 2. Fork le dépôt
-   └── git fork → git clone → git checkout -b ma-branche
+   └── Sur GitHub : bouton Fork (ou `gh repo fork`). `git fork` n'existe pas.
+   └── Puis : git clone, git remote add upstream, git checkout -b ma-branche
 
 3. Comprendre le code
    └── Lire le CONTRIBUTING.md, les tests existants, l'architecture

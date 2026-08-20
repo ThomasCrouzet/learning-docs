@@ -215,7 +215,8 @@ server {
 }
 
 server {
-    listen 443 ssl http2;
+    listen 443 ssl;
+    http2 on;
     server_name example.com;
 
     # Certificats SSL
@@ -318,7 +319,6 @@ opcache.interned_strings_buffer=16
 opcache.max_accelerated_files=20000
 opcache.validate_timestamps=0  ; Désactiver en prod
 opcache.revalidate_freq=0
-opcache.fast_shutdown=1
 ```
 
 ---

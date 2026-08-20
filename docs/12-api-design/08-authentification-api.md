@@ -366,8 +366,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    // Méthode requise par UserInterface
-    // Efface les données sensibles temporaires (mot de passe en clair)
+    // Conservée vide : eraseCredentials() est dépréciée depuis Symfony 7.3
+    // (le framework ne l'appelle plus ; Symfony 8 la retire de UserInterface)
     public function eraseCredentials(): void {}
 }
 ```

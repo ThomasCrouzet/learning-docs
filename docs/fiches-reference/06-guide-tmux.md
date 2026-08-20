@@ -180,7 +180,7 @@ tmux -V
 **Résultat attendu** :
 
 ```text
-tmux 3.6a
+tmux 3.7c
 ```
 
 Le numéro de version peut être légèrement différent selon la date d'installation. L'important est qu'une version s'affiche sans erreur.
