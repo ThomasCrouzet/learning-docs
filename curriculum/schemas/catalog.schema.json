@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thomascrouzet.github.io/learning-docs/schemas/catalog-v2.json",
+  "title": "Catalogue pédagogique Learning Docs v2",
+  "type": "object",
+  "required": ["schema_version", "domains", "courses", "modules", "collections"],
+  "properties": {
+    "schema_version": { "const": 2 },
+    "domains": { "type": "array", "items": { "$ref": "#/$defs/domain" } },
+    "courses": { "type": "array", "items": { "$ref": "#/$defs/course" } },
+    "modules": { "type": "array", "items": { "$ref": "#/$defs/module" } },
+    "collections": { "type": "array", "items": { "$ref": "#/$defs/collection" } }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$" },
+    "domain": {
+      "type": "object",
+      "required": ["id", "title", "order"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "title": { "type": "string", "minLength": 1 }, "order": { "type": "integer", "minimum": 0 }, "index_path": { "type": "string" } },
+      "additionalProperties": false
+    },
+    "course": {
+      "type": "object",
+      "required": ["id", "title", "domain_id", "index_path", "content_root", "order", "depth", "requires"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "title": { "type": "string", "minLength": 1 }, "domain_id": { "$ref": "#/$defs/id" }, "index_path": { "type": "string" }, "content_root": { "type": "string" }, "order": { "type": "integer", "minimum": 0 }, "depth": { "type": "string" }, "requires": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true } },
+      "additionalProperties": false
+    },
+    "module": {
+      "type": "object",
+      "required": ["id", "title", "course_id", "content_root", "order"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "title": { "type": "string", "minLength": 1 }, "course_id": { "$ref": "#/$defs/id" }, "content_root": { "type": "string" }, "order": { "type": "integer", "minimum": 0 } },
+      "additionalProperties": false
+    },
+    "collection": {
+      "type": "object",
+      "required": ["id", "title", "order", "course_ids"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "title": { "type": "string" }, "order": { "type": "integer", "minimum": 0 }, "course_ids": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true } },
+      "additionalProperties": false
+    }
+  }
+}

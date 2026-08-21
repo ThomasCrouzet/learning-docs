@@ -1,0 +1,43 @@
+schema_version: 2
+
+paths:
+  - id: discover-web
+    title: Je veux découvrir le développement web
+    objective: Comprendre les bases du Web puis choisir un langage ou une spécialité.
+    entry_course_ids: [fundamentals.html-css, web.php, web.python]
+    recommendations:
+      - course_ids: [fundamentals.html-css, web.javascript]
+        reason: Ces cursus expliquent ce que le navigateur affiche et exécute.
+      - course_ids: [web.php, web.python]
+        reason: Ces deux entrées permettent de commencer à programmer sans imposer un langage unique.
+    can_skip_known: true
+    free_exploration: true
+  - id: understand-infrastructure
+    title: Je veux comprendre l'infrastructure
+    objective: Comprendre le terminal, les conteneurs, les réseaux et le déploiement.
+    entry_course_ids: [fundamentals.unix, web.docker, infrastructure.networks]
+    recommendations:
+      - course_ids: [fundamentals.unix, infrastructure.networks]
+        reason: Le terminal et les réseaux donnent les repères utilisés par les autres cursus d'infrastructure.
+      - course_ids: [web.docker, infrastructure.kubernetes, infrastructure.ansible]
+        reason: Ces cursus couvrent des niveaux différents de préparation et d'automatisation.
+    can_skip_known: true
+    free_exploration: true
+  - id: explore-ai
+    title: Je veux comprendre l'intelligence artificielle
+    objective: Choisir une entrée mathématique, pratique ou conceptuelle vers l'intelligence artificielle.
+    entry_course_ids: [web.python, ai.artificial-intelligence]
+    recommendations:
+      - course_ids: [web.python, ai.artificial-intelligence]
+        reason: Python fournit une base pratique, tandis que le cursus IA propose plusieurs modules spécialisés.
+    can_skip_known: true
+    free_exploration: true
+  - id: find-specific
+    title: Je cherche une fiche sur un besoin précis
+    objective: Accéder directement à une référence ou utiliser la recherche du site.
+    entry_course_ids: [references.quick-reference, fundamentals.quick-reference]
+    recommendations:
+      - course_ids: [references.quick-reference, fundamentals.quick-reference]
+        reason: Les aide-mémoires sont conçus pour une consultation directe et indépendante.
+    can_skip_known: true
+    free_exploration: true

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thomascrouzet.github.io/learning-docs/schemas/paths-v2.json",
+  "title": "Parcours facultatifs Learning Docs v2",
+  "type": "object",
+  "required": ["schema_version", "paths"],
+  "properties": {
+    "schema_version": { "const": 2 },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "objective", "entry_course_ids", "recommendations", "can_skip_known", "free_exploration"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "title": { "type": "string", "minLength": 1 },
+          "objective": { "type": "string", "minLength": 1 },
+          "entry_course_ids": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+          "recommendations": { "type": "array", "items": { "type": "object", "required": ["course_ids", "reason"], "properties": { "course_ids": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true }, "reason": { "type": "string", "minLength": 1 } }, "additionalProperties": false } },
+          "can_skip_known": { "const": true },
+          "free_exploration": { "const": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

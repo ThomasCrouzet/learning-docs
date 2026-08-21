@@ -1,0 +1,148 @@
+schema_version: 2
+
+domains:
+  - id: orientation
+    title: Orientation
+    order: 5
+    index_path: commencer/index.md
+  - id: web
+    title: Développement web
+    order: 10
+    index_path: stack-symfony/index.md
+  - id: fundamentals
+    title: Langages et fondamentaux
+    order: 20
+    index_path: fondamentaux/index.md
+  - id: infrastructure
+    title: Infrastructure
+    order: 30
+    index_path: devops/index.md
+  - id: security
+    title: Cybersécurité
+    order: 40
+    index_path: cybersecurite/index.md
+  - id: ai
+    title: Intelligence artificielle
+    order: 50
+    index_path: ia/index.md
+  - id: specializations
+    title: Spécialisations
+    order: 60
+  - id: transversal
+    title: Compétences transverses
+    order: 70
+  - id: references
+    title: Références
+    order: 80
+    index_path: fiches-reference/index.md
+
+courses:
+  - { id: orientation.ai-tools, title: Outils IA, domain_id: orientation, index_path: 00-outils-ia/index.md, content_root: 00-outils-ia, order: 10, depth: introduction, requires: [] }
+  - { id: web.docker, title: Docker, domain_id: web, index_path: 01-docker/index.md, content_root: 01-docker, order: 10, depth: introduction, requires: [] }
+  - { id: web.php, title: PHP, domain_id: web, index_path: 02-php/index.md, content_root: 02-php, order: 20, depth: introduction, requires: [] }
+  - { id: web.symfony, title: Symfony, domain_id: web, index_path: 03-symfony/index.md, content_root: 03-symfony, order: 30, depth: intermediate, requires: [web.php] }
+  - { id: web.easyadmin, title: EasyAdmin, domain_id: web, index_path: 03-easyadmin/index.md, content_root: 03-easyadmin, order: 40, depth: intermediate, requires: [web.symfony] }
+  - { id: web.postgresql, title: PostgreSQL, domain_id: web, index_path: 04-postgresql/index.md, content_root: 04-postgresql, order: 50, depth: introduction, requires: [] }
+  - { id: web.javascript, title: JavaScript, domain_id: web, index_path: 05-javascript/index.md, content_root: 05-javascript, order: 60, depth: introduction, requires: [] }
+  - { id: web.javascript-modern, title: JavaScript moderne, domain_id: web, index_path: 06-javascript-moderne/index.md, content_root: 06-javascript-moderne, order: 70, depth: intermediate, requires: [web.javascript] }
+  - { id: web.typescript, title: TypeScript, domain_id: web, index_path: 07-typescript/index.md, content_root: 07-typescript, order: 80, depth: intermediate, requires: [web.javascript-modern] }
+  - { id: web.react, title: React, domain_id: web, index_path: 08-react/index.md, content_root: 08-react, order: 90, depth: intermediate, requires: [web.javascript-modern] }
+  - { id: web.testing, title: Testing et qualité, domain_id: web, index_path: 09-testing/index.md, content_root: 09-testing, order: 100, depth: intermediate, requires: [] }
+  - { id: web.architecture, title: Architecture et design patterns, domain_id: web, index_path: 10-architecture/index.md, content_root: 10-architecture, order: 110, depth: advanced, requires: [] }
+  - { id: web.api-design, title: API Design et documentation, domain_id: web, index_path: 12-api-design/index.md, content_root: 12-api-design, order: 120, depth: intermediate, requires: [] }
+  - { id: web.redis, title: Redis et cache, domain_id: web, index_path: 13-redis/index.md, content_root: 13-redis, order: 130, depth: intermediate, requires: [] }
+  - { id: web.python, title: Python, domain_id: web, index_path: 15-python/index.md, content_root: 15-python, order: 140, depth: introduction, requires: [] }
+  - { id: web.python-data, title: Python Data, domain_id: web, index_path: 16-python-data/index.md, content_root: 16-python-data, order: 150, depth: intermediate, requires: [web.python] }
+  - { id: web.mongodb, title: MongoDB, domain_id: web, index_path: 17-mongodb/index.md, content_root: 17-mongodb, order: 160, depth: introduction, requires: [] }
+  - { id: web.csharp, title: C#, domain_id: web, index_path: 18-csharp/index.md, content_root: 18-csharp, order: 170, depth: introduction, requires: [] }
+  - { id: web.mobile, title: Développement mobile, domain_id: web, index_path: 23-dev-mobile/index.md, content_root: 23-dev-mobile, order: 180, depth: intermediate, requires: [web.javascript-modern] }
+  - { id: web.joomla, title: Joomla CMS, domain_id: web, index_path: 29-joomla/index.md, content_root: 29-joomla, order: 190, depth: intermediate, requires: [web.php] }
+
+  - { id: fundamentals.java, title: Java, domain_id: fundamentals, index_path: fondamentaux/01-java/index.md, content_root: fondamentaux/01-java, order: 10, depth: introduction, requires: [] }
+  - { id: fundamentals.unix, title: Unix et Bash, domain_id: fundamentals, index_path: fondamentaux/02-unix-bash/index.md, content_root: fondamentaux/02-unix-bash, order: 20, depth: introduction, requires: [] }
+  - { id: fundamentals.git, title: Git, domain_id: fundamentals, index_path: fondamentaux/03-git/index.md, content_root: fondamentaux/03-git, order: 30, depth: introduction, requires: [] }
+  - { id: fundamentals.html-css, title: HTML et CSS, domain_id: fundamentals, index_path: fondamentaux/04-html-css/index.md, content_root: fondamentaux/04-html-css, order: 40, depth: introduction, requires: [] }
+  - { id: fundamentals.javascript, title: JavaScript fondamental, domain_id: fundamentals, index_path: fondamentaux/05-javascript/index.md, content_root: fondamentaux/05-javascript, order: 50, depth: introduction, requires: [fundamentals.html-css] }
+  - { id: fundamentals.projects, title: Projets autonomes, domain_id: fundamentals, index_path: fondamentaux/06-projets/index.md, content_root: fondamentaux/06-projets, order: 60, depth: practice, requires: [] }
+  - { id: fundamentals.nodejs, title: Node.js, domain_id: fundamentals, index_path: fondamentaux/07-nodejs/index.md, content_root: fondamentaux/07-nodejs, order: 70, depth: intermediate, requires: [fundamentals.javascript] }
+  - { id: fundamentals.rust, title: Rust, domain_id: fundamentals, index_path: fondamentaux/08-rust/index.md, content_root: fondamentaux/08-rust, order: 80, depth: introduction, requires: [] }
+  - { id: fundamentals.quick-reference, title: Aide-mémoires fondamentaux, domain_id: fundamentals, index_path: fondamentaux/fiches-reference/index.md, content_root: fondamentaux/fiches-reference, order: 90, depth: reference, requires: [] }
+
+  - { id: infrastructure.cicd, title: CI/CD, domain_id: infrastructure, index_path: 11-ci-cd/index.md, content_root: 11-ci-cd, order: 10, depth: intermediate, requires: [] }
+  - { id: infrastructure.monitoring, title: Monitoring et observabilité, domain_id: infrastructure, index_path: 14-monitoring/index.md, content_root: 14-monitoring, order: 20, depth: intermediate, requires: [] }
+  - { id: infrastructure.c, title: Langage C, domain_id: infrastructure, index_path: 19-langage-c/index.md, content_root: 19-langage-c, order: 30, depth: introduction, requires: [] }
+  - { id: infrastructure.networks, title: Réseaux, domain_id: infrastructure, index_path: 20-reseaux/index.md, content_root: 20-reseaux, order: 40, depth: introduction, requires: [] }
+  - { id: infrastructure.system-services, title: Services système, domain_id: infrastructure, index_path: 21-services-systeme/index.md, content_root: 21-services-systeme, order: 50, depth: intermediate, requires: [fundamentals.unix] }
+  - { id: infrastructure.cloud, title: Cloud, domain_id: infrastructure, index_path: 22-cloud/index.md, content_root: 22-cloud, order: 60, depth: introduction, requires: [] }
+  - { id: infrastructure.virtualization, title: Virtualisation, domain_id: infrastructure, index_path: 24-virtualisation/index.md, content_root: 24-virtualisation, order: 70, depth: introduction, requires: [] }
+  - { id: infrastructure.network-analysis, title: Analyse réseau, domain_id: infrastructure, index_path: 30-analyse-reseau/index.md, content_root: 30-analyse-reseau, order: 80, depth: intermediate, requires: [infrastructure.networks] }
+  - { id: infrastructure.kubernetes, title: Kubernetes, domain_id: infrastructure, index_path: devops/03-kubernetes/index.md, content_root: devops/03-kubernetes, order: 90, depth: intermediate, requires: [web.docker] }
+  - { id: infrastructure.podman, title: Podman, domain_id: infrastructure, index_path: devops/01-podman/index.md, content_root: devops/01-podman, order: 100, depth: intermediate, requires: [] }
+  - { id: infrastructure.openshift, title: OpenShift, domain_id: infrastructure, index_path: devops/02-openshift/index.md, content_root: devops/02-openshift, order: 110, depth: intermediate, requires: [infrastructure.kubernetes] }
+  - { id: infrastructure.ansible, title: Ansible, domain_id: infrastructure, index_path: ansible/index.md, content_root: ansible/01-ansible, order: 120, depth: intermediate, requires: [fundamentals.unix] }
+
+  - { id: security.cybersecurity, title: Cybersécurité, domain_id: security, index_path: cybersecurite/index.md, content_root: cybersecurite, order: 10, depth: progressive, requires: [] }
+  - { id: ai.artificial-intelligence, title: Intelligence artificielle, domain_id: ai, index_path: ia/index.md, content_root: ia, order: 10, depth: progressive, requires: [] }
+  - { id: specializations.faust, title: Faust, domain_id: specializations, index_path: faust/index.md, content_root: faust, order: 10, depth: progressive, requires: [] }
+  - { id: specializations.crypto, title: Crypto-monnaies, domain_id: specializations, index_path: crypto-monnaies/index.md, content_root: crypto-monnaies, order: 20, depth: progressive, requires: [] }
+
+  - { id: transversal.project-management, title: Gestion de projet, domain_id: transversal, index_path: 25-gestion-projet/index.md, content_root: 25-gestion-projet, order: 10, depth: introduction, requires: [] }
+  - { id: transversal.professional-skills, title: Compétences métier, domain_id: transversal, index_path: competences-metier/index.md, content_root: competences-metier, order: 20, depth: progressive, requires: [] }
+  - { id: transversal.gdpr, title: Droit et RGPD, domain_id: transversal, index_path: 26-droit-rgpd/index.md, content_root: 26-droit-rgpd, order: 30, depth: introduction, requires: [] }
+  - { id: transversal.ux, title: UX Design, domain_id: transversal, index_path: 27-ux-design/index.md, content_root: 27-ux-design, order: 40, depth: introduction, requires: [] }
+  - { id: transversal.audit, title: Audit et qualité, domain_id: transversal, index_path: 28-audit-qualite/index.md, content_root: 28-audit-qualite, order: 50, depth: intermediate, requires: [] }
+  - { id: references.quick-reference, title: Aide-mémoires, domain_id: references, index_path: fiches-reference/index.md, content_root: fiches-reference, order: 10, depth: reference, requires: [] }
+
+modules:
+  - { id: security.cybersecurity.fundamentals-it, title: Fondamentaux informatiques, course_id: security.cybersecurity, content_root: cybersecurite/01-fondamentaux-informatiques, order: 10 }
+  - { id: security.cybersecurity.fundamentals-security, title: Fondamentaux sécurité, course_id: security.cybersecurity, content_root: cybersecurite/02-fondamentaux-securite, order: 20 }
+  - { id: security.cybersecurity.intermediate, title: Compétences intermédiaires, course_id: security.cybersecurity, content_root: cybersecurite/03-competences-intermediaires, order: 30 }
+  - { id: security.cybersecurity.offensive, title: Spécialisation offensive, course_id: security.cybersecurity, content_root: cybersecurite/04-specialisation-offensive, order: 40 }
+  - { id: security.cybersecurity.defensive, title: Spécialisation défensive, course_id: security.cybersecurity, content_root: cybersecurite/05-specialisation-defensive, order: 50 }
+  - { id: security.cybersecurity.advanced, title: Domaines avancés, course_id: security.cybersecurity, content_root: cybersecurite/06-domaines-avances, order: 60 }
+  - { id: security.cybersecurity.red-team, title: Red team avancé, course_id: security.cybersecurity, content_root: cybersecurite/07-red-team-avance, order: 70 }
+  - { id: security.cybersecurity.leadership, title: Expertise et leadership, course_id: security.cybersecurity, content_root: cybersecurite/08-expertise-leadership, order: 80 }
+
+  - { id: ai.artificial-intelligence.math, title: Fondamentaux mathématiques, course_id: ai.artificial-intelligence, content_root: ia/01-fondamentaux-mathematiques, order: 10 }
+  - { id: ai.artificial-intelligence.programming, title: Programmation et outils, course_id: ai.artificial-intelligence, content_root: ia/02-programmation-outils, order: 20 }
+  - { id: ai.artificial-intelligence.ml, title: Machine learning classique, course_id: ai.artificial-intelligence, content_root: ia/03-machine-learning-classique, order: 30 }
+  - { id: ai.artificial-intelligence.deep-learning, title: Deep learning fondamental, course_id: ai.artificial-intelligence, content_root: ia/04-deep-learning-fondamental, order: 40 }
+  - { id: ai.artificial-intelligence.modern-architectures, title: Architectures modernes et NLP, course_id: ai.artificial-intelligence, content_root: ia/05-architectures-modernes-nlp, order: 50 }
+  - { id: ai.artificial-intelligence.llm, title: Large Language Models, course_id: ai.artificial-intelligence, content_root: ia/06-large-language-models, order: 60 }
+  - { id: ai.artificial-intelligence.agents-mlops, title: Systèmes agentiques et MLOps, course_id: ai.artificial-intelligence, content_root: ia/07-systemes-agentiques-mlops, order: 70 }
+  - { id: ai.artificial-intelligence.advanced, title: Spécialisations avancées, course_id: ai.artificial-intelligence, content_root: ia/08-specialisations-avancees, order: 80 }
+  - { id: ai.artificial-intelligence.research, title: "Expertise, recherche et leadership", course_id: ai.artificial-intelligence, content_root: ia/09-expertise-recherche-leadership, order: 90 }
+
+  - { id: specializations.faust.acoustics, title: Fondamentaux acoustiques, course_id: specializations.faust, content_root: faust/01-fondamentaux-acoustique, order: 10 }
+  - { id: specializations.faust.programming, title: Prérequis de programmation, course_id: specializations.faust, content_root: faust/02-prerequis-programmation, order: 20 }
+  - { id: specializations.faust.language, title: Langage Faust, course_id: specializations.faust, content_root: faust/03-langage-faust-fondamentaux, order: 30 }
+  - { id: specializations.faust.dsp, title: DSP appliqué, course_id: specializations.faust, content_root: faust/04-dsp-applique, order: 40 }
+  - { id: specializations.faust.deployment, title: Déploiement et architectures, course_id: specializations.faust, content_root: faust/05-deploiement-architectures, order: 50 }
+  - { id: specializations.faust.integration, title: Intégration et projets avancés, course_id: specializations.faust, content_root: faust/06-integration-projets-avances, order: 60 }
+  - { id: specializations.faust.contribution, title: Maîtrise et contribution, course_id: specializations.faust, content_root: faust/07-maitrise-contribution, order: 70 }
+
+  - { id: specializations.crypto.fundamentals, title: Fondamentaux, course_id: specializations.crypto, content_root: crypto-monnaies/01-fondamentaux, order: 10 }
+  - { id: specializations.crypto.bitcoin, title: Bitcoin, course_id: specializations.crypto, content_root: crypto-monnaies/02-bitcoin, order: 20 }
+  - { id: specializations.crypto.ethereum, title: Ethereum et smart contracts, course_id: specializations.crypto, content_root: crypto-monnaies/03-ethereum-smart-contracts, order: 30 }
+  - { id: specializations.crypto.ecosystem, title: Écosystème crypto, course_id: specializations.crypto, content_root: crypto-monnaies/04-ecosysteme-signal-bruit, order: 40 }
+  - { id: specializations.crypto.safety, title: Sécurité et survie, course_id: specializations.crypto, content_root: crypto-monnaies/05-securite-survie, order: 50 }
+  - { id: specializations.crypto.analysis, title: Analyse critique et due diligence, course_id: specializations.crypto, content_root: crypto-monnaies/06-analyse-critique-due-diligence, order: 60 }
+  - { id: specializations.crypto.advanced, title: Concepts techniques avancés, course_id: specializations.crypto, content_root: crypto-monnaies/07-concepts-techniques-avances, order: 70 }
+  - { id: specializations.crypto.future, title: Perspective et avenir réaliste, course_id: specializations.crypto, content_root: crypto-monnaies/08-perspective-avenir-realiste, order: 80 }
+  - { id: specializations.crypto.actors, title: Acteurs de l'écosystème, course_id: specializations.crypto, content_root: crypto-monnaies/09-acteurs-ecosysteme, order: 90 }
+
+  - { id: transversal.professional-skills.needs, title: Besoins utilisateurs, course_id: transversal.professional-skills, content_root: competences-metier/01-besoins-utilisateurs, order: 10 }
+  - { id: transversal.professional-skills.delivery, title: Pilotage de projet, course_id: transversal.professional-skills, content_root: competences-metier/02-pilotage-projet, order: 20 }
+  - { id: transversal.professional-skills.cloud, title: Cloud computing, course_id: transversal.professional-skills, content_root: competences-metier/03-cloud-computing, order: 30 }
+  - { id: transversal.professional-skills.software, title: Développement logiciel, course_id: transversal.professional-skills, content_root: competences-metier/04-developpement-logiciel, order: 40 }
+  - { id: transversal.professional-skills.architecture, title: Architecture SI, course_id: transversal.professional-skills, content_root: competences-metier/05-architecture-si, order: 50 }
+
+collections:
+  - id: optional-projects
+    title: Projets autonomes et facultatifs
+    order: 10
+    course_ids: [fundamentals.projects]
+  - id: quick-references
+    title: Références compactes
+    order: 20
+    course_ids: [fundamentals.quick-reference, references.quick-reference]
