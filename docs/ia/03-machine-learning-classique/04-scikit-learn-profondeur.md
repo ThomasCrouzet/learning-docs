@@ -9,6 +9,11 @@ estimated_time: "50 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 3 - Machine learning classique"
+id: "ai.artificial-intelligence.ml.scikit-learn-profondeur"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.ml"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - scikit-learn en profondeur

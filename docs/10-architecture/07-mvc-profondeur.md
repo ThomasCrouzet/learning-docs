@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 7
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.mvc-profondeur"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - MVC en profondeur

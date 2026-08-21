@@ -8,6 +8,11 @@ estimated_time: "70 min"
 fiche_number: 2
 total_fiches: 5
 cursus: "Phase 5 - Déploiement et architectures"
+id: "specializations.faust.deployment.plugins-audio-vst-au-lv2"
+course_id: "specializations.faust"
+module_id: "specializations.faust.deployment"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Plugins audio VST/AU/LV2

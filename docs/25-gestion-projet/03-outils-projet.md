@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "Gestion de projet"
+id: "transversal.project-management.outils-projet"
+course_id: "transversal.project-management"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Outils de gestion de projet

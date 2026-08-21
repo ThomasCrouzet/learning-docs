@@ -8,6 +8,10 @@ estimated_time: "160 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "OpenShift"
+id: "infrastructure.openshift.routes-services"
+course_id: "infrastructure.openshift"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Routes et Services

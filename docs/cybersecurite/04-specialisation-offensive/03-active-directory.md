@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 4 - Spécialisation Offensive"
+id: "security.cybersecurity.offensive.active-directory"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.offensive"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Active Directory - Attaque et Sécurisation

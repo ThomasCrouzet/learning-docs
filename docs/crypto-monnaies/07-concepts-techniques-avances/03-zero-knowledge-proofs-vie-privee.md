@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.zero-knowledge-proofs-vie-privee"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Zéro-knowledge proofs : la crypto au service de la vie privée

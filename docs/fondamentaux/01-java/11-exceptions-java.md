@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 11
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.exceptions-java"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Les exceptions en Java

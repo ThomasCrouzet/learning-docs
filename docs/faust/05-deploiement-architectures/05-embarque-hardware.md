@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 5 - Déploiement et architectures"
+id: "specializations.faust.deployment.embarque-hardware"
+course_id: "specializations.faust"
+module_id: "specializations.faust.deployment"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Embarqué et hardware

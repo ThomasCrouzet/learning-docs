@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 1
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.serveur-web-avance"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Serveur web avancé

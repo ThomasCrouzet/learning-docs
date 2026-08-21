@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "API Design et Documentation"
+id: "web.api-design.introduction-graphql"
+course_id: "web.api-design"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Introduction à GraphQL

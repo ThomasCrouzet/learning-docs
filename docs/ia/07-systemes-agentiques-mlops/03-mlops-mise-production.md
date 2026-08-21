@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 7 - Systèmes agentiques et MLOps"
+id: "ai.artificial-intelligence.agents-mlops.mlops-mise-production"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.agents-mlops"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - MLOps et mise en production

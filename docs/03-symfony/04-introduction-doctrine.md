@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 4
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.introduction-doctrine"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Introduction à Doctrine

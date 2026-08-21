@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 14
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.outils-qualite"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - Outils de qualité : clippy et rustfmt

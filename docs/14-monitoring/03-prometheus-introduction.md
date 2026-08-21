@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.prometheus-introduction"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Prometheus - Introduction

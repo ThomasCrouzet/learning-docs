@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.let-const-portee"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - let, const et portée

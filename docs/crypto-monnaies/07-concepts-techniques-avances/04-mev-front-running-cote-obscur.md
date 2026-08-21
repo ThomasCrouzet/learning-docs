@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 4
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.mev-front-running-cote-obscur"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - MEV et front-running : le côté obscur de la DeFi

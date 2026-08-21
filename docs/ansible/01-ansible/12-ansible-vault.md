@@ -8,6 +8,10 @@ estimated_time: "145 min"
 fiche_number: 12
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.ansible-vault"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Ansible Vault

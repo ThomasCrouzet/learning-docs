@@ -9,6 +9,10 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.webpack-encore-installation"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Webpack Encore - Installation

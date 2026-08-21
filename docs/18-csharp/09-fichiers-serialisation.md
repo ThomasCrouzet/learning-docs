@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.fichiers-serialisation"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Fichiers et sérialisation

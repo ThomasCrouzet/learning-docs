@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 3
 cursus: "Phase 2 - Programmation et outils"
+id: "ai.artificial-intelligence.programming.manipulation-ingenierie-donnees"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.programming"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Manipulation et ingénierie des données

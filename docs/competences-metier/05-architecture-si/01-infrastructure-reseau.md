@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Architecture SI"
+id: "transversal.professional-skills.architecture.infrastructure-reseau"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.architecture"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - L'Infrastructure Réseau

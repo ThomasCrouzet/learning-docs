@@ -9,6 +9,10 @@ estimated_time: "50 min"
 fiche_number: 5
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.jquery-ajax-symfony"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - jQuery et AJAX dans Symfony

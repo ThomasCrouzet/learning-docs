@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 10
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.collections"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Les collections en Java

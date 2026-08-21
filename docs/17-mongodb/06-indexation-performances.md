@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 6
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.indexation-performances"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Indexation et performances

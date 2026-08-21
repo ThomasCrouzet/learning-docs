@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 12
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.securite-utilisateurs"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Sécurité et utilisateurs

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.pods-containers"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Pods et containers

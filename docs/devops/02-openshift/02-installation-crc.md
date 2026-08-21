@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "OpenShift"
+id: "infrastructure.openshift.installation-crc"
+course_id: "infrastructure.openshift"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Installer un Cluster Local avec CRC

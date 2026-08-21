@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "Gestion de projet"
+id: "transversal.project-management.qualite-documentation"
+course_id: "transversal.project-management"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Qualité et documentation technique

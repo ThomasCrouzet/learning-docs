@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.npm-packages"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - npm et gestion des packages

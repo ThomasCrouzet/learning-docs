@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 7 - Maîtrise et contribution"
+id: "specializations.faust.contribution.aide-memoire-signatures"
+course_id: "specializations.faust"
+module_id: "specializations.faust.contribution"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Aide-mémoire des signatures de bibliothèque

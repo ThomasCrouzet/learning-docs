@@ -8,6 +8,11 @@ estimated_time: "25 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Architecture SI"
+id: "transversal.professional-skills.architecture.securite-systeme-information"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.architecture"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - La Sécurité du Système d'Information

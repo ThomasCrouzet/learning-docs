@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.fichiers-io"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Fichiers et I/O

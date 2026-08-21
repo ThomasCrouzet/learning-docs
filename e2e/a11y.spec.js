@@ -4,7 +4,7 @@ const AxeBuilder = require('@axe-core/playwright').default;
 
 /**
  * Pages représentatives de la cartographie (accueil, parcours, fiche,
- * diagram-design, tags, index cursus). Le shell MkDocs est partagé par ~700 pages.
+ * diagram-design, tags, index cursus). Le shell MkDocs est partagé par plus de 700 pages.
  */
 const ROUTES = [
   '/',

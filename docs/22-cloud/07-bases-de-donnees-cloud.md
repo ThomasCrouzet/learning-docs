@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.bases-de-donnees-cloud"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Bases de données cloud

@@ -8,6 +8,10 @@ estimated_time: "165 min"
 fiche_number: 6
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.variables-facts"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Variables et Facts

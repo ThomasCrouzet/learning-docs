@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 5
 total_fiches: 19
 cursus: "React"
+id: "web.react.etat-usestate"
+course_id: "web.react"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - État avec useState

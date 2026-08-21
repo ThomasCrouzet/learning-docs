@@ -8,6 +8,11 @@ estimated_time: "105 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux acoustique"
+id: "specializations.faust.acoustics.synthese-sonore-theorie"
+course_id: "specializations.faust"
+module_id: "specializations.faust.acoustics"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Synthèse sonore - théorie

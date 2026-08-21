@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 4
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.introduction-jquery"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Introduction à jQuery

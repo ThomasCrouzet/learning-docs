@@ -31,7 +31,7 @@ cursus: "Références"
 | Projet | `ThomasCrouzet/learning-docs` |
 | Surface | Wiki MkDocs Material servi en build de production (`site/`) |
 | Cible | WCAG 2.2 niveau AA |
-| Contenu pédagogique | ~700 pages HTML générées depuis `docs/**/*.md` |
+| Contenu pédagogique | Plus de 700 pages HTML générées depuis `docs/**/*.md` |
 | Code custom audité | `docs/stylesheets/extra.css`, `docs/javascripts/extra.js`, `docs/javascripts/mermaid-v2.js`, `docs/overrides/*` |
 | Hors périmètre de correction massive | Réécriture éditoriale de 580+ fiches (signalée en limites si besoin cognitif) |
 | Auth | Aucune authentification |
@@ -83,7 +83,7 @@ cursus: "Références"
 | Drawer / search Material | mobile | ouverture | focus (thème) | structure mobile |
 | Lightbox Mermaid | ouvert/fermé | Enter, Escape, Tab | focus trap | Playwright dédié |
 
-Les ~700 pages HTML partagent le même shell. L'échantillon couvre les gabarits distincts (accueil, parcours, fiche riche, mermaid, tags, index cursus, 404).
+Les pages HTML partagent le même shell. L'échantillon couvre les gabarits distincts (accueil, parcours, fiche riche, mermaid, tags, index cursus, 404).
 
 ---
 

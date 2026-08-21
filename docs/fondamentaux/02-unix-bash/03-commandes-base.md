@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.commandes-base"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Les commandes de base Unix

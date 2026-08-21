@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.tableaux-chaines"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Tableaux et chaînes de caractères

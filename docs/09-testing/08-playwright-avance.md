@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.playwright-avance"
+course_id: "web.testing"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Playwright avancé

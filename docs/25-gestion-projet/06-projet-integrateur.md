@@ -8,11 +8,17 @@ estimated_time: "90 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "Gestion de projet"
+id: "transversal.project-management.projet-integrateur"
+course_id: "transversal.project-management"
+content_type: "project"
+order: 6
 ---
 
 # 06 - Projet intégrateur
 
 > **En bref** : Mettre en pratique toutes les compétences du cursus en simulant un sprint complet de A à Z - du backlog à la rétrospective. Lecture estimée : 90 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

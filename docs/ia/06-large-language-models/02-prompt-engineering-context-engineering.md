@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 5
 cursus: "Phase 6 - Large Language Models"
+id: "ai.artificial-intelligence.llm.prompt-engineering-context-engineering"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.llm"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Prompt engineering et context engineering

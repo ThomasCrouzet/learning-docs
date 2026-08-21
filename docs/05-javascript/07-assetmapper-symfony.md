@@ -9,6 +9,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.assetmapper-symfony"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Symfony AssetMapper

@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 8
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.acl-authorise-et-view-levels"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - ACL : authorise et view levels

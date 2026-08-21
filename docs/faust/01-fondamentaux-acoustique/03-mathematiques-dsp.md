@@ -8,6 +8,11 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux acoustique"
+id: "specializations.faust.acoustics.mathematiques-dsp"
+course_id: "specializations.faust"
+module_id: "specializations.faust.acoustics"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Mathématiques pour le DSP

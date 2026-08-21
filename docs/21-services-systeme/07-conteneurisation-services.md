@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.conteneurisation-services"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Conteneurisation des services

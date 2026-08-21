@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 11
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.sef-menus-et-itemid"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - SEF, menus et Itemid

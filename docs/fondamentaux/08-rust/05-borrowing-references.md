@@ -8,6 +8,10 @@ estimated_time: "85 min"
 fiche_number: 5
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.borrowing-references"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Borrowing et Références

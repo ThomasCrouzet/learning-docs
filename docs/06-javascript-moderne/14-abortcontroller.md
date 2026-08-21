@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 14
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.abortcontroller"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - AbortController et annulation

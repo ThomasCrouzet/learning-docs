@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 19
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.plugin-console-et-cli"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 19
 ---
 
 # 19 - Plugin console et CLI

@@ -8,6 +8,11 @@ estimated_time: "25 min"
 fiche_number: 1
 total_fiches: 3
 cursus: "Pilotage de projet"
+id: "transversal.professional-skills.delivery.methodologies-agiles"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.delivery"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Les Méthodologies Agiles

@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Phase 2 - Bitcoin"
+id: "specializations.crypto.bitcoin.contexte-naissance-principes"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.bitcoin"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Bitcoin : contexte de naissance et principes fondateurs

@@ -9,6 +9,11 @@ estimated_time: "50 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 5 - Architectures modernes et NLP"
+id: "ai.artificial-intelligence.modern-architectures.nlp-classique-llm"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.modern-architectures"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Du NLP classique aux LLM

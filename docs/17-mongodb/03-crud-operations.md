@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.crud-operations"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Opérations CRUD

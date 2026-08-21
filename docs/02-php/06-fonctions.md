@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 6
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.fonctions"
+course_id: "web.php"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Les fonctions

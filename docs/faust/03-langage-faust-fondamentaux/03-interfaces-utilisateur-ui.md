@@ -8,6 +8,11 @@ estimated_time: "70 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 3 - Langage Faust fondamentaux"
+id: "specializations.faust.language.interfaces-utilisateur-ui"
+course_id: "specializations.faust"
+module_id: "specializations.faust.language"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Interfaces utilisateur (UI)

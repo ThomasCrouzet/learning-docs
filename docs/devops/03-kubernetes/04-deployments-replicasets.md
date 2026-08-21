@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 4
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.deployments-replicasets"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Deployments et ReplicaSets

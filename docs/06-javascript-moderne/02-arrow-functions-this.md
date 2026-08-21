@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.arrow-functions-this"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Arrow functions et this

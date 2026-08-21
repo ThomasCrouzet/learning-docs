@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "Gestion de projet"
+id: "transversal.project-management.cahier-des-charges"
+course_id: "transversal.project-management"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Rédiger un cahier des charges

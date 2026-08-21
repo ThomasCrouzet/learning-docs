@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 19
 cursus: "React"
+id: "web.react.react-router"
+course_id: "web.react"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - React Router

@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 7 - Red Team Avancé"
+id: "security.cybersecurity.red-team.active-directory-avance"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.red-team"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Sécurité Active Directory - Avancée

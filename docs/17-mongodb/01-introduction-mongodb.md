@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.introduction-mongodb"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à MongoDB

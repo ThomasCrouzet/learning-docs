@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.operateurs-controle"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Opérateurs et structures de contrôle

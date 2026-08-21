@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 7
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-personnalisation-visuelle"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Personnalisation visuelle avancée d'EasyAdmin

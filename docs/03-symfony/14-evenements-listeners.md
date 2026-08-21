@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 14
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.evenements-listeners"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - Événements et listeners

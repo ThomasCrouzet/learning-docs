@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 7
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.conditions-boucles"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Conditions et Boucles

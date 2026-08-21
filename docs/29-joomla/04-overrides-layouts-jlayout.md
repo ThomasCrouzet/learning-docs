@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 4
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.overrides-layouts-jlayout"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Overrides, layouts et JLayout

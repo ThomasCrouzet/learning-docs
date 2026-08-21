@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 5
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.services-networking"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Services et networking

@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "Phase 6 - Analyse critique et due diligence"
+id: "specializations.crypto.analysis.autopsie-projets-par-categorie"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.analysis"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Autopsie de projets : échecs par catégorie

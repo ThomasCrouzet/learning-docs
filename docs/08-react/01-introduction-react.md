@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 19
 cursus: "React"
+id: "web.react.introduction-react"
+course_id: "web.react"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à React

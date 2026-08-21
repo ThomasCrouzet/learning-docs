@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 10
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.attributs-php"
+course_id: "web.php"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Les attributs PHP (annotations modernes)

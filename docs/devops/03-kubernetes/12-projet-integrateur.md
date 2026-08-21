@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 12
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.projet-integrateur"
+course_id: "infrastructure.kubernetes"
+content_type: "project"
+order: 12
 ---
 
 # 12 - Projet intégrateur
 
 > **En bref** : Dans ce projet, tu vas déployer une application complète composée d'un back-end Symfony (API), d'un front-end React, d'une base PostgreSQL et d'un cache Redis sur un cluster Minikube, en appliquant toutes les notions vues dans le cursus : Deployments, Services, ConfigMaps, Secrets, PVC, probes, Helm et Ingress. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

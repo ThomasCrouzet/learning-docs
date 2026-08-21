@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.modules-es"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Modules ES (import/export)

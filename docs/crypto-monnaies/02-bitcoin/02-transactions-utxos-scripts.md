@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Phase 2 - Bitcoin"
+id: "specializations.crypto.bitcoin.transactions-utxos-scripts"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.bitcoin"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Transactions Bitcoin : UTXOs, scripts et vérification

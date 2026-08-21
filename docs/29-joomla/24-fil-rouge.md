@@ -8,11 +8,17 @@ estimated_time: "60 min"
 fiche_number: 24
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.fil-rouge"
+course_id: "web.joomla"
+content_type: "project"
+order: 24
 ---
 
 # 24 - Fil rouge
 
 > **En bref** : Enchaîner sur un site 6.1.3 les jalons vérifiés du cursus (enfant Cassiopeia, extensions, ACL, CLI, API, tests, package) et t'arrêter aux critères de réussite, pas aux absences du cœur. Lecture estimée : 60 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

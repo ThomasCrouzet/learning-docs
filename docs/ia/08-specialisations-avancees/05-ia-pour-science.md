@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 8 - Spécialisations avancées"
+id: "ai.artificial-intelligence.advanced.ia-pour-science"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.advanced"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - IA pour la science

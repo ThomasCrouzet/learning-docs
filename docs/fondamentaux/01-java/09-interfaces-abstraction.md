@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 9
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.interfaces-abstraction"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Interfaces et abstraction en Java

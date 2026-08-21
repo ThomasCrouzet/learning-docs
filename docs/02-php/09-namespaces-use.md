@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 9
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.namespaces-use"
+course_id: "web.php"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Les namespaces et le mot-clé use

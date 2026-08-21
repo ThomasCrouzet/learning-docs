@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 4
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-utilisateurs"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Gestion avancée des utilisateurs dans EasyAdmin

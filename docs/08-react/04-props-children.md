@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 19
 cursus: "React"
+id: "web.react.props-children"
+course_id: "web.react"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Props et children

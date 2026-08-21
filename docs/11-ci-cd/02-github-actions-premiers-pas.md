@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.github-actions-premiers-pas"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - GitHub Actions - Premiers pas

@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 6 - Large Language Models"
+id: "ai.artificial-intelligence.llm.rag-retrieval-augmented-generation"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.llm"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - RAG - Retrieval-Augmented Generation

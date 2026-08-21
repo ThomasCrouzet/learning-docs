@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.routage"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Routage

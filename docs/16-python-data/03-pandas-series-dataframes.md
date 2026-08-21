@@ -9,6 +9,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.pandas-series-dataframes"
+course_id: "web.python-data"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Pandas - Series et DataFrames

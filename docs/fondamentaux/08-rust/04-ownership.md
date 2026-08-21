@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 4
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.ownership"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Ownership (Propriété)

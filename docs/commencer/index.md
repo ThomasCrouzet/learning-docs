@@ -9,7 +9,22 @@ hide:
 
 # Commencer
 
-Bienvenue dans cette documentation. Cette section est ton point de départ. Avant de plonger dans le code, tu vas apprendre à utiliser les outils qui t'accompagneront tout au long de ton apprentissage : l'intelligence artificielle et la recherche efficace d'informations.
+Bienvenue dans cette documentation. Choisis le point de départ qui correspond à tes bases actuelles. Aucun ordre global n’est obligatoire.
+
+## Si tu débutes réellement
+
+1. Découvre les fichiers et le terminal avec [Unix et Bash](../fondamentaux/02-unix-bash/index.md).
+2. Apprends à conserver tes changements avec [Git](../fondamentaux/03-git/index.md).
+3. Découvre les pages Web avec [HTML et CSS](../fondamentaux/04-html-css/index.md).
+4. Choisis ensuite un langage, par exemple [PHP](../02-php/index.md) ou [Python](../15-python/index.md).
+
+## Si tu connais déjà ces bases
+
+Ouvre l’[orientation facultative](../parcours.md) ou choisis directement un domaine dans la navigation. Tu peux ignorer un contenu déjà connu et commencer malgré un prérequis recommandé.
+
+## Outils facultatifs
+
+Les deux fiches suivantes expliquent comment utiliser un outil d’intelligence artificielle et rechercher une information. Elles ne sont pas un passage obligé.
 
 ## Fiches du module
 
@@ -18,7 +33,7 @@ Bienvenue dans cette documentation. Cette section est ton point de départ. Avan
 | 01 | [Utiliser l'IA pour apprendre](../00-outils-ia/01-utiliser-ia-pour-apprendre.md) | Apprendre à formuler des questions et exploiter l'IA comme outil d'apprentissage |
 | 02 | [Rechercher efficacement](../00-outils-ia/02-rechercher-efficacement.md) | Trouver rapidement des réponses fiables dans la documentation et sur le web |
 
-!!! tip "Parcours recommandé"
-    Commence par la fiche 01, puis passe à la fiche 02. Ces deux fiches te donneront les réflexes nécessaires pour être autonome dans la suite du cursus.
+!!! tip "Ordre interne suggéré"
+    Si tu choisis de lire ces deux fiches, lis la fiche 01 avant la fiche 02. Tu peux aussi passer directement à un domaine.
 
 <!-- material/tags { scope: true } -->

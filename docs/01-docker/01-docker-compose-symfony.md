@@ -8,6 +8,10 @@ estimated_time: "105 min"
 fiche_number: 1
 total_fiches: 2
 cursus: "Docker"
+id: "web.docker.docker-compose-symfony"
+course_id: "web.docker"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Créer un environnement Docker Compose pour Symfony

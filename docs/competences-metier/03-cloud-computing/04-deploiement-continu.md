@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Cloud computing"
+id: "transversal.professional-skills.cloud.deploiement-continu"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.cloud"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Le Déploiement Continu (CI/CD)

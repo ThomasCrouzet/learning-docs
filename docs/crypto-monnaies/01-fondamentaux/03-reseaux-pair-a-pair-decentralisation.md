@@ -8,6 +8,11 @@ estimated_time: "30 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux"
+id: "specializations.crypto.fundamentals.reseaux-pair-a-pair-decentralisation"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.fundamentals"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Réseaux pair-à-pair et décentralisation

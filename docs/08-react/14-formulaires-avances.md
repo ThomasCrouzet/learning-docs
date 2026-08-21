@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 14
 total_fiches: 19
 cursus: "React"
+id: "web.react.formulaires-avances"
+course_id: "web.react"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - Formulaires avancés

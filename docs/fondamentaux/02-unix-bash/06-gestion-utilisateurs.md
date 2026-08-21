@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 6
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.gestion-utilisateurs"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Gestion des utilisateurs et groupes

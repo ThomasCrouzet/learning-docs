@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 6
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.patterns-comportement"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Patterns de comportement

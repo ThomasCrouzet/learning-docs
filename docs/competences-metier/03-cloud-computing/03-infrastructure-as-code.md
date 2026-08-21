@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Cloud computing"
+id: "transversal.professional-skills.cloud.infrastructure-as-code"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.cloud"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - L'Infrastructure as Code (IaC)

@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "JavaScript"
+id: "fundamentals.javascript.evenements"
+course_id: "fundamentals.javascript"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Les événements

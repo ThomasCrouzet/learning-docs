@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 12
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.tests"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Tests

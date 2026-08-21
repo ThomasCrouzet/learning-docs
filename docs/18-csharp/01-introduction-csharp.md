@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.introduction-csharp"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à C\#

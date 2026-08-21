@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 2 - Fondamentaux sécurité"
+id: "security.cybersecurity.fundamentals-security.cryptographie"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.fundamentals-security"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Cryptographie - Fondements et Applications

@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 12
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.projet-integrateur"
+course_id: "web.javascript-modern"
+content_type: "project"
+order: 12
 ---
 
 # 12 - Projet intégrateur
 
 > **En bref** : Créer une application Node.js complète de gestion de contacts en utilisant toutes les fonctionnalités ES6+ apprises : modules, classes, destructuring, async/await, Map, itérateurs et plus encore. Les deux fiches de perfectionnement qui suivent (Temporal et AbortController) approfondissent ensuite des API modernes complémentaires. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

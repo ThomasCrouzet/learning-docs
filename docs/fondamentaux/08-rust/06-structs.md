@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 6
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.structs"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Structs (Structures)

@@ -7,6 +7,10 @@ estimated_time: "30 min"
 fiche_number: 2
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.aide-memoire-symfony"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 2
 ---
 
 # Aide-mémoire Symfony

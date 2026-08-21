@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 11
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.serverless-api-gateway-lambda"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Serverless : API Gateway + Lambda

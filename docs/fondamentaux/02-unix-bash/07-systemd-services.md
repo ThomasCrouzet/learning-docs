@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.systemd-services"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - systemd et services

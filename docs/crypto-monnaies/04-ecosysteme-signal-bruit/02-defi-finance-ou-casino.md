@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.defi-finance-ou-casino"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - DeFi : finance décentralisée ou casino décentralisé

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "API Design et Documentation"
+id: "web.api-design.versioning-api"
+course_id: "web.api-design"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Versioning d'API

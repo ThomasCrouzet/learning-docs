@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 3
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.modules-imports"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Modules et imports

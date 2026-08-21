@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Développement logiciel"
+id: "transversal.professional-skills.software.securite-authentification"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.software"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - La Sécurité et l'Authentification Web

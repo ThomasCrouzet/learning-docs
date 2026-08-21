@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.execution-locale-pipelines"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Exécution locale des pipelines

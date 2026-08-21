@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 11
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.validation-donnees"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Validation des données

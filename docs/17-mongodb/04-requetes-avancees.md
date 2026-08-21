@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 4
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.requetes-avancees"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Requêtes avancées

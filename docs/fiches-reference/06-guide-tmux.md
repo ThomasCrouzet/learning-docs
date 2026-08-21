@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 6
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.guide-tmux"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 6
 ---
 
 # Guide tmux

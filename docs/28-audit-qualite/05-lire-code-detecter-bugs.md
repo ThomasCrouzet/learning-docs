@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "Audit et Qualité"
+id: "transversal.audit.lire-code-detecter-bugs"
+course_id: "transversal.audit"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Lire le code pour repérer les bugs

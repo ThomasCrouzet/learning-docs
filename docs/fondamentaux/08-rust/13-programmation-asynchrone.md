@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 13
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.programmation-asynchrone"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Programmation Asynchrone

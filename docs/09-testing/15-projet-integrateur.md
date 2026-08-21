@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 15
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.projet-integrateur"
+course_id: "web.testing"
+content_type: "project"
+order: 15
 ---
 
 # 15 - Projet intégrateur
 
 > **En bref** : Ce projet intégrateur te fait mettre en pratique toutes les notions du cursus Testing et Qualité en ajoutant une suite de tests complète (unitaires, intégration, fonctionnels, E2E) à un projet Symfony + React existant. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

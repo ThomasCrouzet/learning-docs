@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 7 - Systèmes agentiques et MLOps"
+id: "ai.artificial-intelligence.agents-mlops.llmops-specificites-production"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.agents-mlops"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - LLMOps : spécificités de la production LLM

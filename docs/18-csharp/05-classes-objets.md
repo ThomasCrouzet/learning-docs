@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.classes-objets"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Classes et objets

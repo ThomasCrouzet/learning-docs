@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.installation-capture-sure"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Installation et capture sûre

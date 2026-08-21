@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 11
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.architecture-entreprise"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Architecture réseau d'entreprise

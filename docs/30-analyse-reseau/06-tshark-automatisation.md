@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 6
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.tshark-automatisation"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - tshark et automatisation

@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 8
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.repository-crud"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Repository et CRUD

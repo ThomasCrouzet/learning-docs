@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 8 - Expertise et Leadership"
+id: "security.cybersecurity.leadership.architecture-securite"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.leadership"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Architecture de Sécurité

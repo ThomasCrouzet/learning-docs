@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 8 - Spécialisations avancées"
+id: "ai.artificial-intelligence.advanced.robotique-ia-physique"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.advanced"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Robotique et IA physique

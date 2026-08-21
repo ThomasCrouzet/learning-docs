@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 19
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.messenger"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 19
 ---
 
 # 19 - Symfony Messenger (messages asynchrones)

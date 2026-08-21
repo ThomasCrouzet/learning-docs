@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.collections-linq"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Collections et LINQ

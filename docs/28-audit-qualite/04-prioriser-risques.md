@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "Audit et Qualité"
+id: "transversal.audit.prioriser-risques"
+course_id: "transversal.audit"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Prioriser les risques

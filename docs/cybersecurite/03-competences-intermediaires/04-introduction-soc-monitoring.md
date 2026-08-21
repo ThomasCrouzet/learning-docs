@@ -8,6 +8,11 @@ estimated_time: "85 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 3 - Compétences intermédiaires"
+id: "security.cybersecurity.intermediate.introduction-soc-monitoring"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.intermediate"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Introduction au SOC et Monitoring

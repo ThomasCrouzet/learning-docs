@@ -8,6 +8,11 @@ estimated_time: "70 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 3 - Compétences intermédiaires"
+id: "security.cybersecurity.intermediate.analyse-vulnerabilites"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.intermediate"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Analyse de vulnérabilités et Reconnaissance

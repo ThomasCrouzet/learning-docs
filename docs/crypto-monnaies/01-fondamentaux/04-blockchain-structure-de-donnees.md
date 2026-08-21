@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux"
+id: "specializations.crypto.fundamentals.blockchain-structure-de-donnees"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.fundamentals"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Blockchain : une structure de données, pas une révolution magique

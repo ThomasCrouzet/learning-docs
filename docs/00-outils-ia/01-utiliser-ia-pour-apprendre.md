@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 2
 cursus: "Outils IA"
+id: "orientation.ai-tools.utiliser-ia-pour-apprendre"
+course_id: "orientation.ai-tools"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Utiliser l'IA pour apprendre et communiquer

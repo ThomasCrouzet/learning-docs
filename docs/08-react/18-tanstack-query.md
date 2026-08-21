@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 18
 total_fiches: 19
 cursus: "React"
+id: "web.react.tanstack-query"
+course_id: "web.react"
+content_type: "lesson"
+order: 18
 ---
 
 # 18 - TanStack Query (gestion du cache serveur)

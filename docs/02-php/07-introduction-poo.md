@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 7
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.introduction-poo"
+course_id: "web.php"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Introduction à la programmation orientée objet (POO)

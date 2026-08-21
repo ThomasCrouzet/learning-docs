@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 6 - Domaines Avancés"
+id: "security.cybersecurity.advanced.devsecops"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.advanced"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - DevSecOps et Sécurité Applicative

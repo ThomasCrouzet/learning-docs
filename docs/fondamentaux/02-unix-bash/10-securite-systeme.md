@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 10
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.securite-systeme"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Sécurité système de base

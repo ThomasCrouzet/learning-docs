@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "JavaScript"
+id: "fundamentals.javascript.variables-fonctions"
+course_id: "fundamentals.javascript"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Variables et fonctions

@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 15
 total_fiches: 19
 cursus: "React"
+id: "web.react.tests-react"
+course_id: "web.react"
+content_type: "lesson"
+order: 15
 ---
 
 # 15 - Tests React

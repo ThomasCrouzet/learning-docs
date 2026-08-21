@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.architecture-symfony"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Comprendre l'architecture Symfony

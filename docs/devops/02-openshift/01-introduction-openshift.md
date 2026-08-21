@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "OpenShift"
+id: "infrastructure.openshift.introduction-openshift"
+course_id: "infrastructure.openshift"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à OpenShift

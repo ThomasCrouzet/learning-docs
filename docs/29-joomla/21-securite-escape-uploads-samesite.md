@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 21
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.securite-escape-uploads-samesite"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 21
 ---
 
 # 21 - Sécurité : escape, uploads, SameSite

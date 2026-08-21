@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 8 - Perspective et avenir réaliste"
+id: "specializations.crypto.future.impact-environnemental-vrais-chiffres"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.future"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Impact environnemental : les vrais chiffres

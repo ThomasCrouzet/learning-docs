@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 5
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.web-asset-manager"
+course_id: "web.joomla"
+content_type: "reference"
+order: 5
 ---
 
 # 05 - Web Asset Manager

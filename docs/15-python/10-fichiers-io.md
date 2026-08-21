@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 10
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.fichiers-io"
+course_id: "web.python"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Fichiers et entrées/sorties

@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 3 - Ethereum et les smart contracts"
+id: "specializations.crypto.ethereum.smart-contracts-du-code"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ethereum"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Smart contracts : du code, pas de la magie

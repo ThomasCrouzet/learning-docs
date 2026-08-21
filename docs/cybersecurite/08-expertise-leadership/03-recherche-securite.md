@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 8 - Expertise et Leadership"
+id: "security.cybersecurity.leadership.recherche-securite"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.leadership"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Recherche en Sécurité et Contribution Communautaire

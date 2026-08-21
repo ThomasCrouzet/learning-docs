@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.introduction-ci-cd"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à la CI/CD

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Virtualisation"
+id: "infrastructure.virtualization.concepts-virtualisation"
+course_id: "infrastructure.virtualization"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Concepts de virtualisation

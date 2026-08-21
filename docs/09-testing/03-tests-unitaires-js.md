@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 3
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.tests-unitaires-js"
+course_id: "web.testing"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Tests unitaires JS (Jest)

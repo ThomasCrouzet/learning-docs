@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 13
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.accessibilite-mobile"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Accessibilité mobile

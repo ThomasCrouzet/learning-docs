@@ -8,6 +8,10 @@ estimated_time: "105 min"
 fiche_number: 8
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.templates-jinja2"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Templates Jinja2

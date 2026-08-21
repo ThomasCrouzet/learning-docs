@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 16
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.filtres-doctrine"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 16
 ---
 
 # 16 - Filtres Doctrine : isolation transparente

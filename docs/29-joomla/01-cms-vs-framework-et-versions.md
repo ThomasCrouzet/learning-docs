@@ -8,6 +8,10 @@ estimated_time: "30 min"
 fiche_number: 1
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.cms-vs-framework-et-versions"
+course_id: "web.joomla"
+content_type: "reference"
+order: 1
 ---
 
 # 01 - CMS, Framework et versions

@@ -9,6 +9,11 @@ estimated_time: "50 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 4 - Deep learning fondamental"
+id: "ai.artificial-intelligence.deep-learning.reseaux-recurrents-sequences"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.deep-learning"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Réseaux récurrents et séquences

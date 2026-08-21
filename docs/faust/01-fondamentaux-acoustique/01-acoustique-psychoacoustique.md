@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux acoustique"
+id: "specializations.faust.acoustics.acoustique-psychoacoustique"
+course_id: "specializations.faust"
+module_id: "specializations.faust.acoustics"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Acoustique et psychoacoustique

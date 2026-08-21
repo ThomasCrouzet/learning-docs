@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 3
 cursus: "Phase 2 - Prérequis programmation"
+id: "specializations.faust.programming.cpp-notions-essentielles"
+course_id: "specializations.faust"
+module_id: "specializations.faust.programming"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - C++ : notions essentielles

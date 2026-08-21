@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 10
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.projet-integrateur"
+course_id: "infrastructure.monitoring"
+content_type: "project"
+order: 10
 ---
 
 # 10 - Projet intégrateur
 
 > **En bref** : Dans ce projet, tu vas déployer un stack d'observabilité complet pour une application Symfony : métriques avec Prometheus, dashboards et alertes avec Grafana, logs avec Loki, traces avec Tempo et monitoring d'infrastructure avec node_exporter et cAdvisor. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

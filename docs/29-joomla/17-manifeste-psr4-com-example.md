@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 17
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.manifeste-psr4-com-example"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 17
 ---
 
 # 17 - Manifeste PSR-4 et com_example

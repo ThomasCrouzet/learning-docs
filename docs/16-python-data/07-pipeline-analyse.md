@@ -9,6 +9,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.pipeline-analyse"
+course_id: "web.python-data"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Pipeline d'analyse complet

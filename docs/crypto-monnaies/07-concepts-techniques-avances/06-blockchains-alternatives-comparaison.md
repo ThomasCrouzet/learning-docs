@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 6
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.blockchains-alternatives-comparaison"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Blockchains alternatives : comparaison factuelle

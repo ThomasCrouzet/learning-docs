@@ -8,6 +8,10 @@ estimated_time: "110 min"
 fiche_number: 8
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.transactions"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Les transactions

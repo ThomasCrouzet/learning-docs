@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 8
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.classes-heritage"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Classes et héritage

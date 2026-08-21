@@ -8,6 +8,10 @@ estimated_time: "145 min"
 fiche_number: 2
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-champs-avances"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Champs avancés et organisation des formulaires EasyAdmin

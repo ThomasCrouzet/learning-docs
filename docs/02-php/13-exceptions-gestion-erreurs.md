@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 13
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.exceptions-gestion-erreurs"
+course_id: "web.php"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Les exceptions et la gestion d'erreurs

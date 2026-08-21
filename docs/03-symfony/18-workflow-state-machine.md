@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 18
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.workflow-state-machine"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 18
 ---
 
 # 18 - Workflow et state machine

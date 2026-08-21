@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 13
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.gestion-erreurs-typee"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Gestion d'erreurs typée

@@ -4,7 +4,19 @@
 
 const yaml = require('js-yaml');
 
-const REQUIRED_FIELDS = ['tags', 'description', 'estimated_time', 'fiche_number', 'total_fiches', 'cursus'];
+const REQUIRED_FIELDS = [
+  'tags',
+  'description',
+  'estimated_time',
+  'fiche_number',
+  'total_fiches',
+  'cursus',
+  'id',
+  'course_id',
+  'content_type',
+  'order',
+];
+const CONTENT_TYPES = new Set(['lesson', 'lab', 'project', 'review', 'reference']);
 
 const EXCLUDED_PATTERNS = [
   /index\.md$/,
@@ -55,6 +67,14 @@ function validateFields(fm, relativePath) {
     errors.push(`${relativePath}: "tags" doit \u00eatre un tableau`);
   }
 
+  if (fm.content_type && !CONTENT_TYPES.has(fm.content_type)) {
+    errors.push(`${relativePath}: "content_type" invalide`);
+  }
+
+  if (fm.order !== undefined && (!Number.isInteger(fm.order) || fm.order < 1)) {
+    errors.push(`${relativePath}: "order" doit être un entier positif`);
+  }
+
   return errors;
 }
 
@@ -67,4 +87,4 @@ function isExcluded(relativePath) {
   return EXCLUDED_PATTERNS.some(p => p.test(relativePath));
 }
 
-module.exports = { REQUIRED_FIELDS, EXCLUDED_PATTERNS, extractFrontmatter, validateFields, isExcluded };
+module.exports = { REQUIRED_FIELDS, CONTENT_TYPES, EXCLUDED_PATTERNS, extractFrontmatter, validateFields, isExcluded };

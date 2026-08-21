@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 9 - Expertise, recherche et leadership"
+id: "ai.artificial-intelligence.research.contribution-leadership"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.research"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Contribution et leadership

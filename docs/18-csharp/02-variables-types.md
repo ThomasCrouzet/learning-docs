@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.variables-types"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Variables et types

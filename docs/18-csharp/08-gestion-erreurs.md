@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 8
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.gestion-erreurs"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Gestion des erreurs

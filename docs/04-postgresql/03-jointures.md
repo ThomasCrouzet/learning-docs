@@ -8,6 +8,10 @@ estimated_time: "95 min"
 fiche_number: 3
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.jointures"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Les jointures

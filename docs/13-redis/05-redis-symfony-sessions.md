@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 8
 cursus: "Redis et Cache"
+id: "web.redis.redis-symfony-sessions"
+course_id: "web.redis"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Redis dans Symfony - Sessions

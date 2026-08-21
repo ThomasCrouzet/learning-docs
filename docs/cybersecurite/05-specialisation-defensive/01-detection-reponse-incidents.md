@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Phase 5 - Spécialisation Défensive"
+id: "security.cybersecurity.defensive.detection-reponse-incidents"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.defensive"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Détection et Réponse aux Incidents (DFIR)

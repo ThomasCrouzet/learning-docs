@@ -9,6 +9,11 @@ estimated_time: "45 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 3 - Machine learning classique"
+id: "ai.artificial-intelligence.ml.apprentissage-non-supervise"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.ml"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Apprentissage non supervisé

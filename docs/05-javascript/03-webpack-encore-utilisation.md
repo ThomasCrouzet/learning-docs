@@ -9,6 +9,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.webpack-encore-utilisation"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Webpack Encore : Utilisation au quotidien

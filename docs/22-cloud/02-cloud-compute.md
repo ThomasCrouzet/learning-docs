@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.cloud-compute"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Compute

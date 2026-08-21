@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 9
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.memecoins-launchpads-loterie"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Memecoins et launchpads : la loterie déguisée en investissement

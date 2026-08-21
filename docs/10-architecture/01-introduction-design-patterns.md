@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.introduction-design-patterns"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction aux design patterns

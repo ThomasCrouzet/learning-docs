@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 4
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.conditions"
+course_id: "web.php"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Les conditions (if, else, switch, match)

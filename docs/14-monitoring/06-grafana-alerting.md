@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.grafana-alerting"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Grafana - Alerting

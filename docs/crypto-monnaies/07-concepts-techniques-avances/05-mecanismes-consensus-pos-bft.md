@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 5
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.mecanismes-consensus-pos-bft"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Mécanismes de consensus : PoS, DPoS, BFT et au-delà

@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Phase 5 - Sécurité et survie"
+id: "specializations.crypto.safety.wallets-comprendre-possession"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.safety"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Wallets : comprendre ce qu'on possède vraiment

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.agregation"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Pipeline d'agrégation

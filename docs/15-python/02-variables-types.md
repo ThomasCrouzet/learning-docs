@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.variables-types"
+course_id: "web.python"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Variables et types de données

@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 12
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.modules-chrome-et-loadmodule"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Modules, chrome et loadmodule

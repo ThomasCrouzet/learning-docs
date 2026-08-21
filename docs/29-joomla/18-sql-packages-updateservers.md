@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 18
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.sql-packages-updateservers"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 18
 ---
 
 # 18 - SQL, packages et update servers

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.stockage-montages"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Stockage et systèmes de fichiers

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 6
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.modules-packages"
+course_id: "web.python"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Modules et packages

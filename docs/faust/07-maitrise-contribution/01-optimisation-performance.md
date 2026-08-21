@@ -8,6 +8,11 @@ estimated_time: "105 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Phase 7 - Maîtrise et contribution"
+id: "specializations.faust.contribution.optimisation-performance"
+course_id: "specializations.faust"
+module_id: "specializations.faust.contribution"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Optimisation et performance

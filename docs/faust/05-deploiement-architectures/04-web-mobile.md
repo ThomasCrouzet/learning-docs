@@ -8,6 +8,11 @@ estimated_time: "105 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 5 - Déploiement et architectures"
+id: "specializations.faust.deployment.web-mobile"
+course_id: "specializations.faust"
+module_id: "specializations.faust.deployment"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Web et mobile

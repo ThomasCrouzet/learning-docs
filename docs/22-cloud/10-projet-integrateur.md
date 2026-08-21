@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 10
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.projet-integrateur"
+course_id: "infrastructure.cloud"
+content_type: "project"
+order: 10
 ---
 
 # 10 - Projet intégrateur
 
 > **En bref** : Tu deploieras une application web complete sur AWS en combinant toutes les connaissances du cursus : réseau (VPC), base de données (RDS), conteneurs (ECS Fargate), monitoring (CloudWatch) et Infrastructure as Code (Terraform). Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

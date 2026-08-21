@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 8
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.services-reseau"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Services réseau

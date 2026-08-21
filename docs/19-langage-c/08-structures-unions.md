@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.structures-unions"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Structures et unions

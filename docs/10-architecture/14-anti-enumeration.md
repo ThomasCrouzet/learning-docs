@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 14
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.anti-enumeration"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - Anti-énumération : ne pas révéler qui existe

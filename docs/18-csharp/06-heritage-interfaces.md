@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.heritage-interfaces"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Héritage et interfaces

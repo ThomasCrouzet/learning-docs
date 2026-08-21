@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux informatiques"
+id: "security.cybersecurity.fundamentals-it.architecture-materielle"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.fundamentals-it"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Architecture matérielle et fonctionnement des ordinateurs

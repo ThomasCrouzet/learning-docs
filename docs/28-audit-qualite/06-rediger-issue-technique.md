@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "Audit et Qualité"
+id: "transversal.audit.rediger-issue-technique"
+course_id: "transversal.audit"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Rédiger une issue technique efficace

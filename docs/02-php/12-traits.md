@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 12
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.traits"
+course_id: "web.php"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Les traits

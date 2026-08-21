@@ -8,11 +8,17 @@ estimated_time: "90 min"
 fiche_number: 8
 total_fiches: 8
 cursus: "Redis et Cache"
+id: "web.redis.projet-integrateur"
+course_id: "web.redis"
+content_type: "project"
+order: 8
 ---
 
 # 08 - Projet intégrateur
 
 > **En bref** : Ce projet met en pratique tout ce que tu as appris dans ce cursus. Tu vas ajouter Redis à une application Symfony existante pour optimiser les performances avec le cache, les sessions et le traitement asynchrone. Lecture estimée : 90 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.introduction-reseaux"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction aux réseaux

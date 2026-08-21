@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 8 - Expertise et Leadership"
+id: "security.cybersecurity.leadership.grc-avancee"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.leadership"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - GRC Avancée et Management de la Sécurité

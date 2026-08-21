@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 15
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.multilingue"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 15
 ---
 
 # 15 - Site multilingue

@@ -8,6 +8,10 @@ estimated_time: "165 min"
 fiche_number: 4
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.commandes-ad-hoc-modules"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Commandes Ad-Hoc et Modules

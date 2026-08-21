@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 5
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.playbooks-fondamentaux"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Les Playbooks : Fondamentaux

@@ -8,6 +8,11 @@ estimated_time: "70 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 5 - Déploiement et architectures"
+id: "specializations.faust.deployment.applications-standalone"
+course_id: "specializations.faust"
+module_id: "specializations.faust.deployment"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Applications standalone

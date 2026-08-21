@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 8
 cursus: "Redis et Cache"
+id: "web.redis.redis-transport-messenger"
+course_id: "web.redis"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Redis comme transport Messenger

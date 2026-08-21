@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 9
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.wifi-securite"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Wi-Fi et sécurité sans fil

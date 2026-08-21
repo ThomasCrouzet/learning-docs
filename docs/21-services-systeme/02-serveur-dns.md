@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.serveur-dns"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Serveur DNS

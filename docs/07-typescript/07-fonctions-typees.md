@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.fonctions-typees"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Fonctions typées

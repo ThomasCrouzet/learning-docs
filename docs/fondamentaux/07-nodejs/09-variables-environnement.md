@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.variables-environnement"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Variables d'environnement et configuration

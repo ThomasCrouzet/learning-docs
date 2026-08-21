@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.installation-6-1-3"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Installation de Joomla 6.1.3

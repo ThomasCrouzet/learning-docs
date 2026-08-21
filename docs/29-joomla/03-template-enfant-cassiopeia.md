@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 3
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.template-enfant-cassiopeia"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Template enfant Cassiopeia

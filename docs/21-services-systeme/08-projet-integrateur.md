@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 8
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.projet-integrateur"
+course_id: "infrastructure.system-services"
+content_type: "project"
+order: 8
 ---
 
 # 08 - Projet intégrateur
 
 > **En bref** : Tu vas déployer une infrastructure multi-services complete et conteneurisee pour une entreprise fictive, en integrant DNS, serveur web, messagerie, annuaire LDAP, reverse proxy et monitoring. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

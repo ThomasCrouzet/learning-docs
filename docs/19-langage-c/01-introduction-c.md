@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.introduction-c"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction au langage C

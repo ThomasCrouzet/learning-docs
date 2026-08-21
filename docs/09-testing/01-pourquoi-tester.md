@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.pourquoi-tester"
+course_id: "web.testing"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Pourquoi tester

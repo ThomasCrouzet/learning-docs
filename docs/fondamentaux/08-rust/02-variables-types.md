@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.variables-types"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Variables et Types de Données

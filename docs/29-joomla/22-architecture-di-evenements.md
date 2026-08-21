@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 22
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.architecture-di-evenements"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 22
 ---
 
 # 22 - Architecture : DI et événements

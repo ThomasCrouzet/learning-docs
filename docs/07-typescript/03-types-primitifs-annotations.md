@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.types-primitifs-annotations"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Types primitifs et annotations

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 4
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.dns-dhcp"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - DNS et DHCP

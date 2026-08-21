@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 5
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.github-actions-avance"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - GitHub Actions - Avancé

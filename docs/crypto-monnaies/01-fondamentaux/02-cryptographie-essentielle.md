@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux"
+id: "specializations.crypto.fundamentals.cryptographie-essentielle"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.fundamentals"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Cryptographie essentielle : clés, hachage et signatures

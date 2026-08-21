@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 10
 total_fiches: 10
 cursus: "API Design et Documentation"
+id: "web.api-design.projet-integrateur"
+course_id: "web.api-design"
+content_type: "project"
+order: 10
 ---
 
 # 10 - Projet intégrateur
 
 > **En bref** : Ce projet intégrateur met en pratique toutes les notions du cursus API Design et Documentation : conception REST, pagination, gestion des erreurs, documentation OpenAPI, API Platform, versioning, authentification JWT et tests. Tu vas construire une API complète pour gérer une bibliothèque de livres. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

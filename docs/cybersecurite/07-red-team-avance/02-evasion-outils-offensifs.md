@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 7 - Red Team Avancé"
+id: "security.cybersecurity.red-team.evasion-outils-offensifs"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.red-team"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Évasion et Développement d'outils offensifs

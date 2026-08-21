@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.middleware-routes"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Middleware et routes

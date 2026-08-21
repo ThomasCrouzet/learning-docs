@@ -8,6 +8,11 @@ estimated_time: "85 min"
 fiche_number: 2
 total_fiches: 3
 cursus: "Phase 2 - Programmation et outils"
+id: "ai.artificial-intelligence.programming.environnement-developpement-infrastructure"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.programming"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Environnement de développement et infrastructure

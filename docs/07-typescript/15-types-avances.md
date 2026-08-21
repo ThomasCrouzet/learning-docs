@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 15
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.types-avances"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 15
 ---
 
 # 15 - Types avancés (mapped, conditional, template literal)

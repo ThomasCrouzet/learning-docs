@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 2
 total_fiches: 5
 cursus: "Git"
+id: "fundamentals.git.workflow-basique"
+course_id: "fundamentals.git"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Workflow Git basique

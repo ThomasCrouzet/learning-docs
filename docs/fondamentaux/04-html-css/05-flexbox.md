@@ -8,6 +8,10 @@ estimated_time: "25 min"
 fiche_number: 5
 total_fiches: 7
 cursus: "HTML/CSS"
+id: "fundamentals.html-css.flexbox"
+course_id: "fundamentals.html-css"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Flexbox

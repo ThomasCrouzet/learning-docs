@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 7 - Systèmes agentiques et MLOps"
+id: "ai.artificial-intelligence.agents-mlops.frameworks-agents"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.agents-mlops"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Frameworks d'agents

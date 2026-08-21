@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "Phase 4 - DSP appliqué"
+id: "specializations.faust.dsp.anti-aliasing-oscillateurs"
+course_id: "specializations.faust"
+module_id: "specializations.faust.dsp"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Anti-aliasing et oscillateurs band-limited

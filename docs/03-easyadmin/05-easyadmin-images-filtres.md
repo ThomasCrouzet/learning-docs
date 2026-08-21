@@ -8,6 +8,10 @@ estimated_time: "30 min"
 fiche_number: 5
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-images-filtres"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Gestion des images et filtres de recherche

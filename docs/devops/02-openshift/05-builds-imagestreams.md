@@ -8,6 +8,10 @@ estimated_time: "145 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "OpenShift"
+id: "infrastructure.openshift.builds-imagestreams"
+course_id: "infrastructure.openshift"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Builds et ImageStreams

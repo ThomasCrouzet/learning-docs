@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 8
 cursus: "Redis et Cache"
+id: "web.redis.structures-donnees"
+course_id: "web.redis"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Structures de données

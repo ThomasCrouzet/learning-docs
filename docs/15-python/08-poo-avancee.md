@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 8
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.poo-avancee"
+course_id: "web.python"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - POO avancée

@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 7
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.articulation-tcpdump-ss-ip-dig-mtr-nmap"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Articulation avec tcpdump, ss, ip, dig, mtr et Nmap

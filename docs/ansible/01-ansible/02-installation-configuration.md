@@ -8,6 +8,10 @@ estimated_time: "150 min"
 fiche_number: 2
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.installation-configuration"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Installation et Configuration

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.health-checks-autoscaling"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Health checks et autoscaling

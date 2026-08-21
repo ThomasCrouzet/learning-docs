@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.boucles"
+course_id: "web.php"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Les boucles (for, foreach, while)

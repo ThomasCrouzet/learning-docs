@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 8
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.api-rest"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - API REST avec Express

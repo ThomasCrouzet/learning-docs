@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 6
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-actions-personnalisees"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Actions personnalisées dans EasyAdmin

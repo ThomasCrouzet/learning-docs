@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 2
 total_fiches: 2
 cursus: "Outils IA"
+id: "orientation.ai-tools.rechercher-efficacement"
+course_id: "orientation.ai-tools"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Rechercher efficacement avant de demander à l'IA

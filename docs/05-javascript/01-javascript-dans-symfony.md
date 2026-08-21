@@ -9,6 +9,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.javascript-dans-symfony"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - JavaScript dans Symfony

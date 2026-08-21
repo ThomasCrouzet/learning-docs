@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 19
 cursus: "React"
+id: "web.react.useeffect-cycle-vie"
+course_id: "web.react"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - useEffect et cycle de vie

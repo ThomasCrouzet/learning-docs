@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 8
 cursus: "Redis et Cache"
+id: "web.redis.introduction-redis"
+course_id: "web.redis"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à Redis

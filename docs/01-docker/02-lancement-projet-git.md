@@ -8,6 +8,10 @@ estimated_time: "105 min"
 fiche_number: 2
 total_fiches: 2
 cursus: "Docker"
+id: "web.docker.lancement-projet-git"
+course_id: "web.docker"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Lancer le projet et initialiser Git

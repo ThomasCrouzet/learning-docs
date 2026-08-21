@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.introduction-mobile"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction au dev mobile

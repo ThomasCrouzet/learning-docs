@@ -8,6 +8,11 @@ estimated_time: "95 min"
 fiche_number: 1
 total_fiches: 3
 cursus: "Phase 2 - Prérequis programmation"
+id: "specializations.faust.programming.programmation-fonctionnelle-concepts"
+course_id: "specializations.faust"
+module_id: "specializations.faust.programming"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Programmation fonctionnelle - concepts

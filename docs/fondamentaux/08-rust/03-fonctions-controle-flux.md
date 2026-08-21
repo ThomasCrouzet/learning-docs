@@ -8,6 +8,10 @@ estimated_time: "105 min"
 fiche_number: 3
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.fonctions-controle-flux"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Fonctions et Contrôle de Flux

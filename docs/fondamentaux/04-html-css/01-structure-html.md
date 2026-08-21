@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 1
 total_fiches: 7
 cursus: "HTML/CSS"
+id: "fundamentals.html-css.structure-html"
+course_id: "fundamentals.html-css"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Structure de base HTML

@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 2
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.tests-unitaires-php"
+course_id: "web.testing"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Tests unitaires PHP (PHPUnit)

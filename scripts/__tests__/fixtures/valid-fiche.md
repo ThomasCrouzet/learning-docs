@@ -7,6 +7,10 @@ estimated_time: "15 min"
 fiche_number: 1
 total_fiches: 3
 cursus: "Docker"
+id: "web.docker.test"
+course_id: "web.docker"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Fiche de test

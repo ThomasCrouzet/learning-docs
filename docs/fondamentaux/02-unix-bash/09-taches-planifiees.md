@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.taches-planifiees"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Tâches planifiées et automatisation

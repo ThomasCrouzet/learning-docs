@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 8
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.gestion-erreurs"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Gestion des Erreurs

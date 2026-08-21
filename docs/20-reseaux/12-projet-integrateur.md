@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 12
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.projet-integrateur"
+course_id: "infrastructure.networks"
+content_type: "project"
+order: 12
 ---
 
 # 12 - Projet intégrateur
 
 > **En bref** : Dans ce projet, tu vas concevoir, documenter et déployer une architecture réseau complete pour une PME fictive. Tu vas mettre en pratique toutes les notions du cursus : adressage IP, sous-réseaux, routage, firewall, services réseau, reverse proxy, load balancer et haute disponibilité. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

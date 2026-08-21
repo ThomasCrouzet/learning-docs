@@ -8,6 +8,10 @@ estimated_time: "200 min"
 fiche_number: 4
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.insert-update-delete"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - INSERT, UPDATE et DELETE

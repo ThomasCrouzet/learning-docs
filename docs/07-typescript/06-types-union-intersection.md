@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.types-union-intersection"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Types union et intersection

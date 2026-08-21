@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 8
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.conteneurs-cloud"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Conteneurs cloud

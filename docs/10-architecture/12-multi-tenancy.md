@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 12
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.multi-tenancy"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Multi-tenancy : isoler les données par client

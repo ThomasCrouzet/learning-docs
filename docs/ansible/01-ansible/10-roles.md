@@ -8,6 +8,10 @@ estimated_time: "125 min"
 fiche_number: 10
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.roles"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Les Rôles

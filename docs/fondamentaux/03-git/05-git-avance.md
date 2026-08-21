@@ -8,6 +8,10 @@ estimated_time: "140 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Git"
+id: "fundamentals.git.git-avance"
+course_id: "fundamentals.git"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Git avancé

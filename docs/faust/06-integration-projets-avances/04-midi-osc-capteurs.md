@@ -8,6 +8,11 @@ estimated_time: "95 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 6 - Intégration et projets avancés"
+id: "specializations.faust.integration.midi-osc-capteurs"
+course_id: "specializations.faust"
+module_id: "specializations.faust.integration"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - MIDI, OSC et capteurs

@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.controleurs-routes"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Les contrôleurs et les routes

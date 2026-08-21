@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.allocation-dynamique"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Allocation dynamique

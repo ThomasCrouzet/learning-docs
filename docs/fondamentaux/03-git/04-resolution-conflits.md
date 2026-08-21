@@ -8,6 +8,10 @@ estimated_time: "115 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Git"
+id: "fundamentals.git.resolution-conflits"
+course_id: "fundamentals.git"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Résolution de conflits

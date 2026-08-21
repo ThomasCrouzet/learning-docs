@@ -7,6 +7,10 @@ estimated_time: "20 min"
 fiche_number: 9
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.aide-memoire-react"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 9
 ---
 
 # Aide-mémoire React

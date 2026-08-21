@@ -8,6 +8,10 @@ estimated_time: "130 min"
 fiche_number: 6
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.contraintes-index"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Les contraintes et les index

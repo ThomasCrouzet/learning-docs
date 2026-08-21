@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 19
 total_fiches: 19
 cursus: "React"
+id: "web.react.zustand-jotai"
+course_id: "web.react"
+content_type: "lesson"
+order: 19
 ---
 
 # 19 - Zustand et Jotai (état global léger)

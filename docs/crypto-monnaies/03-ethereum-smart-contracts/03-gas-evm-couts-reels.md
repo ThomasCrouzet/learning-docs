@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 3 - Ethereum et les smart contracts"
+id: "specializations.crypto.ethereum.gas-evm-couts-reels"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ethereum"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Gas, EVM et les coûts réels d'utilisation

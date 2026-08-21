@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.bridges-interoperabilite"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Bridges et interopérabilité : risques et réalités

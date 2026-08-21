@@ -8,6 +8,11 @@ estimated_time: "30 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Développement logiciel"
+id: "transversal.professional-skills.software.architecture-serveur-web"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.software"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - L'Architecture Serveur Web

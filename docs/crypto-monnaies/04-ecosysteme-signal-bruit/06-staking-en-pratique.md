@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 6
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.staking-en-pratique"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Staking en pratique : rendements, risques et réalités

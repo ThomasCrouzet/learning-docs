@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 9
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.introduction-ddd"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Introduction au DDD

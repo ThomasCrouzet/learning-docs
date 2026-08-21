@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.iam-securite"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - IAM et sécurité

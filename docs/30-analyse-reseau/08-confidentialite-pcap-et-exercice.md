@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 8
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.confidentialite-pcap-et-exercice"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Confidentialité des pcap et exercice de diagnostic

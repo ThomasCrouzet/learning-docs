@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.certificats-letsencrypt"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Certificats TLS avec Let's Encrypt

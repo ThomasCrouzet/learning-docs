@@ -8,6 +8,11 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 3 - Compétences intermédiaires"
+id: "security.cybersecurity.intermediate.securite-web-applicative"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.intermediate"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Sécurité Web et Applicative

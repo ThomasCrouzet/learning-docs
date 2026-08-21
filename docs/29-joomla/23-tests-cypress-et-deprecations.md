@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 23
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.tests-cypress-et-deprecations"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 23
 ---
 
 # 23 - Tests Cypress et dépréciations

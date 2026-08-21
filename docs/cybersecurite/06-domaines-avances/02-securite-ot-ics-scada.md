@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 2
 total_fiches: 5
 cursus: "Phase 6 - Domaines Avancés"
+id: "security.cybersecurity.advanced.securite-ot-ics-scada"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.advanced"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Sécurité OT/ICS/SCADA

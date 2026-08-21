@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 15
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.commandes-console"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 15
 ---
 
 # 15 - Commandes console

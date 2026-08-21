@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Gestion de projet"
+id: "transversal.project-management.methodes-agiles"
+course_id: "transversal.project-management"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Méthodes agiles

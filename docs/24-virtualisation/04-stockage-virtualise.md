@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "Virtualisation"
+id: "infrastructure.virtualization.stockage-virtualise"
+course_id: "infrastructure.virtualization"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Stockage virtualise

@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux mathématiques"
+id: "ai.artificial-intelligence.math.probabilites-statistiques"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.math"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Probabilités et statistiques

@@ -8,6 +8,11 @@ estimated_time: "120 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 7 - Maîtrise et contribution"
+id: "specializations.faust.contribution.recherche-innovation"
+course_id: "specializations.faust"
+module_id: "specializations.faust.contribution"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Recherche et innovation

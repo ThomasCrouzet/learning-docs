@@ -8,6 +8,11 @@ estimated_time: "30 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Développement logiciel"
+id: "transversal.professional-skills.software.applications-mobiles"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.software"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Les Applications Mobiles et Desktop

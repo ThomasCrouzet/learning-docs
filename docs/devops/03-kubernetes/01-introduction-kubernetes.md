@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.introduction-kubernetes"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à Kubernetes

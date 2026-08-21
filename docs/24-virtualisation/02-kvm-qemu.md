@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Virtualisation"
+id: "infrastructure.virtualization.kvm-qemu"
+course_id: "infrastructure.virtualization"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - KVM et QEMU

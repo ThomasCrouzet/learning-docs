@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 12
 total_fiches: 19
 cursus: "React"
+id: "web.react.appels-api-fetch"
+course_id: "web.react"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Appels API avec fetch

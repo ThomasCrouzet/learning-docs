@@ -8,6 +8,10 @@ estimated_time: "170 min"
 fiche_number: 11
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.ansible-galaxy"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Ansible Galaxy

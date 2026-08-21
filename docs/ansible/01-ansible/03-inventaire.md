@@ -8,6 +8,10 @@ estimated_time: "160 min"
 fiche_number: 3
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.inventaire"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - L'Inventaire Ansible

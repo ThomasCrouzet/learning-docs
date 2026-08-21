@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.adressage-ip"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Adressage IP

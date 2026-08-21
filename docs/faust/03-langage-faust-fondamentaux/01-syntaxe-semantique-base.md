@@ -8,6 +8,11 @@ estimated_time: "75 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 3 - Langage Faust fondamentaux"
+id: "specializations.faust.language.syntaxe-semantique-base"
+course_id: "specializations.faust"
+module_id: "specializations.faust.language"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Syntaxe et sémantique de base

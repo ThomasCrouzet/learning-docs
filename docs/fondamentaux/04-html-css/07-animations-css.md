@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 7
 total_fiches: 7
 cursus: "HTML/CSS"
+id: "fundamentals.html-css.animations-css"
+course_id: "fundamentals.html-css"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Animations CSS

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 12
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.typescript-nodejs"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - TypeScript avec Node.js

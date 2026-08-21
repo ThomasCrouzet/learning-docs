@@ -143,6 +143,13 @@ describe('processFile', () => {
     expect(changeCount).toBe(1);
   });
 
+  it('préserve les identifiants techniques du frontmatter v2', () => {
+    const input = 'course_id: "infrastructure.network-analysis"\nmodule_id: "ai.artificial-intelligence.deep-learning"';
+    const { content, changeCount } = processFile(input);
+    expect(content).toBe(input);
+    expect(changeCount).toBe(0);
+  });
+
   it('retourne le nombre de lignes modifiees', () => {
     const input = 'Premiere etape\nDeuxieme etape\nTexte correct';
     const { changeCount } = processFile(input);

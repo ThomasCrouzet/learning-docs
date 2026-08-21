@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 7
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.marches-prediction"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Marches de prédiction : parier sur l'avenir

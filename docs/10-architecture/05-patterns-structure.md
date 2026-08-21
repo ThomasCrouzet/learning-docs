@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.patterns-structure"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Patterns de structure

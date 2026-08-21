@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.cloud-reseau"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Réseau cloud

@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 4
 total_fiches: 10
 cursus: "API Design et Documentation"
+id: "web.api-design.openapi-swagger"
+course_id: "web.api-design"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - OpenAPI et Swagger

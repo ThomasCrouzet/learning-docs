@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux acoustique"
+id: "specializations.faust.acoustics.audio-numerique-theorie-signal"
+course_id: "specializations.faust"
+module_id: "specializations.faust.acoustics"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Audio numérique et théorie du signal

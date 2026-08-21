@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "Phase 5 - Sécurité et survie"
+id: "specializations.crypto.safety.regulation-loi-france-europe"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.safety"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Régulation : ce que dit la loi en France et en Europe

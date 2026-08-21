@@ -8,6 +8,11 @@ estimated_time: "125 min"
 fiche_number: 3
 total_fiches: 3
 cursus: "Phase 2 - Prérequis programmation"
+id: "specializations.faust.programming.environnement-outils"
+course_id: "specializations.faust"
+module_id: "specializations.faust.programming"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Environnement et outils

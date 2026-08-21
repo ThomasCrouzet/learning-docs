@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 3
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.templates-twig"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Templates Twig

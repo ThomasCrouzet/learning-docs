@@ -8,6 +8,10 @@ estimated_time: "85 min"
 fiche_number: 11
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.modules-organisation"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Modules et Organisation du Code

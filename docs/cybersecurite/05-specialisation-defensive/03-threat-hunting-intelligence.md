@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 5 - Spécialisation Défensive"
+id: "security.cybersecurity.defensive.threat-hunting-intelligence"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.defensive"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Threat Hunting et Intelligence

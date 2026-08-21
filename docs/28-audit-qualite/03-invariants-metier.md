@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "Audit et Qualité"
+id: "transversal.audit.invariants-metier"
+course_id: "transversal.audit"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Identifier les invariants métier

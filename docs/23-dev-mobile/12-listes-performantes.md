@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 12
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.listes-performantes"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Listes performantes avec FlashList

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "Virtualisation"
+id: "infrastructure.virtualization.reseau-virtualise"
+course_id: "infrastructure.virtualization"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Réseau virtualisé

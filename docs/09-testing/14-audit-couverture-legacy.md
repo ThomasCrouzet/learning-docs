@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 14
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.audit-couverture-legacy"
+course_id: "web.testing"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - Auditer la couverture d'un projet existant

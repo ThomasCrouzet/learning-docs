@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Droit et RGPD"
+id: "transversal.gdpr.securite-donnees"
+course_id: "transversal.gdpr"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Sécurité des données personnelles

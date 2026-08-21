@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 10
 total_fiches: 19
 cursus: "React"
+id: "web.react.context-etat-global"
+course_id: "web.react"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Context et état global

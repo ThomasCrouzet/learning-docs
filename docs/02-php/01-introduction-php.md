@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.introduction-php"
+course_id: "web.php"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à PHP et premiers pas

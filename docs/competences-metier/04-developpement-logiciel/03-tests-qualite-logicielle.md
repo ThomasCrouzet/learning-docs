@@ -8,6 +8,11 @@ estimated_time: "30 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Développement logiciel"
+id: "transversal.professional-skills.software.tests-qualite-logicielle"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.software"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Les Tests et la Qualité Logicielle

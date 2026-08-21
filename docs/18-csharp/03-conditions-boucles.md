@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.conditions-boucles"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Conditions et boucles

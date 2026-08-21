@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 1
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.introduction-postgresql"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à PostgreSQL

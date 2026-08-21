@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 7
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.relations-entites"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Relations entre entités

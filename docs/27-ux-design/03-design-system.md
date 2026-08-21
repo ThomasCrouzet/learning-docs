@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "UX Design"
+id: "transversal.ux.design-system"
+course_id: "transversal.ux"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Design system

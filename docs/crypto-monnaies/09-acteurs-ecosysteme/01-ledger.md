@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 1
 total_fiches: 8
 cursus: "Phase 9 - Acteurs de l'écosystème"
+id: "specializations.crypto.actors.ledger"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.actors"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Ledger : sécuriser ses clés avec du hardware français

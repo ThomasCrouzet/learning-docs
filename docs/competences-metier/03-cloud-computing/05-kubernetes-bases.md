@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Cloud computing"
+id: "transversal.professional-skills.cloud.kubernetes-bases"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.cloud"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Les Bases de Kubernetes

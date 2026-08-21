@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "Phase 4 - DSP appliqué"
+id: "specializations.faust.dsp.effets-audio"
+course_id: "specializations.faust"
+module_id: "specializations.faust.dsp"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Effets audio

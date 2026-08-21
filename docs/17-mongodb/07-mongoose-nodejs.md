@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.mongoose-nodejs"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Mongoose avec Node.js

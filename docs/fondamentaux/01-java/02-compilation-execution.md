@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.compilation-execution"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Compilation et exécution en Java

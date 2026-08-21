@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "UX Design"
+id: "transversal.ux.tests-utilisateurs"
+course_id: "transversal.ux"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Tests utilisateurs

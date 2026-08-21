@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 12
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.fichiers-io"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Lecture et écriture de fichiers en Java

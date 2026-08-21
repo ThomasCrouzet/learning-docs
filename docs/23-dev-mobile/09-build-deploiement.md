@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.build-deploiement"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Build et déploiement

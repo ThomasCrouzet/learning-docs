@@ -19,7 +19,9 @@ Chaque fiche suit le même format : concepts définis explicitement, étapes pra
 [Suivre un parcours guidé :material-routes:](parcours.md){ .md-button .md-button--primary }
 [Débuter de zéro :material-rocket-launch:](commencer/index.md){ .md-button }
 
-<p class="home-stats">635 fiches · 66 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
+<!-- BEGIN GENERATED:curriculum-stats -->
+<p class="home-stats">635 fiches · 51 cursus · 38 modules · 9 domaines</p>
+<!-- END GENERATED:curriculum-stats -->
 
 Date de référence éditoriale : août 2026. Le paquet Ansible communautaire enseigné est la série 14.x (ansible-core 2.21 ; PyPI 14.3.1 au 14 août 2026).
 

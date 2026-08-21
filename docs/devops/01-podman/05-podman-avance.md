@@ -8,6 +8,10 @@ estimated_time: "95 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Podman"
+id: "infrastructure.podman.podman-avance"
+course_id: "infrastructure.podman"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Fonctionnalités Avancées de Podman

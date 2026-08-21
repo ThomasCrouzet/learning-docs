@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 2
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.solid-principes"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - SOLID - Principes fondamentaux

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.fonctions"
+course_id: "web.python"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Fonctions

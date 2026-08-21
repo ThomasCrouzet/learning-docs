@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 13
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.reflection-tests"
+course_id: "web.testing"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Reflection pour les tests

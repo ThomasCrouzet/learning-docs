@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.classes-es6"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Classes ES6

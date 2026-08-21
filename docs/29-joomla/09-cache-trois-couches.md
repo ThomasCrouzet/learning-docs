@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 9
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.cache-trois-couches"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Cache : trois couches

@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 9
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.monitoring-cloud"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Monitoring cloud

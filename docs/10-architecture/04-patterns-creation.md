@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.patterns-creation"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Patterns de création

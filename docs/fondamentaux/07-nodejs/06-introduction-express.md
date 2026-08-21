@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 6
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.introduction-express"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Introduction à Express

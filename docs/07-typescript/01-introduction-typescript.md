@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.introduction-typescript"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à TypeScript

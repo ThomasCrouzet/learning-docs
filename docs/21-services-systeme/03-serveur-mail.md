@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 3
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.serveur-mail"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Serveur de messagerie

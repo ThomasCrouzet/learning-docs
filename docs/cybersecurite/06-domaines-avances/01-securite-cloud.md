@@ -9,6 +9,11 @@ estimated_time: "65 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Phase 6 - Domaines Avancés"
+id: "security.cybersecurity.advanced.securite-cloud"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.advanced"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Sécurité Cloud

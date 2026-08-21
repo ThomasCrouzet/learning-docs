@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 11
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.strategie-test-equipe"
+course_id: "web.testing"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Stratégie de test en équipe

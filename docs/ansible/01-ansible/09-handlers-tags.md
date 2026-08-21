@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 9
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.handlers-tags"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Handlers et Tags

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.iterateurs-generateurs"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Itérateurs et générateurs

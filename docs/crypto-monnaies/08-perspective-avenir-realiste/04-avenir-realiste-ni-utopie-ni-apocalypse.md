@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 8 - Perspective et avenir réaliste"
+id: "specializations.crypto.future.avenir-realiste-ni-utopie-ni-apocalypse"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.future"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - L'avenir réaliste : ni utopie ni apocalypse

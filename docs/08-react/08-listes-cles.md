@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 8
 total_fiches: 19
 cursus: "React"
+id: "web.react.listes-cles"
+course_id: "web.react"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Listes et clés

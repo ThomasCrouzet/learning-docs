@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 11
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.deployer-symfony-kubernetes"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Déployer Symfony sur Kubernetes

@@ -8,6 +8,10 @@ estimated_time: "85 min"
 fiche_number: 13
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.services-injection-dependances"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Services et injection de dépendances

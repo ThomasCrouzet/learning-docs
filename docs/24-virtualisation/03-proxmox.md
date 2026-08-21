@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "Virtualisation"
+id: "infrastructure.virtualization.proxmox"
+course_id: "infrastructure.virtualization"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Proxmox VE

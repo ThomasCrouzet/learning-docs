@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 9
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.formulaires"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Les formulaires

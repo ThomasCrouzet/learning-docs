@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-authentification"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Sécuriser l'administration avec l'authentification

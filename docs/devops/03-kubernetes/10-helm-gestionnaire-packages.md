@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 10
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.helm-gestionnaire-packages"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Helm - Gestionnaire de packages

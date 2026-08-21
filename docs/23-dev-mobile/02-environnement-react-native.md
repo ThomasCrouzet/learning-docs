@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.environnement-react-native"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Environnement React Native

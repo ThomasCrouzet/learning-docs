@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Droit et RGPD"
+id: "transversal.gdpr.conformite-pratique"
+course_id: "transversal.gdpr"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Conformité en pratique

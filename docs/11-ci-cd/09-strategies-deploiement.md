@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.strategies-deploiement"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Stratégies de déploiement

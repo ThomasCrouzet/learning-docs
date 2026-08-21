@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.classes-objets"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Classes et objets en Java

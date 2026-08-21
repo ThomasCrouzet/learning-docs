@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 5
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.creer-entites"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Créer des entités

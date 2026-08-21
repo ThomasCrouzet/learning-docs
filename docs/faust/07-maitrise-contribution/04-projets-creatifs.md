@@ -8,6 +8,11 @@ estimated_time: "95 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 7 - Maîtrise et contribution"
+id: "specializations.faust.contribution.projets-creatifs"
+course_id: "specializations.faust"
+module_id: "specializations.faust.contribution"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Projets créatifs

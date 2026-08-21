@@ -9,6 +9,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.numpy-fondamentaux"
+course_id: "web.python-data"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - NumPy - Calcul numérique

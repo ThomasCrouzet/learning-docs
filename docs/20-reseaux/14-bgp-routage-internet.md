@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 14
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.bgp-routage-internet"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - BGP : le routage entre opérateurs

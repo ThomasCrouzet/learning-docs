@@ -8,6 +8,11 @@ estimated_time: "70 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 6 - Domaines Avancés"
+id: "security.cybersecurity.advanced.securite-mobile-iot"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.advanced"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Sécurité Mobile et IoT

@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.gitlab-ci-pipeline-complet"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - GitLab CI - Pipeline complet

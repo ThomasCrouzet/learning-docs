@@ -8,6 +8,10 @@ estimated_time: "85 min"
 fiche_number: 7
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.enums-pattern-matching"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Enums et Pattern Matching

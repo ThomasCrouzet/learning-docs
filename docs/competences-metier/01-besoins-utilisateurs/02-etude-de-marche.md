@@ -8,6 +8,11 @@ estimated_time: "25 min"
 fiche_number: 2
 total_fiches: 3
 cursus: "Besoins utilisateurs"
+id: "transversal.professional-skills.needs.etude-de-marche"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.needs"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - L'Étude de Marché et Veille Technologique

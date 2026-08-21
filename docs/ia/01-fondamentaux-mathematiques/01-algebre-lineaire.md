@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux mathématiques"
+id: "ai.artificial-intelligence.math.algebre-lineaire"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.math"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Algèbre linéaire pour l'IA

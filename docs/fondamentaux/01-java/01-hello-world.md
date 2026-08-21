@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.hello-world"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Hello World en Java

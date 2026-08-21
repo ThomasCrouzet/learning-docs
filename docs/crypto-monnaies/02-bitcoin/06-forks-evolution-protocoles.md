@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "Phase 2 - Bitcoin"
+id: "specializations.crypto.bitcoin.forks-evolution-protocoles"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.bitcoin"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Forks et évolution des protocoles

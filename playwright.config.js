@@ -27,7 +27,7 @@ module.exports = defineConfig({
     },
     {
       name: 'chromium-mobile',
-      use: { ...devices['iPhone 13'] },
+      use: { ...devices['iPhone 13'], browserName: 'chromium' },
     },
   ],
   // webServer démarré manuellement en CI/local pour le build de production :

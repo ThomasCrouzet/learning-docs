@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 13
 total_fiches: 19
 cursus: "React"
+id: "web.react.react-symfony"
+course_id: "web.react"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - React et Symfony

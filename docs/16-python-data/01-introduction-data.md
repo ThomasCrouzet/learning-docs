@@ -9,6 +9,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.introduction-data"
+course_id: "web.python-data"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à l'analyse de données

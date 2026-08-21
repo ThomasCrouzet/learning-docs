@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.tableaux-tuples"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Tableaux et tuples

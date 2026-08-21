@@ -8,6 +8,10 @@ estimated_time: "20 min"
 fiche_number: 3
 total_fiches: 7
 cursus: "HTML/CSS"
+id: "fundamentals.html-css.formulaires"
+course_id: "fundamentals.html-css"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Les formulaires HTML

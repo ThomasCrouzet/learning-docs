@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 8
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.classes-en-detail"
+course_id: "web.php"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Les classes en détail

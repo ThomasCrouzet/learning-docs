@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.protocoles-transport"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Protocoles de transport

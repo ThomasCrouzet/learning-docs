@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.systeme-fichiers"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Le système de fichiers Unix/Linux

@@ -9,6 +9,11 @@ estimated_time: "40 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 4 - Deep learning fondamental"
+id: "ai.artificial-intelligence.deep-learning.reseaux-convolutifs-cnn"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.deep-learning"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Réseaux convolutifs (CNN)

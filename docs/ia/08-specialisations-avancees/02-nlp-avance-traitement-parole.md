@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 2
 total_fiches: 5
 cursus: "Phase 8 - Spécialisations avancées"
+id: "ai.artificial-intelligence.advanced.nlp-avance-traitement-parole"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.advanced"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - NLP avancé et traitement de la parole

@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 2 - Fondamentaux sécurité"
+id: "security.cybersecurity.fundamentals-security.principes-securite"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.fundamentals-security"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Principes de sécurité de l'information

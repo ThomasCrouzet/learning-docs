@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.poo-python"
+course_id: "web.python"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Programmation orientée objet

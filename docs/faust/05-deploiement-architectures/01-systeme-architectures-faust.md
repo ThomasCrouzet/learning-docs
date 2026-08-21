@@ -8,6 +8,11 @@ estimated_time: "80 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Phase 5 - Déploiement et architectures"
+id: "specializations.faust.deployment.systeme-architectures-faust"
+course_id: "specializations.faust"
+module_id: "specializations.faust.deployment"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Système d'architectures Faust

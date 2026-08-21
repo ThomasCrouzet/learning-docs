@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 5 - Architectures modernes et NLP"
+id: "ai.artificial-intelligence.modern-architectures.vision-transformers-multimodal"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.modern-architectures"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Vision Transformers et multimodal

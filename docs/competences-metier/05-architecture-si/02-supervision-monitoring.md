@@ -8,6 +8,11 @@ estimated_time: "25 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Architecture SI"
+id: "transversal.professional-skills.architecture.supervision-monitoring"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.architecture"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - La Supervision et le Monitoring

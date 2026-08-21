@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 10
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.patterns-javascript"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Patterns JavaScript

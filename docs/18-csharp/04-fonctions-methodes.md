@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 4
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.fonctions-methodes"
+course_id: "web.csharp"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Fonctions et méthodes

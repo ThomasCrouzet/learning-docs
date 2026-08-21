@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 5
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.objets-interfaces"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Objets et interfaces

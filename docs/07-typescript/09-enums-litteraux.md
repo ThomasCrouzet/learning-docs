@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 9
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.enums-litteraux"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Enums et littéraux

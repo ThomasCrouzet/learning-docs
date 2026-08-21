@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 13
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.finops-optimisation-couts"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - FinOps : maîtriser les coûts cloud

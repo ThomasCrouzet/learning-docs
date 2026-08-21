@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 10
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.generics"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Generics

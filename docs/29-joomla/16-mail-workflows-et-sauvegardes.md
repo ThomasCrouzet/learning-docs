@@ -8,6 +8,10 @@ estimated_time: "40 min"
 fiche_number: 16
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.mail-workflows-et-sauvegardes"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 16
 ---
 
 # 16 - Mail, workflows et sauvegardes

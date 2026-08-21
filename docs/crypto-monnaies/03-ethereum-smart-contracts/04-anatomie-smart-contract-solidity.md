@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 3 - Ethereum et les smart contracts"
+id: "specializations.crypto.ethereum.anatomie-smart-contract-solidity"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ethereum"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Anatomie d'un smart contract : lire et comprendre du Solidity

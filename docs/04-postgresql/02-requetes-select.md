@@ -8,6 +8,10 @@ estimated_time: "95 min"
 fiche_number: 2
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.requetes-select"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Requêtes SELECT

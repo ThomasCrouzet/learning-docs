@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "JavaScript"
+id: "fundamentals.javascript.introduction-js"
+course_id: "fundamentals.javascript"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à JavaScript

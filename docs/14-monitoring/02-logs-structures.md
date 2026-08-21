@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.logs-structures"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Logs structurés

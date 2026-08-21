@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "Phase 5 - Sécurité et survie"
+id: "specializations.crypto.safety.acheter-vendre-concretement"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.safety"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Acheter et vendre concrètement (France)

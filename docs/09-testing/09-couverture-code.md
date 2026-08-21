@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 9
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.couverture-code"
+course_id: "web.testing"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Couverture de code

@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 17
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.tests-fonctionnels"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 17
 ---
 
 # 17 - Les tests fonctionnels

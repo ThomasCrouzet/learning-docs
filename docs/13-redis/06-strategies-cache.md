@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 8
 cursus: "Redis et Cache"
+id: "web.redis.strategies-cache"
+course_id: "web.redis"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Stratégies de cache

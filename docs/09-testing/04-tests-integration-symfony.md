@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 4
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.tests-integration-symfony"
+course_id: "web.testing"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Tests d'intégration Symfony

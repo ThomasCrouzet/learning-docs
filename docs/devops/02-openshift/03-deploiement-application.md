@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "OpenShift"
+id: "infrastructure.openshift.deploiement-application"
+course_id: "infrastructure.openshift"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Déployer une Application

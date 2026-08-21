@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 13
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.ipv6-coexistence"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - IPv6 et coexistence IPv4/IPv6

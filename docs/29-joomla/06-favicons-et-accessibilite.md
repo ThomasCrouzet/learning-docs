@@ -8,6 +8,10 @@ estimated_time: "30 min"
 fiche_number: 6
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.favicons-et-accessibilite"
+course_id: "web.joomla"
+content_type: "reference"
+order: 6
 ---
 
 # 06 - Favicons et limites d'accessibilité

@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 8 - Expertise et Leadership"
+id: "security.cybersecurity.leadership.tendances-2026"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.leadership"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Tendances 2026 et Au-delà

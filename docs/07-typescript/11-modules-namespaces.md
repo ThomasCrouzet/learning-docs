@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 11
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.modules-namespaces"
+course_id: "web.typescript"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Modules et namespaces

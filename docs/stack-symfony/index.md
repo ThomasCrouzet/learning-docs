@@ -11,17 +11,13 @@ hide:
 
 # Stack Symfony
 
-Ce cursus te guide à travers toute la stack technique nécessaire pour développer une application web avec Symfony. Tu progresseras dans cet ordre : conteneurisation avec Docker, fondamentaux PHP, framework Symfony, puis base de données PostgreSQL.
+Cette collection rassemble les cursus utiles à une stack Symfony. Elle ne remplace pas le graphe de prérequis canonique et n’impose pas de progression unique.
 
 
 !!! tip "Ordre de lecture recommandé"
-    1. Docker  2. **PHP**  3. **Symfony**  4. PostgreSQL  5. EasyAdmin  6. JavaScript
-    EasyAdmin est listé plus bas dans le sommaire pour le détail des fiches, mais il suppose PHP + Symfony déjà acquis. Ne commence pas EasyAdmin avant d'avoir suivi PHP et les bases Symfony.
+    Commence par Docker si tu veux isoler l’environnement, puis apprends **PHP**. Choisis ensuite PostgreSQL ou **Symfony** selon ton besoin. Aborde EasyAdmin après les bases Symfony et JavaScript lorsque l’interface en a besoin.
+    Cet ordre est une recommandation. Les prérequis précis de chaque fiche restent visibles dans la fiche et dans le manifest v2.
 
-
-**61 fiches** réparties sur 7 modules.
-
----
 
 ## Commencer - Outils IA (2 fiches)
 
@@ -133,7 +129,7 @@ Ce cursus te guide à travers toute la stack technique nécessaire pour dévelop
 
 ---
 
-!!! tip "Ordre suggéré"
-    Commence par les fiches **Commencer** pour apprendre à utiliser les outils à ta disposition, puis suis les modules dans l'ordre numérique. Chaque module s'appuie sur les connaissances du précédent.
+!!! tip "Exploration libre"
+    Les outils IA sont facultatifs. Utilise la page [Choisir une prochaine étape](../parcours.md) pour obtenir plusieurs propositions fondées sur le graphe canonique.
 
 <!-- material/tags { scope: true } -->

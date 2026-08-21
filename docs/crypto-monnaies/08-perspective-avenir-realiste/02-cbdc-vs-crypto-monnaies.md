@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 8 - Perspective et avenir réaliste"
+id: "specializations.crypto.future.cbdc-vs-crypto-monnaies"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.future"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - CBDC vs crypto-monnaies : complémentaires ou rivales

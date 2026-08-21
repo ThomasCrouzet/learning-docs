@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 6 - Intégration et projets avancés"
+id: "specializations.faust.integration.faust-machine-learning-ddsp"
+course_id: "specializations.faust"
+module_id: "specializations.faust.integration"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Faust et Machine Learning (DDSP)

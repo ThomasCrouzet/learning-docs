@@ -9,6 +9,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 7
 cursus: "JavaScript"
+id: "web.javascript.stimulus-symfony"
+course_id: "web.javascript"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Stimulus et Symfony UX

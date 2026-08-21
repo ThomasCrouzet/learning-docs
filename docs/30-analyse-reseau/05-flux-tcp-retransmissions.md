@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.flux-tcp-retransmissions"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Flux TCP, réassemblage et retransmissions

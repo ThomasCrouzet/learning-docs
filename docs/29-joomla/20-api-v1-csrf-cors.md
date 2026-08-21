@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 20
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.api-v1-csrf-cors"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 20
 ---
 
 # 20 - API /v1, CSRF et CORS

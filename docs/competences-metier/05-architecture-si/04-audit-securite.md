@@ -8,6 +8,11 @@ estimated_time: "20 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Architecture SI"
+id: "transversal.professional-skills.architecture.audit-securite"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.architecture"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - L'Audit de Sécurité

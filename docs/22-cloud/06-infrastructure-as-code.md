@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 6
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.infrastructure-as-code"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Infrastructure as Code

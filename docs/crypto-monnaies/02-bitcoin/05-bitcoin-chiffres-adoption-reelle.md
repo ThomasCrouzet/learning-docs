@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "Phase 2 - Bitcoin"
+id: "specializations.crypto.bitcoin.bitcoin-chiffres-adoption-reelle"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.bitcoin"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Bitcoin en chiffres : supply, halving et adoption réelle

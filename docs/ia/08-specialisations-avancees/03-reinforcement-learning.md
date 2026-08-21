@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 8 - Spécialisations avancées"
+id: "ai.artificial-intelligence.advanced.reinforcement-learning"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.advanced"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Reinforcement learning

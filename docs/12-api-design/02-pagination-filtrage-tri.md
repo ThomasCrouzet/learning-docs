@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 10
 cursus: "API Design et Documentation"
+id: "web.api-design.pagination-filtrage-tri"
+course_id: "web.api-design"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Pagination, filtrage et tri

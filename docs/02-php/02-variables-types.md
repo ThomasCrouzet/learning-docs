@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.variables-types"
+course_id: "web.php"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Les variables et types de données

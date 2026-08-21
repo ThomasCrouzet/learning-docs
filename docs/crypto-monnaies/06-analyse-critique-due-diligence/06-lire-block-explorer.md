@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "Phase 6 - Analyse critique et due diligence"
+id: "specializations.crypto.analysis.lire-block-explorer"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.analysis"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Lire un block explorer : le guide pratique

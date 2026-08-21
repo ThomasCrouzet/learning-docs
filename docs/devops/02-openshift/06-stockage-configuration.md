@@ -8,6 +8,10 @@ estimated_time: "210 min"
 fiche_number: 6
 total_fiches: 6
 cursus: "OpenShift"
+id: "infrastructure.openshift.stockage-configuration"
+course_id: "infrastructure.openshift"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Stockage et Configuration (Projet Intégrateur)

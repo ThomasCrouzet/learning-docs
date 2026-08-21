@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Git"
+id: "fundamentals.git.branches-merge"
+course_id: "fundamentals.git"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Branches et merge

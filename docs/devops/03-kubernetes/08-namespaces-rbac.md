@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.namespaces-rbac"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Namespaces et RBAC

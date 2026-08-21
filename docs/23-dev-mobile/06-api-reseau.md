@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.api-reseau"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - API et réseau

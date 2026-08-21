@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 1
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.taxonomie-tokens"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Taxonomie des tokens : utility, governance, stablecoins, memecoins

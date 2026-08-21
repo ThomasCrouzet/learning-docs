@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 8
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.formulaires-validation"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Formulaires et validation

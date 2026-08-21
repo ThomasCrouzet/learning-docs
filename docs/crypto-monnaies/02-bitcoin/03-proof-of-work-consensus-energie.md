@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "Phase 2 - Bitcoin"
+id: "specializations.crypto.bitcoin.proof-of-work-consensus-energie"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.bitcoin"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Proof of Work : le consensus par l'énergie

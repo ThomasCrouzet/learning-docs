@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 1
 total_fiches: 3
 cursus: "Besoins utilisateurs"
+id: "transversal.professional-skills.needs.cahier-des-charges"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.needs"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Le Cahier des Charges Technique

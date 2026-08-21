@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.introduction-nodejs"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à Node.js

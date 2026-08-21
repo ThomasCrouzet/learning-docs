@@ -9,6 +9,11 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 4 - Deep learning fondamental"
+id: "ai.artificial-intelligence.deep-learning.reseaux-neurones-theorie-pratique"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.deep-learning"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Réseaux de neurones : théorie et pratique

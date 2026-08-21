@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Phase 6 - Analyse critique et due diligence"
+id: "specializations.crypto.analysis.tokenomics-projets-viables"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.analysis"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Tokenomics : séparer les projets viables du vent

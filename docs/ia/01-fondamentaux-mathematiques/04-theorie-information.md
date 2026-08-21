@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux mathématiques"
+id: "ai.artificial-intelligence.math.theorie-information"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.math"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Théorie de l'information

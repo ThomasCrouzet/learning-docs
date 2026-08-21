@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 17
 total_fiches: 19
 cursus: "React"
+id: "web.react.react-19-nouveautes"
+course_id: "web.react"
+content_type: "lesson"
+order: 17
 ---
 
 # 17 - React 19 : ce qui a changé

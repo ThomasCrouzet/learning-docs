@@ -9,6 +9,11 @@ estimated_time: "50 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 3 - Machine learning classique"
+id: "ai.artificial-intelligence.ml.selection-modeles-methodologie"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.ml"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Sélection de modèles et méthodologie

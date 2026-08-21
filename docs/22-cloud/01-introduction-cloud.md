@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.introduction-cloud"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction au Cloud

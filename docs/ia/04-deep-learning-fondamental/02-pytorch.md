@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 4 - Deep learning fondamental"
+id: "ai.artificial-intelligence.deep-learning.pytorch"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.deep-learning"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - PyTorch

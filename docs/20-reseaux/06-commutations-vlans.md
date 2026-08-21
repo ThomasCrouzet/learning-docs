@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 6
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.commutations-vlans"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Commutation et VLANs

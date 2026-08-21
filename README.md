@@ -4,13 +4,16 @@ Documentation pédagogique francophone pour apprendre le développement logiciel
 
 Le contenu d'apprentissage (`docs/`) est **en français**. Ce dépôt et le site public s'adressent d'abord à un public francophone.
 
-| Métrique (recalculée depuis le dépôt) | Valeur |
-| ------------------------------------- | -----: |
-| Fiches pédagogiques (gate structure) | **603** |
-| Cursus (carte générée) | **64** |
-| Pages Markdown sous `docs/` | **~700** |
+<!-- BEGIN GENERATED:curriculum-stats -->
+| Métrique | Valeur |
+| -------- | -----: |
+| Fiches pédagogiques | **635** |
+| Cursus | **51** |
+| Modules | **38** |
+| Domaines | **9** |
+<!-- END GENERATED:curriculum-stats -->
 
-Les chiffres de référence sont dans [`docs/carte-cursus.md`](docs/carte-cursus.md) (`npm run generate:cursus-map`). Ne pas traiter des arrondis marketing comme source de vérité.
+Les chiffres de référence sont générés depuis [`curriculum/catalog.yml`](curriculum/catalog.yml) et le frontmatter (`npm run generate:curriculum`). Ne pas traiter des arrondis marketing comme source de vérité.
 
 Site public (lorsqu'il est déployé) : <https://thomascrouzet.github.io/learning-docs/>
 
@@ -71,10 +74,14 @@ Ouvre `http://localhost:8100`.
 | Audit documentaire | `npm run audit:docs` |
 | Échantillon d'exécution de snippets | `npm run audit:snippets` |
 | Régénérer la carte des cursus | `npm run generate:cursus-map` |
+| Régénérer toute l’architecture v2 | `npm run generate:curriculum` |
+| Vérifier le catalogue et les artefacts v2 | `npm run lint:curriculum` |
 | Build MkDocs strict | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build --strict` |
 | Ou avec Python local | `pip install -r requirements.txt && mkdocs build --strict` |
 
 Les versions de référence de la pile principale sont résumées dans [docs/a-propos.md](docs/a-propos.md). Préférer les lignes LTS ou maintenues plutôt que le dernier numéro disponible, sauf si une fiche traite explicitement du legacy.
+
+Architecture et procédure de maintenance : [CURRICULUM_V2.md](CURRICULUM_V2.md).
 
 ---
 

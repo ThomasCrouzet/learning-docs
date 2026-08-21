@@ -8,6 +8,11 @@ estimated_time: "30 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 8 - Perspective et avenir réaliste"
+id: "specializations.crypto.future.ce-que-crypto-resout-vraiment"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.future"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Ce que la crypto résout vraiment (et ce qu'elle ne résout pas)

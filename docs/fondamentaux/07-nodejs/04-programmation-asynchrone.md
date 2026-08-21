@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.programmation-asynchrone"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Programmation asynchrone

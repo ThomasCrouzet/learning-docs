@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 4 - Spécialisation Offensive"
+id: "security.cybersecurity.offensive.securite-web-avancee"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.offensive"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Sécurité Web Avancée

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 4
 total_fiches: 10
 cursus: "Langage C"
+id: "infrastructure.c.fonctions"
+course_id: "infrastructure.c"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Fonctions

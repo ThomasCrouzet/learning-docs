@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 11
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.tests-react-native"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Tests en React Native

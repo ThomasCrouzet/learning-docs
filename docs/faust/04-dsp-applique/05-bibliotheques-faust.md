@@ -8,6 +8,11 @@ estimated_time: "75 min"
 fiche_number: 5
 total_fiches: 6
 cursus: "Phase 4 - DSP appliqué"
+id: "specializations.faust.dsp.bibliotheques-faust"
+course_id: "specializations.faust"
+module_id: "specializations.faust.dsp"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Bibliothèques Faust

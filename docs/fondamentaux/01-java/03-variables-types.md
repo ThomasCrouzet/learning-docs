@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 3
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.variables-types"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Variables et types de données en Java

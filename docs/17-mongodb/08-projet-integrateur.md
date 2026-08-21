@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 8
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.projet-integrateur"
+course_id: "web.mongodb"
+content_type: "project"
+order: 8
 ---
 
 # 08 - Projet intégrateur
 
 > **En bref** : Ce projet met en pratique tout ce que tu as appris dans ce cursus. Tu vas créer une API REST complete pour gérer une librairie en ligne avec Express, MongoDB et Mongoose. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

@@ -8,6 +8,10 @@ estimated_time: "165 min"
 fiche_number: 5
 total_fiches: 8
 cursus: "PostgreSQL"
+id: "web.postgresql.fonctions-agregation"
+course_id: "web.postgresql"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Les fonctions d'agrégation

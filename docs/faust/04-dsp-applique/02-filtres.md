@@ -8,6 +8,11 @@ estimated_time: "80 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Phase 4 - DSP appliqué"
+id: "specializations.faust.dsp.filtres"
+course_id: "specializations.faust"
+module_id: "specializations.faust.dsp"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Filtres

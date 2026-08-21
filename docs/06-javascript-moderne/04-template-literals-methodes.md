@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.template-literals-methodes"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Template literals et nouvelles méthodes

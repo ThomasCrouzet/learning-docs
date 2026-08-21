@@ -9,6 +9,11 @@ estimated_time: "35 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 6 - Domaines Avancés"
+id: "security.cybersecurity.advanced.securite-ia-machine-learning"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.advanced"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Sécurité de l'IA et Machine Learning

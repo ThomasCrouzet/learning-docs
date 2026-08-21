@@ -9,6 +9,10 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.pandas-nettoyage"
+course_id: "web.python-data"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Pandas - Nettoyage de données

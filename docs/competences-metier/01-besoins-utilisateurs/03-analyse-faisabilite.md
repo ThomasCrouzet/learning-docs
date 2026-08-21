@@ -8,6 +8,11 @@ estimated_time: "30 min"
 fiche_number: 3
 total_fiches: 3
 cursus: "Besoins utilisateurs"
+id: "transversal.professional-skills.needs.analyse-faisabilite"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.needs"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - L'Analyse de Faisabilité et Cartographie SI

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 6
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.visibilite-encapsulation"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Visibilité et encapsulation en Java

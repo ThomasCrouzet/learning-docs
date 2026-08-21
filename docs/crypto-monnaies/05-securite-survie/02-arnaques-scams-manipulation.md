@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Phase 5 - Sécurité et survie"
+id: "specializations.crypto.safety.arnaques-scams-manipulation"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.safety"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Arnaques, scams et manipulation : le guide de survie

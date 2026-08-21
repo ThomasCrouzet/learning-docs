@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.logs-loki"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Logs avec Loki

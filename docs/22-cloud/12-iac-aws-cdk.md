@@ -8,6 +8,10 @@ estimated_time: "85 min"
 fiche_number: 12
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.iac-aws-cdk"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 12
 ---
 
 # 12 - Infrastructure as Code avec AWS CDK

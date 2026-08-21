@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 5
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.grafana-dashboards"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Grafana - Dashboards

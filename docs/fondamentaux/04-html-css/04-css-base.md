@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 4
 total_fiches: 7
 cursus: "HTML/CSS"
+id: "fundamentals.html-css.css-base"
+course_id: "fundamentals.html-css"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - CSS de base

@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 5 - Architectures modernes et NLP"
+id: "ai.artificial-intelligence.modern-architectures.transformers-architecture"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.modern-architectures"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Transformers : l'architecture fondatrice des modèles modernes

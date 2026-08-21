@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 3
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.github-actions-tests-lint"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - GitHub Actions - Tests et lint

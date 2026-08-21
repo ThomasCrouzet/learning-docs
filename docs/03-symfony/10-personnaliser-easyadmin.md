@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 10
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.personnaliser-easyadmin"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Personnaliser EasyAdmin

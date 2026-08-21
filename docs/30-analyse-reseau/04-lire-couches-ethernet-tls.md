@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.lire-couches-ethernet-tls"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Lire les couches d'Ethernet à TLS

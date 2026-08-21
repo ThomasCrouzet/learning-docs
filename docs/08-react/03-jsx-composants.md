@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 19
 cursus: "React"
+id: "web.react.jsx-composants"
+course_id: "web.react"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - JSX et composants

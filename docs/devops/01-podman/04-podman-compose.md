@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Podman"
+id: "infrastructure.podman.podman-compose"
+course_id: "infrastructure.podman"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Podman Compose et Quadlet

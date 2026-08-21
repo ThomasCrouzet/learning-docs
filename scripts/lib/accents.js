@@ -1201,6 +1201,12 @@ function processFile(content) {
       continue;
     }
 
+    // Les identifiants v2 du frontmatter sont des valeurs techniques ASCII.
+    if (/^(?:id|course_id|module_id|content_type|order):\s/.test(line)) {
+      result.push(line);
+      continue;
+    }
+
     // Process normal lines (including frontmatter - descriptions need accents)
     const fixed = applyRules(line);
     if (fixed !== line) {

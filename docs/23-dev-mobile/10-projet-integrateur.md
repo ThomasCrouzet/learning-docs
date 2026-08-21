@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 10
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.projet-integrateur"
+course_id: "web.mobile"
+content_type: "project"
+order: 10
 ---
 
 # 10 - Projet intégrateur
 
 > **En bref** : Mettre en pratique toutes les compétences du cursus en créant une application mobile complète avec authentification, navigation multi-écrans, appels API, stockage local et fonctionnalités natives. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

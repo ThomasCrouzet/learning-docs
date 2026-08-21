@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 2
 total_fiches: 8
 cursus: "Phase 9 - Acteurs de l'écosystème"
+id: "specializations.crypto.actors.trezor"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.actors"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Trezor : le pionnier des hardware wallets

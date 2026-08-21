@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 14
 total_fiches: 15
 cursus: "TypeScript"
+id: "web.typescript.projet-integrateur"
+course_id: "web.typescript"
+content_type: "project"
+order: 14
 ---
 
 # 14 - Projet intégrateur
 
 > **En bref** : Créer une application CLI en TypeScript qui gère des tâches avec persistance fichier JSON, en mobilisant toutes les compétences du cursus. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

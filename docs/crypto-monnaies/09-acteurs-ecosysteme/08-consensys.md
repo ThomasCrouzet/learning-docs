@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 8
 total_fiches: 8
 cursus: "Phase 9 - Acteurs de l'écosystème"
+id: "specializations.crypto.actors.consensys"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.actors"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Consensys : l'infrastructure invisible d'Ethereum

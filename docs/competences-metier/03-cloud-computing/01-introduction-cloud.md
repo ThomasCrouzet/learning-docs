@@ -8,6 +8,11 @@ estimated_time: "20 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Cloud computing"
+id: "transversal.professional-skills.cloud.introduction-cloud"
+course_id: "transversal.professional-skills"
+module_id: "transversal.professional-skills.cloud"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction au Cloud Computing

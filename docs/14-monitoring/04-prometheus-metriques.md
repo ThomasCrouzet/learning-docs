@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 4
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.prometheus-metriques"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Prometheus - Métriques applicatives

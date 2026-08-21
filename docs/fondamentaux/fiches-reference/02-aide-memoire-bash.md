@@ -7,6 +7,10 @@ estimated_time: "15 min"
 fiche_number: 2
 total_fiches: 3
 cursus: "Aide-mémoires Java, Bash, HTML/CSS"
+id: "fundamentals.quick-reference.aide-memoire-bash"
+course_id: "fundamentals.quick-reference"
+content_type: "reference"
+order: 2
 ---
 
 # 02 - Aide-mémoire Bash

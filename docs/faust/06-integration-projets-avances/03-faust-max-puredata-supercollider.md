@@ -8,6 +8,11 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 5
 cursus: "Phase 6 - Intégration et projets avancés"
+id: "specializations.faust.integration.faust-max-puredata-supercollider"
+course_id: "specializations.faust"
+module_id: "specializations.faust.integration"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Faust et Max/PureData/SuperCollider

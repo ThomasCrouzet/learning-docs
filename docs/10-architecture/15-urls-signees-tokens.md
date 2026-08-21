@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 15
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.urls-signees-tokens"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 15
 ---
 
 # 15 - URLs signées et tokens d'accès anonyme

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Droit et RGPD"
+id: "transversal.gdpr.introduction-rgpd"
+course_id: "transversal.gdpr"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction au RGPD

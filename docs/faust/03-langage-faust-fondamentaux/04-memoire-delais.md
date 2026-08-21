@@ -8,6 +8,11 @@ estimated_time: "80 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 3 - Langage Faust fondamentaux"
+id: "specializations.faust.language.memoire-delais"
+course_id: "specializations.faust"
+module_id: "specializations.faust.language"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Mémoire et délais

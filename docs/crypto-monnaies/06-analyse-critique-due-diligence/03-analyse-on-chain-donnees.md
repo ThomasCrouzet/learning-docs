@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 3
 total_fiches: 6
 cursus: "Phase 6 - Analyse critique et due diligence"
+id: "specializations.crypto.analysis.analyse-on-chain-donnees"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.analysis"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Analyse on-chain : les données ne mentent pas

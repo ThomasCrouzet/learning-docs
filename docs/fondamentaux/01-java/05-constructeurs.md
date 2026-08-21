@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.constructeurs"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Les constructeurs en Java

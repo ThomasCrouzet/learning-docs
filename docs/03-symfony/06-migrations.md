@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 6
 total_fiches: 21
 cursus: "Symfony"
+id: "web.symfony.migrations"
+course_id: "web.symfony"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Les migrations

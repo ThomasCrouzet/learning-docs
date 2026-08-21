@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.destructuring-spread"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Destructuring et spread

@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 3 - Ethereum et les smart contracts"
+id: "specializations.crypto.ethereum.ethereum-au-dela-de-bitcoin"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ethereum"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Ethereum : ce que Bitcoin ne fait pas

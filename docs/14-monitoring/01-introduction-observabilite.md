@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.introduction-observabilite"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à l'observabilité

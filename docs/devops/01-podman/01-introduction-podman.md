@@ -8,6 +8,10 @@ estimated_time: "115 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Podman"
+id: "infrastructure.podman.introduction-podman"
+course_id: "infrastructure.podman"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à Podman

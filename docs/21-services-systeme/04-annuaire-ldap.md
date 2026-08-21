@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.annuaire-ldap"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Annuaire LDAP

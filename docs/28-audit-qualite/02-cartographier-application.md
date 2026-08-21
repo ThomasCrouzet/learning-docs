@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 6
 cursus: "Audit et Qualité"
+id: "transversal.audit.cartographier-application"
+course_id: "transversal.audit"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Cartographier une application

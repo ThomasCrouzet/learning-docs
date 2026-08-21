@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 7
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.symboles-map-set"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Symboles, Map et Set

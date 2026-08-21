@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "UX Design"
+id: "transversal.ux.wireframes-maquettes"
+course_id: "transversal.ux"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Wireframes et maquettes

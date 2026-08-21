@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.configmaps-secrets"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - ConfigMaps et Secrets

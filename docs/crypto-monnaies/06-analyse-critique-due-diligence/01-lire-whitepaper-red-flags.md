@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Phase 6 - Analyse critique et due diligence"
+id: "specializations.crypto.analysis.lire-whitepaper-red-flags"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.analysis"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Lire un whitepaper : méthode et red flags

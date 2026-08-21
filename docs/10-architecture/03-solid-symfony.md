@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 3
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.solid-symfony"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - SOLID - Application dans Symfony

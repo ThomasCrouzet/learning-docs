@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 2
 total_fiches: 8
 cursus: "MongoDB"
+id: "web.mongodb.installation-mongosh"
+course_id: "web.mongodb"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Installation et mongosh

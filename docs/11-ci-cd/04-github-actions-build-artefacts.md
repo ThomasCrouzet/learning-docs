@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.github-actions-build-artefacts"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - GitHub Actions - Build et artefacts

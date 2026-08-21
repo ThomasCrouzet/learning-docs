@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 3
 total_fiches: 8
 cursus: "Phase 9 - Acteurs de l'écosystème"
+id: "specializations.crypto.actors.coinbase"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.actors"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Coinbase : l'exchange qui a choisi la régulation

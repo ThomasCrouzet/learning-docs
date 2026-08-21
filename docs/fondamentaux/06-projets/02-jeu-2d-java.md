@@ -7,11 +7,17 @@ estimated_time: "35 min"
 fiche_number: 2
 total_fiches: 2
 cursus: "Projets"
+id: "fundamentals.projects.jeu-2d-java"
+course_id: "fundamentals.projects"
+content_type: "project"
+order: 2
 ---
 
 # 02 - Jeu 2D Java
 
 > **En bref** : À la fin de cette fiche, tu sauras structurer un projet de jeu 2D en Java avec une architecture propre. Lecture estimée : 35 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 
 ## Prérequis

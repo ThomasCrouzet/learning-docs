@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 8
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.gambling-crypto"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Gambling crypto : l'industrie qui ne dit pas son nom

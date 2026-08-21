@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 10
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.diagnostic-outils"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Diagnostic et outils

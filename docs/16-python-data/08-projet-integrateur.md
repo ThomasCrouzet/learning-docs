@@ -9,11 +9,17 @@ estimated_time: "120 min"
 fiche_number: 8
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.projet-integrateur"
+course_id: "web.python-data"
+content_type: "project"
+order: 8
 ---
 
 # 08 - Projet intégrateur - Dashboard d'analyse
 
 > **En bref** : Mettre en pratique toutes les compétences du cursus en analysant un jeu de données réel, en construisant un pipeline complet et en produisant un rapport professionnel avec graphiques. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

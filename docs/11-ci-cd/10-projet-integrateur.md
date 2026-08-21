@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 10
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.projet-integrateur"
+course_id: "infrastructure.cicd"
+content_type: "project"
+order: 10
 ---
 
 # 10 - Projet intégrateur
 
 > **En bref** : Ce projet met en pratique tout ce que tu as appris dans le cursus CI/CD. Tu vas concevoir et implémenter un pipeline CI/CD complet pour un projet Symfony (backend) + React (frontend), avec lint, tests, build Docker, déploiement multi-environnement et stratégie de déploiement. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

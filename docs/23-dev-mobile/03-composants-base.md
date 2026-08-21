@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 13
 cursus: "Dev Mobile"
+id: "web.mobile.composants-base"
+course_id: "web.mobile"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Composants de base

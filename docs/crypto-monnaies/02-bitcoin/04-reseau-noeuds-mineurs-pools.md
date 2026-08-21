@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 4
 total_fiches: 6
 cursus: "Phase 2 - Bitcoin"
+id: "specializations.crypto.bitcoin.reseau-noeuds-mineurs-pools"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.bitcoin"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Le réseau Bitcoin : nœuds, mineurs et pools

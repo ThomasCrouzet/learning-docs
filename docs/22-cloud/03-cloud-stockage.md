@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 13
 cursus: "Cloud"
+id: "infrastructure.cloud.cloud-stockage"
+course_id: "infrastructure.cloud"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Stockage

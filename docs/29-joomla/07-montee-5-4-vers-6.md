@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 7
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.montee-5-4-vers-6"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Montée de 5.4 vers 6

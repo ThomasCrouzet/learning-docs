@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux"
+id: "specializations.crypto.fundamentals.monnaie-fonctions-confiance-limites"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.fundamentals"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - La monnaie : fonctions, confiance et limites

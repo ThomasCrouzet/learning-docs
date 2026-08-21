@@ -7,6 +7,10 @@ estimated_time: "20 min"
 fiche_number: 15
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.aide-memoire-redis"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 15
 ---
 
 # Aide-mémoire Redis

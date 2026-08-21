@@ -7,6 +7,10 @@ estimated_time: "45 min"
 fiche_number: 3
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.guide-debug"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 3
 ---
 
 # Guide de Debug

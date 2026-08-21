@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 11
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.interfaces-classes-abstraites"
+course_id: "web.php"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Les interfaces et les classes abstraites

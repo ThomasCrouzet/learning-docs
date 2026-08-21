@@ -7,11 +7,17 @@ estimated_time: "25 min"
 fiche_number: 1
 total_fiches: 2
 cursus: "Projets"
+id: "fundamentals.projects.application-multi-conteneurs"
+course_id: "fundamentals.projects"
+content_type: "project"
+order: 1
 ---
 
 # 01 - Application de sondage (Docker)
 
 > **En bref** : À la fin de cette fiche, tu sauras créer une application multi-conteneurs avec Docker Compose. Lecture estimée : 25 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 
 ## Prérequis

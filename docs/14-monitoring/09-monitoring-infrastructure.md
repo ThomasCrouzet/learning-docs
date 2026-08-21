@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 9
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.monitoring-infrastructure"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 9
 ---
 
 # 09 - Monitoring d'infrastructure

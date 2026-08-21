@@ -8,6 +8,11 @@ estimated_time: "70 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Phase 4 - DSP appliqué"
+id: "specializations.faust.dsp.oscillateurs-synthese"
+course_id: "specializations.faust"
+module_id: "specializations.faust.dsp"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Oscillateurs et synthèse

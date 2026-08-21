@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 3
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.structures-donnees"
+course_id: "web.python"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Listes, tuples et dictionnaires

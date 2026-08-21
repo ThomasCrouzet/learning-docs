@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 7
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.monero-confidentialite"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Monero et la confidentialité par défaut

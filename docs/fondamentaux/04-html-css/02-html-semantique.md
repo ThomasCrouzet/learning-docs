@@ -8,6 +8,10 @@ estimated_time: "25 min"
 fiche_number: 2
 total_fiches: 7
 cursus: "HTML/CSS"
+id: "fundamentals.html-css.html-semantique"
+course_id: "fundamentals.html-css"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - HTML sémantique

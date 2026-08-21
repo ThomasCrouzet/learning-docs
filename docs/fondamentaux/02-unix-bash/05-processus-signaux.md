@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 10
 cursus: "Unix/Bash"
+id: "fundamentals.unix.processus-signaux"
+course_id: "fundamentals.unix"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Processus et signaux

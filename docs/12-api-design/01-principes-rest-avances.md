@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 10
 cursus: "API Design et Documentation"
+id: "web.api-design.principes-rest-avances"
+course_id: "web.api-design"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Principes REST avancés

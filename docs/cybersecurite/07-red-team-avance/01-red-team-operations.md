@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 7 - Red Team Avancé"
+id: "security.cybersecurity.red-team.red-team-operations"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.red-team"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Red Team Operations

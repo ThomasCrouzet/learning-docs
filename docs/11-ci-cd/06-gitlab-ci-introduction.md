@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 10
 cursus: "CI/CD Pipelines"
+id: "infrastructure.cicd.gitlab-ci-introduction"
+course_id: "infrastructure.cicd"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - GitLab CI - Introduction

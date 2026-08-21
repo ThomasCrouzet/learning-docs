@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 4
 total_fiches: 8
 cursus: "Phase 9 - Acteurs de l'écosystème"
+id: "specializations.crypto.actors.binance"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.actors"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Binance : le géant controverse

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 11
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.outils-qualite"
+course_id: "web.python"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Outils de qualité

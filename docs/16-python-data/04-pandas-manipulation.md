@@ -9,6 +9,10 @@ estimated_time: "75 min"
 fiche_number: 4
 total_fiches: 8
 cursus: "Python Data"
+id: "web.python-data.pandas-manipulation"
+course_id: "web.python-data"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Pandas - Manipulation des données

@@ -8,6 +8,10 @@ estimated_time: "35 min"
 fiche_number: 10
 total_fiches: 24
 cursus: "Joomla CMS"
+id: "web.joomla.scheduler-lazy-et-webcron"
+course_id: "web.joomla"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Scheduler : Lazy et Web Cron

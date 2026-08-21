@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 7
 total_fiches: 14
 cursus: "Réseaux"
+id: "infrastructure.networks.firewalls-filtrage"
+course_id: "infrastructure.networks"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Firewalls et filtrage

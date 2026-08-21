@@ -7,6 +7,10 @@ estimated_time: "5 min"
 fiche_number: 4
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.aide-memoire-postgresql"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 4
 ---
 
 # Aide-mémoire PostgreSQL

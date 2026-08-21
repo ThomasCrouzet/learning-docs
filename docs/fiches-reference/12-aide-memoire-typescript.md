@@ -7,6 +7,10 @@ estimated_time: "20 min"
 fiche_number: 12
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.aide-memoire-typescript"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 12
 ---
 
 # Aide-mémoire TypeScript

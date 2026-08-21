@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 17
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.projet-integrateur"
+course_id: "web.architecture"
+content_type: "project"
+order: 17
 ---
 
 # 17 - Projet intégrateur
 
 > **En bref** : Mettre en pratique tous les concepts du cursus en refactorant un projet Symfony existant : appliquer SOLID, Clean Architecture, design patterns et éliminer les anti-patterns. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 10
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.tests-api"
+course_id: "web.testing"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Tests d'API

@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 7
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.volumes-persistance"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Volumes et persistance

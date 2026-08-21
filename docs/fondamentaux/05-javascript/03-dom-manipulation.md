@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "JavaScript"
+id: "fundamentals.javascript.dom-manipulation"
+course_id: "fundamentals.javascript"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Manipulation du DOM

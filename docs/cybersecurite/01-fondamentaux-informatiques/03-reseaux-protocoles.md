@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 3
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux informatiques"
+id: "security.cybersecurity.fundamentals-it.reseaux-protocoles"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.fundamentals-it"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Réseaux - Modèles, Protocoles et Infrastructure

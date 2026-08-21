@@ -8,6 +8,10 @@ estimated_time: "70 min"
 fiche_number: 3
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.filtres-bpf-et-affichage"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Filtres BPF et filtres d'affichage

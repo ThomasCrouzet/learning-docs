@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 7
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.methodes-surcharge"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 7
 ---
 
 # 07 - Méthodes et surcharge en Java

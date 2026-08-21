@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 13
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.soft-delete"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Soft delete : supprimer sans effacer

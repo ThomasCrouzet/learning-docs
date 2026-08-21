@@ -8,6 +8,11 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 3
 cursus: "Phase 2 - Programmation et outils"
+id: "ai.artificial-intelligence.programming.python-pour-ia"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.programming"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Python pour l'IA

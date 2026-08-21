@@ -8,6 +8,10 @@ estimated_time: "50 min"
 fiche_number: 1
 total_fiches: 8
 cursus: "Analyse réseau"
+id: "infrastructure.network-analysis.analyseur-limites"
+course_id: "infrastructure.network-analysis"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Analyseur de protocoles et limites

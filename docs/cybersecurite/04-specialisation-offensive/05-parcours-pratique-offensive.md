@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 4 - Spécialisation Offensive"
+id: "security.cybersecurity.offensive.parcours-pratique-offensive"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.offensive"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Parcours de pratique offensive

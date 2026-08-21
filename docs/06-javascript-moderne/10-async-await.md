@@ -8,6 +8,10 @@ estimated_time: "90 min"
 fiche_number: 10
 total_fiches: 14
 cursus: "JavaScript Moderne"
+id: "web.javascript-modern.async-await"
+course_id: "web.javascript-modern"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Async/await

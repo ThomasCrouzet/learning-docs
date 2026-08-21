@@ -8,6 +8,11 @@ estimated_time: "80 min"
 fiche_number: 4
 total_fiches: 4
 cursus: "Phase 1 - Fondamentaux informatiques"
+id: "security.cybersecurity.fundamentals-it.programmation-scripting"
+course_id: "security.cybersecurity"
+module_id: "security.cybersecurity.fundamentals-it"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Programmation et Scripting pour la Cybersécurité

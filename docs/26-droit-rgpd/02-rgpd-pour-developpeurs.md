@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Droit et RGPD"
+id: "transversal.gdpr.rgpd-pour-developpeurs"
+course_id: "transversal.gdpr"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - RGPD pour développeurs

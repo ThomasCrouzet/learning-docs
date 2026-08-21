@@ -8,6 +8,10 @@ estimated_time: "120 min"
 fiche_number: 1
 total_fiches: 7
 cursus: "EasyAdmin"
+id: "web.easyadmin.easyadmin-installation"
+course_id: "web.easyadmin"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Installer EasyAdmin et créer une interface d'administration

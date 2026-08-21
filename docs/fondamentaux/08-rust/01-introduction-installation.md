@@ -8,6 +8,10 @@ estimated_time: "65 min"
 fiche_number: 1
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.introduction-installation"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à Rust et Installation

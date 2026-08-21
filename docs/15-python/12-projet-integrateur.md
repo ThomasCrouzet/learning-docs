@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 12
 total_fiches: 12
 cursus: "Python fondamentaux"
+id: "web.python.projet-integrateur"
+course_id: "web.python"
+content_type: "project"
+order: 12
 ---
 
 # 12 - Projet intégrateur
 
 > **En bref** : Construire un gestionnaire de tâches en ligne de commande qui combine tous les concepts du cursus : argparse, stockage JSON, classes, gestion d'erreurs, type hints et tests pytest. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

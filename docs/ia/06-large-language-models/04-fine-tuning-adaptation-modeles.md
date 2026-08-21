@@ -8,6 +8,11 @@ estimated_time: "50 min"
 fiche_number: 4
 total_fiches: 5
 cursus: "Phase 6 - Large Language Models"
+id: "ai.artificial-intelligence.llm.fine-tuning-adaptation-modeles"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.llm"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - Fine-tuning et adaptation de modèles

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 2
 total_fiches: 12
 cursus: "Kubernetes"
+id: "infrastructure.kubernetes.installation-minikube"
+course_id: "infrastructure.kubernetes"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Installation locale (Minikube)

@@ -9,6 +9,11 @@ estimated_time: "55 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "Phase 3 - Machine learning classique"
+id: "ai.artificial-intelligence.ml.apprentissage-supervise"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.ml"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Apprentissage supervisé

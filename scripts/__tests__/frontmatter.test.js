@@ -32,6 +32,13 @@ describe('extractFrontmatter', () => {
 });
 
 describe('validateFields', () => {
+  const v2 = {
+    id: 'web.docker.test',
+    course_id: 'web.docker',
+    content_type: 'lesson',
+    order: 1,
+  };
+
   it('retourne un tableau vide avec tous les champs requis', () => {
     const fm = {
       tags: ['Docker'],
@@ -40,6 +47,7 @@ describe('validateFields', () => {
       fiche_number: 1,
       total_fiches: 3,
       cursus: 'Docker',
+      ...v2,
     };
     expect(validateFields(fm, 'test.md')).toEqual([]);
   });
@@ -52,6 +60,7 @@ describe('validateFields', () => {
       fiche_number: 1,
       total_fiches: 3,
       cursus: 'Docker',
+      ...v2,
     };
     const errors = validateFields(fm, 'test.md');
     expect(errors).toHaveLength(1);
@@ -66,6 +75,7 @@ describe('validateFields', () => {
       fiche_number: 1,
       total_fiches: 3,
       cursus: 'Docker',
+      ...v2,
     };
     const errors = validateFields(fm, 'test.md');
     expect(errors).toHaveLength(1);
@@ -80,6 +90,7 @@ describe('validateFields', () => {
       fiche_number: 1,
       total_fiches: 3,
       cursus: 'Docker',
+      ...v2,
     };
     const errors = validateFields(fm, 'test.md');
     expect(errors).toHaveLength(1);
@@ -94,6 +105,7 @@ describe('validateFields', () => {
       fiche_number: 1,
       total_fiches: 3,
       cursus: 'Docker',
+      ...v2,
     };
     const errors = validateFields(fm, 'test.md');
     expect(errors).toHaveLength(1);
@@ -104,6 +116,14 @@ describe('validateFields', () => {
     const errors = validateFields(null, 'test.md');
     expect(errors).toHaveLength(1);
     expect(errors[0]).toContain('manquant');
+  });
+
+  it('refuse un type de contenu inconnu', () => {
+    const fm = {
+      tags: ['Docker'], description: 'Test', estimated_time: '15 min', fiche_number: 1,
+      total_fiches: 3, cursus: 'Docker', ...v2, content_type: 'capstone',
+    };
+    expect(validateFields(fm, 'test.md')).toContain('test.md: "content_type" invalide');
   });
 });
 

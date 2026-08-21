@@ -8,6 +8,11 @@ estimated_time: "105 min"
 fiche_number: 2
 total_fiches: 4
 cursus: "Phase 3 - Langage Faust fondamentaux"
+id: "specializations.faust.language.cinq-operateurs-composition"
+course_id: "specializations.faust"
+module_id: "specializations.faust.language"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Les cinq opérateurs de composition

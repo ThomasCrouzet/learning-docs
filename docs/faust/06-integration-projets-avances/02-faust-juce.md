@@ -8,6 +8,11 @@ estimated_time: "65 min"
 fiche_number: 2
 total_fiches: 5
 cursus: "Phase 6 - Intégration et projets avancés"
+id: "specializations.faust.integration.faust-juce"
+course_id: "specializations.faust"
+module_id: "specializations.faust.integration"
+content_type: "lesson"
+order: 2
 ---
 
 # 02 - Faust et JUCE

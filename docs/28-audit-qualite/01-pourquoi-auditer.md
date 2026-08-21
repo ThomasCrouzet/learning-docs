@@ -8,6 +8,10 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Audit et Qualité"
+id: "transversal.audit.pourquoi-auditer"
+course_id: "transversal.audit"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Pourquoi auditer une application existante

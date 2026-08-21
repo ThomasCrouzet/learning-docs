@@ -8,6 +8,10 @@ estimated_time: "80 min"
 fiche_number: 3
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.tableaux-arrays"
+course_id: "web.php"
+content_type: "lesson"
+order: 3
 ---
 
 # 03 - Les tableaux (arrays)

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 5
 total_fiches: 9
 cursus: "Services système"
+id: "infrastructure.system-services.serveur-dhcp"
+course_id: "infrastructure.system-services"
+content_type: "lesson"
+order: 5
 ---
 
 # 05 - Serveur DHCP

@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 6
 total_fiches: 15
 cursus: "Testing et Qualité"
+id: "web.testing.introduction-tdd"
+course_id: "web.testing"
+content_type: "lesson"
+order: 6
 ---
 
 # 06 - Introduction au TDD

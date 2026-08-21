@@ -8,6 +8,11 @@ estimated_time: "45 min"
 fiche_number: 1
 total_fiches: 7
 cursus: "Phase 7 - Concepts techniques avances"
+id: "specializations.crypto.advanced.layer-2-scalabilite"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.advanced"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Layer 2 et scalabilité : les vrais problèmes techniques

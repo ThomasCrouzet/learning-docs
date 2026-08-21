@@ -8,11 +8,17 @@ estimated_time: "150 min"
 fiche_number: 16
 total_fiches: 19
 cursus: "React"
+id: "web.react.projet-integrateur"
+course_id: "web.react"
+content_type: "project"
+order: 16
 ---
 
 # 16 - Projet intégrateur
 
 > **En bref** : Construire une application React complète (SPA) avec routing, état global, appels API vers Symfony, formulaires avec validation et tests. Lecture estimée : 150 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 

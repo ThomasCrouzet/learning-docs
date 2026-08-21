@@ -8,6 +8,11 @@ estimated_time: "35 min"
 fiche_number: 4
 total_fiches: 9
 cursus: "Phase 4 - L'écosystème crypto"
+id: "specializations.crypto.ecosystem.daos-gouvernance-decentralisee"
+course_id: "specializations.crypto"
+module_id: "specializations.crypto.ecosystem"
+content_type: "lesson"
+order: 4
 ---
 
 # 04 - DAOs : gouvernance décentralisée en pratique

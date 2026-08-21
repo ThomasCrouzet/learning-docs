@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 11
 total_fiches: 19
 cursus: "React"
+id: "web.react.hooks-personnalises"
+course_id: "web.react"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Hooks personnalisés

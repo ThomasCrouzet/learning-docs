@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 6
 cursus: "Gestion de projet"
+id: "transversal.project-management.introduction-gestion-projet"
+course_id: "transversal.project-management"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Introduction à la gestion de projet IT

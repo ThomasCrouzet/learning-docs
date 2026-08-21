@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 1
 total_fiches: 4
 cursus: "UX Design"
+id: "transversal.ux.principes-ux"
+course_id: "transversal.ux"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - Principes UX pour développeurs

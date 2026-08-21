@@ -8,6 +8,11 @@ estimated_time: "40 min"
 fiche_number: 5
 total_fiches: 5
 cursus: "Phase 6 - Large Language Models"
+id: "ai.artificial-intelligence.llm.evaluation-llm"
+course_id: "ai.artificial-intelligence"
+module_id: "ai.artificial-intelligence.llm"
+content_type: "review"
+order: 5
 ---
 
 # 05 - Évaluation des LLM

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 11
 total_fiches: 17
 cursus: "Architecture et Design Patterns"
+id: "web.architecture.anti-patterns"
+course_id: "web.architecture"
+content_type: "lesson"
+order: 11
 ---
 
 # 11 - Anti-patterns

@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 10
 total_fiches: 10
 cursus: "Node.js"
+id: "fundamentals.nodejs.validation-entrees"
+course_id: "fundamentals.nodejs"
+content_type: "lesson"
+order: 10
 ---
 
 # 10 - Validation des entrées

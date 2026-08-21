@@ -8,6 +8,11 @@ estimated_time: "90 min"
 fiche_number: 1
 total_fiches: 5
 cursus: "Phase 6 - Intégration et projets avancés"
+id: "specializations.faust.integration.libfaust-compilateur-embarquable"
+course_id: "specializations.faust"
+module_id: "specializations.faust.integration"
+content_type: "lesson"
+order: 1
 ---
 
 # 01 - libfaust : compilateur embarquable

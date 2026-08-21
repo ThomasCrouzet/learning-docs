@@ -8,6 +8,10 @@ estimated_time: "75 min"
 fiche_number: 8
 total_fiches: 10
 cursus: "Monitoring et Observabilité"
+id: "infrastructure.monitoring.traces-distribuees"
+course_id: "infrastructure.monitoring"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - Traces distribuées

@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 15
 total_fiches: 16
 cursus: "Rust"
+id: "fundamentals.rust.workspaces-cargo"
+course_id: "fundamentals.rust"
+content_type: "lesson"
+order: 15
 ---
 
 # 15 - Workspaces Cargo (projets multi-crates)

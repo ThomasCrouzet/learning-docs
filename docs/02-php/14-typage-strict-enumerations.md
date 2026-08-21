@@ -8,6 +8,10 @@ estimated_time: "55 min"
 fiche_number: 14
 total_fiches: 14
 cursus: "PHP"
+id: "web.php.typage-strict-enumerations"
+course_id: "web.php"
+content_type: "lesson"
+order: 14
 ---
 
 # 14 - Typage strict et énumérations

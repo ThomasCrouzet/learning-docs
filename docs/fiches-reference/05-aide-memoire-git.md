@@ -7,6 +7,10 @@ estimated_time: "10 min"
 fiche_number: 5
 total_fiches: 18
 cursus: "Fiches de référence"
+id: "references.quick-reference.aide-memoire-git"
+course_id: "references.quick-reference"
+content_type: "reference"
+order: 5
 ---
 
 # Aide-mémoire Git

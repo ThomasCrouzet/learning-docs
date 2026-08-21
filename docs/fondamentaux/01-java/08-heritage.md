@@ -8,6 +8,10 @@ estimated_time: "60 min"
 fiche_number: 8
 total_fiches: 12
 cursus: "Java"
+id: "fundamentals.java.heritage"
+course_id: "fundamentals.java"
+content_type: "lesson"
+order: 8
 ---
 
 # 08 - L'héritage en Java

@@ -8,6 +8,10 @@ estimated_time: "175 min"
 fiche_number: 13
 total_fiches: 14
 cursus: "Ansible"
+id: "infrastructure.ansible.gestion-multi-environnement"
+course_id: "infrastructure.ansible"
+content_type: "lesson"
+order: 13
 ---
 
 # 13 - Gestion Multi-Environnement

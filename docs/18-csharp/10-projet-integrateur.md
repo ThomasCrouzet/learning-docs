@@ -8,11 +8,17 @@ estimated_time: "120 min"
 fiche_number: 10
 total_fiches: 10
 cursus: "C#"
+id: "web.csharp.projet-integrateur"
+course_id: "web.csharp"
+content_type: "project"
+order: 10
 ---
 
 # 10 - Projet intégrateur
 
 > **En bref** : Construire une application console C# complète qui combine tous les concepts appris dans le cursus : POO, collections, LINQ, fichiers JSON et gestion des erreurs. Lecture estimée : 120 min.
+
+**Projet facultatif** : Ce projet est autonome. Tu peux le réaliser, l’adapter ou le passer sans bloquer l’accès aux autres fiches.
 
 ## Prérequis
 
