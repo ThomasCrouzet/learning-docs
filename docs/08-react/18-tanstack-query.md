@@ -217,7 +217,7 @@ Avec le fetch manuel, après avoir ajouté un article :
 
 ## Étapes Pratiques
 
-Pour ces exemples, repars d'un projet React + TypeScript créé avec Vite. Les requêtes utilisent l'API publique de test JSONPlaceholder, qui ne nécessite aucune clé.
+Pour ces exemples, repars d'un projet React + TypeScript créé avec Vite. Les requêtes lisent des fichiers JSON locaux sous `public/api/` (même principe que la fiche 12), sans appel réseau vers un service distant.
 
 ### Étape 1 : Installer et configurer TanStack Query
 
@@ -263,7 +263,7 @@ npm run dev sans erreur. Le QueryClientProvider enveloppe l'application.
 
 ### Étape 2 : Lire des données avec useQuery
 
-En environnement offline, tu n'appelles pas JSONPlaceholder. Crée `public/api/posts.json` (même idée que la fiche 12) :
+Crée `public/api/posts.json` (même idée que la fiche 12) :
 
 ```json
 [

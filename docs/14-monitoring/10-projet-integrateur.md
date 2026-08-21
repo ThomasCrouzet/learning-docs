@@ -28,7 +28,7 @@ cursus: "Monitoring et Observabilité"
 | Grafana | 13.x |
 | Loki | 3.1.x |
 | Promtail | 3.1.x |
-| Grafana Tempo | 2.5.x |
+| Grafana Tempo | 3.0.x |
 | node_exporter | 1.8.x |
 | cAdvisor | 0.49.x |
 | PHP | 8.3 |

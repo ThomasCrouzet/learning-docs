@@ -107,6 +107,21 @@ describe('content guards (shipped docs)', () => {
       /Analyse de navigation → Intérêts légitimes \(si proportionné/
     );
   });
+
+  it('pins Grafana Tempo 3.0.x in the monitoring integrator versions table and compose image', () => {
+    const f = path.join(DOCS, '14-monitoring/10-projet-integrateur.md');
+    const t = fs.readFileSync(f, 'utf8');
+    expect(t).toMatch(/\|\s*Grafana Tempo\s*\|\s*3\.0\.x\s*\|/);
+    expect(t).not.toMatch(/\|\s*Grafana Tempo\s*\|\s*2\.5/);
+    expect(t).toMatch(/grafana\/tempo:3\.0\.0/);
+  });
+
+  it('uses local JSON for TanStack Query steps, not JSONPlaceholder', () => {
+    const f = path.join(DOCS, '08-react/18-tanstack-query.md');
+    const t = fs.readFileSync(f, 'utf8');
+    expect(t).toMatch(/\/api\/posts\.json/);
+    expect(t).not.toMatch(/jsonplaceholder/i);
+  });
 });
 
 describe('course-focus branding (shipped scanner)', () => {
