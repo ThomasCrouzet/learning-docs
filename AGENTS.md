@@ -21,7 +21,8 @@ Créer une documentation de programmation structurée et explicite pour l'appren
 | Détecter accents manquants | `npm run lint:accents` |
 | Corriger accents manquants | `npm run lint:accents:fix` |
 | Vérifier liens prérequis | `npm run lint:prereq-links` |
-| Générer carte des cursus | `npm run generate:cursus-map` |
+| Générer l’architecture du cursus | `npm run generate:curriculum` |
+| Vérifier l’architecture du cursus | `npm run lint:curriculum` |
 | PDF d'un fichier | `./create-pdf.sh docs/01-docker/01-xxx.md` |
 | PDF d'un dossier | `./create-pdf.sh docs/01-docker/` |
 | PDF dans sous-dossier | `./create-pdf.sh docs/01-docker/01-xxx.md 01-docker` |
@@ -57,7 +58,7 @@ Ce projet est un **repo de documentation uniquement** (pas d'application). Le co
 
 ### Contenu pédagogique (`docs/`)
 
-Le projet contient **635 fiches réparties sur 66 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
+Le projet contient **635 fiches, 51 cursus, 38 modules et 9 domaines**. `curriculum/catalog.yml` et le frontmatter sont les sources canoniques. La carte, la navigation, le manifest et les statistiques sont générés par `npm run generate:curriculum`, puis vérifiés par `npm run lint:curriculum`. Ne jamais modifier directement une région générée.
 
 **Développement Web** :
 
@@ -83,7 +84,7 @@ Le projet contient **635 fiches réparties sur 66 cursus** (chiffres à recalcul
 - **C#** (`18-csharp/`) : langage et .NET (10 fiches)
 - **Dev Mobile** (`23-dev-mobile/`) : React Native, Expo (13 fiches)
 
-**Langages et fondamentaux** (`fondamentaux/`) : Java, Unix/Bash, Git, HTML/CSS, JavaScript, Node.js, Rust, projets, aide-mémoires (64 fiches sur 9 cursus)
+**Langages et fondamentaux** (`fondamentaux/`) : Java, Unix/Bash, Git, HTML/CSS, JavaScript, Node.js, Rust, projets, aide-mémoires (69 fiches sur 9 cursus)
 
 **Infrastructure et DevOps** :
 
@@ -134,7 +135,7 @@ Le wiki utilise **MkDocs Material 9.7.7** (image Docker épinglée dans `docker-
 - **`scripts/audit-fiches.sh`** : audit qualité des fiches via Claude AI (conformité au template CLAUDE.md)
 - **`scripts/check-prereq-links.js`** : vérifie que les références à des fiches/cursus dans les sections Prérequis contiennent des liens Markdown
 - **`scripts/fix-emdash.js`** : détecte et corrige les em dashes (`-`) → tirets simples (`-`). Accepte `--fix` et des fichiers en argument (lint-staged)
-- **`scripts/validate-frontmatter.js`** : valide la présence des champs obligatoires (`tags`, `description`, `estimated_time`, `fiche_number`, `total_fiches`, `cursus`) dans le frontmatter YAML
+- **`scripts/validate-frontmatter.js`** : valide les champs historiques et les champs v2 (`id`, `course_id`, `content_type`, `order`, avec `module_id` lorsque nécessaire)
 - **`scripts/generate-cursus-map.js`** : génère `docs/carte-cursus.md` avec le tableau récapitulatif de tous les cursus
 - **`scripts/pdf-changed.sh`** : génère les PDFs uniquement pour les fichiers `.md` modifiés depuis le dernier commit
 - **`scripts/add-frontmatter.js`** : ajoute le frontmatter YAML obligatoire aux fiches qui n'en ont pas
@@ -241,7 +242,7 @@ Ce tableau définit les versions utilisées dans toute la documentation. Ces ver
 - **Pas de "vous savez déjà"** : ne jamais supposer de connaissances préalables non listées
 - **Séquençage précis** : étapes numérotées 1, 2, 3...
 - **Prérequis explicites** : lister les fiches à lire avant en début de document
-- **Frontmatter obligatoire** : chaque fiche doit inclure `estimated_time`, `fiche_number`, `total_fiches` et `cursus` dans le frontmatter YAML
+- **Frontmatter obligatoire** : chaque fiche doit inclure les champs historiques ainsi que `id`, `course_id`, `content_type`, `order` et `module_id` lorsque nécessaire
 - **En Bref obligatoire** : chaque fiche doit avoir un blockquote immédiatement après le H1, format exact : `> **En bref** : [Objectif en une phrase]. Lecture estimée : XX min.`
 - **Navigation bidirectionnelle** : chaque fiche doit se terminer par une section `## Navigation` avec des liens vers les fiches précédente et suivante du cursus
 

@@ -31,6 +31,8 @@ Wiki : `http://localhost:8100` (MkDocs Material).
 | Validation complète | `npm run validate` |
 | Lint Markdown seul | `npm run lint` |
 | Régénérer la carte des cursus | `npm run generate:cursus-map` |
+| Régénérer le cursus v2 | `npm run generate:curriculum` |
+| Vérifier le cursus v2 sans écriture | `npm run lint:curriculum` |
 | Audit documentaire | `npm run audit:docs` |
 | Build strict du site | `docker run --rm -v "$(pwd)":/docs squidfunk/mkdocs-material:9.7.7 build --strict` |
 
@@ -55,7 +57,8 @@ Contributions à forte valeur :
 
 Chaque fiche pédagogique doit conserver :
 
-- Frontmatter YAML : `tags`, `description`, `estimated_time`, `fiche_number`, `total_fiches`, `cursus`
+- Frontmatter YAML historique : `tags`, `description`, `estimated_time`, `fiche_number`, `total_fiches`, `cursus`
+- Frontmatter v2 : `id`, `course_id`, `content_type`, `order` et `module_id` lorsque la fiche appartient à un module
 - Titre H1, blockquote **En bref**, Prérequis, Objectif, Concepts, étapes lorsque c'est pertinent
 - Pièges réalistes, checklist, exercice + solution lorsque la fiche enseigne une compétence
 - Liens de **Navigation** bidirectionnels
@@ -70,7 +73,9 @@ npm run lint:consistency
 npm run lint:cursus-map
 ```
 
-et mettre à jour la navigation `mkdocs.yml` si besoin.
+La navigation, la carte, le manifest et les statistiques sont générés depuis les sources canoniques. Ne modifie pas directement leur région générée. Consulte [CURRICULUM_V2.md](CURRICULUM_V2.md) pour ajouter un cursus, un module, une fiche ou un parcours.
+
+Un projet pédagogique doit rester autonome et facultatif. Il ne doit jamais devenir un projet fil rouge global, une condition de réussite ou un prérequis commun à tous les cursus.
 
 ## Pull requests
 
