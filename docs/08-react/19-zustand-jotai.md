@@ -218,7 +218,7 @@ export const useCompteurStore = create<CompteurState>((set) => ({
 ```text
 Le paquet zustand est installé. Le fichier compteurStore.ts compile sans
 erreur de types. Aucun provider n'a été ajouté à l'application : le store
-est simplement un module importable.
+est un module importable.
 ```
 
 ---
@@ -297,7 +297,7 @@ Crée `src/stores/panierStore.ts`. Ce store montre un état structuré avec une 
 import { create } from "zustand";
 
 // Un article du panier
-interface Article {
+export interface Article {
   id: number;
   nom: string;
   prix: number;
@@ -329,7 +329,7 @@ Crée `src/components/Panier.tsx` :
 
 ```tsx
 // src/components/Panier.tsx
-import { usePanierStore } from "../stores/panierStore";
+import { usePanierStore, type Article } from "../stores/panierStore";
 
 function Panier() {
   // Sélecteurs ciblés : chaque valeur est lue séparément

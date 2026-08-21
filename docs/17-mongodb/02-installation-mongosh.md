@@ -149,7 +149,7 @@ mongodb://admin:secret@192.168.1.10:27017/monapp
 
 ## Étapes Pratiques
 
-### Étape 1 : Verifier que Docker fonctionne
+### Étape 1 : Vérifier que Docker fonctionne
 
 Avant de travailler avec MongoDB, vérifie que Docker est installé et fonctionne :
 
@@ -195,7 +195,7 @@ Status: Downloaded newer image for mongo:8
 
 ---
 
-### Étape 3 : Verifier que le conteneur fonctionne
+### Étape 3 : Vérifier que le conteneur fonctionne
 
 ```bash
 # Liste les conteneurs en cours d'execution
@@ -300,7 +300,7 @@ db.utilisateurs.insertOne({
 
 ---
 
-### Étape 7 : Verifier l'insertion
+### Étape 7 : Vérifier l'insertion
 
 ```javascript
 // Affiche tous les documents de la collection "utilisateurs"
@@ -514,7 +514,7 @@ db.utilisateurs.find()
 
 ⚠️ **Problème** : Tu tapes `use monapp` puis `show dbs` et la base n'apparaît pas. Tu crois qu'il y a une erreur.
 
-✅ **Solution** : C'est normal. MongoDB ne créé réellement la base que quand tu y inseres un premier document. `use` te positionne simplement dans le contexte de cette base.
+✅ **Solution** : C'est normal. MongoDB ne crée réellement la base que quand tu y insères un premier document. `use` te positionne dans le contexte de cette base.
 
 ---
 

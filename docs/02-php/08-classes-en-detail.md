@@ -704,6 +704,8 @@ class Utilisateur
 
 echo "<h1>Getters et Setters avec validation</h1>";
 
+// try/catch utilise InvalidArgumentException (classe fournie par PHP).
+// Le détail des exceptions est dans la fiche 13.
 try {
     // Création avec chaînage
     $user = new Utilisateur("alex@example.com");

@@ -18,11 +18,11 @@ cursus: "Virtualisation"
 
 - Avoir lu la fiche [03 - Proxmox VE](03-proxmox.md)
 - Savoir créer et gérer des VMs avec KVM/QEMU (fiche [02 - KVM et QEMU](02-kvm-qemu.md))
-- Connaitre les bases du système de fichiers Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
+- Connaître les bases du système de fichiers Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras choisir le bon format d'image disque, créer et restaurer des snapshots, migrer une VM d'un serveur a un autre, et configurer un stockage partage NFS ou iSCSI pour tes VMs.
+À la fin de cette fiche, tu sauras choisir le bon format d'image disque, créer et restaurer des snapshots, migrer une VM d'un serveur a un autre, et configurer un stockage partage NFS ou iSCSI pour tes VMs.
 
 ---
 
@@ -144,7 +144,7 @@ Sans snapshots, voici les problèmes rencontres :
 
 **Migration a froid** : l'image disque et la configuration sont copiees vers le serveur cible. La VM est arretee pendant toute la durée de la copie.
 
-**Migration a chaud (live)** : la mémoire de la VM est copiee incrementalement vers le serveur cible pendant que la VM continue de fonctionner. A la fin, une micro-coupure (millisecondes) permet de basculer l'exécution.
+**Migration a chaud (live)** : la mémoire de la VM est copiee incrementalement vers le serveur cible pendant que la VM continue de fonctionner. À la fin, une micro-coupure (millisecondes) permet de basculer l'exécution.
 
 ---
 
@@ -175,7 +175,7 @@ Sans stockage partage :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer et gérer des images disque avec qemu-img
+### Étape 1 : Créer et gérer des images disque avec qemu-img
 
 ```bash
 # Creer une image qcow2 de 20 Go (thin provisioned)
@@ -270,7 +270,7 @@ df -h
 
 ---
 
-### Étape 4 : Creer et restaurer un snapshot (virsh)
+### Étape 4 : Créer et restaurer un snapshot (virsh)
 
 ```bash
 # Creer un snapshot de la VM (inclut le disque)
@@ -303,7 +303,7 @@ virsh snapshot-delete debian-test avant-mise-a-jour
 
 ---
 
-### Étape 5 : Creer et restaurer un snapshot (Proxmox)
+### Étape 5 : Créer et restaurer un snapshot (Proxmox)
 
 **Via l'interface web** :
 
@@ -449,21 +449,21 @@ virsh start debian-test
 
 | Commande | Action |
 | --- | --- |
-| `qemu-img create -f qcow2 <f> <t>` | Creer une image qcow2 |
+| `qemu-img create -f qcow2 <f> <t>` | Créer une image qcow2 |
 | `qemu-img info <fichier>` | Informations sur une image disque |
 | `qemu-img convert -f <src> -O <dst>` | Convertir entre formats |
 | `qemu-img resize <fichier> +<taille>` | Agrandir une image |
-| `virsh snapshot-create-as <vm> --name <n>` | Creer un snapshot (virsh) |
+| `virsh snapshot-create-as <vm> --name <n>` | Créer un snapshot (virsh) |
 | `virsh snapshot-list <vm>` | Lister les snapshots |
 | `virsh snapshot-revert <vm> <snapshot>` | Restaurer un snapshot |
-| `qm snapshot <id> <nom>` | Creer un snapshot (Proxmox VM) |
+| `qm snapshot <id> <nom>` | Créer un snapshot (Proxmox VM) |
 | `qm rollback <id> <snapshot>` | Restaurer un snapshot Proxmox |
-| `pct snapshot <id> <nom>` | Creer un snapshot (Proxmox LXC) |
+| `pct snapshot <id> <nom>` | Créer un snapshot (Proxmox LXC) |
 | `pvesm status` | État des stockages Proxmox |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Accumuler trop de snapshots
 
@@ -522,7 +522,7 @@ sudo resize2fs /dev/vda1
 
 ## Exercice Pratique
 
-**Enonce** : Realise les opérations suivantes sur une VM existante :
+**Énoncé** : Realise les opérations suivantes sur une VM existante :
 
 1. Créé une image disque qcow2 nommee `data-disk.qcow2` de 15 Go
 2. Attache cette image a une VM existante comme deuxième disque
@@ -551,7 +551,7 @@ sudo resize2fs /dev/vda1
 
 ---
 
-**Creer l'image disque** :
+**Créer l'image disque** :
 
 ```bash
 qemu-img create -f qcow2 /var/lib/libvirt/images/data-disk.qcow2 15G
@@ -576,7 +576,7 @@ virsh attach-disk debian-test \
 Disk attached successfully
 ```
 
-**Creer le snapshot** :
+**Créer le snapshot** :
 
 ```bash
 virsh snapshot-create-as debian-test \
@@ -584,7 +584,7 @@ virsh snapshot-create-as debian-test \
   --description "Snapshot avant l'ajout de donnees sur le disque supplementaire"
 ```
 
-**Verifier les tailles** :
+**Vérifier les tailles** :
 
 ```bash
 # Taille reelle du fichier qcow2 (thin provisioned)
@@ -619,7 +619,7 @@ ls -lh /var/lib/libvirt/images/data-disk.raw
 
 L'image raw fait immédiatement 15 Go sur le disque. C'est la difference fondamentale entre qcow2 (thin provisioning) et raw (allocation complete).
 
-**Verifier le snapshot** :
+**Vérifier le snapshot** :
 
 ```bash
 virsh snapshot-list debian-test

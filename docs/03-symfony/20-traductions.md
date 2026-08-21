@@ -51,7 +51,7 @@ Sans internationalisation, voici les problèmes rencontrés :
 | Maintenance impossible | Toutes les traductions sont dans des fichiers dédiés |
 | Incohérences | Une clé donne toujours la même traduction |
 
-**Analogie concrète** : Pense à une notice de montage de meuble. Au lieu d'écrire les instructions une fois par langue dans le carton, le fabricant numérote chaque étape (1, 2, 3) et fournit un livret par langue qui associe chaque numéro à un texte. Pour ajouter l'italien, il suffit d'ajouter un livret : les schémas numérotés ne changent pas. Les numéros sont les clés, les livrets sont les catalogues de traduction.
+**Analogie concrète** : Pense à une notice de montage de meuble. Au lieu d'écrire les instructions une fois par langue dans le carton, le fabricant numérote chaque étape (1, 2, 3) et fournit un livret par langue qui associe chaque numéro à un texte. Pour ajouter l'italien, on ajoute un livret : les schémas numérotés ne changent pas. Les numéros sont les clés, les livrets sont les catalogues de traduction.
 
 **Ce que l'internationalisation n'est PAS** :
 

@@ -20,7 +20,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer comment un switch transféré les trames Ethernet, lire une table d'adresses MAC, comprendre pourquoi et comment segmenter un réseau en VLANs, décrire le fonctionnement des liens trunk et du protocole 802.1Q.
+À la fin de cette fiche, tu sauras expliquer comment un switch transféré les trames Ethernet, lire une table d'adresses MAC, comprendre pourquoi et comment segmenter un réseau en VLANs, décrire le fonctionnement des liens trunk et du protocole 802.1Q.
 
 ---
 
@@ -36,7 +36,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Sans commutation, voici les problèmes rencontres :
 
-1. **Collisions** : Avec un hub (concentrateur), toutes les machines partagent le meme domaine de collision. Quand deux machines emettent en même temps, les données se percutent et sont perdues. Plus il y a de machines, plus les collisions sont frequentes et le réseau devient lent.
+1. **Collisions** : Avec un hub (concentrateur), toutes les machines partagent le meme domaine de collision. Quand deux machines emettent en même temps, les données se percutent et sont perdues. Plus il y a de machines, plus les collisions sont fréquentes et le réseau devient lent.
 2. **Broadcast permanent** : Un hub repete les trames sur tous ses ports, même si le destinataire est un seul appareil. Cela gaspille la bande passante et expose les données a toutes les machines.
 3. **Pas de bande passante dédiée** : Avec un hub, la bande passante (par exemple 100 Mbps) est partagée entre toutes les machines. Avec 10 machines, chacune dispose en moyenne de 10 Mbps.
 
@@ -405,7 +405,7 @@ Si aucun VLAN n'est configure, la commande ne retourne rien.
 
 ---
 
-### Étape 5 : Creer un VLAN sur une interface Linux
+### Étape 5 : Créer un VLAN sur une interface Linux
 
 ```bash
 # Charge le module VLAN du noyau
@@ -498,7 +498,7 @@ L'option `-e` affiche les adresses MAC source et destination. Tu vois que les tr
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Confondre switch et routeur
 
@@ -536,7 +536,7 @@ L'option `-e` affiche les adresses MAC source et destination. Tu vois que les tr
 
 ⚠️ **Problème** : Le VLAN natif est différent sur les deux extremites du trunk. Les trames non etiquetees arrivent dans le mauvais VLAN.
 
-✅ **Solution** : Le VLAN natif doit être identique des deux cotes du trunk. Si le switch A a le VLAN natif 1 et le switch B a le VLAN natif 10, les trames non etiquetees seront placees dans le VLAN 1 d'un cote et le VLAN 10 de l'autre. Cela créé un problème de sécurité et de connectivite.
+✅ **Solution** : Le VLAN natif doit être identique des deux cotes du trunk. Si le switch A a le VLAN natif 1 et le switch B a le VLAN natif 10, les trames non etiquetees seront placees dans le VLAN 1 d'un cote et le VLAN 10 de l'autre. Cela créé un problème de sécurité et de connectivité.
 
 ---
 
@@ -555,7 +555,7 @@ L'option `-e` affiche les adresses MAC source et destination. Tu vois que les tr
 
 ## Exercice Pratique
 
-**Enonce** : Explore la couche 2 de ton réseau et mets en pratique les concepts de commutation et de VLANs.
+**Énoncé** : Explore la couche 2 de ton réseau et mets en pratique les concepts de commutation et de VLANs.
 
 **Questions** :
 

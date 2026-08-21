@@ -692,7 +692,7 @@ switch (commande) {
       filtre.priorite = args[2] as Priorite;
     }
 
-    const taches = service.lister(filtre);
+    const taches = service.listerTriees(filtre);
     afficherListeTaches(taches);
     break;
   }

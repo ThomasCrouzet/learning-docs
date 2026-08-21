@@ -17,8 +17,8 @@ cursus: "Architecture et Design Patterns"
 ## Prérequis
 
 - Fiche 8 : [Clean Architecture](08-clean-architecture.md)
-- Cursus PostgreSQL (`04-postgresql/`, au moins les fiches 1 à 5)
-- Cursus Symfony (notion de Repository et de RequestStack)
+- [Cursus PostgreSQL](../04-postgresql/index.md) (au moins les fiches 1 à 5)
+- [Cursus Symfony](../03-symfony/index.md) (notion de Repository et de RequestStack)
 
 ## Objectif de cette fiche
 

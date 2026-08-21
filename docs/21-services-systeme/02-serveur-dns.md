@@ -17,11 +17,11 @@ cursus: "Services système"
 ## Prérequis
 
 - Avoir lu la fiche [Serveur web avance](01-serveur-web-avance.md)
-- Connaitre les bases de DNS et DHCP - cursus [Réseaux](../20-reseaux/index.md)
+- Connaître les bases de DNS et DHCP - cursus [Réseaux](../20-reseaux/index.md)
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras installer et configurer un serveur DNS avec Bind9 dans un conteneur Docker, créer des zones directes et inverses, ajouter différents types d'enregistrements (A, AAAA, CNAME, MX, TXT, NS) et diagnostiquer les problèmes de resolution DNS.
+À la fin de cette fiche, tu sauras installer et configurer un serveur DNS avec Bind9 dans un conteneur Docker, créer des zones directes et inverses, ajouter différents types d'enregistrements (A, AAAA, CNAME, MX, TXT, NS) et diagnostiquer les problèmes de resolution DNS.
 
 ---
 
@@ -83,7 +83,7 @@ Sans DNS, voici les problèmes rencontres :
 
 **Resolution recursive** :
 
-Le client envoie sa requête a un serveur DNS recursif (souvent celui de ton FAI ou un resolver public comme `8.8.8.8`). Ce serveur prend en charge toute la resolution : il interroge les serveurs racine, les serveurs TLD et les serveurs autoritaires jusqu'a obtenir la réponse finale, puis la renvoie au client.
+Le client envoie sa requête a un serveur DNS recursif (souvent celui de ton FAI ou un resolver public comme `8.8.8.8`). Ce serveur prend en charge toute la resolution : il interroge les serveurs racine, les serveurs TLD et les serveurs autoritaires jusqu'à obtenir la réponse finale, puis la renvoie au client.
 
 ```text
 Client -> Serveur recursif -> Racine -> TLD (.com) -> Autoritaire (example.com)
@@ -225,7 +225,7 @@ EOF
 
 ---
 
-### Étape 3 : Creer la zone directe
+### Étape 3 : Créer la zone directe
 
 Le fichier de zone directe contient les enregistrements qui traduisent les noms en adresses IP.
 
@@ -275,7 +275,7 @@ Explication de chaque partie :
 
 ---
 
-### Étape 4 : Creer la zone inverse
+### Étape 4 : Créer la zone inverse
 
 La zone inverse permet la resolution d'adresse IP vers nom (reverse DNS).
 
@@ -464,7 +464,7 @@ docker rm lab-dns lab-dnsmasq 2>/dev/null
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Oublier le point final dans les noms FQDN
 
@@ -528,7 +528,7 @@ www     IN      CNAME   web.lab.local.
 
 ## Exercice Pratique
 
-**Enonce** : Créé un serveur DNS Bind9 pour le domaine `entreprise.local` avec les enregistrements suivants :
+**Énoncé** : Créé un serveur DNS Bind9 pour le domaine `entreprise.local` avec les enregistrements suivants :
 
 1. `ns1.entreprise.local` -> `10.0.0.1` (serveur de noms)
 2. `web.entreprise.local` -> `10.0.0.10` (serveur web)

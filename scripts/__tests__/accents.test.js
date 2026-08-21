@@ -109,6 +109,22 @@ describe('applyRules', () => {
   it('corrige "meme si" en "meme si" avec accent', () => {
     expect(applyRules('meme si le test echoue')).toBe('m\u00eame si le test \u00e9choue');
   });
+
+  it('corrige Frequents, connectivite, hebergement, eteinte, traçabilite, etrangere, Verifier', () => {
+    expect(applyRules('## Pièges Frequents')).toBe('## Pièges Fréquents');
+    expect(applyRules('Tester la connectivite reseau')).toBe('Tester la connectivit\u00e9 r\u00e9seau');
+    expect(applyRules('un hebergement web')).toBe('un h\u00e9bergement web');
+    expect(applyRules('machine eteinte')).toBe('machine \u00e9teinte');
+    expect(applyRules('Pas de traçabilite')).toBe('Pas de traçabilit\u00e9');
+    expect(applyRules('cles etrangeres')).toBe('cl\u00e9s \u00e9trang\u00e8res');
+    expect(applyRules('Verifier la couche IP')).toBe('V\u00e9rifier la couche IP');
+    expect(applyRules('int\u00e9grit\u00e9 referentielle')).toBe('int\u00e9grit\u00e9 r\u00e9f\u00e9rentielle');
+    expect(applyRules('A la fin de cette fiche')).toBe('\u00c0 la fin de cette fiche');
+    expect(applyRules('Connaitre le reseau')).toBe('Connaitre le r\u00e9seau'.replace('Connaitre', 'Conna\u00eetre'));
+    expect(applyRules("jusqu'a 10")).toBe("jusqu'\u00e0 10");
+    expect(applyRules('Enonce :')).toBe('\u00c9nonc\u00e9 :');
+    expect(applyRules('Creer un VLAN')).toBe('Cr\u00e9er un VLAN');
+  });
 });
 
 describe('processFile', () => {

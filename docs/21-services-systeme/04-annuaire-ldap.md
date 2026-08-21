@@ -52,7 +52,7 @@ Sans annuaire centralise, voici les problèmes rencontres :
 
 **Ce que LDAP n'est PAS** :
 
-- LDAP n'est pas une base de données relationnelle. LDAP est optimise pour la lecture (recherche rapide) mais pas pour les ecritures frequentes. Une base SQL est adaptee aux transactions et aux mises à jour frequentes. LDAP est adapte aux données qui changent peu (comptes utilisateurs, informations d'entreprise).
+- LDAP n'est pas une base de données relationnelle. LDAP est optimise pour la lecture (recherche rapide) mais pas pour les ecritures fréquentes. Une base SQL est adaptee aux transactions et aux mises à jour fréquentes. LDAP est adapte aux données qui changent peu (comptes utilisateurs, informations d'entreprise).
 - LDAP n'est pas Active Directory. Active Directory (Microsoft) utilise LDAP comme protocole d'accès, mais ajoute des fonctionnalités supplémentaires (GPO, Kerberos, DNS integre). OpenLDAP est une implementation open source du protocole LDAP.
 
 **Comparaison LDAP vs base SQL** :
@@ -206,7 +206,7 @@ slapd starting
 
 ---
 
-### Étape 2 : Verifier la configuration initiale
+### Étape 2 : Vérifier la configuration initiale
 
 L'image Docker créé automatiquement la racine du DIT. Verifie avec `ldapsearch` :
 
@@ -241,7 +241,7 @@ Explication des options :
 
 ---
 
-### Étape 3 : Creer les unités organisationnelles
+### Étape 3 : Créer les unités organisationnelles
 
 Créé un fichier LDIF (LDAP Data Interchange Format) pour ajouter les OU :
 
@@ -538,7 +538,7 @@ docker rm lab-ldap
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Erreur de syntaxe dans les fichiers LDIF
 
@@ -611,7 +611,7 @@ docker exec lab-ldap slappasswd -s "mon_mot_de_passe"
 
 ## Exercice Pratique
 
-**Enonce** : Créé un annuaire LDAP pour une école avec la structure suivante :
+**Énoncé** : Créé un annuaire LDAP pour une école avec la structure suivante :
 
 1. Racine : `dc=ecole,dc=local`
 2. Trois unités organisationnelles : `eleves`, `professeurs`, `personnel`

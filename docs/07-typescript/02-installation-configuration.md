@@ -465,7 +465,7 @@ Alice a 25 ans et habite à Lyon.
 
 ---
 
-### Étape 10 : Installer et utiliser `ts-node`
+### Étape 10 : Installer et utiliser `tsx`
 
 Depuis Node.js 22.18, `node fichier.ts` exécute le TypeScript **effaçable** (sans enum, namespace runtime, ni propriétés de constructeur). Pour le TypeScript complet (enums, `tsconfig.json`, etc.), la documentation officielle Node.js prend `tsx` comme exemple de runner tiers.
 

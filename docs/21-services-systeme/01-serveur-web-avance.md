@@ -17,12 +17,12 @@ cursus: "Services système"
 ## Prérequis
 
 - Savoir utiliser le terminal Linux (naviguer, editer des fichiers, gérer les permissions) - cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
-- Connaitre les bases des protocoles réseau (TCP/IP, DNS, HTTP) - cursus [Réseaux](../20-reseaux/index.md)
+- Connaître les bases des protocoles réseau (TCP/IP, DNS, HTTP) - cursus [Réseaux](../20-reseaux/index.md)
 - Savoir utiliser Docker et Docker Compose - cursus [Docker](../01-docker/index.md)
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras configurer Nginx avec plusieurs virtual hosts, mettre en place un reverse proxy vers des applications backend, activer le chiffrement SSL/TLS avec des certificats auto-signes et renforcer la sécurité avec les headers HTTP.
+À la fin de cette fiche, tu sauras configurer Nginx avec plusieurs virtual hosts, mettre en place un reverse proxy vers des applications backend, activer le chiffrement SSL/TLS avec des certificats auto-signes et renforcer la sécurité avec les headers HTTP.
 
 ---
 
@@ -209,7 +209,7 @@ a1b2c3d4e5f6   nginx:1.30  Up 10 seconds   0.0.0.0:8080->80/tcp, 0.0.0.0:8443->4
 
 ---
 
-### Étape 2 : Creer deux sites statiques
+### Étape 2 : Créer deux sites statiques
 
 Créé des pages HTML pour deux sites différents.
 
@@ -558,7 +558,7 @@ sudo sed -i '/site1.local\|site2.local\|app.local/d' /etc/hosts
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Oublier de tester la configuration avant de recharger
 
@@ -635,7 +635,7 @@ location /api/ {
 
 ## Exercice Pratique
 
-**Enonce** : Configure un serveur Nginx qui gère trois virtual hosts :
+**Énoncé** : Configure un serveur Nginx qui gère trois virtual hosts :
 
 1. `blog.local` - sert un site statique depuis `/usr/share/nginx/html/blog/`
 2. `api.local` - agit comme reverse proxy vers un backend sur le port 5000

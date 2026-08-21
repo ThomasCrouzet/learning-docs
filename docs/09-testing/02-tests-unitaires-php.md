@@ -160,7 +160,7 @@ Sans setUp/tearDown, voici les problèmes rencontrés :
 
 | Problème | Solution apportée par setUp/tearDown |
 | --- | --- |
-| Initialisation répétée | setUp() crée les objets une seule fois, réutilisés par chaque test |
+| Initialisation répétée | setUp() s'exécute avant chaque test et instancie des objets neufs |
 | Tests interdépendants | Chaque test reçoit des objets neufs grâce à setUp() |
 
 **Analogie concrète** : Dans un restaurant, avant chaque client (test), le serveur met une nappe propre et des couverts neufs (`setUp`). Après chaque client, il débarrasse et nettoie la table (`tearDown`). Chaque client a une table dans le même état initial.

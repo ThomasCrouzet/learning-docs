@@ -22,7 +22,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'histoire de Coinbase, expliquer sa stratégie de conformité régulatoire, lister ses principaux produits, analyser le conflit avec la SEC et évaluer factuellement sa contribution à l'écosystème.
+À la fin de cette fiche, tu sauras décrire l'histoire de Coinbase, expliquer sa stratégie de conformité régulatoire, lister ses principaux produits, analyser le conflit avec la SEC et évaluer factuellement sa contribution à l'écosystème.
 
 ---
 

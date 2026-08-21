@@ -20,7 +20,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le rôle de la couche transport, distinguer TCP de UDP, décrire le handshake 3 voies de TCP, identifier un service par son numéro de port, et choisir le protocole adapte a un usage donne.
+À la fin de cette fiche, tu sauras expliquer le rôle de la couche transport, distinguer TCP de UDP, décrire le handshake 3 voies de TCP, identifier un service par son numéro de port, et choisir le protocole adapte a un usage donne.
 
 ---
 
@@ -151,7 +151,7 @@ Client                          Serveur
    |------- ACK ---------------->|   4. Le client acquitte
 ```
 
-**Analogie concrète** : Le handshake 3 voies fonctionne comme un appel téléphonique. Tu composes le numéro (SYN). L'interlocuteur decroche et dit "Allo ?" (SYN-ACK). Tu reponds "Bonjour, c'est Thomas" (ACK). Maintenant vous pouvez parler. A la fin, l'un dit "Au revoir" (FIN), l'autre répond "Au revoir" (FIN-ACK) et raccroche.
+**Analogie concrète** : Le handshake 3 voies fonctionne comme un appel téléphonique. Tu composes le numéro (SYN). L'interlocuteur decroche et dit "Allo ?" (SYN-ACK). Tu reponds "Bonjour, c'est Thomas" (ACK). Maintenant vous pouvez parler. À la fin, l'un dit "Au revoir" (FIN), l'autre répond "Au revoir" (FIN-ACK) et raccroche.
 
 ---
 
@@ -350,7 +350,7 @@ Remarque qu'il n'y a que 2 paquets (requête + réponse). Pas de handshake, pas 
 
 ---
 
-### Étape 5 : Verifier la connectivite sur un port spécifique
+### Étape 5 : Vérifier la connectivité sur un port spécifique
 
 ```bash
 # Teste si le port 22 (SSH) est ouvert sur ta machine
@@ -422,7 +422,7 @@ Les états principaux d'une connexion TCP :
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Penser que UDP est "mauvais" parce qu'il n'est pas fiable
 
@@ -470,7 +470,7 @@ Les états principaux d'une connexion TCP :
 
 ## Exercice Pratique
 
-**Enonce** : Explore les connexions réseau de ta machine et analyse le trafic TCP et UDP.
+**Énoncé** : Explore les connexions réseau de ta machine et analyse le trafic TCP et UDP.
 
 **Questions** :
 

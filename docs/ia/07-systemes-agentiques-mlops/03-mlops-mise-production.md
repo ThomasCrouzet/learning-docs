@@ -18,7 +18,7 @@ cursus: "Phase 7 - Systèmes agentiques et MLOps"
 ## Prérequis
 
 - [Phase 3 - scikit-learn](../03-machine-learning-classique/04-scikit-learn-profondeur.md) (entraînement, évaluation, pipelines)
-- [Phase 4 - PyTorch](../04-deep-learning-fondamental/01-reseaux-neurones-theorie-pratique.md) (réseaux de neurones, entraînement, sauvegarde de modèles)
+- [Phase 4 - PyTorch](../04-deep-learning-fondamental/02-pytorch.md) (réseaux de neurones, entraînement, sauvegarde de modèles)
 - Connaissances en Docker (images, conteneurs, volumes)
 - Python 3 installé sur ta machine
 - `pip install mlflow fastapi uvicorn scikit-learn torch`

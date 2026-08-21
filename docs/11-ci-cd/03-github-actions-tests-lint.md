@@ -289,7 +289,7 @@ jobs:
     steps:
       # Étape 1 : récupérer le code du dépôt
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       # Étape 2 : installer PHP 8.3 avec les extensions nécessaires
       - name: Installer PHP
@@ -391,7 +391,7 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -473,11 +473,11 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       # Installe Node.js (nécessaire pour markdownlint)
       - name: Installer Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           # Cache intégré à l'action setup-node
@@ -605,10 +605,10 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Installer Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -668,7 +668,7 @@ jobs:
     name: Lint PHP
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -694,9 +694,9 @@ jobs:
     name: Lint Markdown
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -710,7 +710,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint-php
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -735,9 +735,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint-md
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -915,7 +915,7 @@ key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
 - `test-php` dépend de `lint-php` (utilise `needs`)
 - `test-js` dépend de `lint-md`
 - Utilise `actions/cache@v5` pour Composer
-- Utilise le cache intégré de `actions/setup-node@v5` pour npm
+- Utilise le cache intégré de `actions/setup-node@v7` pour npm
 - Utilise `actions/upload-artifact@v5` pour le rapport de couverture
 
 **Résultat attendu** : Le workflow s'exécute avec 4 jobs. Les deux branches (PHP et JS) sont parallèles. Le rapport de couverture est téléchargeable.
@@ -951,7 +951,7 @@ jobs:
     name: Lint PHP
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -978,7 +978,7 @@ jobs:
     # Attend que le lint PHP soit terminé
     needs: lint-php
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -1008,9 +1008,9 @@ jobs:
     name: Lint Markdown
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -1024,9 +1024,9 @@ jobs:
     # Attend que le lint Markdown soit terminé
     needs: lint-md
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -1053,7 +1053,7 @@ jobs:
 - Branche JS : `lint-md` → `test-js` (séquentiels grâce à `needs`)
 - Les deux branches s'exécutent en parallèle
 - Le cache Composer utilise `composer.lock` comme clé
-- Le cache npm est intégré à `actions/setup-node@v5`
+- Le cache npm est intégré à `actions/setup-node@v7`
 - Le rapport de couverture Jest est sauvegardé avec `if: always()`
 
 ---

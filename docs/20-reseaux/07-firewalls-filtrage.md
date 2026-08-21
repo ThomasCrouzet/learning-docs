@@ -17,12 +17,12 @@ cursus: "Réseaux"
 ## Prérequis
 
 - Avoir lu la fiche [06 - Commutation et VLANs](06-commutations-vlans.md)
-- Connaitre les bases de TCP/IP (adresses IP, ports, protocoles)
+- Connaître les bases de TCP/IP (adresses IP, ports, protocoles)
 - Savoir utiliser un terminal Linux
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras configurer un firewall Linux pour contrôler le trafic réseau entrant et sortant, écrire des règles de filtrage précises et utiliser ufw comme interface simplifiée.
+À la fin de cette fiche, tu sauras configurer un firewall Linux pour contrôler le trafic réseau entrant et sortant, écrire des règles de filtrage précises et utiliser ufw comme interface simplifiée.
 
 ---
 
@@ -185,7 +185,7 @@ Sans zones, toutes les interfaces réseau ont les mêmes règles. Un serveur web
 
 ## Étapes Pratiques
 
-### Étape 1 : Verifier l'état actuel du firewall
+### Étape 1 : Vérifier l'état actuel du firewall
 
 Avant de modifier quoi que ce soit, verifie l'état actuel du firewall.
 
@@ -523,7 +523,7 @@ Status: active
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Se bloquer soi-meme en SSH
 
@@ -600,7 +600,7 @@ sudo iptables -A INPUT -p tcp --dport 3306 -j DROP
 
 ## Exercice Pratique
 
-**Enonce** : Configure un firewall pour un serveur web qui heberge un site et une base de données. Le serveur doit respecter ces contraintes :
+**Énoncé** : Configure un firewall pour un serveur web qui heberge un site et une base de données. Le serveur doit respecter ces contraintes :
 
 1. Autoriser SSH uniquement depuis le réseau 192.168.1.0/24
 2. Autoriser HTTP (80) et HTTPS (443) depuis n'importe ou

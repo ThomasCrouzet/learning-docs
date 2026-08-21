@@ -100,7 +100,7 @@ Sans SIEM, voici les problèmes rencontrés :
 
 **Analogie concrète** : Le SIEM, c'est comme le tableau de bord d'un médecin urgentiste. Au lieu de consulter séparément le cardiogramme, la pression artérielle, la température et les analyses sanguines, le tableau de bord affiche tout au même endroit. Si la fréquence cardiaque augmente ET que la pression chute ET que la température monte, le système alerte le médecin : c'est un pattern de choc septique. Aucun de ces signaux pris isolément ne serait alarmant.
 
-Le diagramme suivant illustre le flux d'une alerte dans un SOC, depuis la collecte des logs jusqu'a la réponse incident :
+Le diagramme suivant illustre le flux d'une alerte dans un SOC, depuis la collecte des logs jusqu'à la réponse incident :
 
 <div class="diagram-design">
 <p><a href="../../../diagrams/cybersecurite-03-competences-intermediaires-04-introduction-soc-monitoring-1.html">Qu&#x27;est-ce qu&#x27;un SIEM ? (HTML + SVG)</a></p>

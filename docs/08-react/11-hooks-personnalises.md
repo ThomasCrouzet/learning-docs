@@ -18,7 +18,7 @@ cursus: "React"
 
 - Fiche précédente : [10 - Context et état global](10-context-etat-global.md)
 - Savoir utiliser `useState`, `useEffect` et `useContext`
-- Comprendre les règles des hooks (fiche 07)
+- Comprendre les règles des hooks ([07 - useEffect et cycle de vie](07-useeffect-cycle-vie.md))
 
 ## Objectif de cette fiche
 

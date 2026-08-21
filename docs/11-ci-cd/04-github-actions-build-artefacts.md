@@ -228,7 +228,7 @@ jobs:
     steps:
       # Étape 1 : récupérer le code
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       # Étape 2 : configurer Docker Buildx
       # Buildx est une version améliorée de docker build
@@ -285,7 +285,7 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -369,7 +369,7 @@ jobs:
 
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -437,7 +437,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       # Crée un fichier de build (simulation)
       - name: Créer le build
@@ -528,7 +528,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -554,7 +554,7 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -753,7 +753,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP
         uses: shivammathur/setup-php@v2
@@ -774,7 +774,7 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Configurer Docker Buildx
         uses: docker/setup-buildx-action@v3

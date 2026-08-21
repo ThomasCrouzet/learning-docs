@@ -16,7 +16,7 @@ cursus: "Architecture et Design Patterns"
 
 ## Prérequis
 
-- Cursus PHP fondamentaux
+- [Cursus PHP](../02-php/index.md)
 - Fiche [Sécurité et utilisateurs](../03-symfony/12-securite-utilisateurs.md) du cursus Symfony
 
 ## Objectif de cette fiche

@@ -18,11 +18,11 @@ cursus: "Virtualisation"
 
 - Avoir lu la fiche [02 - KVM et QEMU](02-kvm-qemu.md)
 - Comprendre les concepts d'hyperviseur de type 1, de VM et de conteneur (fiche [01 - Concepts de virtualisation](01-concepts-virtualisation.md))
-- Connaitre les bases de l'administration Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
+- Connaître les bases de l'administration Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras installer Proxmox VE sur un serveur, utiliser l'interface web pour créer et gérer des VMs et des conteneurs LXC, et configurer les pools de stockage.
+À la fin de cette fiche, tu sauras installer Proxmox VE sur un serveur, utiliser l'interface web pour créer et gérer des VMs et des conteneurs LXC, et configurer les pools de stockage.
 
 ---
 
@@ -38,7 +38,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 Sans Proxmox VE, voici les problèmes rencontres :
 
-1. **Gestion en ligne de commande uniquement** : Avec KVM/QEMU et virsh, tu geres tout en ligne de commande. Creer une VM, lui attacher un disque, configurer le réseau - chaque opération necessite une commande spécifique. C'est fonctionnel mais lent et sujet aux erreurs.
+1. **Gestion en ligne de commande uniquement** : Avec KVM/QEMU et virsh, tu geres tout en ligne de commande. Créer une VM, lui attacher un disque, configurer le réseau - chaque opération necessite une commande spécifique. C'est fonctionnel mais lent et sujet aux erreurs.
 2. **Pas de vue d'ensemble** : Avec virsh, tu vois les VMs une par une. Pas de tableau de bord montrant l'utilisation des ressources (CPU, RAM, disque) de toutes les VMs en un coup d'oeil.
 3. **Pas de gestion native des conteneurs** : KVM ne gère que les VMs. Si tu veux aussi des conteneurs système (LXC), tu dois installer et configurer LXC séparément.
 
@@ -230,7 +230,7 @@ Le template Debian 12 est telecharge dans le stockage local.
 
 ---
 
-### Étape 5 : Creer un conteneur LXC
+### Étape 5 : Créer un conteneur LXC
 
 **Via l'interface web** :
 
@@ -308,7 +308,7 @@ exit
 
 ---
 
-### Étape 7 : Creer une machine virtuelle
+### Étape 7 : Créer une machine virtuelle
 
 **Via l'interface web** :
 
@@ -415,13 +415,13 @@ VMID       Status     Lock         Name
 | Commande | Action |
 | --- | --- |
 | `qm list` | Lister les VMs |
-| `qm create <id>` | Creer une VM |
+| `qm create <id>` | Créer une VM |
 | `qm start <id>` | Démarrer une VM |
 | `qm shutdown <id>` | Arreter proprement une VM |
 | `qm stop <id>` | Forcer l'arrêt d'une VM |
 | `qm config <id>` | Voir la configuration d'une VM |
 | `pct list` | Lister les conteneurs LXC |
-| `pct create <id>` | Creer un conteneur |
+| `pct create <id>` | Créer un conteneur |
 | `pct start <id>` | Démarrer un conteneur |
 | `pct enter <id>` | Ouvrir une console dans un conteneur |
 | `pct config <id>` | Voir la configuration d'un conteneur |
@@ -431,7 +431,7 @@ VMID       Status     Lock         Name
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Ne pas installer le QEMU Guest Agent
 
@@ -492,7 +492,7 @@ pct set 100 --features nesting=1
 
 ## Exercice Pratique
 
-**Enonce** : Créé une infrastructure minimale dans Proxmox avec :
+**Énoncé** : Créé une infrastructure minimale dans Proxmox avec :
 
 1. Un conteneur LXC (ID 101) nomme `web-frontend` avec 256 Mo de RAM, 1 core et 4 Go de disque
 2. Une VM (ID 201) nommee `db-server` avec 1024 Mo de RAM, 2 cores et 15 Go de disque
@@ -519,7 +519,7 @@ pct set 100 --features nesting=1
 
 ---
 
-**Creer le conteneur LXC** :
+**Créer le conteneur LXC** :
 
 ```bash
 # Creer le conteneur web-frontend
@@ -540,7 +540,7 @@ pct set 101 --onboot 1
 pct start 101
 ```
 
-**Creer la VM** :
+**Créer la VM** :
 
 ```bash
 # Creer la VM db-server

@@ -234,7 +234,7 @@ services:
 
   # Grafana Tempo : stockage des traces
   tempo:
-    image: grafana/tempo:2.5.0
+    image: grafana/tempo:3.0.0
     ports:
       - "3200:3200"
       - "4317:4317"
@@ -602,9 +602,8 @@ storage:
     wal:
       path: /var/tempo/wal
 
-compactor:
-  compaction:
-    block_retention: 48h
+compaction:
+  block_retention: 48h
 ```
 
 ---

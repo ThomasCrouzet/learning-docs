@@ -17,8 +17,8 @@ cursus: "Audit et Qualité"
 ## Prérequis
 
 - Fiche 2 : [Cartographier une application](02-cartographier-application.md)
-- Cursus PHP avancé (cursus 02-php)
-- Notions de tests fonctionnels (cursus 09-testing)
+- [Cursus PHP](../02-php/index.md)
+- Notions de tests fonctionnels ([cursus Testing et Qualité](../09-testing/index.md))
 
 ## Objectif de cette fiche
 

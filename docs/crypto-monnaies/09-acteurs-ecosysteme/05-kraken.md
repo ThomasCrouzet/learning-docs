@@ -21,7 +21,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'histoire de Kraken, expliquer ce qu'est une Proof of Réserves et pourquoi c'est important, analyser le conflit avec la SEC et évaluer factuellement le positionnement de Kraken dans l'écosystème.
+À la fin de cette fiche, tu sauras décrire l'histoire de Kraken, expliquer ce qu'est une Proof of Réserves et pourquoi c'est important, analyser le conflit avec la SEC et évaluer factuellement le positionnement de Kraken dans l'écosystème.
 
 ---
 

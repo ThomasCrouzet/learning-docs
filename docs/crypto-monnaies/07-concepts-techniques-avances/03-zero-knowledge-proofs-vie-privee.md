@@ -23,7 +23,7 @@ cursus: "Phase 7 - Concepts techniques avances"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le principe des zéro-knowledge proofs, distinguer ZK-SNARKs et ZK-STARKs, citer les trois grandes applications (confidentialité, scalabilité, identité) et évaluer le niveau de maturité de cette technologie.
+À la fin de cette fiche, tu sauras expliquer le principe des zéro-knowledge proofs, distinguer ZK-SNARKs et ZK-STARKs, citer les trois grandes applications (confidentialité, scalabilité, identité) et évaluer le niveau de maturité de cette technologie.
 
 ---
 
@@ -166,7 +166,7 @@ Le problème :
 
 Solution : ceremonies multi-parties (MPC)
 - Des dizaines à des milliers de participants contribuent à la cérémonie
-- Il suffit qu'UN SEUL participant soit honnête et détruise sa part
+- Le système est sûr dès qu'un seul participant honnête détruit sa part
   du déchet toxique pour que le système soit sûr
 - Zcash Sapling (2018) a réuni environ 90 participants après une phase
   Powers of Tau de 87 contributions. Le chiffre ~80 000 correspond à

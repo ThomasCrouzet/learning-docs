@@ -21,7 +21,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras distinguer les trois types de stockage cloud, créer un bucket S3, uploader et telecharger des fichiers, et configurer des règles de cycle de vie pour réduire les coûts.
+À la fin de cette fiche, tu sauras distinguer les trois types de stockage cloud, créer un bucket S3, uploader et telecharger des fichiers, et configurer des règles de cycle de vie pour réduire les coûts.
 
 ---
 
@@ -169,7 +169,7 @@ Jour 365    : Suppression automatique
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer un bucket S3
+### Étape 1 : Créer un bucket S3
 
 ```bash
 # Creer un bucket S3 (le nom doit etre unique au monde)
@@ -390,7 +390,7 @@ remove_bucket: mon-premier-bucket-cloud-2025
 
 | Commande | Action |
 | --- | --- |
-| `aws s3 mb s3://nom` | Creer un bucket |
+| `aws s3 mb s3://nom` | Créer un bucket |
 | `aws s3 rb s3://nom` | Supprimer un bucket vide |
 | `aws s3 ls` | Lister les buckets |
 | `aws s3 ls s3://nom/` | Lister les objets d'un bucket |
@@ -401,7 +401,7 @@ remove_bucket: mon-premier-bucket-cloud-2025
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Rendre un bucket public par erreur
 
@@ -419,7 +419,7 @@ remove_bucket: mon-premier-bucket-cloud-2025
 
 **Problème** : Tu supprimes un fichier important dans un bucket sans versioning. Le fichier est perdu définitivement.
 
-**Solution** : Active le versioning sur tous les buckets contenant des données importantes. Avec le versioning, une suppression ajoute simplement un "delete marker" et tu peux récupérer le fichier.
+**Solution** : Active le versioning sur tous les buckets contenant des données importantes. Avec le versioning, une suppression ajoute un marqueur de suppression (`delete marker`) et tu peux récupérer le fichier.
 
 ---
 
@@ -436,7 +436,7 @@ remove_bucket: mon-premier-bucket-cloud-2025
 
 ## Exercice Pratique
 
-**Enonce** : Tu geres une application qui genere trois types de fichiers. Propose une stratégie de stockage S3 pour chaque type.
+**Énoncé** : Tu geres une application qui genere trois types de fichiers. Propose une stratégie de stockage S3 pour chaque type.
 
 Types de fichiers :
 

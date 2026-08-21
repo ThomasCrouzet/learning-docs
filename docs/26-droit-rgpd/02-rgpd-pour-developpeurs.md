@@ -703,7 +703,7 @@ $anonymized = $pseudonymizer->exportForAnalytics($user);
 
 ⚠️ **Problème** : Implémenter un `deleted_at` mais garder toutes les données personnelles intactes dans la base.
 
-✅ **Solution** : Le soft delete doit anonymiser les données personnelles, pas simplement marquer la ligne comme supprimée. L'utilisateur attend que ses données disparaissent réellement.
+✅ **Solution** : Le soft delete doit anonymiser les données personnelles, pas seulement marquer la ligne comme supprimée. L'utilisateur attend que ses données disparaissent réellement.
 
 ---
 

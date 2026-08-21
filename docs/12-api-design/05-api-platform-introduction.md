@@ -646,7 +646,7 @@ curl -X POST http://localhost:8000/api/books \
 
 ⚠️ **Problème** : Tu cherches le fichier `BookController.php` pour modifier le comportement de l'API, mais il n'existe pas.
 
-✅ **Solution** : API Platform n'utilise pas de contrôleurs PHP classiques. La personnalisation se fait via les attributs sur l'entité (`#[ApiResource]`), les filtres (`#[ApiFilter]`), ou les Data Processors (fiche suivante).
+✅ **Solution** : API Platform n'utilise pas de contrôleurs PHP classiques. La personnalisation se fait via les attributs sur l'entité (`#[ApiResource]`), les filtres (`#[ApiFilter]`), ou les State Processors (fiche suivante).
 
 ### Piège 4 : Confondre SearchFilter partial et exact
 

@@ -17,8 +17,8 @@ cursus: "Réseaux"
 ## Prérequis
 
 - Avoir lu la fiche [10 - Diagnostic et outils](10-diagnostic-outils.md)
-- Connaitre les bases du routage et du NAT
-- Connaitre les principes de filtrage avec un firewall
+- Connaître les bases du routage et du NAT
+- Connaître les principes de filtrage avec un firewall
 - Comprendre le fonctionnement de HTTP/HTTPS
 
 ## Objectif de cette fiche
@@ -88,19 +88,19 @@ Sans proxy, voici les problèmes rencontres :
 
 1. **Pas de controle de la navigation** : Les employés peuvent accéder a n'importe quel site web. Pas de filtrage des sites malveillants ou inappropries.
 2. **Pas de cache** : Chaque employé qui visite le meme site telecharge les memes données. La bande passante est gaspillee.
-3. **Pas de traçabilite** : Impossible de savoir qui a visite quel site et quand. En cas d'incident de sécurité, pas de logs.
+3. **Pas de traçabilité** : Impossible de savoir qui a visite quel site et quand. En cas d'incident de sécurité, pas de logs.
 
 **Comment le proxy résout ces problèmes** :
 
 | Problème | Solution apportée par le proxy |
 | --- | --- |
 | Pas de controle | Le proxy filtre les URL selon des règles (listes noires, catégories) |
-| Pas de cache | Le proxy met en cache les réponses frequentes |
-| Pas de traçabilite | Le proxy enregistre toutes les requêtes dans des logs |
+| Pas de cache | Le proxy met en cache les réponses fréquentes |
+| Pas de traçabilité | Le proxy enregistre toutes les requêtes dans des logs |
 
 **Ce qu'un proxy n'est PAS** :
 
-- Un proxy n'est pas un VPN. Un proxy ne chiffre pas le trafic (sauf s'il est configure en HTTPS). Il fait simplement du relais de requêtes.
+- Un proxy n'est pas un VPN. Un proxy ne chiffre pas le trafic (sauf s'il est configuré en HTTPS). Il fait du relais de requêtes, sans chiffrer par défaut.
 - Un proxy n'est pas un reverse proxy. Le proxy forward sert les clients internes qui vont vers Internet. Le reverse proxy sert les clients externes qui vont vers les serveurs internes (voir section suivante).
 
 ---
@@ -556,7 +556,7 @@ ip addr show eth0 | grep "192.168.1.100"
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Le reverse proxy ne transmet pas l'IP du client
 
@@ -609,7 +609,7 @@ L'application doit être configurée pour lire l'en-tete `X-Real-IP` ou `X-Forwa
 
 ## Exercice Pratique
 
-**Enonce** : Deploie une architecture avec Docker Compose qui comprend :
+**Énoncé** : Deploie une architecture avec Docker Compose qui comprend :
 
 1. Un reverse proxy Nginx qui écoute sur le port 80
 2. Trois instances d'une application web (peuvent être de simples conteneurs Nginx avec un contenu différent)

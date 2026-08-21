@@ -17,8 +17,8 @@ cursus: "Phase 9 - Expertise, recherche et leadership"
 
 ## Prérequis
 
-- Phase 6 (Large Language Models) lue et comprise
-- Phase 7 (Systèmes agentiques et MLOps) lue et comprise
+- [Phase 6 - Large Language Models](../06-large-language-models/index.md) lue et comprise
+- [Phase 7 - Systèmes agentiques et MLOps](../07-systemes-agentiques-mlops/index.md) lue et comprise
 - Connaissances générales sur les réseaux de neurones et les transformers
 - Python 3 avec `pip install shap lime scikit-learn pandas numpy matplotlib`
 

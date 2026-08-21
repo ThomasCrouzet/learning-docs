@@ -263,6 +263,18 @@ npm run dev sans erreur. Le QueryClientProvider enveloppe l'application.
 
 ### Étape 2 : Lire des données avec useQuery
 
+En environnement offline, tu n'appelles pas JSONPlaceholder. Crée `public/api/posts.json` (même idée que la fiche 12) :
+
+```json
+[
+  { "id": 1, "title": "Premier article", "body": "Contenu du premier article." },
+  { "id": 2, "title": "Deuxième article", "body": "Contenu du deuxième article." },
+  { "id": 3, "title": "Troisième article", "body": "Contenu du troisième article." },
+  { "id": 4, "title": "Quatrième article", "body": "Contenu du quatrième article." },
+  { "id": 5, "title": "Cinquième article", "body": "Contenu du cinquième article." }
+]
+```
+
 Crée `src/components/ListeArticles.tsx` :
 
 ```tsx
@@ -278,9 +290,7 @@ interface Article {
 
 // Fonction de requête : c'est à toi de la fournir (fetch, Axios, etc.)
 async function recupererArticles(): Promise<Article[]> {
-  const reponse = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_limit=5"
-  );
+  const reponse = await fetch("/api/posts.json");
   if (!reponse.ok) {
     throw new Error(`Erreur HTTP : ${reponse.status}`);
   }
@@ -375,15 +385,13 @@ interface NouvelArticle {
 
 // Fonction d'envoi : POST de l'article vers l'API
 async function creerArticle(article: NouvelArticle) {
-  const reponse = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(article),
-  });
+  // Fichier JSON statique : pas de vrai POST. On simule la réponse serveur.
+  const reponse = await fetch("/api/posts.json");
   if (!reponse.ok) {
     throw new Error("La création a échoué");
   }
-  return reponse.json();
+  const existants = await reponse.json();
+  return { id: existants.length + 1, ...article };
 }
 
 function AjoutArticle() {
@@ -459,7 +467,7 @@ export default App;
 
 **Résultat attendu** : le bouton "Ajouter" affiche "Ajout..." pendant la requête. Après succès, le champ se vide et la liste `["articles"]` est invalidée, ce qui déclenche son rechargement automatique. Tu n'as appelé aucune fonction de rechargement manuelle : l'invalidation s'en charge.
 
-> **Note** : JSONPlaceholder est une API de test qui ne persiste pas réellement les données. La requête POST réussit et renvoie un faux article, mais le rechargement de la liste affiche les données d'origine. Le mécanisme d'invalidation, lui, fonctionne et est observable (un nouvel appel réseau part après l'ajout).
+> **Note** : `public/api/posts.json` est un fichier statique. La mutation simule une création (nouvel `id`) mais le rechargement relit le JSON d'origine. Le mécanisme d'invalidation, lui, fonctionne et est observable (un nouvel appel vers `/api/posts.json` part après l'ajout).
 
 ---
 
@@ -478,13 +486,16 @@ interface Article {
 }
 
 async function recupererArticle(id: number): Promise<Article> {
-  const reponse = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
-  );
+  const reponse = await fetch("/api/posts.json");
   if (!reponse.ok) {
     throw new Error(`Erreur HTTP : ${reponse.status}`);
   }
-  return reponse.json();
+  const articles: Article[] = await reponse.json();
+  const article = articles.find((a) => a.id === id);
+  if (!article) {
+    throw new Error(`Article ${id} introuvable`);
+  }
+  return article;
 }
 
 function DetailArticle({ id }: { id: number }) {
@@ -605,11 +616,11 @@ onSuccess: () => {
 
 **Indications** :
 
-- Utilise l'API `https://jsonplaceholder.typicode.com/users` (GET) pour la liste, avec la clé `["users"]`.
-- Crée un type `Utilisateur` avec au moins `id`, `name` et `email`.
+- Utilise le fichier local `public/api/utilisateurs.json` de la fiche 12 (GET `/api/utilisateurs.json`) pour la liste, avec la clé `["users"]`. Adapte le type : `id`, `nom`, `email` (champs du JSON local).
+- Crée un type `Utilisateur` avec au moins `id`, `nom` et `email`.
 - Affiche les états `isPending` et `isError` de `useQuery`.
 - Crée un formulaire avec un champ "nom" et un champ "email".
-- Utilise `useMutation` pour envoyer un POST vers `https://jsonplaceholder.typicode.com/users`.
+- Utilise `useMutation` pour simuler une création (lecture de `/api/utilisateurs.json` puis nouvel `id`), comme dans l'étape 4.
 - Dans `onSuccess`, invalide la clé `["users"]` et vide les champs.
 - Désactive le bouton pendant `mutation.isPending`.
 
@@ -634,13 +645,13 @@ import { useQuery } from "@tanstack/react-query";
 // Type d'un utilisateur (champs utiles uniquement)
 interface Utilisateur {
   id: number;
-  name: string;
+  nom: string;
   email: string;
 }
 
 // Fonction de requête : récupère la liste des utilisateurs
 async function recupererUtilisateurs(): Promise<Utilisateur[]> {
-  const reponse = await fetch("https://jsonplaceholder.typicode.com/users");
+  const reponse = await fetch("/api/utilisateurs.json");
   if (!reponse.ok) {
     throw new Error(`Erreur HTTP : ${reponse.status}`);
   }
@@ -660,7 +671,7 @@ function ListeUtilisateurs() {
     <ul>
       {data?.map((u) => (
         <li key={u.id}>
-          <strong>{u.name}</strong> - {u.email}
+          <strong>{u.nom}</strong> - {u.email}
         </li>
       ))}
     </ul>
@@ -680,21 +691,18 @@ import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface NouvelUtilisateur {
-  name: string;
+  nom: string;
   email: string;
 }
 
-// Fonction d'envoi : POST du nouvel utilisateur
+// Fichier JSON statique : on simule la création sans serveur distant
 async function creerUtilisateur(utilisateur: NouvelUtilisateur) {
-  const reponse = await fetch("https://jsonplaceholder.typicode.com/users", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(utilisateur),
-  });
+  const reponse = await fetch("/api/utilisateurs.json");
   if (!reponse.ok) {
     throw new Error("La création a échoué");
   }
-  return reponse.json();
+  const existants = await reponse.json();
+  return { id: existants.length + 1, ...utilisateur };
 }
 
 function AjoutUtilisateur() {

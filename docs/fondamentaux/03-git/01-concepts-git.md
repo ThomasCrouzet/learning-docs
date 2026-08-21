@@ -278,7 +278,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-> **Note** : selon ta version de Git et ta configuration (`init.defaultBranch`), la branche initiale peut s'appeler `main` (défaut courant) ou `master` (ancien défaut). Les deux jouent le même rôle de branche principale. Dans ce cursus, les exemples utilisent `main` ; si ton dépôt affiche `master`, remplace simplement le nom dans les commandes.
+> **Note** : selon ta version de Git et ta configuration (`init.defaultBranch`), la branche initiale peut s'appeler `main` (défaut courant) ou `master` (ancien défaut). Les deux jouent le même rôle de branche principale. Dans ce cursus, les exemples utilisent `main` ; si ton dépôt affiche `master`, remplace le nom dans les commandes.
 
 ---
 

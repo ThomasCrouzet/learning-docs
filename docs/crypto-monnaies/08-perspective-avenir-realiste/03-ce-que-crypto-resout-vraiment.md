@@ -24,7 +24,7 @@ cursus: "Phase 8 - Perspective et avenir réaliste"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras distinguer les problèmes réellement résolus par les crypto-monnaies de ceux qui ne sont que partiellement résolus ou pas résolus du tout, et tu pourras évaluer les affirmations de l'écosystème avec un regard factuel.
+À la fin de cette fiche, tu sauras distinguer les problèmes réellement résolus par les crypto-monnaies de ceux qui ne sont que partiellement résolus ou pas résolus du tout, et tu pourras évaluer les affirmations de l'écosystème avec un regard factuel.
 
 ---
 
@@ -122,7 +122,7 @@ A la fin de cette fiche, tu sauras distinguer les problèmes réellement résolu
 
 | Argument pour | Argument contre |
 | --- | --- |
-| Bitcoin a pris de la valeur sur le long terme (depuis sa création) | Volatilité extrême a court et moyen terme (chutes de 50-80% frequentes) |
+| Bitcoin a pris de la valeur sur le long terme (depuis sa création) | Volatilité extrême a court et moyen terme (chutes de 50-80% fréquentes) |
 | Offre limitée a 21 millions (rareté programmee) | La rareté ne garantit pas la valeur (beaucoup de choses rares ne valent rien) |
 | Adoption institutionnelle croissante (ETF Bitcoin approuves en 2024) | L'adoption institutionnelle est motivee par la spéculation, pas par la conviction technologique |
 

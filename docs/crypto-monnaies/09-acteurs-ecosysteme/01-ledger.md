@@ -22,7 +22,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'histoire de Ledger, expliquer comment fonctionne un Secure Élément, lister les produits de la gamme, analyser factuellement les deux controverses majeures (fuite de données 2020 et Ledger Recover) et évaluer la contribution réelle de l'entreprise à l'écosystème.
+À la fin de cette fiche, tu sauras décrire l'histoire de Ledger, expliquer comment fonctionne un Secure Élément, lister les produits de la gamme, analyser factuellement les deux controverses majeures (fuite de données 2020 et Ledger Recover) et évaluer la contribution réelle de l'entreprise à l'écosystème.
 
 ---
 

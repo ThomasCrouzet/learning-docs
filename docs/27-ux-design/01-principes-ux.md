@@ -277,7 +277,7 @@ Un tableau rempli avec 10 observations concretes, par exemple :
 
 ---
 
-### Étape 2 : Verifier l'accessibilité d'une page web
+### Étape 2 : Vérifier l'accessibilité d'une page web
 
 Ouvre une page web dans ton navigateur et effectue ces 5 vérifications manuelles :
 
@@ -287,7 +287,7 @@ Ouvre une page web dans ton navigateur et effectue ces 5 vérifications manuelle
 
 3. **Contraste des couleurs** : Ouvre les outils de développement du navigateur (F12), va dans l'onglet "Accessibilite" ou utilise l'outil en ligne "WebAIM Contrast Checker". Le ratio minimum est 4.5:1 pour le texte normal (niveau AA).
 
-4. **Zoom a 200%** : Appuie sur Ctrl++ (ou Cmd++) jusqu'a atteindre un zoom de 200%. Le contenu doit rester lisible sans defilement horizontal.
+4. **Zoom a 200%** : Appuie sur Ctrl++ (ou Cmd++) jusqu'à atteindre un zoom de 200%. Le contenu doit rester lisible sans defilement horizontal.
 
 5. **Structure des titres** : Ouvre les outils de développement et cherche les balises `<h1>` a `<h6>`. Il doit y avoir un seul `<h1>`, et les niveaux doivent se suivre logiquement (pas de `<h1>` suivi de `<h3>` sans `<h2>`).
 
@@ -457,7 +457,7 @@ Etape 4 : Lecture de la recette
 | F12 (ou Cmd+Option+I sur Mac) | Ouvrir les outils de développement du navigateur |
 | Ctrl++ / Ctrl+- (ou Cmd) | Zoomer / dezoomer pour tester la lisibilite |
 | Lighthouse dans Chrome DevTools | Audit automatise d'accessibilité (onglet Lighthouse > Accessibilite) |
-| WebAIM Contrast Checker (en ligne) | Verifier le ratio de contraste entre deux couleurs |
+| WebAIM Contrast Checker (en ligne) | Vérifier le ratio de contraste entre deux couleurs |
 
 ---
 

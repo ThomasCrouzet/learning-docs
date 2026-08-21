@@ -71,7 +71,7 @@ EasyAdmin permet d'injecter facilement tes propres fichiers `.css` ou `.js` dans
 
 ### Partie 1 : Personnalisation basique du Dashboard
 
-Commençons par le plus simple : le titre et le favicon.
+Commence par le titre et le favicon.
 
 Ouvre `src/Controller/Admin/DashboardController.php`.
 
@@ -143,18 +143,21 @@ Ajoute ce contenu CSS :
 
 Retourne dans `DashboardController.php`.
 
-Ajoute la méthode `configureAssets` :
+Ajoute cet import en haut du fichier :
 
 ```php
-    use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
+```
 
+Puis ajoute la méthode `configureAssets` :
+
+```php
     public function configureAssets(Assets $assets): Assets
     {
         return $assets
             // Ajoute ton fichier CSS
             ->addCssFile('css/admin.css');
-            
-            // Tu pourrais aussi ajouter du JS
+            // Tu pourrais aussi ajouter du JS :
             // ->addJsFile('js/admin.js')
     }
 ```
@@ -253,11 +256,17 @@ Crée `templates/admin/layout.html.twig`.
 
 Ouvre `src/Controller/Admin/DashboardController.php`.
 
-Dans `configureCrud` (ajoute la méthode si elle n'existe pas) :
+Dans `configureCrud` (ajoute la méthode si elle n'existe pas).
+
+Ajoute cet import en haut du fichier :
 
 ```php
-    use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+```
 
+Puis la méthode :
+
+```php
     public function configureCrud(): Crud
     {
         return Crud::new()
@@ -437,11 +446,11 @@ Crée le fichier `templates/admin/field/price_badge.html.twig` :
 
 ```twig
 {# templates/admin/field/price_badge.html.twig #}
-{# MoneyField stocke les montants en centimes par défaut (setStoredAsCents). #}
-{# 50 euros = 5000 centimes. On convertit pour l'affichage. #}
+{# Dans ce cursus, le prix est stocké en euros (DECIMAL) avec setStoredAsCents(false). #}
+{# field.value est déjà en euros. #}
 
 {% if field.value is not null %}
-    {% set prix_euros = field.value / 100 %}
+    {% set prix_euros = field.value %}
     {% if prix_euros < 50 %}
         {# Badge vert pour les prix inférieurs à 50 euros #}
         <span class="badge" style="background-color: #27ae60; color: white; font-size: 1em; padding: 0.4em 0.8em;">
@@ -465,7 +474,7 @@ Dans `src/Controller/Admin/ProductCrudController.php`, modifie le champ prix dan
 ```php
 MoneyField::new('price')
     ->setCurrency('EUR')
-    ->setStoredAsCents()
+    ->setStoredAsCents(false)
     // Utilise notre template personnalisé pour l'affichage en liste
     ->setTemplatePath('admin/field/price_badge.html.twig')
 ```

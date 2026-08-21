@@ -208,10 +208,10 @@ docker compose exec database psql -U symfony_user -d symfony_db
 psql (16.x)
 Type "help" for help.
 
-symfony_db=>
+symfony_db=#
 ```
 
-Tu es maintenant connecté. Le prompt `symfony_db=>` indique que tu es dans la base `symfony_db` avec un utilisateur non superutilisateur (`=#` n'apparaît que pour un superutilisateur).
+Tu es maintenant connecté. Le prompt `symfony_db=#` indique que tu es dans la base `symfony_db`. Avec l'image `postgres:16-alpine` du cursus Docker, `POSTGRES_USER` (`symfony_user`) est superutilisateur : le prompt se termine par `=#`. Un utilisateur non superutilisateur afficherait `=>`.
 
 ---
 

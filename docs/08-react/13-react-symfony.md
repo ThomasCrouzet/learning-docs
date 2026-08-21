@@ -18,7 +18,7 @@ cursus: "React"
 
 - Fiche précédente : [12 - Appels API avec fetch](12-appels-api-fetch.md)
 - Savoir utiliser `fetch` et le hook `useFetch`
-- Avoir suivi le cursus Symfony (notamment les fiches sur les contrôleurs et l'API JSON)
+- Avoir suivi le [cursus Symfony](../03-symfony/index.md) (notamment les fiches sur les contrôleurs et [l'API JSON](../03-symfony/16-api-json.md))
 - Connaître le format JSON
 
 ## Objectif de cette fiche
@@ -550,7 +550,7 @@ function useApiAuth() {
         // Si le serveur retourne 401, le token est invalide ou expiré
         if (err.message.includes("401")) {
           deconnexion();
-          setErreur("Session expirée. Veuillez vous reconnecter.");
+          setErreur("Session expirée. Reconnecte-toi.");
         } else {
           setErreur(err.message);
         }

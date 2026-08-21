@@ -17,12 +17,12 @@ cursus: "Réseaux"
 ## Prérequis
 
 - Avoir lu la fiche [07 - Firewalls et filtrage](07-firewalls-filtrage.md)
-- Connaitre les bases de TCP/IP (adresses IP, ports, protocoles TCP et UDP)
+- Connaître les bases de TCP/IP (adresses IP, ports, protocoles TCP et UDP)
 - Savoir utiliser un terminal Linux
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras identifier les services réseau courants, comprendre leur fonctionnement, connaître leurs ports par défaut et les tester avec des commandes en ligne.
+À la fin de cette fiche, tu sauras identifier les services réseau courants, comprendre leur fonctionnement, connaître leurs ports par défaut et les tester avec des commandes en ligne.
 
 ---
 
@@ -457,7 +457,7 @@ sudo lsof -i :80
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Confondre HTTP et HTTPS
 
@@ -536,12 +536,12 @@ sudo systemctl start systemd-timesyncd
 
 ## Exercice Pratique
 
-**Enonce** : Realise un audit des services réseau d'une machine Linux. Tu dois :
+**Énoncé** : Realise un audit des services réseau d'une machine Linux. Tu dois :
 
 1. Lister tous les ports en écoute (TCP et UDP) avec le nom du processus associe
 2. Tester la connexion HTTP/HTTPS sur les ports 80 et 443 (si presents)
-3. Verifier la configuration SSH (port, méthodes d'authentification)
-4. Verifier la synchronisation NTP
+3. Vérifier la configuration SSH (port, méthodes d'authentification)
+4. Vérifier la synchronisation NTP
 5. Produire un tableau récapitulatif de tous les services trouves avec : port, protocole, nom du service, état
 
 **Indications** :
@@ -581,7 +581,7 @@ curl -I http://localhost 2>/dev/null && echo "HTTP actif" || echo "HTTP inactif"
 curl -I https://localhost 2>/dev/null && echo "HTTPS actif" || echo "HTTPS inactif"
 ```
 
-**Étape 3 - Verifier SSH** :
+**Étape 3 - Vérifier SSH** :
 
 ```bash
 # Affiche la configuration effective de SSH
@@ -597,7 +597,7 @@ pubkeyauthentication yes
 permitrootlogin prohibit-password
 ```
 
-**Étape 4 - Verifier NTP** :
+**Étape 4 - Vérifier NTP** :
 
 ```bash
 timedatectl | grep -E "synchronized|NTP"
@@ -609,7 +609,7 @@ timedatectl | grep -E "synchronized|NTP"
 | --- | --- | --- | --- | --- |
 | 22/tcp | SSH | sshd | Actif | Desactiver PasswordAuthentication, utiliser des clés |
 | 80/tcp | HTTP | nginx | Actif | Rediriger vers HTTPS |
-| 443/tcp | HTTPS | nginx | Actif | Verifier le certificat TLS |
+| 443/tcp | HTTPS | nginx | Actif | Vérifier le certificat TLS |
 | 25/tcp | SMTP | postfix | Actif | Restreindre au localhost si pas de serveur mail |
 | 123/udp | NTP | systemd-timesyncd | Actif | Synchronise - aucune action nécessaire |
 

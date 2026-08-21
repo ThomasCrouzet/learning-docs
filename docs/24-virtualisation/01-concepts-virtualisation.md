@@ -16,12 +16,12 @@ cursus: "Virtualisation"
 
 ## Prérequis
 
-- Connaitre les bases de l'administration système Linux (commandes, système de fichiers, processus) - cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
+- Connaître les bases de l'administration système Linux (commandes, système de fichiers, processus) - cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md)
 - Comprendre les bases des réseaux (IP, ports, protocoles) - cursus [Réseaux](../20-reseaux/index.md)
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras définir la virtualisation, distinguer les types d'hyperviseurs, comparer les machines virtuelles aux conteneurs et expliquer les modes d'emulation et de para-virtualisation.
+À la fin de cette fiche, tu sauras définir la virtualisation, distinguer les types d'hyperviseurs, comparer les machines virtuelles aux conteneurs et expliquer les modes d'emulation et de para-virtualisation.
 
 ---
 
@@ -47,7 +47,7 @@ Sans virtualisation, voici les problèmes rencontres :
 | --- | --- |
 | Sous-utilisation du matériel | Plusieurs machines virtuelles tournent sur un seul serveur physique, utilisant 60 a 80% de sa capacité |
 | Isolation impossible | Chaque machine virtuelle a son propre système d'exploitation et ses propres ressources isolées |
-| Déploiement lent | Creer une machine virtuelle prend quelques minutes a partir d'un modèle (template) |
+| Déploiement lent | Créer une machine virtuelle prend quelques minutes a partir d'un modèle (template) |
 
 **Analogie concrète** : Imagine un immeuble de bureaux. Sans virtualisation, chaque entreprise achète un bâtiment entier pour y installer trois employés - un gaspillage énorme d'espace. Avec la virtualisation, un seul bâtiment est divise en bureaux indépendants (machines virtuelles). Chaque bureau a sa propre porte, sa propre clé et son propre espace, mais ils partagent le meme bâtiment physique.
 
@@ -236,7 +236,7 @@ C'est la méthode utilisée par KVM et les hyperviseurs modernes. Elle combine l
 
 ## Étapes Pratiques
 
-### Étape 1 : Verifier le support de la virtualisation matérielle
+### Étape 1 : Vérifier le support de la virtualisation matérielle
 
 Avant de pouvoir créer des machines virtuelles avec KVM, ton processeur doit supporter la virtualisation matérielle (Intel VT-x ou AMD-V).
 
@@ -267,7 +267,7 @@ Virtualization:                     VT-x
 
 ---
 
-### Étape 2 : Verifier que KVM est utilisable
+### Étape 2 : Vérifier que KVM est utilisable
 
 ```bash
 # Installer le paquet de verification (Debian/Ubuntu)
@@ -348,8 +348,8 @@ Note les valeurs de mémoire et d'espace disque. Tu en auras besoin pour dimensi
 
 | Commande | Action |
 | --- | --- |
-| `grep -E '(vmx\|svm)' /proc/cpuinfo` | Verifier le support de la virtualisation matérielle |
-| `kvm-ok` | Verifier que KVM est utilisable |
+| `grep -E '(vmx\|svm)' /proc/cpuinfo` | Vérifier le support de la virtualisation matérielle |
+| `kvm-ok` | Vérifier que KVM est utilisable |
 | `lscpu` | Afficher les informations du processeur |
 | `free -h` | Afficher la mémoire disponible |
 | `df -h` | Afficher l'espace disque disponible |
@@ -357,7 +357,7 @@ Note les valeurs de mémoire et d'espace disque. Tu en auras besoin pour dimensi
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : La virtualisation est desactivee dans le BIOS
 
@@ -395,7 +395,7 @@ Note les valeurs de mémoire et d'espace disque. Tu en auras besoin pour dimensi
 
 ## Exercice Pratique
 
-**Enonce** : Classe les situations suivantes et indique si tu utiliserais une VM ou un conteneur, et quel type d'hyperviseur serait le plus adapte.
+**Énoncé** : Classe les situations suivantes et indique si tu utiliserais une VM ou un conteneur, et quel type d'hyperviseur serait le plus adapte.
 
 Situations a classer :
 

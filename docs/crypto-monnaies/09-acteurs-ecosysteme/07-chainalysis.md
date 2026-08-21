@@ -22,7 +22,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer ce que fait Chainalysis, comment ses outils tracent les transactions sur les blockchains publiques, citer des cas concrets ou ces outils ont été utilisés et analyser le débat entre vie privée et sécurité que cette activité souleve.
+À la fin de cette fiche, tu sauras expliquer ce que fait Chainalysis, comment ses outils tracent les transactions sur les blockchains publiques, citer des cas concrets ou ces outils ont été utilisés et analyser le débat entre vie privée et sécurité que cette activité souleve.
 
 ---
 

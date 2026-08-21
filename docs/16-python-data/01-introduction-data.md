@@ -61,7 +61,7 @@ Sans analyse de données, voici les problèmes rencontrés :
 
 ### Qu'est-ce que le cycle de vie des données ?
 
-**Définition** : Le cycle de vie des données décrit les étapes successives par lesquelles passent les données, depuis leur collecte jusqu'a la communication des résultats.
+**Définition** : Le cycle de vie des données décrit les étapes successives par lesquelles passent les données, depuis leur collecte jusqu'à la communication des résultats.
 
 **Le problème que le cycle de vie résout** :
 
@@ -199,7 +199,7 @@ Les numéros de version exacts évoluent. En 2026, `pip install pandas` peut ins
 
 ---
 
-### Étape 3 : Verifier l'installation dans Python
+### Étape 3 : Vérifier l'installation dans Python
 
 Créé un script pour confirmer que tout fonctionne.
 

@@ -17,8 +17,8 @@ cursus: "Architecture et Design Patterns"
 ## Prérequis
 
 - Fiche 12 : [Multi-tenancy](12-multi-tenancy.md)
-- Cursus Symfony (Doctrine, Entity, Repository)
-- Cursus PostgreSQL (index, contraintes uniques)
+- [Cursus Symfony](../03-symfony/index.md) (Doctrine, Entity, Repository)
+- [Cursus PostgreSQL](../04-postgresql/index.md) (index, contraintes uniques)
 
 ## Objectif de cette fiche
 

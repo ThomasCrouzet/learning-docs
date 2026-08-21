@@ -21,7 +21,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras lancer une machine virtuelle sur AWS EC2, comprendre les types d'instances, distinguer les trois familles de compute cloud et déployer une fonction serverless basique.
+À la fin de cette fiche, tu sauras lancer une machine virtuelle sur AWS EC2, comprendre les types d'instances, distinguer les trois familles de compute cloud et déployer une fonction serverless basique.
 
 ---
 
@@ -53,7 +53,7 @@ Sans compute cloud, voici les problèmes rencontres :
 
 **Ce que le compute cloud n'est PAS** :
 
-- Le compute cloud n'est pas un simple hebergement mutualisé. Un hebergement partage met plusieurs sites sur un meme serveur sans isolation. Une VM cloud est un environnement isole avec des ressources garanties.
+- Le compute cloud n'est pas un simple hébergement mutualisé. Un hébergement partage met plusieurs sites sur un meme serveur sans isolation. Une VM cloud est un environnement isole avec des ressources garanties.
 - Le compute cloud n'est pas forcément plus cher qu'un serveur physique. Pour des charges variables, le cloud est souvent moins cher car tu paies uniquement ce que tu consommes.
 
 ---
@@ -190,7 +190,7 @@ aws ec2 run-instances \
 
 Avant de lancer cette commande, tu dois :
 
-1. Creer une paire de clés SSH dans la console EC2 (**Key Pairs** puis **Create key pair**)
+1. Créer une paire de clés SSH dans la console EC2 (**Key Pairs** puis **Create key pair**)
 2. Utiliser un Security Group qui autorise le SSH (port 22)
 3. Récupérer un AMI valide pour ta region (ne jamais copier un AMI ID d'un tutoriel : il est lie a une region et expire)
 
@@ -212,7 +212,7 @@ Avant de lancer cette commande, tu dois :
 
 ---
 
-### Étape 2 : Verifier l'état de l'instance
+### Étape 2 : Vérifier l'état de l'instance
 
 ```bash
 # Verifier que l'instance est en cours d'execution
@@ -261,7 +261,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ---
 
-### Étape 4 : Creer une fonction Lambda
+### Étape 4 : Créer une fonction Lambda
 
 ```bash
 # Creer un fichier avec le code de la fonction
@@ -353,13 +353,13 @@ La fonction Lambda est supprimee.
 | `aws ec2 stop-instances` | Arreter une instance (sans la supprimer) |
 | `aws ec2 start-instances` | Redémarrer une instance arretee |
 | `aws ec2 terminate-instances` | Supprimer définitivement une instance |
-| `aws lambda create-function` | Creer une fonction Lambda |
+| `aws lambda create-function` | Créer une fonction Lambda |
 | `aws lambda invoke` | Executer une fonction Lambda |
 | `aws lambda delete-function` | Supprimer une fonction Lambda |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Oublier de terminer une instance EC2
 
@@ -401,7 +401,7 @@ aws ec2 describe-instances \
 
 ## Exercice Pratique
 
-**Enonce** : Tu dois heberger trois applications différentes. Pour chacune, choisis le type de compute le plus adapte (VM, conteneur manage ou serverless) et justifie ton choix.
+**Énoncé** : Tu dois heberger trois applications différentes. Pour chacune, choisis le type de compute le plus adapte (VM, conteneur manage ou serverless) et justifie ton choix.
 
 Applications :
 

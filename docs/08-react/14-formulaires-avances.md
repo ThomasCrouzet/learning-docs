@@ -17,7 +17,7 @@ cursus: "React"
 ## Prérequis
 
 - Fiche précédente : [13 - React et Symfony](13-react-symfony.md)
-- Savoir créer des formulaires contrôlés (fiche 06)
+- Savoir créer des formulaires contrôlés ([06 - Événements et formulaires](06-evenements-formulaires.md))
 - Connaître les types TypeScript (interfaces, types génériques)
 
 ## Objectif de cette fiche

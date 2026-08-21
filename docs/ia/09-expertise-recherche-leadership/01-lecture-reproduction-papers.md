@@ -17,7 +17,7 @@ cursus: "Phase 9 - Expertise, recherche et leadership"
 
 ## Prérequis
 
-- Phases 1 à 6 du cursus IA (mathématiques, ML classique, deep learning, architectures modernes, LLM)
+- Phases 1 à 6 du cursus IA : [Phase 1](../01-fondamentaux-mathematiques/index.md), [Phase 3](../03-machine-learning-classique/index.md), [Phase 4](../04-deep-learning-fondamental/index.md), [Phase 5](../05-architectures-modernes-nlp/index.md), [Phase 6](../06-large-language-models/index.md)
 - Python 3 installé avec PyTorch ou TensorFlow
 - Connaître les bases de Git et GitHub
 

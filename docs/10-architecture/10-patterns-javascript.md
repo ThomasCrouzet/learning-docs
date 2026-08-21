@@ -70,7 +70,7 @@ Sans module pattern, voici les problèmes rencontrés :
 - Le module pattern n'est pas la syntaxe `import/export` d'ES6. Les modules ES sont le remplacement moderne du module pattern classique. Cependant, le principe d'encapsulation reste le même.
 - Le module pattern n'est pas un Singleton. Même s'il y a des similitudes (une seule instance), le module pattern vise l'encapsulation, pas la restriction d'instances.
 
-**Implementation classique (IIFE)** :
+**Implémentation classique (IIFE)** :
 
 ```javascript
 // Module Pattern avec une IIFE (Immediately Invoked Function Expression)
@@ -144,7 +144,7 @@ console.log(CartModule.items); // undefined
 console.log(CartModule.calculateSubtotal); // undefined
 ```
 
-**Implementation moderne (modules ES)** :
+**Implémentation moderne (modules ES)** :
 
 ```javascript
 // cart.js -- Module ES (chaque fichier est un module)
@@ -252,7 +252,7 @@ button.addEventListener("click", function (event) {
 // L'ordre de notification est l'ordre d'enregistrement
 ```
 
-**Implementation personnalisee** :
+**Implémentation personnalisée** :
 
 ```javascript
 // Classe EventEmitter : implementation du pattern Observer
@@ -370,7 +370,7 @@ Sans pub/sub, voici les problèmes rencontrés :
 
 **Analogie concrète** : Observer, c'est un professeur qui connaît ses élèves et les appelle par leur nom quand il a une annonce. Pub/Sub, c'est un tableau d'affichage : le professeur affiche un message, et tous les élèves qui regardent le tableau le voient, sans que le professeur sache qui a lu le message.
 
-**Implementation** :
+**Implémentation** :
 
 ```javascript
 // Event Bus : l'intermédiaire central du pattern Pub/Sub
@@ -495,7 +495,7 @@ Sans middleware, voici les problèmes rencontrés :
 
 **Analogie concrète** : Pense à une chaîne de montage dans une usine. Chaque poste (middleware) effectue une opération sur le produit : assemblage, peinture, contrôle qualité, emballage. On peut ajouter un nouveau poste (par exemple, gravure du numéro de série) ou retirer un poste (par exemple, skip la peinture pour un modèle brut) sans réorganiser toute la chaîne.
 
-**Implementation** :
+**Implémentation** :
 
 ```javascript
 // Classe Middleware Pipeline

@@ -6,7 +6,7 @@ description: "Cursus complet Crypto-monnaies - Comprendre la blockchain sans le 
 
 # Cursus Crypto-monnaies - De Zéro à Initié
 
-Curriculum structuré en **9 phases progressives**. Approche factuelle et critique : chaque concept est expliqué simplement, sans hype ni promesses. L'objectif est de comprendre comment ces technologies fonctionnent réellement, ce qu'elles résolvent et ce qu'elles ne résolvent pas.
+Curriculum structuré en **9 phases progressives**. Approche factuelle et critique : chaque concept est expliqué sans jargon ni hype. L'objectif est de comprendre comment ces technologies fonctionnent réellement, ce qu'elles résolvent et ce qu'elles ne résolvent pas.
 
 **Durée estimée totale** : 6-12 mois selon intensité.
 
@@ -22,7 +22,7 @@ Les bases indispensables pour comprendre la suite : qu'est-ce que la monnaie, co
 | # | Fiche | Description |
 | - | ----- | ----------- |
 | 01 | [La monnaie : fonctions, confiance et limites](01-fondamentaux/01-monnaie-fonctions-confiance-limites.md) | Les trois fonctions de la monnaie, le rôle de la confiance, les limites du système actuel |
-| 02 | [Cryptographie essentielle](01-fondamentaux/02-cryptographie-essentielle.md) | Clés, hachage et signatures numériques expliqués simplement |
+| 02 | [Cryptographie essentielle](01-fondamentaux/02-cryptographie-essentielle.md) | Clés, hachage et signatures numériques, sans jargon |
 | 03 | [Réseaux pair-à-pair et décentralisation](01-fondamentaux/03-reseaux-pair-a-pair-decentralisation.md) | Ce que décentralisation veut dire concrètement, avantages et coûts |
 | 04 | [Blockchain : une structure de données](01-fondamentaux/04-blockchain-structure-de-donnees.md) | Comment fonctionne une blockchain, sans le mythe de la révolution magique |
 

@@ -20,6 +20,7 @@ cursus: "PHP"
 - Fiche [02-php/02 - Les variables et types de données](02-variables-types.md)
 - Fiche [02-php/03 - Les tableaux](03-tableaux-arrays.md) (arrays)
 - Fiche [02-php/06 - Les fonctions](06-fonctions.md)
+- Fiche [02-php/04 - Les conditions](04-conditions.md)
 - Savoir créer des fonctions avec paramètres et valeurs de retour
 
 ## Objectif de cette fiche
@@ -515,7 +516,7 @@ Je suis Emma, 23 ans.
 
 Statut : Majeur(e)
 
-Année de naissance : 2003
+Année de naissance : (année courante moins 23)
 ```
 
 ---

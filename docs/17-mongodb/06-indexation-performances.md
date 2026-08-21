@@ -503,11 +503,11 @@ docker rm -f mongo-index
 
 ## Pièges Fréquents
 
-### Piège 1 : Creer trop d'index
+### Piège 1 : Créer trop d'index
 
 ⚠️ **Problème** : Tu créés un index sur chaque champ de la collection. Les insertions et mises à jour deviennent lentes car MongoDB doit mettre a jour tous les index a chaque écriture.
 
-✅ **Solution** : Créé des index uniquement pour les requêtes frequentes. Analyse les requêtes de ton application et créé des index cibles. En général, 3 a 7 index par collection suffisent.
+✅ **Solution** : Créé des index uniquement pour les requêtes fréquentes. Analyse les requêtes de ton application et créé des index cibles. En général, 3 a 7 index par collection suffisent.
 
 ---
 

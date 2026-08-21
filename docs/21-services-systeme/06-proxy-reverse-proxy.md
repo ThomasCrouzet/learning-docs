@@ -20,7 +20,7 @@ cursus: "Services système"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras distinguer un proxy (forward proxy) d'un reverse proxy, configurer Squid comme proxy direct, configurer HAProxy comme load balancer et reverse proxy, utiliser Caddy comme reverse proxy avec SSL automatique, et mettre en place une répartition de charge entre plusieurs backends.
+À la fin de cette fiche, tu sauras distinguer un proxy (forward proxy) d'un reverse proxy, configurer Squid comme proxy direct, configurer HAProxy comme load balancer et reverse proxy, utiliser Caddy comme reverse proxy avec SSL automatique, et mettre en place une répartition de charge entre plusieurs backends.
 
 ---
 
@@ -210,7 +210,7 @@ curl -x http://localhost:3128 http://www.facebook.com
 
 ---
 
-### Étape 2 : Creer des backends de test
+### Étape 2 : Créer des backends de test
 
 Avant de configurer le reverse proxy et le load balancer, créé trois serveurs backend simples :
 
@@ -530,7 +530,7 @@ docker network rm lab-proxy-net 2>/dev/null
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Confondre forward proxy et reverse proxy
 
@@ -598,7 +598,7 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
 ## Exercice Pratique
 
-**Enonce** : Configure une infrastructure de haute disponibilité avec :
+**Énoncé** : Configure une infrastructure de haute disponibilité avec :
 
 1. Trois backends identiques servant une page HTML
 2. HAProxy comme load balancer en mode `leastconn` (least connections)

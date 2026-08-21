@@ -18,7 +18,7 @@ cursus: "Architecture et Design Patterns"
 
 - Fiche : [Sécurité des utilisateurs Symfony](../03-symfony/12-securite-utilisateurs.md)
 - Notions de cryptographie de base (hash, HMAC)
-- Cursus PHP : `random_bytes`, `hash_hmac`
+- [Cursus PHP](../02-php/index.md) : `random_bytes`, `hash_hmac`
 
 ## Objectif de cette fiche
 

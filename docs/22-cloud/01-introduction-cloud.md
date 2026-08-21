@@ -18,7 +18,7 @@ cursus: "Cloud"
 
 - Savoir créer et gérer des conteneurs Docker - cursus [Docker](../01-docker/index.md)
 - Comprendre les bases des réseaux (IP, DNS, ports) - cursus [Réseaux](../20-reseaux/index.md)
-- Connaitre les principes de CI/CD (pipelines, déploiement automatise) - cursus [CI/CD](../11-ci-cd/index.md)
+- Connaître les principes de CI/CD (pipelines, déploiement automatise) - cursus [CI/CD](../11-ci-cd/index.md)
 
 ## Objectif de cette fiche
 
@@ -82,7 +82,7 @@ Le fournisseur gère l'infrastructure ET la plateforme d'exécution (OS, runtime
 Exemples de services PaaS :
 
 - **AWS Elastic Beanstalk** : déploiement automatique d'applications
-- **Azure App Service** : hebergement d'applications web
+- **Azure App Service** : hébergement d'applications web
 - **Google App Engine** : plateforme d'exécution managée
 
 Cas d'usage : tu veux déployer une application web sans gérer les serveurs. Tu pousses ton code, la plateforme s'occupe du reste.
@@ -364,14 +364,14 @@ aws sts get-caller-identity
 | Commande | Action |
 | --- | --- |
 | `aws configure` | Configurer les identifiants AWS |
-| `aws sts get-caller-identity` | Verifier l'identité de l'utilisateur connecte |
+| `aws sts get-caller-identity` | Vérifier l'identité de l'utilisateur connecte |
 | `aws ec2 describe-regions` | Lister les regions disponibles |
 | `aws s3 ls` | Lister les buckets S3 |
-| `aws --version` | Verifier la version du CLI AWS |
+| `aws --version` | Vérifier la version du CLI AWS |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Oublier de sélectionner la bonne region
 
@@ -414,7 +414,7 @@ aws ce get-cost-and-usage \
 
 ## Exercice Pratique
 
-**Enonce** : Classe les services suivants dans la bonne catégorie (IaaS, PaaS ou SaaS) et indique a quel fournisseur ils appartiennent.
+**Énoncé** : Classe les services suivants dans la bonne catégorie (IaaS, PaaS ou SaaS) et indique a quel fournisseur ils appartiennent.
 
 Services a classer :
 

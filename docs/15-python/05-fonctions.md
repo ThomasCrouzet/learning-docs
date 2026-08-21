@@ -119,7 +119,7 @@ Parfois, tu as besoin d'une fonction simple pour une opération ponctuelle (tri,
 
 Sans documentation, il faut lire le code source pour comprendre ce qu'une fonction fait, quels paramètres elle accepte et ce qu'elle retourne. Cela ralentit considérablement le travail en équipe et la maintenance.
 
-**Analogie concrète** : Une docstring est comme la notice d'utilisation d'un appareil. Sans elle, tu dois démonter l'appareil (lire le code) pour comprendre comment il fonctionne. Avec elle, tu lis simplement le mode d'emploi.
+**Analogie concrète** : Une docstring est comme la notice d'utilisation d'un appareil. Sans elle, tu dois démonter l'appareil (lire le code) pour comprendre comment il fonctionne. Avec elle, tu lis le mode d'emploi.
 
 ---
 

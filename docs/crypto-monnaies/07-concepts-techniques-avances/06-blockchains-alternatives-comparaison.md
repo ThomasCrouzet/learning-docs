@@ -25,7 +25,7 @@ cursus: "Phase 7 - Concepts techniques avances"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'innovation technique de chaque blockchain alternative (Solana, Cosmos, Polkadot, Cardano, Avalanche), comparer factuellement leurs performances, écosystèmes et incidents, comprendre les compromis que chacune fait par rapport au trilemme et évaluer ces projets sans battage médiatique.
+À la fin de cette fiche, tu sauras décrire l'innovation technique de chaque blockchain alternative (Solana, Cosmos, Polkadot, Cardano, Avalanche), comparer factuellement leurs performances, écosystèmes et incidents, comprendre les compromis que chacune fait par rapport au trilemme et évaluer ces projets sans battage médiatique.
 
 ---
 

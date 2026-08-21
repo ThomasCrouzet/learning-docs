@@ -22,7 +22,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras pousser une image Docker dans un registre cloud (ECR), créer un cluster ECS, déployer une application avec Fargate et configurer un load balancer pour la rendre accessible.
+À la fin de cette fiche, tu sauras pousser une image Docker dans un registre cloud (ECR), créer un cluster ECS, déployer une application avec Fargate et configurer un load balancer pour la rendre accessible.
 
 ---
 
@@ -150,7 +150,7 @@ Sans registre cloud, voici les problèmes rencontres :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer un dépôt ECR
+### Étape 1 : Créer un dépôt ECR
 
 ```bash
 # Creer un depot ECR pour stocker les images
@@ -268,7 +268,7 @@ abc123def456: Pushed
 
 ---
 
-### Étape 3 : Creer un cluster ECS
+### Étape 3 : Créer un cluster ECS
 
 ```bash
 # Creer un cluster ECS
@@ -294,7 +294,7 @@ aws ecs create-cluster \
 
 ---
 
-### Étape 4 : Creer une Task Définition
+### Étape 4 : Créer une Task Définition
 
 Créé un fichier `task-definition.json` :
 
@@ -372,7 +372,7 @@ aws ecs register-task-definition \
 
 ---
 
-### Étape 5 : Creer un service ECS avec Fargate
+### Étape 5 : Créer un service ECS avec Fargate
 
 ```bash
 # Creer le service ECS
@@ -487,7 +487,7 @@ aws logs delete-log-group --log-group-name /ecs/demo-app
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Utiliser le tag "latest" en production
 
@@ -529,7 +529,7 @@ aws logs delete-log-group --log-group-name /ecs/demo-app
 
 ## Exercice Pratique
 
-**Enonce** : Deploie une application web conteneurisee sur ECS Fargate :
+**Énoncé** : Deploie une application web conteneurisee sur ECS Fargate :
 
 1. Créé un dépôt ECR nomme `exercice-app`
 2. Construis une image Docker a partir du Dockerfile et du serveur fournis dans les étapes pratiques (ou une application de ton choix)

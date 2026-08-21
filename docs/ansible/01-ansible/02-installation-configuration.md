@@ -100,7 +100,7 @@ Le concept de "nœud géré" dans Ansible permet de traiter n'importe quelle mac
 - Un compte utilisateur auquel Ansible peut se connecter
 - Les droits `sudo` si les tâches nécessitent des privilèges administrateur
 
-**Analogie concrète** : Les nœuds gérés sont les musiciens de l'orchestre. Chaque musicien possède son propre instrument (son système d'exploitation, ses logiciels). Le musicien n'a besoin de rien de spécial pour recevoir les instructions du chef d'orchestre : il suffit qu'il soit présent (SSH actif) et qu'il sache lire (Python installé).
+**Analogie concrète** : Les nœuds gérés sont les musiciens de l'orchestre. Chaque musicien possède son propre instrument (son système d'exploitation, ses logiciels). Le musicien n'a besoin de rien de spécial pour recevoir les instructions du chef d'orchestre : il doit être présent (SSH actif) et savoir lire (Python installé).
 
 **Ce qu'un nœud géré n'est PAS** :
 

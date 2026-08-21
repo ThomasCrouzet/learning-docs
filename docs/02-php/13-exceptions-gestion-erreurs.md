@@ -661,9 +661,7 @@ class Inscription
 
         if (strlen($motDePasse) < 8) {
             $erreurs['motDePasse'] = "Le mot de passe doit avoir au moins 8 caractères";
-        }
-
-        if (!preg_match('/[A-Z]/', $motDePasse)) {
+        } elseif (!preg_match('/[A-Z]/', $motDePasse)) {
             $erreurs['motDePasse'] = "Le mot de passe doit contenir au moins une majuscule";
         }
 

@@ -24,7 +24,7 @@ cursus: "Phase 7 - Concepts techniques avances"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer ce qu'est le MEV, décrire les mécanismes de front-running, sandwich attack et back-running, citer les chiffres réels de l'extraction de valeur et comprendre les solutions techniques (Flashbots, PBS) ainsi que l'impact sur l'utilisateur ordinaire.
+À la fin de cette fiche, tu sauras expliquer ce qu'est le MEV, décrire les mécanismes de front-running, sandwich attack et back-running, citer les chiffres réels de l'extraction de valeur et comprendre les solutions techniques (Flashbots, PBS) ainsi que l'impact sur l'utilisateur ordinaire.
 
 ---
 

@@ -111,14 +111,14 @@ Sans boucle `for`, voici les problèmes rencontrés :
 
 Sans boucle `while`, voici les problèmes rencontrés :
 
-1. **Nombre d'itérations inconnu** : on ne sait pas a l'avance combien de fois il faudra répéter (par exemple, demander un mot de passe jusqu'a ce qu'il soit correct).
+1. **Nombre d'itérations inconnu** : on ne sait pas a l'avance combien de fois il faudra répéter (par exemple, demander un mot de passe jusqu'à ce qu'il soit correct).
 2. **Attente d'un événement** : on doit attendre qu'une condition spécifique soit remplie avant de continuer.
 
 **Comment la boucle `while` résout ces problèmes** :
 
 | Problème | Solution apportée par la boucle `while` |
 | --- | --- |
-| Nombre d'itérations inconnu | La boucle continue jusqu'a ce que la condition devienne fausse |
+| Nombre d'itérations inconnu | La boucle continue jusqu'à ce que la condition devienne fausse |
 | Attente d'un événement | La boucle vérifie la condition a chaque tour |
 
 **Comparaison `for` vs `while`** :

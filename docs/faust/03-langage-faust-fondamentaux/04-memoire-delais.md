@@ -646,7 +646,7 @@ process = + ~ *(0.5);
 
 ## Exercice Pratique
 
-**Enonce** : Implémenter un effet de delay avec feedback.
+**Énoncé** : Implémenter un effet de delay avec feedback.
 
 **Cahier des charges** :
 

@@ -270,6 +270,12 @@ console.log(`  Taux : ${stats.tauxCompletion}%`);
 
 ### Étape 4 : Créer les modules
 
+Crée d'abord les dossiers des modules :
+
+```bash
+mkdir -p src/models src/utils
+```
+
 Crée `src/models/tache.ts` :
 
 ```typescript
@@ -308,12 +314,6 @@ export function terminerTache(tache: Tache): Tache {
 }
 ```
 
-Crée le dossier `src/utils/` :
-
-```bash
-mkdir -p src/utils
-```
-
 Crée `src/utils/helpers.ts` :
 
 ```typescript
@@ -347,12 +347,6 @@ export function calculerStats(taches: Tache[]): Stats {
 
   return { total, terminees, enCours, tauxCompletion };
 }
-```
-
-Crée le dossier `src/models/` s'il n'existe pas :
-
-```bash
-mkdir -p src/models
 ```
 
 ---

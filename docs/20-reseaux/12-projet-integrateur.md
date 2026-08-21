@@ -16,13 +16,13 @@ cursus: "Réseaux"
 
 ## Prérequis
 
-- Avoir lu toutes les fiches du cursus (01 a 11)
+- Avoir lu toutes les fiches du cursus ([01](01-introduction-reseaux.md) à [11](11-architecture-entreprise.md))
 - Savoir utiliser Docker Compose
-- Connaitre les commandes de diagnostic réseau (ping, traceroute, nmap, ss, tcpdump)
+- Connaître les commandes de diagnostic réseau (ping, traceroute, nmap, ss, tcpdump)
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu auras conçu une architecture réseau complete avec un plan d'adressage, des règles de firewall, une DMZ, un reverse proxy avec load balancing et tu sauras documenter et tester chaque composant.
+À la fin de cette fiche, tu auras conçu une architecture réseau complete avec un plan d'adressage, des règles de firewall, une DMZ, un reverse proxy avec load balancing et tu sauras documenter et tester chaque composant.
 
 ---
 
@@ -85,7 +85,7 @@ L'architecture suit le modèle a 3 zones :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer la structure du projet
+### Étape 1 : Créer la structure du projet
 
 ```bash
 # Cree l'arborescence du projet
@@ -95,7 +95,7 @@ cd ~/reseau-cursus/projet-integrateur
 
 ---
 
-### Étape 2 : Creer le Docker Compose de l'architecture
+### Étape 2 : Créer le Docker Compose de l'architecture
 
 ```bash
 # Cree le fichier Docker Compose
@@ -215,7 +215,7 @@ COMPOSE
 
 ---
 
-### Étape 3 : Creer la configuration du reverse proxy
+### Étape 3 : Créer la configuration du reverse proxy
 
 ```bash
 # Configuration Nginx : reverse proxy + load balancer
@@ -280,7 +280,7 @@ EOF
 
 ---
 
-### Étape 4 : Creer les fichiers de contenu
+### Étape 4 : Créer les fichiers de contenu
 
 ```bash
 # Contenu du serveur web 1
@@ -328,7 +328,7 @@ EOF
 
 ---
 
-### Étape 5 : Creer la configuration Prometheus
+### Étape 5 : Créer la configuration Prometheus
 
 ```bash
 # Configuration Prometheus pour monitorer l'infrastructure
@@ -498,7 +498,7 @@ PING 10.0.2.21 (10.0.2.21): 56 data bytes
 
 ---
 
-### Étape 10 : Tester la connectivite de la base de données
+### Étape 10 : Tester la connectivité de la base de données
 
 ```bash
 # Verifie que PostgreSQL est accessible depuis le reseau LAN
@@ -526,7 +526,7 @@ docker compose exec postgres psql -U app -d technova -c "SELECT version();"
 
 ---
 
-### Étape 11 : Verifier le monitoring
+### Étape 11 : Vérifier le monitoring
 
 ```bash
 # Verifie que Prometheus collecte les metriques
@@ -721,7 +721,7 @@ cd ~/reseau-cursus/projet-integrateur && docker compose down
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Les réseaux Docker ne sont pas de vrais VLAN
 
@@ -783,7 +783,7 @@ Tout le reste entre DMZ et LAN : BLOQUE
 
 ## Exercice Pratique
 
-**Enonce** : Etends l'architecture TechNova avec les ameliorations suivantes :
+**Énoncé** : Etends l'architecture TechNova avec les ameliorations suivantes :
 
 1. Ajoute un troisième serveur web en DMZ pour augmenter la capacité
 2. Ajoute un health check Nginx qui verifie que les backends sont disponibles

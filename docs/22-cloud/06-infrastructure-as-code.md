@@ -21,7 +21,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras écrire un fichier Terraform pour créer des ressources cloud, utiliser les variables et les outputs, comprendre le state et exécuter le workflow plan/apply/destroy.
+À la fin de cette fiche, tu sauras écrire un fichier Terraform pour créer des ressources cloud, utiliser les variables et les outputs, comprendre le state et exécuter le workflow plan/apply/destroy.
 
 ---
 
@@ -39,7 +39,7 @@ Sans IaC, voici les problèmes rencontres :
 
 1. **Non-reproductibilité** : Tu as créé ton infrastructure en cliquant dans la console. Quand tu dois recreer le meme environnement (staging, disaster recovery), tu ne te souviens plus de tous les paramètres.
 2. **Pas de versionning** : Les modifications d'infrastructure ne sont pas tracees. Impossible de savoir qui a change quoi, quand, et pourquoi. Impossible de revenir en arriere.
-3. **Erreurs humaines** : Chaque clic manuel est une occasion d'erreur. Un mauvais security group, un mauvais CIDR, un oubli de tag. Les erreurs sont frequentes et coûteuses.
+3. **Erreurs humaines** : Chaque clic manuel est une occasion d'erreur. Un mauvais security group, un mauvais CIDR, un oubli de tag. Les erreurs sont fréquentes et coûteuses.
 
 **Comment l'IaC résout ces problèmes** :
 
@@ -189,7 +189,7 @@ on darwin_arm64
 
 ---
 
-### Étape 2 : Creer le premier projet Terraform
+### Étape 2 : Créer le premier projet Terraform
 
 > **Note - provider AWS v6** : Le provider AWS v6.0 est généralement disponible depuis juin 2025 (annonce HashiCorp du 18 juin 2025). En v6, l'argument `region` est _optionnel_ sur la plupart des ressources : s'il est omis, Terraform reprend la région du bloc `provider`. Il n'est pas obligatoire de le répéter sur chaque ressource. La contrainte `~> 6.0` ci-dessous cible cette série. Si tu dois rester sur v5, utilise `version = "~> 5.0"`.
 
@@ -492,7 +492,7 @@ Destroy complete! Resources: 2 destroyed.
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Modifier l'infrastructure dans la console après un deploy Terraform
 
@@ -534,7 +534,7 @@ Destroy complete! Resources: 2 destroyed.
 
 ## Exercice Pratique
 
-**Enonce** : Écris une configuration Terraform qui créé l'infrastructure suivante :
+**Énoncé** : Écris une configuration Terraform qui créé l'infrastructure suivante :
 
 1. Un VPC avec le CIDR `10.0.0.0/16`
 2. Un sous-réseau public avec le CIDR `10.0.1.0/24` dans la zone `eu-west-3a`

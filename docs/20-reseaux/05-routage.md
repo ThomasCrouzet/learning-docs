@@ -20,7 +20,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras lire et interpréter une table de routage, expliquer comment un routeur achemine les paquets, configurer une route statique, comprendre le fonctionnement du NAT/PAT, et utiliser `traceroute` pour diagnostiquer le chemin des paquets.
+À la fin de cette fiche, tu sauras lire et interpréter une table de routage, expliquer comment un routeur achemine les paquets, configurer une route statique, comprendre le fonctionnement du NAT/PAT, et utiliser `traceroute` pour diagnostiquer le chemin des paquets.
 
 ---
 
@@ -30,7 +30,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce que le routage ?
 
-**Définition** : Le routage est le processus par lequel un routeur détermine le meilleur chemin pour acheminer un paquet IP depuis sa source jusqu'a sa destination, en traversant un ou plusieurs réseaux intermédiaires. Le routage fonctionne a la couche 3 (Réseau) du modèle OSI.
+**Définition** : Le routage est le processus par lequel un routeur détermine le meilleur chemin pour acheminer un paquet IP depuis sa source jusqu'à sa destination, en traversant un ou plusieurs réseaux intermédiaires. Le routage fonctionne a la couche 3 (Réseau) du modèle OSI.
 
 **Le problème que le routage résout** :
 
@@ -48,7 +48,7 @@ Sans routage, voici les problèmes rencontres :
 | Pas de chemin vers Internet | La passerelle par défaut achemine les paquets vers les réseaux inconnus |
 | Pas de redondance | Le routage dynamique detecte les pannes et redirige le trafic |
 
-**Analogie concrète** : Le routage fonctionne comme le système postal. Quand tu envoies une lettre, le bureau de poste de ta ville (ton routeur) regarde l'adresse de destination. S'il s'agit d'une adresse locale, il la distribue directement. Sinon, il l'envoie au centre de tri regional (le routeur suivant), qui la transmet au centre de tri de la ville de destination, et ainsi de suite jusqu'a la livraison.
+**Analogie concrète** : Le routage fonctionne comme le système postal. Quand tu envoies une lettre, le bureau de poste de ta ville (ton routeur) regarde l'adresse de destination. S'il s'agit d'une adresse locale, il la distribue directement. Sinon, il l'envoie au centre de tri regional (le routeur suivant), qui la transmet au centre de tri de la ville de destination, et ainsi de suite jusqu'à la livraison.
 
 **Ce que le routage n'est PAS** :
 
@@ -214,7 +214,7 @@ Le routeur remplace l'adresse privée source par son adresse publique et attribu
 
 1. `traceroute` envoie un paquet avec TTL=1. Le premier routeur le reçoit, decremente le TTL a 0 et répond avec un message ICMP "Time Exceeded".
 2. Il envoie un paquet avec TTL=2. Le deuxième routeur fait de même.
-3. Le processus se repete en augmentant le TTL jusqu'a ce que le paquet atteigne la destination.
+3. Le processus se repete en augmentant le TTL jusqu'à ce que le paquet atteigne la destination.
 
 ```text
 TTL=1 → Routeur 1 repond (hop 1)
@@ -336,7 +336,7 @@ Ces routes ajoutees avec `ip route add` sont temporaires et disparaissent au red
 
 ---
 
-### Étape 5 : Verifier la table NAT du noyau
+### Étape 5 : Vérifier la table NAT du noyau
 
 ```bash
 # Affiche les connexions NAT actives (necessite conntrack)
@@ -420,7 +420,7 @@ Les compteurs `errors` et `dropped` doivent être a 0 en fonctionnement normal. 
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Confondre routage et commutation
 
@@ -450,7 +450,7 @@ Les compteurs `errors` et `dropped` doivent être a 0 en fonctionnement normal. 
 
 ⚠️ **Problème** : Tu vois `* * *` dans la sortie de `traceroute` et tu penses que le routeur est en panne.
 
-✅ **Solution** : `* * *` signifie que le routeur ne répond pas aux requêtes traceroute (il bloque les paquets ICMP ou UDP de sondage). C'est une configuration de sécurité courante. Si les hops suivants répondent, le routeur fonctionne correctement, il refuse simplement de s'identifier.
+✅ **Solution** : `* * *` signifie que le routeur ne répond pas aux requêtes traceroute (il bloque les paquets ICMP ou UDP de sondage). C'est une configuration de sécurité courante. Si les hops suivants répondent, le routeur fonctionne correctement : il refuse de s'identifier.
 
 ---
 
@@ -468,7 +468,7 @@ Les compteurs `errors` et `dropped` doivent être a 0 en fonctionnement normal. 
 
 ## Exercice Pratique
 
-**Enonce** : Analyse le routage de ta machine et diagnostique les chemins réseau.
+**Énoncé** : Analyse le routage de ta machine et diagnostique les chemins réseau.
 
 **Questions** :
 

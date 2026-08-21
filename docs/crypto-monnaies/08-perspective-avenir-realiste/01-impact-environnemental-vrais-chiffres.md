@@ -24,7 +24,7 @@ cursus: "Phase 8 - Perspective et avenir réaliste"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras citer les chiffres réels de consommation énergétique des principales blockchains, évaluer les arguments "pour" et "contre" de manière factuelle et comprendre pourquoi le débat environnemental concerne principalement Bitcoin.
+À la fin de cette fiche, tu sauras citer les chiffres réels de consommation énergétique des principales blockchains, évaluer les arguments "pour" et "contre" de manière factuelle et comprendre pourquoi le débat environnemental concerne principalement Bitcoin.
 
 ---
 

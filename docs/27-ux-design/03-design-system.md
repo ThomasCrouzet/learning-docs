@@ -669,7 +669,7 @@ Une page HTML qui documente visuellement toutes les couleurs, tailles de texte e
 
 | Action | Description |
 | --- | --- |
-| WebAIM Contrast Checker | Verifier le ratio de contraste entre deux couleurs (`https://webaim.org/resources/contrastchecker/`) |
+| WebAIM Contrast Checker | Vérifier le ratio de contraste entre deux couleurs (`https://webaim.org/resources/contrastchecker/`) |
 | Chrome DevTools > Éléments | Inspecter les variables CSS appliquées à un élément |
 | Chrome DevTools > Computed | Voir les valeurs calculees (tailles réelles en pixels) |
 | Type Scale (`https://typescale.com`) | Visualiser et tester différentes échelles typographiques |

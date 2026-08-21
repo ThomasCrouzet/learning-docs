@@ -17,9 +17,9 @@ cursus: "Ansible"
 
 ## Prérequis
 
-- [Fiches 01 à 09](../index.md) du cursus Ansible
-- Savoir écrire un playbook avec des tâches, des handlers et des templates (fiches [04](04-commandes-ad-hoc-modules.md), [06](06-variables-facts.md), [07](07-conditions-boucles.md))
-- Savoir utiliser les variables et les fichiers Jinja2 (fiches [05](05-playbooks-fondamentaux.md), [07](07-conditions-boucles.md))
+- [Fiches 01 à 09](index.md) du cursus Ansible
+- Savoir écrire un playbook avec des tâches, des handlers et des templates (fiches [05](05-playbooks-fondamentaux.md), [09](09-handlers-tags.md), [08](08-templates-jinja2.md))
+- Savoir utiliser les variables et les fichiers Jinja2 (fiches [06](06-variables-facts.md), [08](08-templates-jinja2.md))
 
 ## Objectif de cette fiche
 

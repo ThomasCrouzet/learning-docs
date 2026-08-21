@@ -292,7 +292,7 @@ sudo dhclient wlan0
 
 ---
 
-### Étape 5 : Verifier la sécurité d'un réseau Wi-Fi
+### Étape 5 : Vérifier la sécurité d'un réseau Wi-Fi
 
 ```bash
 # Affiche les details de securite du reseau connecte
@@ -453,7 +453,7 @@ Securite recommandee (du meilleur au pire) :
 2. Pour chaque réseau, noter : SSID, canal, fréquence, signal, protocole de sécurité
 3. Identifier les réseaux qui utilisent un protocole obsolète (WEP, WPA)
 4. Identifier les canaux les plus utilises en 2.4 GHz et recommander un canal optimal
-5. Verifier la configuration de sécurité de ton propre réseau
+5. Vérifier la configuration de sécurité de ton propre réseau
 
 **Indications** :
 

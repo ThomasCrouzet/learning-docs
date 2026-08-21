@@ -18,11 +18,11 @@ cursus: "Virtualisation"
 
 - Avoir lu la fiche [01 - Concepts de virtualisation](01-concepts-virtualisation.md)
 - Avoir un processeur avec la virtualisation matérielle activee (verifie avec `kvm-ok`)
-- Connaitre les commandes de base Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
+- Connaître les commandes de base Linux (cursus [Unix/Bash](../fondamentaux/02-unix-bash/index.md))
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras installer KVM et QEMU sur une distribution Debian/Ubuntu, créer des machines virtuelles en ligne de commande avec virsh et via l'interface graphique virt-manager, et configurer un réseau virtuel pour que tes VMs communiquent entre elles et avec l'extérieur.
+À la fin de cette fiche, tu sauras installer KVM et QEMU sur une distribution Debian/Ubuntu, créer des machines virtuelles en ligne de commande avec virsh et via l'interface graphique virt-manager, et configurer un réseau virtuel pour que tes VMs communiquent entre elles et avec l'extérieur.
 
 ---
 
@@ -96,7 +96,7 @@ Sans QEMU, KVM seul ne peut pas :
 
 Sans libvirt, voici les problèmes rencontres :
 
-1. **Commandes QEMU complexes** : Creer une VM avec QEMU directement necessite une commande avec des dizaines de paramètres (processeur, mémoire, disque, réseau, affichage).
+1. **Commandes QEMU complexes** : Créer une VM avec QEMU directement necessite une commande avec des dizaines de paramètres (processeur, mémoire, disque, réseau, affichage).
 2. **Pas de gestion centralisée** : Chaque VM lancee avec QEMU est un processus indépendant. Pas de moyen simple de lister, démarrer ou arrêter toutes les VMs.
 3. **Pas de persistance** : Si le serveur redemarre, les VMs lancees avec QEMU ne redemarrent pas automatiquement.
 
@@ -191,7 +191,7 @@ Après avoir ajoute ton utilisateur aux groupes, deconnecte-toi et reconnecte-to
 
 ---
 
-### Étape 3 : Verifier que les services fonctionnent
+### Étape 3 : Vérifier que les services fonctionnent
 
 ```bash
 # Verifier le statut du service libvirtd
@@ -217,7 +217,7 @@ Si tu as un processeur AMD, tu verras `kvm_amd` au lieu de `kvm_intel`.
 
 ---
 
-### Étape 4 : Verifier le réseau virtuel par défaut
+### Étape 4 : Vérifier le réseau virtuel par défaut
 
 ```bash
 # Lister les reseaux virtuels
@@ -282,7 +282,7 @@ Le fichier debian-12.15.0-amd64-netinst.iso est telecharge dans /var/lib/libvirt
 
 ---
 
-### Étape 6 : Creer une machine virtuelle avec virt-install
+### Étape 6 : Créer une machine virtuelle avec virt-install
 
 ```bash
 # Creer une VM Debian 12 avec virt-install
@@ -408,7 +408,7 @@ Autostart:      enable
 
 ---
 
-### Étape 10 : Creer un réseau virtuel isole
+### Étape 10 : Créer un réseau virtuel isole
 
 ```bash
 # Creer un fichier de definition du reseau
@@ -465,11 +465,11 @@ virsh net-list --all
 | `virsh net-list --all` | Lister les réseaux virtuels |
 | `virsh net-info <reseau>` | Informations sur un réseau |
 | `virt-install --osinfo list` | Lister les variantes d'OS (alias : `--os-variant`) |
-| `qemu-img create -f qcow2 <fichier> <taille>` | Creer une image disque |
+| `qemu-img create -f qcow2 <fichier> <taille>` | Créer une image disque |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Permission refusee sur virsh
 
@@ -541,7 +541,7 @@ virt-install --osinfo list | grep debian
 
 ## Exercice Pratique
 
-**Enonce** : Créé une machine virtuelle Debian 12 nommee `web-server` avec les specifications suivantes :
+**Énoncé** : Créé une machine virtuelle Debian 12 nommee `web-server` avec les specifications suivantes :
 
 - 1 Go de RAM
 - 1 vCPU
@@ -571,7 +571,7 @@ Après l'installation, configure le démarrage automatique de la VM et créé un
 
 ---
 
-**Creer la VM** :
+**Créer la VM** :
 
 ```bash
 virt-install \
@@ -592,7 +592,7 @@ virt-install \
 virsh autostart web-server
 ```
 
-**Creer le réseau isole** :
+**Créer le réseau isole** :
 
 ```bash
 cat > /tmp/reseau-backend.xml << 'EOF'

@@ -25,7 +25,7 @@ cursus: "Phase 7 - Concepts techniques avances"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le fonctionnement du Proof of Stake et de ses variantes (DPoS, BFT, PoA, PoH), décrire le passage d'Ethereum du PoW au PoS (The Merge), comparer factuellement les compromis de chaque mécanisme et comprendre qu'il n'existe pas de consensus parfait.
+À la fin de cette fiche, tu sauras expliquer le fonctionnement du Proof of Stake et de ses variantes (DPoS, BFT, PoA, PoH), décrire le passage d'Ethereum du PoW au PoS (The Merge), comparer factuellement les compromis de chaque mécanisme et comprendre qu'il n'existe pas de consensus parfait.
 
 ---
 

@@ -74,7 +74,7 @@ Quand un projet grandit, avoir tous les modules au même niveau dans un seul dos
 
 **Ce qu'un package n'est PAS** :
 
-- Un package n'est pas un package pip (comme `requests` ou `flask`). Un package Python est simplement un dossier avec `__init__.py`. Un package pip est un package distribué et installable.
+- Un package n'est pas un package pip (comme `requests` ou `flask`). Un package Python est un dossier avec `__init__.py`. Un package pip est un package distribué et installable.
 
 ---
 

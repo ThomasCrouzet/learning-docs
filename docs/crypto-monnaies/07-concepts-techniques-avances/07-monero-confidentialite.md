@@ -23,7 +23,7 @@ cursus: "Phase 7 - Concepts techniques avances"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer pourquoi Bitcoin est pseudonyme et non anonyme, décrire les quatre mécanismes de confidentialité de Monero, comparer Monero, Zcash et Bitcoin de façon factuelle, et comprendre les enjeux de régulation et les limites de cette technologie.
+À la fin de cette fiche, tu sauras expliquer pourquoi Bitcoin est pseudonyme et non anonyme, décrire les quatre mécanismes de confidentialité de Monero, comparer Monero, Zcash et Bitcoin de façon factuelle, et comprendre les enjeux de régulation et les limites de cette technologie.
 
 ---
 
@@ -58,7 +58,7 @@ Analogie : un pseudonyme sur un forum public.
   TOUS tes messages passes deviennent attribuables à toi
 
 Anonyme = on ne peut PAS faire le lien, même en essayant.
-Pseudonyme = on PEUT faire le lien, il suffit d'un seul point de fuite.
+Pseudonyme = on PEUT faire le lien dès qu'un seul point de fuite existe.
 ```
 
 **Ce que le pseudonymat de Bitcoin n'est PAS** :

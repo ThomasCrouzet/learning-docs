@@ -1031,7 +1031,7 @@ curl -X POST http://localhost:3000/api/auteurs \
 
 ---
 
-### Étape 13 : Verifier les index
+### Étape 13 : Vérifier les index
 
 Connecte-toi a mongosh pour inspecter les index créés :
 

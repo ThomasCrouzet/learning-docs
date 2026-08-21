@@ -22,7 +22,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'ascension de Binance, expliquer le rôle de BNB et de la BNB Smart Chain, lister les controverses majeures (régulatoires, juridiques, transparence) et évaluer factuellement la contribution et les risques que Binance représente pour l'écosystème.
+À la fin de cette fiche, tu sauras décrire l'ascension de Binance, expliquer le rôle de BNB et de la BNB Smart Chain, lister les controverses majeures (régulatoires, juridiques, transparence) et évaluer factuellement la contribution et les risques que Binance représente pour l'écosystème.
 
 ---
 

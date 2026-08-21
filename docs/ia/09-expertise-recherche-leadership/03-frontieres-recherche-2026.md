@@ -19,7 +19,7 @@ cursus: "Phase 9 - Expertise, recherche et leadership"
 
 ## Prérequis
 
-- Phases 1 à 8 du cursus IA lues et comprises
+- Phases 1 à 8 du cursus IA lues et comprises : [Phase 1](../01-fondamentaux-mathematiques/index.md) à [Phase 8](../08-specialisations-avancees/index.md)
 - Connaissance des architectures Transformer et des LLM
 - Familiarité avec les concepts d'entraînement, d'inférence et de scaling
 - Compréhension de base des métriques d'évaluation de modèles
@@ -360,7 +360,7 @@ Sans TTC, voici les problèmes rencontrés :
 | Self-consistency | Générer N réponses et voter pour la plus fréquente | Élevé (N forward passes) |
 | Self-correction | Générer, critiquer et réviser la réponse | Modéré (2-3 passes) |
 | Tree of Thought | Explorer plusieurs branches de raisonnement | Très élevé |
-| Verifier/Reward model | Un modèle séparé évalue la qualité de chaque réponse | Élevé |
+| Vérifier/Reward model | Un modèle séparé évalue la qualité de chaque réponse | Élevé |
 
 ---
 

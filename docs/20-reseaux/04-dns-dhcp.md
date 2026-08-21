@@ -20,7 +20,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le processus de resolution DNS, lire et interpréter les principaux types d'enregistrements DNS, utiliser les outils de diagnostic DNS (`nslookup`, `dig`), et décrire le mécanisme d'attribution d'adresse par DHCP.
+À la fin de cette fiche, tu sauras expliquer le processus de resolution DNS, lire et interpréter les principaux types d'enregistrements DNS, utiliser les outils de diagnostic DNS (`nslookup`, `dig`), et décrire le mécanisme d'attribution d'adresse par DHCP.
 
 ---
 
@@ -52,7 +52,7 @@ Sans DNS, voici les problèmes rencontres :
 
 **Ce que le DNS n'est PAS** :
 
-- Le DNS n'est pas un service d'hebergement. Il ne stocke pas les sites web, il indique simplement ou les trouver (l'adresse IP du serveur).
+- Le DNS n'est pas un service d'hébergement. Il ne stocke pas les sites web, il indique où les trouver (l'adresse IP du serveur).
 - Le DNS n'est pas instantané. Les enregistrements DNS sont mis en cache a différents niveaux. Après une modification, il faut attendre l'expiration du cache (le TTL) pour que le changement se propage.
 
 ---
@@ -392,7 +392,7 @@ Tu vois les 4 étapes de la resolution : racine → TLD → autoritaire → rép
 
 ---
 
-### Étape 6 : Verifier ta configuration DHCP
+### Étape 6 : Vérifier ta configuration DHCP
 
 ```bash
 # Affiche les informations du bail DHCP actuel
@@ -464,7 +464,7 @@ Tu vois les étapes DORA en action : DISCOVER, OFFER, REQUEST, ACK.
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Croire que le DNS est instantané
 
@@ -512,7 +512,7 @@ Tu vois les étapes DORA en action : DISCOVER, OFFER, REQUEST, ACK.
 
 ## Exercice Pratique
 
-**Enonce** : Utilise les outils DNS pour explorer les enregistrements de plusieurs domaines et diagnostiquer la configuration DNS de ta machine.
+**Énoncé** : Utilise les outils DNS pour explorer les enregistrements de plusieurs domaines et diagnostiquer la configuration DNS de ta machine.
 
 **Questions** :
 

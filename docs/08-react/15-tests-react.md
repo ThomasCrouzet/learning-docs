@@ -18,7 +18,7 @@ cursus: "React"
 
 - Fiche précédente : [14 - Formulaires avancés](14-formulaires-avances.md)
 - Savoir créer des composants React avec hooks
-- Connaître les bases du testing (cursus Testing et Qualité recommandé)
+- Connaître les bases du testing ([cursus Testing et Qualité](../09-testing/index.md) recommandé)
 
 ## Objectif de cette fiche
 

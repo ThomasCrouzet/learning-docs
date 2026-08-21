@@ -17,8 +17,8 @@ cursus: "Phase 7 - Maîtrise et contribution"
 
 ## Prérequis
 
-- Avoir complété la **Phase 4 - DSP appliqué** (oscillateurs, filtres, effets, synthèse)
-- Avoir complété la **Phase 5 - Déploiement et architectures** (faust2jack, faust2juce, faust2wasm, etc.)
+- Avoir complété la **[Phase 4 - DSP appliqué](../04-dsp-applique/index.md)** (oscillateurs, filtres, effets, synthèse)
+- Avoir complété la **[Phase 5 - Déploiement et architectures](../05-deploiement-architectures/index.md)** (faust2jack, faust2juce, faust2wasm, etc.)
 - Comprendre le fonctionnement du compilateur Faust (code Faust -> code C++ -> binaire)
 - Savoir compiler un programme Faust avec différentes architectures cibles
 
@@ -929,7 +929,7 @@ faust2bench programme_optimise.dsp
 
 ## Exercice Pratique
 
-**Enonce** : Optimiser une reverb FDN (Feedback Delay Network) complexe en appliquant les techniques de cette fiche.
+**Énoncé** : Optimiser une reverb FDN (Feedback Delay Network) complexe en appliquant les techniques de cette fiche.
 
 **Cahier des charges** :
 

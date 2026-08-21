@@ -21,7 +21,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras consulter des métriques et des logs dans CloudWatch, créer des alarmes pour détecter les problèmes, construire un tableau de bord de surveillance et configurer des notifications par e-mail ou SMS.
+À la fin de cette fiche, tu sauras consulter des métriques et des logs dans CloudWatch, créer des alarmes pour détecter les problèmes, construire un tableau de bord de surveillance et configurer des notifications par e-mail ou SMS.
 
 ---
 
@@ -213,7 +213,7 @@ aws cloudwatch get-metric-statistics \
 
 ---
 
-### Étape 2 : Creer un groupe de logs et envoyer des logs
+### Étape 2 : Créer un groupe de logs et envoyer des logs
 
 ```bash
 # Creer un groupe de logs avec une retention de 30 jours
@@ -308,7 +308,7 @@ fields @timestamp, @message
 
 ---
 
-### Étape 4 : Creer un sujet SNS pour les notifications
+### Étape 4 : Créer un sujet SNS pour les notifications
 
 ```bash
 # Creer un sujet SNS pour les notifications d'alarme
@@ -333,7 +333,7 @@ Un e-mail de confirmation est envoyé. Tu dois cliquer sur le lien pour activer 
 
 ---
 
-### Étape 5 : Creer une alarme CloudWatch
+### Étape 5 : Créer une alarme CloudWatch
 
 ```bash
 # Alarme CPU : se declenche si le CPU depasse 80% pendant 5 minutes
@@ -380,7 +380,7 @@ aws cloudwatch describe-alarms \
 
 ---
 
-### Étape 6 : Creer des alarmes pour RDS et ECS
+### Étape 6 : Créer des alarmes pour RDS et ECS
 
 ```bash
 # Alarme RDS : connexions a la base de donnees
@@ -414,7 +414,7 @@ aws cloudwatch put-metric-alarm \
 
 ---
 
-### Étape 7 : Creer un tableau de bord CloudWatch
+### Étape 7 : Créer un tableau de bord CloudWatch
 
 ```bash
 # Creer un tableau de bord
@@ -541,7 +541,7 @@ aws logs delete-log-group --log-group-name /application/demo-monitoring
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Ne surveiller que le CPU
 
@@ -610,7 +610,7 @@ Les logs JSON permettent d'utiliser Logs Insights sans regex : `filter level = "
 
 ## Exercice Pratique
 
-**Enonce** : Mets en place le monitoring complet pour une application web composee d'une instance EC2, d'une base de données RDS et d'un service ECS :
+**Énoncé** : Mets en place le monitoring complet pour une application web composee d'une instance EC2, d'une base de données RDS et d'un service ECS :
 
 1. Créé un sujet SNS `alarmes-exercice` avec un abonnement e-mail
 2. Créé les alarmes suivantes :
@@ -643,7 +643,7 @@ Les logs JSON permettent d'utiliser Logs Insights sans regex : `filter level = "
 
 ---
 
-**1. Creer le sujet SNS** :
+**1. Créer le sujet SNS** :
 
 ```bash
 # Creer le sujet
@@ -656,7 +656,7 @@ aws sns subscribe \
   --notification-endpoint ton-email@exemple.fr
 ```
 
-**2. Creer les 4 alarmes** :
+**2. Créer les 4 alarmes** :
 
 ```bash
 # Alarme 1 : CPU EC2 > 80% pendant 10 minutes
@@ -717,7 +717,7 @@ aws cloudwatch put-metric-alarm \
   --alarm-actions arn:aws:sns:eu-west-3:123456789012:alarmes-exercice
 ```
 
-**3. Creer le tableau de bord** :
+**3. Créer le tableau de bord** :
 
 ```bash
 aws cloudwatch put-dashboard \
@@ -768,7 +768,7 @@ aws cloudwatch put-dashboard \
   }'
 ```
 
-**4. Creer le groupe de logs** :
+**4. Créer le groupe de logs** :
 
 ```bash
 aws logs create-log-group --log-group-name /application/exercice

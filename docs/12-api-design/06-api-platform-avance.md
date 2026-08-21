@@ -3,7 +3,7 @@ tags:
   - API
   - Avancé
   - Pratique
-description: "Maîtriser API Platform avancé : groupes de sérialisation, sous-ressources, opérations custom, Data Processors et pagination."
+description: "Maîtriser API Platform avancé : groupes de sérialisation, sous-ressources, opérations custom, State Processors et pagination."
 estimated_time: "90 min"
 fiche_number: 6
 total_fiches: 10
@@ -12,7 +12,7 @@ cursus: "API Design et Documentation"
 
 # 06 - API Platform - Avancé
 
-> **En bref** : Cette fiche couvre les fonctionnalités avancées d'API Platform : groupes de sérialisation contextuels, sous-ressources, opérations personnalisées, Data Providers et Processors, événements et pagination avancée. Lecture estimée : 90 min.
+> **En bref** : Cette fiche couvre les fonctionnalités avancées d'API Platform : groupes de sérialisation contextuels, sous-ressources, opérations personnalisées, State Providers et State Processors, événements et pagination avancée. Lecture estimée : 90 min.
 
 ## Prérequis
 

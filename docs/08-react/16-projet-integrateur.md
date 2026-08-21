@@ -16,7 +16,7 @@ cursus: "React"
 
 ## Prérequis
 
-- Toutes les fiches précédentes du cursus React (01 à 15)
+- Toutes les fiches précédentes du cursus React ([01](01-introduction-react.md) à [15](15-tests-react.md))
 - Un projet Symfony avec une API JSON fonctionnelle (ou simulée avec des fichiers JSON locaux)
 - Node.js 22 LTS installé
 

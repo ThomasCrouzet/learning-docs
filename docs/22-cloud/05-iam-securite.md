@@ -21,7 +21,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras créer des utilisateurs et des groupes IAM, écrire des politiques de permissions, attribuer des rôles aux services et activer l'authentification multi-facteur (MFA).
+À la fin de cette fiche, tu sauras créer des utilisateurs et des groupes IAM, écrire des politiques de permissions, attribuer des rôles aux services et activer l'authentification multi-facteur (MFA).
 
 ---
 
@@ -194,7 +194,7 @@ Ce journal montre que l'utilisateur `thomas` a supprime l'instance `i-0abc123` l
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer un utilisateur IAM
+### Étape 1 : Créer un utilisateur IAM
 
 ```bash
 # Creer un utilisateur IAM
@@ -224,7 +224,7 @@ Note bien la clé secrete : elle n'est affichee qu'une seule fois. Ne la commit 
 
 ---
 
-### Étape 2 : Creer un groupe et y ajouter l'utilisateur
+### Étape 2 : Créer un groupe et y ajouter l'utilisateur
 
 ```bash
 # Creer un groupe "developpeurs"
@@ -255,7 +255,7 @@ aws iam get-group --group-name developpeurs
 
 ---
 
-### Étape 3 : Creer et attacher une politique personnalisee
+### Étape 3 : Créer et attacher une politique personnalisee
 
 ```bash
 # Creer le fichier de politique
@@ -308,7 +308,7 @@ aws iam list-attached-group-policies --group-name developpeurs
 
 ---
 
-### Étape 4 : Creer un rôle pour un service
+### Étape 4 : Créer un rôle pour un service
 
 ```bash
 # Creer le fichier de trust policy (qui peut assumer le role)
@@ -465,19 +465,19 @@ Toutes les ressources IAM sont supprimees.
 
 | Commande | Action |
 | --- | --- |
-| `aws iam create-user` | Creer un utilisateur |
-| `aws iam create-group` | Creer un groupe |
+| `aws iam create-user` | Créer un utilisateur |
+| `aws iam create-group` | Créer un groupe |
 | `aws iam add-user-to-group` | Ajouter un utilisateur a un groupe |
-| `aws iam create-policy` | Creer une politique |
+| `aws iam create-policy` | Créer une politique |
 | `aws iam attach-group-policy` | Attacher une politique a un groupe |
-| `aws iam create-role` | Creer un rôle |
+| `aws iam create-role` | Créer un rôle |
 | `aws iam attach-role-policy` | Attacher une politique a un rôle |
 | `aws cloudtrail lookup-events` | Consulter les événements d'audit |
-| `aws sts get-caller-identity` | Verifier l'identité courante |
+| `aws sts get-caller-identity` | Vérifier l'identité courante |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Utiliser le compte root au quotidien
 
@@ -534,7 +534,7 @@ aws iam get-credential-report --output text --query Content | base64 -d
 
 ## Exercice Pratique
 
-**Enonce** : Tu geres une équipe de trois personnes avec les besoins suivants :
+**Énoncé** : Tu geres une équipe de trois personnes avec les besoins suivants :
 
 1. **Alice** (développeur) : doit pouvoir lire et écrire dans le bucket S3 `app-assets` et déployer des fonctions Lambda
 2. **Bob** (ops) : doit pouvoir gérer les instances EC2 (lancer, arrêter, terminer) et configurer les security groups

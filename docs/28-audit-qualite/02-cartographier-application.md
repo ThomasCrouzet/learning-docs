@@ -17,8 +17,8 @@ cursus: "Audit et Qualité"
 ## Prérequis
 
 - Fiche 1 : [Pourquoi auditer une application existante](01-pourquoi-auditer.md)
-- Cursus Symfony (contrôleurs, routes, entités)
-- Cursus 09-testing (notion de tests fonctionnels)
+- [Cursus Symfony](../03-symfony/index.md) (contrôleurs, routes, entités)
+- [Cursus Testing et Qualité](../09-testing/index.md) (notion de tests fonctionnels)
 
 ## Objectif de cette fiche
 

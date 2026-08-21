@@ -112,7 +112,7 @@ Sans système de types, voici les problèmes rencontrés :
 
 Sans typage dynamique (dans un langage a typage statique comme Java), voici les problèmes rencontrés :
 
-1. **Verbosité** : il faut écrire `int age = 25;` au lieu de simplement `age = 25`. Chaque variable nécessite une déclaration de type.
+1. **Verbosité** : il faut écrire `int age = 25;` au lieu de `age = 25`. Chaque variable nécessite une déclaration de type.
 2. **Rigidité** : une variable déclarée comme `int` ne peut jamais contenir un texte. Il faut créer une nouvelle variable.
 
 **Comment le typage dynamique résout ces problèmes** :

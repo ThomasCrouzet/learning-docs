@@ -19,7 +19,7 @@ cursus: "Python Data"
 
 - Avoir lu la fiche [01 - Introduction à l'analyse de données](01-introduction-data.md)
 - Avoir installe NumPy dans un environnement virtuel
-- Connaitre les listes Python et les boucles `for`
+- Connaître les listes Python et les boucles `for`
 
 ## Objectif de cette fiche
 

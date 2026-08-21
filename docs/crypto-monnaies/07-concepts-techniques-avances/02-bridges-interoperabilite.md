@@ -22,7 +22,7 @@ cursus: "Phase 7 - Concepts techniques avances"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer les différents mécanismes de bridge (lock-and-mint, burn-and-mint, liquidity pools), identifier pourquoi les bridges sont les cibles preferees des hackers, citer les plus grands hacks de bridges et évaluer les risques de toute opération cross-chain.
+À la fin de cette fiche, tu sauras expliquer les différents mécanismes de bridge (lock-and-mint, burn-and-mint, liquidity pools), identifier pourquoi les bridges sont les cibles preferees des hackers, citer les plus grands hacks de bridges et évaluer les risques de toute opération cross-chain.
 
 ---
 

@@ -21,7 +21,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'histoire de SatoshiLabs et Trezor, expliquer la philosophie open source et ses conséquences sur la sécurité, identifier les vulnérabilités connues des anciens modèles et comparer factuellement Trezor et Ledger.
+À la fin de cette fiche, tu sauras décrire l'histoire de SatoshiLabs et Trezor, expliquer la philosophie open source et ses conséquences sur la sécurité, identifier les vulnérabilités connues des anciens modèles et comparer factuellement Trezor et Ledger.
 
 ---
 

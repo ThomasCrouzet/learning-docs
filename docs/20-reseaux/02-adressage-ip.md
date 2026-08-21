@@ -20,7 +20,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras lire et écrire une adresse IPv4, calculer un masque de sous-réseau, utiliser la notation CIDR, déterminer si deux machines sont sur le meme réseau, et identifier les differences fondamentales entre IPv4 et IPv6.
+À la fin de cette fiche, tu sauras lire et écrire une adresse IPv4, calculer un masque de sous-réseau, utiliser la notation CIDR, déterminer si deux machines sont sur le meme réseau, et identifier les differences fondamentales entre IPv4 et IPv6.
 
 ---
 
@@ -431,7 +431,7 @@ Hosts/Net: 62
 
 ---
 
-### Étape 5 : Verifier la connectivite IPv6
+### Étape 5 : Vérifier la connectivité IPv6
 
 ```bash
 # Affiche uniquement les adresses IPv6
@@ -510,12 +510,12 @@ Adresse réseau différente (`192.168.2.0/24`) → Machine C est sur un autre r�
 | `ip -4 addr show eth0` | Affiche l'adresse IPv4 de l'interface eth0 |
 | `ip -6 addr show` | Affiche les adresses IPv6 |
 | `ipcalc <adresse>/<masque>` | Calcule les informations du sous-réseau |
-| `ping -6 -c 4 ::1` | Teste la connectivite IPv6 vers le loopback |
+| `ping -6 -c 4 ::1` | Teste la connectivité IPv6 vers le loopback |
 | `hostname -I` | Affiche toutes les adresses IP de la machine |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Confondre adresse réseau et adresse de broadcast
 
@@ -564,7 +564,7 @@ Adresse réseau différente (`192.168.2.0/24`) → Machine C est sur un autre r�
 
 ## Exercice Pratique
 
-**Enonce** : Reponds aux questions suivantes en utilisant les commandes et les connaissances acquises dans cette fiche.
+**Énoncé** : Reponds aux questions suivantes en utilisant les commandes et les connaissances acquises dans cette fiche.
 
 **Questions** :
 

@@ -389,7 +389,7 @@ Avec FlashList v2, la migration est encore plus simple qu'en v1 : il n'y a plus 
 
 ⚠️ **Problème** : Copier un exemple FlashList v1 qui inclut `estimatedItemSize={50}` dans ton code v2. La prop est supprimée en v2 : elle est ignorée et peut générer un avertissement dans la console.
 
-✅ **Solution** : Retire simplement `estimatedItemSize` de ton code. FlashList v2 mesure automatiquement les dimensions ; aucune estimation n'est nécessaire.
+✅ **Solution** : Retire `estimatedItemSize` de ton code. FlashList v2 mesure automatiquement les dimensions ; aucune estimation n'est nécessaire.
 
 ```tsx
 // ❌ Incorrect avec FlashList v2 : prop supprimée, ignorée

@@ -139,7 +139,7 @@ Sans rendu conditionnel :
 // Utilise quand tu veux afficher un élément OU un autre
 function Statut({ connecte }: { connecte: boolean }) {
   return (
-    <p>{connecte ? "Bienvenue !" : "Veuillez vous connecter"}</p>
+    <p>{connecte ? "Bienvenue !" : "Connecte-toi"}</p>
   );
 }
 

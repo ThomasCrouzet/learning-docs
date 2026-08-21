@@ -17,12 +17,12 @@ cursus: "Réseaux"
 ## Prérequis
 
 - Avoir lu la fiche [09 - Wi-Fi et sécurité sans fil](09-wifi-securite.md)
-- Connaitre les bases de TCP/IP (adresses IP, ports, protocoles)
+- Connaître les bases de TCP/IP (adresses IP, ports, protocoles)
 - Savoir utiliser un terminal Linux
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras diagnostiquer les problèmes réseau courants en utilisant les bons outils au bon moment, capturer et analyser du trafic réseau, et scanner un réseau pour identifier les machines et services actifs.
+À la fin de cette fiche, tu sauras diagnostiquer les problèmes réseau courants en utilisant les bons outils au bon moment, capturer et analyser du trafic réseau, et scanner un réseau pour identifier les machines et services actifs.
 
 ---
 
@@ -32,7 +32,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce que le diagnostic réseau ?
 
-**Définition** : Le diagnostic réseau est l'ensemble des techniques et outils qui permettent d'identifier, localiser et résoudre les problèmes de communication entre machines. Il suit une méthodologie par couches : on verifie la connectivite physique, puis la couche IP, puis la couche transport, puis la couche application.
+**Définition** : Le diagnostic réseau est l'ensemble des techniques et outils qui permettent d'identifier, localiser et résoudre les problèmes de communication entre machines. Il suit une méthodologie par couches : on verifie la connectivité physique, puis la couche IP, puis la couche transport, puis la couche application.
 
 **Le problème que le diagnostic réseau résout** :
 
@@ -65,7 +65,7 @@ Sans méthodologie de diagnostic, voici les problèmes rencontres :
 
 ### Qu'est-ce que ping ?
 
-**Définition** : `ping` est un outil qui envoie des paquets ICMP Echo Request a une machine distante et attend les réponses (ICMP Echo Reply). Il permet de vérifier la connectivite et de mesurer la latence.
+**Définition** : `ping` est un outil qui envoie des paquets ICMP Echo Request a une machine distante et attend les réponses (ICMP Echo Reply). Il permet de vérifier la connectivité et de mesurer la latence.
 
 **Les informations fournies par ping** :
 
@@ -469,7 +469,7 @@ curl "http://${EXAMPLE_IP}"
 
 | Commande | Action |
 | --- | --- |
-| `ping -c 4 <host>` | Teste la connectivite (4 paquets) |
+| `ping -c 4 <host>` | Teste la connectivité (4 paquets) |
 | `traceroute <host>` | Affiche le chemin réseau |
 | `mtr --report <host>` | Combine ping et traceroute |
 | `sudo ss -tlnp` | Liste les ports TCP en écoute |
@@ -485,11 +485,11 @@ curl "http://${EXAMPLE_IP}"
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
-### Piège 1 : Ping bloque ne signifie pas machine eteinte
+### Piège 1 : Ping bloque ne signifie pas machine éteinte
 
-⚠️ **Problème** : Tu testes la connectivite avec ping et tu ne reçois pas de réponse. Tu conclus que la machine est eteinte, alors qu'elle a simplement un firewall qui bloque ICMP.
+⚠️ **Problème** : Tu testes la connectivité avec ping et tu ne reçois pas de réponse. Tu conclus que la machine est éteinte, alors qu'elle a un firewall qui bloque ICMP.
 
 ✅ **Solution** : Utilise d'autres méthodes pour vérifier :
 
@@ -552,7 +552,7 @@ dig example.com @1.1.1.1          # DNS Cloudflare
 
 ## Checklist de Validation
 
-- [ ] Je sais utiliser ping pour tester la connectivite et mesurer la latence
+- [ ] Je sais utiliser ping pour tester la connectivité et mesurer la latence
 - [ ] Je sais utiliser traceroute pour identifier le chemin réseau
 - [ ] Je sais utiliser ss pour lister les ports en écoute et les connexions actives
 - [ ] Je sais capturer du trafic avec tcpdump et sauvegarder dans un fichier pcap
@@ -565,7 +565,7 @@ dig example.com @1.1.1.1          # DNS Cloudflare
 
 ## Exercice Pratique
 
-**Enonce** : Realise un diagnostic réseau complet en suivant ces étapes :
+**Énoncé** : Realise un diagnostic réseau complet en suivant ces étapes :
 
 1. Verifie que `example.com` est joignable (ping)
 2. Trace le chemin réseau vers `example.com` (traceroute)

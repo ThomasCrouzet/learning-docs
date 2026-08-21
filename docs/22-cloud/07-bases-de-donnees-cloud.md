@@ -22,7 +22,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras créer une base de données RDS (PostgreSQL), une table DynamoDB et un cluster ElastiCache, et tu sauras choisir le bon type de base de données selon ton cas d'usage.
+À la fin de cette fiche, tu sauras créer une base de données RDS (PostgreSQL), une table DynamoDB et un cluster ElastiCache, et tu sauras choisir le bon type de base de données selon ton cas d'usage.
 
 ---
 
@@ -179,7 +179,7 @@ Sans cache, voici les problèmes rencontres :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer une instance RDS PostgreSQL
+### Étape 1 : Créer une instance RDS PostgreSQL
 
 ```bash
 # Creer un groupe de sous-reseaux pour RDS
@@ -294,7 +294,7 @@ SELECT * FROM utilisateurs;
 
 ---
 
-### Étape 3 : Creer une table DynamoDB
+### Étape 3 : Créer une table DynamoDB
 
 ```bash
 # Creer une table DynamoDB pour des sessions utilisateur
@@ -378,7 +378,7 @@ aws dynamodb get-item \
 
 ---
 
-### Étape 5 : Creer un cluster ElastiCache Redis
+### Étape 5 : Créer un cluster ElastiCache Redis
 
 ```bash
 # Creer un cluster ElastiCache Redis
@@ -482,7 +482,7 @@ aws rds delete-db-subnet-group --db-subnet-group-name demo-subnet-group
 | Commande | Action |
 | --- | --- |
 | `aws rds describe-db-instances` | Lister toutes les instances RDS |
-| `aws rds create-db-snapshot` | Creer un snapshot manuel |
+| `aws rds create-db-snapshot` | Créer un snapshot manuel |
 | `aws rds restore-db-instance-from-db-snapshot` | Restaurer depuis un snapshot |
 | `aws dynamodb list-tables` | Lister les tables DynamoDB |
 | `aws dynamodb scan --table-name <nom>` | Lire tous les éléments d'une table |
@@ -492,7 +492,7 @@ aws rds delete-db-subnet-group --db-subnet-group-name demo-subnet-group
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Choisir NoSQL par défaut
 
@@ -534,7 +534,7 @@ aws rds delete-db-subnet-group --db-subnet-group-name demo-subnet-group
 
 ## Exercice Pratique
 
-**Enonce** : Deploie l'infrastructure de base de données pour une application de gestion de taches :
+**Énoncé** : Deploie l'infrastructure de base de données pour une application de gestion de taches :
 
 1. Créé une instance RDS PostgreSQL `db.t3.micro` nommee `todo-db` avec :
    - Le moteur PostgreSQL 16
@@ -568,7 +568,7 @@ aws rds delete-db-subnet-group --db-subnet-group-name demo-subnet-group
 
 ---
 
-**Creer l'instance RDS** :
+**Créer l'instance RDS** :
 
 ```bash
 # Creer l'instance RDS avec chiffrement
@@ -587,7 +587,7 @@ aws rds create-db-instance \
   --tags Key=Application,Value=todo Key=Environment,Value=dev
 ```
 
-**Creer la table DynamoDB** :
+**Créer la table DynamoDB** :
 
 ```bash
 # Creer la table de sessions
@@ -663,7 +663,7 @@ aws dynamodb get-item \
 }
 ```
 
-**Verifier le statut des ressources** :
+**Vérifier le statut des ressources** :
 
 ```bash
 # Statut RDS

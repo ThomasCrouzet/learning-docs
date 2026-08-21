@@ -17,11 +17,11 @@ cursus: "Services système"
 ## Prérequis
 
 - Avoir lu la fiche [Annuaire LDAP](04-annuaire-ldap.md)
-- Connaitre les bases de l'adressage IP (adresses, masques, sous-réseaux) - cursus [Réseaux](../20-reseaux/index.md)
+- Connaître les bases de l'adressage IP (adresses, masques, sous-réseaux) - cursus [Réseaux](../20-reseaux/index.md)
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le protocole DHCP et son fonctionnement en 4 étapes (DORA), configurer un serveur DHCP avec ISC DHCP et dnsmasq, définir des plages d'adresses et des réservations statiques, configurer les options DHCP (passerelle, DNS, domaine) et diagnostiquer les problèmes de distribution d'adresses.
+À la fin de cette fiche, tu sauras expliquer le protocole DHCP et son fonctionnement en 4 étapes (DORA), configurer un serveur DHCP avec ISC DHCP et dnsmasq, définir des plages d'adresses et des réservations statiques, configurer les options DHCP (passerelle, DNS, domaine) et diagnostiquer les problèmes de distribution d'adresses.
 
 ---
 
@@ -421,7 +421,7 @@ docker network rm lab-dhcp-net 2>/dev/null
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Deux serveurs DHCP sur le meme réseau
 
@@ -483,7 +483,7 @@ docker network rm lab-dhcp-net 2>/dev/null
 
 ## Exercice Pratique
 
-**Enonce** : Configure un serveur DHCP pour un réseau d'entreprise `10.0.0.0/24` :
+**Énoncé** : Configure un serveur DHCP pour un réseau d'entreprise `10.0.0.0/24` :
 
 1. Plage dynamique : `10.0.0.100` a `10.0.0.200`
 2. Passerelle : `10.0.0.1`

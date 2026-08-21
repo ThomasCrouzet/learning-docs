@@ -167,11 +167,19 @@ Dans le même fichier (`ProductCrudController.php`), ajoute cette nouvelle méth
 
 Elle doit s'appeler `duplicateProduct` (comme défini dans `linkToCrudAction`) et prendre en paramètre `AdminContext`.
 
-```php
-    use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
-    use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
-    // ...
+Ajoute ces imports en haut du fichier :
 
+```php
+use Doctrine\ORM\EntityManagerInterface;
+use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminRoute;
+use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
+```
+
+Puis ajoute cette méthode :
+
+```php
+    #[AdminRoute('/{entityId}/duplicate')]
     public function duplicateProduct(AdminContext $context, AdminUrlGenerator $adminUrlGenerator, EntityManagerInterface $entityManager)
     {
         /** @var Product $product */
@@ -303,6 +311,7 @@ class ProductCrudController extends AbstractCrudController
         ;
     }
 
+    #[AdminRoute('/{entityId}/duplicate')]
     public function duplicateProduct(AdminContext $context, AdminUrlGenerator $generator, EntityManagerInterface $em)
     {
         $product = $context->getEntity()->getInstance();

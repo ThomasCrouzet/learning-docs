@@ -23,7 +23,7 @@ cursus: "Phase 8 - Perspective et avenir réaliste"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras définir ce qu'est une CBDC, expliquer les différences fondamentales avec les crypto-monnaies, identifier les projets majeurs en cours et évaluer les opportunités et les risques de ces monnaies numériques d'État.
+À la fin de cette fiche, tu sauras définir ce qu'est une CBDC, expliquer les différences fondamentales avec les crypto-monnaies, identifier les projets majeurs en cours et évaluer les opportunités et les risques de ces monnaies numériques d'État.
 
 ---
 

@@ -4,6 +4,9 @@
 
 const PHRASE_RULES = [
   { pattern: /Lecture estimee/g, replacement: 'Lecture estimée' },
+  { pattern: /\bA la fin\b/g, replacement: 'À la fin' },
+  { pattern: /\bjusqu'a\b/g, replacement: "jusqu'à" },
+  { pattern: /\bEnonce\b/g, replacement: 'Énoncé' },
   { pattern: /Mis a jour/g, replacement: 'Mis à jour' },
   { pattern: /Analogie concrete/g, replacement: 'Analogie concrète' },
   { pattern: /! Corrige\b/g, replacement: '! Corrigé' },
@@ -215,6 +218,7 @@ const WORD_RULES = [
   // Groupe 3 - Verbes : uniquement les formes sans ambiguïté
   // Infinitifs (toujours sûrs)
   { pattern: /\bcreer\b/g, replacement: 'créer' },
+  { pattern: /\bCreer\b/g, replacement: 'Créer' },
   { pattern: /\bgenerer\b/g, replacement: 'générer' },
   { pattern: /\bexecuter\b/g, replacement: 'exécuter' },
   { pattern: /\bverifier\b/g, replacement: 'vérifier' },
@@ -247,6 +251,7 @@ const WORD_RULES = [
   { pattern: /\bdefinis?\b/g, replacement: (m) => m.replace('defini', 'défini') },
   { pattern: /\bDefinis?\b/g, replacement: (m) => m.replace('Defini', 'Défini') },
   { pattern: /\bconnaitre\b/g, replacement: 'connaître' },
+  { pattern: /\bConnaitre\b/g, replacement: 'Connaître' },
   { pattern: /\breconnaitre\b/g, replacement: 'reconnaître' },
   { pattern: /\bapparaitre\b/g, replacement: 'apparaître' },
   { pattern: /\bdisparaitre\b/g, replacement: 'disparaître' },
@@ -795,6 +800,19 @@ const WORD_RULES = [
   { pattern: /\bEcris\b/g, replacement: 'Écris' },
   // Noms (sans collision avec un mot anglais courant)
   { pattern: /\bfrequents\b/g, replacement: 'fréquents' },
+  { pattern: /\bFrequents\b/g, replacement: 'Fréquents' },
+  { pattern: /\bfrequentes\b/g, replacement: 'fréquentes' },
+  { pattern: /\bFrequentes\b/g, replacement: 'Fréquentes' },
+  { pattern: /\bconnectivite\b/g, replacement: 'connectivité' },
+  { pattern: /\bConnectivite\b/g, replacement: 'Connectivité' },
+  { pattern: /\bhebergements?\b/g, replacement: (m) => m.replace('hebergement', 'hébergement') },
+  { pattern: /\bHebergements?\b/g, replacement: (m) => m.replace('Hebergement', 'Hébergement') },
+  { pattern: /\beteinte\b/g, replacement: 'éteinte' },
+  { pattern: /\btraçabilite\b/g, replacement: 'traçabilité' },
+  { pattern: /\betrangeres?\b/g, replacement: (m) => m.replace('etrangere', 'étrangère') },
+  { pattern: /\bEtrangeres?\b/g, replacement: (m) => m.replace('Etrangere', 'Étrangère') },
+  { pattern: /\breferentielle\b/g, replacement: 'référentielle' },
+  { pattern: /\bVerifier\b/g, replacement: 'Vérifier' },
   { pattern: /\bintegrateur\b/g, replacement: 'intégrateur' },
   { pattern: /\bIntegrateur\b/g, replacement: 'Intégrateur' },
   { pattern: /\bfidelite\b/g, replacement: 'fidélité' },

@@ -292,7 +292,7 @@ Créé un compte gratuit sur Figma (`https://www.figma.com`) si tu n'en as pas e
 
 6. **Barre de navigation** : Rectangle en bas du Frame (393 x 56px), fond blanc, bordure supérieure grise. Ajoute 3 textes centrès : "Accueil", "Favoris", "Ajouter".
 
-7. **Verifier l'alignement** : Selectionne plusieurs éléments et utilise les outils d'alignement dans la barre supérieure (aligner à gauche, centrer, distribuer uniformement).
+7. **Vérifier l'alignement** : Selectionne plusieurs éléments et utilise les outils d'alignement dans la barre supérieure (aligner à gauche, centrer, distribuer uniformement).
 
 **Résultat attendu** :
 

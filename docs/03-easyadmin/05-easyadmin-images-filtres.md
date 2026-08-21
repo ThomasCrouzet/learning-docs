@@ -200,16 +200,19 @@ Tu vas ajouter des filtres pour :
 2. Le Prix (Produits entre X et Y euros)
 3. Le Stock (Produits en rupture de stock)
 
-Toujours dans `ProductCrudController.php`, ajoute cette nouvelle méthode :
+Toujours dans `ProductCrudController.php`, ajoute ces imports en haut du fichier :
 
 ```php
-    // N'oublie pas les imports en haut du fichier !
-    use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
-    use EasyCorp\Bundle\EasyAdminBundle\Filter\BooleanFilter;
-    use EasyCorp\Bundle\EasyAdminBundle\Filter\EntityFilter;
-    use EasyCorp\Bundle\EasyAdminBundle\Filter\NumericFilter;
-    use EasyCorp\Bundle\EasyAdminBundle\Filter\TextFilter;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\BooleanFilter;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\EntityFilter;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\NumericFilter;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\TextFilter;
+```
 
+Puis ajoute cette nouvelle méthode :
+
+```php
     public function configureFilters(Filters $filters): Filters
     {
         return $filters

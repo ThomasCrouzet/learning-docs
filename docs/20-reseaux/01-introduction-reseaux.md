@@ -21,7 +21,7 @@ cursus: "Réseaux"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras définir ce qu'est un réseau, distinguer un LAN d'un WAN, décrire les principales topologies réseau, nommer les 7 couches du modèle OSI et les 4 couches du modèle TCP/IP, et expliquer le principe d'encapsulation.
+À la fin de cette fiche, tu sauras définir ce qu'est un réseau, distinguer un LAN d'un WAN, décrire les principales topologies réseau, nommer les 7 couches du modèle OSI et les 4 couches du modèle TCP/IP, et expliquer le principe d'encapsulation.
 
 ---
 
@@ -135,7 +135,7 @@ Tous les équipements sont connectes a un équipement central (switch ou hub). C
 Tous les équipements partagent un seul cable. Les données circulent dans les deux directions et chaque équipement écoute le cable.
 
 - **Avantage** : Simple et peu coûteux en cablage.
-- **Inconvénient** : Si le cable est coupe, tout le réseau s'arrête. Les collisions sont frequentes quand plusieurs machines emettent en même temps.
+- **Inconvénient** : Si le cable est coupe, tout le réseau s'arrête. Les collisions sont fréquentes quand plusieurs machines emettent en même temps.
 
 **Topologie en anneau** :
 
@@ -287,7 +287,7 @@ Chaque couche donne un nom différent a l'unité de données :
 
 ## Étapes Pratiques
 
-### Étape 1 : Verifier ta connexion réseau
+### Étape 1 : Vérifier ta connexion réseau
 
 Commence par vérifier que ta machine est bien connectee a un réseau.
 
@@ -312,7 +312,7 @@ Tu vois au moins deux interfaces :
 
 ---
 
-### Étape 2 : Tester la connectivite avec ping
+### Étape 2 : Tester la connectivité avec ping
 
 La commande `ping` envoie des paquets ICMP a une machine distante pour vérifier qu'elle est joignable.
 
@@ -343,7 +343,7 @@ Ce résultat montre :
 
 ---
 
-### Étape 3 : Tester la connectivite vers un hôte distant
+### Étape 3 : Tester la connectivité vers un hôte distant
 
 ```bash
 # Envoie 4 paquets ICMP vers le serveur DNS public de Google
@@ -442,13 +442,13 @@ Tu vois l'état de chaque interface (`UP` = active, `DOWN` = inactive) et son ad
 | `ip addr show` | Affiche les interfaces réseau et leurs adresses IP |
 | `ip -brief link show` | Liste les interfaces avec leur état (UP/DOWN) |
 | `ip route show` | Affiche la table de routage |
-| `ping -c 4 <adresse>` | Teste la connectivite vers une machine (4 paquets) |
+| `ping -c 4 <adresse>` | Teste la connectivité vers une machine (4 paquets) |
 | `sudo tcpdump -c 5 -i eth0` | Capture 5 paquets sur l'interface eth0 |
 | `hostname -I` | Affiche les adresses IP de la machine |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Confondre le modèle OSI et le modèle TCP/IP
 
@@ -491,13 +491,13 @@ Tu vois l'état de chaque interface (`UP` = active, `DOWN` = inactive) et son ad
 - [ ] Je peux nommer les 4 couches du modèle TCP/IP
 - [ ] Je comprends le principe d'encapsulation et les noms des unités de données (trame, paquet, segment)
 - [ ] J'ai utilise `ip addr show` pour voir mes interfaces réseau
-- [ ] J'ai utilise `ping` pour tester la connectivite
+- [ ] J'ai utilise `ping` pour tester la connectivité
 
 ---
 
 ## Exercice Pratique
 
-**Enonce** : Explore la configuration réseau de ta machine et reponds aux questions suivantes.
+**Énoncé** : Explore la configuration réseau de ta machine et reponds aux questions suivantes.
 
 **Questions** :
 
@@ -511,7 +511,7 @@ Tu vois l'état de chaque interface (`UP` = active, `DOWN` = inactive) et son ad
 
 - Utilise `ip addr show` pour les interfaces et l'adresse IP
 - Utilise `ip route show` pour la passerelle
-- Utilise `ping -c 4` pour les tests de connectivite
+- Utilise `ping -c 4` pour les tests de connectivité
 - Le protocole ICMP fonctionne au-dessus d'IP
 
 **Résultat attendu** : Tu as les réponses aux cinq questions et tu comprends pourquoi le ping local est plus rapide que le ping distant.

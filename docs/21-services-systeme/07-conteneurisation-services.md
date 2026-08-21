@@ -126,7 +126,7 @@ Sans conteneurisation, voici les problèmes rencontres :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer la structure du projet
+### Étape 1 : Créer la structure du projet
 
 ```bash
 # Cree l'arborescence du projet
@@ -151,7 +151,7 @@ mkdir -p ~/lab-stack/{dns/zones,web/html,proxy,ldap/ldifs}
 
 ---
 
-### Étape 2 : Creer les fichiers de configuration
+### Étape 2 : Créer les fichiers de configuration
 
 Configuration DNS (Bind9) :
 
@@ -268,7 +268,7 @@ EOF
 
 ---
 
-### Étape 3 : Creer le fichier Docker Compose
+### Étape 3 : Créer le fichier Docker Compose
 
 ```bash
 cat > ~/lab-stack/docker-compose.yml << 'EOF'
@@ -419,7 +419,7 @@ docker compose up -d
 
 ---
 
-### Étape 5 : Verifier l'état des services
+### Étape 5 : Vérifier l'état des services
 
 ```bash
 # Affiche l'etat de tous les services
@@ -546,7 +546,7 @@ docker compose down
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Ordre de démarrage non garanti
 
@@ -614,7 +614,7 @@ volumes:
 
 ## Exercice Pratique
 
-**Enonce** : Créé une stack Docker Compose complete avec :
+**Énoncé** : Créé une stack Docker Compose complete avec :
 
 1. Un serveur DNS (Bind9) pour le domaine `entreprise.local`
 2. Un serveur web (Nginx) servant deux sites : `www.entreprise.local` et `api.entreprise.local`

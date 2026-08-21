@@ -3,7 +3,7 @@ tags:
   - Architecture
   - Intermédiaire
   - Pratique
-description: "Patterns de comportement : Strategy, Observer, Command, Template Method et State avec exemples PHP, JS et Symfony."
+description: "Patterns de comportement : Strategy, Observer, Command, Template Method et State avec exemples PHP et Symfony."
 estimated_time: "90 min"
 fiche_number: 6
 total_fiches: 17
@@ -12,7 +12,7 @@ cursus: "Architecture et Design Patterns"
 
 # 06 - Patterns de comportement
 
-> **En bref** : Comprendre et implémenter les patterns Strategy, Observer, Command, Template Method et State en PHP et JavaScript, avec des exemples concrets dans Symfony. Lecture estimée : 90 min.
+> **En bref** : Comprendre et implémenter les patterns Strategy, Observer, Command, Template Method et State en PHP, avec des exemples concrets dans Symfony. Lecture estimée : 90 min.
 
 ## Prérequis
 

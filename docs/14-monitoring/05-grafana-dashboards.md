@@ -149,7 +149,7 @@ services:
 
   # Node Exporter pour avoir des métriques système
   node-exporter:
-    image: prom/node-exporter:v1.12.1
+    image: prom/node-exporter:v1.8.1
     ports:
       - "9100:9100"
 

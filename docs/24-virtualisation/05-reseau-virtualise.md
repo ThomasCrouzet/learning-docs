@@ -22,7 +22,7 @@ cursus: "Virtualisation"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras configurer un bridge Linux pour connecter des VMs au réseau physique, créer un réseau NAT isole, configurer des VLANs pour segmenter le trafic, et comprendre les bases d'Open vSwitch.
+À la fin de cette fiche, tu sauras configurer un bridge Linux pour connecter des VMs au réseau physique, créer un réseau NAT isole, configurer des VLANs pour segmenter le trafic, et comprendre les bases d'Open vSwitch.
 
 ---
 
@@ -150,7 +150,7 @@ Sans OVS, les bridges Linux standards ont des limites :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer un bridge Linux
+### Étape 1 : Créer un bridge Linux
 
 ```bash
 # Installer les outils necessaires
@@ -441,7 +441,7 @@ sudo ovs-ofctl dump-ports ovs-br0
 
 | Commande | Action |
 | --- | --- |
-| `ip link add name <br> type bridge` | Creer un bridge Linux |
+| `ip link add name <br> type bridge` | Créer un bridge Linux |
 | `ip link set <iface> master <br>` | Ajouter une interface a un bridge |
 | `bridge link show` | Lister les interfaces d'un bridge |
 | `virsh net-list --all` | Lister les réseaux libvirt |
@@ -449,13 +449,13 @@ sudo ovs-ofctl dump-ports ovs-br0
 | `iptables -t nat -L -n` | Lister les règles NAT |
 | `cat /proc/net/vlan/config` | Lister les VLANs configures |
 | `ovs-vsctl show` | Voir la configuration Open vSwitch |
-| `ovs-vsctl add-br <nom>` | Creer un bridge OVS |
+| `ovs-vsctl add-br <nom>` | Créer un bridge OVS |
 | `ovs-vsctl add-port <br> <port>` | Ajouter un port a un bridge OVS |
 | `ovs-ofctl dump-flows <br>` | Voir les flux d'un bridge OVS |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Perdre la connexion SSH en configurant le bridge
 
@@ -516,7 +516,7 @@ sudo sysctl -p
 
 ## Exercice Pratique
 
-**Enonce** : Créé une architecture réseau pour une petite application web :
+**Énoncé** : Créé une architecture réseau pour une petite application web :
 
 1. Un bridge `br-web` pour les serveurs web (VLAN 10, sous-réseau `10.10.10.0/24`)
 2. Un bridge `br-db` pour les bases de données (VLAN 20, sous-réseau `10.10.20.0/24`)
@@ -545,7 +545,7 @@ sudo sysctl -p
 
 ---
 
-**Creer les interfaces VLAN et les bridges** :
+**Créer les interfaces VLAN et les bridges** :
 
 ```bash
 # Charger le module VLAN

@@ -7,7 +7,7 @@ description: "Cursus MongoDB : bases de données orientees document, du CRUD aux
 
 # MongoDB
 
-> **En bref** : Ce cursus couvre MongoDB de l'introduction aux bases NoSQL jusqu'a la création d'une API REST complete avec Express et Mongoose. 8 fiches progressives.
+> **En bref** : Ce cursus couvre MongoDB de l'introduction aux bases NoSQL jusqu'à la création d'une API REST complete avec Express et Mongoose. 8 fiches progressives.
 
 ---
 

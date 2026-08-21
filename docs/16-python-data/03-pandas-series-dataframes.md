@@ -18,7 +18,7 @@ cursus: "Python Data"
 ## Prérequis
 
 - Avoir lu la fiche [02 - NumPy - Calcul numérique](02-numpy-fondamentaux.md)
-- Connaitre les dictionnaires Python
+- Connaître les dictionnaires Python
 - Avoir installe Pandas dans l'environnement virtuel
 
 ## Objectif de cette fiche

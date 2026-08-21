@@ -623,7 +623,8 @@ try {
   });
   clearTimeout(minuterie);
 } catch (erreur) {
-  if (erreur.name === "AbortError") {
+  // AbortSignal.timeout() lève TimeoutError ; abort() manuel lève AbortError
+  if (erreur.name === "TimeoutError" || erreur.name === "AbortError") {
     console.error("Requête annulée (timeout)");
   }
 }

@@ -23,7 +23,7 @@ cursus: "Cloud"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu auras deploye une application web complete sur AWS avec une architecture production-ready : un VPC isole, une base de données RDS, une application conteneurisee sur ECS Fargate, un load balancer et un monitoring complet.
+À la fin de cette fiche, tu auras deploye une application web complete sur AWS avec une architecture production-ready : un VPC isole, une base de données RDS, une application conteneurisee sur ECS Fargate, un load balancer et un monitoring complet.
 
 ---
 
@@ -48,7 +48,7 @@ Le projet deploie une application de gestion de taches (API REST) avec l'archite
 | Load Balancer | Application Load Balancer | Répartition du trafic HTTP (port 80 ; pas de TLS dans ce lab) |
 | Application | ECS Fargate (2 tasks) | Exécution des conteneurs sans serveur |
 | Base de données | RDS PostgreSQL | Stockage persistant des données |
-| Cache | ElastiCache Redis | Cache des requêtes frequentes |
+| Cache | ElastiCache Redis | Cache des requêtes fréquentes |
 | Registre d'images | ECR | Stockage des images Docker |
 | Monitoring | CloudWatch + SNS | Surveillance et alertes |
 | Infrastructure | Terraform | Déploiement reproductible |
@@ -69,7 +69,7 @@ Chaque fiche précédente couvre un service isole. Mais en production, les servi
 
 | Compétence | Fiche d'origine | Application dans le projet |
 | --- | --- | --- |
-| Creer un VPC | Fiche 04 | VPC avec sous-réseaux publics et prives |
+| Créer un VPC | Fiche 04 | VPC avec sous-réseaux publics et prives |
 | Configurer IAM | Fiche 05 | Rôles pour ECS, RDS et CloudWatch |
 | Ecrire du Terraform | Fiche 06 | Toute l'infrastructure en code |
 | Deployer une base de données | Fiche 07 | RDS PostgreSQL + ElastiCache Redis |
@@ -178,7 +178,7 @@ provider "aws" {
 
 ---
 
-### Étape 2 : Creer le réseau (VPC)
+### Étape 2 : Créer le réseau (VPC)
 
 Créé le fichier `vpc.tf` :
 
@@ -295,7 +295,7 @@ resource "aws_route_table_association" "private" {
 
 ---
 
-### Étape 3 : Creer les security groups
+### Étape 3 : Créer les security groups
 
 Créé le fichier `security-groups.tf` :
 
@@ -403,7 +403,7 @@ resource "aws_security_group" "redis" {
 
 ---
 
-### Étape 4 : Creer la base de données et le cache
+### Étape 4 : Créer la base de données et le cache
 
 Créé le fichier `rds.tf` :
 
@@ -481,7 +481,7 @@ resource "aws_elasticache_cluster" "main" {
 
 ---
 
-### Étape 5 : Creer le registre d'images et les rôles IAM
+### Étape 5 : Créer le registre d'images et les rôles IAM
 
 Créé le fichier `ecr.tf` :
 
@@ -569,7 +569,7 @@ resource "aws_iam_role" "ecs_task" {
 
 ---
 
-### Étape 6 : Creer le load balancer et le service ECS
+### Étape 6 : Créer le load balancer et le service ECS
 
 Créé le fichier `alb.tf` :
 
@@ -1124,7 +1124,7 @@ Terraform affiche les 25 ressources qui vont être supprimees et demande confirm
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Oublier la NAT Gateway pour les sous-réseaux prives
 
@@ -1183,7 +1183,7 @@ terraform.tfvars
 
 ## Exercice Pratique
 
-**Enonce** : Ameliore l'architecture du projet intégrateur en ajoutant les éléments suivants :
+**Énoncé** : Ameliore l'architecture du projet intégrateur en ajoutant les éléments suivants :
 
 1. **Auto-scaling ECS** : Configure une politique _target tracking_ qui :
    - Vise une utilisation CPU moyenne de 70 % (AWS ajoute ou retire des tasks autour de cette cible unique ; il n'y a pas de seuil de scale-in séparé à 30 %)

@@ -16,9 +16,9 @@ cursus: "CI/CD Pipelines"
 
 ## Prérequis
 
-- Toutes les fiches précédentes du cursus CI/CD (01 à 09)
+- Toutes les fiches précédentes du cursus CI/CD ([01](01-introduction-ci-cd.md) à [09](09-strategies-deploiement.md))
 - Avoir Docker installé et fonctionnel sur ton ordinateur
-- Avoir `act` installé pour l'exécution locale (fiche 08)
+- Avoir `act` installé pour l'exécution locale ([08 - Exécution locale](08-execution-locale-pipelines.md))
 - Connaître les bases de Symfony et React (la fiche fournit tout le code nécessaire)
 
 ## Objectif de cette fiche
@@ -524,7 +524,7 @@ jobs:
         working-directory: backend
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP 8.3
         uses: shivammathur/setup-php@v2
@@ -557,7 +557,7 @@ jobs:
         working-directory: backend
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer PHP 8.3
         uses: shivammathur/setup-php@v2
@@ -591,10 +591,10 @@ jobs:
         working-directory: frontend
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer Node.js 22
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -618,10 +618,10 @@ jobs:
         working-directory: frontend
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer Node.js 22
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -649,7 +649,7 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       # Se connecter au registry GitHub Container Registry
       - name: Se connecter à GHCR
@@ -757,7 +757,7 @@ jobs:
       url: https://staging.mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Préparer le déploiement
         run: |
@@ -811,7 +811,7 @@ jobs:
       url: https://mon-app.example.com
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Préparer le déploiement blue-green
         run: |
@@ -1386,7 +1386,7 @@ Job `security-audit` à ajouter dans `.github/workflows/ci.yml` :
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       # Audit des dépendances PHP
       - name: Installer PHP 8.3
@@ -1404,7 +1404,7 @@ Job `security-audit` à ajouter dans `.github/workflows/ci.yml` :
 
       # Audit des dépendances JavaScript
       - name: Installer Node.js 22
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -1430,10 +1430,10 @@ Job `lighthouse` (simulé) à ajouter dans `.github/workflows/ci.yml` :
     needs: lint-frontend
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Installer Node.js 22
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"

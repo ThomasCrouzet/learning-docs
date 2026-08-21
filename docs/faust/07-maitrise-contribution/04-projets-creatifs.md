@@ -29,7 +29,7 @@ cursus: "Phase 7 - Maîtrise et contribution"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras mener un projet créatif complet avec Faust, de la conception à la distribution, en choisissant les techniques et plateformes adaptées à ton objectif artistique.
+À la fin de cette fiche, tu sauras mener un projet créatif complet avec Faust, de la conception à la distribution, en choisissant les techniques et plateformes adaptées à ton objectif artistique.
 
 ---
 

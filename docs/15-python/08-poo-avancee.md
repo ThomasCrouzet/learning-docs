@@ -79,7 +79,7 @@ Sans propriétés, voici les problèmes rencontrés :
 | Syntaxe lourde | Syntaxe identique à un accès direct : `objet.attribut` |
 | Changement d'interface | On peut ajouter de la logique sans changer l'API |
 
-**Analogie concrète** : Une propriété est comme un guichet de banque. De l'extérieur, tu déposes et retires de l'argent simplement (lecture et écriture de l'attribut). Mais derrière le guichet, un employé vérifie ton identité et le solde de ton compte (la logique de validation). Le client n'a pas besoin de connaître les vérifications internes.
+**Analogie concrète** : Une propriété est comme un guichet de banque. De l'extérieur, tu déposes et retires de l'argent (lecture et écriture de l'attribut). Mais derrière le guichet, un employé vérifie ton identité et le solde de ton compte (la logique de validation). Le client n'a pas besoin de connaître les vérifications internes.
 
 ---
 

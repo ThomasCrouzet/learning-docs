@@ -16,7 +16,7 @@ cursus: "Projets"
 
 ## Prérequis
 
-- [Fiches Java 01 à 10](../01-java/01-hello-world.md) (tout le cursus Java)
+- [Fiches Java 01 à 12](../01-java/index.md) (tout le cursus Java)
 - Connaissances de base en programmation orientée objet
 
 ## Objectif de cette fiche

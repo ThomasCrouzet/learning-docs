@@ -1235,6 +1235,6 @@ kubectl delete namespace symfony-exercise
 
 ## Navigation
 
-← Fiche précédente : **[10 - Helm -- Gestionnaire de packages](10-helm-gestionnaire-packages.md)**
+← Fiche précédente : **[10 - Helm - Gestionnaire de packages](10-helm-gestionnaire-packages.md)**
 
 → Fiche suivante : **[12 - Projet intégrateur](12-projet-integrateur.md)**

@@ -20,7 +20,7 @@ cursus: "Phase 7 - Maîtrise et contribution"
 - Phase 4 complète (DSP appliqué) :
   - [Fiche 01 - Oscillateurs et synthèse](../04-dsp-applique/01-oscillateurs-synthese.md)
   - [Fiche 04 - Modélisation physique](../04-dsp-applique/04-modelisation-physique.md)
-- Connaissance de Git : branches, commits, pull requests, merge (voir [Fiche Git avancé](../../fiches-reference/index.md) si besoin)
+- Connaissance de Git : branches, commits, pull requests, merge (voir [Aide-mémoire Git](../../fiches-reference/05-aide-memoire-git.md) si besoin)
 - Connaissance de base du C++ : compilation, classes, pointeurs (voir [Fiche 02 - C++ notions essentielles](../02-prerequis-programmation/02-cpp-notions-essentielles.md))
 
 ## Objectif de cette fiche

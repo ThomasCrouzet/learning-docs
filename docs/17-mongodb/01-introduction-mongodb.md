@@ -75,9 +75,9 @@ Sans MongoDB, voici les problèmes rencontrés :
 
 1. **Développement web moderne** : les applications web manipulent des données au format JSON. Avec une base relationnelle, tu dois convertir les données JSON en lignes/colonnes (ORM), puis reconvertir en JSON pour l'API. Ces conversions ajoutent de la complexité et du code.
 
-2. **Évolution du schéma** : ton application evolue, tu ajoutes un champ `avatar` aux utilisateurs. Avec PostgreSQL, tu dois écrire une migration, l'exécuter en production, gérer les anciennes lignes sans ce champ. Avec MongoDB, tu ajoutes simplement le champ aux nouveaux documents.
+2. **Évolution du schéma** : ton application évolue, tu ajoutes un champ `avatar` aux utilisateurs. Avec PostgreSQL, tu dois écrire une migration, l'exécuter en production, gérer les anciennes lignes sans ce champ. Avec MongoDB, tu ajoutes le champ aux nouveaux documents, sans migration.
 
-3. **Données imbriquées** : un article de blog a un titre, un contenu, et une liste de commentaires. En SQL, tu créés une table `articles` et une table `commentaires` avec une clé etrangere. En MongoDB, les commentaires sont directement imbriques dans le document de l'article.
+3. **Données imbriquées** : un article de blog a un titre, un contenu, et une liste de commentaires. En SQL, tu crées une table `articles` et une table `commentaires` avec une clé étrangère. En MongoDB, les commentaires sont directement imbriqués dans le document de l'article.
 
 **Comment MongoDB résout ces problèmes** :
 
@@ -213,7 +213,7 @@ Sans BSON, voici les problèmes rencontrés :
 - Système bancaire ou comptable (transactions ACID critiques)
 - Données fortement liees entre elles (utilisateurs, commandes, produits, factures)
 - Requêtes analytiques complexes avec jointures sur de nombreuses tables
-- Besoin d'intégrité referentielle stricte (clés etrangeres)
+- Besoin d'intégrité référentielle stricte (clés étrangères)
 
 **Quand choisir MongoDB** :
 
@@ -329,7 +329,7 @@ Lis chaque scénario et détermine si MongoDB ou PostgreSQL est le meilleur choi
 
 **Scénario 2** : Un logiciel de comptabilité. Chaque facture est liee a un client, contient des lignes de produits, et doit être tracable (qui a modifie quoi et quand). Les calculs doivent être coherents à tout moment.
 
-**Réponse** : PostgreSQL. L'intégrité referentielle et les transactions ACID sont essentielles pour la comptabilité.
+**Réponse** : PostgreSQL. L'intégrité référentielle et les transactions ACID sont essentielles pour la comptabilité.
 
 **Scénario 3** : Une API pour une application mobile de suivi sportif. Chaque utilisateur enregistre des seances d'entrainement avec des exercices différents (course, musculation, natation), chacun ayant des métriques différentes.
 

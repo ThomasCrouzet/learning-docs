@@ -23,7 +23,7 @@ cursus: "Phase 8 - Perspective et avenir réaliste"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras identifier les tendances vérifiables de l'écosystème crypto, évaluer les scénarios exagérés (positifs et négatifs) avec un regard critique et comprendre les vrais défis techniques, régulatoires et d'adoption qui determineront l'avenir de ces technologies.
+À la fin de cette fiche, tu sauras identifier les tendances vérifiables de l'écosystème crypto, évaluer les scénarios exagérés (positifs et négatifs) avec un regard critique et comprendre les vrais défis techniques, régulatoires et d'adoption qui determineront l'avenir de ces technologies.
 
 ---
 
@@ -189,7 +189,7 @@ A la fin de cette fiche, tu sauras identifier les tendances vérifiables de l'é
 | Ce qui est vrai | Ce qui est exagere |
 | --- | --- |
 | Beaucoup de projets crypto echouent (99%+) | Bitcoin et Ethereum fonctionnent depuis plus de 10 ans sans interruption |
-| Les arnaques sont frequentes | L'adoption institutionnelle (ETF, banques, régulation) rend la disparition improbable |
+| Les arnaques sont fréquentes | L'adoption institutionnelle (ETF, banques, régulation) rend la disparition improbable |
 | La volatilité est un frein à l'adoption | Les stablecoins résolvent le problème de la volatilité pour les cas d'usage pratiques |
 
 **Verdict** : les crypto-monnaies en tant que catégorie technologique vont très probablement survivre. Des projets individuels disparaitront. La technologie sous-jacente (blockchain, smart contracts, ZK proofs) a des applications concrètes qui perdurent indépendamment des cycles spéculatifs.
@@ -252,7 +252,7 @@ A la fin de cette fiche, tu sauras identifier les tendances vérifiables de l'é
 | --- | --- | --- |
 | Hacks de bridges | Plusieurs milliards de dollars volés (Ronin, Wormhole, Nomad) | Meilleurs audits, preuves formelles, ZK bridges |
 | Bugs de smart contracts | Des centaines de millions perdus | Vérification formelle, langages plus surs, assurances |
-| Exploits de protocoles DeFi | Frequents, même sur les gros protocoles | Bug bounties, audits multiples, verrouillages temporels |
+| Exploits de protocoles DeFi | Fréquents, même sur les gros protocoles | Bug bounties, audits multiples, verrouillages temporels |
 
 **Pourquoi c'est critique** : tant que les utilisateurs risquent de perdre leurs fonds a cause de bugs ou de hacks, l'adoption institutionnelle et grand public restera freinee.
 

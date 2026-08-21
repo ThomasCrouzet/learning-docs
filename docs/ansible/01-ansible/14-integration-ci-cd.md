@@ -880,7 +880,7 @@ stages:
 # ============================================================
 lint:
   stage: lint
-  image: python:3.11
+  image: python:3.12
   before_script:
     # Installe les outils de lint
     - pip install 'ansible>=14.0,<15.0' ansible-lint yamllint
@@ -896,7 +896,7 @@ lint:
 # ============================================================
 test-nginx:
   stage: test
-  image: python:3.11
+  image: python:3.12
   services:
     # Docker-in-Docker : nécessaire pour que Molecule puisse
     # créer des conteneurs Docker à l'intérieur du conteneur CI
@@ -918,7 +918,7 @@ test-nginx:
 # ============================================================
 deploy-staging:
   stage: deploy
-  image: python:3.11
+  image: python:3.12
   before_script:
     - pip install 'ansible>=14.0,<15.0'
     # Crée le fichier de mot de passe Vault à partir de la variable CI/CD
@@ -954,7 +954,7 @@ deploy-staging:
 # ============================================================
 deploy-production:
   stage: deploy
-  image: python:3.11
+  image: python:3.12
   before_script:
     - pip install 'ansible>=14.0,<15.0'
     - echo "$VAULT_PASSWORD" > .vault_pass
@@ -1415,7 +1415,7 @@ chmod +x .git/hooks/pre-commit
 
 ### Piège 1 : Oublier d'installer Ansible dans l'image CI
 
-**Problème** : Le pipeline échoue avec `ansible-playbook: command not found`. L'image Docker utilisée par le runner CI (par exemple `python:3.11`) ne contient pas Ansible par défaut.
+**Problème** : Le pipeline échoue avec `ansible-playbook: command not found`. L'image Docker utilisée par le runner CI (par exemple `python:3.12`) ne contient pas Ansible par défaut.
 
 **Solution** : Ajoute toujours `pip install 'ansible>=14.0,<15.0'` dans la section `before_script` de chaque job qui utilise Ansible (borne alignée sur Ansible 14 / core 2.21).
 
@@ -1470,7 +1470,7 @@ after_script:
 ```yaml
 test:
   stage: test
-  image: python:3.11
+  image: python:3.12
   services:
     # Active Docker-in-Docker
     - docker:dind
@@ -1765,7 +1765,7 @@ stages:
 
 lint:
   stage: lint
-  image: python:3.11
+  image: python:3.12
   before_script:
     - pip install 'ansible>=14.0,<15.0' ansible-lint yamllint
   script:
@@ -1774,7 +1774,7 @@ lint:
 
 test-nginx:
   stage: test
-  image: python:3.11
+  image: python:3.12
   services:
     - docker:dind
   variables:
@@ -1787,7 +1787,7 @@ test-nginx:
 
 deploy-staging:
   stage: deploy
-  image: python:3.11
+  image: python:3.12
   before_script:
     - pip install 'ansible>=14.0,<15.0'
     - echo "$VAULT_PASSWORD" > .vault_pass
@@ -1811,7 +1811,7 @@ deploy-staging:
 
 deploy-production:
   stage: deploy
-  image: python:3.11
+  image: python:3.12
   before_script:
     - pip install 'ansible>=14.0,<15.0'
     - echo "$VAULT_PASSWORD" > .vault_pass

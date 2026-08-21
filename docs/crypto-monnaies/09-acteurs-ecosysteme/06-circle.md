@@ -21,7 +21,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'histoire de Circle, expliquer comment USDC maintient sa parite avec le dollar, analyser l'incident SVB et ses conséquences, comprendre le modèle économique de Circle et comparer la transparence d'USDC avec celle de Tether (USDT).
+À la fin de cette fiche, tu sauras décrire l'histoire de Circle, expliquer comment USDC maintient sa parite avec le dollar, analyser l'incident SVB et ses conséquences, comprendre le modèle économique de Circle et comparer la transparence d'USDC avec celle de Tether (USDT).
 
 ---
 
@@ -99,7 +99,7 @@ Le 10-K Circle au 31 décembre 2025 indiquait environ 88 % des réserves d'USDC 
 
 **Ce que cette comparaison montre** :
 
-- USDC est significativement plus transparent que USDT. Les attestations sont plus frequentes, plus détaillées et realisees par un cabinet plus repute.
+- USDC est significativement plus transparent que USDT. Les attestations sont plus fréquentes, plus détaillées et realisees par un cabinet plus repute.
 - Mais USDT reste le stablecoin dominant (capitalisation ~2-3x supérieure). Le marché ne récompense pas nécessairement la transparence.
 - Aucun des deux n'est aussi transparent qu'un compte bancaire régulé. Les attestations ne sont pas des audits complets.
 

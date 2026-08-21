@@ -20,6 +20,7 @@ cursus: "JavaScript Moderne"
 - Fiche 10 : [Async/await](10-async-await.md)
 - Fiche 11 : [Fetch API et HTTP](11-fetch-api-http.md)
 - Fiche 12 : [Projet intégrateur](12-projet-integrateur.md)
+- Pour l'étape 6 et le piège 3 (exemple React) : [cursus React](../08-react/index.md). Si tu n'as pas encore suivi React, saute cette étape.
 
 ## Objectif de cette fiche
 

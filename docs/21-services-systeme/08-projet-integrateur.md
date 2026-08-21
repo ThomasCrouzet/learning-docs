@@ -31,7 +31,7 @@ Cette section explique tous les concepts nécessaires. Lis-la entièrement avant
 
 ### Qu'est-ce qu'une infrastructure multi-services ?
 
-**Définition** : Une infrastructure multi-services est un ensemble de services réseau interconnectes qui fournissent les fonctions essentielles d'un système informatique d'entreprise : resolution de noms (DNS), hebergement web, messagerie, authentification centralisée (LDAP), distribution d'adresses (DHCP) et accès sécurisé (reverse proxy).
+**Définition** : Une infrastructure multi-services est un ensemble de services réseau interconnectes qui fournissent les fonctions essentielles d'un système informatique d'entreprise : resolution de noms (DNS), hébergement web, messagerie, authentification centralisée (LDAP), distribution d'adresses (DHCP) et accès sécurisé (reverse proxy).
 
 **Le problème que l'infrastructure multi-services résout** :
 
@@ -61,7 +61,7 @@ Sans infrastructure organisee, voici les problèmes rencontres :
                         [Internet / Client]
                               |
                          [Reverse Proxy]
-                          Caddy (:443)
+                          Caddy (:80 / hôte 8080)
                          /      |      \
                    [Web]    [Webmail]  [API]
                   Nginx     (futur)   (futur)
@@ -125,7 +125,7 @@ Le reverse proxy est connecte aux réseaux `front` et `back`. Le serveur web est
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer la structure du projet
+### Étape 1 : Créer la structure du projet
 
 ```bash
 # Cree toute l'arborescence
@@ -567,7 +567,7 @@ EOF
 
 ---
 
-### Étape 7 : Creer le script de monitoring
+### Étape 7 : Créer le script de monitoring
 
 ```bash
 cat > ~/projet-techlab/monitoring/healthcheck.sh << 'SCRIPT'
@@ -630,7 +630,7 @@ chmod +x ~/projet-techlab/monitoring/healthcheck.sh
 
 ---
 
-### Étape 8 : Creer le fichier Docker Compose complet
+### Étape 8 : Créer le fichier Docker Compose complet
 
 ```bash
 cat > ~/projet-techlab/docker-compose.yml << 'EOF'
@@ -995,7 +995,7 @@ docker compose down
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Ne pas segmenter les réseaux
 
@@ -1059,7 +1059,7 @@ docker run --rm -v projet-techlab_ldap-data:/data \
 
 ## Exercice Pratique
 
-**Enonce** : Ameliore l'infrastructure TechLab avec les ajouts suivants :
+**Énoncé** : Ameliore l'infrastructure TechLab avec les ajouts suivants :
 
 1. Ajoute un troisième site web `status.techlab.local` qui affiche une page HTML avec l'état de chaque service
 2. Ajoute un enregistrement DNS pour `status.techlab.local`

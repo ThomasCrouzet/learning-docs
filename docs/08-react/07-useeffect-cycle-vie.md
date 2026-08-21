@@ -380,7 +380,7 @@ function NomPersistant() {
         placeholder="Entre ton nom..."
         style={{ padding: "8px", width: "300px" }}
       />
-      {nom && <p>Bonjour {nom} ! (rechargez la page, le nom sera conservé)</p>}
+      {nom && <p>Bonjour {nom} ! (recharge la page, le nom sera conservé)</p>}
     </div>
   );
 }

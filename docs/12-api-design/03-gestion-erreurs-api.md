@@ -3,7 +3,7 @@ tags:
   - API
   - Intermédiaire
   - Pratique
-description: "Gérer les erreurs API de façon standardisée avec RFC 7807 Problem Details, validation, codes applicatifs et messages sécurisés."
+description: "Gérer les erreurs API de façon standardisée avec RFC 9457 Problem Details, validation, codes applicatifs et messages sécurisés."
 estimated_time: "60 min"
 fiche_number: 3
 total_fiches: 10
@@ -12,7 +12,7 @@ cursus: "API Design et Documentation"
 
 # 03 - Gestion des erreurs API
 
-> **En bref** : Cette fiche couvre la gestion standardisée des erreurs API : le format RFC 7807 Problem Details, la validation des données d'entrée, les codes d'erreur applicatifs, les messages utiles vs sécurisés, et l'internationalisation des erreurs. Lecture estimée : 60 min.
+> **En bref** : Cette fiche couvre la gestion standardisée des erreurs API : le format RFC 9457 Problem Details (successeur de RFC 7807), la validation des données d'entrée, les codes d'erreur applicatifs, les messages utiles vs sécurisés, et l'internationalisation des erreurs. Lecture estimée : 60 min.
 
 ## Prérequis
 
@@ -22,7 +22,7 @@ cursus: "API Design et Documentation"
 
 ## Objectif de cette fiche
 
-À la fin de cette fiche, tu sauras formater les erreurs API selon le standard RFC 7807, gérer les erreurs de validation de façon structurée, définir des codes d'erreur applicatifs, et distinguer les messages destinés au développeur de ceux destinés à l'utilisateur final.
+À la fin de cette fiche, tu sauras formater les erreurs API selon le standard RFC 9457, gérer les erreurs de validation de façon structurée, définir des codes d'erreur applicatifs, et distinguer les messages destinés au développeur de ceux destinés à l'utilisateur final.
 
 ---
 

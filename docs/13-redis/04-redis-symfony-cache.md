@@ -19,7 +19,7 @@ cursus: "Redis et Cache"
 - Fiche [01 - Introduction à Redis](01-introduction-redis.md)
 - Fiche [02 - Installation et CLI redis](02-installation-cli-redis.md)
 - Fiche [03 - Structures de données](03-structures-donnees.md)
-- Cursus Symfony terminé jusqu'à la fiche 13 (services et injection de dépendances)
+- Cursus Symfony terminé jusqu'à la fiche [13 - Services et injection de dépendances](../03-symfony/13-services-injection-dependances.md)
 - Savoir créer un projet Symfony avec Docker Compose
 
 ## Version utilisée dans cette fiche

@@ -576,7 +576,7 @@ Jan     1200  1500
 | Commande | Action |
 | --- | --- |
 | `df[condition]` | Filtrer les lignes selon une condition |
-| `df[col].isin(liste)` | Verifier si les valeurs sont dans une liste |
+| `df[col].isin(liste)` | Vérifier si les valeurs sont dans une liste |
 | `df.sort_values(col)` | Trier par une colonne |
 | `df.groupby(col)` | Regrouper par une colonne |
 | `.agg(["sum", "mean"])` | Appliquer plusieurs agrégations |

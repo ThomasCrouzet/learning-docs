@@ -20,7 +20,7 @@ cursus: "Services système"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras expliquer le fonctionnement de la chaîne de livraison du mail (MTA, MDA, MUA), configurer Postfix pour envoyer des mails, configurer Dovecot pour les recevoir via IMAP, et comprendre le rôle des enregistrements SPF, DKIM et DMARC dans la lutte contre le spam et l'usurpation d'identité.
+À la fin de cette fiche, tu sauras expliquer le fonctionnement de la chaîne de livraison du mail (MTA, MDA, MUA), configurer Postfix pour envoyer des mails, configurer Dovecot pour les recevoir via IMAP, et comprendre le rôle des enregistrements SPF, DKIM et DMARC dans la lutte contre le spam et l'usurpation d'identité.
 
 ---
 
@@ -44,7 +44,7 @@ Sans serveur de messagerie, voici les problèmes rencontres :
 
 | Problème | Solution apportée par le serveur de messagerie |
 | --- | --- |
-| Pas de communication asynchrone | Le serveur stocke le message jusqu'a ce que le destinataire le consulte |
+| Pas de communication asynchrone | Le serveur stocke le message jusqu'à ce que le destinataire le consulte |
 | Pas de stockage | Le MDA place les messages dans une boite aux lettres sur le serveur |
 | Pas de routage | Le MTA utilise les enregistrements MX du DNS pour trouver le serveur du destinataire |
 
@@ -396,7 +396,7 @@ Tu vois la boite aux lettres INBOX de l'utilisateur.
 
 ---
 
-### Étape 8 : Verifier les enregistrements DNS pour le mail
+### Étape 8 : Vérifier les enregistrements DNS pour le mail
 
 En production, les enregistrements DNS suivants sont essentiels :
 
@@ -441,7 +441,7 @@ docker network rm lab-mail-net 2>/dev/null
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Open relay (relais ouvert)
 
@@ -504,7 +504,7 @@ RCPT TO:<victim@gmail.com>
 
 ## Exercice Pratique
 
-**Enonce** : Configure un serveur de messagerie complet pour le domaine `entreprise.local` :
+**Énoncé** : Configure un serveur de messagerie complet pour le domaine `entreprise.local` :
 
 1. Postfix comme MTA acceptant les mails pour `@entreprise.local`
 2. Dovecot comme MDA avec deux utilisateurs : `alice@entreprise.local` et `bob@entreprise.local`

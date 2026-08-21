@@ -748,7 +748,7 @@ todo/tests/test_manager.py::test_persistance PASSED
 **Solution** : Toujours créer un fichier `__init__.py` (même vide) dans chaque dossier de package.
 
 ```bash
-# Le fichier peut être vide, il suffit qu'il existe
+# Le fichier peut être vide : il doit exister, même sans contenu
 touch todo/__init__.py
 touch todo/tests/__init__.py
 ```

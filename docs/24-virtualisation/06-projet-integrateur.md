@@ -27,7 +27,7 @@ cursus: "Virtualisation"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu auras construit une infrastructure virtualisee complete comprenant un serveur web, un serveur de base de données et un serveur de monitoring, chacun sur des réseaux segmentes avec des règles de sécurité adaptees.
+À la fin de cette fiche, tu auras construit une infrastructure virtualisee complete comprenant un serveur web, un serveur de base de données et un serveur de monitoring, chacun sur des réseaux segmentes avec des règles de sécurité adaptees.
 
 ---
 
@@ -90,7 +90,7 @@ Le projet consiste a construire l'infrastructure suivante :
 
 ## Étapes Pratiques
 
-### Étape 1 : Creer les réseaux VLAN
+### Étape 1 : Créer les réseaux VLAN
 
 **Sur Proxmox** :
 
@@ -203,7 +203,7 @@ virsh net-list --all
 
 ---
 
-### Étape 2 : Creer les machines virtuelles
+### Étape 2 : Créer les machines virtuelles
 
 **Sur Proxmox** :
 
@@ -453,7 +453,7 @@ ACCEPT     all  --  10.10.10.0/24        0.0.0.0/0
 
 ---
 
-### Étape 6 : Tester la connectivite
+### Étape 6 : Tester la connectivité
 
 ```bash
 # Depuis web-server : tester la connexion a PostgreSQL
@@ -487,7 +487,7 @@ Le ping échoue car les règles de firewall n'autorisent pas le trafic du VLAN w
 
 ---
 
-### Étape 7 : Creer des snapshots de l'infrastructure
+### Étape 7 : Créer des snapshots de l'infrastructure
 
 ```bash
 # Prendre un snapshot de chaque VM avant d'aller plus loin
@@ -603,18 +603,18 @@ EOF
 | Commande | Action |
 | --- | --- |
 | `qm list` | Lister les VMs Proxmox |
-| `qm snapshot <id> <nom>` | Creer un snapshot |
+| `qm snapshot <id> <nom>` | Créer un snapshot |
 | `vzdump <id> --storage <s>` | Sauvegarder une VM |
 | `pvesm status` | État des stockages |
 | `iptables -L -n -v` | Voir les règles de firewall |
 | `iptables -t nat -L -n -v` | Voir les règles NAT |
 | `virsh net-list --all` | Lister les réseaux (libvirt) |
-| `ss -tlnp` | Verifier les ports en écoute |
-| `ping -c 2 <ip>` | Tester la connectivite |
+| `ss -tlnp` | Vérifier les ports en écoute |
+| `ping -c 2 <ip>` | Tester la connectivité |
 
 ---
 
-## Pièges Frequents
+## Pièges Fréquents
 
 ### Piège 1 : Oublier les règles de retour (stateful)
 
@@ -690,7 +690,7 @@ Laisse toujours 20% de marge pour les pics de charge.
 
 ## Exercice Pratique
 
-**Enonce** : Etends l'infrastructure en ajoutant les éléments suivants :
+**Énoncé** : Etends l'infrastructure en ajoutant les éléments suivants :
 
 1. Un conteneur LXC (ID 310) nomme `reverse-proxy` sur le VLAN 10 (IP `10.10.10.5`) avec Nginx configure comme reverse proxy vers le web-server (`10.10.10.10`)
 2. Une règle de firewall qui redirige le port 443 de l'hôte vers le reverse proxy au lieu du web-server
@@ -719,7 +719,7 @@ Laisse toujours 20% de marge pour les pics de charge.
 
 ---
 
-**Creer le conteneur reverse proxy** :
+**Créer le conteneur reverse proxy** :
 
 ```bash
 # Sur Proxmox : le suffixe du template change. Liste d'abord :
@@ -801,7 +801,7 @@ iptables -A FORWARD -p tcp -d 10.10.10.5 --dport 443 -j ACCEPT
 iptables-save > /etc/iptables/rules.v4
 ```
 
-**Creer les snapshots** :
+**Créer les snapshots** :
 
 ```bash
 # Snapshot phase-2 pour chaque VM et conteneur

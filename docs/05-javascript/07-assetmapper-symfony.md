@@ -426,7 +426,7 @@ Utilise le contrôleur dans un template :
 2. Tu cliques sur "Dire bonjour".
 3. Le paragraphe affiche "Bonjour depuis AssetMapper !".
 
-**Important** : Aucune compilation n'est nécessaire. Tu recharges simplement la page du navigateur après avoir modifié un fichier.
+**Important** : Aucune compilation n'est nécessaire. Tu recharges la page du navigateur après avoir modifié un fichier.
 
 ---
 
@@ -737,7 +737,7 @@ Dernier clic : 14:32:08
 [Incrémenter]
 ```
 
-Aucune compilation n'est nécessaire : si tu modifies le contrôleur Stimulus, recharge simplement la page.
+Aucune compilation n'est nécessaire : si tu modifies le contrôleur Stimulus, recharge la page.
 
 ---
 

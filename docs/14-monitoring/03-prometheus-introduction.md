@@ -510,7 +510,7 @@ services:
 
   # Node Exporter : expose les métriques système (CPU, mémoire, disque)
   node-exporter:
-    image: prom/node-exporter:v1.12.1
+    image: prom/node-exporter:v1.8.1
     ports:
       - "9100:9100"
 

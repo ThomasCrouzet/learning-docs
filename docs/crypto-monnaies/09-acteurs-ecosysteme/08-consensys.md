@@ -22,7 +22,7 @@ cursus: "Phase 9 - Acteurs de l'écosystème"
 
 ## Objectif de cette fiche
 
-A la fin de cette fiche, tu sauras décrire l'histoire de Consensys, expliquer le rôle de MetaMask et d'Infura dans l'écosystème Ethereum, comprendre le modèle économique et analyser la question fondamentale : une entreprise centralisée qui contrôle une grande partie de l'infrastructure d'un réseau décentralisé.
+À la fin de cette fiche, tu sauras décrire l'histoire de Consensys, expliquer le rôle de MetaMask et d'Infura dans l'écosystème Ethereum, comprendre le modèle économique et analyser la question fondamentale : une entreprise centralisée qui contrôle une grande partie de l'infrastructure d'un réseau décentralisé.
 
 ---
 

@@ -262,7 +262,7 @@ oc new-project demo-builds
 **Résultat attendu** :
 
 ```text
-Now using project "demo-builds" on server "https://api.example.com:6443".
+Now using project "demo-builds" on server "https://api.crc.testing:6443".
 ```
 
 **Vérification** :
@@ -275,7 +275,7 @@ oc project
 **Résultat attendu** :
 
 ```text
-Using project "demo-builds" on server "https://api.example.com:6443".
+Using project "demo-builds" on server "https://api.crc.testing:6443".
 ```
 
 ---
@@ -586,14 +586,14 @@ oc get route php-app -o jsonpath='{.spec.host}'
 **Résultat attendu** :
 
 ```text
-php-app-demo-builds.apps.example.com
+php-app-demo-builds.apps-crc.testing
 ```
 
 **Vérification** :
 
 ```bash
 # Tester l'application via curl
-curl http://php-app-demo-builds.apps.example.com
+curl http://php-app-demo-builds.apps-crc.testing
 ```
 
 **Résultat attendu** :
@@ -661,7 +661,7 @@ Le nom du Pod a changé : c'est un nouveau Pod avec la nouvelle image.
 
 ```bash
 # Tester la nouvelle version
-curl http://php-app-demo-builds.apps.example.com
+curl http://php-app-demo-builds.apps-crc.testing
 ```
 
 **Résultat attendu** :
@@ -956,7 +956,7 @@ oc get route exercice-app -o jsonpath='{.spec.host}'
 
 ```bash
 # Tester l'application (remplacer l'URL par celle affichée ci-dessus)
-curl http://exercice-app-exercice-builds.apps.example.com
+curl http://exercice-app-exercice-builds.apps-crc.testing
 ```
 
 **Résultat attendu** :
@@ -998,7 +998,7 @@ oc get pods
 
 ```bash
 # Tester la nouvelle version
-curl http://exercice-app-exercice-builds.apps.example.com
+curl http://exercice-app-exercice-builds.apps-crc.testing
 ```
 
 **Résultat attendu** :

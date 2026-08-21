@@ -668,7 +668,7 @@ jobs:
     steps:
       # Récupérer le code
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       # Vérifier le Markdown (vérification simple avec grep)
       - name: Vérifier le Markdown
