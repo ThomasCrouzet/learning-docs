@@ -1,15 +1,15 @@
 {
   "derived_from": "registers",
-  "generated_at": "2026-08-21T00:04:56.563Z",
+  "generated_at": "2026-08-21T01:02:08.683Z",
   "base_sha": "d8cc55e179b024881e6fc5d4094576fbb4bb577a",
   "not_a_human_expert_certification": true,
   "criteria": {
-    "inventory_match": true,
-    "two_run_ids": true,
-    "sources_sufficient": true,
-    "second_reviews": true,
-    "identity_equation": true,
-    "no_copied_stamp": true,
-    "campaign_complete": true
+    "inventory_match": false,
+    "two_run_ids": false,
+    "sources_sufficient": false,
+    "second_reviews": false,
+    "identity_equation": false,
+    "no_copied_stamp": false,
+    "campaign_complete": false
   }
 }

@@ -71,12 +71,24 @@ for (const page of inventory.docs_pages) {
   const confirmed = (d.sources || []).filter((s) => sourceIsSufficientProof(s));
   const pr = reviewerPrimary[rel];
   const ho = reviewerHostile[rel];
+  const notes =
+    (d.pedagogical_verdict && typeof d.pedagogical_verdict.notes === 'string'
+      ? d.pedagogical_verdict.notes
+      : '') ||
+    (typeof d.notes === 'string' ? d.notes : '');
+  const sourcesChecked =
+    (d.pedagogical_verdict && Array.isArray(d.pedagogical_verdict.sources_checked)
+      ? d.pedagogical_verdict.sources_checked
+      : []) || [];
   const secondDone = secondReviewIsSubstantive(
     {
       path: rel,
       second_review_done: d.second_review_done,
       second_review_run_id: d.second_review_run_id,
       second_reviewer: d.second_reviewer,
+      notes,
+      finding_ids: d.finding_ids,
+      confirmed_ok: d.confirmed_ok,
     },
     { artifacts, dossiers: { [rel]: d } }
   );
@@ -109,6 +121,8 @@ for (const page of inventory.docs_pages) {
     second_reviewer: d.second_reviewer || (ho && ho.reviewer),
     second_review_required: true,
     second_review_done: true,
+    notes: notes.trim(),
+    sources_checked: sourcesChecked,
     claim_ids: (d.claims || []).map((c) => c.id).filter(Boolean),
     sources: confirmed,
     snippet_verdict: d.snippet_verdict || null,

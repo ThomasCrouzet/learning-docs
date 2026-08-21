@@ -62,6 +62,7 @@ function sufficientEntry(page, overrides = {}) {
     second_reviewer: 'hostile-agent-0',
     second_review_required: true,
     second_review_done: true,
+    notes: `Checked official deep pages for ${page} against the tutorial appetite chapter.`,
     sources: [proofSource(`c-${page}`)],
     ...overrides,
   };
@@ -101,6 +102,27 @@ describe('campaign-sources', () => {
     expect(isLocatorStampExcerpt(cleaned.excerpt)).toBe(false);
     expect(sourceIsSufficientProof(cleaned)).toBe(true);
     expect(stripLocatorStamp(stamped.excerpt)).not.toMatch(/locator for/);
+    expect(sourceIsSufficientProof(proofSource())).toBe(true);
+  });
+
+  it('rejects unbracketed locator-for stamps and the generic métier excerpt', () => {
+    const unbracketed = {
+      url: 'https://www.iso.org/standard/82875.html',
+      section: 'page-owned official locator for competences-metier/index.md',
+      excerpt: 'Official ISO/IETF/NIST/OWASP reference matching the métier topic of this fiche.',
+      claim_id: 'c-h1',
+    };
+    expect(isLocatorStampExcerpt(unbracketed.section)).toBe(true);
+    expect(isLocatorStampExcerpt(unbracketed.excerpt)).toBe(true);
+    expect(sourceIsSufficientProof(unbracketed)).toBe(false);
+    expect(
+      sourceIsSufficientProof({
+        url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS',
+        section: 'MDN locator for fiches-reference/05-aide-memoire-git.md',
+        excerpt: 'JavaScript (JS) is a lightweight interpreted programming language with first-class functions',
+        claim_id: 'c-h1',
+      })
+    ).toBe(false);
     expect(sourceIsSufficientProof(proofSource())).toBe(true);
   });
 });
@@ -228,6 +250,7 @@ describe('validateCampaignFinal', () => {
           content_hash: 'h',
           second_review_run_id: 'hostile-2026-08-20-A',
           second_reviewer: 'hostile-agent-A',
+          notes: '',
         })
       ),
       primaryPartition: primary,
@@ -315,6 +338,42 @@ describe('second-review artifacts and honest reset (shipped)', () => {
         { artifacts }
       )
     ).toBe(false);
+  });
+
+  it('requires notes or finding_ids on pageowned-second run_ids, not only done+reviewer', () => {
+    const bare = {
+      path: '15-python/01-introduction-python.md',
+      second_review_done: true,
+      second_review_run_id: 'pageowned-second-2026-08-21',
+      second_reviewer: 'hostile-pageowned-00',
+    };
+    expect(secondReviewIsSubstantive(bare)).toBe(false);
+    expect(
+      secondReviewIsSubstantive({
+        ...bare,
+        notes: 'Checked docs.python.org/3/tutorial/appetite.html for the automate-a-task paragraph.',
+      })
+    ).toBe(true);
+    const localPaths = ['15-python/01.md', '15-python/02.md'];
+    const primary = primaryPartition(localPaths, 12);
+    const counter = counterPartition(localPaths, 32);
+    const r = validateCampaignFinal({
+      inventoryPaths: localPaths,
+      pagesFinales: localPaths.map((p) =>
+        sufficientEntry(p, {
+          content_hash: 'h',
+          second_review_run_id: 'pageowned-second-2026-08-21',
+          second_reviewer: 'hostile-pageowned-00',
+          notes: '',
+        })
+      ),
+      primaryPartition: primary,
+      counterPartition: counter,
+      manifest: { pages: localPaths.map((p) => sufficientEntry(p)) },
+      hashes: { [localPaths[0]]: 'h', [localPaths[1]]: 'h' },
+    });
+    expect(r.ok).toBe(false);
+    expect(r.errors.some((e) => /second review is not substantive/.test(e))).toBe(true);
   });
 
   it('clears seal-assigned second review unless a finding file lists the path', () => {

@@ -150,14 +150,39 @@ function collectSecondReviewArtifacts(docs) {
   return map;
 }
 
+function entryNotes(entry) {
+  if (!entry || typeof entry !== 'object') return '';
+  const fromEntry = typeof entry.notes === 'string' ? entry.notes : '';
+  const fromVerdict =
+    entry.pedagogical_verdict && typeof entry.pedagogical_verdict.notes === 'string'
+      ? entry.pedagogical_verdict.notes
+      : '';
+  return String(fromEntry || fromVerdict).trim();
+}
+
+/**
+ * Per-page second-review artifact that survives a clean clone: notes,
+ * finding_ids, or confirmed_ok on the compact entry itself.
+ * Lot membership and a run_id string are never enough.
+ * @param {object} entry
+ */
+function entryHasPageOwnedArtifact(entry) {
+  if (!entry || typeof entry !== 'object') return false;
+  if (entryNotes(entry).length >= 40) return true;
+  if (Array.isArray(entry.finding_ids) && entry.finding_ids.length > 0) return true;
+  if (Array.isArray(entry.second_review_findings) && entry.second_review_findings.length > 0) {
+    return true;
+  }
+  if (entry.confirmed_ok === true) return true;
+  if (typeof entry.second_review_artifact === 'string' && entry.second_review_artifact.trim()) {
+    return true;
+  }
+  return false;
+}
+
 function secondReviewHasArtifact(rel, entry, artifacts) {
+  if (entryHasPageOwnedArtifact(entry)) return true;
   const key = asDocsRel(rel);
-  if (entry && Array.isArray(entry.second_review_findings) && entry.second_review_findings.length > 0) {
-    return true;
-  }
-  if (entry && typeof entry.second_review_artifact === 'string' && entry.second_review_artifact.trim()) {
-    return true;
-  }
   const art = artifacts && artifacts[key];
   if (!art) return false;
   return art.finding_ids.length > 0 || art.confirmed_ok === true;
@@ -165,7 +190,8 @@ function secondReviewHasArtifact(rel, entry, artifacts) {
 
 /**
  * A second review is substantive only with a reviewer, a distinct run_id,
- * and (for seal hostileBand ids) a per-page finding artifact.
+ * and a per-page artifact (notes / finding_ids / confirmed_ok) for every
+ * run_id, including pageowned-second-*.
  * @param {object} entry
  * @param {{ artifacts?: object, dossiers?: object }} [ctx]
  */
@@ -173,7 +199,6 @@ function secondReviewIsSubstantive(entry, ctx = {}) {
   if (!entry || typeof entry !== 'object') return false;
   const key = asDocsRel(entry.path || entry.page_id);
   const dossier = (ctx.dossiers && ctx.dossiers[key]) || null;
-  const artifacts = ctx.artifacts || ctx.secondReviewArtifacts || {};
   const done = Boolean(
     entry.second_review_done === true || (dossier && dossier.second_review_done === true)
   );
@@ -183,10 +208,9 @@ function secondReviewIsSubstantive(entry, ctx = {}) {
     (dossier && dossier.second_review_run_id);
   const reviewer = entry.second_reviewer || (dossier && dossier.second_reviewer);
   if (!done || !run || !reviewer) return false;
-  if (SEAL_HOSTILE_BAND.test(String(run))) {
-    return secondReviewHasArtifact(key, entry, artifacts);
-  }
-  return true;
+  // Compact/public entries must carry notes/finding_ids/confirmed_ok themselves.
+  // Gitignored lot files must not make a clean clone false-PASS.
+  return entryHasPageOwnedArtifact(entry);
 }
 
 /**
@@ -513,6 +537,8 @@ module.exports = {
   SEAL_HOSTILE_BAND,
   collectSecondReviewArtifacts,
   secondReviewHasArtifact,
+  entryHasPageOwnedArtifact,
+  entryNotes,
   secondReviewIsSubstantive,
   dossierBlocksVerified,
   honestSecondReviewFields,

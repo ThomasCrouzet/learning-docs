@@ -45,20 +45,27 @@ function locatorText(source) {
     .trim();
 }
 
+const GENERIC_METIER_EXCERPT =
+  /official iso\/ietf\/nist\/owasp reference matching the m[eé]tier topic of this fiche/i;
+
 /**
- * Batch stamp of the form `[locator for path]` glued onto an excerpt.
- * Length >= 8 is not proof; the bracketed path is a scope stamp.
+ * Batch locator stamp: `[locator for path]`, unbracketed `locator for path`,
+ * or `page-owned official locator for path`. Also the copied métier excerpt.
+ * Length >= 8 is not proof.
  * @param {unknown} text
  * @returns {boolean}
  */
 function isLocatorStampExcerpt(text) {
   if (typeof text !== 'string') return false;
-  return /\[locator for\b/i.test(text);
+  if (/locator for\b/i.test(text)) return true;
+  if (/page-owned official locator/i.test(text)) return true;
+  if (GENERIC_METIER_EXCERPT.test(text)) return true;
+  return false;
 }
 
 /**
- * Remove a glued `[locator for path]` stamp; the remaining excerpt may still
- * be used only if it is otherwise sufficient proof.
+ * Remove glued locator-for stamps; the remaining excerpt may still be used
+ * only if it is otherwise sufficient proof.
  * @param {unknown} text
  * @returns {string}
  */
@@ -66,6 +73,8 @@ function stripLocatorStamp(text) {
   if (typeof text !== 'string') return '';
   return text
     .replace(/\s*\[locator for[^\]]*\]\s*/gi, ' ')
+    .replace(/\s*page-owned official locator for \S+/gi, ' ')
+    .replace(/\s*(?:MDN |RFC |ISO )?locator for \S+/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -134,6 +143,7 @@ function sourceFingerprint(sources) {
 
 module.exports = {
   GENERIC_PATH_RE,
+  GENERIC_METIER_EXCERPT,
   isGenericHomepage,
   isScopePathStamp,
   isLocatorStampExcerpt,
