@@ -216,7 +216,11 @@ En cas d'urgence (bug critique, attaque en cours), cette lenteur est un problèm
 
 ### The DAO : l'échec fondateur et ses leçons pour la gouvernance
 
-The DAO (2016) est le cas le plus célèbre d'échec d'une DAO. Un bug dans le smart contract a permis le vol de 60 millions de dollars en ETH, provoquant le hard fork Ethereum/Ethereum Classic (voir [Phase 2, fiche 06](../02-bitcoin/06-forks-evolution-protocoles.md) et [Phase 3, fiche 02](../03-ethereum-smart-contracts/02-smart-contracts-du-code.md) pour les détails techniques). L'échec de The DAO a révèle que le code seul ne suffit pas a garantir une bonne gouvernance.
+The DAO (2016) est le cas le plus célèbre d'échec d'une DAO. Un bug dans le smart contract a permis le vol de **plus de 3,6 millions d'ETH** ([ethereum.org/governance](https://ethereum.org/en/governance/), section _The DAO fork_).
+
+Le montant en dollars dépend du cours ETH/USD du moment : le récit CoinDesk lié par ethereum.org parle d'environ 50 millions de dollars à l'époque. Retiens le chiffre en ETH comme référence, pas un USD sans millésime.
+
+Ce hack a provoqué le hard fork Ethereum/Ethereum Classic (voir [Phase 2, fiche 06](../02-bitcoin/06-forks-evolution-protocoles.md) et [Phase 3, fiche 02](../03-ethereum-smart-contracts/02-smart-contracts-du-code.md) pour les détails techniques). L'échec de The DAO a révélé que le code seul ne suffit pas à garantir une bonne gouvernance.
 
 **Leçons spécifiques à la gouvernance des DAOs** :
 

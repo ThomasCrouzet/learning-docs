@@ -445,7 +445,7 @@ MoneyField::new('price')
 private ?string $price = null;
 ```
 
-**Note importante** : Par défaut, EasyAdmin suppose que les prix sont stockés en centimes (100 = 1€). Si tu stockes en euros, mets `setStoredAsCents(false)`.
+**Note importante** : Par défaut, EasyAdmin stocke les montants en centimes (doc officielle : 5 euros → entier `500`). Si tu stockes en euros (ex. `9.99` en `DECIMAL`), mets `setStoredAsCents(false)`. Le champ est rendu comme un `<input type="number">` ([MoneyField](https://symfony.com/bundles/EasyAdminBundle/current/fields/MoneyField.html)).
 
 ---
 

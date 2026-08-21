@@ -152,6 +152,8 @@ Signaux d'adresses actives artificiellement gonflees :
 
 **Comment interpréter le TVL** :
 
+> **Note de fraîcheur** : le TVL affiché sur DeFiLlama change en continu. Définition officielle (docs.llama.fi, consulté en août 2026) : valeur des tokens verrouillés dans les contrats d'un protocole. Les 100 millions $ ci-dessous sont un **scénario pédagogique**, pas un chiffre observé à une date donnée.
+
 ```text
 Deux protocoles ont chacun 100 millions $ de TVL.
 
