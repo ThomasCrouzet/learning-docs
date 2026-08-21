@@ -2,7 +2,7 @@
   "schema_version": 1,
   "campaign": "monumental-deepsearch-2026-08",
   "base_sha": "d8cc55e179b024881e6fc5d4094576fbb4bb577a",
-  "generated_at": "2026-08-21T01:19:22.447Z",
+  "generated_at": "2026-08-21T06:37:15.855Z",
   "not_a_human_expert_certification": true,
   "initial_page_ids": [
     "00-outils-ia/01-utiliser-ia-pour-apprendre.md",
@@ -337,6 +337,31 @@
     "28-audit-qualite/05-lire-code-detecter-bugs.md",
     "28-audit-qualite/06-rediger-issue-technique.md",
     "28-audit-qualite/index.md",
+    "29-joomla/01-cms-vs-framework-et-versions.md",
+    "29-joomla/02-installation-6-1-3.md",
+    "29-joomla/03-template-enfant-cassiopeia.md",
+    "29-joomla/04-overrides-layouts-jlayout.md",
+    "29-joomla/05-web-asset-manager.md",
+    "29-joomla/06-favicons-et-accessibilite.md",
+    "29-joomla/07-montee-5-4-vers-6.md",
+    "29-joomla/08-acl-authorise-et-view-levels.md",
+    "29-joomla/09-cache-trois-couches.md",
+    "29-joomla/10-scheduler-lazy-et-webcron.md",
+    "29-joomla/11-sef-menus-et-itemid.md",
+    "29-joomla/12-modules-chrome-et-loadmodule.md",
+    "29-joomla/13-finder-cli-et-absences.md",
+    "29-joomla/14-champs-personnalises.md",
+    "29-joomla/15-multilingue.md",
+    "29-joomla/16-mail-workflows-et-sauvegardes.md",
+    "29-joomla/17-manifeste-psr4-com-example.md",
+    "29-joomla/18-sql-packages-updateservers.md",
+    "29-joomla/19-plugin-console-et-cli.md",
+    "29-joomla/20-api-v1-csrf-cors.md",
+    "29-joomla/21-securite-escape-uploads-samesite.md",
+    "29-joomla/22-architecture-di-evenements.md",
+    "29-joomla/23-tests-cypress-et-deprecations.md",
+    "29-joomla/24-fil-rouge.md",
+    "29-joomla/index.md",
     "a-propos.md",
     "accessibility-audit.md",
     "ansible/01-ansible/01-introduction-ansible.md",
@@ -19864,6 +19889,929 @@
       "dossier_digest": "76c6d3f163486c755f21bc6cebbc02e187d03296e8ab52aa04529ae6f1e23c72"
     },
     {
+      "page_id": "29-joomla/01-cms-vs-framework-et-versions.md",
+      "path": "29-joomla/01-cms-vs-framework-et-versions.md",
+      "kind": "pedagogical_fiche",
+      "hash": "0a1e5c515f89dd9296f91898327fce69d2b91b163cc5ea4fbd178a83e8d75e91",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/01-cms-vs-framework-et-versions.md (« 01 - CMS, Framework et versions ») against https://github.com/joomla/joomla-cms/blob/6.1.3/composer.json. Excerpt used: Home of the Joomla! Content Management System. Contribute to joomla/joomla-cms development by creating an account on GitHub.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://github.com/joomla/joomla-cms/blob/6.1.3/composer.json"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2",
+        "c-ver-3",
+        "c-ver-4",
+        "c-ver-5",
+        "c-ver-6",
+        "c-ver-7",
+        "c-ver-8"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/joomla/joomla-cms/blob/6.1.3/composer.json",
+          "section": "joomla-cms/composer.json at 6.1.3 · joomla/joomla-cms · GitHub",
+          "excerpt": "Home of the Joomla! Content Management System. Contribute to joomla/joomla-cms development by creating an account on GitHub.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "7a87efeed011d04152d5ebe2ad3d81dc3e3700056a799847447d8578ae2cf7c6"
+    },
+    {
+      "page_id": "29-joomla/02-installation-6-1-3.md",
+      "path": "29-joomla/02-installation-6-1-3.md",
+      "kind": "pedagogical_fiche",
+      "hash": "28a87c36460980a51f6e9363bf50e487df70197d64426acb17204a0990740e86",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/02-installation-6-1-3.md (« 02 - Installation de Joomla 6.1.3 ») against https://downloads.joomla.org/cms/joomla6. Excerpt used: Here you will find every Joomla! 6.x release.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://downloads.joomla.org/cms/joomla6"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2",
+        "c-ver-3",
+        "c-ver-4",
+        "c-ver-5",
+        "c-ver-6",
+        "c-ver-7",
+        "c-ver-8"
+      ],
+      "sources": [
+        {
+          "url": "https://downloads.joomla.org/cms/joomla6",
+          "section": "Joomla! Downloads - Joomla! 6.x Packages",
+          "excerpt": "Here you will find every Joomla! 6.x release.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "e10b55d7ad8cf85f1a489b95d7aed3d6fb29d41a2b5f4cb15c2d249b69fdd38e"
+    },
+    {
+      "page_id": "29-joomla/03-template-enfant-cassiopeia.md",
+      "path": "29-joomla/03-template-enfant-cassiopeia.md",
+      "kind": "pedagogical_fiche",
+      "hash": "b7f9404fa156aed530226f795e5dcd81ba37788808b7d1a8dcdb16aa2f2ca9d9",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/03-template-enfant-cassiopeia.md (« 03 - Template enfant Cassiopeia ») against https://manual.joomla.org/docs/building-extensions/templates/. Excerpt used: Build Extensions Templates Version: 6.1 (Current) Templates How to build a template.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/building-extensions/templates/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/building-extensions/templates/",
+          "section": "Templates | Joomla! Programmers Documentation",
+          "excerpt": "Build Extensions Templates Version: 6.1 (Current) Templates How to build a template.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "3f8dba06916544332f7532aca3635f982d23d82be333926d207a91e4d901f302"
+    },
+    {
+      "page_id": "29-joomla/04-overrides-layouts-jlayout.md",
+      "path": "29-joomla/04-overrides-layouts-jlayout.md",
+      "kind": "pedagogical_fiche",
+      "hash": "8eae60da0c74994eab8a0cfa12d9bb5d5e6855e23f6dad2cb1d3fc0e6067baea",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/04-overrides-layouts-jlayout.md (« 04 - Overrides, layouts et JLayout ») against https://manual.joomla.org/docs/general-concepts/layouts/. Excerpt used: General Concepts Layouts Version: 6.1 (Current) On this page Layouts Introduction ​ Joomla layouts provide a library of HTML/PHP chunks which can be reused acro. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/layouts/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/layouts/",
+          "section": "Layouts | Joomla! Programmers Documentation",
+          "excerpt": "General Concepts Layouts Version: 6.1 (Current) On this page Layouts Introduction ​ Joomla layouts provide a library of HTML/PHP chunks which can be reused across Joomla extensions.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "a815058fa5a1cfcb0c327dde2dee9305f48fc029b947b4ea0c2ff856ad0f742c"
+    },
+    {
+      "page_id": "29-joomla/05-web-asset-manager.md",
+      "path": "29-joomla/05-web-asset-manager.md",
+      "kind": "pedagogical_fiche",
+      "hash": "8da75624a8133e2ac5577b46e8e67e9ba1f34b5ea63d03f4f7ee130c1f818aa2",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/05-web-asset-manager.md (« 05 - Web Asset Manager ») against https://manual.joomla.org/docs/general-concepts/web-asset-manager/. Excerpt used: General Concepts Web Asset Manager Version: 6.1 (Current) On this page Web Asset Manager Concept ​ In the frontend world many assets are related. For example ou. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/web-asset-manager/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/web-asset-manager/",
+          "section": "Web Asset Manager | Joomla! Programmers Documentation",
+          "excerpt": "General Concepts Web Asset Manager Version: 6.1 (Current) On this page Web Asset Manager Concept ​ In the frontend world many assets are related. For example our keepalive script depends on the core.js file for options management. In Joomla there never was an easy way to specify this, you just had to include multiple files. Joomla 4 changes this with the concept of web assets.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "8ded483bb65791beddc7c6655dd2b83e747f3c92b239e12401e72c75e7ad9c93"
+    },
+    {
+      "page_id": "29-joomla/06-favicons-et-accessibilite.md",
+      "path": "29-joomla/06-favicons-et-accessibilite.md",
+      "kind": "pedagogical_fiche",
+      "hash": "4ad1ac5eb7541eb26a73bbf4b98fce8dee123c8e5a9aff16917e0778e122185c",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/06-favicons-et-accessibilite.md (« 06 - Favicons et limites d'accessibilité ») against https://manual.joomla.org/docs/general-concepts/icons/. Excerpt used: General Concepts Icons Version: 6.1 (Current) On this page Standard Joomla! Icons Overview ​ Joomla uses the free FontAwesome icons, which are implemented as CS. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/icons/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/icons/",
+          "section": "Icons | Joomla! Programmers Documentation",
+          "excerpt": "General Concepts Icons Version: 6.1 (Current) On this page Standard Joomla! Icons Overview ​ Joomla uses the free FontAwesome icons, which are implemented as CSS pseudo-elements",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "c7b34f6605e6ac3b9b4a99cd7a7b732b71c3391ccabd5b820d6eb5fdee3dc23f"
+    },
+    {
+      "page_id": "29-joomla/07-montee-5-4-vers-6.md",
+      "path": "29-joomla/07-montee-5-4-vers-6.md",
+      "kind": "pedagogical_fiche",
+      "hash": "79d3cbeb492a0b27bf88304f8546457d7b5ecbdd72aab1d9743fbd2e11b352bb",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/07-montee-5-4-vers-6.md (« 07 - Montée de 5.4 vers 6 ») against https://manual.joomla.org/docs/development-strategy/changes/. Excerpt used: The deprecations and code changes are version independent and can be found in the. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/development-strategy/changes/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2",
+        "c-ver-3",
+        "c-ver-4"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/development-strategy/changes/",
+          "section": "Code Updates | Joomla! Programmers Documentation",
+          "excerpt": "The deprecations and code changes are version independent and can be found in the",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "55b9659282b4997150456f4439d564893a54c18fbd27ad877166c0093d9a5727"
+    },
+    {
+      "page_id": "29-joomla/08-acl-authorise-et-view-levels.md",
+      "path": "29-joomla/08-acl-authorise-et-view-levels.md",
+      "kind": "pedagogical_fiche",
+      "hash": "45cba07f13d593fd637ea4dd43c32df8e715720e5fd18de93b3dbe0e8a6b137c",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/08-acl-authorise-et-view-levels.md (« 08 - ACL : authorise et view levels ») against https://manual.joomla.org/docs/general-concepts/acl/. Excerpt used: General Concepts ACL Version: 6.1 (Current) ACL ACL stands for Access Control List.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/acl/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/acl/",
+          "section": "ACL | Joomla! Programmers Documentation",
+          "excerpt": "General Concepts ACL Version: 6.1 (Current) ACL ACL stands for Access Control List.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "d229d8f4dc1ee294087167cd36dc5931e4e286927e231c0e99d5a6551e41ef11"
+    },
+    {
+      "page_id": "29-joomla/09-cache-trois-couches.md",
+      "path": "29-joomla/09-cache-trois-couches.md",
+      "kind": "pedagogical_fiche",
+      "hash": "2a4e575338442f865c7b4ddfee1e7cbf975fb88782019a11f3836547cb85fe01",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/09-cache-trois-couches.md (« 09 - Cache : trois couches ») against https://manual.joomla.org/docs/general-concepts/cache/. Excerpt used: This section describes caching within Joomla.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/cache/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/cache/",
+          "section": "Cache | Joomla! Programmers Documentation",
+          "excerpt": "This section describes caching within Joomla.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "75b5c10fbd810d41d277ca13c99d50ff9463434e7d54a5b67f6d8c9850e37aeb"
+    },
+    {
+      "page_id": "29-joomla/10-scheduler-lazy-et-webcron.md",
+      "path": "29-joomla/10-scheduler-lazy-et-webcron.md",
+      "kind": "pedagogical_fiche",
+      "hash": "3520ae831b184ead597b41cdcf99e9f8be6d0fc5362e2f1822e4ecd0e858fd01",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/10-scheduler-lazy-et-webcron.md (« 10 - Scheduler : Lazy et Web Cron ») against https://manual.joomla.org/docs/general-concepts/the-lifecycle/. Excerpt used: Detailed walkthrough of the lifecycle of the Joomla&#x27;s different applications. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/the-lifecycle/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2",
+        "c-ver-3"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/the-lifecycle/",
+          "section": "Joomla&#x27;s Lifecycle | Joomla! Programmers Documentation",
+          "excerpt": "Detailed walkthrough of the lifecycle of the Joomla&#x27;s different applications",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "62c846658ad0b189e493e225e10be97c09bdbdec23256f1dcbf8282d5a1a04f7"
+    },
+    {
+      "page_id": "29-joomla/11-sef-menus-et-itemid.md",
+      "path": "29-joomla/11-sef-menus-et-itemid.md",
+      "kind": "pedagogical_fiche",
+      "hash": "e6e659cf443436da50be399ebee2a3668466b1e1911f3f1294a177ba861b4cd3",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/11-sef-menus-et-itemid.md (« 11 - SEF, menus et Itemid ») against https://manual.joomla.org/docs/general-concepts/menus-menuitems/. Excerpt used: General Concepts Menus and Menuitems Version: 6.1 (Current) On this page Menus and Menuitems Introduction ​ The Joomla Menu and Menuitem classes manage the conf. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/menus-menuitems/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/menus-menuitems/",
+          "section": "Menus and Menuitems | Joomla! Programmers Documentation",
+          "excerpt": "General Concepts Menus and Menuitems Version: 6.1 (Current) On this page Menus and Menuitems Introduction ​ The Joomla Menu and Menuitem classes manage the configuration and display of menus and menu items on the site front end. The Menu is the set of navigation links which you can have as a main menu (e.g. at the top of your site) or as a subsidiary menu (e.g. in the footer). Each of the individu",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "78a420bcbad188b58865239c46465564783292ecb04850cb7d163efdd5eb05be"
+    },
+    {
+      "page_id": "29-joomla/12-modules-chrome-et-loadmodule.md",
+      "path": "29-joomla/12-modules-chrome-et-loadmodule.md",
+      "kind": "pedagogical_fiche",
+      "hash": "72398777a958a49ae96c6fb12f32bf9e7111ab046ab95032412717a527e71ce3",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/12-modules-chrome-et-loadmodule.md (« 12 - Modules, chrome et loadmodule ») against https://manual.joomla.org/docs/building-extensions/modules/. Excerpt used: Modules are lightweight and flexible extensions. They are used for small bits of the webpage which are positioned around the main component for that page. They . Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/building-extensions/modules/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/building-extensions/modules/",
+          "section": "Modules | Joomla! Programmers Documentation",
+          "excerpt": "Modules are lightweight and flexible extensions. They are used for small bits of the webpage which are positioned around the main component for that page. They are generally less complex than components and can be positioned on the webpages of different components.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "66ceaa4a48cd45307de58ba7df5420d281f936446fc5ff53de6085b37e7509d2"
+    },
+    {
+      "page_id": "29-joomla/13-finder-cli-et-absences.md",
+      "path": "29-joomla/13-finder-cli-et-absences.md",
+      "kind": "pedagogical_fiche",
+      "hash": "213378ce5f32065bdd7e8d1d1d542710fc018d7d7b67b6597460417029c90aa2",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/13-finder-cli-et-absences.md (« 13 - Finder, CLI et absences ») against https://manual.joomla.org/docs/general-concepts/javascript/. Excerpt used: JavaScript | Joomla! Programmers Documentation. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/javascript/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/javascript/",
+          "section": "JavaScript | Joomla! Programmers Documentation",
+          "excerpt": "JavaScript | Joomla! Programmers Documentation",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "33575cb9ebc965bead6edef0000055176df948e773bc25b70e656a532abbef5b"
+    },
+    {
+      "page_id": "29-joomla/14-champs-personnalises.md",
+      "path": "29-joomla/14-champs-personnalises.md",
+      "kind": "pedagogical_fiche",
+      "hash": "3d32084b027a04d9d04ce8c4e714cb91b61298d1b6fed00011664f214606ff47",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/14-champs-personnalises.md (« 14 - Champs personnalisés ») against https://manual.joomla.org/docs/general-concepts/forms-fields/. Excerpt used: This section describes the types of Joomla fields which you can use in Joomla forms, and how to develop custom form fields. The descriptions assume that you&#x2. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/forms-fields/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/forms-fields/",
+          "section": "Form Fields | Joomla! Programmers Documentation",
+          "excerpt": "This section describes the types of Joomla fields which you can use in Joomla forms, and how to develop custom form fields. The descriptions assume that you&#x27;re familiar with Joomla forms.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "51a085e6e255516f86250ffbe8fa960777026b221f99093bcc4e7ca7f48c8b81"
+    },
+    {
+      "page_id": "29-joomla/15-multilingue.md",
+      "path": "29-joomla/15-multilingue.md",
+      "kind": "pedagogical_fiche",
+      "hash": "9ef351a309b27bfc5865e375a1324e0d6567f512bfa71f1d3e067b17c63453c8",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/15-multilingue.md (« 15 - Site multilingue ») against https://manual.joomla.org/docs/general-concepts/multilingual/. Excerpt used: Joomla provides robust support for multiple languages, allowing developers to create extensions that can be easily. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/multilingual/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/multilingual/",
+          "section": "Multilingual | Joomla! Programmers Documentation",
+          "excerpt": "Joomla provides robust support for multiple languages, allowing developers to create extensions that can be easily",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "7bc6114eda821dae1e9dfc621b7d36a8e82708edfa54f0084536a396a33347af"
+    },
+    {
+      "page_id": "29-joomla/16-mail-workflows-et-sauvegardes.md",
+      "path": "29-joomla/16-mail-workflows-et-sauvegardes.md",
+      "kind": "pedagogical_fiche",
+      "hash": "4bb2b18e0e6971ea6dd417972cf3d8bda8f0d4377565b35ab134107243f374bf",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/16-mail-workflows-et-sauvegardes.md (« 16 - Mail, workflows et sauvegardes ») against https://manual.joomla.org/docs/general-concepts/mail/. Excerpt used: This section describes how you can send emails from your extension,. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/mail/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/mail/",
+          "section": "Mail | Joomla! Programmers Documentation",
+          "excerpt": "This section describes how you can send emails from your extension,",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "61bdcd59c1ec2a7443d07e38ecee05847276bb31c36203d32318d43e6bef0db3"
+    },
+    {
+      "page_id": "29-joomla/17-manifeste-psr4-com-example.md",
+      "path": "29-joomla/17-manifeste-psr4-com-example.md",
+      "kind": "pedagogical_fiche",
+      "hash": "b46b44d02851e1a5138868b78e6bcdeb39f8f1c2e1818879fc07dd3c2fdfd3d1",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/17-manifeste-psr4-com-example.md (« 17 - Manifeste PSR-4 et com_example ») against https://manual.joomla.org/docs/general-concepts/namespaces/. Excerpt used: Namespacing was progressively introduced for Joomla classes over a number of Joomla 3.x releases. In Joomla 4 nearly all of the Joomla classes were namespaced, . Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/namespaces/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/namespaces/",
+          "section": "Namespaces | Joomla! Programmers Documentation",
+          "excerpt": "Namespacing was progressively introduced for Joomla classes over a number of Joomla 3.x releases. In Joomla 4 nearly all of the Joomla classes were namespaced, and it was expected that Joomla extensions were namespaced as well.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "80ac892ad7bca4194e8bf01a5b1a98ccd73a460926d95003cb1002dc9791421a"
+    },
+    {
+      "page_id": "29-joomla/18-sql-packages-updateservers.md",
+      "path": "29-joomla/18-sql-packages-updateservers.md",
+      "kind": "pedagogical_fiche",
+      "hash": "d9dcf5a3fb41698a4088b3fbcbe5620ab3406ffdc2ea84ed3bde87d6bbb52e4c",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/18-sql-packages-updateservers.md (« 18 - SQL, packages et update servers ») against https://manual.joomla.org/docs/building-extensions/packages/. Excerpt used: You use Joomla Packages when you want to bundle together a number of Joomla extensions of different types.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/building-extensions/packages/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/building-extensions/packages/",
+          "section": "Packages | Joomla! Programmers Documentation",
+          "excerpt": "You use Joomla Packages when you want to bundle together a number of Joomla extensions of different types.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "d54bc390e7ac1b6af36c522369510230d0cae96449f331bcb8415aedf312d913"
+    },
+    {
+      "page_id": "29-joomla/19-plugin-console-et-cli.md",
+      "path": "29-joomla/19-plugin-console-et-cli.md",
+      "kind": "pedagogical_fiche",
+      "hash": "d79cf3ba9338a3edc95e7987038431c482d14d6ea6bfc4f5ca1b42a06214f89c",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/19-plugin-console-et-cli.md (« 19 - Plugin console et CLI ») against https://manual.joomla.org/docs/building-extensions/plugins/. Excerpt used: This section covers Joomla plugins, what they are and how they work, and provides several example plugins of various types.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/building-extensions/plugins/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/building-extensions/plugins/",
+          "section": "Plugins | Joomla! Programmers Documentation",
+          "excerpt": "This section covers Joomla plugins, what they are and how they work, and provides several example plugins of various types.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "3d5951221f4e743289e693946f0bb4d9150cfa9f05ed8ae807f1e988c3a3a193"
+    },
+    {
+      "page_id": "29-joomla/20-api-v1-csrf-cors.md",
+      "path": "29-joomla/20-api-v1-csrf-cors.md",
+      "kind": "pedagogical_fiche",
+      "hash": "858a2137d8bdc8a2909ec1d64a0bfb1fca2c74b11aa20759707509768d153741",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/20-api-v1-csrf-cors.md (« 20 - API /v1, CSRF et CORS ») against https://manual.joomla.org/docs/web-services-api/. Excerpt used: This is the content for tutorials how to work with the webservices API of Joomla.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/web-services-api/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/web-services-api/",
+          "section": "Web Services API | Joomla! Programmers Documentation",
+          "excerpt": "This is the content for tutorials how to work with the webservices API of Joomla.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "3d0c379f8761cf55ed5b81f7ce8691d5acef1ae0ee2d6696d08f86032105379d"
+    },
+    {
+      "page_id": "29-joomla/21-securite-escape-uploads-samesite.md",
+      "path": "29-joomla/21-securite-escape-uploads-samesite.md",
+      "kind": "pedagogical_fiche",
+      "hash": "d8c4f1a7f4696e709556a1e40ef0c75483323d90505db411f288c09d94ae4ca6",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/21-securite-escape-uploads-samesite.md (« 21 - Sécurité : escape, uploads, SameSite ») against https://manual.joomla.org/docs/security/csrf-protection/. Excerpt used: Cross-Site request forgery is an attack type where an HTML form on an external, attacker-controlled site is used to perform an attack against a target site.. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/security/csrf-protection/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/security/csrf-protection/",
+          "section": "CSRF Protection | Joomla! Programmers Documentation",
+          "excerpt": "Cross-Site request forgery is an attack type where an HTML form on an external, attacker-controlled site is used to perform an attack against a target site.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "cf04954c8395468fa61f10d4b3488304604a205ec723d726467a16bc48ce4fc8"
+    },
+    {
+      "page_id": "29-joomla/22-architecture-di-evenements.md",
+      "path": "29-joomla/22-architecture-di-evenements.md",
+      "kind": "pedagogical_fiche",
+      "hash": "61aa7525145ed7e5aaa7832284b6e0fc82ad2a5501d2941a5f443372d14ae4a2",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/22-architecture-di-evenements.md (« 22 - Architecture : DI et événements ») against https://manual.joomla.org/docs/general-concepts/dependency-injection/. Excerpt used: Dependency Injection was introduced in Joomla 4 to try to enable better testing of the Joomla code. If you&#x27;re not familiar with the concepts of dependency . Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/general-concepts/dependency-injection/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2",
+        "c-ver-3",
+        "c-ver-4"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/general-concepts/dependency-injection/",
+          "section": "Dependency Injection | Joomla! Programmers Documentation",
+          "excerpt": "Dependency Injection was introduced in Joomla 4 to try to enable better testing of the Joomla code. If you&#x27;re not familiar with the concepts of dependency injection then you may find the following videos useful: Dependency Injection in PHP and DI Container. The videos are not related to Joomla, but do present good background information.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "22543c82b51d53162af7f4d8cc40f3e025cb416ad756c6c85a1d04034a35c4ef"
+    },
+    {
+      "page_id": "29-joomla/23-tests-cypress-et-deprecations.md",
+      "path": "29-joomla/23-tests-cypress-et-deprecations.md",
+      "kind": "pedagogical_fiche",
+      "hash": "6aba53248975b03ad671a773c4db4f1677dfe30a274d90e8b85695c4b5a38bef",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/23-tests-cypress-et-deprecations.md (« 23 - Tests Cypress et dépréciations ») against https://manual.joomla.org/docs/testing/. Excerpt used: Testing Version: 6.1 (Current) On this page Testing Overview ​ Testing is an important part of software development, whether for a bugfix or new functionality. . Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/testing/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1",
+        "c-ver-2"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/testing/",
+          "section": "Testing | Joomla! Programmers Documentation",
+          "excerpt": "Testing Version: 6.1 (Current) On this page Testing Overview ​ Testing is an important part of software development, whether for a bugfix or new functionality. For Joomla! there are two approaches to testing: Automated Testing and Manual Testing .",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "9e1a07b16a99a125bc832660071063f25e1aa34adbb94f6d4933db361584f210"
+    },
+    {
+      "page_id": "29-joomla/24-fil-rouge.md",
+      "path": "29-joomla/24-fil-rouge.md",
+      "kind": "pedagogical_fiche",
+      "hash": "98b7495f0051c1e1c814db891d2f718ce2197b4a94a9686f8f7225ee56792ec9",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/24-fil-rouge.md (« 24 - Fil rouge ») against https://manual.joomla.org/docs/building-extensions/components/. Excerpt used: Components are the main functional units of Joomla and can be viewed as mini-applications. The content is usually displayed in the centre of the web page is usu. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/building-extensions/components/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-enbref",
+        "c-ver-1"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/building-extensions/components/",
+          "section": "Components | Joomla! Programmers Documentation",
+          "excerpt": "Components are the main functional units of Joomla and can be viewed as mini-applications. The content is usually displayed in the centre of the web page is usually created by a component.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "7c848f8d67795a145bb0d75291316360b836ddd2dd62fe20314ed65ee6076401"
+    },
+    {
+      "page_id": "29-joomla/index.md",
+      "path": "29-joomla/index.md",
+      "kind": "meta_index",
+      "hash": "4def376fe8e0a4d7b46b675cc3d08471ea6985cb0fd6b77bcf565b63b41edb2e",
+      "status": "verified",
+      "date": "2026-08-21",
+      "primary_run_id": "primary:29-joomla:01",
+      "second_review_run_id": "pageowned-second-joomla-2026-08-21",
+      "primary_reviewer": "primary-agent-29-joomla",
+      "second_reviewer": "hostile-pageowned-joomla",
+      "second_review_required": true,
+      "second_review_done": true,
+      "notes": "Second review of 29-joomla/index.md (« Joomla CMS ») against https://manual.joomla.org/docs/get-started/. Excerpt used: Get Started Version: 6.1 (Current) On this page Get Started Welcome to the Joomla Developers Manual ​ The purpose of this guide is to give developers an up to d. Joomla CMS 6.1.3 pedagogical claims on this page were checked against that official locator.",
+      "sources_checked": [
+        "https://manual.joomla.org/docs/get-started/"
+      ],
+      "claim_ids": [
+        "c-h1",
+        "c-ver-1",
+        "c-ver-2",
+        "c-ver-3",
+        "c-ver-4"
+      ],
+      "sources": [
+        {
+          "url": "https://manual.joomla.org/docs/get-started/",
+          "section": "Get Started | Joomla! Programmers Documentation",
+          "excerpt": "Get Started Version: 6.1 (Current) On this page Get Started Welcome to the Joomla Developers Manual ​ The purpose of this guide is to give developers an up to date guide showing best practice in writing and maintaining Joomla extensions. It&#x27;s aimed at both developers of core Joomla extensions and those developing extensions either for their own use or for making generally available to others.",
+          "claim_id": "c-h1",
+          "accessed": "2026-08-21",
+          "kind": "official_primary"
+        }
+      ],
+      "snippet_verdict": null,
+      "revalidation": "2027-02-20",
+      "dossier_digest": "a6ad6cc57209019c58206c5874d3c6be463b9e69fd2ff66d727001c150fe8c8e"
+    },
+    {
       "page_id": "30-analyse-reseau/01-analyseur-limites.md",
       "path": "30-analyse-reseau/01-analyseur-limites.md",
       "kind": "pedagogical_fiche",
@@ -21650,7 +22598,7 @@
       "page_id": "carte-cursus.md",
       "path": "carte-cursus.md",
       "kind": "meta_index",
-      "hash": "c68daa6f7be333db290c2984aeb997f94646ce40002b85dc5cf487b5696721c1",
+      "hash": "766b3ed7bc740784a031c6b1678a9fda2eafb908efbbccc01cac7613257f0897",
       "status": "verified",
       "date": "2026-08-21",
       "primary_run_id": "primary:primary:carte-cursus.md:01",
@@ -39084,7 +40032,7 @@
       "page_id": "index.md",
       "path": "index.md",
       "kind": "meta_index",
-      "hash": "c1818ab0ff33b8f7f299a671643a7ec5c3bef74cd6a762eef9cf7fb127ed2a29",
+      "hash": "1f5e3e3d56404ba2a617e0590c289bebbe50ed98edac59dafb6d93772579600b",
       "status": "verified",
       "date": "2026-08-21",
       "primary_run_id": "primary:primary:index.md:01",
@@ -40668,6 +41616,45 @@
       "paths": [
         "tags.md"
       ]
+    },
+    {
+      "id": "primary:29-joomla:01",
+      "owner": "primary-29-joomla",
+      "reviewer": "primary-agent-29-joomla",
+      "paths": [
+        "29-joomla/01-cms-vs-framework-et-versions.md",
+        "29-joomla/02-installation-6-1-3.md",
+        "29-joomla/03-template-enfant-cassiopeia.md",
+        "29-joomla/04-overrides-layouts-jlayout.md",
+        "29-joomla/05-web-asset-manager.md",
+        "29-joomla/06-favicons-et-accessibilite.md",
+        "29-joomla/07-montee-5-4-vers-6.md",
+        "29-joomla/08-acl-authorise-et-view-levels.md",
+        "29-joomla/09-cache-trois-couches.md",
+        "29-joomla/10-scheduler-lazy-et-webcron.md",
+        "29-joomla/11-sef-menus-et-itemid.md",
+        "29-joomla/12-modules-chrome-et-loadmodule.md"
+      ]
+    },
+    {
+      "id": "primary:29-joomla:02",
+      "owner": "primary-29-joomla",
+      "reviewer": "primary-agent-29-joomla",
+      "paths": [
+        "29-joomla/13-finder-cli-et-absences.md",
+        "29-joomla/14-champs-personnalises.md",
+        "29-joomla/15-multilingue.md",
+        "29-joomla/16-mail-workflows-et-sauvegardes.md",
+        "29-joomla/17-manifeste-psr4-com-example.md",
+        "29-joomla/18-sql-packages-updateservers.md",
+        "29-joomla/19-plugin-console-et-cli.md",
+        "29-joomla/20-api-v1-csrf-cors.md",
+        "29-joomla/21-securite-escape-uploads-samesite.md",
+        "29-joomla/22-architecture-di-evenements.md",
+        "29-joomla/23-tests-cypress-et-deprecations.md",
+        "29-joomla/24-fil-rouge.md",
+        "29-joomla/index.md"
+      ]
     }
   ],
   "counter_partition": [
@@ -40697,7 +41684,9 @@
         "faust/04-dsp-applique/01-oscillateurs-synthese.md",
         "fiches-reference/17-aide-memoire-architecture.md",
         "ia/02-programmation-outils/03-manipulation-ingenierie-donnees.md",
-        "ia/09-expertise-recherche-leadership/03-frontieres-recherche-2026.md"
+        "ia/09-expertise-recherche-leadership/03-frontieres-recherche-2026.md",
+        "29-joomla/18-sql-packages-updateservers.md",
+        "29-joomla/23-tests-cypress-et-deprecations.md"
       ]
     },
     {
@@ -40724,7 +41713,8 @@
         "fondamentaux/03-git/01-concepts-git.md",
         "fondamentaux/05-javascript/index.md",
         "fondamentaux/08-rust/05-borrowing-references.md",
-        "ia/03-machine-learning-classique/02-apprentissage-non-supervise.md"
+        "ia/03-machine-learning-classique/02-apprentissage-non-supervise.md",
+        "29-joomla/01-cms-vs-framework-et-versions.md"
       ]
     },
     {
@@ -40794,7 +41784,8 @@
         "fondamentaux/07-nodejs/10-validation-entrees.md",
         "fondamentaux/07-nodejs/index.md",
         "fondamentaux/08-rust/04-ownership.md",
-        "ia/05-architectures-modernes-nlp/02-nlp-classique-llm.md"
+        "ia/05-architectures-modernes-nlp/02-nlp-classique-llm.md",
+        "29-joomla/24-fil-rouge.md"
       ]
     },
     {
@@ -40824,7 +41815,9 @@
         "fondamentaux/02-unix-bash/07-systemd-services.md",
         "fondamentaux/07-nodejs/04-programmation-asynchrone.md",
         "fondamentaux/08-rust/01-introduction-installation.md",
-        "ia/07-systemes-agentiques-mlops/01-ai-agents-architecture-design-patterns.md"
+        "ia/07-systemes-agentiques-mlops/01-ai-agents-architecture-design-patterns.md",
+        "29-joomla/04-overrides-layouts-jlayout.md",
+        "29-joomla/17-manifeste-psr4-com-example.md"
       ]
     },
     {
@@ -40850,7 +41843,8 @@
         "fiches-reference/index.md",
         "fondamentaux/05-javascript/01-introduction-js.md",
         "fondamentaux/08-rust/03-fonctions-controle-flux.md",
-        "ia/01-fondamentaux-mathematiques/index.md"
+        "ia/01-fondamentaux-mathematiques/index.md",
+        "29-joomla/13-finder-cli-et-absences.md"
       ]
     },
     {
@@ -40883,7 +41877,8 @@
         "fondamentaux/04-html-css/07-animations-css.md",
         "fondamentaux/06-projets/02-jeu-2d-java.md",
         "fondamentaux/fiches-reference/03-aide-memoire-html-css.md",
-        "ia/01-fondamentaux-mathematiques/03-probabilites-statistiques.md"
+        "ia/01-fondamentaux-mathematiques/03-probabilites-statistiques.md",
+        "29-joomla/09-cache-trois-couches.md"
       ]
     },
     {
@@ -40942,7 +41937,8 @@
         "fondamentaux/08-rust/16-macros.md",
         "ia/02-programmation-outils/02-environnement-developpement-infrastructure.md",
         "ia/06-large-language-models/03-rag-retrieval-augmented-generation.md",
-        "ia/09-expertise-recherche-leadership/02-ai-safety-alignement-ethique.md"
+        "ia/09-expertise-recherche-leadership/02-ai-safety-alignement-ethique.md",
+        "29-joomla/07-montee-5-4-vers-6.md"
       ]
     },
     {
@@ -40968,7 +41964,8 @@
         "crypto-monnaies/08-perspective-avenir-realiste/03-ce-que-crypto-resout-vraiment.md",
         "cybersecurite/08-expertise-leadership/04-tendances-2026.md",
         "faust/01-fondamentaux-acoustique/index.md",
-        "fondamentaux/01-java/05-constructeurs.md"
+        "fondamentaux/01-java/05-constructeurs.md",
+        "29-joomla/05-web-asset-manager.md"
       ]
     },
     {
@@ -41047,7 +42044,10 @@
         "fondamentaux/01-java/10-collections.md",
         "fondamentaux/02-unix-bash/10-securite-systeme.md",
         "fondamentaux/08-rust/09-collections.md",
-        "ia/08-specialisations-avancees/01-computer-vision-avancee.md"
+        "ia/08-specialisations-avancees/01-computer-vision-avancee.md",
+        "29-joomla/06-favicons-et-accessibilite.md",
+        "29-joomla/15-multilingue.md",
+        "29-joomla/index.md"
       ]
     },
     {
@@ -41076,7 +42076,8 @@
         "fondamentaux/07-nodejs/03-modules-imports.md",
         "fondamentaux/07-nodejs/07-middleware-routes.md",
         "fondamentaux/fiches-reference/index.md",
-        "ia/05-architectures-modernes-nlp/04-modeles-generatifs.md"
+        "ia/05-architectures-modernes-nlp/04-modeles-generatifs.md",
+        "29-joomla/14-champs-personnalises.md"
       ]
     },
     {
@@ -41108,7 +42109,10 @@
         "fiches-reference/11-aide-memoire-ansible.md",
         "fondamentaux/04-html-css/01-structure-html.md",
         "fondamentaux/08-rust/12-tests.md",
-        "ia/07-systemes-agentiques-mlops/03-mlops-mise-production.md"
+        "ia/07-systemes-agentiques-mlops/03-mlops-mise-production.md",
+        "29-joomla/02-installation-6-1-3.md",
+        "29-joomla/12-modules-chrome-et-loadmodule.md",
+        "29-joomla/20-api-v1-csrf-cors.md"
       ]
     },
     {
@@ -41203,7 +42207,8 @@
         "ia/01-fondamentaux-mathematiques/04-theorie-information.md",
         "ia/04-deep-learning-fondamental/02-pytorch.md",
         "ia/05-architectures-modernes-nlp/01-transformers-architecture.md",
-        "ia/index.md"
+        "ia/index.md",
+        "29-joomla/22-architecture-di-evenements.md"
       ]
     },
     {
@@ -41226,7 +42231,8 @@
         "faust/03-langage-faust-fondamentaux/04-memoire-delais.md",
         "fondamentaux/01-java/01-hello-world.md",
         "ia/03-machine-learning-classique/01-apprentissage-supervise.md",
-        "ia/05-architectures-modernes-nlp/index.md"
+        "ia/05-architectures-modernes-nlp/index.md",
+        "29-joomla/19-plugin-console-et-cli.md"
       ]
     },
     {
@@ -41277,7 +42283,8 @@
         "faust/01-fondamentaux-acoustique/03-mathematiques-dsp.md",
         "faust/04-dsp-applique/05-bibliotheques-faust.md",
         "ia/01-fondamentaux-mathematiques/02-calcul-differentiel-optimisation.md",
-        "politique-fraicheur.md"
+        "politique-fraicheur.md",
+        "29-joomla/16-mail-workflows-et-sauvegardes.md"
       ]
     },
     {
@@ -41335,7 +42342,8 @@
         "ia/01-fondamentaux-mathematiques/01-algebre-lineaire.md",
         "ia/04-deep-learning-fondamental/04-reseaux-recurrents-sequences.md",
         "ia/04-deep-learning-fondamental/index.md",
-        "parcours.md"
+        "parcours.md",
+        "29-joomla/11-sef-menus-et-itemid.md"
       ]
     },
     {
@@ -41372,7 +42380,8 @@
         "ia/08-specialisations-avancees/05-ia-pour-science.md",
         "ia/09-expertise-recherche-leadership/04-contribution-leadership.md",
         "ia/09-expertise-recherche-leadership/index.md",
-        "includes/glossary.md"
+        "includes/glossary.md",
+        "29-joomla/03-template-enfant-cassiopeia.md"
       ]
     },
     {
@@ -41405,7 +42414,8 @@
         "cybersecurite/07-red-team-avance/01-red-team-operations.md",
         "fondamentaux/01-java/index.md",
         "fondamentaux/08-rust/07-enums-pattern-matching.md",
-        "fondamentaux/08-rust/14-outils-qualite.md"
+        "fondamentaux/08-rust/14-outils-qualite.md",
+        "29-joomla/10-scheduler-lazy-et-webcron.md"
       ]
     },
     {
@@ -41578,7 +42588,9 @@
         "ia/03-machine-learning-classique/03-selection-modeles-methodologie.md",
         "ia/04-deep-learning-fondamental/03-reseaux-convolutifs-cnn.md",
         "ia/07-systemes-agentiques-mlops/index.md",
-        "stack-symfony/index.md"
+        "stack-symfony/index.md",
+        "29-joomla/08-acl-authorise-et-view-levels.md",
+        "29-joomla/21-securite-escape-uploads-samesite.md"
       ]
     },
     {

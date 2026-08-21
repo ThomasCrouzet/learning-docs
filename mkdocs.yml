@@ -35,6 +35,7 @@ theme:
     tag:
       docker: simple/docker
       php: simple/php
+      joomla: simple/joomla
       symfony: simple/symfony
       postgresql: simple/postgresql
       javascript: simple/javascript
@@ -112,6 +113,8 @@ plugins:
         - PHP
         - Symfony
         - EasyAdmin
+        - Joomla
+        - CMS
         - PostgreSQL
         - JavaScript
         - Java
@@ -234,6 +237,8 @@ extra:
     PHP: php
     Symfony: symfony
     EasyAdmin: easyadmin
+    Joomla: joomla
+    CMS: joomla
     PostgreSQL: postgresql
     JavaScript: javascript
     Java: java
@@ -299,6 +304,32 @@ nav:
           - Images et filtres: 03-easyadmin/05-easyadmin-images-filtres.md
           - Actions personnalisées: 03-easyadmin/06-easyadmin-actions-personnalisees.md
           - Personnalisation visuelle: 03-easyadmin/07-easyadmin-personnalisation-visuelle.md
+      - Joomla CMS:
+          - 29-joomla/index.md
+          - CMS, Framework et versions: 29-joomla/01-cms-vs-framework-et-versions.md
+          - Installation de Joomla 6.1.3: 29-joomla/02-installation-6-1-3.md
+          - Template enfant Cassiopeia: 29-joomla/03-template-enfant-cassiopeia.md
+          - Overrides, layouts et JLayout: 29-joomla/04-overrides-layouts-jlayout.md
+          - Web Asset Manager: 29-joomla/05-web-asset-manager.md
+          - "Favicons et limites d'accessibilité": 29-joomla/06-favicons-et-accessibilite.md
+          - Montée de 5.4 vers 6: 29-joomla/07-montee-5-4-vers-6.md
+          - "ACL : authorise et view levels": 29-joomla/08-acl-authorise-et-view-levels.md
+          - "Cache : trois couches": 29-joomla/09-cache-trois-couches.md
+          - "Scheduler : Lazy et Web Cron": 29-joomla/10-scheduler-lazy-et-webcron.md
+          - SEF, menus et Itemid: 29-joomla/11-sef-menus-et-itemid.md
+          - Modules, chrome et loadmodule: 29-joomla/12-modules-chrome-et-loadmodule.md
+          - Finder, CLI et absences: 29-joomla/13-finder-cli-et-absences.md
+          - Champs personnalisés: 29-joomla/14-champs-personnalises.md
+          - Site multilingue: 29-joomla/15-multilingue.md
+          - Mail, workflows et sauvegardes: 29-joomla/16-mail-workflows-et-sauvegardes.md
+          - Manifeste PSR-4 et com_example: 29-joomla/17-manifeste-psr4-com-example.md
+          - SQL, packages et update servers: 29-joomla/18-sql-packages-updateservers.md
+          - Plugin console et CLI: 29-joomla/19-plugin-console-et-cli.md
+          - API /v1, CSRF et CORS: 29-joomla/20-api-v1-csrf-cors.md
+          - "Sécurité : escape, uploads, SameSite": 29-joomla/21-securite-escape-uploads-samesite.md
+          - "Architecture : DI et événements": 29-joomla/22-architecture-di-evenements.md
+          - Tests Cypress et dépréciations: 29-joomla/23-tests-cypress-et-deprecations.md
+          - Fil rouge: 29-joomla/24-fil-rouge.md
       - PHP:
           - 02-php/index.md
           - Découvrir PHP: 02-php/01-introduction-php.md

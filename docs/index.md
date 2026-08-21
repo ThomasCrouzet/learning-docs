@@ -19,7 +19,7 @@ Chaque fiche suit le même format : concepts définis explicitement, étapes pra
 [Suivre un parcours guidé :material-routes:](parcours.md){ .md-button .md-button--primary }
 [Débuter de zéro :material-rocket-launch:](commencer/index.md){ .md-button }
 
-<p class="home-stats">611 fiches · 65 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
+<p class="home-stats">635 fiches · 66 cursus · 30+ technologies couvertes (voir carte des cursus)</p>
 
 Date de référence éditoriale : août 2026. Le paquet Ansible communautaire enseigné est la série 14.x (ansible-core 2.21 ; PyPI 14.3.1 au 14 août 2026).
 
@@ -55,7 +55,7 @@ Choisis un domaine pour voir la liste de ses cursus.
 
     ---
 
-    Le socle web complet : PHP, Symfony, JavaScript, TypeScript, React, bases de données, tests et architecture.
+    Le socle web complet : PHP, Symfony, Joomla, JavaScript, TypeScript, React, bases de données, tests et architecture.
 
     [:octicons-arrow-right-24: Voir les cursus](carte-cursus.md#developpement-web)
 

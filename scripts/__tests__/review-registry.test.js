@@ -62,7 +62,7 @@ describeReviewRegistry('review registry (local audit artefact)', () => {
     const missing = pages.filter((p) => !byPath.has(p));
     for (const p of missing) {
       expect(
-        p.startsWith('30-analyse-reseau/'),
+        p.startsWith('30-analyse-reseau/') || p.startsWith('29-joomla/'),
         `registre historique incomplet pour ${p}`
       ).toBe(true);
     }

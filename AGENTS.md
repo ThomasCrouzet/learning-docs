@@ -57,7 +57,7 @@ Ce projet est un **repo de documentation uniquement** (pas d'application). Le co
 
 ### Contenu pédagogique (`docs/`)
 
-Le projet contient **611 fiches réparties sur 65 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
+Le projet contient **635 fiches réparties sur 66 cursus** (chiffres à recalculer via la carte si tu modifies le corpus). La carte complète est dans `docs/carte-cursus.md`, qui fait **autorité sur les nombres de fiches par cursus** : c'est un fichier généré (régénérable via `npm run generate:cursus-map`, vérifiable via `npm run lint:cursus-map`). Mettre à jour les comptes ci-dessous d'après cette carte, jamais l'inverse.
 
 **Développement Web** :
 
@@ -66,6 +66,7 @@ Le projet contient **611 fiches réparties sur 65 cursus** (chiffres à recalcul
 - **Docker** (`01-docker/`) : conteneurisation et environnement de développement (2 fiches)
 - **PHP** (`02-php/`) : fondamentaux du langage (14 fiches)
 - **EasyAdmin** (`03-easyadmin/`) : interface admin Symfony (7 fiches)
+- **Joomla CMS** (`29-joomla/`) : CMS 6.x, tag 6.1.3 (24 fiches)
 - **Symfony** (`03-symfony/`) : framework PHP avec Doctrine (21 fiches)
 - **PostgreSQL** (`04-postgresql/`) : base de données relationnelle (8 fiches)
 - **JavaScript** (`05-javascript/`) : jQuery, Webpack, ES6+ (7 fiches)

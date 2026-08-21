@@ -2,14 +2,14 @@
 hide:
   - navigation
   - toc
-description: "Vue d'ensemble des 611 fiches réparties sur 65 cursus."
+description: "Vue d'ensemble des 635 fiches réparties sur 66 cursus."
 ---
 
 # Carte des cursus
 
 > **En bref** : Vue d'ensemble de tous les cursus disponibles, avec le nombre de fiches et le temps estimé.
 
-**611 fiches** au total, réparties sur **65 cursus**.
+**635 fiches** au total, réparties sur **66 cursus**.
 
 ## Dépendances entre cursus
 
@@ -27,6 +27,7 @@ Les cursus en bleu sont **indépendants** : ils ne nécessitent aucun prérequis
 | **[Commencer](commencer/index.md)** | 2 | 1h 45min | Débutant |
 | **[Docker](01-docker/index.md)** | 2 | 3h 30min | Débutant |
 | **[EasyAdmin](03-easyadmin/index.md)** | 7 | 8h | Débutant → Intermédiaire → Avancé |
+| **[Joomla CMS](29-joomla/index.md)** | 24 | 17h 15min | Débutant → Intermédiaire → Avancé |
 | **[PHP](02-php/index.md)** | 14 | 15h | Débutant → Intermédiaire → Avancé |
 | **[Symfony](03-symfony/index.md)** | 21 | 25h 10min | Débutant → Intermédiaire → Avancé |
 | **[PostgreSQL](04-postgresql/index.md)** | 8 | 16h 40min | Débutant → Intermédiaire |
