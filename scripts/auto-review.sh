@@ -18,4 +18,4 @@ echo "Audit des fiches modifiées :"
 echo "$CHANGED"
 echo "---"
 
-claude -p "Vérifie la conformité de ces fiches aux règles de CONTRIBUTING.md. Pour chaque fichier, vérifie : frontmatter (estimated_time, fiche_number, total_fiches, cursus), section 'En bref', sections obligatoires, blocs de code avec langage, navigation. Liste les problèmes trouvés par fichier. Fichiers : $CHANGED" --allowedTools Read,Glob,Grep
+AI_CONSUMER=autism-hero.auto-review AI_SHELL_TOOL=1 /Users/thomas/bin/ai "Vérifie la conformité de ces fiches aux règles de CONTRIBUTING.md. Pour chaque fichier, vérifie : frontmatter (estimated_time, fiche_number, total_fiches, cursus), section 'En bref', sections obligatoires, blocs de code avec langage, navigation. Liste les problèmes trouvés par fichier. Fichiers : $CHANGED"

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Validation sémantique des fiches modifiées avant push via Claude Code headless
+# Validation sémantique des fiches modifiées avant push via la façade Codex
 # Usage : ./scripts/pre-push-validate.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -23,12 +23,12 @@ fi
 COUNT=$(printf '%s\n' "$CHANGED" | wc -l | tr -d ' ')
 echo "Validation sémantique de $COUNT fiche(s) modifiée(s)..."
 
-if ! command -v claude &>/dev/null; then
-  echo "Erreur : claude CLI non trouvé. Installez Claude Code pour utiliser ce script."
+if [[ ! -x /Users/thomas/bin/ai ]]; then
+  echo "Erreur : la façade ~/bin/ai est introuvable ou non exécutable." >&2
   exit 1
 fi
 
-claude -p "Vérifie ces fiches modifiées et signale uniquement les problèmes critiques :
+AI_CONSUMER=autism-hero.pre-push-validate AI_SHELL_TOOL=1 /Users/thomas/bin/ai "Vérifie ces fiches modifiées et signale uniquement les problèmes critiques :
 - Structure manquante (Prérequis, Objectif, Navigation, En Bref)
 - Liens internes cassés (fichiers cibles inexistants)
 - Frontmatter incomplet (tags, description, estimated_time, fiche_number, total_fiches, cursus)
@@ -37,5 +37,4 @@ claude -p "Vérifie ces fiches modifiées et signale uniquement les problèmes c
 Fiches à vérifier :
 $CHANGED
 
-Réponds avec un tableau synthétique. Si tout est OK, dis-le en une ligne." \
-  --allowedTools 'Read,Glob,Grep'
+Réponds avec un tableau synthétique. Si tout est OK, dis-le en une ligne."
