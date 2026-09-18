@@ -19,6 +19,8 @@ paths = [
   '''docs/21-services-systeme/06-proxy-reverse-proxy\.md$''',
   '''docs/ansible/01-ansible/12-ansible-vault\.md$''',
   '''docs/ansible/01-ansible/13-gestion-multi-environnement\.md$''',
+  '''docs/loic/01-ansible/12-ansible-vault\.md$''',
+  '''docs/loic/01-ansible/13-gestion-multi-environnement\.md$''',
   '''docs/cybersecurite/02-fondamentaux-securite/02-cryptographie\.md$''',
   '''docs/cybersecurite/03-competences-intermediaires/02-securite-web-applicative\.md$''',
   '''docs/cybersecurite/04-specialisation-offensive/03-active-directory\.md$''',
