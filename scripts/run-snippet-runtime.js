@@ -37,6 +37,20 @@ const fileIdx = args.indexOf('--file');
 const onlyFile = fileIdx >= 0 ? args[fileIdx + 1] : null;
 const strict = args.includes('--strict');
 
+if (fileIdx >= 0) {
+  let validTarget = false;
+  try {
+    const target = resolveSnippetTargetFile(onlyFile, { root: ROOT, docs: DOCS });
+    validTarget = Boolean(target && fs.statSync(target).isFile());
+  } catch {
+    validTarget = false;
+  }
+  if (!validTarget) {
+    console.error('Invalid --file target: supply an existing file.');
+    process.exit(1);
+  }
+}
+
 function walkMd(dir, base = '') {
   const out = [];
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
