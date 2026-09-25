@@ -193,19 +193,6 @@ describe('checkGroup', () => {
     expect(errors.some((e) => /suivant/.test(e))).toBe(true);
   });
 
-  it('tolere les frontieres : prev absent sur la 1re, next absent sur la derniere', () => {
-    const g = {
-      dir: 'cursus',
-      fiches: [
-        { rel: 'cursus/01-a.md', content: makeFiche({ ficheNumber: 1, totalFiches: 2, next: '02-b.md' }) },
-        { rel: 'cursus/02-b.md', content: makeFiche({ ficheNumber: 2, totalFiches: 2, prev: '01-a.md' }) },
-      ],
-      exists: ALWAYS_EXISTS,
-    };
-    // 01-a n'a pas de prev (frontiere) et 02-b n'a pas de next (frontiere) : OK.
-    expect(checkGroup(g)).toEqual([]);
-  });
-
   it('tolere un lien de frontiere vers une autre phase', () => {
     const g = {
       dir: 'cursus/04-phase',

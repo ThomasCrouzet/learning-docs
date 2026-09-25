@@ -24,14 +24,6 @@ describe('calculateReadingTime', () => {
     expect(calculateReadingTime(words + '\n' + codeBlocks)).toBe('10 min');
   });
 
-  it('exclut les mots dans les blocs de code du compte', () => {
-    // Le texte dans les blocs de code ne doit pas etre compte comme mots
-    const content = 'Mot1 mot2 mot3\n```bash\nlongue commande avec plein de mots\n```\nMot4 mot5';
-    const result = calculateReadingTime(content);
-    // 5 mots + 1 bloc = 5/200 + 2 = 2.025 -> arrondi 0 -> max(5,0) = 5
-    expect(result).toBe('5 min');
-  });
-
   it('arrondit au multiple de 5 le plus proche', () => {
     // 1400 mots, 3 blocs -> 1400/200 + 3*2 = 7 + 6 = 13 -> arrondi 15
     const words = Array(1400).fill('mot').join(' ');

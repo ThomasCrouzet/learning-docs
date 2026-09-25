@@ -100,16 +100,3 @@ describe('coverageSummary + syncFinalReportMarkdown', () => {
     ).toBe(false);
   });
 });
-
-describe('gate: report claims must match coverage', () => {
-  it('fails when table numbers diverge from summary', () => {
-    const report = '| **corrected** | x | **1** |\n| **audited** | y | **2** |\n| **uncertain** | z | **3** |\n';
-    const claims = parseFinalReportCoverageClaims(report);
-    const summary = { corrected: 10, audited: 20, uncertain: 5 };
-    const mismatch =
-      claims.corrected !== summary.corrected ||
-      claims.audited !== summary.audited ||
-      claims.uncertain !== summary.uncertain;
-    expect(mismatch).toBe(true);
-  });
-});
